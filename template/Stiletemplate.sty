@@ -1,0 +1,88 @@
+\ProvidesPackage{Stiletemplate}	%il nostro pacchetto per swe
+\usepackage{graphbox}	% permette di modificare i margini
+\usepackage[top=3.1cm, bottom=3.1cm, left=2.2cm, right=2.2cm]{geometry}
+
+
+\newcommand{\copertina}{
+	\begin{titlepage}
+		\begin{center}
+			
+			\begin{center}
+				%sostituire con immagine copertina del gruppo
+				\centerline{\includegraphics[scale=0.17]{\pathimg}}
+			\end{center}
+			
+			\vspace{1cm}
+			
+			\begin{Huge}
+				\textbf{\Titolo{}} \\
+			\end{Huge}
+			
+			\vspace{9pt}  
+			
+			\begin{large}
+				\textbf{Gruppo \Gruppo{}\ - Progetto \NomeProgetto{}}\\%\Data{}
+				\vspace{6pt}
+				\Mail{}
+			\end{large}	  
+			
+			\vspace{15pt}
+			
+			\bgroup
+			\def\arraystretch{1.3}
+			\centering
+			\begin{tabular}{r|L{5cm}}
+				\multicolumn{2}{c}{\textbf{Informazioni sul documento} } \\
+				\hline %linea separatrice orrizzontale
+				\textbf{Versione} &  1.0.0\\
+				\textbf{Approvatore} & \Approvatore{} \\
+				\textbf{Redattori} & \Redattori{} \\
+				\textbf{Verificatori} & \Verificatori{} \\
+				\textbf{Uso} & \Uso \\
+				\textbf{Distribuzione} & \Distribuzione{}
+			\end{tabular}
+			\egroup
+			
+			\vspace*{\fill}
+			
+			\begin{center}
+				\textbf{Descrizione\\}
+				\DescrizioneDoc{}
+			\end{center}
+			
+		\end{center}
+	\end{titlepage}
+}	%FINE NEW COMMAND COPERTINA
+
+%crea una cella per le tabelle in grado di andare a capo con \newline
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} %0pt= distanza dalla linea verticale
+
+
+\usepackage{lastpage} %info sul # dell'ultima pagina del documento in caso dopo la metto
+\usepackage{fancyhdr} %per modificare dimensioni,margini, intestazioni e righe a piè di pagina
+
+
+\pagestyle{fancy}
+\fancyhf{} %eliminare le cose già presenti nella pagina (numero)
+\fancyfoot[R]{\thepage} % R=DESTRA L=SINISTRA C=CENTRO foot=pie di pagina
+\fancyfoot[L]{Verbale del \Data}
+\fancyfoot[C]{}
+\fancyhead[L]{\includegraphics[scale=0.045]{qbteam.png}} %head opposto pie
+\setlength{\headheight}{45pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%%
+
+%%Pacchetto per creare la tabella delle modifiche
+\usepackage{multirow}
+\usepackage[table]{xcolor} 
+\usepackage{longtable} 
+
+%%Separare i vari componenti della tabella
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+\definecolor{grigetto}{RGB}{51, 102, 255}
+\definecolor{titolomodcol}{RGB}{234, 234, 234}
