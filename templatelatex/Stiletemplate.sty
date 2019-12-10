@@ -62,15 +62,28 @@
 \usepackage{lastpage} %info sul # dell'ultima pagina del documento in caso dopo la metto
 \usepackage{fancyhdr} %per modificare dimensioni,margini, intestazioni e righe a piè di pagina
 
-
+\newcommand{\fancyverbale}{
 \pagestyle{fancy}
 \fancyhf{} %eliminare le cose già presenti nella pagina (numero)
 \fancyfoot[R]{\thepage} % R=DESTRA L=SINISTRA C=CENTRO foot=pie di pagina
 \fancyfoot[L]{Verbale del \Data}
 \fancyfoot[C]{}
-\fancyhead[L]{\includegraphics[scale=0.045]{qbteam.png}} %head opposto pie
+\fancyhead[L]{\includegraphics[scale=0.045]{\pathimg}} %head opposto pie
 \setlength{\headheight}{45pt}
 \renewcommand{\footrulewidth}{0.4pt}
+}
+%%
+
+\newcommand{\fancyglossario}{
+\pagestyle{fancy}
+\fancyhf{} %eliminare le cose già presenti nella pagina (numero)
+\fancyfoot[R]{\thepage} % R=DESTRA L=SINISTRA C=CENTRO foot=pie di pagina
+\fancyfoot[L]{Glossario}
+\fancyfoot[C]{}
+\fancyhead[L]{\includegraphics[scale=0.045]{\pathimg}} %head opposto pie
+\setlength{\headheight}{45pt}
+\renewcommand{\footrulewidth}{0.4pt}
+}
 %%
 
 %%Pacchetto per creare la tabella delle modifiche
