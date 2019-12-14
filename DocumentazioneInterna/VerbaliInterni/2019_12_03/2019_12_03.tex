@@ -1,23 +1,26 @@
 \documentclass[a4paper, oneside, dvipsnames, table]{article}
 %openany
-\usepackage{../../template/Stiletemplate}
+\usepackage{../../../template/Stiletemplate}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage[italian]{babel}
 
 
-\input{comandi.tex}
+\input{sezioni/comandi.tex}
 
+\fancyverbale
 \begin{document}
 
 \copertina{}
 \newpage
 
-\input{RegistroModifiche.tex}
+\input{sezioni/RegistroModifiche.tex}
 
 \clearpage
 \tableofcontents
 \clearpage
+
+
 
 \section{Informazioni Generali}
 \begin{itemize}
@@ -38,12 +41,16 @@
 \item \textbf{Segretario:} Cognome nome.
 \end{itemize}
 
+\clearpage
+
 \section{Ordine del Giorno}
 \begin{itemize}
 \item Piano di lavoro
 \item Gestione delle repository;
 \item Stesura email per Imola Informatica
 \end{itemize}
+
+\clearpage
 
 \section{Resoconto}
 \subsection{Piano di lavoro}
@@ -53,7 +60,7 @@
 Definite le durate che ogni persona avrà nei diversi ruoli: ogni due settimane ci sarà una rotazione dei ruoli assegnati. \\
 
 \subsection{Gestione delle repository}
-È stato deciso di creare due repository, una pubblica per il codice(Stalker) e una privata per la documentazione (Stalker-Documentazione).
+È stato deciso di creare due repository, una pubblica per il codice(Stalker) e una privata per la documentazione (Stalker-Documentazione). \\
 
 \subsection{Stesura email per Imola Informatica}
 Nel corso della riunione è stata stilata una lista di quesiti da sottoporre al proponente nella mail. 
@@ -63,14 +70,11 @@ Nel corso della riunione è stata stilata una lista di quesiti da sottoporre al 
 \item Accordarsi sulla licenza per lo sviluppo dell'applicazione
 \item Approfondire la tematica del tracciamento della posizione
 \item Approfondire le tecniche di scalabilità del server, e autenticazione (LDAP)
+\end{itemize} 
 
+\clearpage
 
-\end{itemize}
-
-
-
-
-
+\input{sezioni/RiepilogoDecisioni.tex}
 
 
 
