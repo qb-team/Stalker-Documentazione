@@ -1,11 +1,15 @@
 \documentclass[a4paper, oneside, dvipsnames, table]{article}
 %openany
-\usepackage{../templatelatex/Stiletemplate}
+\usepackage{../template/Stiletemplate}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage[italian]{babel}
-\input{comandi.tex}
-\renewcommand\thesection{}
+\usepackage{tocloft}
+\usepackage{sectsty}
+
+\input{sezioni/comandi.tex}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
 
 \begin{document}
@@ -13,7 +17,10 @@
 \copertina{}
 \newpage
 
-\input{RegistroModifiche.tex}
+\input{sezioni/RegistroModifiche.tex}
+
+\setcounter{secnumdepth}{0}
+\sectionfont{\centering\underline}
 
 \fancyglossario{}
 
@@ -21,18 +28,7 @@
 \tableofcontents
 \clearpage
 
-\section{A}
-\textbf{Autenticazione:}\\
-È l’azione che conferma la verità di un attributo di un singolo dato o di un’informazione sostenuta vera da un’entità. In informatica è un processo nella quale un computer, sistema informatico o un utente verifica la corretta identità di un altro software, computer o utente che vuole comunicare attraverso una connessione, autorizzandolo  ad utilizzare eventuali servizi associati.
-
-
-\section{L}
-\textbf{Lightweight Directory Access Protocol (LDAP:}\\
-È un protocollo standard per l'interrogazione e la modifica dei servizi di directory. Le informazioni vengono raggruppate e possono essere espresse come record di dati ed organizzate in maniera gerarchica.
-
-\section{M}
-\textbf{Modalità anonima:}\\
-È una specifica progettuale che da la possibilità all’utente che usufruisce l’applicazione di non essere tracciato precisamente dove si trova, ma segnala la sua eventuale presenza in una determinata area. I dati identificativi del soggetto non saranno visibili nel server se si parla di “utente evento pubblico”; al contrario se è un “utente aziendale”, perché è necessario sapere la sua identità per contare le ore lavorative.
+\input{sezioni/ordinealfabetico.tex}
 
 
 \end{document}
