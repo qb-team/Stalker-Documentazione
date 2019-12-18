@@ -1,0 +1,80 @@
+\section{Capitolato C2}
+\subsection{Titolo del capitolato}
+Il capitolato in questione si chiama "Etherless", il proponente \`e l'azienda RedBabel e i committenti sono Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+
+\subsection{Descrizione del capitolo}
+Etherless \`e una piattaforma cloud\ap{G} che permette agli sviluppatori di distribuire le proprie funzioni JavaScript\ap{G} nel cloud\ap{G} e fare pagare agli utenti finali l'utilizzo di queste (modello "Computation as a Service\ap{G}", Caas), sfruttando gli smart contract Ethereum\ap{G}. 
+Etherless \`e gestita e mantenuta da utenti chiamati Administrators. Altri utenti chiamati Developers possono pubblicare in Etherless le loro funzioni. Gli utenti finali del prodotto sono chiamati Users e possono eseguire le funzioni presenti nella piattaforma pagando le quote stabilite dai Developers proprietari di quelle funzioni. Ogni quota pagata \`e in parte trattenuta da Etherless come compensazione per l'esecuzione (ricordarsi che la blockchain \`e una struttura distribuita, tutti i nodi eseguono le computazioni).
+L'obiettivo di Etherless \`e integrare due tecnologie: Ethereum\ap{G} e Serverless\ap{G}. Ethereum\ap{G} si occuper\`a dei pagamenti e di scatenare (trigger) l'invocazione delle funzioni. Serverless\ap{G} si occuper\`a invece dell'esecuzione delle funzioni. Una interfaccia a linea di comando (command line interface, CLI) far\`a da ponte fra users e developers. La comunicazione (virtuale) fra Ethereum\ap{G} e Serverless\ap{G} sar\`a ottenuta ascoltando ed emettendo eventi Ethereum\ap{G}.
+
+\subsection{Prerequisiti e tecnologie coinvolte}
+Prerequisiti:
+\begin{itemize}
+\item avere un'idea dei contenuti del corso di Programmazione Concorrente e Distribuita\ap{G} (programmazione asincrona, programmazione funzionale);
+\item conoscenza del linguaggio TypeScript (\`e un linguaggio molto simile a JavaScript\ap{G}, che va compilato e il prodotto della compilazione \`e un file JavaScript\ap{G});
+\item serve conoscere il Serverless\ap{G} Framework che implica Node.js\ap{G}.
+\end{itemize}
+Per poter svolgere il capitolato \`e necessario avere chiaro il funzionamento delle seguenti tecnologie:
+
+\begin{itemize}
+\item Blockchain: \`e un database condiviso, chiamato anche ledger (registro). Ogni dispositivo collegato con una copia del ledger \`e chiamato nodo. Questi ledger tengono traccia della propriet\`a valutaria (criptovaluta\ap{G}) dove ogni nodo pu\`o verificare i conti di chiunque. Questa appena descritta \`e la parte decentralizzata della blockchain. Le interazioni tra account in una rete blockchain sono chiamate transazioni. Possono essere transazioni monetarie oppure sono trasmissioni di dati. Ogni account sulla blockchain ha una firma unica, che consente a tutti di sapere quale account ha avviato la transazione.
+\item Ethereum\ap{G}: \`e una piattaforma che permette all'utente di scrivere pi\`u facilmente delle applicazioni decentralizzate (Dapps\ap{G}) che usano la tecnologia blockchain. L'Ethereum\ap{G} blockchain pu\`o essere descritto come una blockchain con un linguaggio di programmazione integrato.
+\item Ethereum Virtual Machine (EVM): \`e la parte del protocollo che gestisce lo stato interno della rete e
+del calcolo. EVM pu\`o essere utilizzato come un grande computer decentralizzato contenente
+oggetti chiamati "accounts", ciascuno in grado di mantenere un database interno, eseguire il codice e comunicare. L'EVM consente al codice di essere verificato ed eseguito sulla blockchain. Questo codice \`e contenuto in "smart contracts", che vengono utilizzati dai Dapps\ap{G} per l'elaborazione dei dati
+sull'EVM.
+\item Smart Contract\ap{G}: \`e il codice che viene eseguito sull'EVM. Esso pu\`o accettare ed archiviare Ethereum, dati o la combinazione di entrambi distribuendoli ad altri account o persino ad altri smart contracts\ap{G}.
+\item Dapps\ap{G}: le applicazioni che utilizzano contratti intelligenti per l'elaborazione sono denominate
+"applicazioni decentralizzate", e ognuna delle loro parti \`e individualmente in grado di fare il suo lavoro senza dipendere dalle altre.
+
+\item Gas: \`e il metodo di pagamento, pagato in criptovaluta\ap{G} Ethereum\ap{G}, che viene calcolato ogni volta che
+l'EVM esegue uno smart contract\ap{G}. Quindi ogni volta l'utente deve pagare per tale esecuzione, indipendentemente dal fatto che la transazione abbia esito positivo o negativo.
+\item Reti Ethereum\ap{G}: la principale blockchain pubblica di Ethereum\ap{G} si chiama MainNet\ap{G}, ma esistono altre reti, poich\'e chiunque pu\`o creare la propria rete Ethereum\ap{G}. Su MainNet\ap{G} i dati sono pubblici e chiunque pu\`o creare un nodo e iniziare a verificare le transazioni. Sono anche presenti reti di test locali, reti di test pubblici (ad esempio Roposten, che \`e quella ufficiale).
+\item Eventi Ethereum\ap{G}: gli eventi ed i registri sono importanti in Ethereum\ap{G} perch\'e facilitano le comunicazioni tra gli smart contracts\ap{G} e la loro interfaccia.
+Ci sono 3 principali cause dove eventi e registri possono essere usati:
+\begin{itemize}
+\item un evento pu\`o essere il tipo di ritorno dello smart contract\ap{G};
+\item trigger asincroni\ap{G} con dati (lo smart contract\ap{G} genera un evento in modo da attivare la UI\ap{G} che ascolta eventi);
+\item una forma di archiviazione.
+\end{itemize}
+
+\item Architetture Serverless\ap{G}: sono applicazioni di progettazione che includono servizi "Backend as a Service\ap{G}" (BaaS) di terze parti, codice personalizzato e container temporanei su una piattaforma di esecuzione "Function as a Service\ap{G}" (FaaS). Le architetture Serverless\ap{G} potrebbero trarre beneficio dalla riduzione dei costi delle operazioni, complessit\`a e tempi di consegna. Essi sono sistemi basati su cloud\ap{G} di eventi, dove lo sviluppo di applicazioni \`e basato esclusivamente su una combinazione di servizi di terze parti, logica lato client e chiamate a procedure presenti nel cloud\ap{G}.
+\item Serverless\ap{G} computing: \`e un modello cloud dell'esecuzione di calcoli nella quale il fornitore cloud\ap{G} avvia il server e dinamicamente gestisce le allocazioni delle risorse informatiche richieste.
+Inoltre, devono essere utilizzati i seguenti framework e linguaggi:
+\begin{itemize}
+\item TypeScript 3.6: linguaggio che supporta JavaScript\ap{G} ES6 in tutto e per tutto, aggiungendo
+funzionalit\`a, in particolare la tipizzazione;
+\item typescript-eslint: strumento che permette di verificare che il codice TypeScript scritto rispetti
+correttamente la sintassi di linguaggio;
+\item Solidity\ap{G}: linguaggio per implementare gli smart contract;
+\item Serverless\ap{G}: framework per la realizzazione di applicazioni che verranno poi eseguite in architetture serverless\ap{G} (come AWS Lambda, Google Cloud Functions, Microsoft Azure Functions).
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Vincoli}
+\begin{itemize}
+\item smart contract\ap{G} aggiornabili;
+\item utilizzo di TypeScript 3.6, in particolare dei costrutti Promise e async/await;
+\item utilizzo di typescript-eslint;
+\item etherless-server deve utilizzare il Serverless\ap{G} Framework;
+\item il codice deve essere pubblicato e versionato su GitHub\ap{G} o GitLab\ap{G}, deve essere pubblicata, assieme al sorgente, la documentazione per gli users e per i developers.
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+\item \`E sicuramente interessante il fatto di unire in un unico progetto due delle tecnologie pi\`u discusse nell'ultimo periodo come blockchain e serverless\ap{G} computing;
+\item Nel capitolato viene tratto l'argomento dei pagamenti elettronici che nei ultimi tempi risulta essere molto discusso;
+\item Poter imparare linguaggi come TypeScript e JavaScript\ap{G} e rafforzando l'uso corretto mediante typescript-eslint \`e formativo. Inoltre, essendo questi due linguaggi alla base di moltissimi altri framework esistenti, non sarebbero conoscenze fini a s\'e stesse;
+\item Poter sperimentare i concetti di calcolo distribuito e le potenzialit\`a offerte dai linguaggi funzionali imparati nel corso di Programmazione Concorrente e Distribuita\ap{G} (seppur visti in Java).
+\end{itemize}
+
+\subsection{Aspetti critici}
+\begin{itemize}
+\item I concetti da imparare sono molteplici e di fatto i membri del gruppo sono completamente all'oscuro delle tecnologie richieste (eccetto per la blockchain) quindi gran parte del tempo andrebbe impiegato nell'apprendimento di queste;
+\item Solidity\ap{G} \`e un linguaggio relativamente nuovo ed \`e  ancora molto soggetto a variazioni da una versione all'altra, che potrebbero avvenire anche durante il corso della realizzazione del progetto;
+\item L'argomento riguardante il pagamento attraverso criptomonete come Etherium\ap{G} nonostante sia di molto interesse per via della tecnologia usata (blockchain), risulta essere mal visto dai principali enti bancari;
+\item Essendo un'azienda residente all'estero, la comunicazione potrebbe rivelarsi pi\`u problematica.
+\end{itemize}
+\subsection{Conclusioni}
+Si riconosce il fatto che nel capitolato vengono trattati argomenti di grande interesse per la societ\`a moderna come Blockchain, criptomonete e pagamenti elettronici ci\`o nonostante per via del grande numero di nuove tecnologie da imparare e che essendo di recente sviluppo esse sono soggette a frequenti cambiamenti, analizzando gli aspetti positivi e quelli critici e dopo una discussione fra i membri del gruppo, il capitolato \`e  stato scartato.
