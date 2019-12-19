@@ -1,0 +1,57 @@
+\documentclass[a4paper, oneside, dvipsnames, table]{article} % SERVE SOLO PER IL TESTING OUTPUT
+\usepackage{graphicx}% SERVE SOLO PER IL TESTING OUTPUT
+\usepackage{hyperref}% SERVE SOLO PER IL TESTING OUTPUT
+
+\begin{document}% SERVE SOLO PER IL TESTING OUTPUT
+
+%esempio inserimento immagine
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.1]{qbteam.png}%location immagine.   immagini/immagine.png
+\caption{logo di gbteam}
+\label{logo}
+\end{figure}
+
+% UC... specificare App o Server -> UCA / UCS
+\section{UC x}%kite level
+\begin{itemize}
+\item \textbf{Nome:}
+\item \textbf{Attori primari:}
+\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:}
+\item \textbf{Postcondizione:}
+\item \textbf{Scenario principale:} %cosa potrebbe fare l'utente con il UC, descrizione
+\item \textbf{Estensioni:}
+\item \textbf{Inclusioni:}
+\end{itemize}
+
+\subsection{UC x.y}%sea level
+\begin{itemize}
+\item \textbf{Nome:}
+\item \textbf{Attori primari:}
+\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:}
+\item \textbf{Postcondizione:}
+\item \textbf{Scenario principale:} %cosa potrebbe fare l'utente con il UC, descrizione
+\item \textbf{Flusso di eventi:} %elenco puntato
+\item \textbf{Estensioni:}
+	\begin{enumerate}
+		\item UCA 1.2 Cose1;
+		\item UCA 1.3 Cose2.
+	\end{enumerate}
+\item \textbf{Inclusioni:}
+\end{itemize}
+
+\subsubsection{UC x.y.z}%fish level
+\begin{itemize}
+\item \textbf{Nome:}
+\item \textbf{Attori primari:}
+\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:}
+\item \textbf{Postcondizione:}
+\end{itemize}
+
+\end{document}% SERVE SOLO PER IL TESTING OUTPUT
+
+
+
