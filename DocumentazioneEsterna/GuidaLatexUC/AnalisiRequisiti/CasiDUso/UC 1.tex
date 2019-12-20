@@ -6,12 +6,14 @@
 
 %esempio inserimento immagine
 \begin{figure}[h]
-\centering\includegraphics[scale=0.1]{qbteam.png}%location immagine.   immagini/immagine.png
+%\centering\includegraphics[scale=0.1]{qbteam.png}%location immagine.   immagini/immagine.png
 \caption{logo di gbteam}
 \label{logo}
 \end{figure}
 
 % UC... specificare App o Server -> UCA / UCS
+
+\centering\includegraphics[scale=0.8]{Panoramica.png}
 \section{UCA  1}%kite level
 \begin{itemize}
 \item \textbf{Nome:} Accesso all'applicazione
@@ -29,6 +31,8 @@
 
 \end{itemize}
 
+\newpage
+\centering\includegraphics[scale=0.4]{Login.png}
 \subsection{UCA 1.1}%sea level
 \begin{itemize}
 \item \textbf{Nome:} Autenticazione con credenziali Stalker
@@ -51,7 +55,7 @@
 %\item \textbf{Inclusioni:}
 \end{itemize}
 
-\subsubsection{UC 1.1.1}%fish level
+\subsubsection{UCA 1.1.1}%fish level
 \begin{itemize}
 \item \textbf{Nome:} Inserimento indirizzo e-mail
 \item \textbf{Attori primari:}  Utente non autenticato
@@ -60,7 +64,7 @@
 \item \textbf{Postcondizione:}  L’utente ha inserito il proprio indirizzo e-mail
 \end{itemize}
 
-\subsubsection{UC 1.1.2}%fish level
+\subsubsection{UCA 1.1.2}%fish level
 \begin{itemize}
 \item \textbf{Nome:} Inserimento password
 \item \textbf{Attori primari:} Utente non autenticato
@@ -69,7 +73,7 @@
 \item \textbf{Postcondizione:} L’utente ha inserito la propria password
 \end{itemize}
 
-\subsubsection{UC 1.1.3}%fish level
+\subsubsection{UCA 1.1.3}%fish level
 \begin{itemize}
 \item \textbf{Nome:} Pulsante accedi
 \item \textbf{Attori primari:} Utente non autenticato
@@ -78,7 +82,7 @@
 \item \textbf{Postcondizione:} L'utente ha fatto richiesta per essere autenticato dal sistema 
 \end{itemize}
 
-\subsubsection{UC 1.1.4}%fish level
+\subsubsection{UCA 1.1.4}%fish level
 \begin{itemize}
 \item \textbf{Nome:} Password dimenticata
 \item \textbf{Attori primari:} Utente non autenticato
@@ -87,9 +91,9 @@
 \item \textbf{Postcondizione:} L'utente ha fatto richiesta per avviare la procedura di password dimenticata
 \end{itemize}
 
-\subsubsection{UC 1.1.5}%fish level
+\subsubsection{UCA 1.1.5}%fish level
 \begin{itemize}
-\item \textbf{Nome:} Messaggio di errore credenziali errate.
+\item \textbf{Nome:} Visualizzazione messaggio di errore credenziali errate.
 \item \textbf{Attori primari:} Utente non autenticato
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:}  L'utente non autenticato
@@ -113,14 +117,14 @@
     \end{enumerate}
 \item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCA 1.2.5 
-		\item UCA 1.2.6 
-		\item UCA 1.2.7 
-		\item UCA 1.2.8 
+		\item UCA 1.2.5;
+		\item UCA 1.2.6 ;
+		\item UCA 1.2.7; 
+		\item UCA 1.2.8; 
 	\end{enumerate}
 %\item \textbf{Inclusioni:}
 \end{itemize}
-
+\centering\includegraphics[scale=0.5]{Registrazione.png}
 \subsubsection{UC 1.2.1}%fish level
 \begin{itemize}
 \item \textbf{Nome:} Inserimento indirizzo e-mail
@@ -134,7 +138,7 @@
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UC 1.2.2}%fish level
+\subsubsection{UCA 1.2.2}%fish level
 \begin{itemize}
 \item \textbf{Nome:} Inserimento conferma indirizzo e-mail
 \item \textbf{Attori primari:} Utente non autenticato
@@ -143,12 +147,12 @@
 \item \textbf{Postcondizione:}  L’utente ha inserito la conferma dell'indirizzo e-mail
 \item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCA 1.2.7
+		\item UCA 1.2.7;
 	\end{enumerate} 
 \end{itemize}
 
 
-\subsubsection{UC 1.2.3}%fish level
+\subsubsection{UCA 1.2.3}%fish level
 \begin{itemize}
 \item \textbf{Nome:} Inserimento password
 \item \textbf{Attori primari:} Utente non autenticato
@@ -157,11 +161,11 @@
 \item \textbf{Postcondizione:} L’utente ha inserito una password
 \item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCA 1.2.6 
+		\item UCA 1.2.6;
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UC 1.2.4}%fish level
+\subsubsection{UCA 1.2.4}%fish level
 \begin{itemize}
 \item \textbf{Nome:} Inserimento conferma password
 \item \textbf{Attori primari:} Utente non autenticato
@@ -170,11 +174,11 @@
 \item \textbf{Postcondizione:} L’utente ha inserito la conferma della password
 \item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCA 1.2.8
+		\item UCA 1.2.8;
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UC 1.2.5}%fish level
+\subsubsection{UCA 1.2.5}%fish level
 \begin{itemize}
 \item \textbf{Nome:} Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione
 \item \textbf{Attori primari:} Utente non autenticato
@@ -183,7 +187,7 @@
 \item \textbf{Postcondizione:} L'indirizzo e-mail inserito dall'utente è già presente nel sistema, pertanto riceve un messaggio di errore 
 \end{itemize}
 
-\subsubsection{UC 1.2.6}%fish level
+\subsubsection{UCA 1.2.6}%fish level
 \begin{itemize}
 \item \textbf{Nome:} Visualizzazione messaggio di errore in caso di password troppo debole 
 \item \textbf{Attori primari:} Utente non autenticato
@@ -192,7 +196,7 @@
 \item \textbf{Postcondizione:} La password inserita dall’utente risulta essere poco sicura per il sistema, pertanto riceve un messaggio di errore.
 \end{itemize}
 
-\subsubsection{UC 1.2.7}%fish level
+\subsubsection{UCA 1.2.7}%fish level
 \begin{itemize}
 \item \textbf{Nome:} Visualizzazione messaggio di errore in caso di e-mail e conferma e-mail diverse
 \item \textbf{Attori primari:} Utente non autenticato
@@ -201,7 +205,7 @@
 \item \textbf{Postcondizione:} La e-mail inserita dall'utente è diversa da quella inserita nel campo conferma e-mail, pertanto riceve un messaggio di errore.
 \end{itemize}
 
-\subsubsection{UC 1.2.8}%fish level
+\subsubsection{UCA 1.2.8}%fish level
 \begin{itemize}
 \item \textbf{Nome:}  Visualizzazione messaggio di errore in caso di password e conferma password diverse
 \item \textbf{Attori primari:} Utente non autenticato
