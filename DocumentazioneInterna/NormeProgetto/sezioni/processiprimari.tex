@@ -43,7 +43,8 @@ Tutte queste informazioni appena elencate devono essere raccolte in un unico doc
 
 \subsection{Sviluppo}
 \subsubsection{Analisi dei requisiti}
-\textbf{Scopo} \\ \\
+\paragraph*{Scopo}\mbox{}\\
+
 Il documento Analisi dei requisiti, redatto dagli analisti, ha come scopo i seguenti punti:
 
 \begin{itemize}
@@ -55,10 +56,10 @@ Il documento Analisi dei requisiti, redatto dagli analisti, ha come scopo i segu
 \item Fornire una stima del quantitativo di lavoro per tracciare una stima dei costi. 
 \end{itemize}
 
-\textbf{Aspettative} \\ \\
+\paragraph*{Aspettative}\mbox{}\\
 Ci si pone come obiettivo dell’attività la creazione di un documento formale contenente tutti i requisiti richiesti e concordati col proponente. Sarà possibile fare riferimento a quanto redatto nel documento Analisi dei requisiti qualora sorgessero incomprensioni e dubbi al momento del collaudo del prodotto.
 
-\textbf{Descrizione} \\ \\
+\paragraph*{Descrizione}\mbox{}\\
 I requisiti verranno raccolti dalle seguenti fonti:
 \begin{itemize}
 \item Capitolato, attraverso la sua lettura, analisi ed approfondimento;
@@ -66,3 +67,102 @@ I requisiti verranno raccolti dalle seguenti fonti:
 \item Confronto con il proponente, concordando requisiti aggiuntivi o scartandone altri;
 \item Dall’analisi di uno o più casi d’uso.
 \end{itemize}
+
+\paragraph*{Casi d'uso}\mbox{}\\
+Definiscono uno scenario in cui uno o più attori interagiscono con il sistema. Saranno così strutturati:
+\begin{itemize}
+\item Codice identificativo
+\item Titolo
+\item Diagramma UML (solo se apporta valore aggiunto)
+\item Attori primari
+\item Attori secondari (se presenti)
+\item Precondizioni
+\item Postcondizioni
+\item Scenario principale (nei casi d’uso a grana più fine non è strettamente necessario)
+\item Scenario alternativi (se presenti)
+\item Inclusioni (se presenti)
+\item Estensioni (se presenti)
+\item Specializzazioni (se presenti)
+\end{itemize}
+\paragraph*{Codice idefinticativo dei casi d'uso}\mbox{}\\
+Il codice identificativo di ciascun caso d’uso, univoco nel suo complesso, sarà conforme alla sintassi indicata di seguito:
+\begin{center}
+	\textbf{UC[Destinazione] X.Y.Z}
+\end{center}
+Dove:
+\begin{itemize}
+	\item \textbf{Destinazione} può essere:
+	\begin{itemize}
+		\item \textbf{A}: il caso d’uso descrive un comportamento o una funzione che l’utente ha a disposizione nella parte del sistema corrispondente all’app
+		\item \textbf{B}: se il caso d’uso descrive un comportamento o una funzione che l’utente ha a disposizione nella parte del sistema corrispondente al server
+	\end{itemize}
+	\item \textbf{X}, \textbf{Y}, \textbf{Z} sono numeri naturali
+	\item \textbf{X} indica un caso d’uso kite-level (glossario)
+	\item \textbf{Y} indica un caso d’uso sea-level (glossario)
+	\item \textbf{Z} indica un caso d’uso fish-level (glossario)
+\end{itemize}
+La descrizione di un caso d’uso con codice \textbf{UC X} viene strutturata come segue:
+\begin{itemize}
+	\item Titolo
+	\item Nome
+	\item Attori primari
+	\item Attori secondari (opzionale)
+	\item Precondizioni
+	\item Postcondizioni
+	\item Scenario principale
+	\item Flusso di eventi (opzionale, sotto forma di elenco numerato)	
+\end{itemize}
+La descrizione di un caso d’uso con codice \textbf{UC X.Y} viene strutturata come segue:
+\begin{itemize}
+	\item Titolo
+	\item Nome
+	\item Attori primari
+	\item Attori secondari (opzionale)
+	\item Precondizioni
+	\item Postcondizioni
+	\item Scenario principale
+	\item Flusso di eventi (sotto forma di elenco numerato)	
+	\item Estensioni (riportare solo il codice identificativo del caso d’uso)
+	\item Inclusioni (riportare solo il codice identificativo del caso d’uso)	
+\end{itemize}
+La descrizione di un caso d’uso con codice \textbf{UC X.Y.Z} viene strutturata come segue:
+\begin{itemize}
+	\item Titolo
+	\item Nome
+	\item Attori primari
+	\item Attori secondari (opzionale)
+	\item Precondizioni
+	\item Postcondizioni
+	\item Flusso di eventi (opzionale)	
+\end{itemize}
+\paragraph*{Requisiti}\mbox{}\\
+Rappresentano dei requisiti che deve soddisfare il prodotto che si vuole realizzare.
+Ogni requisito sarà strutturato come segue:
+\begin{itemize}
+	\item \textbf{Codice identificativo}: è univoco e rispetta la sintassi \textbf{R[Importanza][Tipologia][Codice]}, dove:
+	\begin{itemize}
+		\item Importanza:
+		\begin{itemize}
+			\item \textbf{1}: requisito obbligatorio, ovvero irrinunciabile per almeno uno degli stakeholder
+			\item \textbf{2}: requisito desiderabile, ovvero non strettamente necessario ma che porta valore aggiunto riconoscibile
+			\item \textbf{3}: requisito opzionale, ovvero relativamente utile oppure contrattabile più avanti nel progetto
+		\end{itemize}
+		\item Tipologia:
+		\begin{itemize}
+			\item \textbf{F}: funzionale, definisce una funzione di un sistema di uno o più dei suoi componenti
+			\item \textbf{Q}: qualitativo, definisce un requisito per garantire la qualità per un certo aspetto del progetto
+			\item \textbf{V}: vincolo, definisce un requisito che è volto a far rispettare un dato vincolo
+		\end{itemize}
+	\end{itemize}
+	\item \textbf{Classificazione}: informazione ridondante, sotto forma testuale, dell’importanza del requisito. Facilita la lettura dei requisiti.
+	\item \textbf{Descrizione}: descrizione sintetica ma al contempo esaustiva del requisito.
+	\item \textbf{Fonti}: definisce da dove deriva il requisito. I requisiti vengono raccolti da una o più fonti tra quelle citate di seguito:
+	\begin{itemize}
+		\item \textbf{Capitolato}: requisito individuato dalla lettura e/o analisi del capitolato
+		\item \textbf{Interno}: requisito che gli analisti hanno ritenuto opportuno aggiungere
+		\item \textbf{Caso d’uso}: il requisito è derivato da uno o più casi d’uso. Riportare anche il/i codice/i identificativo/i del/i caso/i d’uso.
+		\item \textbf{Verbale}: requisito derivato in seguito ad una richiesta di chiarimento con il committente. Riportare il nome del documento del verbale da cui deriva il requisito in questione.		
+	\end{itemize}
+\end{itemize}
+\paragraph*{UML}\mbox{}\\
+I diagrammi UML devono essere realizzati usando la versione v2.0 del linguaggio UML.
