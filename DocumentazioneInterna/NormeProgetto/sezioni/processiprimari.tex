@@ -43,7 +43,7 @@ Tutte queste informazioni appena elencate devono essere raccolte in un unico doc
 
 \subsection{Sviluppo}
 \subsubsection{Analisi dei requisiti}
-\paragraph*{Scopo}\mbox{}\\
+\paragraph{Scopo}\mbox{}\\
 
 Il documento Analisi dei requisiti, redatto dagli analisti, ha come scopo i seguenti punti:
 
@@ -56,10 +56,10 @@ Il documento Analisi dei requisiti, redatto dagli analisti, ha come scopo i segu
 \item Fornire una stima del quantitativo di lavoro per tracciare una stima dei costi. 
 \end{itemize}
 
-\paragraph*{Aspettative}\mbox{}\\
+\paragraph{Aspettative}\mbox{}\\
 Ci si pone come obiettivo dell’attività la creazione di un documento formale contenente tutti i requisiti richiesti e concordati col proponente. Sarà possibile fare riferimento a quanto redatto nel documento Analisi dei requisiti qualora sorgessero incomprensioni e dubbi al momento del collaudo del prodotto.
 
-\paragraph*{Descrizione}\mbox{}\\
+\paragraph{Descrizione}\mbox{}\\
 I requisiti verranno raccolti dalle seguenti fonti:
 \begin{itemize}
 \item Capitolato, attraverso la sua lettura, analisi ed approfondimento;
@@ -68,7 +68,7 @@ I requisiti verranno raccolti dalle seguenti fonti:
 \item Dall’analisi di uno o più casi d’uso.
 \end{itemize}
 
-\paragraph*{Casi d'uso}\mbox{}\\
+\paragraph{Casi d'uso}\mbox{}\\
 Definiscono uno scenario in cui uno o più attori interagiscono con il sistema. Saranno così strutturati:
 \begin{itemize}
 \item Codice identificativo
@@ -84,7 +84,7 @@ Definiscono uno scenario in cui uno o più attori interagiscono con il sistema. 
 \item Estensioni (se presenti)
 \item Specializzazioni (se presenti)
 \end{itemize}
-\paragraph*{Codice idefinticativo dei casi d'uso}\mbox{}\\
+\paragraph{Codice idefinticativo dei casi d'uso}\mbox{}\\
 Il codice identificativo di ciascun caso d’uso, univoco nel suo complesso, sarà conforme alla sintassi indicata di seguito:
 \begin{center}
 	\textbf{UC[Destinazione] X.Y.Z}
@@ -135,12 +135,23 @@ La descrizione di un caso d’uso con codice \textbf{UC X.Y.Z} viene strutturata
 	\item Postcondizioni
 	\item Flusso di eventi (opzionale)	
 \end{itemize}
-\paragraph*{Requisiti}\mbox{}\\
-Rappresentano dei requisiti che deve soddisfare il prodotto che si vuole realizzare.
-Ogni requisito sarà strutturato come segue:
+\paragraph{Requisiti}\mbox{}\\
+Rappresentano dei requisiti che deve soddisfare il prodotto che si vuole realizzare.\\
+I requisiti saranno organizzati in forma tabellare.\\
+La tabella avrà le seguenti tre colonne:
 \begin{itemize}
-	\item \textbf{Codice identificativo}: è univoco e rispetta la sintassi \textbf{R[Importanza][Tipologia][Codice]}, dove:
-	\begin{itemize}
+	\item Codice idefinticativo
+	\item Classificazione
+	\item Descrizione
+	\item Fonti
+\end{itemize}
+\paragraph{Codice idefinticativo dei requisiti}\mbox{}\\
+Ogni requisito sarà strutturato come segue:
+\begin{center}
+	\textbf{R[Importanza][Tipologia][Codice]}
+\end{center}
+Dove:
+\begin{itemize}
 		\item Importanza:
 		\begin{itemize}
 			\item \textbf{1}: requisito obbligatorio, ovvero irrinunciabile per almeno uno degli stakeholder
@@ -153,7 +164,6 @@ Ogni requisito sarà strutturato come segue:
 			\item \textbf{Q}: qualitativo, definisce un requisito per garantire la qualità per un certo aspetto del progetto
 			\item \textbf{V}: vincolo, definisce un requisito che è volto a far rispettare un dato vincolo
 		\end{itemize}
-	\end{itemize}
 	\item \textbf{Classificazione}: informazione ridondante, sotto forma testuale, dell’importanza del requisito. Facilita la lettura dei requisiti.
 	\item \textbf{Descrizione}: descrizione sintetica ma al contempo esaustiva del requisito.
 	\item \textbf{Fonti}: definisce da dove deriva il requisito. I requisiti vengono raccolti da una o più fonti tra quelle citate di seguito:
@@ -164,5 +174,5 @@ Ogni requisito sarà strutturato come segue:
 		\item \textbf{Verbale}: requisito derivato in seguito ad una richiesta di chiarimento con il committente. Riportare il nome del documento del verbale da cui deriva il requisito in questione.		
 	\end{itemize}
 \end{itemize}
-\paragraph*{UML}\mbox{}\\
+\paragraph{UML}\mbox{}\\
 I diagrammi UML devono essere realizzati usando la versione v2.0 del linguaggio UML.
