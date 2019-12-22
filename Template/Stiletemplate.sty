@@ -110,6 +110,18 @@
 }
 %%
 
+\newcommand{\fancyAnalisiDeiRequisiti}{
+\pagestyle{fancy}
+\fancyhf{} %eliminare le cose già presenti nella pagina (numero)
+\fancyfoot[R]{\thepage} % R=DESTRA L=SINISTRA C=CENTRO foot=pie di pagina
+\fancyfoot[L]{Analisi Dei Requisiti}
+\fancyfoot[C]{}
+\fancyhead[L]{\includegraphics[scale=0.045]{\pathimg}} %head opposto pie
+\setlength{\headheight}{45pt}
+\renewcommand{\footrulewidth}{0.4pt}
+}
+%%
+
 %%Pacchetto per creare la tabella delle modifiche
 \usepackage{multirow}
 \usepackage[table]{xcolor} 

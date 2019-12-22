@@ -1,0 +1,128 @@
+\section{UCA 8}%kite level
+\begin{itemize}
+\item \textbf{Nome:} Tracciamento posizione
+\item \textbf{Attori primari:} Utente anonimo e Utente riconosciuto;
+\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth);
+\item \textbf{Precondizione:} L'utente precendetemente autenticato entra in un organizzazione tracciata dall'applicazione, perciò l'utente inizia essere tracciato;
+\item \textbf{Postcondizione:} Viene memorizzato dal sistema i timestamp del momento in cui sono avvenuti i tracciamenti, il luogo in cui e’ avvenuto, e il tempo trascorso nel luogo;
+\item \textbf{Scenario principale:} L'utente entra in un organizzazione tracciata dall'applicazione, perciò l'utente inizia essere tracciato. Viene salvato il timestamp di entrata e uscita dall'organizzazione e viene salvato il tempo trascorso all'interno dell'organizzazione;
+\end{itemize}
+
+\subsection{UCA 8.1}%sea level
+\begin{itemize}
+\item \textbf{Nome:} Tracciamento riconosciuto della posizione durante l'ingresso in un luogo di un'organizzazione
+\item \textbf{Attori primari:} Utente riconosciuto;
+\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth);
+\item \textbf{Precondizione:} L'utente precendetemente autenticato come riconosciuto entra in un organizzazione tracciata dall'applicazione, perciò l'utente inizia essere tracciato;
+\item \textbf{Postcondizione:} Viene registrato che l'utente riconosciuto è entrato nel luogo dell'organizzazione in certa ora e data (timestamp)
+\item \textbf{Scenario principale:}
+	\begin{itemize}
+	\item UCA 1.2 Cose1;
+	\item UCA 1.3 Cose2.
+\end{itemize}
+\item \textbf{Scenario alternativo:}
+\item \textbf{Estensioni:}
+	\begin{enumerate}
+		\item UCA 1.2 Cose1;
+		\item UCA 1.3 Cose2.
+	\end{enumerate}
+\item \textbf{Inclusioni:}
+\end{itemize}
+
+\subsubsection{UCA x.y.z}%fish level
+\begin{itemize}
+\item \textbf{Nome:}
+\item \textbf{Attori primari:}
+\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:}
+\item \textbf{Postcondizione:}
+\end{itemize}
+
+\subsection{UCA 8.2}%sea level
+\begin{itemize}
+	\item \textbf{Nome:} Tracciamento riconosciuto della posizione durante l'uscita in un luogo di un'organizzazione
+	\item \textbf{Attori primari:} Utente riconosciuto;
+	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth);
+	\item \textbf{Precondizione:}
+	\item \textbf{Postcondizione:}
+	\item \textbf{Scenario principale:}
+	\item \textbf{Flusso di eventi:} 
+	\begin{itemize}
+		\item UCA 1.2 Cose1;
+		\item UCA 1.3 Cose2.
+	\end{itemize}
+	\item \textbf{Scenario alternativo:}
+	\item \textbf{Estensioni:}
+	\begin{enumerate}
+		\item UCA 1.2 Cose1;
+		\item UCA 1.3 Cose2.
+	\end{enumerate}
+	\item \textbf{Inclusioni:}
+\end{itemize}
+
+\subsection{UCA 8.3}%sea level
+\begin{itemize}
+	\item \textbf{Nome:} Tracciamento anonimo della posizione durante l'ingresso in un luogo di un'organizzazione
+	\item \textbf{Attori primari:} Utente anonimo; 
+	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth);
+	\item \textbf{Precondizione:} L'utente precendetemente autenticato come anonimo entra in un organizzazione tracciata dall'applicazione, perciò l'utente inizia essere tracciato;
+	\item \textbf{Postcondizione:} Viene registrato che l'utente riconosciuto è entrato nel luogo dell'organizzazione in certa ora e data (timestamp)
+	\item \textbf{Scenario principale:}
+	\item \textbf{Flusso di eventi:} 
+	\begin{itemize}
+		\item UCA 1.2 Cose1;
+		\item UCA 1.3 Cose2.
+	\end{itemize}
+	\item \textbf{Scenario alternativo:}
+	\item \textbf{Estensioni:}
+	\begin{enumerate}
+		\item UCA 1.2 Cose1;
+		\item UCA 1.3 Cose2.
+	\end{enumerate}
+	\item \textbf{Inclusioni:}
+\end{itemize}
+
+\subsection{UCA 8.4}%sea level
+\begin{itemize}
+	\item \textbf{Nome:} Tracciamento anonimo della posizione durante l'uscita in un luogo di un'organizzazione
+	\item \textbf{Attori primari:} Utente anonimo 
+	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth);
+	\item \textbf{Precondizione:}
+	\item \textbf{Postcondizione:}
+	\item \textbf{Scenario principale:}
+	\item \textbf{Flusso di eventi:} 
+	\begin{itemize}
+		\item UCA 1.2 Cose1;
+		\item UCA 1.3 Cose2.
+	\end{itemize}
+	\item \textbf{Scenario alternativo:}
+	\item \textbf{Estensioni:}
+	\begin{enumerate}
+		\item UCA 1.2 Cose1;
+		\item UCA 1.3 Cose2.
+	\end{enumerate}
+	\item \textbf{Inclusioni:}
+\end{itemize}
+
+\subsection{UCA 8.5}%sea level
+\begin{itemize}
+	\item \textbf{Nome:}
+	\item \textbf{Attori primari:} Utente anonimo e Utente riconosciuto
+	\item \textbf{Attori secondari:}
+	\item \textbf{Precondizione:}
+	\item \textbf{Postcondizione:}
+	\item \textbf{Scenario principale:}
+	\item \textbf{Flusso di eventi:} 
+	\begin{itemize}
+		\item UCA 1.2 Cose1;
+		\item UCA 1.3 Cose2.
+	\end{itemize}
+	\item \textbf{Scenario alternativo:}
+	\item \textbf{Estensioni:}
+	\begin{enumerate}
+		\item UCA 1.2 Cose1;
+		\item UCA 1.3 Cose2.
+	\end{enumerate}
+	\item \textbf{Inclusioni:}
+\end{itemize}
+
