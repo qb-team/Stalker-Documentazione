@@ -1,9 +1,36 @@
 \newpage
-\section{UCA 4 - Logout dell'utente dall'applicazione}%kite level
+\section{UCA 4 - Inserimento modalità di tracciamento}%kite level
 \begin{itemize}
-\item \textbf{Attori primari:} Utente anonimo e Utente riconosciuto;
-\item \textbf{Attori secondari:} Server di Stalker;
-\item \textbf{Precondizione:} L’utente si è già autenticato nel sistema e si trova all’interno dell’applicazione;
-\item \textbf{Postcondizione:}  L’utente si è disconnesso dal proprio account e non è più autenticato nell’applicazione;
-\item \textbf{Scenario principale:} L'utente ha fatto richiesta di avviare la procedura di logout dall'applicazione.
+	\item \textbf{Attori primari:} Utente riconosciuto;
+	\item \textbf{Precondizione:} L'utente si è autenticato con le credenziali LDAP\ap{G} nella organizzazione in cui si trova e vuole selezionare la modalita di tracciamento;
+	\item \textbf{Postcondizione:} L'utente viene tracciato secondo la modalità scelta da lui precedentemente; 
+	\item \textbf{Scenario principale:} L'utente accede alla funzionali di "Inserimento modalità di tracciamento" scegliendo tra:
+	\begin{itemize}
+		\item UCA 6.1 Inserimento modalità anonimo\ap{G};
+		\item UCA 6.2 Inserimento modalità autenticato\ap{G}.
+	\end{itemize}
+\end{itemize}
+
+\subsection{UCA 4.1 - Inserimento modalità anonimo}%sea level
+\begin{itemize}
+\item \textbf{Attori primari:} Utente riconosciuto;
+\item \textbf{Precondizione:} L'utente si è autenticato con le credenziali LDAP\ap{G} nella organizzazione in cui si trova e vuole selezionare la modalita di tracciamento anonimo
+\item \textbf{Postcondizione:}  L'utente viene tracciato secondo la modalità anonimo;
+\item \textbf{Scenario principale:}
+	\begin{itemize}
+	\item L'utente accede alla funzionalita inserimento modalità di tracciamento;
+	\item L'utente inserisce la modalità anonimo.
+\end{itemize}
+\end{itemize}
+
+\subsection{UCA 4.2 - Inserimento modalità autenticato}%sea level
+\begin{itemize}
+	\item \textbf{Attori primari:} Utente riconosciuto;
+	\item \textbf{Precondizione:} L'utente si è autenticato con le credenziali LDAP\ap{G} nella organizzazione in cui si trova e vuole selezionare la modalita di tracciamento autenticato;
+	\item \textbf{Postcondizione:}  L'utente viene tracciato secondo la modalità autenticato;
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item L'utente accede alla funzionalita inserimento modalità di tracciamento;
+		\item L'utente inserisce la modalità autenticato.
+	\end{itemize}
 \end{itemize}
