@@ -4,14 +4,14 @@
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage[italian]{babel}
-\usepackage{tocloft}
-\usepackage{sectsty}
+\usepackage[raggedright]{titlesec}
+\usepackage{blindtext}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
 
 \input{sezioni/comandi.tex}
 
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
-\fancyAnalisiDeiRequisiti{}
 \begin{document}
 
 \copertina{}
@@ -19,15 +19,16 @@
 
 \input{sezioni/RegistroModifiche.tex}
 
-\setcounter{secnumdepth}{0}
-\sectionfont{\underline}
-
-
+\fancyAR{}
 
 \clearpage
 \tableofcontents
 \clearpage
 
+\section{Casi d'uso}
+\input{sezioni/UseCase/Attori.tex}
+\subsection{Elenco casi d'uso}
+\setcounter{secnumdepth}{0}
 \input{sezioni/UCsection.tex}
 
 
