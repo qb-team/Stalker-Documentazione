@@ -1,0 +1,79 @@
+\section{Informazioni Generali}
+\begin{itemize}
+\item \textbf{Luogo:} Aula 1A150 presso Torre Archimede;
+\item \textbf{Data:} \Data;
+\item \textbf{Ora:} 14:30 - 16:30;
+\item \textbf{Partecipanti del gruppo:}
+	\begin{itemize}
+	\item Azzalin Tommaso; 
+	\item Cisotto Emanuele; 
+	\item Drago Francesco;
+	\item Lazzaro Davide;
+	\item Perin Federico;
+	\item Salmaso Enrico;
+	\item Baratin Riccardo;
+	\item Mattei Christian.
+	\end{itemize} 
+\item \textbf{Segretario:} Azzalin Tommaso.
+\end{itemize}
+
+\clearpage
+
+\section{Ordine del Giorno}
+\begin{itemize}
+	\item Presentazione dei membri del gruppo al proponente;
+	\item Discussione con il proponente di idee sul progetto e richiesta di spiegazioni a punti non chiari de parte dei membri del gruppo.
+\end{itemize}
+
+~\\
+
+\section{Resoconto}
+\subsection{Presentazione dei membri del gruppo al proponente}
+Il gruppo si è presentato al proponente, l'azienda Imola Informatica, e ha esposto la propria volontà di portare avanti il progetto \NomeProgetto.
+
+\subsection{Discussione con il proponente di idee sul progetto \NomeProgetto e richiesta di spiegazioni a punti non chiari de parte dei membri del gruppo}
+Il gruppo si era preparato per l'incontro le seguenti domande (che aveva precedentemente comunicato tramite mail al proponente):
+\begin{enumerate}
+	\item Quali sono i riferimento normativi sulla privacy da tenere in considerazione?
+	\item Quali sono le differenze fra tracciamento anonimo e autenticato? Perché un'organizzazione che richiede il tracciamento autenticato avrebbe bisogno di un pulsante per abilitare il tracciamento anonimo?
+	\item Qual è la licenza più opportuna per lo sviluppo del progetto software?
+	\item Spiegazione più in dettaglio delle tecniche per il tracciamento degli utenti della posizione degli utenti, utilizzando le varie tecnologie indicate nella presentazione del capitolato.
+	\item Spiegazione di alcune tecniche relative alla scalabilità del server, all'autenticazione degli utenti nell'app e nel server e al protocollo LDAP.
+\end{enumerate}
+\subsubsection*{Riferimenti normativi sulla privacy da tenere in considerazione}
+Sicuramente è da tenere in considerazione la recente normativa a livello europeo in tema di privacy, il GDPR. \\
+Il GDPR presta molta attenzione al trattamento dei dati personali e richiede ad esempio che, se una base di dati aziendale è affidata a terzi, questa non deve risultare accessibile se non dal proprietario della stessa.
+Inoltre, tutte le informazioni sulle attività di un utente e i dati personali dell'utente devono essere strettamente separati e non accessibili assieme. Il proponente ha fatto un semplice esempio: se viene usato un database
+NoSQL in cui tipicamente i dati sono salvati in file di testo in un formato specifico (per esempio JSON), non è possibile che siano presenti assieme i dati personali di un utente e attività da lui svolte, che in questo progetto
+sarebbero gli accessi ai luoghi delle organizzazioni.
+Il proponente ha consigliato di fare prima uno studio sugli attori e sulle informazioni necessarie alla loro definizione e, una volta che è chiaro cosa bisogna memorizzare per identificare tutti questi, di pensare al tipo di database.
+Successivamente ha consigliato, una volta aver definito i casi d'uso, di verificare che essi rispettino il GDPR. Questo è possibile farlo seguendo l'elenco presente nel seguente \href{https://gdpr.eu/checklist/}{sito}.
+
+\subsubsection*{Differenze fra tracciamento anonimo e autenticato. Motivazione della necessità di avere un pulsante per attivare il tracciamento anonimo in organizzazioni con tracciamento autenticato}
+La differenza fra le due modalità di tracciamento è stata confermata essere quella indicata nel documento di presentazione del capitolato.\\
+La motivazione per il pulsante di cui sopra è stata illustrata con due esempi:
+\begin{itemize}
+	\item un dipendente di un'azienda che ha le chiavi della sede, può entrare quando vuole per svolgere delle attività, ma non vuole essere visto come disponibile per essere contattato;
+	\item un dipendente di una strttura fieristica che si trova a un evento presso il suo stesso luogo di lavoro come visitatore e non come lavoratore, non vuole essere visto come disponibile (per lo stesso motivo del precedente).
+\end{itemize}
+Quando un utente passa nella modalità di tracciamento anonimo ed è ancora presso un luogo di un'organizzazione, viene terminato il suo accesso e genera un accesso con tracciamento anonimo presso lo stesso luogo.
+Il proponente richiede che in generale le scelte implementative non specificate nel capitolato vanno documentate, analizzando i pro e i contro di ognuna. Tiene anche a specificare che lo scopo del progetto non è
+tracciare gli orari dei dipendenti e che quindi non è fondamentale concentrarsi troppo sull'aspetto dell'orario negli accessi ai luoghi.
+
+\subsubsection*{Licenza per lo sviluppo del progetto}
+Il proponente consiglia di guardare fra le seguenti licenze:
+\begin{itemize}
+	\item GNU GPL;
+	\item LGPL;
+	\item MIT.
+\end{itemize}
+L'importante, dice, è che sia una licenza open source. Consiglia di visitare il seguente \href{https://opensource.org/licenses}{link}.
+
+\subsubsection*{Tecniche di tracciamento degli utenti}
+Il dipendente dell'azienda proponente presente afferma di non essere la persona più adatta per rispondere a questa domanda e di chiedere al suo collega (di cui ci fornisce l'indirizzo mail) maggiori informazioni a riguardo.
+
+\subsubsection*{Tecniche relative alla scalabilità del server, all'autenticazione degli utenti nell'app e nel server e al protocollo LDAP}
+Riguardo all'autenticazione degli utenti nell'app, il proponente afferma che la sua idea è che quando un utente accede per la prima volta nell'applicazione, debba autenticarsi con delle credenziali per la piattaforma.
+Le credenziali di questa utenza dovrebbe essere cosa diversa dalle credenziali di un'organizzazione: lo scopo di queste è poterle riutilizzare per l'accesso attraverso un altro telefono all'applicazione e avere già
+memorizzate tutte le informazioni precedentemente salvate nell'applicazione (usando l'altro telefono).\\
+\clearpage
