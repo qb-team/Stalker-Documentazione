@@ -1,195 +1,141 @@
 \newpage
+\section{UCA 6}
 \begin{figure}[h]
 	\centering
-	\caption{UCA 8 - Tracciamento posizione}
+	\caption{UCA 6 - Tracciamento posizione}
 	\includegraphics[scale=0.28]{sezioni/UseCase/Immagini/UCA8.png}
 \end{figure}
-\section{UCA 8 - Tracciamento posizione}%kite level
+
+\subsection{UCA 6}%kite level
 \begin{itemize}
-\item \textbf{Attori primari:} Utente anonimo e Utente riconosciuto;
-\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth);
-\item \textbf{Precondizione:} L'utente precendetemente autenticato entra in un organizzazione tracciata dall'applicazione, perciò l'utente inizia essere tracciato;
-\item \textbf{Postcondizione:} Viene memorizzato dal sistema i timestamp del momento in cui sono avvenuti i tracciamenti, il luogo in cui e’ avvenuto, e il tempo trascorso nel luogo;
-\item \textbf{Scenario principale:} L'utente entra in un organizzazione tracciata dall'applicazione, perciò l'utente inizia essere tracciato. Viene salvato il timestamp di entrata e uscita dall'organizzazione e viene salvato il tempo trascorso all'interno dell'organizzazione;
+	\item \textbf{Nome:} Tracciamento posizione.
+	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto;
+	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare);
+	\item \textbf{Precondizione:} L'utente autenticato con credenziali Stalker sta per entrare o sta per uscire in/da un luogo dell'organizzazione che richiede il tracciamento.
+	\item \textbf{Postcondizione:} Viene memorizzato dal sistema il timestamp i momenti in cui è avvenuto il tracciamento, dove è avvenuto, e il tempo trascorso al suo interno.
+	\item \textbf{Scenario principale:} L'utente si trova nei pressi o sta per uscire in/da un luogo dell'organizzazione che richiede il tracciamento. Viene salvato il timestamp di entrata e uscita dall'organizzazione e viene salvato il tempo trascorso all'interno dell'organizzazione.
 \end{itemize}
 
-\subsection{UCA 8.1 - Tracciamento riconosciuto della posizione durante l'ingresso in un luogo di un'organizzazione}%sea level
+\subsection{UCA 6.1}%sea level
 \begin{itemize}
-\item \textbf{Attori primari:} Utente riconosciuto;
-\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth) , Server LDAP dell'organizzazione;
-\item \textbf{Precondizione:} L'utente precendetemente autenticato come riconosciuto entra in un organizzazione tracciata dall'applicazione, perciò l'utente inizia essere tracciato;
-\item \textbf{Postcondizione:} Viene registrato che l'utente riconosciuto è entrato nel luogo dell'organizzazione in una certa ora e data (timestamp);
-\item \textbf{Scenario principale:}
-	\begin{itemize}
-	\item L'utente riconosciuto con credenziali LDAP entra in un luogo di una organizzazione; tracciata
-	\item Viene inviata la data e ora di ingresso e il luogo[UCA 8.1.1];
-	\item Viene registrato il timestamp.
-\end{itemize}
-\item \textbf{Scenario alternativo:} L'invio del timestamp non va a buon fine perchè:
-\begin{enumerate}
-	\item C'è stato un errore nell'invio del timestamp.
-\end{enumerate}
-\item \textbf{Estensioni:}
-	\begin{enumerate}
-		\item UCA 8.1.3 Notifica di errore se procedimento di accesso al luogo è fallito.
-	\end{enumerate}
-\item \textbf{Inclusioni:}
-\begin{enumerate}
-	\item UCA 8.1.2 Notifica di conferma di avvenuto salvataggio dell'ingresso in un luogo dell'organizzazione.
-\end{enumerate}
-\end{itemize}
-
-\subsubsection{UCA 8.1.1 - Invio timestamp LDAP}%fish level
-\begin{itemize}
-\item \textbf{Attori primari:} Utente riconosciuto;
-\item \textbf{Attori secondari:}  Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth), Server LDAP dell'organizzazione;
-\item \textbf{Precondizione:} L'utente precendetemente autenticato come riconosciuto, viene inviato un timestamp per registare un suo movimento;
-\item \textbf{Postcondizione:} Viene registrato un movimento dell'utente riconosciuto nell'organizzazione in una certa ora e data (timestamp).
-\end{itemize}
-
-\subsubsection{UCA 8.1.2 - Notifica di conferma di avvenuto salvataggio dell'ingresso in un luogo dell'organizzazione}%fish level
-\begin{itemize}
-	\item \textbf{Attori primari:} Utente riconosciuto;
-	\item \textbf{Attori secondari:} Server LDAP dell'organizzazione;
-	\item \textbf{Precondizione:} L'utente riconosciuto entra in un organizzazione tracciata dall'applicazione, e viene  inviato correttamente il timestamp;
-	\item \textbf{Postcondizione:} L'utente viene informato che è stato registrato il suo accesso nell'organizzazione.
-\end{itemize}
-
-\subsubsection{UCA 8.1.3 - Notifica di errore se procedimento di accesso al luogo è fallito}%fish level
-\begin{itemize}
-	\item \textbf{Attori primari:} Utente riconosciuto;
-	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth) , Server LDAP dell'organizzazione;
-	\item \textbf{Precondizione:} Avviene un errore durante la registrazione dell'movimento dell'utente
-	\item \textbf{Postcondizione:} Viene notificato l'errore all'utente
-\end{itemize}
-
-\subsection{UCA 8.2 - Tracciamento riconosciuto della posizione durante l'uscita in un luogo di un'organizzazione}%sea level
-\begin{itemize}
-	\item \textbf{Attori primari:} Utente riconosciuto;
-	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth), Server LDAP dell'organizzazione;
-	\item \textbf{Precondizione:} L'utente precendetemente autenticato come riconosciuto esce da un'organizzazione tracciata dall'applicazione, perciò l'utente smette di essere tracciato;
-	\item \textbf{Postcondizione:} Viene registrato che l'utente riconosciuto è uscito dal luogo dell'organizzazione in una certa ora e data (timestamp)
-	\item \textbf{Scenario principale:}
-	\begin{itemize}
-		\item L'utente riconosciuto con credenziali LDAP esce da un luogo di una organizzazione; tracciata
-		\item Viene inviata la data e ora di uscita e il luogo[UCA 8.1.1];
-		\item Viene registrato il timestamp.
-	\end{itemize}
-	\item \textbf{Scenario alternativo:} L'invio del timestamp non va a buon fine perchè:
-	\begin{enumerate}
-		\item C'è stato un errore nell'invio del timestamp.
-	\end{enumerate}
+	\item \textbf{Nome:} Tracciamento autenticato della posizione durante l'ingresso in un luogo di un'organizzazione.
+	\item \textbf{Attori primari:} Utente riconosciuto.
+	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare), server LDAP dell'organizzazione.
+	\item \textbf{Precondizione:} L'utente sta per entrare (ovvero si trova nei pressi) in un luogo dell'organizzazione che richiede il tracciamento.
+	\item \textbf{Postcondizione:} Viene registrato l'ingresso nel luogo dell'organizzazione in una certa data e ora (timestamp).
+	\item \textbf{Scenario principale:} L'utente, quando verifica tramite i/il servizi/o di localizzazione che si trova nei pressi di un luogo di un'organizzazione, verifica il momento in cui entra al suo interno.
+	Quando entra al suo interno verifica di potersi autenticare correttamente con le credenziali dell'organizzazione [UCA 6.1.2]: se riesce, memorizza nel sistema la data e ora di ingresso nel luogo [UCA 6.1.1].
+	Infine, viene informato l'utente dell'ingresso riuscito.
+	\item \textbf{Scenario alternativo:} Il tentativo di autenticazione presso l'organizzazione o l'invio delle credenziali fallisce. Viene informato l'utente.
 	\item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCA 8.1.3 Notifica di errore se procedimento di accesso al luogo è fallito.
+		\item UCA 6.1.3 - Notifica di errore se procedimento di memorizzazione dell'accesso al luogo è fallito.
+		\item UCA 6.1.4 - Notifica di avvenuta memorizzazione dei dati dell'accesso.
 	\end{enumerate}
 	\item \textbf{Inclusioni:}
 	\begin{enumerate}
-		\item UCA 8.2.1 Notifica di conferma di avvenuto salvataggio dell'uscita da un luogo dell'organizzazione.
+		\item UCA 6.1.1 - Invio timestamp relativo all'ingresso/uscita in/da un luogo.
+		\item UCA 6.1.2 - Verifica correttezza delle credenziali di accesso all'organizzazione.
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UC 8.2.1 - Notifica di conferma di avvenuto salvataggio dell'uscita da un luogo dell'organizzazione}%fish level
+% DA 6.1.1 A 6.1.4 RICHIEDONO UN CAMBIO DI NUMERAZIONE PERCHE' NON SONO SOLO RELATIVI A UCA 6.1
+\subsubsection{UCA 6.1.1}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente riconosciuto;
-	\item \textbf{Attori secondari:} Server LDAP dell'organizzazione;
-	\item \textbf{Precondizione:} L'utente riconosciuto esce da un'organizzazione tracciata dall'applicazione, e viene  inviato correttamente il timestamp;
-	\item \textbf{Postcondizione:} L'utente viene informato che è stato registrato che è uscito dall'organizzazione.
+	\item \textbf{Nome:} Invio timestamp relativo all'ingresso/uscita in/da un luogo.
+	\item \textbf{Attori primari:} Utente riconosciuto, Utente anonimo.
+	\item \textbf{Precondizione:} L'utente ha verificato di trovarsi nei pressi di un luogo che richiede il tracciamento autenticato.
+	\item \textbf{Postcondizione:} Viene registrato il timestamp relativo all'ingresso dell'utente nel luogo dell'organizzazione.
 \end{itemize}
 
-\subsection{UCA 8.3 - Tracciamento anonimo della posizione durante l'ingresso in un luogo di un'organizzazione}%sea level
+\subsubsection{UCA 6.1.2}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo; 
-	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth);
-	\item \textbf{Precondizione:} L'utente precendetemente autenticato come anonimo entra in un organizzazione tracciata dall'applicazione, perciò l'utente inizia essere tracciato;
-	\item \textbf{Postcondizione:} Viene registrato che l'utente anonimo è entrato nel luogo dell'organizzazione in certa ora e data (timestamp)
-	\item \textbf{Scenario principale:}
-	\begin{itemize}
-		\item L'utente anonimo entra in un luogo di una organizzazione tracciata;
-		\item Viene inviata la data e ora di ingresso e il luogo[UCA 8.3.1];
-		\item Viene registrato il timestamp.
-	\end{itemize}
-	\item \textbf{Scenario alternativo:} L'invio del timestamp non va a buon fine perchè:
-	\begin{enumerate}
-		\item C'è stato un errore nell'invio del timestamp.
-	\end{enumerate}
+	\item \textbf{Nome:} Verifica correttezza delle credenziali di accesso all'organizzazione.
+	\item \textbf{Attori primari:} Utente riconosciuto.
+	\item \textbf{Attori secondari:} Server LDAP dell'organizzazione.
+	\item \textbf{Precondizione:} L'utente, in quanto riconosciuto, possiede credenziali per autenticarsi presso l'organizzazione.
+	\item \textbf{Postcondizione:} Viene verificata o meno la validità delle credenziali fornite: esse sono valide se la verifica va a buon fine.
+\end{itemize}
+
+\subsubsection{UCA 6.1.3}%fish level
+\begin{itemize}
+	\item \textbf{Nome:} Notifica di errore se procedimento di memorizzazione dell'accesso al luogo è fallito
+	\item \textbf{Attori primari:} Utente riconosciuto, Utente anonimo.
+	\item \textbf{Precondizione:} Avviene un errore durante la registrazione dell'accesso dell'utente.
+	\item \textbf{Postcondizione:} Viene notificato l'errore all'utente.
+\end{itemize}
+
+\subsubsection{UCA 6.1.4}%fish level
+\begin{itemize}
+	\item \textbf{Nome:} Notifica di avvenuta memorizzazione dei dati dell'accesso.
+	\item \textbf{Attori primari:} Utente riconosciuto, Utente anonimo.
+	\item \textbf{Precondizione:} Il processo di memorizzazione dei dati dell'accesso nel sistema è avvenuto correttamente.
+	\item \textbf{Postcondizione:} Viene notificato l'utente dell'avvenuto salvataggio.
+\end{itemize}
+
+\subsection{UCA 6.2}%sea level
+\begin{itemize}
+	\item \textbf{Nome:} Tracciamento riconosciuto della posizione durante l'uscita in un luogo di un'organizzazione.
+	\item \textbf{Attori primari:} Utente riconosciuto.
+	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare), server LDAP dell'organizzazione.
+	\item \textbf{Precondizione:} L'utente sta per uscire da un luogo dell'organizzazione che richiede il tracciamento.
+	\item \textbf{Postcondizione:} Viene registrato l'uscita dal luogo dell'organizzazione in una certa data e ora (timestamp).
+	\item \textbf{Scenario principale:} L'utente, quando verifica tramite i/il servizi/o di localizzazione che sta per uscire da un luogo dell'organizzazione, verifica il momento in cui avviene l'uscita.
+	Quando esce, verifica di potersi autenticare correttamente con le credenziali dell'organizzazione [UCA 6.1.2]: se riesce, memorizza nel sistema la data e ora di uscita dal luogo [UCA 6.1.1].
+	Infine, viene informato l'utente dell'uscita riuscita. La combinazione di ingresso effettuato in precedenza e dell'uscita effettuata formano un accesso, ora ritrovabile in Storico accessi [UCA 5].
+	\item \textbf{Scenario alternativo:} Il tentativo di autenticazione presso l'organizzazione o l'invio delle credenziali fallisce. Viene informato l'utente.
 	\item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCA 8.3.3 Notifica di errore se procedimento di accesso al luogo è fallito.
+		\item UCA 6.1.3 - Notifica di errore se procedimento di memorizzazione dell'accesso al luogo è fallito.
+		\item UCA 6.1.4 - Notifica di avvenuta memorizzazione dei dati dell'accesso.
 	\end{enumerate}
 	\item \textbf{Inclusioni:}
 	\begin{enumerate}
-		\item UCA 8.3.2 Notifica di conferma di avvenuto salvataggio dell'ingresso in un luogo dell'organizzazione.
+		\item UCA 6.1.1 - Invio timestamp relativo all'ingresso/uscita in/da un luogo.
+		\item UCA 6.1.2 - Verifica correttezza delle credenziali di accesso all'organizzazione.
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UCA 8.3.1 - Invio timestamp LDAP}%fish level
+\subsection{UCA 6.3}%sea level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Attori secondari:}  Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth), Server di Stalker;
-	\item \textbf{Precondizione:} L'utente precendetemente autenticato come anonimo, viene inviato un timestamp per registare un suo movimento;
-	\item \textbf{Postcondizione:} Viene registrato un movimento dell'utente anonimo nell'organizzazione in una certa ora e data (timestamp).
+	\item \textbf{Nome:} Tracciamento anonimo della posizione durante l'ingresso in un luogo di un'organizzazione.
+	\item \textbf{Attori primari:} Utente anonimo.
+	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare).
+	\item \textbf{Precondizione:} L'utente sta per entrare (ovvero si trova nei pressi) in un luogo dell'organizzazione che richiede il tracciamento.
+	\item \textbf{Postcondizione:} Viene registrato l'ingresso nel luogo dell'organizzazione in una certa data e ora (timestamp).
+	\item \textbf{Scenario principale:} L'utente, quando verifica tramite i/il servizi/o di localizzazione che si trova nei pressi di un luogo di un'organizzazione, verifica il momento in cui entra al suo interno.
+	Quando entra al suo interno memorizza nel sistema la data e ora di ingresso nel luogo [UCA 6.1.1].
+	Infine, viene informato l'utente dell'ingresso riuscito.
+	\item \textbf{Scenario alternativo:} Il tentativo di invio delle credenziali fallisce. Viene informato l'utente.
+	\item \textbf{Estensioni:}
+	\begin{enumerate}
+		\item UCA 6.1.3 - Notifica di errore se procedimento di memorizzazione dell'accesso al luogo è fallito.
+		\item UCA 6.1.4 - Notifica di avvenuta memorizzazione dei dati dell'accesso.
+	\end{enumerate}
+	\item \textbf{Inclusioni:}
+	\begin{enumerate}
+		\item UCA 6.1.1 - Invio timestamp relativo all'ingresso/uscita in/da un luogo.
+	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UCA 8.3.2 - Notifica di conferma di avvenuto salvataggio dell'ingresso in un luogo dell'organizzazione}%fish level
+\subsection{UCA 6.4} %sea level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Attori secondari:} Server di Stalker;;
-	\item \textbf{Precondizione:} L'utente anonimo entra in un organizzazione tracciata dall'applicazione, e viene  inviato correttamente il timestamp;
-	\item \textbf{Postcondizione:} L'utente viene informato che è stato registrato il suo accesso nell'organizzazione.
+	\item \textbf{Nome:} Tracciamento anonimo della posizione durante l'uscita in un luogo di un'organizzazione.
+	\item \textbf{Attori primari:} Utente anonimo.
+	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare).
+	\item \textbf{Precondizione:} L'utente sta per uscire da un luogo dell'organizzazione che richiede il tracciamento.
+	\item \textbf{Postcondizione:} Viene registrato l'uscita dal luogo dell'organizzazione in una certa data e ora (timestamp).
+	\item \textbf{Scenario principale:} L'utente, quando verifica tramite i/il servizi/o di localizzazione che sta per uscire da un luogo dell'organizzazione, verifica il momento in cui avviene l'uscita.
+	Quando esce, memorizza nel sistema la data e ora di uscita dal luogo [UCA 6.1.1].
+	Infine, viene informato l'utente dell'uscita riuscita. La combinazione di ingresso effettuato in precedenza e dell'uscita effettuata formano un accesso, ora ritrovabile in Storico accessi [UCA 5].
+	\item \textbf{Scenario alternativo:} Il tentativo di invio delle credenziali fallisce. Viene informato l'utente.
+	\item \textbf{Estensioni:}
+	\begin{enumerate}
+		\item UCA 6.1.3 - Notifica di errore se procedimento di memorizzazione dell'accesso al luogo è fallito.
+		\item UCA 6.1.4 - Notifica di avvenuta memorizzazione dei dati dell'accesso.
+	\end{enumerate}
+	\item \textbf{Inclusioni:}
+	\begin{enumerate}
+		\item UCA 6.1.1 - Invio timestamp relativo all'ingresso/uscita in/da un luogo.
+	\end{enumerate}
 \end{itemize}
-
-\subsubsection{UCA 8.3.3 - Notifica di errore se procedimento di accesso al luogo è fallito}%fish level
-\begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth) , Server di Stalker;;
-	\item \textbf{Precondizione:} Avviene un errore durante la registrazione dell'movimento dell'utente
-	\item \textbf{Postcondizione:} Viene notificato l'errore all'utente
-\end{itemize}
-
-\subsection{UCA 8.4 - Tracciamento anonimo della posizione durante l'uscita in un luogo di un'organizzazione} %sea level
-\begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo 
-	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS, rete cellulare, beacon Bluetooth), Server di Stalker;
-	\item \textbf{Precondizione:} L'utente precendetemente autenticato come anonimo esce da un'organizzazione tracciata dall'applicazione, perciò l'utente smette di essere tracciato;
-\item \textbf{Postcondizione:} Viene registrato che l'utente anonimo è uscito dal luogo dell'organizzazione in una certa ora e data (timestamp)
-\item \textbf{Scenario principale:}
-\begin{itemize}
-	\item L'utente anonimo entra in un luogo di una organizzazione tracciata;
-	\item Viene inviata la data e ora di uscita e il luogo[UCA 8.3.1];
-	\item Viene registrato il timestamp.
-\end{itemize}
-\item \textbf{Scenario alternativo:} L'invio del timestamp non va a buon fine perchè:
-\begin{enumerate}
-	\item C'è stato un errore nell'invio del timestamp.
-\end{enumerate}
-\item \textbf{Estensioni:}
-\begin{enumerate}
-	\item UCA 8.3.3 Notifica di errore se procedimento di accesso al luogo è fallito.
-\end{enumerate}
-\item \textbf{Inclusioni:}
-\begin{enumerate}
-	\item UCA 8.4.1 Notifica di conferma di avvenuto salvataggio dell'uscita da un luogo dell'organizzazione.
-\end{enumerate}
-\end{itemize}
-
-\subsubsection{UC 8.4.1 - Notifica di conferma di avvenuto salvataggio dell'uscita da un luogo dell'organizzazione}%fish level
-\begin{itemize}
-\item \textbf{Attori primari:} Utente anonimo;
-\item \textbf{Attori secondari:} Server di Stalker;
-\item \textbf{Precondizione:} L'utente anonimo esce da un'organizzazione tracciata dall'applicazione, e viene  inviato correttamente il timestamp;
-\item \textbf{Postcondizione:} L'utente viene informato che è stato registrato che è uscito dall'organizzazione.
-\end{itemize}
-
-\subsection{UCA 8.5 - Visualizzazione del tempo trascorso nel luogo da cui non si è ancora usciti}%sea level
-\begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo e Utente riconosciuto;
-	\item \textbf{Precondizione:} L'utente autenticato si trova all'interno di una organizzazione tracciata dall'applicazione e vuole sapere quanto tempo ha trascorso nel luogo in cui si trova;
-	\item \textbf{Postcondizione:} Viene riportato all'utente quanto tempo ha trascorso nel luogo in cui si trova;
-	\item \textbf{Scenario principale:}
-	\begin{itemize}
-		\item L'utente accede alla funzionalità di "Visualizzazione del tempo trascorso nel luogo";
-		\item Viene mostrato il tempo che ha trascorso nel luogo.
-	\end{itemize}
-\end{itemize}
-
