@@ -1,7 +1,6 @@
 \subsection{Attori}
 \subsubsection{Attori Utenti}
 
-\subsubsection{Attori Amministratori}
 \begin{figure}[h]
   \caption{Gerarchia degli utenti}
   \centering
@@ -9,12 +8,11 @@
 \end{figure}
 
 \paragraph{Utente non autenticato}
-Utente generico non ancora autenticato al sistema il quale ha una chiave LDPA ecc... non so sta cosa
+Utente generico non ancora autenticato all'applicazione che può avere o non le credenziali per autenticarsi.
 \paragraph{Utente autenticato}
 Utente generico che si è autenticato e che quindi dispone di credenziali (e-mail e password) per accedere all'applicazione.
 \paragraph{Utente anonimo}
 Utente autenticato non facente parte di alcuna organizzazione e quindi non rintracciabile all'interno di esse.
-
 \paragraph{Utente riconosciuto}
 Utente autenticato facente parte di una o più organizzazioni.
 L'utente può venire monitorato quando è all'interno di esse.
@@ -30,11 +28,12 @@ L'utente può venire monitorato quando è all'interno di esse.
 
 
 \paragraph{Amministratore non autenticato}
-Amministratore generico non ancora autenticato al sistema il quale ha una chiave LDPA ecc... non so sta cosa
+Amministratore generico non ancora autenticato al sistema che ha già le credenziali per autenticarsi.
 \paragraph{Amministratore autenticato}
-Amministratore generico che si è autenticato al sistema
-\paragraph{Amministratore organizzazione}
-Amministratore autenticatosi con il ruolo di proprietario dell'organizzazione, il quale può compiere le seguenti funzioni:
+Amministratore generico che si è autenticato al sistema.
+\paragraph{Amministratore Owner}
+Amministratore autenticatosi con il ruolo di proprietario dell'organizzazione.
+Si trova al gradino più alto della gerarchia degli amministratori e può compiere le seguenti funzioni:
 \begin{itemize}
 \item Gestire l'organizzazione
 \item Gestire gli amministratori
@@ -43,15 +42,20 @@ Amministratore autenticatosi con il ruolo di proprietario dell'organizzazione, i
 \end{itemize}
 Il proprietario dell'organizzazione può assumere altri amministratori.
 \paragraph{Amministratore gestore}
-Amministratore autenticatosi con il ruolo di gestore, il quale può compiere le seguenti funzioni:
+Amministratore autenticatosi con il ruolo di gestore. 
+Si trova al secondo gradino della gerarchia degli amministratori e può compiere le seguenti funzioni:
 \begin{itemize}
 \item Gestire l'organizzazione
 \item Monitorare gli accessi
 \end{itemize}
 \paragraph{Amministratore visualizzatore}
-Amministratore autenticatosi con il ruolo di visualizzatore, il quale può compiere solo la seguente funzione:
+Amministratore autenticatosi con il ruolo di visualizzatore.
+Escludendo l'amministratore non autenticato si trova all'ultimo gradino della gerarchia degli amministratori e può compiere solo la seguente funzione:
 \begin{itemize}
 \item Monitorare gli accessi
 \end{itemize}
+
+%Alternativa in caso esista una gerarchia a 3 livelli
+
 
 
