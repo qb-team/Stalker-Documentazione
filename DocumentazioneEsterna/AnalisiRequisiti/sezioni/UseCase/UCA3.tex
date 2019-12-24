@@ -7,7 +7,6 @@
 \section{UCA 3 - Gestione lista delle organizzazioni}%kite level
 \begin{itemize}
 \item \textbf{Attori primari:} Utente anonimo;
-\item \textbf{Attori secondari:} Server di Stalker;
 \item \textbf{Precondizione:} L’utente che è stato autenticato precedentemente, esso può usufruire delle funzionalità di gestione lista delle organizzazioni;
 \item \textbf{Postcondizione:} vengono forniti all’utente i risultati delle funzionalità disponibili;
 \item \textbf{Scenario principale:} L’utente dell’applicazione autenticato utilizza le funzioni di gestione delle liste di organizzazioni per fare le seguenti azioni:
@@ -23,22 +22,21 @@
 \subsection{UCA 3.1 - Scaricamento lista di tutte le organizzazioni}%sea level
 \begin{itemize}
 \item \textbf{Attori primari:} Utente anonimo;
-\item \textbf{Attori secondari: } Server di Stalker;
 \item \textbf{Precondizione:} Viene reso disponibile all’utente anonimo la funzionalità di scaricare la lista di tutte le organizzazioni;
 \item \textbf{Postcondizione:}Viene reso disponibile il risultato richiesto dall’utente anonimo
 \item \textbf{Scenario principale:} 
 \begin{itemize}
 	\item L'utente selezione l'esecuzione della funzione "Scaricamento della lista";
 \end{itemize}
-\item \textbf{Scenario alternativo:}  Se il server stalker non è disponibile viene visualizzato all’utente un messaggio di errore che lo informa di tale problema;
+\item \textbf{Scenario alternativo:}  Se avviene un errore durante lo scaricamento della lista viene visualizzato all’utente un messaggio di errore che lo informa di tale problema;
 \item \textbf{Estensioni:}
 	\begin{enumerate}
-	\item UCA 3.1.1 Visualizzazione di un messaggio di errore che informa la non disponibilità del server.
+	\item UCA 3.1.1 Visualizzazione di un messaggio di errore che informa del tentativo fallito di scaricare la lista.
 \end{enumerate}
   
 \end{itemize}
 
-\subsubsection{UCA 3.1.1 - Visualizzazione di un messaggio di errore che informa la non disponibilità del server}%fish level
+\subsubsection{UCA 3.1.1 - Visualizzazione di un messaggio di errore che informa del tentativo fallito di scaricare la lista}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Utente anonimo;
 \item \textbf{Precondizione:} Il Server non è attualmente disponibile;
@@ -94,7 +92,6 @@
 \subsection{UCA 3.3 - Aggiornare lista organizzazione}%sea level
 \begin{itemize} 
 	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Attori secondari:} Server di Stalker;
 	\item \textbf{Precondizione:} Viene reso disponibile all’utente anonimo la funzionalità di aggiornamento della lista di tutte le organizzazioni;
 	\item \textbf{Postcondizione:} Viene reso disponibile il risultato richiesto dall’utente anonimo;
 	\item \textbf{Scenario principale:}  L’utente accede alla funzione "Aggiornamento della lista" attraverso una delle due modalità disponibili
@@ -102,17 +99,16 @@
 		\item UCA 3.3.1 Aggiornamento lista organizzazione con refresh manuale;
 		\item UCA 3.3.2 Aggiornamento lista organizzazione con temporizzazione.
 	\end{itemize}
-	\item \textbf{Scenario alternativo:} Se il server stalker non è disponibile viene visualizzato all’utente autenticato un messaggio di errore che lo informa di tale problema;
+	\item \textbf{Scenario alternativo:} Non c'è alcuna lista salvata nel dispositivo e quindi niente da aggiornare, viene visualizzato all’utente autenticato un messaggio di errore che lo informa di tale problema;
 	\item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCA 3.3.3 Visualizzazione di un messaggio che informa la non disponibilità del server.
+		\item UCA 3.3.3 Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni.
 	\end{enumerate}
 \end{itemize}
 
 \subsubsection{UCA 3.3.1 - Aggiornare lista organizzazione con refresh manuale}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Attori secondari:} Server di Stalker;
 	\item \textbf{Precondizione:} Viene reso disponibile all’utente anonimo l’aggiornamento della lista dell’organizzazione attraverso la modalità refresh manuale;
 	\item \textbf{Postcondizione:} Viene ottenuto il risultato richiesto dall’utente anonimo.
 	
@@ -121,7 +117,6 @@
 \subsubsection{UCA 3.3.2 - Aggiornare lista organizzazione con temporizzazione}%fish level
 \begin{itemize} 
 	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Attori secondari:} Server di Stalker;
 	\item \textbf{Precondizione:} Viene reso disponibile all’utente anonimo l’aggiornamento della lista dell’organizzazione attraverso la modalità temporizzazione; 	
 	\item \textbf{Postcondizione:} Viene ottenuto il risultato richiesto dall’utente anonimo
 \end{itemize}
