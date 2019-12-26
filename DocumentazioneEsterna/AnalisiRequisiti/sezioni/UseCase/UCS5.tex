@@ -1,4 +1,9 @@
 \subsubsection{UCS 5 - Modifica delle funzionalità tracciamento dell'organizzazione}%kite level
+\begin{figure}[h]
+	\centering
+    \includegraphics[scale=0.53]{sezioni/UseCase/Immagini/UCS5.png}
+    \caption{UCS 5 - Selezione dell'area di tracciamento}
+\end{figure}
 \begin{itemize}
     \item \textbf{Attori primari:} Amministratore gestore;
     \item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri dell'organizzazione;
@@ -20,11 +25,15 @@
     \item \textbf{Scenario principale:} L'amministratore dovrà selezionare l'area geografica del perimetro\ap{G} da tracciare;
     \begin{enumerate}%flusso di eventi
         \item L'amministratore seleziona la funzionalità di modifica del perimetro\ap{G} di tracciamento dell'organizzazione;
-        \item UCS 5.5: L'amministratore seleziona un'area geografica da associare al perimetro\ap{G} di tracciamento dell'organizzazione;
-    \end{enumerate} 
+        \item UCS 5.5: L'amministratore seleziona un'area geografica da associare al perimetro\ap{G} di tracciamento dell'organizzazione. L'area selezionata deve rispettare i vincoli imposti;
+    \end{enumerate}
     \item \textbf{Inclusioni:}
     \begin{enumerate}
-        \item UCS 5.5.
+        \item UCS 5.5;
+    \end{enumerate}
+    \item \textbf{Estensioni:}
+    \begin{enumerate}
+        \item UCS 9.5.1: L'area selezionata non rispetta i vincoli imposti per il perimetro.
     \end{enumerate}
 \end{itemize}
 
@@ -37,7 +46,7 @@
     \begin{enumerate}%flusso di eventi
         \item L'amministratore seleziona la funzionalità per aggiungere un luogo\ap{G} di tracciamento;
         \item UCS 5.2.1: Inserimento del nome del luogo\ap{G} di tracciamento;
-        \item UCS 5.5: L'amministratore seleziona un'area geografica da associare al luogo\ap{G} di tracciamento;
+        \item UCS 5.5: L'amministratore seleziona un'area geografica da associare al luogo\ap{G} di tracciamento. L'area selezionata rispetta i vincoli imposti;
         \item L'amministratore seleziona la funzionalità per salvare le modifiche apportate;
     \end{enumerate} 
     \item \textbf{Inclusioni:}
@@ -46,19 +55,19 @@
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}
-        \item UCS Errore.5.?: L'area selezionata non rispetta i vincoli imposti.
+        \item UCS 9.5.2: l'area selezionata fuoriesce dall'area che definisce il perimetro\ap{G}.
     \end{enumerate}
 \end{itemize}
 
 \subsubsection{UCS 5.3 - Modifica dell'area di tracciamento di un luogo}%sea level
 \begin{itemize}
     \item \textbf{Attori primari:} Amministratore gestore;
-    \item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri dell'organizzazione;
+    \item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri\ap{G} dell'organizzazione;
     \item \textbf{Postcondizione:} L'amministratore ha modificato con successo l'area di tracciamento del luogo\ap{G};
-    \item \textbf{Scenario principale:} L'amministratore dovrà selezionare una nuova area per il tracciamento del luogo scelto;
+    \item \textbf{Scenario principale:} L'amministratore dovrà selezionare una nuova area per il tracciamento del luogo\ap{G} scelto;
     \begin{enumerate}%flusso di eventi
         \item L'amministratore seleziona la funzionalità per modificare l'area di tracciamento di un luogo\ap{G};
-        \item L'amministratore seleziona il luogo da modificare;
+        \item L'amministratore seleziona il luogo\ap{G} da modificare;
         \item UCS 5.5: L'amministratore seleziona un'area geografica da associare al luogo\ap{G} di tracciamento;
         \item L'amministratore seleziona la funzionalità per salvare le modifiche apportate;
     \end{enumerate}
@@ -68,19 +77,19 @@
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}
-        \item UCS Errore.5.? L'area selezionata non rispetta i vincoli imposti.
+        \item UCS 9.5.2: l'area selezionata fuoriesce dall'area che definisce il perimetro\ap{G}.
     \end{enumerate}
 \end{itemize}
 
 \subsubsection{UCS 5.4 - Eliminazione di un luogo di tracciamento}%sea level
 \begin{itemize}
     \item \textbf{Attori primari:} Amministratore gestore;
-    \item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri dell'organizzazione;
+    \item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri\ap{G} dell'organizzazione;
     \item \textbf{Postcondizione:} L'amministratore ha modificato con successo l'area di tracciamento del luogo\ap{G};
-    \item \textbf{Scenario principale:} L'amministratore dovrà selezionare una nuova area per il tracciamento del luogo\ap{G} scelto;
+    \item \textbf{Scenario principale:} L'amministratore elimina un luogo\ap{G} di tracciamento definito all'interno dell'organizzazione;
     \begin{enumerate}%flusso di eventi
-        \item L'amministratore seleziona la funzionalità per eliminare un luogo dell'organizzazione;
-        \item L'amministratore seleziona il luogo da eliminare;
+        \item L'amministratore seleziona la funzionalità per eliminare un luogo\ap{G} dell'organizzazione;
+        \item L'amministratore seleziona il luogo\ap{G} da eliminare;
         \item L'amministratore seleziona la funzionalità di conferma per rendere definitiva l'eliminazione del luogo\ap{G} di tracciamento;
     \end{enumerate}
 \end{itemize}
@@ -88,24 +97,23 @@
 \subsubsection{UCS 5.5 - Selezione dell'area geografica per il tracciamento}%sea level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore;
-\item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri dell'organizzazione;
-\item \textbf{Postcondizione:} L'amministratore ha selezionato un'area valida per il tracciamento\ap{G} che rispetti i vincoli;
+\item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri\ap{G} dell'organizzazione;
+\item \textbf{Postcondizione:} L'amministratore ha selezionato un'area per il tracciamento\ap{G};
 \item \textbf{Flusso di eventi:}
 \begin{enumerate}
     \item L'amministratore seleziona la funzionalità di selezione dell'area;
     \item Sceglie dunque se il fine dell'area da tracciare è per un luogo\ap{G} dell'organizzazione oppure è per il perimetro\ap{G} di tracciamento;
     \item UCS 5.5.1: L'amministratore seleziona l'area inserendo le coordinate geografiche;
 \end{enumerate}
-\item \textbf{Estensioni:}
-\begin{enumerate}
-    \item UCS Errore.5.?: L'area selezionata non rispetta i vincoli.
-\end{enumerate}
+\begin{itemize}
+    \item UCS 9.5.3: Annullamento della selezione dell'area geografica.
+\end{itemize}
 \end{itemize}
 
-\subsubsection{UCS 5.5.1 - Inserimento delle coordinate geografiche per la selezione dell'area di tracciamento}%fish level
+\subsubsection{UCS 5.5.1 - Selezione dell'area di tracciamento tramite inserimento delle coordinate geografiche}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore;
-\item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri dell'organizzazione;
+\item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri\ap{G} dell'organizzazione;
 \item \textbf{Postcondizione:} L'amministratore ha inserito le coordinate geografiche che delimitano un'area per il tracciamento\ap{G};
 \item \textbf{Flusso di eventi:}
 \begin{enumerate}
