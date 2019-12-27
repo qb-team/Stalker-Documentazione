@@ -118,13 +118,15 @@ Dove:
 \begin{itemize}
 	\item \textbf{Destinazione} può essere:
 	\begin{itemize}
-		\item \textbf{A}: il caso d’uso descrive un comportamento o una funzione che l’utente ha a disposizione nella parte del sistema corrispondente all’app
-		\item \textbf{B}: se il caso d’uso descrive un comportamento o una funzione che l’utente ha a disposizione nella parte del sistema corrispondente al server
+		\item \textbf{A}: se il caso d’uso descrive un comportamento o una funzione che l’utente ha a disposizione nella parte del sistema corrispondente all’app;
+		\item \textbf{B}: se il caso d’uso descrive un comportamento o una funzione che l’utente ha a disposizione nella parte del sistema corrispondente al server;
 	\end{itemize}
-	\item \textbf{X}, \textbf{Y}, \textbf{Z} sono numeri naturali
-	\item \textbf{X} indica un caso d’uso kite-level\ap{G}
-	\item \textbf{Y} indica un caso d’uso sea-level\ap{G}
-	\item \textbf{Z} indica un caso d’uso fish-level\ap{G}
+	\item \textbf{X}, \textbf{Y}, \textbf{Z} sono numeri naturali e:
+	\begin{itemize}
+		\item \textbf{X} indica un caso d’uso kite-level\ap{G};
+		\item \textbf{Y} indica un caso d’uso sea-level\ap{G};
+		\item \textbf{Z} indica un caso d’uso fish-level\ap{G};
+	\end{itemize}
 \end{itemize}
 La descrizione di un caso d’uso con codice \textbf{UC X} viene strutturata come segue:
 \begin{itemize}
@@ -159,6 +161,14 @@ La descrizione di un caso d’uso con codice \textbf{UC X.Y.Z} viene strutturata
 	\item Precondizioni
 	\item Postcondizioni
 	\item Flusso di eventi (opzionale)	
+\end{itemize}
+\paragraph{Sintassi per la stesura dei casi d'uso nell'analisi dei requisiti}\mbox{}\\
+I casi d'uso scritti dovranno rispettare le seguenti regole:
+\begin{itemize}
+	\item ogni elemento di ciascun caso d'uso (Titolo, Nome, ecc.) dovrà essere un elemento di un elenco puntato, dovrà avere i due punti alla fine e essere scritto in grassetto. La descrizione di ogni elemento, al contrario, \textbf{non} dovrà essere scritta in grassetto;
+	\item ogni descrizione di ciascun elemento dovrà terminare con il punto e virgola, fatta eccezione per l'ultima frase del caso d'uso che terminerà con il punto;
+	\item qualora fosse necessario citare dei casi d'uso all'interno della descrizione delle precondizioni, delle postcondizioni, dello scenario principale o del flusso di eventi, dovrà venire riportato il codice identificativo del caso d'uso a cui ci si vuole riferire tra parentesi quadre;
+	\item i casi d'uso riportati nelle inclusioni e nelle estensioni dovranno essere disposti secondo un elenco puntato e ciascuno dovrà essere riferito con il codice identificativo, seguito da uno spazio, da un trattino, da un altro spazio e infine dal titolo per intero del caso d'uso.
 \end{itemize}
 \paragraph{Requisiti}\mbox{}\\
 Rappresentano dei requisiti che deve soddisfare il prodotto che si vuole realizzare.\\
