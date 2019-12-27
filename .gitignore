@@ -14,6 +14,7 @@
 *-blx.bib
 *.out
 *.synctex.gz
+*.synctex(busy)
 *.toc
 *.fdb_latexmk
 *.fls
