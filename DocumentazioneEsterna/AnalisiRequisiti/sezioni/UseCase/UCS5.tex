@@ -2,7 +2,7 @@
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.53]{sezioni/UseCase/Immagini/UCS5.png}
-    \caption{UCS 5 - Selezione dell'area di tracciamento}
+    \caption{UCS 5 - Modifica delle funzionalità di tracciamento dell'organizzazione}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attori primari:} Amministratore gestore;
@@ -95,6 +95,11 @@
 \end{itemize}
 
 \subsubsection{UCS 5.5 - Selezione dell'area geografica per il tracciamento}%sea level
+\begin{figure}[h]
+	\centering
+    \includegraphics[scale=0.53]{sezioni/UseCase/Immagini/UCS5.5.png}
+    \caption{UCS 5.5 - Selezione dell'area geografica di tracciamento}
+\end{figure}
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore;
 \item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri\ap{G} dell'organizzazione;
@@ -103,7 +108,7 @@
 \begin{enumerate}
     \item L'amministratore seleziona la funzionalità di selezione dell'area;
     \item Sceglie dunque se il fine dell'area da tracciare è per un luogo\ap{G} dell'organizzazione oppure è per il perimetro\ap{G} di tracciamento;
-    \item L'amministratore seleziona l'area inserendo le coordinate geografiche [5.5.1];
+    \item L'amministratore può scegliere se selezionare l'area inserendo le coordinate geografiche [UCS 5.5.1] oppure tramite Google Maps API [UCS 5.5.2];
 \end{enumerate}
 \begin{itemize}
     \item UCS 9.5.3 - Annullamento della selezione dell'area geografica.
@@ -113,7 +118,7 @@
 \subsubsection{UCS 5.5.1 - Selezione dell'area di tracciamento tramite inserimento delle coordinate geografiche}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore;
-\item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri\ap{G} dell'organizzazione;
+\item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri\ap{G} dell'organizzazione, in particolare nella sezione di selezione;
 \item \textbf{Postcondizione:} L'amministratore ha inserito le coordinate geografiche che delimitano un'area per il tracciamento\ap{G};
 \item \textbf{Flusso di eventi:}
 \begin{enumerate}
@@ -122,17 +127,13 @@
     \item L'amministratore inserisce le coordinate del terzo vertice dell'area di tracciamento\ap{G};
     \item L'amministratore inserisce le coordinate del quarto vertice dell'area di tracciamento\ap{G};
 \end{enumerate}
-\item \textbf{Estensioni:}
-\begin{enumerate}
-    \item UCS 5.5.2 - Selezione dell'area di tracciamento\ap{G} tramite Google Maps API\ap{G}.
-\end{enumerate}
 \end{itemize}
 
 \subsubsection{UCS 5.5.2 - Selezione dell'area di tracciamento tramite Google Maps API}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore;
 \item \textbf{Attori secondari:} Google Maps API\ap{G};
-\item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri dell'organizzazione;
+\item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri\ap{G} dell'organizzazione, in particolare nella sezione di selezione;
 \item \textbf{Postcondizione:} L'amministratore ha selezionato un'area per il tracciamento usufruendo dell'interfaccia di Google Maps API\ap{G};
 \item \textbf{Flusso di eventi:}
 \begin{enumerate}
