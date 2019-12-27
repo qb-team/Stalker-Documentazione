@@ -1,13 +1,14 @@
 \newpage
-\section{UCA 5}
+
+
+\subsubsection{UCA 5 - Visualizzazione dello storico accessi presso un'organizzazione}
 \begin{figure}[h]
-	\centering
-	\caption{UCA 5 - Visualizzazione dello storico accessi presso un'organizzazione}
+	\centering	
 	\includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA5.png}
+	\caption{UCA 5 - Visualizzazione dello storico accessi presso un'organizzazione}
 \end{figure}
-\subsection{UCA 5}
+
 \begin{itemize}
-    \item \textbf{Nome:} Visualizzazione dello storico accessi presso un'organizzazione.
     \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
     %\item \textbf{Attori secondari:}%opzionale
     \item \textbf{Precondizione:} L’utente ha precedentemente aggiunto l’organizzazione di cui vuole visualizzare i propri accessi alla lista delle organizzazione preferite.
@@ -27,9 +28,8 @@
 \end{itemize}
 
 
-\subsection{UCA 5.1}
+\subsubsection{UCA 5.1 - Visualizzazione della lista delle organizzazioni preferite}
 \begin{itemize}
-    \item \textbf{Nome:} Visualizzazione della lista delle organizzazioni preferite.
     \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
     %\item \textbf{Attori secondari:}%opzionale
     \item \textbf{Precondizione:} L’utente ha precedentemente aggiunto le organizzazioni da visualizzare nella lista delle organizzazioni preferite.
@@ -47,18 +47,16 @@
     %\item \textbf{Inclusioni:}
 \end{itemize}
 
-\subsubsection{UCA 5.1.1}
+\subsubsection{UCA 5.1.1 - Avviso di assenza di organizzazioni preferite}
 \begin{itemize}
-    \item \textbf{Nome:} Avviso di assenza di organizzazioni preferite
     \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo
     %\item \textbf{Attori secondari:}%opzionale
     \item \textbf{Precondizione:} l'utente non ha aggiunto alcuna organizzazione come preferita.
     \item \textbf{Postcondizione:} l'utente visualizza nella schermata un messaggio che lo avvisa della mancanza di organizzazioni.
 \end{itemize}
 
-\subsection{UCA 5.2}
+\subsubsection{UCA 5.2 - Visualizzazione della lista degli accessi presso un'organizzazione}
 \begin{itemize}
-    \item \textbf{Nome:} Visualizzazione della lista degli accessi presso un'organizzazione.
     \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
     %\item \textbf{Attori secondari:}%opzionale
     \item \textbf{Precondizione:} L'utente ha selezionato dalla lista delle organizzazioni preferite un'organizzazione di cui visualizzare i propri accessi.
@@ -83,9 +81,8 @@
     %\item \textbf{Inclusioni:}
 \end{itemize}
 
-\subsubsection{UCA 5.2.1}
+\subsubsection{UCA 5.2.1 - Avviso di assenza di accessi presso i luoghi di un’organizzazione}
 \begin{itemize}
-    \item \textbf{Nome:} Avviso di assenza di accessi presso i luoghi di un’organizzazione.
     \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
     %\item \textbf{Attori secondari:}%opzionale
     \item \textbf{Precondizione:} L'utente ha selezionato dalla lista delle organizzazioni preferite un'organizzazione di cui visualizzare i propri accessi, ma non ha mai effettuato accesso ai luoghi dell'organizzazione.
@@ -97,9 +94,8 @@
 % 	\caption{UCA 6.1 - Ordinamento della lista degli accessi presso un’organizzazione}
 % 	\includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA7.1.png}
 % \end{figure}
-\subsubsection{UCA 5.2.2}
+\subsubsection{UCA 5.2.2 - Ordinamento per data (decrescente) della lista degli accessi}
 \begin{itemize}
-    \item \textbf{Nome:} Ordinamento per data (decrescente) della lista degli accessi.
     \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
     %\item \textbf{Attori secondari:}%opzionale
     \item \textbf{Precondizione:} L’utente ha a disposizione una lista di accessi presso uno o più luoghi di un organizzazione preferita.
@@ -116,9 +112,8 @@
     \end{enumerate}
 \end{itemize}
 
-\subsubsection{UCA 5.2.3}
+\subsubsection{UCA 5.2.3 - Ordinamento per data (crescente) della lista degli accessi}
 \begin{itemize}
-    \item \textbf{Nome:} Ordinamento per data (crescente) della lista degli accessi.
     \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
     %\item \textbf{Attori secondari:}%opzionale
     \item \textbf{Precondizione:} l’utente ha a disposizione una lista di accessi presso uno o più luoghi di un organizzazione preferita.
@@ -135,9 +130,8 @@
     \end{enumerate}
 \end{itemize}
 
-\subsubsection{UCA 5.2.4}
+\subsubsection{UCA 5.2.4 - Filtro per luogo della lista degli accessi presso un’organizzazione}
 \begin{itemize}
-    \item \textbf{Nome:} Filtro per luogo della lista degli accessi presso un’organizzazione.
     \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
     \item \textbf{Precondizione:} l’utente ha a disposizione una lista di accessi presso uno o più luoghi di un organizzazione preferita.
     \item \textbf{Precondizione:} l’utente ottiene la lista di accessi iniziale presso un singolo luogo selezionato (che può coincidere con la lista di partenza se l’organizzazione ha un singolo luogo a disposizione oppure essere vuota).
