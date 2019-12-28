@@ -1,6 +1,7 @@
-\documentclass[a4paper, oneside, dvipsnames, table]{article} % SERVE SOLO PER IL TESTING OUTPUT
+\documentclass[a4paper, oneside]{article} % SERVE SOLO PER IL TESTING OUTPUT
 \usepackage{graphicx}% SERVE SOLO PER IL TESTING OUTPUT
 \usepackage{hyperref}% SERVE SOLO PER IL TESTING OUTPUT
+\usepackage{amsmath, amssymb}
 
 \begin{document}% SERVE SOLO PER IL TESTING OUTPUT
 
@@ -8,54 +9,77 @@
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.1]{qbteam.png}%location immagine.   immagini/immagine.png
-\caption{logo di gbteam}
+\caption{Logo del gruppo qbteam}
 \label{logo}
 \end{figure}
 
-% UC... specificare App o Server -> UCA / UCS
-\section{UC x}%kite level
+\section{Sigle, numerazioni, codici, spiegazioni}
+\subsection{Sigle}
 \begin{itemize}
-\item \textbf{Nome:}
-\item \textbf{Attori primari:}
-\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:}
-\item \textbf{Postcondizione:}
-\item \textbf{Scenario principale:} %cosa potrebbe fare l'utente con il UC, descrizione
-\item \textbf{Estensioni:}
-\item \textbf{Inclusioni:}
+	\item \textbf{UC} sta per Use Case, non viene usato nei codici.
+	\item \textbf{UCA} sta per Use Case App, viene utilizzato quando viene descritto un caso d'uso che si applica all'applicazione per utenti da realizzare per il sistema.
+	\item \textbf{UCS} sta per Use Case Server, viene utilizzato quando viene descritto un caso d'uso che si applica all'interfaccia per amministratori da realizzare per il sistema.
 \end{itemize}
 
-\subsection{UC x.y}%sea level
+\subsection{Numerazioni}
+Dati $X, Y, Z \in \mathbb{N}$, essi si riferiscono a:
 \begin{itemize}
-\item \textbf{Nome:}
-\item \textbf{Attori primari:}
-\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:}
-\item \textbf{Postcondizione:}
-\item \textbf{Scenario principale:}
-	\begin{itemize}%flusso di eventi
-	\item UCA 1.2 Cose1;
-	\item UCA 1.3 Cose2.
+	\item $X$ al numero progressivo di un caso d'uso di tipo \textit{kite-level}.
+	\item $Y$ al numero progressivo (relativo al numero del caso d'uso \textit{kite-level} a cui fa riferimento) di un caso d'uso di tipo \textit{sea-level}.
+	\item $Z$ al numero progressivo (relativo al numero del caso d'uso \textit{sea-level} a cui fa riferimento) di un caso d'uso di tipo \textit{fish-level}.
 \end{itemize}
-\item \textbf{Scenario alternativo:}
-\item \textbf{Estensioni:}
-	\begin{enumerate}
-		\item UCA 1.2 Cose1;
-		\item UCA 1.3 Cose2.
-	\end{enumerate}
-\item \textbf{Inclusioni:}
+
+\subsection{Codici}
+I codici dei casi d'uso hanno il seguente formato: \textbf{UC[Destinazione] X.Y.Z}, dove:
+\begin{itemize}
+	\item \textbf{[Destinazione]} può essere:
+		\begin{itemize}
+			\item \textbf{A}: se il caso d’uso descrive un comportamento o una funzione \\che l’utente ha a disposizione nella parte del sistema corrispondente all’app;
+			\item \textbf{S}: se il caso d’uso descrive un comportamento o una funzione \\che l’utente ha a disposizione nella parte del sistema corrispondente al server;
+		\end{itemize}
+	\item \textbf{X}, \textbf{Y}, \textbf{Z} sono numeri naturali e sono relativi a quanto detto nella sezione Numerazioni.
+\end{itemize}
+
+% UC... specificare App o Server -> UCA / UCS
+\subsection{Template}
+Seguono i template dei casi d'uso. Possono essere copiati e incollati, poi compilati (rimuovendo le descrizioni). Seguire alla lettera e l'ordine stabilito dei vari punti.
+\subsubsection{UC[Destinazione] X - Nome del caso d'uso kite-level} %kite level
+\begin{itemize}
+\item \textbf{Nome:} Nome del caso d'uso kite-level, prima lettera maiuscola, senza punto a fine riga
+\item \textbf{Attori primari:} Elenco degli attori primari, con lettera maiuscola, separati da virgola, senza punto a fine riga
+\item \textbf{Attori secondari:} Elenco degli attori primari, con lettera maiuscola, separati da virgola, senza punto a fine riga. \textbf{Omettere completamente} se non presenti
+\item \textbf{Precondizione:} In che stato si trova il sistema prima che venga eseguito il caso d'uso. Non serve indicare informazioni riguardo agli attori (in base all'attore, si sa già di loro). Essendo una frase, mettere un punto alla fine.
+\item \textbf{Postcondizione:} In che stato si trova il sistema dopo l'esecuzione del caso d'uso. Se l'attore è cambiato alla fine dell'esecuzione, è bene dirlo. Essendo una frase, mettere un punto alla fine.
+\item \textbf{Scenario principale:} Descrizione testuale (\textbf{non un elenco!}) di cosa avviene durante l'esecuzione del caso d'uso, ovvero cosa succede affinché date le precondizioni in ingresso si ottenga in uscita le postcondizioni indicate. Essendo una frase, mettere un punto alla fine.
+\item \textbf{Scenario alternativo:} Descrizione testuale (\textbf{non un elenco!}) di cosa può avvenire durante l'esecuzione del caso d'uso, che si discosta dalla normale esecuzione (per esempio anomalie) ovvero cosa succede affinché date le precondizioni in ingresso si ottenga in uscita le postcondizioni indicate. Essendo una frase, mettere un punto alla fine. \textbf{Omettere completamente} se non presente. \textbf{Se ci sono più scenari alternativi, marcare questo come Scenario alternativo 1 e proseguire ordinatamente con Scenario alterinativo 2, ...}
+\item \textbf{Estensioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che estendono la normale esecuzione del caso d'uso, deviandola e non facendo raggiungere le postcondizioni. Tipicamente si ottiene un'estensione da casi d'uso di tipo sea-level, fish-level. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presenti.
+\item \textbf{Inclusioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che permettono di ottenere le postcondizioni correttamente. Tipicamente vengono si ottiene un'estensione da casi d'uso di tipo sea-level, fish-level. Questo caso d'uso non conosce i dettagli dei casi d'uso inclusi ma solo i loro risultati; questi casi d'uso non sanno di essere inclusi quindi la loro esecuzione dipende da questo caso d'uso. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presenti.
+\end{itemize}
+
+\subsubsection{UC[Destinazione] x.y}%sea level
+\begin{itemize}
+	\item \textbf{Nome:} Come in UC[Destinazione] X
+	\item \textbf{Attori primari:} Come in UC[Destinazione] X
+	\item \textbf{Attori secondari:} Come in UC[Destinazione] X
+	\item \textbf{Precondizione:} In che stato si trova il sistema prima che venga eseguito il caso d'uso. \textbf{Potrebbe coincidere con la precondizione di UC[Destinazione] X}. Non serve indicare informazioni riguardo agli attori (in base all'attore, si sa già di loro). Essendo una frase, mettere un punto alla fine.
+	\item \textbf{Postcondizione:} Come in UC[Destinazione] X.
+	\item \textbf{Scenario principale:} Come in UC[Destinazione] X.
+	\item \textbf{Scenario alternativo:} Come in UC[Destinazione] X.
+	\item \textbf{Flusso di eventi:} Elenco ordinato di eventi che accadono per far sì che venga raggiunta la postcondizione. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presenti.
+	\item \textbf{Estensioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che estendono la normale esecuzione del caso d'uso, deviandola e non facendo raggiungere le postcondizioni. Tipicamente si ottiene un'estensione da casi d'uso di tipo fish-level. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presenti.
+	\item \textbf{Inclusioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che permettono di ottenere le postcondizioni correttamente. Tipicamente vengono si ottiene un'estensione da casi d'uso di tipo fish-level. Questo caso d'uso non conosce i dettagli dei casi d'uso inclusi ma solo i loro risultati; questi casi d'uso non sanno di essere inclusi quindi la loro esecuzione dipende da questo caso d'uso. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto.  \textbf{Omettere completamente} se non presenti.
 \end{itemize}
 
 \subsubsection{UC x.y.z}%fish level
 \begin{itemize}
-\item \textbf{Nome:}
-\item \textbf{Attori primari:}
-\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:}
-\item \textbf{Postcondizione:}
+	\item \textbf{Nome:} Nome del caso d'uso sea-level, prima lettera maiuscola, senza punto a fine riga
+	\item \textbf{Attori primari:} Come in UC[Destinazione] X
+	\item \textbf{Attori secondari:} Come in UC[Destinazione] X
+	\item \textbf{Precondizione:} In che stato si trova il sistema prima che venga eseguito il caso d'uso. \textbf{Potrebbe coincidere con la precondizione di UC[Destinazione] X.Y}. Non serve indicare informazioni riguardo agli attori (in base all'attore, si sa già di loro). Essendo una frase, mettere un punto alla fine.
+	\item \textbf{Postcondizione:} Come in UC[Destinazione] X.
+	\item \textbf{Flusso di eventi:} Elenco ordinato di eventi che accadono per far sì che venga raggiunta la postcondizione. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presenti.
+	\item \textbf{Estensioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che estendono la normale esecuzione del caso d'uso, deviandola e non facendo raggiungere le postcondizioni. Tipicamente si ottiene un'estensione da casi d'uso di tipo fish-level. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presenti.
+	\item \textbf{Inclusioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che permettono di ottenere le postcondizioni correttamente. Tipicamente vengono si ottiene un'estensione da casi d'uso di tipo fish-level. Questo caso d'uso non conosce i dettagli dei casi d'uso inclusi ma solo i loro risultati; questi casi d'uso non sanno di essere inclusi quindi la loro esecuzione dipende da questo caso d'uso. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto.  \textbf{Omettere completamente} se non presenti.
 \end{itemize}
 
-\end{document}% SERVE SOLO PER IL TESTING OUTPUT
-
-
-
+\end{document}

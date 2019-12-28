@@ -1,154 +1,94 @@
 \newpage
-\section{UCA 5}
+
+\subsubsection{UCA 5 - Visualizzazione dello storico accessi presso un'organizzazione}
 \begin{figure}[h]
-	\centering
-	\caption{UCA 5 - Visualizzazione dello storico accessi presso un'organizzazione}
+	\centering	
 	\includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA5.png}
+	\caption{UCA 5 - Visualizzazione dello storico accessi presso un'organizzazione}
 \end{figure}
-\subsection{UCA 5}
+
 \begin{itemize}
-    \item \textbf{Nome:} Visualizzazione dello storico accessi presso un'organizzazione.
-    \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
-    %\item \textbf{Attori secondari:}%opzionale
-    \item \textbf{Precondizione:} L’utente ha precedentemente aggiunto l’organizzazione di cui vuole visualizzare i propri accessi alla lista delle organizzazione preferite.
-    \item \textbf{Postcondizione:} L’utente visualizza nella schermata dell’applicazione la lista degli accessi effettuati presso i luoghi dell’organizzazione (con nome del luogo, timestamp di ingresso, di uscita, e tempo di permanenza).
-    Se si trova all'interno di un luogo viene visualizzato il tempo passato al suo interno fino a quel momento.
-    \item \textbf{Scenario principale:} L'utente può visualizzare la lista dei propri accessi presso un'organizzazione, se questa non è vuota, previa la selezione di un'organizzazione fra quelle presenti nella lista delle organizzazioni preferite dell'utente.
-    %\item \textbf{Estensioni:}
+    \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+    \item \textbf{Precondizione:} L'utente ha precedentemente aggiunto l'organizzazione di cui vuole visualizzare i propri accessi alla lista delle organizzazione preferite.
+    \item \textbf{Postcondizione:} L'utente visualizza la lista degli accessi effettuati presso i luoghi dell'organizzazione. Inoltre, se l'utente si trova all'interno di un luogo viene visualizzato il tempo passato lì dentro fino a quel momento.
+    \item \textbf{Scenario principale:} L'utente può visualizzare la lista dei propri accessi (con nome del luogo, timestamp di ingresso, di uscita, e tempo di permanenza) presso un'organizzazione (previa selezione), se questa non è vuota, e se si trova all'interno di un luogo, visualizza il tempo passato al suo interno fino a quel momento.
     \item \textbf{Inclusioni:}
     \begin{itemize}
-        \item UCA 5.1 - Visualizzazione della lista delle organizzazioni preferite;
-        \item UCA 5.2 - Visualizzazione della lista degli accessi presso un'organizzazione.
+        \item UCA 5.1;
+        \item UCA 5.2.
     \end{itemize}
-    \item \textbf{Estensioni:}
-    \begin{enumerate}
-        \item UCA 3.3.3 Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni.	
-    \end{enumerate}	
 \end{itemize}
 
 
-\subsection{UCA 5.1}
+\subsubsection{UCA 5.1 - Visualizzazione della lista delle organizzazioni preferite}
 \begin{itemize}
-    \item \textbf{Nome:} Visualizzazione della lista delle organizzazioni preferite.
-    \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
-    %\item \textbf{Attori secondari:}%opzionale
-    \item \textbf{Precondizione:} L’utente ha precedentemente aggiunto le organizzazioni da visualizzare nella lista delle organizzazioni preferite.
-    \item \textbf{Postcondizione:} L’utente visualizza nella schermata dell’applicazione la lista delle proprie organizzazioni preferite. 
-    \item \textbf{Scenario principale:} L'utente può visualizzare la lista delle proprie organizzazioni preferite, se questa non è vuota, e da qui procedere con UCA 5.2.
-    \item \textbf{Scenario alternativo:} L'utente non ha organizzazioni preferite, per cui viene visualizzato un avviso come indicato in UCA 5.1.1.
+    \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+    \item \textbf{Precondizione:} L'utente ha precedentemente aggiunto le organizzazioni da visualizzare nella lista delle organizzazioni preferite.
+    \item \textbf{Postcondizione:} L'utente visualizza la lista delle proprie organizzazioni preferite.
+    \item \textbf{Scenario principale:} L'utente visualizza la lista delle proprie organizzazioni preferite.
     \item \textbf{Flusso di eventi:}
     \begin{enumerate}
         \item L'utente seleziona la funzionalità "Storico accessi".
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item UCA 5.1.1 - Avviso di assenza di organizzazioni preferite;
+        \item UCA 5.1.1.
     \end{itemize}
-    %\item \textbf{Inclusioni:}
 \end{itemize}
 
-\subsubsection{UCA 5.1.1}
+\subsubsection{UCA 5.1.1 - Avviso di assenza di organizzazioni preferite}
 \begin{itemize}
-    \item \textbf{Nome:} Avviso di assenza di organizzazioni preferite
-    \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo
-    %\item \textbf{Attori secondari:}%opzionale
-    \item \textbf{Precondizione:} l'utente non ha aggiunto alcuna organizzazione come preferita.
-    \item \textbf{Postcondizione:} l'utente visualizza nella schermata un messaggio che lo avvisa della mancanza di organizzazioni.
+    \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+    \item \textbf{Precondizione:} L'utente non ha aggiunto alcuna organizzazione come preferita.
+    \item \textbf{Postcondizione:} L'utente visualizza nella schermata un messaggio che lo avvisa della mancanza di organizzazioni.
 \end{itemize}
 
-\subsection{UCA 5.2}
+\subsubsection{UCA 5.2 - Visualizzazione della lista degli accessi presso un'organizzazione}
 \begin{itemize}
-    \item \textbf{Nome:} Visualizzazione della lista degli accessi presso un'organizzazione.
-    \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
-    %\item \textbf{Attori secondari:}%opzionale
+    \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
     \item \textbf{Precondizione:} L'utente ha selezionato dalla lista delle organizzazioni preferite un'organizzazione di cui visualizzare i propri accessi.
-    \item \textbf{Postcondizione:} L’utente visualizza nella schermata dell’applicazione la lista degli accessi effettuati presso i luoghi dell’organizzazione (con descrizione del luogo, timestamp di ingresso, di uscita, e tempo di permanenza).
-    Se si trova all'interno di un luogo viene visualizzato il tempo passato al suo interno fino a quel momento.
-    \item \textbf{Scenario principale:} L'utente può visualizzare tutti gli accessi da lui fatti presso i luoghi dell'organizzazione, in modalità di tracciamento anonimo e autenticato.
+    \item \textbf{Postcondizione:} L'utente visualizza la lista degli accessi effettuati presso i luoghi dell'organizzazione. Se si trova all'interno di un luogo viene visualizzato il tempo passato lì dentro fino a quel momento.
+    \item \textbf{Scenario principale:} L'utente può visualizzare tutti gli accessi da lui fatti presso i luoghi dell'organizzazione selezionata (con descrizione del luogo, timestamp di ingresso, di uscita, e tempo di permanenza), in modalità di tracciamento anonimo e autenticato (se disponibile).
     \item \textbf{Scenario alternativo:} L'utente ha effettuato l'accesso presso il luogo dell'organizzazione ma non ne è ancora uscito. In questo caso, viene visualizzato un timer con il tempo trascorso dal momento in cui è entrato.
-    Una volta uscito dal luogo, vale il comportamento descritto nello scenario principale. 
+    Una volta uscito dal luogo, vale il comportamento descritto nello scenario principale.
     \item \textbf{Flusso di eventi:}
     \begin{enumerate}
-        \item L'utente esegue UCA 5.1;
-        \item L'utente, per precondizione, ha selezionato un'organizzazione di cui visualizzare i propri accessi nei suoi luoghi.
+        \item UCA 5.1.
     \end{enumerate}
-    \item \textbf{Inclusioni:} % non sono sicuro sia corretto
-    \begin{itemize}
-        \item UCA 5.1 - Visualizzazione della lista delle organizzazioni preferite.
-    \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item UCA 5.2.1 - Avviso di assenza di accessi presso i luoghi di un’organizzazione.
+        \item UCA 5.2.1;
+        % non sempre li eseguo, solo se l'utente lo chiede
+        \item UCA 5.2.2;
+        \item UCA 5.2.3;
+        \item UCA 5.2.4.
     \end{itemize}
-    %\item \textbf{Inclusioni:}
 \end{itemize}
 
-\subsubsection{UCA 5.2.1}
+\subsubsection{UCA 5.2.1 - Avviso di assenza di accessi presso i luoghi di un'organizzazione}
 \begin{itemize}
-    \item \textbf{Nome:} Avviso di assenza di accessi presso i luoghi di un’organizzazione.
-    \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
-    %\item \textbf{Attori secondari:}%opzionale
+    \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
     \item \textbf{Precondizione:} L'utente ha selezionato dalla lista delle organizzazioni preferite un'organizzazione di cui visualizzare i propri accessi, ma non ha mai effettuato accesso ai luoghi dell'organizzazione.
-    \item \textbf{Postcondizione:} L'utente visualizza nella schermata un messaggio che lo avvisa della mancanza di accessi nei luoghi dell'organizzazione.
+    \item \textbf{Postcondizione:} L'utente visualizza un messaggio che lo avvisa della mancanza di accessi nei luoghi dell'organizzazione.
 \end{itemize}
 
-% \begin{figure}[h]
-% 	\centering
-% 	\caption{UCA 6.1 - Ordinamento della lista degli accessi presso un’organizzazione}
-% 	\includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA7.1.png}
-% \end{figure}
-\subsubsection{UCA 5.2.2}
+\subsubsection{UCA 5.2.2 - Ordinamento per data decrescente della lista degli accessi}
 \begin{itemize}
-    \item \textbf{Nome:} Ordinamento per data (decrescente) della lista degli accessi.
-    \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
-    %\item \textbf{Attori secondari:}%opzionale
-    \item \textbf{Precondizione:} L’utente ha a disposizione una lista di accessi presso uno o più luoghi di un organizzazione preferita.
-    \item \textbf{Postcondizione:} L’utente ottiene la lista di accessi iniziale riordinata in ordine decrescente (ovvero una data più recente è considerata più grande di una data meno recente).
-    \item \textbf{Inclusioni:} % non sono sicuro sia corretto
-    \begin{itemize}
-        \item UCA 5.2 - Visualizzazione della lista degli accessi presso un'organizzazione.
-    \end{itemize}
-    \item \textbf{Flusso di eventi:}
-    \begin{enumerate}
-        \item L'utente esegue il caso d'uso UCA 5.2
-        \item L'utente seleziona la funzionalità "Ordinamento lista accessi".
-        \item L'utente sceglie la funzionalità "Ordinamento per data (decrescente)".
-    \end{enumerate}
+    \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+    \item \textbf{Precondizione:} L'utente ha a disposizione una lista di accessi presso uno o più luoghi di un organizzazione preferita.
+    \item \textbf{Postcondizione:} L'utente ottiene la lista di accessi iniziale riordinata in ordine decrescente.
 \end{itemize}
 
-\subsubsection{UCA 5.2.3}
+\subsubsection{UCA 5.2.3 - Ordinamento per data crescente della lista degli accessi}
 \begin{itemize}
-    \item \textbf{Nome:} Ordinamento per data (crescente) della lista degli accessi.
-    \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
-    %\item \textbf{Attori secondari:}%opzionale
-    \item \textbf{Precondizione:} l’utente ha a disposizione una lista di accessi presso uno o più luoghi di un organizzazione preferita.
-    \item \textbf{Postcondizione:} l’utente ottiene la lista di accessi iniziale riordinata in ordine crescente (ovvero una data meno recente è considerata più piccola di una data più recente).
-    \item \textbf{Inclusioni:} % non sono sicuro sia corretto
-    \begin{itemize}
-        \item UCA 5.2 - Visualizzazione della lista degli accessi presso un'organizzazione.
-    \end{itemize}
-    \item \textbf{Flusso di eventi:}
-    \begin{enumerate}
-        \item L'utente esegue il caso d'uso UCA 5.2
-        \item l'utente seleziona la funzionalità "Ordinamento lista accessi".
-        \item l'utente sceglie la funzionalità "Ordinamento per data (crescente)".
-    \end{enumerate}
+    \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+    \item \textbf{Precondizione:} L'utente ha a disposizione una lista di accessi presso uno o più luoghi di un organizzazione preferita;
+    \item \textbf{Postcondizione:} L'utente ottiene la lista di accessi iniziale riordinata in ordine crescente (ovvero una data meno recente è considerata più piccola di una data più recente).
 \end{itemize}
 
-\subsubsection{UCA 5.2.4}
+\subsubsection{UCA 5.2.4 - Filtro per luogo della lista degli accessi presso un'organizzazione}
 \begin{itemize}
-    \item \textbf{Nome:} Filtro per luogo della lista degli accessi presso un’organizzazione.
-    \item \textbf{Attori primari:} Utente Riconosciuto, Utente Anonimo.
-    \item \textbf{Precondizione:} l’utente ha a disposizione una lista di accessi presso uno o più luoghi di un organizzazione preferita.
-    \item \textbf{Precondizione:} l’utente ottiene la lista di accessi iniziale presso un singolo luogo selezionato (che può coincidere con la lista di partenza se l’organizzazione ha un singolo luogo a disposizione oppure essere vuota).
-    \item \textbf{Inclusioni:} % non sono sicuro sia corretto
-    \begin{itemize}
-        \item UCA 5.2 - Visualizzazione della lista degli accessi presso un'organizzazione.
-    \end{itemize}
-    \item \textbf{Flusso di eventi:}
-    \begin{enumerate}
-        \item L'utente esegue il caso d'uso UCA 5.2
-        \item l’utente seleziona la funzionalità “Filtro per luogo”.
-        \item l’utente seleziona un luogo dell’organizzazione di cui mostrare gli accessi.
-    \end{enumerate}
+    \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+    \item \textbf{Precondizione:} L'utente ha a disposizione una lista di accessi presso uno o più luoghi di un organizzazione preferita.
+    \item \textbf{Precondizione:} L'utente ottiene la lista di accessi iniziale presso un singolo luogo selezionato.
 \end{itemize}
