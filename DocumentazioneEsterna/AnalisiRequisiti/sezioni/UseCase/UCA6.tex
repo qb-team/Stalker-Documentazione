@@ -11,7 +11,7 @@
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
 	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS\ap{G}, rete cellulare)
-	\item \textbf{Precondizione:} L'utente autenticato\ap{G} con credenziali Stalker sta per entrare o sta per uscire da un luogo dell'organizzazione che richiede il tracciamento;ì.
+	\item \textbf{Precondizione:} L'utente autenticato\ap{G} con credenziali Stalker sta per entrare o sta per uscire da un luogo dell'organizzazione che richiede il tracciamento.
 	\item \textbf{Postcondizione:} Viene memorizzato dal sistema il timestamp\ap{G} i momenti in cui è avvenuto il tracciamento\ap{G}, dove è avvenuto e il tempo trascorso al suo interno.
 	\item \textbf{Scenario principale:} L'utente si trova nei pressi o sta per uscire da un luogo dell'organizzazione che richiede il tracciamento\ap{G}. Viene salvato il timestamp\ap{G} di entrata ed uscita dall'organizzazione e viene salvato il tempo trascorso all'interno dell'organizzazione.
 \end{itemize}
@@ -71,7 +71,7 @@
 	\item \textbf{Attori primari:} Utente riconosciuto
 	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS\ap{G}, rete cellulare), server LDAP\ap{G} dell'organizzazione
 	\item \textbf{Precondizione:} L'utente sta per uscire da un luogo dell'organizzazione che richiede il tracciamento\ap{G}.
-	\item \textbf{Postcondizione:} Viene registrato l'uscita dal luogo dell'organizzazione in una certa data e ora (timestamp\ap{G}).
+	\item \textbf{Postcondizione:} Viene registrata l'uscita dal luogo dell'organizzazione in una certa data e ora (timestamp\ap{G}).
 	\item \textbf{Scenario principale:} L'utente, quando verifica tramite i/il servizi/o di localizzazione che sta per uscire da un luogo dell'organizzazione, verifica il momento in cui avviene l'uscita. Quando esce, verifica di potersi autenticare correttamente con le credenziali dell'organizzazione [UCA 6.1.2]: se riesce, memorizza nel sistema la data e ora di uscita dal luogo [UCA 6.1.1]. Infine, viene informato l'utente dell'uscita riuscita. La combinazione di ingresso effettuato in precedenza e dell'uscita effettuata formano un accesso, ora ritrovabile in Storico accessi [UCA 5].
 	\item \textbf{Scenario alternativo:} Il tentativo di autenticazione\ap{G} presso l'organizzazione o l'invio delle credenziali fallisce. Viene informato l'utente.
 	\item \textbf{Estensioni:}
