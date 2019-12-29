@@ -12,7 +12,8 @@
 \item \textbf{Attori primari:} Utente anonimo;
 \item \textbf{Precondizione:} L'utente è autenticato e può accedere alle funzionalità della lista delle organizzazioni;
 \item \textbf{Postcondizione:} Vengono forniti all'utente i risultati delle funzionalità disponibili;
-\item \textbf{Scenario principale:} L'utente dell'applicazione autenticato utilizza le funzioni di gestione delle liste di organizzazioni per svolgere le seguenti azioni:
+\item \textbf{Scenario principale:} L'utente autenticato utilizza le funzioni di gestione delle liste di organizzazioni per svolgere le diverse azioni;
+\item \textbf{Flusso di eventi:}
 	\begin{itemize}
 		\item UCA 3.1 - Scaricamento lista di tutte le organizzazioni;
 		\item UCA 3.2 - Gestione lista dei preferiti;
@@ -27,13 +28,10 @@
 \subsubsection{UCA 3.1 - Scaricamento lista di tutte le organizzazioni}%sea level
 \begin{itemize}
 \item \textbf{Attori primari:} Utente anonimo;
-\item \textbf{Precondizione:}  L'utente anonimo dopo aver scelto di eseguire la funzionalità di scaricamento lista di tutte le organizzazioni, viene reso disponibile all'utente anonimo la funzionalità di scaricare la lista di tutte le organizzazioni;
-\item \textbf{Postcondizione:} Viene scaricata la lista di tutte le organizzazioni nel dispositivo dell'utente come richiesto da lui;
-\item \textbf{Scenario principale:} 
-\begin{itemize}
-	\item L'utente seleziona l'esecuzione della funzione "Scaricamento della lista";
-\end{itemize}
-\item \textbf{Scenario alternativo:}  Se il tentativo di scaricare la lista falisce viene visualizzato all'utente un messaggio di errore che lo informa di tale problema;
+\item \textbf{Precondizione:} L'utente è autenticato e può scaricare la lista di tutte le organizzazioni;
+\item \textbf{Postcondizione:} L'utente ha a disposizione la lista di tutte le organizzazioni;
+\item \textbf{Scenario principale:} L'utente seleziona l'esecuzione della funzione "Scaricamento della lista";
+\item \textbf{Scenario alternativo:}  Se il tentativo di scaricare la lista fallisce viene visualizzato all'utente un messaggio di errore che lo informa di tale problema;
 \item \textbf{Estensioni:}
 	\begin{enumerate}
 	\item UCA 3.1.1 - Visualizzazione di un messaggio di errore che informa del tentativo fallito di scaricare la lista.
@@ -44,7 +42,7 @@
 \subsubsection{UCA 3.1.1 - Visualizzazione di un messaggio di errore che informa del tentativo fallito di scaricare la lista}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Utente anonimo;
-\item \textbf{Precondizione:} l'utente esegue l'azione di scaricare la lista delle organizzazioni ma fallisce;
+\item \textbf{Precondizione:} L'utente esegue l'azione di scaricare la lista delle organizzazioni ma fallisce;
 \item \textbf{Postcondizione:} Viene visualizzato un messaggio d'errore che informa la non disponibilità del server.
 
 \end{itemize}
@@ -62,9 +60,10 @@
 
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Precondizione:} L'utente anonimo dopo aver scelto di eseguire la funzionalità gestione lista dei preferiti vengono rese disponibili le funzionalita di gestione lista dei preferiti; 
-	\item \textbf{Postcondizione:} Vengono forniti all'utente i risultati delle funzionalità disponibili;
-	\item \textbf{Scenario principale:}
+	\item \textbf{Precondizione:} L'utente è autenticato e può gestire la lista dei preferiti;
+	\item \textbf{Postcondizione:} All'utente vengono fornite i risultati delle funzionalità disponibili;
+	\item \textbf{Scenario principale:} L'utente autenticato ha selezionato la funzionalità di gestione della lista dei preferiti;
+	\item \textbf{Flusso di eventi:}
 			\begin{itemize}
 			%\item L'utente accede alla funzionalità di "Gestioni della lista dei preferiti";
 			\item UCA 3.2.1 - Inserimento di una organizzazione nella lista dei preferiti dell'utente dell'applicazione;
@@ -73,21 +72,21 @@
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni viene visualizzato all'utente un messaggio di errore che lo informa di tale problema;
 	\item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCA 3.3.3 Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni.
+		\item UCA 3.3.3 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni.
 	\end{enumerate}
 \end{itemize}
 
 \subsubsection{UCA 3.2.1 - Inserimento di una organizzazione nella lista dei preferiti dell'utente dell'applicazione}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Precondizione:} l'utente anonimo sceglie di eseguire la funzionalità di inserimento nella lista dei preferiti; 
+	\item \textbf{Precondizione:} L'utente anonimo sceglie di eseguire la funzionalità di inserimento nella lista dei preferiti; 
 	\item \textbf{Postcondizione:} Viene inserita un'organizzazione scelta dall'utente, nella lista dei preferiti.
 \end{itemize}
 
 \subsubsection{UCA 3.2.2 - Rimozione di una organizzazione dalla lista dei preferiti dell'utente dell'applicazione}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Precondizione:}  l'utente anonimo sceglie di eseguire la funzionalità di rimozione nella lista dei preferiti;
+	\item \textbf{Precondizione:}  L'utente anonimo sceglie di eseguire la funzionalità di rimozione nella lista dei preferiti;
 	\item \textbf{Postcondizione:} Viene rimossa un'organizzazione scelta dall'utente, dalla lista dei preferiti.
 \end{itemize}
 
@@ -103,9 +102,10 @@
 
 \begin{itemize} 
 	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Precondizione:}  L'utente anonimo dopo aver scelto di eseguire la funzionalità aggiornare lista organizzazione, viene reso disponibile all'utente anonimo la funzionalità di aggiornamento lista  organizzazione;
-	\item \textbf{Postcondizione:} Vengono forniti all'utente i risultati delle funzionalità disponibili;
-	\item \textbf{Scenario principale:}  L'utente accede alla funzione "Aggiornamento della lista" attraverso una delle due modalità disponibili:
+	\item \textbf{Precondizione:} L'utente è autenticato e può aggiornare la lista delle organizzazioni;
+	\item \textbf{Postcondizione:} L'utente ha aggiornato la lista di tutte le organizzazioni;
+	\item \textbf{Scenario principale:}  L'utente ha la necessità di aggiornare la lista e può farlo in diversi modi;
+	\item \textbf{Flusso di eventi:}
 	\begin{itemize}
 		\item UCA 3.3.1 Aggiornamento lista organizzazione con refresh manuale;
 		\item UCA 3.3.2 Aggiornamento lista organizzazione con temporizzazione;
@@ -121,7 +121,7 @@
 \subsubsection{UCA 3.3.1 - Aggiornare lista organizzazione con refresh manuale}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Precondizione:} l'utente anonimo sceglie di eseguire la funzionalità aggiornamento della lista dell'organizzazione attraverso la modalità refresh manuale";
+	\item \textbf{Precondizione:} L'utente anonimo sceglie di eseguire la funzionalità aggiornamento della lista dell'organizzazione attraverso la modalità di refresh manuale;
 	\item \textbf{Postcondizione:} Viene eseguito l'aggiornamento della lista delle organizzazioni attraverso un refresh manuale.
 	
 \end{itemize}
@@ -129,7 +129,7 @@
 \subsubsection{UCA 3.3.2 - Aggiornare lista organizzazione con temporizzazione}%fish level
 \begin{itemize} 
 	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Precondizione:} l'utente anonimo sceglie di eseguire la funzionalità aggiornamento della lista dell'organizzazione attraverso la modalità temporizzazione; 	
+	\item \textbf{Precondizione:} L'utente anonimo sceglie di eseguire la funzionalità aggiornamento della lista dell'organizzazione attraverso la modalità temporizzazione; 	
 	\item \textbf{Postcondizione:} Viene eseguito l'aggiornamento della lista dell'organizzazione attraverso la modalità temporizzazione.
 \end{itemize}
 
@@ -153,9 +153,10 @@
 
 \begin{itemize} 
 	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Precondizione:} L'utente anonimo dopo aver scelto di eseguire la funzionalità di visualizzazione della lista, viene reso disponibile all'utente anonimo la funzionalità di visualizzazione della lista;
-	\item \textbf{Postcondizione:} Vengono forniti all'utente i risultati delle funzionalità disponibili;
-	\item \textbf{Scenario principale:}	l'utente sceglie come visualizzare la lista
+	\item \textbf{Precondizione:}  L'utente è autenticato e può visualizzare la lista delle organizzazioni;
+	\item \textbf{Postcondizione:} L'utente visualizza la lista delle organizzazioni nel modo che ritiene più opportuno;
+	\item \textbf{Scenario principale:}	L'utente può scegliere come visualizzare la lista tramite diversi tipi di ordinamento;
+	\item \textbf{Flusso di eventi:}
 	\begin{itemize}
 		%\item L'utente esegue la funzione "Visualizzazione lista" visualizzando i nomi delle organizzazioni presenti;
 		\item UCA 3.4.1 - Ordinamento alfabetico;
@@ -194,7 +195,7 @@
 \subsubsection{UCA 3.4.4 - Filtro per tracciamento autenticato}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Precondizione:} L'utente anonimo può utilizzare la funzionalità di visualizzazione della lista che permettono un tracciamento autenticato;
+	\item \textbf{Precondizione:} L'utente anonimo può utilizzare la funzionalità di visualizzazione della lista che permette un tracciamento autenticato;
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle organizzazioni che permettono il tracciamento autenticato.
 \end{itemize}
 
@@ -211,9 +212,10 @@
 
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo;
-	\item \textbf{Precondizione:}L'utente anonimo dopo aver scelto di eseguire la funzionalità di ricerca delle organizzazioni, viene reso disponibile all'utente anonimo la funzionalità di ricerca personalizzata delle organizzazioni; per cercare le organizzazioni d'interesse;
-	\item \textbf{Postcondizione:} Vengono forniti all'utente i risultati delle funzionalità disponibili;
-	\item \textbf{Scenario principale:} l'utente sceglie quale funzionalità eseguire
+	\item \textbf{Precondizione:} L'utente è autenticato e può svolgere ricerche riguardo le organizzazioni;
+	\item \textbf{Postcondizione:} Vengono forniti all'utente i risultati delle ricerche;
+	\item \textbf{Scenario principale:} L'utente deve svolgere alcune ricerche e sceglie il metodo che più gli aggrada;
+	\item \textbf{Flusso di eventi:} 
 	\begin{itemize}
 		%\item L'utente anonimo accede alla funzionalità "Ricerca personalizzata" della lista delle organizzazioni per ricercare le organizzazioni a cui interessa trovare
 		\item UCA - 3.5.1 Ricerca per nazione;
