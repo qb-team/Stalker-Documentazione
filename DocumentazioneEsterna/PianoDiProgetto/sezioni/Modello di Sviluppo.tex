@@ -1,8 +1,22 @@
 \section{Modello di Sviluppo}
 Come modello di sviluppo è stato deciso di adottare il \textbf{modello incrementale}.
 \subsection{Descrizione}
-Il modello incrementale richiede una divisione preliminare dei requisiti atta ad identificare quelli da sviluppare per primi e quali aggiungere al sistema 
-stabile per incrementi.
-Infatti nel modello incrementale si sviluppa il prodotto tramite rilasci successivi, questi rilasci hanno l'obbiettivo di aggiungere funzionalità separate e accessorie 
-a un sistema stabile in cui sono presenti requisiti di base,  
+Nel modello incrementale si sviluppa il prodotto tramite rilasci successivi, questi rilasci hanno l'obbiettivo di aggiungere funzionalità separate e accessorie 
+a un sistema stabile in cui sono presenti requisiti di base; nel caso in cui un rilscio sia fallace è molto facile tornare allo stato funzionante precedente.\\
+Il modello incrementale richiede, dunque, una divisione preliminare dei requisiti atta ad identificare quelli da sviluppare per primi e quali aggiungere al sistema 
+stabile per incrementi. \\
+Inoltre una volta implementate le caratteristiche base del sistema lo si può sottoporre al committente per assicurarsi di star procedendo nella giusta direzione e in caso negativo
+non è troppo tardi per cambiare la struttura del prodotto corrente e inoltre non è particolarmente dispendioso riformulare degli incrementi che devono ancora essere implementati. 
 
+\subsection{Motivazioni}
+Il nostro gruppo ha scelto questo modello di sviluppo perchè si adatta bene alle specifiche del capitolato \textit{Stalker},
+nella fattispecie  è stato facile identificare i requisiti minimi e separare molti requisiti accessori perfetti per essere implementati
+tramite rilasci incrementali sul sistema stabile.\\
+Inoltre, data la nostra inesperienza, un modello che permetta a eventuali cambiamenti in corso d'opera di essere poco dispendiosi dal punto di vista
+sia del tempo di codifica, se sono circoscritti a singoli rilasci, sia del lavoro di cambiamento della documentazione. \\
+In aggiunta a ciò i rilasci successivi di funzionalità ci permettono di poter stabilire un confronto migliore con \textit{Imola Informatica}
+riuscendo a sottoporre al loro giudizio un prodotto che sia sempre funzionante e nel tempo sempre più completo e conforme alle loro aspettative. \\
+Abbiamo valutato inoltre i principali difetti del modello incrementale quali la degradazione della stuttura causata dall'aggiunta di 
+incrementi e l'invisibilità del processo al manager non ci influenzano data la dimensione ridotta, in relazione a 
+ambienti aziendali dove i modelli di sviluppo sono sfruttati a pieno, del progetto che stiamo affrontando.
+ 
