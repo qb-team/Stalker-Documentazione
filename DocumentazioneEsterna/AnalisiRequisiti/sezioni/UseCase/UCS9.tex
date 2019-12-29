@@ -1,0 +1,99 @@
+\subsubsection{UCS 9.4.1 - Annullamento modifiche ai parametri dell'organizzazione}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore gestore\ap{G}
+\item \textbf{Precondizione:} L'amministratore ha selezionato la funzionalità di annullamento delle modifiche ai parametri\ap{G} dell'organizzazione.
+\item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di avvenuto annullamento delle modifiche ai parametri\ap{G} dell'organizzazione.
+\item \textbf{Flusso di eventi:}
+    \begin{enumerate}
+    \item Viene mostrato un messaggio informativo che conferma l'annullamento delle modifiche ai parametri\ap{G} dell'organizzazione.
+    \end{enumerate} 
+\end{itemize}
+
+\subsubsection{UCS 9.4.2 - Il nome dell'organizzazione inserito non rispetta i vincoli}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore gestore\ap{G}
+\item \textbf{Precondizione:} L'amministratore ha inserito un nome per l'organizzazione che non rispetta i vincoli imposti.
+\item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Flusso di eventi:}
+    \begin{enumerate}
+    \item Viene mostrato un messaggio d'errore che suggerisce di reinserire un nuovo nome per l'organizzazione.
+    \end{enumerate} 
+\end{itemize}
+
+\subsubsection{UCS 9.4.3 - Il nome dell'organizzazione inserito è già presente nel sistema}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore gestore\ap{G}
+\item \textbf{Precondizione:} L'amministratore ha inserito un nome per l'organizzazione cheè gia presente nel sistema e associato ad un'altra organizzazione.
+\item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Flusso di eventi:}
+    \begin{enumerate}
+    \item Viene mostrato un messaggio d'errore che suggerisce di reinserire un nuovo nome per l'organizzazione.
+    \end{enumerate} 
+\end{itemize}
+
+\subsubsection{UCS 9.4.4 - L'immagine dell'organizzazione scelta non rispetta i vincoli imposti}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore gestore\ap{G}
+\item \textbf{Precondizione:} L'amministratore ha ha selezionato un'icona per l'organizzazione che non rispetta i vincoli imposti.
+\item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Flusso di eventi:}
+    \begin{enumerate}
+    \item Viene mostrato un messaggio d'errore che suggerisce di selezionare un'altra immagine per l'organizzazione.
+    \end{enumerate} 
+\end{itemize}
+
+\subsubsection{UCS 9.4.5 - La descrizione dell'organizzazione inserita non rispetta i vincoli}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore gestore\ap{G}
+\item \textbf{Precondizione:} L'amministratore ha inserito una descrizione dell'organizzazione che non rispetta i vincoli imposti.
+\item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Flusso di eventi:}
+    \begin{enumerate}
+    \item Viene mostrato un messaggio d'errore che suggerisce modificare la descrizione dell'organizzazione inserita in modo che rispetti i vincoli imposti.
+    \end{enumerate} 
+\end{itemize}
+
+\subsubsection{UCS 9.4.6 - L'indirizzo inserito non rispetta i vincoli imposti}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore gestore\ap{G}
+\item \textbf{Precondizione:} L'amministratore ha inserito un indirizzo per l'organizzazione che non rispetta i vincoli imposti.
+\item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Flusso di eventi:}
+    \begin{enumerate}
+    \item Viene mostrato un messaggio d'errore che suggerisce di reinserire l'indirizzo dell'organizzazione in modo che rispetti i vincoli imposti.
+    \end{enumerate} 
+\end{itemize}
+
+\subsubsection{UCS 9.5.1 - L'area selezionata non rispetta i vincoli imposti per il perimetro\ap{G}}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore gestore\ap{G}
+\item \textbf{Precondizione:} L'amministratore ha selezionato un'area di tracciamento per il perimetro che non rispetta i vincoli imposti.
+\item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Flusso di eventi:}
+    \begin{enumerate}
+    \item Viene mostrato un messaggio d'errore che suggerisce di selezionare nuovamente l'area di tracciamento del perimetro in modo che rispetti i vincoli imposti.
+    \end{enumerate} 
+\end{itemize}
+
+\subsubsection{UCS 9.5.2 - l'area selezionata fuoriesce dall'area che definisce il perimetro\ap{G}}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore gestore\ap{G}
+\item \textbf{Precondizione:} L'amministratore ha selezionato un'area di tracciamento per un luogo\ap{G} che fuoriesce dall'area di tracciamento del perimetro\ap{G}.
+\item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Flusso di eventi:}
+    \begin{enumerate}
+    \item Viene mostrato un messaggio d'errore che suggerisce di selezionare nuovamente l'area di tracciamento del luogo in modo che rientri nell'area di tracciamento del perimetro.
+    \end{enumerate} 
+\end{itemize}
+
+\subsubsection{UCS 9.5.3 - Annullamento della selezione dell'area geografica per il tracciamento}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore gestore\ap{G}
+\item \textbf{Precondizione:} L'amministratore si trova nella funzionalità per la selezione dell'area geografica.
+\item \textbf{Postcondizione:} L'amministratore è uscito dalla funzionalità per la selezione dell'area geografica per il tracciamento.
+\item \textbf{Flusso di eventi:}
+    \begin{enumerate}
+    \item L'amministratore seleziona la funzionalità per l'annullamento della selezione dell'area geografica;
+    \item L'amministratore conferma di voler uscire dalla funzionalità di selezione dell'area geografica.
+    \end{enumerate} 
+\end{itemize}
