@@ -43,9 +43,8 @@ I codici dei casi d'uso hanno il seguente formato: \textbf{UC[Destinazione] X.Y.
 % UC... specificare App o Server -> UCA / UCS
 \subsection{Template}
 Seguono i template dei casi d'uso. Possono essere copiati e incollati, poi compilati (rimuovendo le descrizioni). Seguire alla lettera e l'ordine stabilito dei vari punti.
-\subsubsection{UC[Destinazione] X - Nome del caso d'uso kite-level} %kite level
+\subsubsection{UC[Destinazione] X - Nome del caso d'uso kite-level, prima lettera maiuscola, senza punto a fine riga} %kite level
 \begin{itemize}
-\item \textbf{Nome:} Nome del caso d'uso kite-level, prima lettera maiuscola, senza punto a fine riga
 \item \textbf{Attori primari:} Elenco degli attori primari, con lettera maiuscola, separati da virgola, senza punto a fine riga
 \item \textbf{Attori secondari:} Elenco degli attori primari, con lettera maiuscola, separati da virgola, senza punto a fine riga. \textbf{Omettere completamente} se non presenti
 \item \textbf{Precondizione:} In che stato si trova il sistema prima che venga eseguito il caso d'uso. Non serve indicare informazioni riguardo agli attori (in base all'attore, si sa già di loro). Essendo una frase, mettere un punto alla fine.
@@ -56,9 +55,8 @@ Seguono i template dei casi d'uso. Possono essere copiati e incollati, poi compi
 \item \textbf{Inclusioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che permettono di ottenere le postcondizioni correttamente. Tipicamente vengono si ottiene un'estensione da casi d'uso di tipo sea-level, fish-level. Questo caso d'uso non conosce i dettagli dei casi d'uso inclusi ma solo i loro risultati; questi casi d'uso non sanno di essere inclusi quindi la loro esecuzione dipende da questo caso d'uso. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presenti.
 \end{itemize}
 
-\subsubsection{UC[Destinazione] x.y}%sea level
+\subsubsection{UC[Destinazione] x.y - Nome del caso d'uso sea-level, prima lettera maiuscola, senza punto a fine riga}%sea level
 \begin{itemize}
-	\item \textbf{Nome:} Come in UC[Destinazione] X
 	\item \textbf{Attori primari:} Come in UC[Destinazione] X
 	\item \textbf{Attori secondari:} Come in UC[Destinazione] X
 	\item \textbf{Precondizione:} In che stato si trova il sistema prima che venga eseguito il caso d'uso. \textbf{Potrebbe coincidere con la precondizione di UC[Destinazione] X}. Non serve indicare informazioni riguardo agli attori (in base all'attore, si sa già di loro). Essendo una frase, mettere un punto alla fine.
@@ -66,19 +64,18 @@ Seguono i template dei casi d'uso. Possono essere copiati e incollati, poi compi
 	\item \textbf{Scenario principale:} Come in UC[Destinazione] X.
 	\item \textbf{Scenario alternativo:} Come in UC[Destinazione] X.
 	\item \textbf{Flusso di eventi:} Elenco ordinato di eventi che accadono per far sì che venga raggiunta la postcondizione. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presenti.
-	\item \textbf{Estensioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che estendono la normale esecuzione del caso d'uso, deviandola e non facendo raggiungere le postcondizioni. Tipicamente si ottiene un'estensione da casi d'uso di tipo fish-level. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presenti.
+	\item \textbf{Estensioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che estendono la normale esecuzione del caso d'uso, deviandola e non facendo raggiungere le postcondizioni. Tipicamente si ottiene un'estensione da casi d'uso di tipo fish-level. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presente.
 	\item \textbf{Inclusioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che permettono di ottenere le postcondizioni correttamente. Tipicamente vengono si ottiene un'estensione da casi d'uso di tipo fish-level. Questo caso d'uso non conosce i dettagli dei casi d'uso inclusi ma solo i loro risultati; questi casi d'uso non sanno di essere inclusi quindi la loro esecuzione dipende da questo caso d'uso. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto.  \textbf{Omettere completamente} se non presenti.
 \end{itemize}
 
-\subsubsection{UC x.y.z}%fish level
+\subsubsection{UC[Destinazione] x.y.z - Nome del caso d'uso fish-level, prima lettera maiuscola, senza punto a fine riga}%fish level
 \begin{itemize}
-	\item \textbf{Nome:} Nome del caso d'uso sea-level, prima lettera maiuscola, senza punto a fine riga
 	\item \textbf{Attori primari:} Come in UC[Destinazione] X
 	\item \textbf{Attori secondari:} Come in UC[Destinazione] X
 	\item \textbf{Precondizione:} In che stato si trova il sistema prima che venga eseguito il caso d'uso. \textbf{Potrebbe coincidere con la precondizione di UC[Destinazione] X.Y}. Non serve indicare informazioni riguardo agli attori (in base all'attore, si sa già di loro). Essendo una frase, mettere un punto alla fine.
 	\item \textbf{Postcondizione:} Come in UC[Destinazione] X.
 	\item \textbf{Flusso di eventi:} Elenco ordinato di eventi che accadono per far sì che venga raggiunta la postcondizione. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presenti.
-	\item \textbf{Estensioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che estendono la normale esecuzione del caso d'uso, deviandola e non facendo raggiungere le postcondizioni. Tipicamente si ottiene un'estensione da casi d'uso di tipo fish-level. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presenti.
+	\item \textbf{Estensioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che estendono la normale esecuzione del caso d'uso, deviandola e non facendo raggiungere le postcondizioni. Tipicamente si ottiene un'estensione da casi d'uso di tipo fish-level. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presente.
 	\item \textbf{Inclusioni:} Elenco non ordinato dei casi d'uso (solo il loro codice) che permettono di ottenere le postcondizioni correttamente. Tipicamente vengono si ottiene un'estensione da casi d'uso di tipo fish-level. Questo caso d'uso non conosce i dettagli dei casi d'uso inclusi ma solo i loro risultati; questi casi d'uso non sanno di essere inclusi quindi la loro esecuzione dipende da questo caso d'uso. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto.  \textbf{Omettere completamente} se non presenti.
 \end{itemize}
 
