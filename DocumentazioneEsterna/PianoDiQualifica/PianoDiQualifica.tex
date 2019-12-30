@@ -1,0 +1,30 @@
+\documentclass[a4paper, oneside, dvipsnames, table]{article}
+%openany
+\usepackage{../../template/Stiletemplate}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[italian]{babel}
+\usepackage[raggedright]{titlesec}
+\usepackage{blindtext}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
+
+\input{sezioni/comandi}
+
+
+\begin{document}
+
+\copertina{}
+\newpage
+
+\input{sezioni/RegistroModifiche}
+
+% \fancydQ{}
+
+\clearpage
+\tableofcontents
+\clearpage
+\input{sezioni/Introduzione}
+\clearpage
+
+\end{document}
