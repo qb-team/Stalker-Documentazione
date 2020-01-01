@@ -20,8 +20,6 @@
 
 \end{itemize}
 
-
-
 \subsubsection{UCA 1.1 - Autenticazione con credenziali Stalker}%sea level
 
 \begin{figure}[h]
@@ -112,15 +110,14 @@
     \end{enumerate}
 \item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCA 1.2.4 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione;
-		\item UCA 1.2.5 - Visualizzazione messaggio di errore in caso di password troppo debole;
-		\item UCA 1.2.6 - Visualizzazione messaggio di errore in caso di password e conferma password diverse. 
+		\item UCA 7.1.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione;
+		\item UCA 7.1.2 - Visualizzazione messaggio di errore in caso di password troppo debole;
+		\item UCA 7.1.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse. 
 	\end{enumerate}
 %\item \textbf{Inclusioni:}
 \end{itemize}
 
 \subsubsection{UC 1.2.1 - Inserimento indirizzo e-mail}%fish level
-
 
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato;
@@ -129,12 +126,9 @@
 \item \textbf{Postcondizione:} L'utente ha inserito il proprio indirizzo e-mail;
 \item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCA 1.2.4 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione.
+		\item UCA 7.1.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione.
 	\end{enumerate}
 \end{itemize}
-
-
-
 
 \subsubsection{UCA 1.2.2 - Inserimento password}%fish level
 \begin{itemize}
@@ -144,7 +138,7 @@
 \item \textbf{Postcondizione:} L'utente ha inserito una password;
 \item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCA 1.2.5 - Visualizzazione messaggio di errore in caso di password troppo debole.
+		\item UCA 7.1.2 - Visualizzazione messaggio di errore in caso di password troppo debole.
 	\end{enumerate}
 \end{itemize}
 
@@ -156,32 +150,6 @@
 \item \textbf{Postcondizione:} L'utente ha confermato la password inserendola nuovamente;
 \item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCA 1.2.6 - Visualizzazione messaggio di errore in caso di password e conferma password diverse.
+		\item UCA 7.1.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse.
 	\end{enumerate}
 \end{itemize}
-
-\subsubsection{UCA 1.2.4 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione}%fish level
-\begin{itemize}
-\item \textbf{Attori primari:} Utente non autenticato;
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'utente non è registrato e ha inserito nel campo indirizzo e-mail un valore già presente nel sistema;
-\item \textbf{Postcondizione:} L'indirizzo e-mail inserito dall'utente è già presente nel sistema, pertanto riceve un messaggio di errore.
-\end{itemize}
-
-\subsubsection{UCA 1.2.5 - Visualizzazione messaggio di errore in caso di password troppo debole}%fish level
-\begin{itemize}
-\item \textbf{Attori primari:} Utente non autenticato;
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'utente non è registrato e ha inserito una password poco sicura;
-\item \textbf{Postcondizione:} La password inserita dall'utente risulta essere poco sicura per il sistema, pertanto riceve un messaggio di errore.
-\end{itemize}
-
-
-\subsubsection{UCA 1.2.6 - Visualizzazione messaggio di errore in caso di password e conferma password diverse}%fish level
-\begin{itemize}
-\item \textbf{Attori primari:} Utente non autenticato;
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'utente non è registrato e ha inserito nei campi relativi alla password e conferma password valori differenti;
-\item \textbf{Postcondizione:} La password inserita dall'utente è diversa da quella inserita nel campo conferma password, pertanto riceve un messaggio di errore.
-\end{itemize}
-
