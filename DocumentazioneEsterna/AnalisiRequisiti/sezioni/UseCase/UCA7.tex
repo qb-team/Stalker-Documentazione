@@ -25,7 +25,7 @@
 \item \textbf{Postcondizione:} La password inserita dall'utente è diversa da quella inserita nel campo conferma password, pertanto riceve un messaggio di errore.
 \end{itemize}
 
-\subsubsection{UCA 7.1.4 - Visualizzazione di un messaggio di errore che informa del tentativo fallito di scaricare la lista}%fish level
+\subsubsection{UCA 7.3.1 - Visualizzazione di un messaggio di errore che informa del tentativo fallito di scaricare la lista}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Utente anonimo\ap{G};
 \item \textbf{Precondizione:} L'utente esegue l'azione di scaricare la lista delle organizzazioni\ap{G} ma fallisce;
@@ -33,28 +33,28 @@
 
 \end{itemize}
 
-\subsubsection{UCA 7.1.5 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni}%fish level
+\subsubsection{UCA 7.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo\ap{G};
 	\item \textbf{Precondizione:} La lista delle organizzazioni\ap{G} non è presente nel dispositivo dell'utente;
 	\item \textbf{Postcondizione:} Viene visualizzato un messaggio di errore che informa che nel dispositivo non è presente la lista delle organizzazioni\ap{G}.
 \end{itemize}
 
-\subsubsection{UCA 7.1.6 - Avviso di assenza di organizzazioni preferite}
+\subsubsection{UCA 7.5.1 - Avviso di assenza di organizzazioni preferite}
 \begin{itemize}
     \item \textbf{Attori primari:} Utente anonimo\ap{G}, Utente riconosciuto\ap{G};
     \item \textbf{Precondizione:} L'utente non ha aggiunto alcuna organizzazione\ap{G} come preferita;
     \item \textbf{Postcondizione:} L'utente visualizza nella schermata un messaggio che lo avvisa della mancanza di organizzazioni\ap{G}.
 \end{itemize}
 
-\subsubsection{UCA 7.1.7 - Avviso di assenza di accessi presso i luoghi di un'organizzazione preferita}
+\subsubsection{UCA 7.5.2 - Avviso di assenza di accessi presso i luoghi di un'organizzazione preferita}
 \begin{itemize}
     \item \textbf{Attori primari:} Utente anonimo\ap{G}, Utente riconosciuto\ap{G};
     \item \textbf{Precondizione:} L'utente ha selezionato dalla lista delle organizzazioni preferite un'organizzazione di cui visualizzare i propri accessi, ma non ha mai effettuato accesso ai luoghi dell'organizzazione;
     \item \textbf{Postcondizione:} L'utente visualizza un messaggio che lo avvisa della mancanza di accessi nei luoghi dell'organizzazione.
 \end{itemize}
 
-\subsubsection{UCA 7.1.8 - Notifica di errore se procedimento di memorizzazione dell'accesso al luogo è fallito}
+\subsubsection{UCA 7.6.1 - Notifica di errore se procedimento di memorizzazione dell'accesso al luogo è fallito}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente riconosciuto\ap{G}, Utente anonimo\ap{G};
 	\item \textbf{Precondizione:} Avviene un errore durante la registrazione dell'accesso dell'utente;
