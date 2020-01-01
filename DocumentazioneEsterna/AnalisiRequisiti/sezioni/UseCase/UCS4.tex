@@ -19,6 +19,7 @@
     \item \textbf{Precondizione:} L’amministratore dispone di almeno un'organizzazione.
     \item \textbf{Postcondizione:} L’amministratore ha modificato i parametri desiderati dell'organizzazione e le modifiche sono state salvate nel sistema.
     \item \textbf{Scenario principale:} L'amministratore deve scegliere l'organizzazione che vuole modificare, selezionare la funzionalità di modifica dell'organizzazione e quindi procedere con il cambiamento dei parametri.
+    \item \textbf{Scenario alternativo:} L'amministratore non vuole più apportare modifiche all'organizzazione, pertanto procederà con l'annullamento dell'apporto di modifiche [UCS 4.3].
     \item \textbf{Flusso di eventi:}
     \begin{enumerate}
         \item L'amministratore seleziona un'organizzazione [UCS 3];
@@ -57,6 +58,8 @@
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore gestore si trova nella sezione di modifica dei parametri dell'organizzazione.
 \item \textbf{Postcondizione:} L'amministratore ha inserito un nome per l'organizzazione che rispetti i vincoli imposti e non sia già presente nel sistema.
+\item \textbf{Scenario alternativo 1:} L'amministratore inserisce un nome per l'organizzazione che non rispetta i vincoli imposti. Verrà visualizzato un messaggio d'errore [UCS 9.4.2].
+\item \textbf{Scenario alternativo 2:} L'amministratore inserisce un nome per l'organizzazione che è gia presente nel sistema. Verrà visualizzato un messaggio d'errore [UCS 9.4.3].
 \item \textbf{Estensioni:}
 \begin{enumerate}
     \item UCS 9.4.2 - Il nome dell'organizzazione inserito non rispetta i vincoli;
@@ -69,6 +72,7 @@
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore gestore si trova nella sezione di modifica dei parametri dell'organizzazione.
 \item \textbf{Postcondizione:} L'amministratore ha selezionato un'immagine valida per l'organizzazione.
+\item \textbf{Scenario alternativo:} L'amministratore seleziona un'immagine per l'organizzazione che non rispetta i vincoli imposti. Verrà visualizzato un messaggio d'errore [UCS 9.4.4].
 \item \textbf{Flusso di eventi:}
 \begin{enumerate}
     \item L'amministratore seleziona la funzionalità di scelta dell'immagine;
@@ -86,6 +90,7 @@
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore gestore si trova nella sezione di modifica dei parametri dell'organizzazione.
 \item \textbf{Postcondizione:} L'amministratore ha inserito una descrizione che rispetti i vincoli imposti.
+\item \textbf{Scenario alternativo:} L'amministratore inserisce una descrizzione dell'organizzazione che non rispetta i vincoli imposti. Verrà visualizzato un messaggio d'errore [UCS 9.4.5].
 \item \textbf{Estensioni:}
 \begin{enumerate}
     \item UCS 9.4.5 - La descrizione dell'organizzazione inserita non rispetta i vincoli.
@@ -98,6 +103,7 @@
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore gestore si trova nella sezione di modifica dei parametri dell'organizzazione.
 \item \textbf{Postcondizione:} L'amministratore ha inserito un indirizzo valido che rispetti i vincoli imposti.
+\item \textbf{Scenario alternativo:} L'amministratore inserisce un indirizzo dell'organizzazione che non rispetta i vincoli imposti. Verrà visualizzato un messaggio d'errore [UCS 9.4.6].
 \item \textbf{Flusso di eventi:}
 \begin{enumerate}
     \item L'amministratore inserisce una parola tra: via/viale/piazza;
@@ -120,13 +126,23 @@
 \item \textbf{Flusso di eventi:}
 \begin{enumerate}
     \item L'amministratore seleziona la funzionalità di richiesta di eliminazione dell'organizzazione;
-    \item UCS 4.2.1. L'amministratore inserisce la motivazione che lo ha spinto a richiedere l'eliminazione dell'organizzazione;
+    \item L'amministratore inserisce la motivazione che lo ha spinto a richiedere l'eliminazione dell'organizzazione [UCS 4.2.1];
     \item L'amministratore seleziona la funzionalità di conferma dell'invio della richiesta di eliminazione dell'organizzazione.
 \end{enumerate}
+\begin{itemize}
+    \item UCS 4.2.1 - Motivazione della richiesta dell'eliminazione di un'organizzazione.
+\end{itemize}
+\end{itemize}
+
+\subsubsection{UCS 4.2.1 - Motivazione della richiesta dell'eliminazione di un'organizzazione}%sea level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore owner
+\item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri dell'organizzazione.
+\item \textbf{Postcondizione:} L'amministratore ha inserito la motivazione della richiesta di eliminazione dell'organizzazione.
+\item \textbf{Scenario principale:} L'amministratore spiegherà il motivo per cui vuole eliminare l'organizzazione.
 \end{itemize}
 
 \subsubsection{UCS 4.3 - Annullamento modifiche ai parametri dell'organizzazione}%sea level
-
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore gestore si trova nella sezione di modifica dei parametri dell'organizzazione.
