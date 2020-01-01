@@ -95,16 +95,16 @@ I requisiti verranno raccolti dalle seguenti fonti:
 
 \paragraph{Casi d'uso}\mbox{}\\
 Definiscono uno scenario in cui uno o più attori interagiscono con il sistema.
-\paragraph{Codice idefinticativo dei casi d'uso}\mbox{}\\
+\subparagraph{Codice idefinticativo dei casi d'uso}\mbox{}\\
 Il codice identificativo di ciascun caso d’uso, univoco nel suo complesso, sarà conforme alla sintassi indicata di seguito:
-\paragraph{Sigle}
+\subparagraph{Sigle}
 \begin{itemize}
 	\item \textbf{UC} sta per Use Case, non viene usato nei codici.
 	\item \textbf{UCA} sta per Use Case App, viene utilizzato quando viene descritto un caso d'uso che si applica all'applicazione per utenti da realizzare per il sistema.
 	\item \textbf{UCS} sta per Use Case Server, viene utilizzato quando viene descritto un caso d'uso che si applica all'interfaccia per amministratori da realizzare per il sistema.
 \end{itemize}
 
-\paragraph{Numerazioni}
+\subparagraph{Numerazioni}
 Dati $X, Y, Z \in \mathbb{N}$, essi si riferiscono a:
 \begin{itemize}
 	\item $X$ al numero progressivo di un caso d'uso di tipo \textit{kite-level}.
@@ -112,7 +112,7 @@ Dati $X, Y, Z \in \mathbb{N}$, essi si riferiscono a:
 	\item $Z$ al numero progressivo (relativo al numero del caso d'uso \textit{sea-level} a cui fa riferimento) di un caso d'uso di tipo \textit{fish-level}.
 \end{itemize}
 
-\paragraph{Codici}
+\subparagraph{Codici}
 I codici dei casi d'uso hanno il seguente formato: \textbf{UC[Destinazione] X.Y.Z}, dove:
 \begin{itemize}
 	\item \textbf{[Destinazione]} può essere:
@@ -126,7 +126,7 @@ Viene di seguito fornito un template di esempio:
 
 % UC... specificare App o Server -> UCA / UCS
 Seguono i template dei casi d'uso. Possono essere copiati e incollati, poi compilati (rimuovendo le descrizioni). Seguire alla lettera e l'ordine stabilito dei vari punti.
-\paragraph{UC[Destinazione] X - Nome del caso d'uso kite-level, prima lettera maiuscola, senza punto a fine riga} %kite level
+\subparagraph{UC[Destinazione] X - Nome del caso d'uso kite-level, prima lettera maiuscola, senza punto a fine riga} %kite level
 \begin{itemize}
 \item \textbf{Attori primari:} Elenco degli attori primari, con lettera maiuscola, separati da virgola, senza punto a fine riga
 \item \textbf{Attori secondari:} Elenco degli attori primari, con lettera maiuscola, separati da virgola, senza punto a fine riga. \textbf{Omettere completamente} se non presenti
@@ -138,7 +138,7 @@ Seguono i template dei casi d'uso. Possono essere copiati e incollati, poi compi
 \item \textbf{Inclusioni:} Elenco non ordinato dei casi d'uso (codice - nome) che permettono di ottenere le postcondizioni correttamente. Tipicamente vengono si ottiene un'estensione da casi d'uso di tipo sea-level, fish-level. Questo caso d'uso non conosce i dettagli dei casi d'uso inclusi ma solo i loro risultati; questi casi d'uso non sanno di essere inclusi quindi la loro esecuzione dipende da questo caso d'uso. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto. \textbf{Omettere completamente} se non presenti.
 \end{itemize}
 
-\paragraph{UC[Destinazione] X.Y - Nome del caso d'uso sea-level, prima lettera maiuscola, senza punto a fine riga}%sea level
+\subparagraph{UC[Destinazione] X.Y - Nome del caso d'uso sea-level, prima lettera maiuscola, senza punto a fine riga}%sea level
 \begin{itemize}
 	\item \textbf{Attori primari:} Come in UC[Destinazione] X
 	\item \textbf{Attori secondari:} Come in UC[Destinazione] X
@@ -151,7 +151,7 @@ Seguono i template dei casi d'uso. Possono essere copiati e incollati, poi compi
 	\item \textbf{Inclusioni:} Elenco non ordinato dei casi d'uso (codice - nome) che permettono di ottenere le postcondizioni correttamente. Tipicamente vengono si ottiene un'estensione da casi d'uso di tipo fish-level. Questo caso d'uso non conosce i dettagli dei casi d'uso inclusi ma solo i loro risultati; questi casi d'uso non sanno di essere inclusi quindi la loro esecuzione dipende da questo caso d'uso. Gli elementi intermedi dell'elenco terminino con un punto e virgola, mentre l'ultimo con un punto.  \textbf{Omettere completamente} se non presenti.
 \end{itemize}
 
-\paragraph{UC[Destinazione] X.Y.Z - Nome del caso d'uso fish-level, prima lettera maiuscola, senza punto a fine riga}%fish level
+\subparagraph{UC[Destinazione] X.Y.Z - Nome del caso d'uso fish-level, prima lettera maiuscola, senza punto a fine riga}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Come in UC[Destinazione] X
 	\item \textbf{Attori secondari:} Come in UC[Destinazione] X
