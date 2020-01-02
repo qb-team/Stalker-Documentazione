@@ -9,29 +9,28 @@
 \end{figure}
 
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente riconosciuto;
-	\item \textbf{Precondizione:} L'utente si è autenticato con le credenziali LDAP\ap{G} nella organizzazione\ap{G} in cui si trova e vuole selezionare la modalita di tracciamento\ap{G};
-	\item \textbf{Postcondizione:} L'utente viene tracciato secondo la modalità da lui scelta precedentemente; 
-	\item \textbf{Scenario principale:} L'utente accede alla funzionali di "Inserimento modalità di tracciamento";
+	\item \textbf{Attori primari:} Utente riconosciuto
+	\item \textbf{Precondizione:} L'utente si è autenticato con le credenziali LDAP\ap{G} nella organizzazione\ap{G} in cui si trova e vuole selezionare la modalita di tracciamento\ap{G}.
+	\item \textbf{Postcondizione:} L'utente viene tracciato secondo la modalità da lui scelta precedentemente.
+	\item \textbf{Scenario principale:} L'utente accede alla funzionalità di selezione della modalità di tracciamento.
 	\item \textbf{Flusso di eventi:}
 	\begin{itemize}
-		\item UCA 4.1 - Inserimento modalità anonimo\ap{G};
-		\item UCA 4.2 - Inserimento modalità autenticato\ap{G}.
+		\item L'utente può scegliere la modalità di tracciamento anonimo\ap{G} [UCA 4.1] oppure la modalità di tracciamento autenticato\ap{G} [UCA 4.2].
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{UCA 4.1 - Inserimento modalità anonimo}%sea level
+\subsubsection{UCA 4.1 - Inserimento modalità di tracciamento anonimo}%sea level
 \begin{itemize}
 \item \textbf{Attori primari:} Utente riconosciuto;
 \item \textbf{Precondizione:} L'utente si è autenticato con le credenziali LDAP\ap{G} nella organizzazione\ap{G} in cui si trova e vuole selezionare la modalità di tracciamento anonimo\ap{G}];
-\item \textbf{Postcondizione:}  L'utente viene tracciato secondo la modalità anonimo\ap{G};
+\item \textbf{Postcondizione:} L'utente viene tracciato secondo la modalità anonimo\ap{G};
 \item \textbf{Scenario principale:} L'utente accede alla funzionalità inserimento modalità di tracciamento\ap{G} e inserisce la modalità anonimo\ap{G}.
 \end{itemize}
 
-\subsubsection{UCA 4.2 - Inserimento modalità autenticato}%sea level
+\subsubsection{UCA 4.2 - Inserimento modalità di tracciamento autenticato}%sea level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente riconosciuto;
 	\item \textbf{Precondizione:} L'utente si è autenticato con le credenziali LDAP\ap{G} nella organizzazione in cui si trova e vuole selezionare la modalita di tracciamento autenticato\ap{G};
-	\item \textbf{Postcondizione:}  L'utente viene tracciato secondo la modalità autenticato\ap{G};
+	\item \textbf{Postcondizione:} L'utente viene tracciato secondo la modalità autenticato\ap{G};
 	\item \textbf{Scenario principale:} L'utente accede alla funzionalità inserimento modalità di tracciamento\ap{G} e inserisce la modalità autenticato\ap{G}.
 \end{itemize}
