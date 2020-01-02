@@ -1,69 +1,72 @@
 \subsubsection{UCS 8 - Report tabellare degli accessi ai luoghi dell'organizzazione}%kite level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore autenticato\ap{G};
+\item \textbf{Attori primari:} Amministratore autenticato
 %\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'amministratore seleziona la funzionalità di generazione della tabella degli accessi per la sua organizzazione;
-\item \textbf{Postcondizione:} L'amministratore può visionare la tabella che è stata correttamente formata;
-\item \textbf{Scenario principale:} L'amministratore autenticato\ap{G} si trova nella pagina della sua organizzazione [UCS 3] e può selezionare la funzionalità di generazione della tabella degli accessi alla sua organizzazione, le possibilità variano in funzione della presenza di tracciamento\ap{G} autenticato\ap{G} [UCS 8.1] oppure tracciamento\ap{G} anonimo [UCS 8.2];
-\item \textbf{Estensioni:} Errore del server nella generazione delle tabelle [UCS 9.8.1].
+\item \textbf{Precondizione:} L'amministratore seleziona la funzionalità di generazione della tabella degli accessi per la sua organizzazione.
+\item \textbf{Postcondizione:} L'amministratore può visionare la tabella che è stata correttamente formata.
+\item \textbf{Scenario principale:} L'amministratore autenticato si trova nella pagina della sua organizzazione e può selezionare la funzionalità di generazione della tabella degli accessi alla sua organizzazione, le possibilità variano in funzione della presenza di tracciamento\ap{G} autenticato [UCS 8.1] oppure tracciamento\ap{G} anonimo [UCS 8.2].
+\item \textbf{Estensioni:} Errore del server nella generazione delle tabelle [UCE X].
 %\item \textbf{Inclusioni:} 
 \end{itemize}
 
-\subsubsection{UCS 8.1 - Tabelle generabili per un'organizzazione a tracciamento autenticato}%sea level
+\subsubsection{UCS 8.1 - Tabelle generabili dall'amministratore di un'organizzazione a tracciamento autenticato}%sea level
 \begin{itemize}
-\item \textbf{Attori primari:}Amministratore autenticato\ap{G};
+\item \textbf{Attori primari:}Amministratore autenticato
 %\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:}L'amministratore può scegliere tra 3 tipi di tabelle da generare;
-\item \textbf{Postcondizione:}L'amministratore può visionare la tabella correttamente formata;
+\item \textbf{Precondizione:} L'amministratore può scegliere tra 3 tipi di tabelle da generare.
+\item \textbf{Postcondizione:} L'amministratore può visionare la tabella correttamente formata.
 \item \textbf{Scenario principale:} L'amministratore seleziona un tipo di tabella tra i 3 possibili:
 	\begin{itemize}%flusso di eventi
-	\item UCS 8.1.1: tabella contenente per ogni utente l'ora di entrata e uscita in ogni luogo\ap{G} tracciato appartenente all'organizzazione;
-	\item UCS 8.1.2: tabella contanente per ogni utente il totale delle ore spese in ogni luogo\ap{G} tracciato appartenente all'organizzazione;
-	\item UCS 8.1.3: tabella contenente per ogni luogo\ap{G} tracciato appartenente all'azienda il totale delle ore che tutti i dipendenenti vi hanno passato e il numero di dipendenti che li hanno frequentati.
+	\item Tabella contenente per ogni utente l'ora di entrata e uscita in ogni luogo\ap{G} tracciato appartenente all'organizzazione [UCS 8.1.1];
+	\item Tabella contanente per ogni utente il totale delle ore spese in ogni luogo\ap{G} tracciato appartenente all'organizzazione [UCS 8.1.2];
+	\item Tabella contenente per ogni luogo\ap{G} tracciato appartenente all'azienda il totale delle ore che tutti i dipendenti vi hanno passato e il numero di dipendenti che li hanno frequentati [UCS 8.1.3].
 \end{itemize}
 Dopo la selezione la tabella viene mostrata a video e l'amministratore può quindi visionarla.
 \item \textbf{Estensioni:} Errore del server nella generazione delle tabelle:
 	\begin{enumerate}
-		\item UCS 9.8.1.
+		\item UCE x.y.z Errore server.
 	\end{enumerate}
 %\item \textbf{Inclusioni:}
 \end{itemize}
 
 \subsubsection{UCS 8.1.1 - Tabella contenente per ogni utente l'ora di entrata e uscita in ogni luogo tracciato appartenente all'organizzazione}%fish level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore autenticato\ap{G};
-\item \textbf{Precondizione:} L'amministratore seleziona questa opzione per la generazione della tabella;
+\item \textbf{Attori primari:} Amministratore autenticato
+\item \textbf{Precondizione:} L'amministratore seleziona questa opzione per la generazione della tabella.
 \item \textbf{Postcondizione:} La tabella richiesta è corretta e l'amministratore può visionarla.
 \end{itemize}
 
-\subsubsection{UCS 8.1.2 - Tabella contanente per ogni utente il totale delle ore spese in ogni luogo\ap{G} tracciato appartenente all'organizzazione}%fish level
+\subsubsection{UCS 8.1.2 - Tabella contenente per ogni utente il totale delle ore spese in ogni luogo\ap{G} tracciato appartenente all'organizzazione}%fish level
 \begin{itemize}
-\item \textbf{Attori primari:} Ammnistratore autenticato\ap{G};
-\item \textbf{Precondizione:} L'amministratore seleziona questa opzione per la generazione della tabella;
+\item \textbf{Attori primari:} Amministratore autenticato
+\item \textbf{Precondizione:} L'amministratore seleziona questa opzione per la generazione della tabella.
 \item \textbf{Postcondizione:} La tabella richiesta è corretta e l'amministratore può visionarla.
 \end{itemize}
 
-\subsubsection{UCS 8.1.3 - Tabella contenente per ogni luogo tracciato appartenente all'azienda il totale delle ore che tutti i dipendnenti vi hanno trascorso e il numero di dipendenti che li hanno frequentati.}%fish level
+\subsubsection{UCS 8.1.3 - Tabella contenente per ogni luogo tracciato appartenente all'azienda il totale delle ore che tutti i dipendenti vi hanno passato e il numero di dipendenti che li hanno frequentati}%fish level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore autenticato\ap{G};
-\item \textbf{Precondizione:} L'amministratore seleziona questa opzione per la generazione della tabella;
+\item \textbf{Attori primari:} Amministratore autenticato
+\item \textbf{Precondizione:} L'amministratore seleziona questa opzione per la generazione della tabella.
 \item \textbf{Postcondizione:} La tabella richiesta è corretta e l'amministratore può visionarla.
 \end{itemize}
 
-\subsubsection{UCS 8.2 - Tabelle generabili da  un'organizzazione a tracciamento anonimo}%sea level
+\subsubsection{UCS 8.2 - Tabelle generabili dall'amministratore di un'organizzazione a tracciamento anonimo}%sea level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore autenticato\ap{G};
-\item \textbf{Precondizione:} L'amministratore seleziona la funzionalità di generazione della tabella;
+\item \textbf{Attori primari:} Amministratore autenticato
+\item \textbf{Precondizione:} L'amministratore seleziona la funzionalità di generazione della tabella.
 \item \textbf{Postcondizione:} La tabella è stata correttamente formata e l'amministratore può visionarla.
 \item \textbf{Scenario principale:}
 	\begin{enumerate}%flusso di eventi
 	\item L'amministratore seleziona la funzionalità di generazione tabella;
-	\item Viene creata una tabella contentenente per ogni luogo dell'organizzazione il numero di visitatori e le ore trascorse al suo interno [UCS 8.1.3];
+	\item Viene creata una tabella contenente per ogni luogo dell'organizzazione il numero di visitatori e le ore trascorse al suo interno [UCS 8.1.3];
 	\item L'amministratore può visionare la tabella correttamente formata.
 \end{enumerate}
-\item \textbf{Estensioni: }Errore del server nella generazione delle tabelle:
+\item \textbf{Estensioni:}
 	\begin{enumerate}
-		\item UCS 9.8.1;
+		\item UCE x.y.z Errore del server;
 	\end{enumerate}
-\item \textbf{Inclusioni:} UCS 8.1.3.
+\item \textbf{Inclusioni:} 
+\begin{enumerate}
+		\item UCS 8.1.3 - Tabella contenente per ogni luogo tracciato appartenente all'azienda il totale delle ore che tutti i dipendenti vi hanno passato e il numero di dipendenti che li hanno frequentati.
+	\end{enumerate}
 \end{itemize}
