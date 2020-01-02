@@ -9,22 +9,25 @@
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
 
-\input{sezioni/comandi}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
 
+\input{sezioni/comandi.tex}
 
 \begin{document}
 
 \copertina{}
+\fancydoc
 \newpage
 
-\input{sezioni/RegistroModifiche}
+\input{sezioni/RegistroModifiche.tex}
 
-% \fancydQ{}
-
-\clearpage
+\newpage
 \tableofcontents
-\clearpage
-\input{sezioni/Introduzione}
-\clearpage
+\newpage
+\input{sezioni/Introduzione.tex}
+\newpage
+\input{sezioni/QualitàDiProcesso.tex}
+
 
 \end{document}
