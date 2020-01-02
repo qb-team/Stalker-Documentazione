@@ -106,3 +106,15 @@
     \item L'amministratore conferma di voler uscire dalla funzionalità di selezione dell'area geografica.
     \end{enumerate} 
 \end{itemize}
+
+\subsubsection{UCS 9.8.1 - Errore del server durante la generazione della tabella}
+\begin{itemize}
+    \item \textbf{Attori primari:} Amministratore autenticato\ap{G};
+    \item \textbf{Precondizione:} L'amministratore ha lanciato il comando di generazione di una tabella riguardante la sua organizzazione;
+    \item \textbf{Postcondizione:} L'amministratore non ha visualizzato la tabella;
+    \item \textbf{Flusso di eventi:} \begin{enumerate}
+    \item La tabella non viene generata;
+    \item L'amministratore visualizza un errore di generazione della tabella;
+    \item L'amministratore ritorna sulla pagina dalla quale ha lanciato il comando.
+    \end{enumerate}
+\end{itemize}
