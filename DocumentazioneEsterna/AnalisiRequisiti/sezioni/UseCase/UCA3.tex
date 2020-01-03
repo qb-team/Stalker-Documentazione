@@ -17,7 +17,7 @@
 		\item Scaricamento lista di tutte le organizzazioni\ap{G} [UCA 3.1];
 		\item Gestione lista dei preferiti\ap{G} [UCA 3.2];
 		\item Aggiornare lista organizzazione\ap{G} [UCA 3.3];
-		\item Visualizzazione lista [UCA 3.4];
+		\item Visualizzazione lista delle organizzazioni [UCA 3.4];
 		\item Ricerca personalizzata delle organizzazioni\ap{G} [UCA 3.5].
 	\end{itemize}
 \end{itemize}
@@ -32,9 +32,9 @@
 \item \textbf{Scenario principale:} L'utente seleziona l'esecuzione della funzione "Scaricamento della lista".
 \item \textbf{Scenario alternativo:} Se il tentativo di scaricare la lista fallisce viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.1].
 \item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{itemize}
 	\item UCA 7.3.1 - Visualizzazione di un messaggio di errore che informa del tentativo fallito di scaricare la lista.
-\end{enumerate}
+\end{itemize}
   
 \end{itemize}
 
@@ -59,9 +59,9 @@
 			\end{itemize}
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.2];
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{itemize}
 		\item UCA 7.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni\ap{G}.
-	\end{enumerate}
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCA 3.2.1 - Inserimento di una organizzazione nella lista dei preferiti dell'utente dell'applicazione}%fish level
@@ -111,10 +111,10 @@
 	\item \textbf{Scenario alternativo 1:} Se il tentativo di scaricare la lista falisce viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.1].
 	\item \textbf{Scenario alternativo 2:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.2];
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{itemize}
 		\item UCA 7.3.1 - Visualizzazione di un messaggio di errore che informa del tentativo fallito di scaricare la lista;
 		\item UCA 7.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni\ap{G}.
-	\end{enumerate}
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCA 3.3.1 - Aggiornare lista organizzazione con refresh manuale}%fish level
@@ -140,15 +140,15 @@
 	\end{enumerate}
 \end{itemize}
 
-\newpage
+\clearpage
 
 
-\subsubsection{UCA 3.4 - Visualizzazione lista}%sea level
+\subsubsection{UCA 3.4 - Visualizzazione lista delle organizzazioni}%sea level
 
 \begin{figure}[h]
 	\centering	
 	\includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA3.4.png}
-	\caption{UCA 3.4 - Visualizzazione lista}
+	\caption{UCA 3.4 - Visualizzazione lista delle organizzazioni}
 \end{figure}
 
 \begin{itemize} 
@@ -166,9 +166,9 @@
 	\end{itemize}
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema.
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{itemize}
 		\item UCA 7.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni\ap{G}.
-	\end{enumerate}
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCA 3.4.1 - Ordinamento alfabetico}%fish level
@@ -199,6 +199,13 @@
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle organizzazioni\ap{G} che permettono il tracciamento autenticato\ap{G}.
 \end{itemize}
 
+\subsubsection{UCS 3.4.5 - Filtro organizzazioni preferite}%fish level
+\begin{itemize}
+	\item \textbf{Attori primari:} Utente anonimo\ap{G}, Utente autenticato\ap{G}
+	\item \textbf{Precondizione:} L'utente possiede almeno un'organizzazione nella lista dei preferiti.
+	\item \textbf{Postcondizione:} Viene visualizzato la lista delle organizzazioni\ap{G} preferite.
+\end{itemize}
+
 \newpage
 
 \subsubsection{UCA 3.5 - Ricerca personalizzata delle organizzazioni}%sea level
@@ -222,9 +229,9 @@
 	\end{itemize}
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.2].
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{itemize}
 		\item UCA 7.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni\ap{G}.
-	\end{enumerate}
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCA 3.5.1 - Ricerca per nazione}%fish level
