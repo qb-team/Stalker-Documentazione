@@ -13,13 +13,13 @@
 \item \textbf{Precondizione:} L'utente è autenticato e può accedere alle funzionalità della lista delle organizzazioni\ap{G}.
 \item \textbf{Postcondizione:} Vengono forniti all'utente i risultati delle funzionalità disponibili.
 \item \textbf{Scenario principale:} L'utente autenticato utilizza le funzioni di gestione delle liste di organizzazioni\ap{G} per svolgere una o più delle seguenti azioni:
-	\begin{itemize}
+	\begin{enumerate}
 		\item Scaricamento lista di tutte le organizzazioni\ap{G} [UCA 3.1];
 		\item Gestione lista dei preferiti\ap{G} [UCA 3.2];
 		\item Aggiornare lista organizzazione\ap{G} [UCA 3.3];
 		\item Visualizzazione lista [UCA 3.4];
 		\item Ricerca personalizzata delle organizzazioni\ap{G} [UCA 3.5].
-	\end{itemize}
+	\end{enumerate}
 \end{itemize}
 
 
@@ -52,16 +52,16 @@
 	\item \textbf{Postcondizione:} All'utente vengono fornite i risultati delle funzionalità disponibili.
 	\item \textbf{Scenario principale:} L'utente autenticato ha selezionato la funzionalità di gestione della lista dei preferiti\ap{G}.
 	\item \textbf{Flusso di eventi:}
-			\begin{itemize}
+			\begin{enumerate}
 			\item L'utente accede alla funzionalità di "Gestioni della lista dei preferiti";
 			\item Vi è la possibilità di inserire un'organizzazione\ap{G} nella lista dei preferiti\ap{G} dell'utente dell'applicazione [UCA 3.2.1];
 			\item Vi è la possibilità di rimuovere un'organizzazione\ap{G} dalla lista dei preferiti\ap{G} dell'utente dell'applicazione.
-			\end{itemize}
+			\end{enumerate}
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.2];
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{itemize}
 		\item UCA 7.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni\ap{G}.
-	\end{enumerate}
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCA 3.2.1 - Inserimento di una organizzazione nella lista dei preferiti dell'utente dell'applicazione}%fish level
@@ -104,18 +104,18 @@
 	\item \textbf{Postcondizione:} L'utente ha aggiornato la lista di tutte le organizzazioni\ap{G}.
 	\item \textbf{Scenario principale:} L'utente ha la necessità di aggiornare la lista e può farlo in diversi modi.
 	\item \textbf{Flusso di eventi:}
-	\begin{itemize}
+	\begin{enumerate}
 		\item L'utente accede alla funzionalità di aggiornamento della lista delle organizzazioni \ap{G};
 		\item L'utente ha la possibilità di effettuare l'aggiornamento lista organizzazione\ap{G} con refresh manuale\ap{G} [UCA 3.3.1];
 		\item L'utente ha la possibilità di effutuare l'aggiornamento lista organizzazione\ap{G} con temporizzazione\ap{G} [UCA 3.3.2].
-	\end{itemize}
+	\end{enumerate}
 	\item \textbf{Scenario alternativo 1:} Se il tentativo di scaricare la lista falisce viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.1].
 	\item \textbf{Scenario alternativo 2:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.2];
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{itemize}
 		\item UCA 7.3.1 - Visualizzazione di un messaggio di errore che informa del tentativo fallito di scaricare la lista;
 		\item UCA 7.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni\ap{G}.
-	\end{enumerate}
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCA 3.3.1 - Aggiornare lista organizzazione con refresh manuale}%fish level
@@ -158,18 +158,18 @@
 	\item \textbf{Postcondizione:} L'utente visualizza la lista delle organizzazioni\ap{G} nel modo che ritiene più opportuno.
 	\item \textbf{Scenario principale:}	L'utente può scegliere come visualizzare la lista tramite diversi tipi di ordinamento.
 	\item \textbf{Flusso di eventi:}
-	\begin{itemize}
+	\begin{enumerate}
 		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle organizzazioni\ap{G} presenti;
 		\item L'utente ha la possibilità di ordinare le organizzazioni\ap{G} alfabeticamnete [UCA 3.4.1];
 		\item L'utente ha la possibilità di ordinare le organizzazioni\ap{G} secondo la politica FIFO\ap{G} [UCA 3.4.2];
 		\item L'utente ha la possibilità di applicare un filtro per modalità di tracciamento anonima\ap{G} [UCA 3.4.3];
 		\item L'utente ha la possibilità di applicare un filtro per modalità di tracciamento autenticato\ap{G} [UCA 3.4.4].
-	\end{itemize}
+	\end{enumerate}
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema.
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{itemize}
 		\item UCA 7.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni\ap{G}.
-	\end{enumerate}
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCA 3.4.1 - Ordinamento alfabetico}%fish level
@@ -177,6 +177,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista secondo un ordinamento alfabetico (dalla a alla z).
 	\item \textbf{Postcondizione:} Viene visualizzata la lista delle organizzazioni\ap{G} in ordine alfabetico.
+	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle organizzazioni\ap{G} presenti in ordine alfabetico.
 	\end{enumerate}
@@ -187,6 +188,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista secondo un ordinamento FIFO\ap{G}.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle organizzazioni\ap{G} secondo la modalità FIFO\ap{G}.
+	\item \textbf{Flusso di eventi:}
 		\begin{enumerate}
 		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle organizzazioni\ap{G} presenti secondo la modalità FIFO\ap{G}.
 	\end{enumerate}
@@ -197,6 +199,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista che permettono un tracciamento anonimo\ap{G}.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle organizzazioni\ap{G} che permettono il tracciamento anonimo\ap{G}.
+	\item \textbf{Flusso di eventi:}
 		\begin{enumerate}
 		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle organizzazioni\ap{G} che permettono il tracciamento anonimo\ap{G}.
 	\end{enumerate}
@@ -207,6 +210,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista che permette un tracciamento autenticato\ap{G}.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle organizzazioni\ap{G} che permettono il tracciamento autenticato\ap{G}.
+	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle organizzazioni\ap{G} che permettono il tracciamento autenticato\ap{G}.
 	\end{enumerate}
@@ -227,17 +231,17 @@
 	\item \textbf{Postcondizione:} Vengono forniti all'utente i risultati delle ricerche.
 	\item \textbf{Scenario principale:} L'utente deve svolgere alcune ricerche e sceglie il metodo che più lo aggrada.
 	\item \textbf{Flusso di eventi:} 
-	\begin{itemize}
+	\begin{enumerate}
 		\item L'utente anonimo accede alla funzionalità di ricerca personalizzata della lista delle organizzazioni\ap{G} per ricercare le organizzazioni\ap{G} desiderate;
 		\item L'utente ha la possibilità di effettuare la ricerca per nazione [UCA 3.5.1];
 		\item L'utente ha la possibilità di effettuare la ricerca per nome [UCA 3.5.2;
 		\item L'utente ha la possibilità di effettuare la ricerca per città [UCA 3.5.3].
-	\end{itemize}
+	\end{enumerate}
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.2].
 	\item \textbf{Estensioni:}
-	\begin{enumerate}
+	\begin{itemize}
 		\item UCA 7.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni\ap{G}.
-	\end{enumerate}
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCA 3.5.1 - Ricerca per nazione}%fish level
@@ -245,6 +249,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di ricerca della lista per cercare le organizzazioni\ap{G} di una certa nazione d'interesse.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle organizzazioni\ap{G} che sono nella città scelta dall'utente.
+	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente esegue la funzione di ricerca personalizzata della lista delle organizzazioni\ap{G} per ricercare le organizzazioni\ap{G} desiderate filtrando per la nazione scelta.
 	\end{enumerate}
@@ -255,6 +260,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di ricerca della lista per cercare le organizzazioni\ap{G} che hanno il nome specificato dall'utente.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle organizzazioni\ap{G} che hanno il nome scelto dall'utente.
+	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente esegue la funzione di ricerca personalizzata della lista delle organizzazioni\ap{G} per ricercare le organizzazioni\ap{G} desiderate filtrando per il nome della organizzazione scelta.
 	\end{enumerate}
@@ -265,6 +271,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di ricerca della lista per cercare le organizzazioni\ap{G} di una certa città d'interesse.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle organizzazioni\ap{G} che sono nella nazione scelta dall'utente.
+	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente esegue la funzione di ricerca personalizzata della lista delle organizzazioni\ap{G} per ricercare le organizzazioni\ap{G} desiderate filtrando per la città scelta.
 	\end{enumerate}
