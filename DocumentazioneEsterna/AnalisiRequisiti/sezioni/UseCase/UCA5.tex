@@ -1,43 +1,63 @@
 \newpage
 
-\subsubsection{UCA 5 - Visualizzazione dello storico accessi presso un'organizzazione}
+\subsubsection{UCA 5 - Selezione di un'organizzazione}
 \begin{figure}[h]
 	\centering	
 	\includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA5.png}
-	\caption{UCA 5 - Visualizzazione dello storico accessi presso un'organizzazione}
+	\caption{UCA 5 - Selezione di un'organizzazione}
 \end{figure}
 
 \begin{itemize}
     \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
     \item \textbf{Precondizione:} L'utente ha precedentemente scaricato la lista delle organizzazioni.
-    \item \textbf{Postcondizione:} L'utente visualizza la lista degli accessi effettuati presso l'organizzazione.
-    \item \textbf{Scenario principale:} L'utente può visualizzare la lista dei propri accessi (con nome dell'organizzazione, timestamp di ingresso, di uscita, e tempo di permanenza) presso un'organizzazione. Se si trova all'interno dell'organizzazione stessa, viene visualizzato il tempo passato al suo interno dall'ultimo ingresso effettuato.
-    \item \textbf{Scenario alternativo:} L'utente non è mai entrato nell'area selezionata, pertanto verra visualizzato un avviso informativo [UCA 7.5.1].
+    \item \textbf{Postcondizione:} L'utente ha selezionato un'organizzazione dalla lista.
+    \item \textbf{Scenario principale:} L'utente selezionerà l'organizzazione desiderata dalla lista delle organizzazioni.
     \item \textbf{Flusso di eventi:}
     \begin{enumerate}
         \item L'utente visualizza la lista delle organizzazioni [UCA 3.4];
-        \item L'utente seleziona dalla lista l'organizzazione interessata;
+        \item L'utente seleziona dalla lista l'organizzazione interessata.
     \end{enumerate}
     \item \textbf{Inclusioni:}
     \begin{itemize}
         \item UCA 3.4 - Visualizzazione lista delle organizzazioni;
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{UCA 5.1 - Visualizzazione dello storico degli accessi all'organizzazione}
+\begin{itemize}
+    \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+    \item \textbf{Precondizione:} L'utente ha precedentemente scaricato la lista delle organizzazioni.
+    \item \textbf{Postcondizione:} L'utente ha visualizzato lo storico degli accessi (con nome dell'organizzazione, timestamp di ingresso, di uscita, e tempo di permanenza) presso l'organizzazione scelta. Se si trova all'interno dell'organizzazione stessa, viene visualizzato il tempo passato al suo interno dall'ultimo ingresso effettuato.
+    \item \textbf{Scenario principale:} L'utente esegue la procedura per visualizzare lo storico degli accessi effettuati presso l'organizzazione desiderata.
+    \item \textbf{Scenario alternativo:} L'utente non è mai entrato nell'organizzazione selezionata, pertanto verrà visualizzato un avviso informativo [UCA 7.5.1].
+    \item \textbf{Flusso di eventi:}
+    \begin{enumerate}
+        \item L'utente seleziona l'organizzazione interessata [UCA 5];
+        \item L'utente seleziona la funzionalità per mostrare gli accessi effettuati presso l'organizzazione selezionata;
+        \item L'utente ha la possibilità di ordinare gli accessi all'organizzazione [UCA 5.1.1] [UCA 5.1.2] oppure di effettuare una ricerca tra di essi per gli accessi di uno specifico giorno [UCA 5.1.3].
+    \end{enumerate}
+    \item \textbf{Inclusioni:}
+    \begin{itemize}
+        \item UCA 5 - Selezione di un'organizzazione;
     \end{itemize}
     \begin{itemize}
         \item UCA 7.5.1 - Avviso della mancanza di accessi effettuati presso l'organizzazione selezionata.
     \end{itemize}
 \end{itemize}
 
-
-\subsubsection{UCA 5.1 - Visualizzazione dello storico degli accessi ad un luogo dell'organizzazione}
+\subsubsection{UCA 5.2 - Visualizzazione dello storico degli accessi ad un luogo dell'organizzazione}
 \begin{itemize}
     \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
     \item \textbf{Precondizione:} L'utente sta visualizzando lo storico accessi di un'organizzazione [UCA 5] e l'organizzazione in questione deve avere almeno un luogo registrato.
-    \item \textbf{Postcondizione:} L'utente visualizza lo storico degli accessi al luogo desiderato.
-    \item \textbf{Scenario principale:} L'utente selezionerà il luogo desiderato per vedere il relativo storico degli accessi. Se l'utente dovesse trovarsi all'interno del luogo stesso, viene visualizzato il tempo passato al suo interno dall'ultimo ingresso effettuato.
-    \item \textbf{Scenario alternativo:} L'utente non è mai entrato nel luogo selezionato, pertanto verra mostrato un avviso informativo [UCA 7.5.2].
+    \item \textbf{Postcondizione:} L'utente visualizza lo storico degli accessi (con nome del luogo, timestamp di ingresso, di uscita, e tempo di permanenza) al luogo desiderato. Se l'utente dovesse trovarsi all'interno del luogo stesso, viene visualizzato il tempo passato al suo interno dall'ultimo ingresso effettuato.
+    \item \textbf{Scenario principale:} L'utente esegue la procedura per visualizzare lo storico degli accessi effettuati presso il luogo desiderato.
+    \item \textbf{Scenario alternativo:} L'utente non è mai entrato nel luogo selezionato, pertanto verrà mostrato un avviso informativo [UCA 7.5.2].
     \item \textbf{Flusso di eventi:}
     \begin{enumerate}
-        \item L'utente seleziona il luogo desiderato tra quelli offerti dall'organizzazione.
+        \item L'utente seleziona l'organizzazione interessata [UCA 5];
+        \item L'utente seleziona un luogo tra quelli offerti dall'organizzazione selezioanta;
+        \item L'utente seleziona la funzionalità per mostrare gli accessi effettuati presso il luogo selezionato;
+        \item L'utente ha la possibilità di ordinare gli accessi al luogo [UCA 5.2.1] [UCA 5.2.2] oppure di effettuare una ricerca tra di essi per gli accessi di uno specifico giorno [UCA 5.2.3].
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{itemize}
