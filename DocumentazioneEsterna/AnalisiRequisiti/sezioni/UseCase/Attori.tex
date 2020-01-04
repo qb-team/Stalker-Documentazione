@@ -4,18 +4,18 @@
 \begin{figure}[h]
   \caption{Gerarchia degli utenti}
   \centering
-    %\includegraphics[scale=0.6]{sezioni/UseCase/Immagini/Utenti.png}
+    \includegraphics[scale=0.6]{sezioni/UseCase/Immagini/Utenti.png}
 \end{figure}
 
 \paragraph{Utente non autenticato}
-Utente generico non ancora autenticato all'applicazione che può avere o non le credenziali per autenticarsi.
+Utente non ancora autenticato all'applicazione che può avere o non le credenziali per autenticarsi.
 \paragraph{Utente autenticato}
-Utente generico che si è autenticato e che quindi dispone di credenziali (e-mail e password) per accedere all'applicazione.
+Utente che si è autenticato e che quindi dispone di credenziali (e-mail e password) per accedere all'applicazione.
 \paragraph{Utente anonimo}
-Utente autenticato non facente parte di alcuna organizzazione e quindi non rintracciabile all'interno di esse.
+Utente autenticato che può venire tracciato all'interno di una organizzazione senza fornire dettagli sulla propria identità.
 \paragraph{Utente riconosciuto}
-Utente autenticato facente parte di una o più organizzazioni.
-L'utente può venire monitorato quando è all'interno di esse.
+Utente autenticato che può venire tracciato all'interno di una precisa organizzazione fornendo dettagli sulla propria identità.
+L'utente si è autenticato all'organizzazione tramite LDAP.
 
 
 
@@ -23,15 +23,15 @@ L'utente può venire monitorato quando è all'interno di esse.
 \begin{figure}[h]
   \caption{Gerarchia degli amministratori}
   \centering
-    %\includegraphics[scale=0.6]{sezioni/UseCase/Immagini/Amministratori.png}
+    \includegraphics[scale=0.6]{sezioni/UseCase/Immagini/Amministratori.png}
 \end{figure}
 
 
 \paragraph{Amministratore non autenticato}
-Amministratore generico non ancora autenticato al sistema che ha già le credenziali per autenticarsi.
+Amministratore non ancora autenticato al sistema che ha già le credenziali per autenticarsi.
 \paragraph{Amministratore autenticato}
-Amministratore generico che si è autenticato al sistema.
-\paragraph{Amministratore Owner}
+Amministratore che si è autenticato al sistema.
+\paragraph{Amministratore owner}
 Amministratore autenticatosi con il ruolo di proprietario dell'organizzazione.
 Si trova al gradino più alto della gerarchia degli amministratori e può compiere le seguenti funzioni:
 \begin{itemize}
