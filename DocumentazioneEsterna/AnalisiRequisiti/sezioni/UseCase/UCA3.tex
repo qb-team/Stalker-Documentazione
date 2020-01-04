@@ -1,5 +1,3 @@
-\newpage
-
 %scritto da Federico Perin
 \subsubsection{UCA 3 - Gestione lista delle organizzazioni}%kite level
 \begin{figure}[h]
@@ -15,7 +13,7 @@
 \item \textbf{Scenario principale:} L'utente autenticato utilizza le funzioni di gestione delle liste di organizzazioni\ap{G} per svolgere una o più delle seguenti azioni:
 	\begin{enumerate}
 		\item Scaricamento lista di tutte le organizzazioni\ap{G} [UCA 3.1];
-		\item Gestione lista dei preferiti\ap{G} [UCA 3.2];
+		\item Gestione lista delle organizzazioni preferite\ap{G} [UCA 3.2];
 		\item Aggiornare lista organizzazione\ap{G} [UCA 3.3];
 		\item Visualizzazione lista delle organizzazioni [UCA 3.4];
 		\item Ricerca personalizzata delle organizzazioni\ap{G} [UCA 3.5].
@@ -39,23 +37,23 @@
 \end{itemize}
 
 
-\subsubsection{UCA 3.2 - Gestione lista dei preferiti}%sea level
+\subsubsection{UCA 3.2 - Gestione lista delle organizzazioni preferite}%sea level
 \begin{figure}[h]
 	\centering
 	
 	\includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA3.2.png}
-	\caption{UCA 3.2 - Gestione lista dei preferiti}
+	\caption{UCA 3.2 - Gestione lista delle organizzazioni preferite}
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
-	\item \textbf{Precondizione:} L'utente è autenticato e può gestire la lista dei preferiti\ap{G}.
+	\item \textbf{Precondizione:} L'utente è autenticato e può gestire la propria lista delle organizzazioni preferite\ap{G}.
 	\item \textbf{Postcondizione:} All'utente vengono fornite i risultati delle funzionalità disponibili.
-	\item \textbf{Scenario principale:} L'utente autenticato ha selezionato la funzionalità di gestione della lista dei preferiti\ap{G}.
+	\item \textbf{Scenario principale:} L'utente autenticato ha selezionato la funzionalità di gestione della lista delle organizzazioni preferite\ap{G}.
 	\item \textbf{Flusso di eventi:}
 			\begin{enumerate}
-			\item L'utente accede alla funzionalità di "Gestioni della lista dei preferiti";
-			\item Vi è la possibilità di inserire un'organizzazione\ap{G} nella lista dei preferiti\ap{G} dell'utente dell'applicazione [UCA 3.2.1];
-			\item Vi è la possibilità di rimuovere un'organizzazione\ap{G} dalla lista dei preferiti\ap{G} dell'utente dell'applicazione.
+			\item L'utente accede alla funzionalità di "Gestioni della lista delle organizzazioni preferite\ap{G}";
+			\item Vi è la possibilità di inserire un'organizzazione\ap{G} nella lista delle organizzazioni preferite\ap{G} dell'utente dell'applicazione [UCA 3.2.1];
+			\item Vi è la possibilità di rimuovere un'organizzazione\ap{G} dalla lista delle organizzazioni preferite\ap{G} dell'utente dell'applicazione.
 			\end{enumerate}
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.2];
 	\item \textbf{Estensioni:}
@@ -64,27 +62,27 @@
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{UCA 3.2.1 - Inserimento di una organizzazione nella lista dei preferiti dell'utente dell'applicazione}%fish level
+\subsubsection{UCA 3.2.1 - Inserimento di una organizzazione nella lista delle organizzazioni preferite dell'utente dell'applicazione}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
-	\item \textbf{Precondizione:} L'utente anonimo sceglie di eseguire la funzionalità di inserimento nella lista dei preferiti\ap{G}.
-	\item \textbf{Postcondizione:} È stata inserita un'organizzazione\ap{G}, scelta dall'utente, nella lista dei preferiti\ap{G}.
+	\item \textbf{Precondizione:} L'utente è autenticato sceglie di eseguire la funzionalità di inserimento nella lista delle organizzazioni preferite\ap{G} solo se ha scaricato precedentemente la lista delle organizzazioni\ap{G}.
+	\item \textbf{Postcondizione:} È stata inserita un'organizzazione\ap{G}, scelta dall'utente, nella lista delle organizzazioni preferite\ap{G}.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
-		\item L'utente seleziona l'organizzazione\ap{G} da inserire nella lista dei preferiti\ap{G};
-		\item L'utente conferma l'inserimento nella lista dei preferiti\ap{G} per l'organizzazione\ap{G} scelta.
+		\item L'utente seleziona dalla lista delle organizzazioni\ap{G} l'organizzazione\ap{G} da inserire nella lista delle organizzazioni preferite\ap{G};
+		\item L'utente conferma l'inserimento nella lista delle organizzazioni preferite\ap{G} per l'organizzazione\ap{G} scelta.
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UCA 3.2.2 - Rimozione di una organizzazione dalla lista dei preferiti dell'utente dell'applicazione}%fish level
+\subsubsection{UCA 3.2.2 - Rimozione di una organizzazione dalla lista delle organizzazioni preferite dell'utente dell'applicazione}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
-	\item \textbf{Precondizione:}  L'utente anonimo sceglie di eseguire la funzionalità di rimozione nella lista dei preferiti\ap{G}.
-	\item \textbf{Postcondizione:} È stata rimossa l'organizzazione\ap{G}, scelta dall'utente, dalla lista dei preferiti\ap{G}.
+	\item \textbf{Precondizione:}  L'utente è autenticato sceglie di eseguire la funzionalità di rimozione nella lista delle organizzazioni preferite\ap{G} solo se c'è almeno una organizzazione\ap{G} inserita nella lista delle organizzazioni preferite\ap{G}.
+	\item \textbf{Postcondizione:} È stata rimossa l'organizzazione\ap{G}, scelta dall'utente, dalla lista delle organizzazioni preferite\ap{G}.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
-		\item L'utente seleziona l'organizzazione\ap{G} da rimuovere dalla lista dei preferiti\ap{G};
-		\item L'utente conferma la rimozione dalla lista dei preferiti\ap{G} per l'organizzazione\ap{G} scelta.
+		\item L'utente seleziona nella lista delle organizzazioni preferite\ap{G} l'organizzazione\ap{G} da rimuovere dalla lista delle organizzazioni preferite\ap{G};
+		\item L'utente conferma la rimozione dalla lista delle organizzazioni preferite\ap{G} per l'organizzazione\ap{G} scelta.
 	\end{enumerate}
 \end{itemize}
 
@@ -219,8 +217,8 @@
 \subsubsection{UCS 3.4.5 - Filtro organizzazioni preferite}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo\ap{G}, Utente autenticato\ap{G}
-	\item \textbf{Precondizione:} L'utente possiede almeno un'organizzazione nella lista dei preferiti.
-	\item \textbf{Postcondizione:} Viene visualizzato la lista delle organizzazioni\ap{G} preferite.
+	\item \textbf{Precondizione:} L'utente possiede almeno un'organizzazione nella lista delle organizzazioni preferite\ap{G}.
+	\item \textbf{Postcondizione:} Viene visualizzato la lista delle organizzazioni preferite\ap{G}.
 \end{itemize}
 
 \newpage
