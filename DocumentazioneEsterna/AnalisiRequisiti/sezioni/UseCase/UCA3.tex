@@ -47,12 +47,12 @@
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato e può gestire la propria lista delle organizzazioni preferite\ap{G}.
-	\item \textbf{Postcondizione:} All'utente vengono fornite i risultati delle funzionalità disponibili.
+	\item \textbf{Postcondizione:} All'utente vengono forniti i risultati delle funzionalità disponibili.
 	\item \textbf{Scenario principale:} L'utente autenticato ha selezionato la funzionalità di gestione della lista delle organizzazioni preferite\ap{G}.
 	\item \textbf{Flusso di eventi:}
 			\begin{enumerate}
 			\item L'utente accede alla funzionalità di "Gestioni della lista delle organizzazioni preferite\ap{G}";
-			\item Vi è la possibilità di inserire un'organizzazione\ap{G} nella lista delle organizzazioni preferite\ap{G} dell'utente dell'applicazione [UCA 3.2.1], se pero viene richiesto di inserire una organizzazione\ap{G} che richiede di autenticarsi con credenziali LDAP\ap{G} [UCA 3.2.2] allora l'utente dovrà inserire tali credenziali [UCA 1.1];
+			\item Vi è la possibilità di inserire un'organizzazione\ap{G} nella lista delle organizzazioni preferite\ap{G} dell'utente dell'applicazione [UCA 3.2.1], se però viene richiesto di inserire una organizzazione\ap{G} che richiede di autenticarsi con credenziali LDAP\ap{G} [UCA 3.2.2] allora l'utente dovrà inserire tali credenziali [UCA 1.1];
 			\item Vi è la possibilità di rimuovere un'organizzazione\ap{G} dalla lista delle organizzazioni preferite\ap{G} dell'utente dell'applicazione [UCA 3.2.3].
 			\end{enumerate}
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.2];
@@ -65,7 +65,7 @@
 \subsubsection{UCA 3.2.1 - Inserimento di una organizzazione nella lista delle organizzazioni preferite dell'utente dell'applicazione}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
-	\item \textbf{Precondizione:} L'utente è autenticato sceglie di eseguire la funzionalità di inserimento nella lista delle organizzazioni preferite\ap{G} solo se ha scaricato precedentemente la lista delle organizzazioni\ap{G}.
+	\item \textbf{Precondizione:} L'utente è autenticato sceglie di eseguire la funzionalità di inserimento di un'organizzazione nella lista delle organizzazioni preferite\ap{G} (solo se ha scaricato precedentemente la lista delle organizzazioni\ap{G}).
 	\item \textbf{Postcondizione:} È stata inserita un'organizzazione\ap{G}, scelta dall'utente, nella lista delle organizzazioni preferite\ap{G}.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
@@ -77,7 +77,7 @@
 \subsubsection{UCA 3.2.2 - Inserimento di una organizzazione che richiede credenziali LDAP nella lista delle organizzazioni preferite dell'utente dell'applicazione}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
-	\item \textbf{Precondizione:} L'utente è autenticato sceglie di eseguire la funzionalità di inserimento nella lista delle organizzazioni preferite\ap{G} solo se ha scaricato precedentemente la lista delle organizzazioni\ap{G}.
+	\item \textbf{Precondizione:} L'utente è autenticato e sceglie di eseguire la funzionalità di inserimento nella lista delle organizzazioni preferite\ap{G} solo se ha scaricato precedentemente la lista delle organizzazioni\ap{G}.
 	\item \textbf{Postcondizione:} È stata inserita un'organizzazione\ap{G}, scelta dall'utente, nella lista delle organizzazioni preferite\ap{G}.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
