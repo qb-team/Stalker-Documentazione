@@ -1,0 +1,146 @@
+\subsubsection{Panoramica UCS 9}%sea level
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.5]{sezioni/UseCase/Immagini/PanoramicaUCS9.png}
+  \caption{Panoramica UCS 9}
+\end{figure}
+
+\subsubsection{UCS 9 - Gestione degli amministratori}%sea level
+\begin{figure}[h]
+    \centering
+      \includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCS9.png}
+    \caption{UCS 9 - Gestione degli amministratori}
+  \end{figure}
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore owner
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema.
+\item \textbf{Postcondizione:} L'amministratore ha eseguito l'azione desiderata tra: creazione di un amministratore [UCS 9.1], eliminazione di un amministratore [UCS 9.2] e modifica dei privilegi di un amministratore [UCS 9.3].
+\item \textbf{Scenario alternativo:} L'amministratore seleziona la funzionalità per annullare le modifiche agli amministatori [UCS 9.4].
+\item \textbf{Flusso di eventi:} %elenco puntato
+  \begin{enumerate}
+        \item L'amministratore seleziona la funzionalità per la gestione degli amministratori;
+        \item L'amministratore seleziona una funzionalità tra: creazione di un amministratore [UCS 9.1], eliminazione di un amministratore [UCS 9.2] e modifica dei privilegi di un amministratore [UCS 9.3].
+    \end{enumerate}
+\item \textbf{Estensioni:}
+	\begin{itemize}
+		\item UCS 9.4 - Annullamento modifiche agli amministratori.
+	\end{itemize}
+\end{itemize}
+
+
+
+\subsubsection{UCS 9.1 - Creazione di un nuovo amministratore}%sea level
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCS9.1.png}
+  \caption{UCS 9.1 - Creazione di un nuovo amministratore}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore owner
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
+\item \textbf{Postcondizione:} L'amministratore ha creato un account per il nuovo amministratore, il quale è stato registrato presso il sistema.
+\item \textbf{Scenario principale:} L'amministratore compila il modulo per la creazione del nuovo amministratore.
+\item \textbf{Flusso di eventi:} %elenco puntato
+  \begin{enumerate}
+        \item Inserimento indirizzo e-mail [UCS 9.1.1];
+        \item Inserimento password [UCS 9.1.2];
+        \item Inserimento conferma password [UCS 9.1.3];
+        \item Selezione dei privilegi del nuovo amministratore [UCS 9.1.4]. Si drovrà scegliere tra "Visualizzatore" e "Gestore".
+    \end{enumerate}
+\item \textbf{Estensioni:}
+	\begin{itemize}
+		\item UCS 10.9.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione;
+		\item UCS 10.9.2 - Visualizzazione messaggio di errore in caso di password troppo debole;
+		\item UCS 10.9.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{UCS 9.2 - Eliminazione di un amministratore}%sea level
+
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore owner
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
+\item \textbf{Postcondizione:} L'amministratore ha rimosso dal sistema l'account dell'amministratore identificato dall'e-mail inserita [UCS 9.2.1].
+\item \textbf{Scenario principale:} L'amministratore inserisce la mail dell'amministratore da eliminare e quindi conferma la scelta.
+\item \textbf{Scenario alternativo:} L'amministratore inserisce un e-mail che non è registrata presso il sistema, verrà pertanto mostrato un messaggio d'errore [UCS 10.9.4].
+\item \textbf{Flusso di eventi:} %elenco puntato
+  \begin{enumerate}
+        \item Inserimento e-mail del profilo dell'amministratore da rimuovere [UCS 9.2.1];
+        \item L'amministratore seleziona la funzionalità di conferma di eliminazione del profilo identificato dall'e-mail immessa al passaggio precedente;
+        \item L'amministratore seleziona la funzionalità di conferma.
+    \end{enumerate}
+    \item \textbf{Inclusioni:}
+	\begin{itemize}
+		\item UCS 9.2.1 - Inserimento e-mail dell'amministratore da eliminare;
+	\end{itemize}
+\item \textbf{Estensioni:}
+	\begin{itemize}
+		\item UCS 10.9.4 - Visualizzazione messaggio di errore in caso di e-mail non registrata nel sistema.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{UCS 9.2.1 - Inserimento e-mail dell'amministratore da eliminare}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore owner
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'amministratore è nella funzionalità "Eliminazione di un amministratore".
+\item \textbf{Postcondizione:} L'amministratore ha inserito una l'e-mail dell'amministratore da eliminare.
+\end{itemize}
+
+\subsubsection{UCS 9.3 - Modifica dei privilegi di un amministratore}%sea level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore owner
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
+\item \textbf{Postcondizione:} L'amministratore ha modificato i privilegi dell'amministratore identificato dalla password inserita [UCS 9.3.1].
+\item \textbf{Scenario principale:} L'amministratore inserisce la mail dell'amministratore a cui vuole modificarne i privilegi e quindi sceglie il privilegio da assegnargli.
+\item \textbf{Flusso di eventi:} %elenco puntato
+  \begin{enumerate}
+        \item Inserimento e-mail del profilo dell'amministratore da rimuovere [UCS 9.2.1];
+        \item L'amministratore seleziona i nuovi privilegi da assegnare all'amministratore, potrà scegliere se assegnare "Gestore" oppure "Visualizzatore".
+    \end{enumerate}
+\end{enumerate}
+\item \textbf{Inclusioni:}
+\begin{itemize}
+    \item UCS 9.3.1 - Inserimento e-mail dell'amministratore a cui si vuole modificare i privilegi.
+\end{itemize}
+\item \textbf{Estensioni:}
+	\begin{itemize}
+		\item UCS 10.9.4 - Visualizzazione messaggio di errore in caso di e-mail non registrata nel sistema.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{UCS 9.3.1 - Inserimento e-mail dell'amministratore a cui si vuole modificare i privilegi}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore owner
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'amministratore è nella funzionalità "Modifica dei privilegi di un amministratore".
+\item \textbf{Postcondizione:} L'amministratore ha inserito una l'e-mail dell'amministratore a cui vuole modificare i privilegi.
+\end{itemize}
+
+\subsubsection{UCS 9.4 - Annullamento modifiche agli amministratori}%sea level
+
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore owner
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
+\item \textbf{Postcondizione:} L'amministratore ha creato un account per il nuovo amministratore, il quale è stato registrato presso il sistema.
+\item \textbf{Scenario principale:} L'amministratore compila il modulo per la creazione del nuovo amministratore.
+\item \textbf{Flusso di eventi:} %elenco puntato
+  \begin{enumerate}
+        \item Inserimento indirizzo e-mail [UCS 9.1.1];
+        \item Inserimento password [UCS 9.1.2];
+        \item Inserimento conferma password [UCS 9.1.3];
+        \item Selezione dei privilegi del nuovo amministratore [UCS 9.1.4]. Si drovrà scegliere tra "Visualizzatore" e "Gestore".
+    \end{enumerate}
+\item \textbf{Estensioni:}
+	\begin{itemize}
+		\item UCS 10.9.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione;
+		\item UCS 10.9.2 - Visualizzazione messaggio di errore in caso di password troppo debole;
+		\item UCS 10.9.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse.
+	\end{itemize}
+\end{itemize}

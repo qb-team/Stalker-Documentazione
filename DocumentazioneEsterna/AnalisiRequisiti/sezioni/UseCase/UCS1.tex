@@ -9,17 +9,11 @@
 
 \subsubsection{UCS 1 - Accesso al server}%kite level
 
-\begin{figure}[h]
-  \centering
-    \includegraphics[scale=0.67]{sezioni/UseCase/Immagini/UCS1.png}
-  \caption{UCS 1 -  Accesso al server}
-\end{figure}
-
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore non autenticato
 \item \textbf{Precondizione:} L'amministratore non è autenticato.
-\item \textbf{Postcondizione:} L'amministratore viene autenticato all'interno del sistema tramite registrazione [UCS 1.2] oppure tramite autenticazione [UCS 1.1].
-\item \textbf{Scenario principale:} L'amministratore non identificato può scegliere se registrarsi [UCS 1.2] nel sistema oppure, se possiede già un account, accedere [UCS 1.1] al server. 
+\item \textbf{Postcondizione:} L'amministratore viene autenticato all'interno del sistema tramite autenticazione [UCS 1.1].
+\item \textbf{Scenario principale:} L'amministratore non autenticato può accedere, tramite l'autenticazione [UCS 1.1], al server. 
 %\item \textbf{Estensioni:}
 \end{itemize}
 
@@ -70,72 +64,6 @@
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore non è autenticato\ap{G}.
 \item \textbf{Postcondizione:} L'amministratore ha inserito la propria password.
-\end{itemize}
-
-\subsubsection{UCS 1.2 - Registrazione al server}%sea level
-
-\begin{figure}[h]
-  \centering
-    \includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCS1.2.png}
-  \caption{UCS 1.2 -  Registrazione al server}
-\end{figure}
-
-\begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'amministratore non é ancora registrato nel sistema.
-\item \textbf{Postcondizione:} L'amministratore si è registrato e può accedere al sistema.
-\item \textbf{Scenario principale:} L'amministratore non registrato compila il modulo di registrazione al fine di poter accedere al sistema.
-\item \textbf{Flusso di eventi:} %elenco puntato
-  \begin{enumerate}
-        \item Inserimento indirizzo e-mail [UCS 1.2.1];
-        \item Inserimento password [UCS 1.2.2];
-        \item Inserimento conferma password [UCS 1.2.3].
-    \end{enumerate}
-\item \textbf{Estensioni:}
-	\begin{itemize}
-		\item UCS 9.1.2 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione;
-		\item UCS 9.1.3 - Visualizzazione messaggio di errore in caso di password troppo debole;
-		\item UCS 9.1.4 - Visualizzazione messaggio di errore in caso di password e conferma password diverse. 
-	\end{itemize}
-%\item \textbf{Inclusioni:}
-\end{itemize}
-
-\subsubsection{UCS 1.2.1 - Inserimento indirizzo e-mail}%fish level
-
-\begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'amministratore non è registrato e il suo indirizzo e-mail non è ancora presente nel sistema.
-\item \textbf{Postcondizione:} L'amministratore ha inserito il proprio indirizzo e-mail.
-\item \textbf{Estensioni:}
-	\begin{itemize}
-		\item UCS 9.1.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione.
-	\end{itemize}
-\end{itemize}
-
-\subsubsection{UCS 1.2.2 - Inserimento password}%fish level
-\begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'amministratore non è registrato e la sua password non è ancora presente nel sistema.
-\item \textbf{Postcondizione:} L'amministratore ha inserito una password.
-\item \textbf{Estensioni:}
-	\begin{itemize}
-		\item UCS 9.1.2 - Visualizzazione messaggio di errore in caso di password troppo debole.
-	\end{itemize}
-\end{itemize}
-
-\subsubsection{UCS 1.2.3 - Inserimento conferma password}%fish level
-\begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'amministratore non è registrato e la conferma password non è ancora definita.
-\item \textbf{Postcondizione:} L'amministratore ha confermato la password inserendola nuovamente.
-\item \textbf{Estensioni:}
-	\begin{itemize}
-		\item UCS 9.1.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse.
-	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCS 1.3 - Password dimenticata}%sea level
