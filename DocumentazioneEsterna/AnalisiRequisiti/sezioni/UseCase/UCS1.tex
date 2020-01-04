@@ -1,10 +1,33 @@
 \newpage
+\subsubsection{Panoramica UCS 1}%kite level
 
-\subsubsection{UCS 1 - Autenticazione al Server}
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.67]{sezioni/UseCase/Immagini/PanoramicaUCS1.png}
+  \caption{Panoramica UCS 1}
+\end{figure}
+
+\subsubsection{UCS 1 - Accesso al server}%kite level
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.67]{sezioni/UseCase/Immagini/UCS1.png}
+  \caption{UCS 1 -  Accesso al server}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore non autenticato
+\item \textbf{Precondizione:} L'amministratore non è autenticato.
+\item \textbf{Postcondizione:} L'amministratore viene autenticato all'interno del sistema tramite registrazione [UCS 1.2] oppure tramite autenticazione [UCS 1.1].
+\item \textbf{Scenario principale:} L'amministratore non identificato può scegliere se registrarsi [UCS 1.2] nel sistema oppure, se possiede già un account, accedere [UCS 1.1] al server. 
+%\item \textbf{Estensioni:}
+\end{itemize}
+
+\subsubsection{UCS 1.1 - Autenticazione al Server}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.6]{sezioni/UseCase/Immagini/UCS1.png}
+    \includegraphics[scale=0.6]{sezioni/UseCase/Immagini/UCS1.1.png}
     \caption{Autenticazione\ap{G} al Server}
 \end{figure}
 
@@ -12,39 +35,107 @@
 \item \textbf{Attori primari:} Amministratore non autenticato\ap{G}
 \item \textbf{Precondizione:} L'amministratore non è autenticato\ap{G}.
 \item \textbf{Postcondizione:} L'amministratore è stato autenticato\ap{G} e può avere accesso alle funzionalità offerte dal sistema.
-\item \textbf{Scenario principale:} Amministratore non identificato inserisce il nome utente e la password per autenticarsi al server. Qualora l'amministratore non dovesse ricordarsi la password può selezionare la funzionalità "password dimenticata" per reimpostarla [UCS 1.3].
-\item \textbf{Scenario alternativo:} L'amministrtore tenta di accede con delle credenziali errate [UCS 9.1.1].
+\item \textbf{Scenario principale:} Amministratore non identificato inserisce e-mail e la password per autenticarsi al server.
+\item \textbf{Scenario alternativo 1:} L'amministrtore tenta di accede con delle credenziali errate [UCS 9.1.1].
+\item \textbf{Scenario alternativo 2:} Qualora l'amministratore non dovesse ricordarsi la password può selezionare la funzionalità "password dimenticata" per reimpostarla [UCS 1.3].
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
-        \item UCS 1.1 - Inserimento e-mail;
-        \item UCS 1.2 - Inserimento password;
-        \item UCS 1.4 - Funzionalità di accesso.
+        \item Inserimento e-mail [UCS 1.1.1];
+        \item Inserimento password [UCS 1.1.2];
+        \item L'amministratore seleziona la funzionalità di accesso.
     \end{enumerate}
     \item \textbf{Inclusioni:}
-	\begin{enumerate}		
-		\item UCS 1.1 - Inserimento e-mail;
-		\item UCS 1.2 - Inserimento password.
-	\end{enumerate}
+	\begin{itemize}		
+		\item UCS 1.1.1 - Inserimento e-mail;
+		\item UCS 1.1.2 - Inserimento password.
+	\end{itemize}
     \item \textbf{Estensioni:}
-    \begin{enumerate}
-		\item UCS 9.1.1 - Credenziali errate.
-	\end{enumerate}
+    \begin{itemize}
+		\item UCS 9.1.1 - Visualizzazione messaggio di errore credenziali errate;
+		\item UCS 1.3 - Password dimenticata.
+	\end{itemize}
 \end{itemize}
 
-\subsubsection{UCS 1.1 - Inserimento e-mail}%sea level
+\subsubsection{UCS 1.1.1 - Inserimento e-mail}%sea level
 \begin{itemize}
-\item \textbf{Attori primari:} Utente non autenticato\ap{G}
+\item \textbf{Attori primari:} Amministratore non autenticato\ap{G}
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore non è autenticato\ap{G}.
 \item \textbf{Postcondizione:} L'amministratore ha inserito la propria e-mail.
 \end{itemize}
 
-\subsubsection{UCS 1.2 - Inserimento password}%sea level
+\subsubsection{UCS 1.1.2 - Inserimento password}%sea level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore non autenticato\ap{G}
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore non è autenticato\ap{G}.
 \item \textbf{Postcondizione:} L'amministratore ha inserito la propria password.
+\end{itemize}
+
+\subsubsection{UCS 1.2 - Registrazione al server}%sea level
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCS1.2.png}
+  \caption{UCS 1.2 -  Registrazione al server}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore non autenticato
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'amministratore non é ancora registrato nel sistema.
+\item \textbf{Postcondizione:} L'amministratore si è registrato e può accedere al sistema.
+\item \textbf{Scenario principale:} L'amministratore non registrato compila il modulo di registrazione al fine di poter accedere al sistema.
+\item \textbf{Flusso di eventi:} %elenco puntato
+  \begin{enumerate}
+        \item Inserimento indirizzo e-mail [UCS 1.2.1];
+        \item Inserimento password [UCS 1.2.2];
+        \item Inserimento conferma password [UCS 1.2.3].
+    \end{enumerate}
+\item \textbf{Estensioni:}
+	\begin{itemize}
+		\item UCS 9.1.2 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione;
+		\item UCS 9.1.3 - Visualizzazione messaggio di errore in caso di password troppo debole;
+		\item UCS 9.1.4 - Visualizzazione messaggio di errore in caso di password e conferma password diverse. 
+	\end{itemize}
+%\item \textbf{Inclusioni:}
+\end{itemize}
+
+\subsubsection{UCS 1.2.1 - Inserimento indirizzo e-mail}%fish level
+
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore non autenticato
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'amministratore non è registrato e il suo indirizzo e-mail non è ancora presente nel sistema.
+\item \textbf{Postcondizione:} L'amministratore ha inserito il proprio indirizzo e-mail.
+\item \textbf{Estensioni:}
+	\begin{itemize}
+		\item UCS 9.1.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{UCS 1.2.2 - Inserimento password}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore non autenticato
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'amministratore non è registrato e la sua password non è ancora presente nel sistema.
+\item \textbf{Postcondizione:} L'amministratore ha inserito una password.
+\item \textbf{Estensioni:}
+	\begin{itemize}
+		\item UCS 9.1.2 - Visualizzazione messaggio di errore in caso di password troppo debole.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{UCS 1.2.3 - Inserimento conferma password}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore non autenticato
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'amministratore non è registrato e la conferma password non è ancora definita.
+\item \textbf{Postcondizione:} L'amministratore ha confermato la password inserendola nuovamente.
+\item \textbf{Estensioni:}
+	\begin{itemize}
+		\item UCS 9.1.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse.
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCS 1.3 - Password dimenticata}%sea level
@@ -56,11 +147,11 @@
 \item \textbf{Scenario principale:} L'amministratore non autenticato\ap{G} inserisce i dati necessari per cambiare la propria password.
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
-        \item UCS 1.3.1 - Inserimento e-mail;
-        \item UCS 1.3.2 - E-mail cambio password;
-        \item UCS 1.3.3 - Nuova password;
-        \item UCS 1.3.4 - Conferma nuova password;
-        \item UCS 1.3.5 - Conferma cambio password.
+        \item Inserimento e-mail [UCS 1.3.1];
+        \item E-mail cambio password [UCS 1.3.2];
+        \item Nuova password [UCS 1.3.3];
+        \item Conferma nuova password [UCS 1.3.4];
+        \item Conferma cambio password [UCS 1.3.5].
     \end{enumerate}
 \end{itemize}
 
@@ -97,13 +188,4 @@
 \item \textbf{Attori primari:} Amministratore non autenticato\ap{G}
 \item \textbf{Precondizione:} L'amministratore non è autenticato\ap{G}.
 \item \textbf{Postcondizione:} L'amministratore ha selezionato la funzionalità di conferma per il cambio password.
-\end{itemize}
-
-\subsubsection{UCS 1.4 - Funzionalità d'accesso}%sea level
-\begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato\ap{G}
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'amministratore non è autenticato\ap{G}.
-\item \textbf{Postcondizione:} L'amministratore è ora autenticato presso il sistema.
-\item \textbf{Scenario principale:} L'amministratore seleziona la funzionalità per effettuare l'accesso al server.
 \end{itemize}
