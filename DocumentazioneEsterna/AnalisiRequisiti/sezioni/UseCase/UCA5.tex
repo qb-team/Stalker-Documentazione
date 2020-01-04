@@ -1,26 +1,17 @@
 \newpage
 
-\subsubsection{UCA 5 - Selezione di un'organizzazione}
+\subsubsection{UCA 5 - Monitoraggio dello storico degli accessi dell'utente}
 \begin{figure}[h]
 	\centering	
 	\includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA5.png}
-	\caption{UCA 5 - Selezione di un'organizzazione}
+	\caption{UCA 5 - Monitoraggio dello storico degli accessi dell'utente}
 \end{figure}
 
 \begin{itemize}
     \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
     \item \textbf{Precondizione:} L'utente ha precedentemente scaricato la lista delle organizzazioni.
-    \item \textbf{Postcondizione:} L'utente ha selezionato un'organizzazione dalla lista.
-    \item \textbf{Scenario principale:} L'utente selezionerà l'organizzazione desiderata dalla lista delle organizzazioni.
-    \item \textbf{Flusso di eventi:}
-    \begin{enumerate}
-        \item L'utente visualizza la lista delle organizzazioni [UCA 3.4];
-        \item L'utente seleziona dalla lista l'organizzazione interessata.
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item UCA 3.4 - Visualizzazione lista delle organizzazioni;
-    \end{itemize}
+    \item \textbf{Postcondizione:} L'ha visualizzato lo storico degli accessi relativo all'organizzazione desiderata oppure al luogo desiderato dell'organizzazione scelta.
+    \item \textbf{Scenario principale:} L'utente selezionerà l'organizzazione desiderata dalla lista delle organizzazioni e quindi la funzionalità per mostrare lo storico degli accessi oppure un luogo specifico per analizzarne il relativo storico degli accessi.
 \end{itemize}
 
 \subsubsection{UCA 5.1 - Visualizzazione dello storico degli accessi all'organizzazione}
@@ -131,4 +122,27 @@
         \item L'utente seleziona il giorno desiderato.
     \end{enumerate}
     \item \textbf{Postcondizione:} L'utente ottiene la lista di accessi effettuati presso il luogo in questione nel giorno selezionato.
+\end{itemize}
+
+\subsubsection{UCA 5.3 - Selezione di un'organizzazione}
+\begin{figure}[h]
+	\centering	
+	\includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA5.3.png}
+	\caption{UCA 5.3 - Selezione di un'organizzazione}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+    \item \textbf{Precondizione:} L'utente ha precedentemente scaricato la lista delle organizzazioni.
+    \item \textbf{Postcondizione:} L'utente ha selezionato un'organizzazione dalla lista.
+    \item \textbf{Scenario principale:} L'utente selezionerà l'organizzazione desiderata dalla lista delle organizzazioni.
+    \item \textbf{Flusso di eventi:}
+    \begin{enumerate}
+        \item L'utente visualizza la lista delle organizzazioni [UCA 3.4];
+        \item L'utente seleziona dalla lista l'organizzazione interessata.
+    \end{enumerate}
+    \item \textbf{Inclusioni:}
+    \begin{itemize}
+        \item UCA 3.4 - Visualizzazione lista delle organizzazioni;
+    \end{itemize}
 \end{itemize}
