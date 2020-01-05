@@ -12,11 +12,11 @@
     \caption{UCS 9 - Gestione degli amministratori}
   \end{figure}
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore owner
+\item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema.
 \item \textbf{Postcondizione:} L'amministratore ha eseguito l'azione desiderata tra: creazione di un amministratore [UCS 9.1], eliminazione di un amministratore [UCS 9.2] e modifica dei privilegi di un amministratore [UCS 9.3].
-\item \textbf{Scenario alternativo:} L'amministratore seleziona la funzionalità per annullare le modifiche agli amministatori [UCS 9.4].
+\item \textbf{Scenario alternativo:} L'amministratore seleziona la funzionalità per annullare le modifiche agli amministratori [UCS 9.4].
 \item \textbf{Flusso di eventi:} %elenco puntato
   \begin{enumerate}
         \item L'amministratore seleziona la funzionalità per la gestione degli amministratori;
@@ -38,7 +38,7 @@
 \end{figure}
 
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore owner
+\item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
 \item \textbf{Postcondizione:} L'amministratore ha creato un account per il nuovo amministratore, il quale è stato registrato presso il sistema.
@@ -61,7 +61,7 @@
 \subsubsection{UCS 9.2 - Eliminazione di un amministratore}%sea level
 
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore owner
+\item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
 \item \textbf{Postcondizione:} L'amministratore ha rimosso dal sistema l'account dell'amministratore identificato dall'e-mail inserita [UCS 9.2.1].
@@ -85,7 +85,7 @@
 
 \subsubsection{UCS 9.2.1 - Inserimento e-mail dell'amministratore da eliminare}%fish level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore owner
+\item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è nella funzionalità "Eliminazione di un amministratore".
 \item \textbf{Postcondizione:} L'amministratore ha inserito una l'e-mail dell'amministratore da eliminare.
@@ -93,7 +93,7 @@
 
 \subsubsection{UCS 9.3 - Modifica dei privilegi di un amministratore}%sea level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore owner
+\item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
 \item \textbf{Postcondizione:} L'amministratore ha modificato i privilegi dell'amministratore identificato dalla password inserita [UCS 9.3.1].
@@ -116,7 +116,7 @@
 
 \subsubsection{UCS 9.3.1 - Inserimento e-mail dell'amministratore a cui si vuole modificare i privilegi}%fish level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore owner
+\item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è nella funzionalità "Modifica dei privilegi di un amministratore".
 \item \textbf{Postcondizione:} L'amministratore ha inserito una l'e-mail dell'amministratore a cui vuole modificare i privilegi.
@@ -125,7 +125,7 @@
 \subsubsection{UCS 9.4 - Annullamento modifiche agli amministratori}%sea level
 
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore owner
+\item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
 \item \textbf{Postcondizione:} L'amministratore ha creato un account per il nuovo amministratore, il quale è stato registrato presso il sistema.
@@ -135,7 +135,7 @@
         \item Inserimento indirizzo e-mail [UCS 9.1.1];
         \item Inserimento password [UCS 9.1.2];
         \item Inserimento conferma password [UCS 9.1.3];
-        \item Selezione dei privilegi del nuovo amministratore [UCS 9.1.4]. Si drovrà scegliere tra "Visualizzatore" e "Gestore".
+        \item Selezione dei privilegi del nuovo amministratore [UCS 9.1.4]. Si dovrà scegliere tra "Visualizzatore" e "Gestore".
     \end{enumerate}
 \item \textbf{Estensioni:}
 	\begin{itemize}

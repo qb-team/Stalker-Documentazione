@@ -7,13 +7,14 @@
 
 # LaTeX
 *.log
+*.lof
 *.pdf
 *.blg
 *.bbl
 *.aux
-*-blx.bib
+*-blx*.bib
 *.out
-*.synctex.gz
+*.synctex*.gz
 *.synctex(busy)
 *.toc
 *.fdb_latexmk
