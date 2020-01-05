@@ -1,6 +1,6 @@
 \subsubsection{UCS 10.1.1 - Visualizzazione messaggio di errore credenziali errate}%sea level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore owner
+\item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore non è autenticato.
 \item \textbf{Postcondizione:} L'amministratore ha la possibilità di reinserire le sue credenziali o di cambiarle [UCS 1.1 e UCS 1.2].
@@ -8,7 +8,7 @@
 
 \subsubsection{UCS 10.9.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione}%sea level
 \begin{itemize}
-    \item \textbf{Attori primari:} Amministratore owner
+    \item \textbf{Attori primari:} Amministratore proprietario
     %\item \textbf{Attori secondari:}%opzionale
     \item \textbf{Precondizione:} L'amministratore non è registrato e ha inserito nel campo indirizzo e-mail un valore già presente nel sistema.
     \item \textbf{Postcondizione:} L'indirizzo e-mail inserito dall'amministratore è già presente nel sistema, pertanto riceve un messaggio di errore esplicativo che lo esorta a scegliere una nuova password.
@@ -16,7 +16,7 @@
 
 \subsubsection{UCS 10.9.2 - Visualizzazione messaggio di errore in caso di password troppo debole}%fish level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore owner
+\item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore non è registrato e ha inserito una password poco sicura.
 \item \textbf{Postcondizione:} La password inserita dall'amministratore risulta essere poco sicura per il sistema, pertanto riceve un messaggio di errore che gli intima di sceglierne una più sicura.
@@ -24,7 +24,7 @@
 
 \subsubsection{UCS 10.9.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse}%fish level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore owner
+\item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore non è registrato e ha inserito una password diversa dalla conferma password.
 \item \textbf{Postcondizione:} L'amministratore riceve un messaggio di errore che gli intima di reinserire password e conferma password.
@@ -32,13 +32,13 @@
 
 \subsubsection{UCS 10.9.4 - Visualizzazione messaggio di errore in caso di e-mail non registrata nel sistema}%fish level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore owner
+\item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore ha inserito una password per l'eliminazione di un'amministratore [UCS 9.2.1] che non è registrata presso il sistema.
 \item \textbf{Postcondizione:} Viene visualizzato un messaggio di errore esplicativo che suggerisce all'amministratore di rivedere la correttezza della password inserita.
 \end{itemize}
 
-\subsubsection{UCS 9.4.1 - Annullamento modifiche ai parametri dell'organizzazione}%fish level
+\subsubsection{UCS 10.4.1 - Annullamento modifiche ai parametri dell'organizzazione}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha selezionato la funzionalità di annullamento delle modifiche ai parametri dell'organizzazione.
@@ -49,7 +49,7 @@
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 9.4.2 - Il nome dell'organizzazione inserito non rispetta i vincoli}%fish level
+\subsubsection{UCS 10.4.2 - Il nome dell'organizzazione inserito non rispetta i vincoli}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha inserito un nome per l'organizzazione che non rispetta i vincoli imposti.
@@ -60,7 +60,7 @@
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 9.4.3 - Il nome dell'organizzazione inserito è già presente nel sistema}%fish level
+\subsubsection{UCS 10.4.3 - Il nome dell'organizzazione inserito è già presente nel sistema}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha inserito un nome per l'organizzazione che è già presente nel sistema e associato ad un'altra organizzazione.
@@ -71,7 +71,7 @@
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 9.4.4 - L'immagine dell'organizzazione scelta non rispetta i vincoli imposti}%fish level
+\subsubsection{UCS 10.4.4 - L'immagine dell'organizzazione scelta non rispetta i vincoli imposti}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha ha selezionato un'icona per l'organizzazione che non rispetta i vincoli imposti.
@@ -82,7 +82,7 @@
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 9.4.5 - La descrizione dell'organizzazione inserita non rispetta i vincoli}%fish level
+\subsubsection{UCS 10.4.5 - La descrizione dell'organizzazione inserita non rispetta i vincoli}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha inserito una descrizione dell'organizzazione che non rispetta i vincoli imposti.
@@ -93,7 +93,7 @@
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 9.4.6 - L'indirizzo inserito non rispetta i vincoli imposti}%fish level
+\subsubsection{UCS 10.4.6 - L'indirizzo inserito non rispetta i vincoli imposti}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha inserito un indirizzo per l'organizzazione che non rispetta i vincoli imposti.
@@ -104,7 +104,7 @@
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 9.5.1 - L'area selezionata non rispetta i vincoli imposti per il perimetro\ap{G}}%fish level
+\subsubsection{UCS 10.5.1 - L'area selezionata non rispetta i vincoli imposti per il perimetro\ap{G}}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha selezionato un'area di tracciamento per il perimetro che non rispetta i vincoli imposti.
@@ -115,7 +115,7 @@
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 9.5.2 - L'area selezionata fuoriesce dall'area che definisce il perimetro\ap{G}}%fish level
+\subsubsection{UCS 10.5.2 - L'area selezionata fuoriesce dall'area che definisce il perimetro\ap{G}}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha selezionato un'area di tracciamento per un luogo\ap{G} che fuoriesce dall'area di tracciamento del perimetro\ap{G}.
@@ -126,7 +126,7 @@
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 9.5.3 - Annullamento della selezione dell'area geografica per il tracciamento}%fish level
+\subsubsection{UCS 10.5.3 - Annullamento della selezione dell'area geografica per il tracciamento}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore si trova nella funzionalità per la selezione dell'area geografica.
@@ -138,7 +138,7 @@
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 9.8.1 - Errore del server durante la generazione della tabella}
+\subsubsection{UCS 10.6.1 - Errore del server durante la generazione della tabella}
 \begin{itemize}
     \item \textbf{Attori primari:} Amministratore autenticato
     \item \textbf{Precondizione:} L'amministratore ha lanciato il comando di generazione di una tabella riguardante la sua organizzazione.

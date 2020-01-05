@@ -2,7 +2,7 @@
 
 \begin{figure}[h]
   \centering
-    \includegraphics[scale=0.8]{sezioni/UseCase/Immagini/PanoramicaUCA1.png}
+    \includegraphics[scale=0.7]{sezioni/UseCase/Immagini/PanoramicaUCA1.png}
   \caption{Panoramica UCA 1}
 \end{figure}
 
@@ -10,7 +10,7 @@
 
 \begin{figure}[h]
   \centering
-    \includegraphics[scale=0.8]{sezioni/UseCase/Immagini/UCA1.png}
+    \includegraphics[scale=0.7]{sezioni/UseCase/Immagini/UCA1.png}
   \caption{UCA 1 - Accesso all'applicazione}
 \end{figure}
 
@@ -27,7 +27,7 @@
 \begin{figure}[h]
 
   \centering
-    \includegraphics[scale=0.4]{sezioni/UseCase/Immagini/UCA1.1.png}
+    \includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA1.1.png}
   \caption{UCA 1.1 - Autenticazione con credenziali Stalker}
 \end{figure}
 
@@ -96,6 +96,12 @@
         \item Inserimento password [UCA 1.2.2];
         \item Inserimento conferma password [UCA 1.2.3].
     \end{enumerate}
+\item \textbf{Inclusioni:}
+	\begin{itemize}
+		\item UCA 1.2.1 - Inserimento indirizzo e-mail;
+		\item UCA 1.2.2 - Inserimento password;
+		\item UCA 1.2.3 - Inserimento conferma password. 
+	\end{itemize}
 \item \textbf{Estensioni:}
 	\begin{itemize}
 		\item UCA 7.1.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione;
@@ -105,7 +111,7 @@
 %\item \textbf{Inclusioni:}
 \end{itemize}
 
-\subsubsection{UC 1.2.1 - Inserimento indirizzo e-mail}%fish level
+\subsubsection{UCA 1.2.1 - Inserimento indirizzo e-mail}%fish level
 
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato
@@ -149,37 +155,30 @@
 \item \textbf{Postcondizione:} L'utente ha fatto richiesta per avviare la procedura di password dimenticata.
 \end{itemize}
 
-\subsubsection{UCS 1.3.1 - Inserimento e-mail}
+\subsubsection{UCA 1.3.1 - Inserimento e-mail}
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato\ap{G}
 \item \textbf{Precondizione:} L'utente non è autenticato\ap{G}. %è nella schermata di password dimenticata
 \item \textbf{Postcondizione:} L'utente ha inserito l'e-mail.
 \end{itemize}
 
-\subsubsection{UCS 1.3.2 - E-mail cambio password}
+\subsubsection{UCA 1.3.2 - E-mail cambio password}
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato\ap{G}
 \item \textbf{Precondizione:} L'utente non è autenticato\ap{G}.
 \item \textbf{Postcondizione:} L'utente riceve l'email per il cambio password, ne consegue la necessità di reimpostare la password [UCS 1.3.3 e UCS 1.3.4].
 \end{itemize}
 
-\subsubsection{UCS 1.3.3 - Nuova password}
+\subsubsection{UCA 1.3.3 - Nuova password}
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato\ap{G}
 \item \textbf{Precondizione:}  L'utente non è autenticato\ap{G}.
 \item \textbf{Postcondizione:} L'utente inserisce la nuova password.
 \end{itemize}
 
-\subsubsection{UCS 1.3.4 - Conferma nuova password}
+\subsubsection{UCA 1.3.4 - Conferma nuova password}
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato\ap{G}
 \item \textbf{Precondizione:} L'utente non è autenticato\ap{G}.
 \item \textbf{Postcondizione:} L'utente reinserisce la nuova password per confermarla.
-\end{itemize}
-
-\subsubsection{UCS 1.3.5 - Conferma cambio password}%fish level
-\begin{itemize}
-\item \textbf{Attori primari:} Utente non autenticato\ap{G}
-\item \textbf{Precondizione:} L'utente non è autenticato\ap{G}.
-\item \textbf{Postcondizione:} L'utente ha selezionato la funzionalità di conferma per il cambio password.
 \end{itemize}
