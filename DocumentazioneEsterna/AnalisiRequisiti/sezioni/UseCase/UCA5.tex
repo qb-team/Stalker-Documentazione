@@ -1,16 +1,14 @@
-\newpage
-
 \subsubsection{UCA 5 - Monitoraggio dello storico degli accessi dell'utente}
 \begin{figure}[h]
 	\centering	
-	%\includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA5.png}
+	\includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA5.png}
 	\caption{UCA 5 - Monitoraggio dello storico degli accessi dell'utente}
 \end{figure}
 
 \begin{itemize}
     \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
     \item \textbf{Precondizione:} L'utente ha precedentemente scaricato la lista delle organizzazioni.
-    \item \textbf{Postcondizione:} L'ha visualizzato lo storico degli accessi relativo all'organizzazione desiderata oppure al luogo desiderato dell'organizzazione scelta.
+    \item \textbf{Postcondizione:} L'utente ha visualizzato lo storico degli accessi relativo all'organizzazione desiderata oppure al luogo desiderato dell'organizzazione scelta.
     \item \textbf{Scenario principale:} L'utente selezionerà l'organizzazione desiderata dalla lista delle organizzazioni e quindi la funzionalità per mostrare lo storico degli accessi oppure un luogo specifico per analizzarne il relativo storico degli accessi.
 \end{itemize}
 
@@ -29,8 +27,9 @@
     \end{enumerate}
     \item \textbf{Inclusioni:}
     \begin{itemize}
-        \item UCA 5 - Selezione di un'organizzazione;
+        \item UCA 5.3 - Selezione di un'organizzazione;
     \end{itemize}
+    \item \textbf{Estensioni:}
     \begin{itemize}
         \item UCA 7.5.1 - Avviso della mancanza di accessi effettuati presso l'organizzazione selezionata.
     \end{itemize}
@@ -45,11 +44,15 @@
     \item \textbf{Scenario alternativo:} L'utente non è mai entrato nel luogo selezionato, pertanto verrà mostrato un avviso informativo [UCA 7.5.2].
     \item \textbf{Flusso di eventi:}
     \begin{enumerate}
-        \item L'utente seleziona l'organizzazione interessata [UCA 5];
+        \item L'utente seleziona l'organizzazione interessata [UCA 5.3];
         \item L'utente seleziona un luogo tra quelli offerti dall'organizzazione selezioanta;
         \item L'utente seleziona la funzionalità per mostrare gli accessi effettuati presso il luogo selezionato;
         \item L'utente ha la possibilità di ordinare gli accessi al luogo [UCA 5.2.1] [UCA 5.2.2] oppure di effettuare una ricerca tra di essi per gli accessi di uno specifico giorno [UCA 5.2.3].
     \end{enumerate}
+    \item \textbf{Inclusioni:}
+    \begin{itemize}
+        \item UCA 5.3 - Selezione di un'organizzazione;
+    \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item UCA 7.5.2 - Avviso della mancanza di accessi effettuati presso il luogo selezionato.
@@ -125,12 +128,6 @@
 \end{itemize}
 
 \subsubsection{UCA 5.3 - Selezione di un'organizzazione}
-\begin{figure}[h]
-	\centering	
-	\includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA5.3.png}
-	\caption{UCA 5.3 - Selezione di un'organizzazione}
-\end{figure}
-
 \begin{itemize}
     \item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
     \item \textbf{Precondizione:} L'utente ha precedentemente scaricato la lista delle organizzazioni.
