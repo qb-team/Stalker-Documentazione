@@ -15,7 +15,11 @@ Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software
         \item \textbf{Processo di riferimento:} Sviluppo
         \item \textbf{Sigla:} PRS
         \item \textbf{Formula:} \begin{math}{PRS = {requisiti \; soddisfatti \over requisiti \; totali}\; \cdot \; 100}\end{math}
-        \item \textbf{Range di valori che può assumere:} accettabile = 100\%, ottimale = 100\% 
+        \item \textbf{Range di valori che può assumere:}
+        \begin{itemize}
+            \item \textbf{Accettabile:} 100\%
+            \item \textbf{Ottimale:} 100\%
+        \end{itemize}
     \end{itemize}
 
 \subsubsection{Progettazione di dettaglio}
@@ -25,17 +29,25 @@ Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software
         \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una classe al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling e più il sistema è difficile da mantenere.
         \item \textbf{Processo di riferimento:} Sviluppo
         \item \textbf{Sigla:} CBO
-        \item \textbf{Formula:} \begin{math}{CBO = {\sum_{i=1}^{N} \cdot \; Ci}}\end{math} \\ N = numero classi non appartenenti alla gerarchia di ereditarietà \\ C = classe correlata
-        \item \textbf{Range di valori che può assumere:} accettabile = 0$\leq$CBO$\leq$4, ottimale = 0$\leq$CBO$\leq$2
+        \item \textbf{Formula:} \begin{math}{CBO = {\sum_{i=1}^{N} \cdot \; C_i}}\end{math} \\ N = numero classi non appartenenti alla gerarchia di ereditarietà \\ C_i = classe correlata
+        \item \textbf{Range di valori che può assumere:}
+        \begin{itemize}
+            \item \textbf{Accettabile:} 0$\leq$CBO$\leq$4
+            \item \textbf{Ottimale:} 0$\leq$CBO$\leq$2
+        \end{itemize}
     \end{itemize}
 
     \paragraph{Metrica - Livello profondità gerarchia}
     \begin{itemize}
         \item \textbf{Codice:} MPC-03
-        \item \textbf{Descrizione:} È il valore intero che indica la profondità della gerarchia formata tra classi.
+        \item \textbf{Descrizione:} È il valore intero che indica la profondità della gerarchia formata tra classi. Se una gerarchia è formata da una classe allora il valore è uguale a 1.
         \item \textbf{Processo di riferimento:} Sviluppo
         \item \textbf{Sigla:} LPG
-        \item \textbf{Range di valori che può assumere:} accettabile $\leq$ 3, ottimale $\leq$ 2
+        \item \textbf{Range di valori che può assumere:}
+        \begin{itemize}
+            \item \textbf{Accettabile:} 1$\leq$LPG$\leq$3
+            \item \textbf{Ottimale:} 1$\leq$LPG$\leq$2
+        \end{itemize}
     \end{itemize}
 
 \subsubsection{Codifica}  
@@ -45,17 +57,25 @@ Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software
         \item \textbf{Descrizione:} Un numero elevato di parametri per metodo può indicare il bisogno di ridurre funzionalità associate a tale metodo. Più è grande questo valore e più la possibilità aumenta nel commettere errori progettuali.
         \item \textbf{Processo di riferimento:} Sviluppo
         \item \textbf{Sigla:} NPM
-        \item \textbf{Range di valori che può assumere:} accettabile = 0$<$NPM$<$8, ottimale = 0$<$NPM$<$4
+        \item \textbf{Range di valori che può assumere:}
+        \begin{itemize}
+            \item \textbf{Accettabile:} 0$<$NPM$<$8
+            \item \textbf{Ottimale:} 0$<$NPM$<$4
+        \end{itemize}
     \end{itemize}
 
-    \paragraph{Metrica - Linee di codice per linee di commento}
+    \paragraph{Metrica - Linee di commento per linee di codice}
     \begin{itemize}
         \item \textbf{Codice:} MPC-05
-        \item \textbf{Descrizione:} È il rapporto tra linee di codice e linee di commento.
+        \item \textbf{Descrizione:} È il rapporto tra linee di commento e linee di codice. Per le linee di codice si intende Logical SLOC il numero di linee di codice effettive che corrispondono al numero di statement.
         \item \textbf{Processo di riferimento:} Sviluppo
         \item \textbf{Sigla:} LCLC
-        \item \textbf{Formula:} \begin{math}{LCLC = {linee \; di \; codice \over linee \; di \; commento}}\end{math}
-        \item \textbf{Range di valori che può assumere:} accettabile $\geq$ 0.25, ottimale $\geq$ 0.30
+        \item \textbf{Formula:} \begin{math}{LCLC = {linee \; di \; commento\over linee \; di \; codice}}\end{math}
+        \item \textbf{Range di valori che può assumere:}
+        \begin{itemize}
+            \item \textbf{Accettabile:} LCLC$\geq$0.25
+            \item \textbf{Ottimale:} LCLC$\geq$0.30
+        \end{itemize}
     \end{itemize}
 
 \subsection{Processi supporto}
@@ -126,7 +146,7 @@ Sono i processi\ap{G} e le attività che coprono gli aspetti organizzativi e di 
     \textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Valore Accettabile}} & \textcolor{white}{\textbf{Valore Ottimale}}\\
     MPC-01 & Percentuale Requisiti Soddisfatti & PRS & PRS=100\% & PRS=100\% \\
     MPC-02 & Coupling Between Objects & CBO & 0$\leq$CBO$\leq$4 & 0$\leq$CBO$\leq$2 \\
-    MPC-03 & Livello Profondità Gerarchia & LPG & LPG$\leq$3 & LPG$\leq$2\\
+    MPC-03 & Livello Profondità Gerarchia & LPG &  1$\leq$ LPG $\leq$ 3 &  1$\leq$ LPG $\leq$ 2\\
     MPC-04 & Numero di Parametri per Metodo & NPM & 0$<$NPM$<$8 & 0$<$NPM$<$4 \\
     MPC-05 & Linee di Codice per Linee di Commento & LCLC & LCLC$\geq$0.25 & LCLC$\geq$0.30 \\
     MPC-06 & Indice di Gulpease & IG & 40$<$IG$<$100 & 80$<$IG$<$100 \\
