@@ -1,0 +1,125 @@
+\section{Informazioni Generali}
+\begin{itemize}
+\item \textbf{Luogo:} Aula 1A150 presso Torre Archimede;
+\item \textbf{Data:} \Data;
+\item \textbf{Ora:} 14:30 - 16:30;
+\item \textbf{Partecipanti del gruppo:}
+	\begin{itemize}
+	\item Azzalin Tommaso; 
+	\item Cisotto Emanuele; 
+	\item Drago Francesco;
+	\item Lazzaro Davide;
+	\item Perin Federico;
+	\item Salmaso Enrico;
+	\item Baratin Riccardo;
+	\item Mattei Christian.
+	\end{itemize} 
+\item \textbf{Segretario:} \Redattori.
+\end{itemize}
+
+\clearpage
+
+\section{Ordine del Giorno}
+\begin{itemize}
+	\item Presentazione dei membri del gruppo al proponente;
+	\item Discussione con il proponente di idee sul progetto e richiesta di spiegazioni a punti non chiari de parte dei membri del gruppo.
+\end{itemize}
+
+~\\
+
+\section{Resoconto}
+\subsection{Presentazione dei membri del gruppo al proponente}
+Il gruppo si è presentato al proponente, l'azienda Imola Informatica, e ha esposto la propria volontà di portare avanti il progetto \NomeProgetto.
+
+\subsection{Discussione con il proponente di idee sul progetto \NomeProgetto{} e richiesta di spiegazioni su punti non chiari da parte dei membri del gruppo}
+Il gruppo ha preparato per l'incontro le seguenti domande (precedentemente comunicate per e-mail al proponente):
+\begin{itemize}
+	\item Quali sono i riferimento normativi sulla privacy da tenere in considerazione?
+	\item Quali sono le differenze fra tracciamento anonimo e autenticato? Perché un'organizzazione che richiede il tracciamento autenticato dovrebbe aver bisogno di un pulsante per abilitare il tracciamento anonimo?
+	\item Qual è la licenza più opportuna per lo sviluppo del progetto software?
+	\item Spiegazione più dettagliata delle tecniche per il tracciamento della posizione degli utenti, utilizzando le varie tecnologie indicate nella presentazione del capitolato.
+	\item Spiegazione di alcune tecniche relative alla scalabilità del server, all'autenticazione degli utenti nell'app e nel server e al protocollo LDAP.
+\end{itemize}
+Inoltre, essendo l'incontro stato fatto assieme agli altri gruppi interessati al capitolato, sono stati discussi altri punti. Essendo di interesse anche per il gruppo \Gruppo{}, vengono qui indicati:
+\begin{itemize}
+	\item Precisione richiesta per l'area che definisce un luogo di un'organizzazione.
+	\item Possibile soluzione a falle di sicurezza che potrebbero presentarsi durante il tracciamento anonimo.
+	\item Gerarchia degli amministratori e quali sono i loro permessi.
+	\item Aggiornamento della lista delle organizzazioni.
+\end{itemize}
+Seguono le risposte alle domande del gruppo e a quelle poste dagli altri gruppi.
+
+\subsubsection*{Riferimenti normativi sulla privacy da tenere in considerazione}
+È certamente da tenere in considerazione la recente normativa a livello europeo in materia di privacy, il GDPR. \\
+Il GDPR presta molta attenzione al trattamento dei dati personali e richiede ad esempio che, se una base di dati aziendale è affidata a terzi, questa non risulti accessibile se non dal suo proprietario.
+Inoltre, tutte le informazioni sulle attività di un utente e i suoi dati personali devono essere strettamente separati e non accessibili assieme. Il proponente ha fatto un semplice esempio: se viene usato un database
+NoSQL (in cui tipicamente i dati sono salvati in file di testo in un formato come JSON), non deve essere possibile trovare assieme i dati personali di un utente e le attività da lui svolte. Nel caso di questo progetto, le attività sarebbero gli accessi ai luoghi delle organizzazioni.
+Il proponente ha consigliato di fare prima uno studio sugli attori e sulle informazioni necessarie alla loro definizione e, una volta che è chiaro cosa bisogna memorizzare per identificare tutti questi, di pensare al tipo di database.
+Successivamente ha consigliato, una volta aver definito i casi d'uso, di verificare che essi rispettino il GDPR. Questo è possibile farlo seguendo l'elenco presente nel seguente \href{https://gdpr.eu/checklist/}{sito}.
+
+\subsubsection*{Differenze fra tracciamento anonimo e autenticato e motivazione della necessità di avere un pulsante per attivare il tracciamento anonimo in organizzazioni con tracciamento autenticato}
+La differenza fra le due modalità di tracciamento è stata confermata essere quella indicata nel documento di presentazione del capitolato.\\
+La motivazione per il pulsante di cui sopra è stata illustrata con due esempi:
+\begin{itemize}
+	\item un dipendente di un'azienda che ha le chiavi della sede, può entrare quando vuole per svolgere delle attività, ma non vuole essere visto come disponibile per essere contattato;
+	\item un dipendente di una struttura fieristica che si trova a un evento presso il suo stesso luogo di lavoro come visitatore e non come lavoratore, non vuole essere visto come disponibile (per lo stesso motivo del precedente).
+\end{itemize}
+Quando un utente passa nella modalità di tracciamento anonimo ed è ancora presso un luogo di un'organizzazione, viene terminato il suo accesso e genera un accesso con tracciamento anonimo presso lo stesso luogo.
+Il proponente richiede che in generale le scelte implementative non specificate nel capitolato vengano documentate, analizzando i pro e i contro di ognuna. Tiene anche a specificare che lo scopo del progetto non è
+tracciare gli orari dei dipendenti e che quindi non è fondamentale concentrarsi troppo sull'aspetto dell'orario negli accessi ai luoghi.
+
+\subsubsection*{Licenza per lo sviluppo del progetto}
+Il proponente consiglia di guardare fra le seguenti licenze:
+\begin{itemize}
+	\item GNU GPL;
+	\item LGPL;
+	\item MIT.
+\end{itemize}
+L'importante è, dice, che sia una licenza open source. Consiglia di visitare il seguente \href{https://opensource.org/licenses}{link}.
+
+\subsubsection*{Tecniche di tracciamento degli utenti}
+Il dipendente dell'azienda proponente presente afferma di non essere la persona più adatta per rispondere a questa domanda e di chiedere al suo collega (di cui ci fornisce l'indirizzo mail) maggiori informazioni a riguardo.
+
+\subsubsection*{Tecniche relative alla scalabilità del server, all'autenticazione degli utenti nell'app e nel server e al protocollo LDAP}
+Riguardo all'autenticazione degli utenti nell'applicazione, il proponente afferma che la sua idea è che quando un utente accede per la prima volta all'applicazione, si debba autenticare con delle credenziali per la piattaforma.
+Le credenziali di questa utenza dovrebbe essere cosa diversa dalle credenziali di un'organizzazione: lo scopo di queste è poterle riutilizzare per accedere all'applicazione da un dispositivo diverso e avere già
+memorizzate tutte le informazioni precedentemente memorizzate.\\
+Riguardo al protocollo LDAP da utilizzare per autenticare gli utenti a cui viene richiesto il tracciamento autenticato, il proponente non vuole che sia parte integrante del sistema.
+In altre parole, non è compito del sistema autenticare gli utenti mediante LDAP: esso si deve limitare a fornire l'indirizzo del server a cui effettuare l'autenticazione e richiedere il risultato del processo.
+Quindi è compito dell'amministratore di un'organizzazione inserire le informazioni sul proprio server LDAP (per esempio quello aziendale) all'interno del sistema.
+Per testare il funzionamento di un server LDAP, il proponente consiglia il software \href{https://www.openldap.org/}{OpenLDAP}.\\
+Riguardo alla scalabilità del server, non si è riusciti ad ottenere una risposta per mancanza di tempo. In caso di problemi su questo tema, verrà nuovamente contattato il proponente.
+
+\subsubsection*{Precisione richiesta per l'area che definisce un luogo di un'organizzazione}
+Il proponente a riguardo dice che è sufficiente approssimarla ad una figura geometrica (per esempio un quadrilatero), che per la maggior parte dei casi dovrebbe risultare più che sufficiente.
+L'importante è avere una precisione accettabile per il conteggio degli accessi, tenendo conto delle limitazioni delle tecnologie per il tracciamento (come il GPS, che è attorno ai 5 m).
+Un componente di un gruppo fa sapere che sono disponibili in rete alcune API (citando \href{https://www.openstreetmap.org/}{OpenStreetMap]}) che permettono di sapere se un punto appartiene o meno ad un contorno delimitato da una poli-linea.
+
+\subsubsection*{Possibile soluzione a falle di sicurezza che potrebbero presentarsi durante il tracciamento anonimo}
+Il problema si può presentare perché durante il tracciamento anonimo non viene richiesta l'autenticazione dell'utente.
+Il proponente consiglia di autenticare gli utenti mediante la generazione di un codice univoco che permetta di certificare la veridicità di un ingresso o un'uscita da un luogo, senza però permettere di conoscere chi lo ha generato.
+
+\subsubsection*{Gerarchia degli amministratori e quali sono i loro permessi}
+Il proponente, dopo aver ascoltato come i gruppi intendono sviluppare le gerarchie di amministratori e i loro relativi permessi, ha voluto proporre la sua visione sul tema.
+Consiglia che il sistema da sviluppare per il progetto consideri la presenza di amministratori il cui compito sia creare ulteriori profili amministratori da utilizzare
+dai clienti del sistema stesso. Questi amministratori, definiti nel testo del capitolato come ``Amministratori owner", sono responsabili di un'organizzazione, anch'essa assegnata dagli amministratori del sistema.
+A meno che non vengano assegnati altri compiti agli amministratori del sistema, essi hanno solo questo compito (oltre a quello di monitorare il corretto funzionamento del sistema), dovuto al fatto che non devono poter accedere ai dati delle organizzazioni (vederne accessi, autenticazioni e altri dati).
+Questo fa sì che gli amministratori owner siano responsabili della loro sola organizzazione, di nessun'altra, e che ottengano i permessi per espletare le loro funzioni dagli amministratori del sistema.\\
+Per definire una gerarchia di amministrazione aziendale (o comunque relativa all'organizzazione di proprietà dell'amministratore owner), l'amministratore owner può generare altri amministratori con permessi inferiori, che lo aiutano nello svolgere la sua mansione.\\
+Tornando nel tema delle responsabilità della gestione dell'organizzazione e dei luoghi ad essa annessi, è necessario notare che gli amministratori del sistema non hanno accesso ai dati sui luoghi delle organizzazioni.
+Questo significa che, in linea teorica, possono essere monitorati accessi a zone pubbliche senza che l'utente utilizzatore dell'app non lo sappia.
+Per fronteggiare questo problema, sono state proposte le seguenti idee:
+\begin{itemize}
+	\item assegnare un numero massimo di luoghi per un'organizzazione, che può aumentare pagando un sovrapprezzo;
+	\item assegnare un'estensione massima all'area delle zone coperte da tracciamento;
+	\item specificare un tetto massimo per gli utenti tracciabili in un luogo;
+	\item verificare che il luogo tracciato sia conforme alle richieste dell'azienda (per esempio, un'azienda in zona industriale difficilmente ha necessità di tracciare gli ingressi in una piazza).
+\end{itemize}
+Queste sono solo proposte, che vanno documentate se scelte, specificandone le ragioni. In ogni caso, la responsabilità per gli abusi, deve ricadere sulle organizzazioni e non sugli amministratori del sistema.
+
+\subsection*{Aggiornamento della lista delle organizzazioni}
+L'aggiornamento di un luogo dell'organizzazione permette di modificare la poli-linea all'interno della quale avviene il tracciamento degli utenti. Si vuole avvisare l'utente utilizzatore dell'app quando questo accade.
+Viene proposto di aggiornare di default l'aggiornamento temporizzato delle mappe quando si ha il dispositivo in modalità Wi-Fi, e inviare una notifica che richieda di aggiornare le mappe quando l'utente è connesso con la rete cellulare.
+La notifica viene inviata chiaramente se in background c'è un socket asincrono in ascolto di messaggi dal sistema che lo avvisano di novità sui luoghi delle organizzazioni.
+
+\clearpage
