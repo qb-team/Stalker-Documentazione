@@ -1,8 +1,8 @@
 \section{Qualità di processo}
 Per garantire la qualità del progetto si utilizza come riferimento lo standard ISO/IEC 12207:1995. Dopo uno studio dettagliato di tale documento sono stati scelti i processi\ap{G}
-ed, in alcuni casi, anche le loro rispettive attività trattatte anch'esse come dei processi\ap{G} vista la loro importanza. Il tutto è stato semplificato ed adattato in base alle 
+ed, in alcuni casi, anche le loro rispettive attività trattate anch'esse come dei processi\ap{G} vista la loro importanza. Il tutto è stato semplificato ed adattato in base alle 
 esigenze del progetto. Come è previsto nello standard tutti i processi\ap{G} scelti sono ordinati nei macro processi\ap{G}: primari, di supporto ed organizzativi. Ognuno di essi fa parte 
-di un processo\ap{G} intermedio e proprio per questo motivo è possibile vedere la sua appartenzenza nella sezione: Processo\ap{G} di riferimento.
+di un processo\ap{G} intermedio e proprio per questo motivo è possibile vedere la sua appartenenza nella sezione: Processo\ap{G} di riferimento.
 
 \subsection{Processi primari}
 Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software e hanno lo scopo di soddisfare tutti i requisiti concordati con il cliente.
@@ -25,7 +25,7 @@ Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software
         \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una classe al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling e più il sistema è difficile da mantenere.
         \item \textbf{Processo di riferimento:} Sviluppo
         \item \textbf{Sigla:} CBO
-        \item \textbf{Formula:} \begin{math}{CBO = {\sum_{i=1}^{N} \cdot \; Ci}}\end{math} \\ N = numero classi non apparteneti alla gerarchia di ereditarietà \\ C = classe correlata
+        \item \textbf{Formula:} \begin{math}{CBO = {\sum_{i=1}^{N} \cdot \; Ci}}\end{math} \\ N = numero classi non appartenenti alla gerarchia di ereditarietà \\ C = classe correlata
         \item \textbf{Range di valori che può assumere:} accettabile = 0$\leq$CBO$\leq$4, ottimale = 0$\leq$CBO$\leq$2
     \end{itemize}
 
@@ -103,7 +103,7 @@ Sono i processi\ap{G} e le attività che coprono gli aspetti organizzativi e di 
         \item \textbf{Descrizione:} È il valore che indica se si è in linea (=0), in anticipo($>$0) oppure in ritardo($<$0) rispetto alla schedulazione delle attività di progetto pianificate nella baseline\ap{G}.
         \item \textbf{Processo di riferimento:} Gestione
         \item \textbf{Sigla:} SV
-        \item \textbf{Formula:} \begin{math}{SV = {BCWP \; - \; BCWS}}\end{math} \\BCWP = budgeted cost of work performed (valore delle attività eseguite nella data corrente) \\BCWS = budgeted cost of work scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente)
+        \item \textbf{Formula:} \begin{math}{SV = {BCWP \; - \; BCWS}}\end{math} \\BCWP = Budgeted Cost of Work Performed (valore delle attività eseguite nella data corrente) \\BCWS = Budgeted Cost of Work Scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente)
         \item \textbf{Range di valori che può assumere:} accettabile = 0, ottimale $>$ 0
     \end{itemize}
 
@@ -113,8 +113,8 @@ Sono i processi\ap{G} e le attività che coprono gli aspetti organizzativi e di 
             \item \textbf{Descrizione:} È il valore che indica se la data corrente si è speso di più ($>$0) o di meno($<$0) rispetto a quanto pianificato dal budget totale.
             \item \textbf{Processo di riferimento:} Gestione
             \item \textbf{Sigla:} BV
-            \item \textbf{Formula:} \begin{math}{BV = {BCWS \; - \; ACWP}}\end{math} \\BCWS = budgeted cost of work scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente) \\ACWP = actual cost of work performed (costo effettivamente sostenuto alla data corrente) \\Btot = Budget totale
-            \item \textbf{Range di valori che può assumere:} accettabile = 0$\leq$BV$<$ACWP, ottimale = 0$\leq$BV$\leq$Btot
+            \item \textbf{Formula:} \begin{math}{BV = {BCWS \; - \; ACWP}}\end{math} \\BCWS = Budgeted Cost of Work Scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente) \\ACWP = Actual Cost of Work Performed (costo effettivamente sostenuto alla data corrente) \\B_tot = Budget totale
+            \item \textbf{Range di valori che può assumere:} accettabile = 0$\leq$BV$<$ACWP, ottimale = 0$\leq$BV$\leq$B_tot
         \end{itemize}
 
 \newpage
@@ -133,7 +133,7 @@ Sono i processi\ap{G} e le attività che coprono gli aspetti organizzativi e di 
     MPC-07 & Efficacia del Processo\ap{G} & EP & EP=100\% & EP=100\%  \\
     MPC-08 & Code Coverage & CC & CC=80\% & CC=100\%  \\
     MPC-09 & Schedule Variance & SV & SV=0 & SV$>$0  \\	
-    MPC-10 & Budget Variance & BV & 0$\leq$BV$<$ACWP  & 0$\leq$BV$\leq$Btot  \\	
+    MPC-10 & Budget Variance & BV & 0$\leq$BV$<$ACWP  & 0$\leq$BV$\leq$B_tot  \\	
 
     \end{longtable}
 
@@ -149,6 +149,6 @@ Sono i processi\ap{G} e le attività che coprono gli aspetti organizzativi e di 
     \begin{itemize}
         \item \textbf{Plan}: definisce attività e scadenze necessarie al raggiungimento dei specifici obiettivi di miglioramento;
         \item \textbf{Do}: esegue le attività di "Plan";
-        \item \textbf{Check}: verifica l'esito delle azioni di miglioramento rispetto alle attese. Si analizzano i risultati del "Do" e li si conforontano con gli obiettivi individuati nel "Plan";
+        \item \textbf{Check}: verifica l'esito delle azioni di miglioramento rispetto alle attese. Si analizzano i risultati del "Do" e li si confrontano con gli obiettivi individuati nel "Plan";
         \item \textbf{Act}: consolida il tutto e cerca dei metodi per il prossimo miglioramento. Se il "Check" ha dimostrato che il "Plan" implementato dal "Do" è migliore rispetto ai precedenti processi\ap{G} standard, allora questo piano diventa il nuovo processo\ap{G} standard. Altrimenti il vecchio standard in uso rimarrà la baseline\ap{G}.
     \end{itemize}
