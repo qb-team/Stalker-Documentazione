@@ -15,12 +15,12 @@
 \item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema.
-\item \textbf{Postcondizione:} L'amministratore ha eseguito l'azione desiderata tra: creazione di un amministratore [UCS 9.1], eliminazione di un amministratore [UCS 9.2] e modifica dei privilegi di un amministratore [UCS 9.3].
+\item \textbf{Postcondizione:} L'amministratore ha eseguito l'azione desiderata tra: nomina di un amministratore [UCS 9.1], eliminazione di un amministratore [UCS 9.2] e modifica dei privilegi di un amministratore [UCS 9.3].
 \item \textbf{Scenario alternativo:} L'amministratore seleziona la funzionalità per annullare le modifiche agli amministratori [UCS 9.4].
 \item \textbf{Flusso di eventi:} %elenco puntato
   \begin{enumerate}
         \item L'amministratore seleziona la funzionalità per la gestione degli amministratori;
-        \item L'amministratore seleziona una funzionalità tra: creazione di un amministratore [UCS 9.1], eliminazione di un amministratore [UCS 9.2] e modifica dei privilegi di un amministratore [UCS 9.3].
+        \item L'amministratore seleziona una funzionalità tra: nomina di un amministratore [UCS 9.1], eliminazione di un amministratore [UCS 9.2] e modifica dei privilegi di un amministratore [UCS 9.3].
     \end{enumerate}
 \item \textbf{Estensioni:}
 	\begin{itemize}
@@ -30,11 +30,11 @@
 
 
 
-\subsubsection{UCS 9.1 - Creazione di un nuovo amministratore}%sea level
+\subsubsection{UCS 9.1 - Nomina di un nuovo amministratore}%sea level
 \begin{figure}[h]
   \centering
     \includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCS9.1.png}
-  \caption{UCS 9.1 - Creazione di un nuovo amministratore}
+  \caption{UCS 9.1 - Nomina di un nuovo amministratore}
 \end{figure}
 
 \begin{itemize}
@@ -42,20 +42,56 @@
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
 \item \textbf{Postcondizione:} L'amministratore ha creato un account per il nuovo amministratore, il quale è stato registrato presso il sistema.
-\item \textbf{Scenario principale:} L'amministratore compila il modulo per la creazione del nuovo amministratore.
+\item \textbf{Scenario principale:} L'amministratore compila il modulo per la nomina del nuovo amministratore.
 \item \textbf{Flusso di eventi:} %elenco puntato
   \begin{enumerate}
         \item Inserimento indirizzo e-mail [UCS 9.1.1];
         \item Inserimento password [UCS 9.1.2];
         \item Inserimento conferma password [UCS 9.1.3];
-        \item Selezione dei privilegi del nuovo amministratore [UCS 9.1.4]. Si drovrà scegliere tra "Visualizzatore" e "Gestore".
+        \item Selezione dei privilegi del nuovo amministratore [UCS 9.1.4]. Si dovrà scegliere tra "Visualizzatore" e "Gestore".
     \end{enumerate}
+    \item \textbf{Inclusioni:}
+	\begin{itemize}
+		\item UCS 9.1.1 - Inserimento e-mail del nuovo amministratore;
+		\item UCS 9.1.2 - Nuova password del nuovo amministratore;
+		\item UCS 9.1.3 - Conferma nuova password del nuovo amministratore;
+		\item UCS 9.1.4 - Selezione dei privilegi del nuovo amministratore.
+		\item 
+	\end{itemize}
 \item \textbf{Estensioni:}
 	\begin{itemize}
 		\item UCS 10.9.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione;
 		\item UCS 10.9.2 - Visualizzazione messaggio di errore in caso di password troppo debole;
 		\item UCS 10.9.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse.
 	\end{itemize}
+\end{itemize}
+
+\subsubsection{UCS 9.1.1 - Inserimento e-mail}
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore proprietario
+\item \textbf{Precondizione:} L'amministratore si trova nella funzionalità per la nomina di un nuovo amministratore.
+\item \textbf{Postcondizione:} L'utente ha inserito l'e-mail per l'account del nuovo amministratore.
+\end{itemize}
+
+\subsubsection{UCS 9.1.2 - Nuova password}
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore proprietario
+\item \textbf{Precondizione:}  L'amministratore si trova nella funzionalità per la nomina di un nuovo amministratore.
+\item \textbf{Postcondizione:} L'amministratore ha inserito la nuova password per il nuovo amministratore.
+\end{itemize}
+
+\subsubsection{UCS 9.1.3 - Conferma nuova password}
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore proprietario
+\item \textbf{Precondizione:} L'amministratore si trova nella funzionalità per la nomina di un nuovo amministratore.
+\item \textbf{Postcondizione:} L'amministratore ha reinserito la nuova password nel campo di conferma password.
+\end{itemize}
+
+\subsubsection{UCS 9.1.4 - Selezione dei privilegi del nuovo amministratore}
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore proprietario
+\item \textbf{Precondizione:} L'amministratore si trova nella funzionalità per la nomina di un nuovo amministratore.
+\item \textbf{Postcondizione:} L'amministratore ha selezionato tra "Visualizzatore" e "Gestore" come privilegi garantiti al nuovo amministratore da nominare.
 \end{itemize}
 
 \subsubsection{UCS 9.2 - Eliminazione di un amministratore}%sea level
@@ -103,7 +139,6 @@
         \item Inserimento e-mail del profilo dell'amministratore da rimuovere [UCS 9.2.1];
         \item L'amministratore seleziona i nuovi privilegi da assegnare all'amministratore, potrà scegliere se assegnare "Gestore" oppure "Visualizzatore".
     \end{enumerate}
-\end{enumerate}
 \item \textbf{Inclusioni:}
 \begin{itemize}
     \item UCS 9.3.1 - Inserimento e-mail dell'amministratore a cui si vuole modificare i privilegi.
@@ -128,19 +163,6 @@
 \item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
-\item \textbf{Postcondizione:} L'amministratore ha creato un account per il nuovo amministratore, il quale è stato registrato presso il sistema.
-\item \textbf{Scenario principale:} L'amministratore compila il modulo per la creazione del nuovo amministratore.
-\item \textbf{Flusso di eventi:} %elenco puntato
-  \begin{enumerate}
-        \item Inserimento indirizzo e-mail [UCS 9.1.1];
-        \item Inserimento password [UCS 9.1.2];
-        \item Inserimento conferma password [UCS 9.1.3];
-        \item Selezione dei privilegi del nuovo amministratore [UCS 9.1.4]. Si dovrà scegliere tra "Visualizzatore" e "Gestore".
-    \end{enumerate}
-\item \textbf{Estensioni:}
-	\begin{itemize}
-		\item UCS 10.9.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione;
-		\item UCS 10.9.2 - Visualizzazione messaggio di errore in caso di password troppo debole;
-		\item UCS 10.9.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse.
-	\end{itemize}
+\item \textbf{Postcondizione:} L'amministratore annullato le modifiche che stava apportando agli amministratori.
+\item \textbf{Scenario principale:} L'amministratore seleziona la funzionalità di annullamento modifiche.
 \end{itemize}
