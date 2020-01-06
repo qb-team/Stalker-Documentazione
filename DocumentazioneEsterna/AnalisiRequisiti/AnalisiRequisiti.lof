@@ -1,30 +1,30 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Gerarchia degli utenti}}{6}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Gerarchia degli amministratori}}{7}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Panoramica UCA 1}}{9}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces UCA 1 - Accesso all'applicazione}}{9}{figure.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces UCA 1.1 - Autenticazione con credenziali Stalker}}{10}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces UCA 1.2 - Registrazione di account in Stalker}}{11}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces UCA 3 - Gestione lista delle organizzazioni}}{13}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces UCA 3.2 - Gestione lista delle organizzazioni preferite}}{14}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces UCA 3.3 - Aggiornare lista organizzazione}}{16}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces UCA 3.4 - Visualizzazione lista delle organizzazioni}}{18}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces UCA 3.5 - Ricerca personalizzata delle organizzazioni}}{19}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces UCA 4 - Inserimento modalità di tracciamento}}{21}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces UCA 5 - Monitoraggio dello storico degli accessi dell'utente}}{22}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Tracciamento\bbl@it@ap {G} posizione in un luogo di un'organizzazione\bbl@it@ap {G}}}{25}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Tracciamento\bbl@it@ap {G} autenticato della posizione durante l'ingresso in un luogo di un'organizzazione\bbl@it@ap {G}}}{26}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Tracciamento\bbl@it@ap {G} autenticato della posizione durante l'uscita in un luogo da un'organizzazione\bbl@it@ap {G}}}{27}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Panoramica UCS 1}}{31}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Autenticazione\bbl@it@ap {G} al Server}}{31}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Panoramica della gestione di un'organizzazione}}{34}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Panoramica UCS 4}}{35}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces UCS 4 - Modifica dei parametri dell'organizzazione}}{35}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces UCS 4.1 - Modifica dei dati dell'organizzazione}}{36}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces UCS 5 - Modifica delle funzionalità di tracciamento dell'organizzazione}}{39}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces UCS 5.5 - Selezione dell'area geografica di tracciamento}}{41}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces UCS 7 - Monitoraggio degli accessi effettuati}}{44}{figure.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Panoramica UCS 9}}{47}{figure.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces UCS 9 - Gestione degli amministratori}}{47}{figure.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces UCS 9.1 - Creazione di un nuovo amministratore}}{48}{figure.28}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Gerarchia degli utenti}}{9}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Gerarchia degli amministratori}}{10}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Panoramica UCA 1}}{12}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces UCA 1 - Accesso all'applicazione}}{12}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces UCA 1.1 - Autenticazione con credenziali Stalker}}{13}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces UCA 1.2 - Registrazione di account in Stalker}}{14}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces UCA 3 - Gestione lista delle organizzazioni}}{16}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces UCA 3.2 - Gestione lista delle organizzazioni preferite}}{17}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces UCA 3.3 - Aggiornare lista organizzazione}}{19}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces UCA 3.4 - Visualizzazione lista delle organizzazioni}}{21}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces UCA 3.5 - Ricerca personalizzata delle organizzazioni}}{22}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces UCA 4 - Inserimento modalità di tracciamento}}{24}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces UCA 5 - Monitoraggio dello storico degli accessi dell'utente}}{25}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Tracciamento\bbl@it@ap {G} posizione in un luogo di un'organizzazione\bbl@it@ap {G}}}{28}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Tracciamento\bbl@it@ap {G} autenticato della posizione durante l'ingresso in un luogo di un'organizzazione\bbl@it@ap {G}}}{29}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Tracciamento\bbl@it@ap {G} autenticato della posizione durante l'uscita in un luogo da un'organizzazione\bbl@it@ap {G}}}{30}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Panoramica UCS 1}}{34}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Autenticazione\bbl@it@ap {G} al Server}}{34}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Panoramica della gestione di un'organizzazione}}{37}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Panoramica UCS 4}}{38}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces UCS 4 - Modifica dei parametri dell'organizzazione}}{38}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces UCS 4.1 - Modifica dei dati dell'organizzazione}}{39}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces UCS 5 - Modifica delle funzionalità di tracciamento dell'organizzazione}}{42}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces UCS 5.5 - Selezione dell'area geografica di tracciamento}}{44}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces UCS 7 - Monitoraggio degli accessi effettuati}}{47}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Panoramica UCS 9}}{50}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces UCS 9 - Gestione degli amministratori}}{50}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces UCS 9.1 - Creazione di un nuovo amministratore}}{51}{figure.28}%
