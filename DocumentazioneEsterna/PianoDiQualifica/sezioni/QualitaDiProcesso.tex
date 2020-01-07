@@ -2,7 +2,17 @@
 Per garantire la qualità dei processi\ap{G} si utilizza come riferimento lo standard ISO/IEC 12207:1995. Dopo uno studio dettagliato di tale documento sono stati scelti i processi\ap{G}
 e le attività da utilizzare. Il tutto è stato semplificato ed adattato in base alle esigenze del progetto. Come è previsto nello standard, tutti i processi\ap{G} e le attività sono raccolti 
 nei processi\ap{G}: primari, di supporto ed organizzativi. Le attività fanno parte a dei sotto processi\ap{G} rispetto a quelli appena elencati e per questo motivo la loro 
-appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
+appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.\\ \\
+\textbf{Metriche di processo:}\\
+Vengono utilizzate delle metriche che servono per monitorare lo stato dei processi scelti nello standard. Il Responsabile, grazie ai valori ricavati dalle metriche, è facilitato nel
+valutare il processo e di eseguire modifiche alla pianificazione se necessario.\\ \\
+Ogni metrica ha un codice univoco ed è strutturato in questo formato \textbf{MPC-00}:
+\begin{itemize}
+    \item \textbf{M}: metrica
+    \item \textbf{PC}: processo
+    \item \textbf{-} : trattino separatore
+    \item \textbf{00}: numero incrementale
+\end{itemize}
 
 \subsection{Processi primari}
 Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software e hanno lo scopo di soddisfare tutti i requisiti concordati con il cliente.
@@ -23,13 +33,14 @@ Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software
     \end{itemize}
 
 \subsubsection{Progettazione di dettaglio}
+\newpage %adattamento pdf
     \paragraph{Metrica - Incapsulamento CBO}
     \begin{itemize}
         \item \textbf{Codice:} MPC-02
         \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una classe al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling e più il sistema è difficile da mantenere.
         \item \textbf{Processo di riferimento:} Sviluppo
         \item \textbf{Sigla:} $CBO$
-        \item \textbf{Formula:}$$CBO = {\sum_{i=1}^{N} \cdot \; C_i}$$
+        \item \textbf{Formula:} $$CBO = {\sum_{i=1}^{N} C_i}$$
         con:
         \begin{itemize}
             \item $N$ = numero classi non appartenenti alla gerarchia di ereditarietà
@@ -173,7 +184,6 @@ Sono i processi\ap{G} e le attività che coprono gli aspetti organizzativi e di 
             \end{itemize}
         \end{itemize}
 
-\newpage
 \subsection{Tabella metriche dei processi}
     \rowcolors{2}{grigetto}{white}
     \renewcommand{\arraystretch}{1.5}
@@ -191,6 +201,8 @@ Sono i processi\ap{G} e le attività che coprono gli aspetti organizzativi e di 
     MPC-09 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\	
     MPC-10 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\
     \end{longtable}
+
+\newpage %adattamento pdf
 
 \subsection{Ciclo di Deming}
     Il ciclo di Deming è un metodo di gestione iterativo per il controllo e il miglioramento continuo dei processi (e anche dei prodotti) suddiviso in 4 fasi: Plan, Do, Check e Act. 
