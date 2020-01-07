@@ -1,0 +1,62 @@
+% scritto da Tommaso Azzalin
+\section{Strategia di testing}
+Il gruppo \Gruppo{} per assicurarsi che il prodotto da realizzare sia corretto intende effettuare un piano di testing delle componenti e del sistema software nel suo complesso.
+L'obiettivo è seguire il modello a V per correlare ogni attività di testing (parte destra della V) con la corrispondente attività della parte sinistra della V.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.85]{sezioni/Immagini/Modello_a_V.png}
+    \caption{Modello a V}
+\end{figure}
+
+\subsection{Tipologie di test}
+I test specificati dal modello a V e che devono essere realizzati dal gruppo sono:
+\begin{itemize}
+    \item \textbf{Test di unità:} verificano il corretto comportamento di una singola unità del programma. L'unità è una funzionalità atomica verificabile in modo isolato, in modo da assicurare che il risultato dei test su essa non siano influenzati dal comportamento di altre unità. 
+    \item \textbf{Test di integrazione:} verificano il corretto comportamento di più unità che devono cooperare per svolgere a pieno i loro compiti.
+    \item \textbf{Test di sistema:} verificano il comportamento dell'intero sistema. I requisiti funzionali, di vincolo, di qualità e di prestazione concordati alla stipulazione del contratto con il committente devono essere soddisfatti per intero.
+    \item \textbf{Test di accettazione:} vengono eseguiti assieme al committente e un loro superamento permettono di procedere con il rilascio del prodotto software.
+\end{itemize}
+
+\subsubsection{Test di unità}
+Allo stato attuale del progetto non è possibile definire quali test di unità dovranno essere realizzati, in quanto devono essere realizzati in contemporanea alla progettazione di dettaglio.
+Questa sezione del documento verrà redatta non appena inizierà l'attività di progettazione di dettaglio.
+
+\subsubsection{Test di integrazione}
+Allo stato attuale del progetto non è possibile definire quali test di integrazione dovranno essere realizzati, in quanto devono essere realizzati in contemporanea alla progettazione di dettaglio.
+Questa sezione del documento verrà redatta non appena inizierà l'attività di progettazione di dettaglio.
+
+\subsubsection{Test di sistema}
+I test di sistema devono assicurare la completa copertura dei requisiti espressi nel documento \textit{Analisi dei Requisiti}.
+Ogni test di sistema è identificato da un codice, così formato:
+\begin{center}
+    TS-[Importanza][Tipologia][Codice]
+\end{center}
+con:
+\begin{itemize}
+    \item \textbf{[Importanza]:}
+    \begin{itemize}
+        \item \textbf{1}: il test verifica il funzionamento di un requisito obbligatorio;
+        \item \textbf{2}: il test verifica il funzionamento di un requisito desiderabile;
+        \item \textbf{3}: il test verifica il funzionamento di un requisito opzionale;
+    \end{itemize}
+    \item \textbf{{Tipologia}:}
+    \begin{itemize}
+        \item \textbf{F}: il requisito di riferimento è funzionale;
+        \item \textbf{Q}: il requisito di riferimento è qualitativo;
+        \item \textbf{P}: il requisito di riferimento è prestazionale;
+        \item \textbf{V}: il requisito di riferimento è un vincolo;
+    \end{itemize}
+    \item \textbf{[Codice]:}
+    \begin{itemize}
+        \item \textbf{A$u.v$} il requisito di riferimento riguarda l'applicazione, in cui $u$ indica il numero del caso d'uso (lato app) kite-level di provenienza, $u$ il numero progressivo univoco;
+        \item \textbf{S$w.x$} il requisito di riferimento riguarda l'applicazione, in cui $w$ indica il numero del caso d'uso (lato serve) kite-level di provenienza, $x$ il numero progressivo univoco;
+        \item \textbf{C$y$} il requisito proviene dal capitolato, dove $y$ sarà il numero progressivo univoco;
+        \item \textbf{V*} il requisito proviene da un verbale, dove * inizierà con I se proviene da un verbale interno oppure E se proviene da un verbale esterno. Poi vi sarà il numero che indica il verbale da cui proviene il requisito; il numero si calcola a partire da 1, che sarà associato al primo verbale redatto (in ordine temporale). I numeri per i verbali interni sono contati separatamente da quelli dei verbali esterni. Infine vi sarà un punto seguito dal numero progressivo
+        \item \textbf{I$z$} il requisito proviene da una decisione presa internamente al gruppo, dove $z$ sarà un numero progressivo.
+    \end{itemize}
+\end{itemize}
+
+Segue l'elenco dei test con la relativa descrizione.
+
+\input{sezioni/sottosezioni/TestSistema.tex}

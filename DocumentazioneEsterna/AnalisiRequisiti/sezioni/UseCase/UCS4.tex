@@ -103,7 +103,7 @@
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore gestore si trova nella sezione di modifica dei parametri dell'organizzazione.
 \item \textbf{Postcondizione:} L'amministratore ha inserito un indirizzo valido che rispetti i vincoli imposti.
-\item \textbf{Scenario alternativo:} L'amministratore inserisce un indirizzo dell'organizzazione che non rispetta i vincoli imposti. Verrà visualizzato un messaggio d'errore [UCS 9.4.6].
+\item \textbf{Scenario alternativo:} L'amministratore inserisce un indirizzo dell'organizzazione che non rispetta i vincoli imposti. Verrà visualizzato un messaggio d'errore [UCS 10.4.6].
 \item \textbf{Flusso di eventi:}
 \begin{enumerate}
     \item L'amministratore inserisce una parola tra: via/viale/piazza;
@@ -112,10 +112,28 @@
     \item Se serve, l'amministratore inserisce la lettera che identifica l'azienda dagli altri edifici che condividono lo stesso numero civico con essa.
 \end{enumerate}
 \item \textbf{Estensioni:}
-\begin{enumerate}
-    \item UCS 9.4.6 - L'indirizzo inserito non rispetta i vincoli imposti.
-\end{enumerate}
+\begin{itemize}
+    \item UCS 10.4.6 - L'indirizzo inserito non rispetta i vincoli imposti.
 \end{itemize}
+\end{itemize}
+
+\subsubsection{UCS 4.1.5 - Modifica dell'indirizzo IP\ap{G} del server aziendale}%
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore gestore
+\item \textbf{Precondizione:} L'amministratore gestore si trova nella sezione di modifica dei parametri dell'organizzazione.
+\item \textbf{Postcondizione:} L'amministratore ha inserito un indirizzo IP\ap{G} valido.
+\item \textbf{Scenario alternativo:} L'amministratore inserisce un indirizzo IP\ap{G} che non rappresenta un server LDAP. Verrà visualizzato un messaggio d'errore [UCS 10.4.7].
+\item \textbf{Flusso di eventi:}
+\begin{enumerate}
+    \item L'amministratore inserisce il nuovo indirizzo IP\ap{G}.
+\end{enumerate}
+\item \textbf{Estensioni:}
+\begin{itemize}
+    \item UCS 10.4.7 - L'indirizzo IP\ap{G} inserito non rappresenta un server LDAP.
+\end{itemize}
+\end{itemize}
+
+
 
 \subsubsection{UCS 4.2 - Richiesta di eliminazione di un'organizzazione}%sea level
 \begin{itemize}

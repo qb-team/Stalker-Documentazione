@@ -8,8 +8,8 @@
 
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
-	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS\ap{G}, rete cellulare).
-	\item \textbf{Precondizione:} L'utente autenticato\ap{G} con credenziali Stalker sta per effettuare un movimento\ap{G} in un luogo dell'organizzazione\ap{G} che richiede il tracciamento\ap{G}.
+	\item \textbf{Attori secondari:} Servizi/o di localizzazione (GPS\ap{G}, rete cellulare) , Server LDAP dell'organizzazione
+	\item \textbf{Precondizione:} L'utente è autenticato sta per effettuare un movimento\ap{G} in un luogo dell'organizzazione\ap{G} che richiede il tracciamento\ap{G}.
 	\item \textbf{Postcondizione:} Viene memorizzato dal sistema: il timestamp\ap{G}, i momenti in cui è avvenuto il tracciamento \ap{G}, dove è avvenuto e il tempo trascorso al suo interno.
 	\item \textbf{Scenario principale:} L'utente si trova nei pressi o sta per uscire da un luogo dell'organizzazione\ap{G} che richiede il tracciamento\ap{G}. Viene salvato il timestamp\ap{G} di entrata ed uscita dall'organizzazione\ap{G} e viene salvato il tempo trascorso all'interno dell'organizzazione\ap{G}. L'utente riceve inoltre una notifica per l'entrata e l'uscita dall'organizzazione.
 \end{itemize}
