@@ -4,9 +4,9 @@
 \subsection{Requisiti di vincolo}
 {
 \rowcolors{2}{grigetto}{white}
-\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arraystretch}{2}
 \centering
-\begin{longtable}{ c C{4cm} c c}
+\begin{longtable}{ c C{8cm} c c}
 \rowcolor{rossoep}
 \textcolor{white}{\textbf{Identificativo}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Classificazione}} & \textcolor{white}{\textbf{Fonti}}\\	
 
@@ -21,6 +21,8 @@ R2VC4.1 & Utilizzo di protocolli asincroni\ap{G} per le comunicazioni app mobile
 R2VC5.1 & Utilizzo del pattern di Publish/Subscriber\ap{G} & \d & Capitolato \\
 R2VC6.1 & Utilizzo dell’IAAS Kubernetes\ap{G} per la gestione della scalabilità orizzontale\ap{G}& \d & Capitolato \\
 R2VC6.2 & Utilizzo di PAAS\ap{G} per la gestione della scalabilità orizzontale\ap{G}& \d & Capitolato \\
+\rowcolor{rossoep}
+\textcolor{white}{\textbf{Identificativo}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Classificazione}} & \textcolor{white}{\textbf{Fonti}}\\	
 R2VC6.3 & Utilizzo di Openshift\ap{G} per la gestione della scalabilità orizzontale\ap{G}& \d & Capitolato \\
 R2VC6.4 & Utilizzo di Rancher\ap{G} per la gestione della scalabilità orizzontale\ap{G}& \d & Capitolato \\
 R1VC7.1 & Il server deve esporre oltre ad eventuali altri protocolli richiesti per l’interazione con il servizio, delle API Rest\ap{G} necessarie per permettere l’utilizzo applicativo, come alternativa alle API Rest\ap{G} è possibile utilizzare gRPC\ap{G} & \o & Capitolato \\
@@ -30,12 +32,18 @@ R1VC9.2 & Si deve fornire un resoconto sulle scelte fatte e sui test effettuati 
 R1VC10.1 & Si deve correlare a tutte le componenti applicative dei test di unità e d’integrazione & \o & Capitolato \\
 R1VC10.2 & Si deve testare tramite test end to end il sistema nella sua interezza & \o & Capitolato \\
 R1VC10.3 & Devono essere effettuati test di carico per testare il corretto funzionamento della scalabilità & \o & Capitolato \\
-R1VC10.4 & Si deve avere una copertura dei test maggiore o uguale all’80 percento & \o & Capitolato \\
+R1VC10.4 & Si deve avere una copertura dei test maggiore o uguale all’80s\% & \o & Capitolato \\
 R1VC10.5 & Tutti i test effettuati devono essere correlati da un report & \o & Capitolato \\
 R1VC11.1 & Deve essere scritta documentazione relativa alle scelte implementative e progettuali con annessa motivazione & \o & Capitolato \\
 R1VC11.2 & Deve essere scritta documentazione relativa ai problemi aperti e eventuali soluzioni proposte da esplorare & \o & Capitolato \\
 R2VC12.1 & Cifratura di tutte le comunicazioni fra App e Server & \d & Capitolato  \\
 R1VC13.1 & Si deve utilizzare il protocollo LDAP per autenticare i singoli dipendenti e gli amministratori di una organizzazione per poter effettuare il tracciamento della posizione autenticato & \o & Capitolato \\
-
+\rowcolor{rossoep}
+\textcolor{white}{\textbf{Identificativo}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Classificazione}} & \textcolor{white}{\textbf{Fonti}}\\	
+R1VV1.1 & Deve essere garantita la privacy e quindi verificare che tutte le informazioni raccolte rispettino le GDPR\ap{G} & \o & VE\_2019\_12\_16 \\
+R1VV1.2 & Si deve scegliere una licenza tra GNU\ap{G}, GPL\ap{G}, LGPL\ap{G} e MIT\ap{G}& \o & VE\_2019\_12\_16 \\
+R1VV1.3 & Le credenziali per accedere alla applicazione e le credenziali per accedere autenticarsi in una organizzazione devono essere diverse & \o & VE\_2019\_12\_16 \\
+R1VV1.4 & I server LDAP delle organizzazioni che richiedono autenticazione devono essere esterni al sistema.  & \o & VE\_2019\_12\_16 \\
+R1VV1.5 & Per gli utenti che non devono essere autenticati, si deve assegnare a loro un codice che ne certifichi la validata dell’ingresso o l'uscita da un luogo in modo da non conoscere chi lo ha generato & \o & VE\_2019\_12\_16 \\
 \end{longtable}
 }
