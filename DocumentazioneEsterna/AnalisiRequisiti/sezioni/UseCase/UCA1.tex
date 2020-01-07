@@ -2,7 +2,7 @@
 
 \begin{figure}[h]
   \centering
-    \includegraphics[scale=0.7]{sezioni/UseCase/Immagini/UCA1.png}
+    \includegraphics[scale=0.8]{sezioni/UseCase/Immagini/UCA1.png}
   \caption{UCA 1 - Accesso all'applicazione}
 \end{figure}
 
@@ -11,27 +11,24 @@
 \item \textbf{Precondizione:} L'utente non è autenticato.
 \item \textbf{Postcondizione:} L'utente viene autenticato all'interno del sistema tramite registrazione [UCA 1.2] oppure tramite autenticazione [UCA 1.1].
 \item \textbf{Scenario principale:} L'utente non identificato può scegliere se registrarsi [UCA 1.2] nel sistema oppure, se possiede già un account, accedere [UCA 1.1] all'applicazione. %cosa potrebbe fare l'utente con il UC, descrizione
-%\item \textbf{Estensioni:}
 \end{itemize}
 
 \subsubsection{UCA 1.1 - Autenticazione con credenziali Stalker}%sea level
 
 \begin{figure}[h]
-
   \centering
-    \includegraphics[scale=0.5]{sezioni/UseCase/Immagini/UCA1.1.png}
+    \includegraphics[scale=0.4]{sezioni/UseCase/Immagini/UCA1.1.png}
   \caption{UCA 1.1 - Autenticazione con credenziali Stalker}
 \end{figure}
 
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato
-%\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'utente non è autenticato.
-\item \textbf{Postcondizione:} L'utente viene autenticato all'interno del sistema e può accedere all'applicazione.
-\item \textbf{Scenario principale:} L'utente non autenticato inserisce l'indirizzo e-mail e la password per autenticarsi attraverso la dashboard\ap{G} iniziale.%cosa potrebbe fare l'utente con il UC, descrizione
-\item \textbf{Scenario alternativo 1:} L'utente tenta di accede con delle credenziali errate [UCS 7.1.4].
+\item \textbf{Postcondizione:} L'utente viene autenticato all'interno del sistema e accede all'applicazione.
+\item \textbf{Scenario principale:} L'utente non autenticato inserisce l'indirizzo e-mail e la password per autenticarsi attraverso il modulo di login presente.
+\item \textbf{Scenario alternativo 1:} L'utente tenta di accedere con delle credenziali errate [UCS 7.1.4].
 \item \textbf{Scenario alternativo 2:} Se l'utente non dovesse ricordarsi la password ha la possibilità di selezionare la funzionalità password dimenticata [UCA 1.3] per reimpostarla.
-\item \textbf{Flusso di eventi:} %elenco puntato
+\item \textbf{Flusso di eventi:}
   \begin{enumerate}
         \item Inserimento indirizzo e-mail [UCA 1.1.1];
         \item Inserimento password [UCA 1.1.2].
@@ -47,7 +44,6 @@
 \subsubsection{UCA 1.1.1 - Inserimento indirizzo e-mail}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:}  Utente non autenticato
-%\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:}  L'utente non è autenticato.
 \item \textbf{Postcondizione:}  L'utente ha inserito il proprio indirizzo e-mail.
 \end{itemize}
@@ -55,18 +51,9 @@
 \subsubsection{UCA 1.1.2 - Inserimento password}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato
-%\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'utente non è autenticato.
 \item \textbf{Postcondizione:} L'utente ha inserito la propria password.
 \end{itemize}
-
-%\subsubsection{UCA 1.1.3 - Pulsante accedi}%fish level
-%\begin{itemize}
-%\item \textbf{Attori primari:} Utente non autenticato
-%\item \textbf{Attori secondari:}%opzionale
-%\item \textbf{Precondizione:} L'utente non autenticato
-%\item \textbf{Postcondizione:} L'utente ha fatto richiesta per essere autenticato dal sistema 
-%\end{itemize}
 
 \subsubsection{UCA 1.2 - Registrazione di account in Stalker}%sea level
 
@@ -78,50 +65,40 @@
 
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'utente non é ancora registrato nel sistema.
-\item \textbf{Postcondizione:} L'utente si è registrato e può accedere al sistema.
-\item \textbf{Scenario principale:} L'utente non registrato compila il modulo di registrazione al fine di poter accedere al sistema.%cosa potrebbe fare l'utente con il UC, descrizione
-\item \textbf{Flusso di eventi:} %elenco puntato
+\item \textbf{Precondizione:} L'utente non è ancora registrato nel sistema.
+\item \textbf{Postcondizione:} L'utente si è registrato e accede al sistema.
+\item \textbf{Scenario principale:} L'utente non registrato compila il modulo di registrazione al fine di poter accedere al sistema.
+\item \textbf{Flusso di eventi:}
   \begin{enumerate}
         \item Inserimento indirizzo e-mail [UCA 1.2.1];
         \item Inserimento password [UCA 1.2.2];
         \item Inserimento conferma password [UCA 1.2.3].
     \end{enumerate}
-\item \textbf{Inclusioni:}
-	\begin{itemize}
-		\item UCA 1.2.1 - Inserimento indirizzo e-mail;
-		\item UCA 1.2.2 - Inserimento password;
-		\item UCA 1.2.3 - Inserimento conferma password. 
-	\end{itemize}
 \item \textbf{Estensioni:}
 	\begin{itemize}
-		\item UCA 7.1.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione;
+		\item UCA 7.1.1 -  Visualizzazione messaggio di errore in caso di account con l'e-mail inserita già presente;
 		\item UCA 7.1.2 - Visualizzazione messaggio di errore in caso di password troppo debole;
 		\item UCA 7.1.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse. 
 	\end{itemize}
-%\item \textbf{Inclusioni:}
 \end{itemize}
 
-\subsubsection{UCA 1.2.1 - Inserimento indirizzo e-mail}%fish level
+\subsubsection{UC 1.2.1 - Inserimento indirizzo e-mail}%fish level
 
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'utente non è registrato e il suo indirizzo e-mail non è ancora presente nel sistema.
-\item \textbf{Postcondizione:} L'utente ha inserito il proprio indirizzo e-mail.
+\item \textbf{Precondizione:} L'utente non è registrato.
+\item \textbf{Postcondizione:} L'utente ha inserito il proprio indirizzo e-mail, di cui è stata verificata la non esistenza in associazione ad altri account nel sistema.
 \item \textbf{Estensioni:}
 	\begin{itemize}
-		\item UCA 7.1.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione.
+		\item UCA 7.1.1 - Visualizzazione messaggio di errore in caso di account con l'e-mail inserita già presente.
 	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCA 1.2.2 - Inserimento password}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'utente non è registrato e la sua password non è ancora presente nel sistema.
-\item \textbf{Postcondizione:} L'utente ha inserito una password.
+\item \textbf{Precondizione:} L'utente non è registrato.
+\item \textbf{Postcondizione:} L'utente ha inserito una password che rispetta i criteri di complessità definiti dal sistema.
 \item \textbf{Estensioni:}
 	\begin{itemize}
 		\item UCA 7.1.2 - Visualizzazione messaggio di errore in caso di password troppo debole.
@@ -131,9 +108,8 @@
 \subsubsection{UCA 1.2.3 - Inserimento conferma password}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'utente non è registrato e la conferma password non è ancora definita.
-\item \textbf{Postcondizione:} L'utente ha confermato la password inserendola nuovamente.
+\item \textbf{Precondizione:} L'utente non è registrato.
+\item \textbf{Postcondizione:} L'utente ha confermato la password inserendola nuovamente (è uguale a quella inserita durante l'inserimento della password [UCA 1.2.2]).
 \item \textbf{Estensioni:}
 	\begin{itemize}
 		\item UCA 7.1.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse.
@@ -145,12 +121,19 @@
 \item \textbf{Attori primari:} Utente non autenticato
 \item \textbf{Precondizione:}  L'utente non è autenticato.
 \item \textbf{Postcondizione:} L'utente ha fatto richiesta per avviare la procedura di password dimenticata.
+\item \textbf{Flusso di eventi:}
+  \begin{enumerate}
+        \item Inserimento dell'indirizzo e-mail a cui inviare la e-mail per il cambio password [UCA 1.3.1];
+        \item Viene inviata la e-mail per il cambio password [UCA 1.3.2];
+        \item Inserimento della nuova password [UCA 1.3.3];
+        \item Inserimento della conferma della nuova password [UCA 1.3.4].
+    \end{enumerate}
 \end{itemize}
 
 \subsubsection{UCA 1.3.1 - Inserimento e-mail}
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato\ap{G}
-\item \textbf{Precondizione:} L'utente non è autenticato\ap{G}. %è nella schermata di password dimenticata
+\item \textbf{Precondizione:} L'utente non è autenticato\ap{G}.
 \item \textbf{Postcondizione:} L'utente ha inserito l'e-mail.
 \end{itemize}
 
@@ -165,12 +148,19 @@
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato\ap{G}
 \item \textbf{Precondizione:}  L'utente non è autenticato\ap{G}.
-\item \textbf{Postcondizione:} L'utente ha inserito la nuova password.
+\item \textbf{Postcondizione:} L'utente inserisce la nuova password.
 \end{itemize}
 
 \subsubsection{UCA 1.3.4 - Conferma nuova password}
 \begin{itemize}
 \item \textbf{Attori primari:} Utente non autenticato\ap{G}
 \item \textbf{Precondizione:} L'utente non è autenticato\ap{G}.
-\item \textbf{Postcondizione:} L'utente ha reinserito la nuova password nel campo di conferma password.
+\item \textbf{Postcondizione:} L'utente reinserisce la nuova password per confermarla.
 \end{itemize}
+
+% \subsubsection{UCA 1.3.5 - Conferma cambio password}%fish level
+% \begin{itemize}
+% \item \textbf{Attori primari:} Utente non autenticato\ap{G}
+% \item \textbf{Precondizione:} L'utente non è autenticato\ap{G}.
+% \item \textbf{Postcondizione:} L'utente ha selezionato la funzionalità di conferma per il cambio password.
+% \end{itemize}
