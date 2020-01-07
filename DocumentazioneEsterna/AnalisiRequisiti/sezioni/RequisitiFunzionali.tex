@@ -10,23 +10,27 @@
 \rowcolor{rossoep}
 \textcolor{white}{\textbf{Identificativo}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Classificazione}} & \textcolor{white}{\textbf{Fonti}}\\	
 
-R1FI1 & Un utente non autenticato non può effettuare alcuna azione a meno di autenticazione e registrazione & Obbligatorio & Interno\\
+R1FI1 & Un utente non autenticato non può effettuare alcuna azione a meno di autenticazione e registrazione & \o & Interno\\
 
-R1FA1.1 & L'autenticazione da parte di un utente necessita di e-mail & Obbligatorio & UCA 1.1.1 Interno\\
+R1FA1.1 & L'autenticazione da parte di un utente necessita di e-mail & \o & UCA 1.1.1 Interno\\
 
-R1FA1.2 & L'autenticazione da parte di un utente necessita di password & Obbligatorio & UCA 1.1.2 Interno\\
+R1FA1.2 & L'autenticazione da parte di un utente necessita di password & \o & UCA 1.1.2 Interno\\
 
-R1FA7.1 & L'autenticazione viene negata qualora l'utente tenti di autenticarsi con delle credenziali errate. Viene inoltre visualizzato un messaggio d'errore & Obbligatorio & UCA 7.1.4 Interno\\
+R1FA7.1 & L'autenticazione viene negata qualora l'utente tenti di autenticarsi con delle credenziali errate. Viene inoltre visualizzato un messaggio d'errore & \o & UCA 7.1.4 Interno\\
 
-R1FA1.3 & La registrazione da parte di un utente necessita di e-mail & Obbligatorio & UCA 1.2.1 Interno\\
+R1FA1.3 & La registrazione da parte di un utente necessita di e-mail & \o & UCA 1.2.1 Interno\\
 
-R1FA7.2 & Il processo di registrazione dell'utente viene negato qualora l'e-mail inserita fosse già registrata nel sistema. Viene visualizzato inoltre un messaggio d'errore & Obbligatorio & UCA 7.1.1 Interno\\
+R1FA7.2 & Il processo di registrazione dell'utente viene negato qualora l'e-mail inserita fosse già registrata nel sistema. Viene visualizzato inoltre un messaggio d'errore & \o & UCA 7.1.1 Interno\\
 
-R1FA1.4 & La registrazione da parte di un utente necessita di password & Obbligatorio & UCA 1.2.2 Interno\\
+R1FA1.4 & La registrazione da parte di un utente necessita di password & \o & UCA 1.2.2 Interno\\
 
-R1FA1.5 & La registrazione da parte di un utente necessita di conferma della password & Obbligatorio & UCA 1.2.3 Interno\\
+R1FA1.5 & La registrazione da parte di un utente necessita di conferma della password & \o & UCA 1.2.3 Interno\\
 
-R2FA1.6 & L'utente deve essere in grado di effettuare il reset della password qualora se la fosse dimenticata & Desiderabile & UCA 1.3 Interno\\
+R1FA1.6 & Durante la registrazione viene chiesto all'utente di accettare le condizioni generali d'uso & \o & UCA 1.2.4 Interno\\
+
+R1FA1.7 & Qualora l'utente dovesse rifiutare le condizioni generali d'uso deve venir interrotta la registrazione e chiusa l'applicazione & \o & UCA 1.2.4 Interno\\
+
+R2FA1.8 & L'utente deve essere in grado di effettuare il reset della password qualora se la fosse dimenticata & \d & UCA 1.3 Interno\\
 
 R1FA7.3 & Il processo di autenticazione viene negato qualora la password inserita non sia abbastanza sicura. Viene visualizzato inoltre un messaggio d'errore & \o & UCA 1.3 Interno\\
 
@@ -237,9 +241,9 @@ R1FS8.4 & Tabella contenente il numero degli utenti e il totale delle ore passat
 
 R1FS9.1 & L'amministratore proprietario ha la possibilità di entrare nella sezione di gestione degli amministratori (per la nomina, eliminazione e modifica dei privilegi ad altri amministratori) & \o & UCS 9 Capitolato \\
 
-R1FI8 & L'amministratore proprietario ha la possibilità di visualizzare gli amministratori da esso nominati una volta entrato nella gestione degli amministratori & \o & Interno \\
-R1FI9 & La visualizzazione di un amministratore deve mostrare la sua e-mail & \o & Interno \\
-R1FI10 & La visualizzazione di un amministratore deve mostrare i suoi privilegi & \o & Interno \\
+R1FI9 & L'amministratore proprietario ha la possibilità di visualizzare gli amministratori da esso nominati una volta entrato nella gestione degli amministratori & \o & Interno \\
+R1FI10 & La visualizzazione di un amministratore deve mostrare la sua e-mail & \o & Interno \\
+R1FI11 & La visualizzazione di un amministratore deve mostrare i suoi privilegi & \o & Interno \\
 R1FS9.2 & L'amministratore proprietario ha la possibilità di nominare un nuovo amministratore & \o & UCS 9.1 Capitolato\\
 R1FS9.3 & L'amministratore proprietario deve poter inserire un'e-mail per il nuovo amministratore da nominare & \o & UCS 9.1.1 Interno\\
 R1FS10.8 & Viene mostrato un messaggio d'errore qualora l'e-mail del nuovo amministratore da nominare risulti già registrata nel sistema & \o & UCS 10.9.1 Interno\\

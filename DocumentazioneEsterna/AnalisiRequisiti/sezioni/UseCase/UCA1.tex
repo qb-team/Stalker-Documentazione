@@ -35,7 +35,7 @@
     \end{enumerate}
 \item \textbf{Estensioni:}
 	\begin{itemize}
-		\item UCA 7.1.4 - Visualizzazione messaggio di errore credenziali errate;
+		\item UCA 8.1.4 - Visualizzazione messaggio di errore credenziali errate;
 		\item UCA 1.3 - Password dimenticata.
 	\end{itemize}
 %\item \textbf{Inclusioni:}
@@ -43,9 +43,9 @@
 
 \subsubsection{UCA 1.1.1 - Inserimento indirizzo e-mail}%fish level
 \begin{itemize}
-\item \textbf{Attori primari:}  Utente non autenticato
-\item \textbf{Precondizione:}  L'utente non è autenticato.
-\item \textbf{Postcondizione:}  L'utente ha inserito il proprio indirizzo e-mail.
+\item \textbf{Attori primari:} Utente non autenticato
+\item \textbf{Precondizione:} L'utente non è autenticato.
+\item \textbf{Postcondizione:} L'utente ha inserito il proprio indirizzo e-mail.
 \end{itemize}
 
 \subsubsection{UCA 1.1.2 - Inserimento password}%fish level
@@ -72,13 +72,21 @@
   \begin{enumerate}
         \item Inserimento indirizzo e-mail [UCA 1.2.1];
         \item Inserimento password [UCA 1.2.2];
-        \item Inserimento conferma password [UCA 1.2.3].
+        \item Inserimento conferma password [UCA 1.2.3];
+        \item Accettazione delle condizioni generali d'uso [UCA 1.2.4];
     \end{enumerate}
+    \item \textbf{Inclusioni:}
+	\begin{itemize}
+		\item [UCA 1.2.1] - Inserimento indirizzo e-mail;
+		\item [UCA 1.2.2] - Inserimento password;
+		\item [UCA 1.2.3] - Inserimento conferma password;
+		\item [UCA 1.2.4] - Accettazione delle condizioni generali d'uso.
+	\end{itemize}
 \item \textbf{Estensioni:}
 	\begin{itemize}
-		\item UCA 7.1.1 -  Visualizzazione messaggio di errore in caso di account con l'e-mail inserita già presente;
-		\item UCA 7.1.2 - Visualizzazione messaggio di errore in caso di password troppo debole;
-		\item UCA 7.1.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse. 
+		\item UCA 8.1.1 -  Visualizzazione messaggio di errore in caso di account con l'e-mail inserita già presente;
+		\item UCA 8.1.2 - Visualizzazione messaggio di errore in caso di password troppo debole;
+		\item UCA 8.1.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse. 
 	\end{itemize}
 \end{itemize}
 
@@ -90,7 +98,7 @@
 \item \textbf{Postcondizione:} L'utente ha inserito il proprio indirizzo e-mail, di cui è stata verificata la non esistenza in associazione ad altri account nel sistema.
 \item \textbf{Estensioni:}
 	\begin{itemize}
-		\item UCA 7.1.1 - Visualizzazione messaggio di errore in caso di account con l'e-mail inserita già presente.
+		\item UCA 8.1.1 - Visualizzazione messaggio di errore in caso di account con l'e-mail inserita già presente.
 	\end{itemize}
 \end{itemize}
 
@@ -101,7 +109,7 @@
 \item \textbf{Postcondizione:} L'utente ha inserito una password che rispetta i criteri di complessità definiti dal sistema.
 \item \textbf{Estensioni:}
 	\begin{itemize}
-		\item UCA 7.1.2 - Visualizzazione messaggio di errore in caso di password troppo debole.
+		\item UCA 8.1.2 - Visualizzazione messaggio di errore in caso di password troppo debole.
 	\end{itemize}
 \end{itemize}
 
@@ -112,8 +120,16 @@
 \item \textbf{Postcondizione:} L'utente ha confermato la password inserendola nuovamente (è uguale a quella inserita durante l'inserimento della password [UCA 1.2.2]).
 \item \textbf{Estensioni:}
 	\begin{itemize}
-		\item UCA 7.1.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse.
+		\item UCA 8.1.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse.
 	\end{itemize}
+\end{itemize}
+
+\subsubsection{UCA 1.2.4 - Accettazione delle condizioni generali d'uso}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Utente non autenticato
+\item \textbf{Precondizione:} L'utente non è registrato.
+\item \textbf{Postcondizione:} L'utente ha accettato le condizioni generali sull'uso.
+\item \textbf{Scenario alternativo:} Se l'utente dovesse rifiutare le condizioni generali sull'uso allora la registrazione verrebbe interrotta e l'applicazione chiusa.
 \end{itemize}
 
 \subsubsection{UCA 1.3 - Password dimenticata}%fish level
@@ -146,15 +162,15 @@
 
 \subsubsection{UCA 1.3.3 - Nuova password}
 \begin{itemize}
-\item \textbf{Attori primari:} Utente non autenticato\ap{G}
-\item \textbf{Precondizione:}  L'utente non è autenticato\ap{G}.
+\item \textbf{Attori primari:} Utente non autenticato
+\item \textbf{Precondizione:}  L'utente non è autenticato.
 \item \textbf{Postcondizione:} L'utente inserisce la nuova password.
 \end{itemize}
 
 \subsubsection{UCA 1.3.4 - Conferma nuova password}
 \begin{itemize}
-\item \textbf{Attori primari:} Utente non autenticato\ap{G}
-\item \textbf{Precondizione:} L'utente non è autenticato\ap{G}.
+\item \textbf{Attori primari:} Utente non autenticato
+\item \textbf{Precondizione:} L'utente non è autenticato.
 \item \textbf{Postcondizione:} L'utente reinserisce la nuova password per confermarla.
 \end{itemize}
 
