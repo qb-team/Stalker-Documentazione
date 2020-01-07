@@ -1,4 +1,3 @@
-
 \section{Qualità di prodotto}
 La qualità di un prodotto software è valutata secondo criteri semplici e comprensibili per tutti, utenti e sviluppatori, operatori e addetti alla manutenzione.
 Per valutare tale qualità il gruppo "Qbteam" ha deciso di far riferimento allo standard ISO/IEC 9126, le quali norme descrivono:
@@ -6,53 +5,58 @@ Per valutare tale qualità il gruppo "Qbteam" ha deciso di far riferimento allo 
 \begin{itemize}
 \item Un modello di qualità del software;
 \item Le caratteristiche che determinano la qualità del software;
-\item Le metriche per la misurazione della qualità del software;
+\item Le metriche per la misurazione della qualità del software.
 \end{itemize}
-
 In questa sezione di documento verranno riportate solo alcune delle caratteristiche definite dallo standard, ovvero quelle ritenute più inerenti ai fini del progetto.
 
 \subsection{Metriche interne}
  Le metriche della qualità "interne" del software sono utilizzate durante la fase di sviluppo e permettono di valutare il comportamento del software dal punto di vista degli sviluppatori e di predire quello che sarà il punto di vista esterno degli utenti.
   \subsubsection{Funzionalità}
-      Capacità del prodotto software di soddisfare i requisiti funzionali e le necessità degli utenti.\\
+      Capacità del prodotto software di soddisfare i requisiti funzionali e le necessità degli utenti.
 
               \paragraph{Metrica - Aderenza delle funzioni e/o delle interfacce} 
               \begin{itemize}
           \item  \textbf{Codice:} MPD-01
-        \item    \textbf{Descrizione:} Misurare il livello di aderenza delle funzioni e delle interfacce sviluppate rispetto agli standard, alle normative e alla regolamentazioni
+        \item    \textbf{Descrizione:} Misurare il livello di aderenza delle funzioni e delle interfacce sviluppate rispetto agli standard, alle normative e alla regolamentazioni.
           \item  \textbf{Attributo di riferimento:} Aderenza alle funzionalità 
-        \item    \textbf{Sigla:} AFI
-         \item   \textbf{Formula:} \begin{math}AFI = \frac{A}{B}\end{math}\\ \\
-              A = numero di funzioni(e/o interfacce) sviluppate che risultano aderenti a standard, regole e normative emesse al riguardo; \\
-              B = numero totale di funzioni(e/o interfacce) che devono essere aderenti a tali regole come descritto nelle specifiche;
-                   \item \textbf{Range di valori che può assumere:}
-        \begin{itemize}
-            \item \textbf{Accettabile:} 
-            \item \textbf{Ottimale:} 
-        \end{itemize}
-       \end{itemize}
+        \item    \textbf{Sigla:} $AFI$
+         \item   \textbf{Formula:} $$AFI = {A \over B}$$
+                con:
+                \begin{itemize}
+                    \item  $A$ = numero di funzioni(e/o interfacce) sviluppate che risultano aderenti a standard, regole e normative emesse al riguardo
+                    \item  $B$ = numero totale di funzioni(e/o interfacce) che devono essere aderenti a tali regole come descritto nelle specifiche
+                \end{itemize}
+
+                \item \textbf{Range di valori che può assumere:}
+                \begin{itemize}
+                    \item \textbf{Accettabile:} $AFI = $
+                    \item \textbf{Ottimale:} $AFI = $
+                \end{itemize}
+            \end{itemize}
               
   \subsubsection{Affidabilità} 
-  Capacità di predire se il prodotto software in questione potrà soddisfare i requisiti prescritti per l'affidabilità dal punto di vista degli sviluppatori.\
-                \paragraph{Metrica - Rilevamento dei difetti} 
-                  \begin{itemize}
-         \item   \textbf{Codice:} MPD-02
-         \item   \textbf{Descrizione:} Misurare l'efficacia nel rilevare i difetti presenti nel software durante le diverse fasi di sviluppo del prodotto
-        \item    \textbf{Attributo di riferimento:} Maturità
-        \item    \textbf{Sigla:} RDF
-        \item    \textbf{Formula:} \begin{math} RDF = \frac{A}{B}\end{math}\\ \\
-             A = numero di difetti rilevati nelle revisioni tecniche, ispezioni e test del prodotto in ciascuna fase di sviluppo;\\
-              B = numero totale di difetti previsti nella fase di sviluppo;
+  Capacità di predire se il prodotto software in questione potrà soddisfare i requisiti prescritti per l'affidabilità dal punto di vista degli sviluppatori.
+        \paragraph{Metrica - Rilevamento dei difetti} 
+                \begin{itemize}
+        \item   \textbf{Codice:} MPD-02
+        \item   \textbf{Descrizione:} Misurare l'efficacia nel rilevare i difetti presenti nel software durante le diverse fasi di sviluppo del prodotto.
+    \item    \textbf{Attributo di riferimento:} Maturità
+    \item    \textbf{Sigla:} $RD$
+    \item    \textbf{Formula:} $$RD = {A \over B}$$
+            con:
+            \begin{itemize}
+                \item $A$ = numero di difetti rilevati nelle revisioni tecniche, ispezioni e test del prodotto in ciascuna fase di sviluppo
+                \item $B$ = numero totale di difetti previsti nella fase di sviluppo
+            \end{itemize}
+             
              \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
-            \item \textbf{Accettabile:} 
-            \item \textbf{Ottimale:} 
+            \item \textbf{Accettabile:} $RD = $
+            \item \textbf{Ottimale:} $RD = $
         \end{itemize}
        \end{itemize}
               
-                  
-              
-           
+      
 \subsubsection{Usabilità} 
 Capacità del prodotto software di essere comprensibile, di poter essere usato e compreso facilmente, in ogni sua parte, da qualsiasi utente che lo voglia usare. \\
 
@@ -61,67 +65,87 @@ Capacità del prodotto software di essere comprensibile, di poter essere usato e
           \item  \textbf{Codice: } MPD-03
            \item \textbf{Descrizione:} Misurare il livello di correttezza dei dati forniti in input all'applicazione
          \item   \textbf{Attributo di riferimento:} Operabilità
-          \item  \textbf{Sigla:} VDI
-         \item   \textbf{Formula:}\begin{math} VDI = \frac{A}{B}\end{math}\\ \\
-             A = numero dei dati di input di cui si effettua il controllo di validità;\\
-             B = numero totale di dati di input previsti;
-                   \item \textbf{Range di valori che può assumere:}
+          \item  \textbf{Sigla:} $VDI$
+         \item   \textbf{Formula:} $$VDI = {A \over B}$$
+            con:
+            \begin{itemize}
+                \item $A$ = numero dei dati di input di cui si effettua il controllo di validità 
+                \item $B$ = numero totale di dati di input previsti
+            \end{itemize}
+             
+        \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
-            \item \textbf{Accettabile:} 
+            \item \textbf{Accettabile:} $VDI = $
             \item \textbf{Ottimale:} 
         \end{itemize}
        \end{itemize}
               
-          
-           
-                   \paragraph{Metrica - Attrattività delle interfacce utente} 
-                      \begin{itemize}
+                
+    \paragraph{Metrica - Attrattività delle interfacce utente} 
+        \begin{itemize}
           \item  \textbf{Codice: } MPD-04
-          \item  \textbf{Descrizione:} Misurare quanto attrattive risultino le interfacce agli utenti dal punto di vista grafico 
+          \item  \textbf{Descrizione:} Misurare quanto attrattive risultino le interfacce agli utenti dal punto di vista grafico. Gli utenti dovranno poi compilare 
+          un questionario in base all'esperienza che hanno fatto. Il valore medio di tale valutazione è ritenuto valido se almeno tre utenti hanno compilato il questionario. 
+          Viene utilizzata una scala a quattro valori: Molto attrattivo, Attrattivo, Poco attrattivo, Non Attrattivo.
           \item  \textbf{Attributo di riferimento:} Attrattività
-          \item  \textbf{Sigla:} AIU
-           \item \textbf{Formula:}\begin{math}AIU = V (q) \end{math}\\ \\
-             Valore medio dei risultati di un questionario compilato da almeno tre utenti.\\
-         Può essere utilizzata una scala a quattro valori: Molto attrattivo, Attrattivo, Poco attrattivo, Non Attrattivo.
-           \end{itemize}
-         
-      
-      
-      
+          \item  \textbf{Sigla:} $AIU$
+           \item \textbf{Formula:}$$AIU = V (q) $$
+           con:
+        \begin{itemize}
+            \item $V$ = Valore medio dei risultati
+            \item $q$ = Questionario compilato
+        \end{itemize}
+
+        \begin{itemize}
+            \item \textbf{Accettabile:} $AIU = Attrattivo$ 
+            \item \textbf{Ottimale:} $AIU = Molto \; attrattivo$
+        \end{itemize}
+    \end{itemize}
+
+
         \subsubsection{Manutenibilità} 
     Capacità di predire il livello di impegno richiesto per modificare il prodotto software dal punto di vista degli sviluppatori.
     
         \paragraph{Metrica - Diagnostica} 
            \begin{itemize}
           \item  \textbf{Codice:} MPD-05
-          \item  \textbf{Descrizione:} Misurare il livello di diagnostica che il prodotto consente tramite le apposite funzioni 
+          \item  \textbf{Descrizione:} Misurare il livello di diagnostica che il prodotto consente tramite le apposite funzioni.
           \item  \textbf{Attributo di riferimento:} Analizzabilità
-         \item   \textbf{Sigla:} D
-          \item  \textbf{Formula:} \begin{math}D = \frac{A}{B}\end{math}\\ \\
-            A = numero di funzioni di diagnostica sviluppate;\\
-            B = numero totale di funzioni di diagnostica previste nelle specifiche;
-                 \item \textbf{Range di valori che può assumere:}
+         \item   \textbf{Sigla:} $D$
+          \item  \textbf{Formula:} $$D = {A \over B}$$
+          con:
+          \begin{itemize}
+            \item $A$ = numero di funzioni di diagnostica sviluppate
+            \item $B$ = numero totale di funzioni di diagnostica previste nelle specifiche
+          \end{itemize}
+
+        \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
-            \item \textbf{Accettabile:} 
-            \item \textbf{Ottimale:} 
+            \item \textbf{Accettabile:} $D = $
+            \item \textbf{Ottimale:} $D = $
         \end{itemize}
        \end{itemize}
               
-           
+\newpage %adattamento pagina pdf
+
            \paragraph{Metrica - Complessità del software} 
               \begin{itemize}
          \item   \textbf{Codice:} MPD-06
-         \item   \textbf{Descrizione:} Misurare la complessità ciclomatica dei singoli moduli sviluppati
+         \item   \textbf{Descrizione:} Misurare la complessità ciclomatica dei singoli moduli sviluppati.
           \item  \textbf{Attributo di riferimento:} Modificabilità
-          \item  \textbf{Sigla:} CS
-         \item   \textbf{Formula:} \begin{math}CS = v(G) = e - n + 2 \end{math}\\ \\
-            G = grafo del modulo;\\
-            e = cammino;\\
-            n = nodo; 
-               \item \textbf{Range di valori che può assumere:}
+          \item  \textbf{Sigla:} $CS$
+         \item   \textbf{Formula:} $$CS = v(G) = e - n + 2 $$
+         con:
+         \begin{itemize}
+            \item $G$ = grafo del modulo
+            \item $e$ = cammino
+            \item $n$ = nodo
+         \end{itemize}
+           
+        \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
-            \item \textbf{Accettabile:} 
-            \item \textbf{Ottimale:} 
+            \item \textbf{Accettabile:} $CS = $
+            \item \textbf{Ottimale:} $CS = $
         \end{itemize}
        \end{itemize}
               
@@ -129,102 +153,135 @@ Capacità del prodotto software di essere comprensibile, di poter essere usato e
 \paragraph{Metrica - Registrazione delle modifiche} 
    \begin{itemize}
           \item  \textbf{Codice:} MPD-07
-         \item   \textbf{Descrizione:} Misurare se tutte le modifiche apportate al software sono commentate nei singoli moduli e nella documentazione tecnica
+         \item   \textbf{Descrizione:} Misurare se tutte le modifiche apportate al software sono commentate nei singoli moduli e nella documentazione tecnica.
          \item   \textbf{Attributo di riferimento:} Modificabilità
-         \item   \textbf{Sigla:} RM
-         \item   \textbf{Formula:} \begin{math}RM = \frac{A}{B}\end{math}\\ \\
-            A = numero di modifiche commentate nel codice e nella documentazione tecnica;\\
-            B = numero totale di modifiche eseguite;
-               \item \textbf{Range di valori che può assumere:}
+         \item   \textbf{Sigla:} $RM$
+         \item   \textbf{Formula:} $$RM = {A \over B}$$
+         con:
+         \begin{itemize}
+            \item $A$ = numero di modifiche commentate nel codice e nella documentazione tecnica
+            \item $B$ = numero totale di modifiche eseguite
+         \end{itemize}
+
+        \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
-            \item \textbf{Accettabile:} 
-            \item \textbf{Ottimale:} 
+            \item \textbf{Accettabile:} $RM = $
+            \item \textbf{Ottimale:} $RM = $
         \end{itemize}
        \end{itemize}
               
- 
-           
+       
 \subsection{Metriche esterne}
 Le metriche relative alla qualità "esterna" indirizzano le caratteristiche esteriori del software, cioè quelle rilevabili direttamente dagli utenti e dagli operatori.
    \subsubsection{Funzionalità}
    Capacità del prodotto software di fornire funzioni adeguate al contesto di applicazione.
    
-      
+    \paragraph{Metrica - Completezza delle funzionalità sviluppate} 
+        \begin{itemize}
+        \item  \textbf{Codice:} MPD-08
+        \item  \textbf{Descrizione:} Misurare il livello di completezza delle funzioni sviluppate.
+        \item  \textbf{Attributo di riferimento:} Adeguatezza
+        \item  \textbf{Sigla:} $CFS$
+        \item  \textbf{Formula:} $$CFS = 1 - {A \over B}$$
+        con:
+        \begin{itemize}
+            \item $A$ = numero di funzioni omesse
+            \item $B$ = numero totale di funzioni previste nelle specifiche       
+        \end{itemize}
 
-                   \paragraph{Metrica - Completezza delle funzionalità sviluppate} 
-            \begin{itemize}
-            \item  \textbf{Codice:} MPD-08
-            \item  \textbf{Descrizione:} Misurare il livello di completezza delle funzioni sviluppate 
-            \item  \textbf{Attributo di riferimento:} Adeguatezza
-            \item  \textbf{Sigla:} CFS
-            \item  \textbf{Formula:} \begin{math}CFS = 1- \frac{A}{B}\end{math}\\ \\
-            A = numero di funzioni omesse;\\
-            B = numero totale di funzioni previste nelle specifiche;
-            \item \textbf{Range di valori che può assumere:}
+        \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
-            \item \textbf{Accettabile:} 
-            \item \textbf{Ottimale:} 
+            \item \textbf{Accettabile:} $CFS = $
+            \item \textbf{Ottimale:} $CFS = $
         \end{itemize}
-       \end{itemize}
-       
-             
-       
+    \end{itemize}
               
-          \subsubsection{Affidabilità}
+\subsubsection{Affidabilità}
    Capacità del prodotto software di dimostrare un adeguato livello di affidabilità quando opererà nel sistema in cui è previsto debba operare.
-   
        
-                  \paragraph{Metrica - Maturità dei test} 
-            \begin{itemize}
-           \item   \textbf{Codice:} MPD-09
-            \item  \textbf{Descrizione:} Misurare la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire piena copertura dei requisiti sia funzionali che qualitativi(usabilità, affidabilità, efficienza)
-              \item   \textbf{Attributo di riferimento:} Maturità
-          \item    \textbf{Sigla:} MT
-           \item   \textbf{Formula:} \begin{math}MT = \frac{A}{B}\end{math}\\ \\
-            A = numero di casi di test eseguiti con successo;\\
-            B = numero totale di casi di test previsto;
-            \item \textbf{Range di valori che può assumere:}
+    \paragraph{Metrica - Maturità dei test} 
         \begin{itemize}
-            \item \textbf{Accettabile:} 
-            \item \textbf{Ottimale:} 100\%
+        \item   \textbf{Codice:} MPD-09
+        \item  \textbf{Descrizione:} Misurare la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire piena copertura dei requisiti sia funzionali che qualitativi(usabilità, affidabilità, efficienza).
+        \item   \textbf{Attributo di riferimento:} Maturità
+        \item    \textbf{Sigla:} $MT$
+        \item   \textbf{Formula:} $$MT = {A \over B}$$
+        con:
+        \begin{itemize}
+            \item $A$ = numero di casi di test eseguiti con successo
+            \item $B$ = numero totale di casi di test previsto
         \end{itemize}
-       \end{itemize}
+        
+        \item \textbf{Range di valori che può assumere:}
+        \begin{itemize}
+            \item \textbf{Accettabile:} $MT = 100\% $
+            \item \textbf{Ottimale:} $MT = 100\% $
+        \end{itemize}
+    \end{itemize}
        
-              \subsubsection{Usabilità}
+\subsubsection{Usabilità}
    Capacità del prodotto software di essere facilmente comprensibile, apprendibile ed operabile per ogni utente intenzionato a usarlo.
    
-                  \paragraph{Metrica - Completezza della descrizione funzionale} 
-            \begin{itemize}
-           \item   \textbf{Codice:} MPD-10
-           \item   \textbf{Descrizione:} Misurare la percentuale di funzioni comprese dall'utente dopo aver letto la descrizione del prodotto(es. Manuale utente, specifiche funzionali) 
-           \item    \textbf{Attributo di riferimento:} Accuratezza
-           \item   \textbf{Sigla:} CDF
-           \item   \textbf{Formula:} \begin{math}CDF = \frac{A}{B}\end{math}\\ \\
-            A = numero di funzioni comprese;\\
-            B = numero totale di funzioni disponibili;
-            \item \textbf{Range di valori che può assumere:}
+    \paragraph{Metrica - Completezza della descrizione funzionale} 
         \begin{itemize}
-            \item \textbf{Accettabile:} 
-            \item \textbf{Ottimale:} 100\%
+            \item   \textbf{Codice:} MPD-10
+            \item   \textbf{Descrizione:} Misurare la percentuale di funzioni comprese dall'utente dopo aver letto la descrizione del prodotto(es. Manuale utente, specifiche funzionali).
+            \item    \textbf{Attributo di riferimento:} Accuratezza
+            \item   \textbf{Sigla:} $CDF$
+            \item   \textbf{Formula:} $$CDF = {A \over B}$$
+            con:
+            \begin{itemize}
+            \item  $A$ = numero di funzioni comprese
+            \item  $B$ = numero totale di funzioni disponibili
+            \end{itemize}
+
+            \item \textbf{Range di valori che può assumere:}
+            \begin{itemize}
+                \item \textbf{Accettabile:} $CDF = ...\% $
+                \item \textbf{Ottimale:} $CDF = 100\% $
+            \end{itemize}
         \end{itemize}
-       \end{itemize}
-       
-            \subsection{Tabella metriche del prodotto}
+
+    \paragraph{Metrica - Profondità strutturale dell'applicazione}
+    \begin{itemize}
+        \item \textbf{Codice:} MPD-11
+        \item \textbf{Descrizione:} È sconsigliato per le applicazioni l'utilizzo di una struttura troppo profonda per questioni di usabilità. L'utente non deve fare troppi passaggi per raggiungere la funzionalità desiderata. 
+        \item \textbf{Attributo di riferimento:} Operabilità
+        \item \textbf{Sigla:} $PSA$
+        \item \textbf{Range di valori che può assumere:}
+        \begin{itemize}
+            \item \textbf{Accettabile:} $1 \leq PSA \leq 4$
+            \item \textbf{Ottimale:} $1 \leq PSA \leq 2$
+        \end{itemize}
+    \end{itemize}
+
+\subsection{Tabella metriche interne del prodotto}
     \rowcolors{2}{grigetto}{white}
     \renewcommand{\arraystretch}{1.5}
     \begin{longtable}{ c C{4cm} c c c}
     \rowcolor{darkblue}
     \textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Valore Accettabile}} & \textcolor{white}{\textbf{Valore Ottimale}}\\
-    MPD-01 & Aderenza delle funzioni e/o delle interfacce & $AFI$ & $AFI=100\%$ & $AFI=100\%$ \\
-    MPD-02 & Rilevamento dei difetti & $RDF$ & $ RDF $ & $RDF$ \\
-    MPD-03 & Validità dei dati d'input & $VDI$ &  $VDI $ &  $VDI$ \\
-    MPD-04 & Attrattività delle interfacce utente & $AIU$ & $attrattivo$ &  $Molto attrattivo$ \\
+    MPD-01 & Aderenza delle Funzioni e/o delle Interfacce & $AFI$ & $AFI=100\%$ & $AFI=100\%$ \\
+    MPD-02 & Rilevamento dei Difetti & $RD$ & $ RD $ & $RD$ \\
+    MPD-03 & Validità dei Dati d'Input & $VDI$ &  $VDI $ &  $VDI$ \\
+    MPD-04 & Attrattività delle Interfacce Utente & $AIU$ & $Attrattivo$ &  $Molto attrattivo$ \\
     MPD-05 & Diagnostica & $D$ & $D $ & $D $ \\
-    MPD-06 & Complessità del software & $CS$ & $CS$ & $CS$ \\
-    MPD-07 & Registrazione delle modifiche & $RM$ & $RM$ & $RM$ \\
-    MPD-08 & Completezza delle funzionalità sviluppate & $CFS$ & $CFS$ & $CFS$  \\
-    MPD-09 & Maturità dei test & $MT$ & $MT=100\% $ & $MT=100\%$  \\	
-    MPD-10 & Completezza della descrizione funzionale& $CDF$ & $0CDF$ & $CDF$  \\
+    MPD-06 & Complessità del Software & $CS$ & $CS$ & $CS$ \\
+    \end{longtable} 
+
+\newpage %adattamento pagina pdf
+
+\subsection{Tabella metriche esterne del prodotto}
+    \rowcolors{2}{grigetto}{white}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{longtable}{ c C{4cm} c c c}
+    \rowcolor{darkblue}
+    \textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Valore Accettabile}} & \textcolor{white}{\textbf{Valore Ottimale}}\\
+    MPD-07 & Registrazione delle Modifiche & $RM$ & $RM$ & $RM$ \\
+    MPD-08 & Completezza delle Funzionalità Sviluppate & $CFS$ & $CFS$ & $CFS$  \\
+    MPD-09 & Maturità dei Test & $MT$ & $MT=100\% $ & $MT=100\%$  \\	
+    MPD-10 & Completezza della Descrizione Funzionale & $CDF$ & $CDF$ & $CDF$  \\
+    MPD-11 &  Profondità Strutturale dell'Applicazione & $PSA$ & $1 \leq PSA \leq 4$ &$1 \leq PSA \leq 2$  \\
     \end{longtable}  
                 
        
