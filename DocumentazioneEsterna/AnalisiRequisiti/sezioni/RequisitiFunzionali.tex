@@ -192,6 +192,10 @@ R1FS4.7 & L'amministratore deve poter inserire un nuovo indirizzo dell'organizza
 
 R1FS4.8 & L'amministratore deve poter modificare l'indirizzo dell'organizzazione & \o & UCS 4.1.4 Interno\\
 
+R1FS4.9 & L'amministratore deve poter inserire un nuovo indirizzo IP per l'organizzazione & \o & UCS 4.1.5 Interno\\
+
+R1FS4.10 & L'amministratore deve poter modificare l'indirizzo IP dell'organizzazione & \o & UCS 4.1.5 Interno\\
+
 R1FS10.3 & Se il nome dell'organizzazione inserito dall'amministratore non rispetta i vincoli imposti viene mostrato un messaggio d'errore & \o & UCS 10.4.2\\
 
 R1FS10.4 & Se il nome dell'organizzazione inserito dall'amministratore dovesse essere già presente nel sistema e associato ad un'altra organizzazione viene mostrato un messaggio d'errore & \o & UCS 10.4.3\\
@@ -201,6 +205,8 @@ R2FS10.5 & Se l'immagine dell'organizzazione selezionata dall'amministratore non
 R2FS10.6 & Se la descrizione dell'organizzazione inserita dall'amministratore non rispetta i vincoli imposti viene mostrato un messaggio d'errore & \d & UCS 10.4.5\\
 
 R1FS10.7 & Se l'indirizzo dell'organizzazione inserito dall'amministratore non rispetta i vincoli imposti viene mostrato un messaggio d'errore & \o & UCS 10.4.6\\
+
+R1FS10.8 & Se l'indirizzo IP inserito dall'amministratore non rappresenta un server LDAP viene mostrato un messaggio d'errore & \o & UCS 10.4.7\\
 
 R1FS4.9 & L'amministratore deve avere la possibilità di inviare la richiesta di eliminazione per un'organizzazione & \o & UCS 4.2 Capitolato\\
 
@@ -214,25 +220,45 @@ R1FS4.11 & L'amministratore deve poter annullare le modifiche che sta apportando
 
 %R1FS5 & L'amministratore deve essere in grado di modificare le funzionalità di tracciamento dell'organizzazione & \o & UCS 5 Interno\\
 R1FS5.1 & L'amministratore può selezionare un nuovo perimetro di tracciamento dell'organizzazione & \o & UCS 5.1 Capitolato\\
-R1FA10.7 & La modifica del perimetro dell'organizzazione viene negata qualora l'amministratore selezioni un area che non rispetta i vincoli imposti. Viene visualizzato un messaggio di errore & \o & UCS 10.5.1 Capitolato \\
+
+R1FA10.9 & La modifica del perimetro dell'organizzazione viene negata qualora l'amministratore selezioni un area che non rispetta i vincoli imposti. Viene visualizzato un messaggio di errore & \o & UCS 10.5.1 Capitolato \\
+
 R1FS5.2 & L'amministratore deve essere in grado di creare dei nuovi luoghi di tracciamento nell'organizzazione & \o & UCS 5.2 Capitolato\\
+
 R1FS5.3 & L'amministratore deve essere in grado di modificare i luoghi di tracciamento dell'organizzazione  & \o & UCS 5.3 Capitolato\\
-R1FS10.8 & La creazione di nuovi luoghi e la modifica dell'area di tracciamento di essi vengono negati qualora l'amministratore selezioni un area che fuoriesce dal perimetro. Viene visualizzato un messaggio di errore & \o & UCS 10.5.2 Capitolato \\
+
+R1FS10.10 & La creazione di nuovi luoghi e la modifica dell'area di tracciamento di essi vengono negati qualora l'amministratore selezioni un area che fuoriesce dal perimetro. Viene visualizzato un messaggio di errore & \o & UCS 10.5.2 Capitolato \\
+
 R1FS5.4 & L'amministratore deve essere in grado di eliminare i luoghi di tracciamento dell'organizzazione  & \o & UCS 5.4 Capitolato\\
+
 R1FS5.5 & L'amministratore deve essere in grado di selezionare un'area geografica per il tracciamento del luogo scelto  & \o & UCS 5.5 Capitolato\\
+
 R1FS5.6 &  L'amministratore può scegliere l'area di tracciamento tramite l'inserimento delle coordinate geografiche & \o & UCS 5.5.1 Capitolato\\
+
 R2FS5.7 & L'amministratore può scegliere l'area di tracciamento tramite Google Maps API & \d & UCS 5.5.2 Interno\\
+
 R1FS5.8 & L'amministratore deve poter annullare la selezione dell'area geografica per il tracciamento & \o & UCS 5.5.3 Interno\\
+
 R1FS6.1 & L'amministratore può monitorare l'organizzazione visualizzando il numero di utenti anonimi presenti nell'organizzazione & \o & UCS 6 Capitolato\\
+
 R1FS6.2 & L'amministratore può monitorare l'organizzazione visualizzando il numero di utenti anonimi presenti in un specifico luogo dell'organizzazione  & \o & UCS 6.1 Capitolato\\
+
 R1FS7.1 & L'amministratore può monitorato gli accessi effettuati dagli utenti riconosciuti visualizzandone il nome e il cognome & \o & UCS 7 Capitolato\\
+
 R1FS7.2 & L'amministratore può monitorare gli accessi effettuati da un specifico utente riconosciuto visualizzandone il nome e il cognome & \o & UCS 7.1 Capitolato\\
+
 R2FS7.3 & L'amministratore può monitorare gli accessi filtrandoli in base a una data & \d & UCS 7.2 Interno\\
+
 R2FS7.4 & Bisogna inserire una data per filtrare gli accessi in base a essa & \d & UCS 7.2.1 Interno\\
+
 R1FS8.1 & L'amministratore può ricevere un report tabellare degli accessi ai luoghi dell'organizzazione & \d & UCS 8 Capitolato\\
+
 R1FS8.2 &  Tabella delle entrate e uscite degli utenti nei luoghi dell'organizzazione generabile dall'amministratore di un organizzazione a tracciamento autenticato & \d & UCS 8.1.1 Capitolato\\
+
 R1FS8.3 & Tabella delle ore spese dagli utenti nei luoghi dell'organizzazione generabile dall'amministratore di un organizzazione a tracciamento autenticato & \d & UCS 8.1.2 Capitolato\\
+
 R1FS8.4 & Tabella contenente il numero degli utenti e il totale delle ore passate da essi nei luoghi dell'organizzazione generabile dall'amministratore di un organizzazione a tracciamento autenticato o anonimo & \d & UCS 8.1.3 Capitolato\\
+
 %aggiungere tabelle più particolareggiate
 
 %R3FS8.1 & Le tabelle generabili dall'amministratore possono  & \op & UCS 8.1 Interno\\
@@ -242,22 +268,40 @@ R1FS8.4 & Tabella contenente il numero degli utenti e il totale delle ore passat
 R1FS9.1 & L'amministratore proprietario ha la possibilità di entrare nella sezione di gestione degli amministratori (per la nomina, eliminazione e modifica dei privilegi ad altri amministratori) & \o & UCS 9 Capitolato \\
 
 R1FI9 & L'amministratore proprietario ha la possibilità di visualizzare gli amministratori da esso nominati una volta entrato nella gestione degli amministratori & \o & Interno \\
+
 R1FI10 & La visualizzazione di un amministratore deve mostrare la sua e-mail & \o & Interno \\
+
 R1FI11 & La visualizzazione di un amministratore deve mostrare i suoi privilegi & \o & Interno \\
+
 R1FS9.2 & L'amministratore proprietario ha la possibilità di nominare un nuovo amministratore & \o & UCS 9.1 Capitolato\\
+
 R1FS9.3 & L'amministratore proprietario deve poter inserire un'e-mail per il nuovo amministratore da nominare & \o & UCS 9.1.1 Interno\\
-R1FS10.8 & Viene mostrato un messaggio d'errore qualora l'e-mail del nuovo amministratore da nominare risulti già registrata nel sistema & \o & UCS 10.9.1 Interno\\
-R1FS10.9 & Viene mostrato un messaggio d'errore qualora la password del nuovo amministratore da nominare risulti troppo debole & \o & UCS 10.9.2 Interno\\
-R1FS10.10 & Viene mostrato un messaggio d'errore qualora la password non combaci con la conferma password del nuovo amministratore da nominare & \o & UCS 10.9.3 Interno\\
+
+R1FS10.11 & Viene mostrato un messaggio d'errore qualora l'e-mail del nuovo amministratore da nominare risulti già registrata nel sistema & \o & UCS 10.9.1 Interno\\
+
+R1FS10.12 & Viene mostrato un messaggio d'errore qualora la password del nuovo amministratore da nominare risulti troppo debole & \o & UCS 10.9.2 Interno\\
+
+R1FS10.13 & Viene mostrato un messaggio d'errore qualora la password non combaci con la conferma password del nuovo amministratore da nominare & \o & UCS 10.9.3 Interno\\
+
 R1FS9.4 & L'amministratore proprietario deve poter inserire una nuova password per il nuovo amministratore da nominare & \o & UCS 9.1.2 Interno\\
+
 R1FS9.5 & L'amministratore proprietario deve poter inserire la conferma della nuova password per il nuovo amministratore da nominare & \o & UCS 9.1.3 Interno\\
+
 R1FS9.6 & L'amministratore proprietario deve poter selezionare i privilegi per il nuovo amministratore da nominare & \o & UCS 9.1.4 Interno\\
+
 R1FS9.7 & L'amministratore proprietario ha la possibilità di eliminare un amministratore & \o & UCS 9.2 Capitolato\\
+
 R1FS9.8 & L'amministratore proprietario ha la possibilità di inserire la e-mail dell'account amministratore da eliminare & \o & UCS 9.2.1 Interno\\
-R1FS10.11 & Viene mostrato un messaggio d'errore qualora l'e-mail dell'amministratore da eliminare inserita non risulti registrata nel sistema & \o & UCS 10.9.4 Interno\\
+
+R1FS10.14 & Viene mostrato un messaggio d'errore qualora l'e-mail dell'amministratore da eliminare inserita non risulti registrata nel sistema & \o & UCS 10.9.4 Interno\\
+
 R1FS9.9 & L'amministratore proprietario ha la possibilità di modificare i privilegi di un amministratore & \o & UCS 9.3 Interno\\
+
 R1FS9.10 & L'amministratore proprietario ha la possibilità di inserire la e-mail dell'account amministratore a cui desidera modificare i privilegi & \o & UCS 9.3.1 Interno\\
-R1FS10.12 & Viene mostrato un messaggio d'errore qualora l'e-mail dell'amministratore a cui si vuole modificare i privilegi non risulti registrata nel sistema & \o & UCS 10.9.4 Interno\\
+
+R1FS10.15 & Viene mostrato un messaggio d'errore qualora l'e-mail dell'amministratore a cui si vuole modificare i privilegi non risulti registrata nel sistema & \o & UCS 10.9.4 Interno\\
+
 R1FS9.11 & L'amministratore proprietario ha la possibilità annullare le modifiche che sta apportando agli amministratori & \o & UCS 9.4 Interno\\
+
 \end{longtable}
 }
