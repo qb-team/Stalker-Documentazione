@@ -26,7 +26,7 @@
 \item \textbf{Precondizione:} L'utente è autenticato e può scaricare la lista di tutte le organizzazioni\ap{G}.
 \item \textbf{Postcondizione:} L'utente ha a disposizione la lista di tutte le organizzazioni\ap{G}.
 \item \textbf{Scenario principale:} L'utente seleziona l'esecuzione della funzione "Scaricamento della lista".
-\item \textbf{Scenario alternativo:} Se il tentativo di scaricare la lista fallisce viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.1].
+\item \textbf{Scenario alternativo:} Se il tentativo di scaricare la lista fallisce viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.1].
 \item \textbf{Estensioni:}
 	\begin{itemize}
 	\item UCA 8.3.1 - Visualizzazione di un messaggio di errore che informa del tentativo fallito di scaricare la lista.
@@ -51,7 +51,7 @@
 			\item Vi è la possibilità di inserire un'organizzazione\ap{G} nella lista delle organizzazioni preferite\ap{G} dell'utente dell'applicazione [UCA 3.2.1], se però viene richiesto di inserire una organizzazione\ap{G} che richiede di autenticarsi con credenziali LDAP\ap{G} [UCA 3.2.2] allora l'utente dovrà inserire tali credenziali [UCA 1.1];
 			\item Vi è la possibilità di rimuovere un'organizzazione\ap{G} dalla lista delle organizzazioni preferite\ap{G} dell'utente dell'applicazione [UCA 3.2.3].
 			\end{enumerate}
-	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.2];
+	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.2];
 	\item \textbf{Estensioni:}
 	\begin{itemize}
 		\item UCA 8.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni\ap{G}.
@@ -83,7 +83,7 @@
 	\end{enumerate}
 	\item \textbf{Inclusioni:}
 	\begin{itemize}
-			\item UCA - 7 Autenticazione con credenziali LDAP.
+			\item UCA 7 - Autenticazione con credenziali LDAP.
 	\end{itemize}
 \end{itemize}
 
@@ -118,8 +118,8 @@
 		\item L'utente ha la possibilità di effettuare l'aggiornamento lista organizzazione\ap{G} con refresh manuale\ap{G} [UCA 3.3.1];
 		\item L'utente ha la possibilità di effettuare l'aggiornamento lista organizzazione\ap{G} con temporizzazione\ap{G} [UCA 3.3.2].
 	\end{enumerate}
-	\item \textbf{Scenario alternativo 1:} Se il tentativo di scaricare la lista fallisce viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.1].
-	\item \textbf{Scenario alternativo 2:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.2];
+	\item \textbf{Scenario alternativo 1:} Se il tentativo di scaricare la lista fallisce viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.1].
+	\item \textbf{Scenario alternativo 2:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.2];
 	\item \textbf{Estensioni:}
 	\begin{itemize}
 		\item UCA 8.3.1 - Visualizzazione di un messaggio di errore che informa del tentativo fallito di scaricare la lista;
@@ -241,7 +241,7 @@
 		\item L'utente ha la possibilità di effettuare la ricerca per nome [UCA 3.5.2];
 		\item L'utente ha la possibilità di effettuare la ricerca per città [UCA 3.5.3].
 	\end{enumerate}
-	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 7.3.2].
+	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.2].
 	\item \textbf{Estensioni:}
 	\begin{itemize}
 		\item UCA 8.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni\ap{G}.
