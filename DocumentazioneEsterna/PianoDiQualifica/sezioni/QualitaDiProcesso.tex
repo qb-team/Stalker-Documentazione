@@ -51,12 +51,13 @@ Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software
         \begin{itemize}
             \item $N$ = numero classi non appartenenti alla gerarchia di ereditarietà della classe in esame
             \item $C_i$ =
-            \[
-            \begin{cases}
-                1, & la \; $i$-esima \; classe \; \grave{e} \; correlata \; a \; quella \; in \; esame \\
-                0, & altrimenti
-            \end{cases}
-            \]
+            \begin{math} {
+                \begin{cases}
+                    1, & la \; $i$-esima \; classe \; \grave{e} \; correlata \; a \; quella \; in \; esame \\
+                    0, & la \; $i$-esima \; classe \; non \; \grave{e} \; correlata \; a \; quella \; in \; esame
+                \end{cases}
+            }
+            \end{math}
         \end{itemize}
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
