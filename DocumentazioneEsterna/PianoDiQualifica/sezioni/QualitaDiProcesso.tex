@@ -37,14 +37,20 @@ Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software
     \paragraph{Metrica - Incapsulamento CBO}
     \begin{itemize}
         \item \textbf{Codice:} MPC-02
-        \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una classe al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling e più il sistema è difficile da mantenere.
+        \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una classe in esame al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling della classe in esame e più il sistema è difficile da mantenere.
         \item \textbf{Processo di riferimento:} Sviluppo
         \item \textbf{Sigla:} $CBO$
         \item \textbf{Formula:} $$CBO = {\sum_{i=1}^{N} C_i}$$
         con:
         \begin{itemize}
-            \item $N$ = numero classi non appartenenti alla gerarchia di ereditarietà
-            \item $C_i$ = classe correlata
+            \item $N$ = numero classi non appartenenti alla gerarchia di ereditarietà della classe in esame
+            \item $C_i$ =
+            \[
+            \begin{cases}
+                1, & la $i$-esima classe \grave{e} correlata a quella in esame \\
+                0, & altrimenti
+            \end{cases}
+            \]
         \end{itemize}
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
