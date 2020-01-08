@@ -1,6 +1,56 @@
 \renewcommand{\o}{Obbligatorio}
 \renewcommand{\d}{Desiderabile}
 \newcommand{\op}{Opzionale}
+
+Rappresentano dei requisiti che deve soddisfare il prodotto che si vuole realizzare.\\
+I requisiti saranno organizzati in forma tabellare.\\
+La tabella avrà le seguenti tre colonne:
+\begin{itemize}
+	\item Codice identificativo
+	\item Classificazione
+	\item Descrizione
+	\item Fonti
+\end{itemize}
+\paragraph{Codice identificativo dei requisiti}\mbox{}\\
+Ogni requisito sarà strutturato come segue:
+\begin{itemize}
+	\item Identificativo: \textbf{R[Importanza][Tipologia][Codice]}\\
+Dove:
+\begin{itemize}
+		\item \textbf{Importanza:}
+		\begin{itemize}
+			\item \textbf{1}: requisito obbligatorio, ovvero irrinunciabile per almeno uno degli stakeholder
+			\item \textbf{2}: requisito desiderabile, ovvero non strettamente necessario ma che porta valore aggiunto riconoscibile
+			\item \textbf{3}: requisito opzionale, ovvero relativamente utile oppure contrattabile più avanti nel progetto
+		\end{itemize}
+		\item \textbf{Tipologia:}
+		\begin{itemize}
+			\item \textbf{F}: funzionale, definisce una funzione di un sistema di uno o più dei suoi componenti
+			\item \textbf{Q}: qualitativo, definisce un requisito per garantire la qualità per un certo aspetto del progetto
+			\item \textbf{P}: prestazionale, definisce un requisito che garantisce efficienza prestazionale nel prodotto
+			\item \textbf{V}: vincolo, definisce un requisito volto a far rispettare un dato vincolo
+		\end{itemize}
+		\item \textbf{Codice:}\\
+		Composto da:
+		\begin{itemize}
+			\item A*\ap{I} se il requisito proviene da un caso d'uso dell'applicazione, dove *\ap{I} sarà composto da: il numero del caso d'uso (lato app) kite-level di provenienza, un punto e il numero progressivo univoco
+			\item S*\ap{II} se il requisito proviene da un caso d'uso del server, dove *\ap{II} sarà composto da: il numero del caso d'uso (lato server) kite-level di provenienza, un punto e il numero progressivo univoco
+			\item C*\ap{III} se il requisito proviene dal capitolato, dove *\ap{III} sarà il numero progressivo univoco
+			\item V*\ap{IV} se il requisito proviene da un verbale, dove *\ap{IV} inizierà con il numero che indica il verbale da cui proviene il requisito; il numero si calcola a partire da 1, che sarà associato al primo verbale redatto (in ordine temporale). Infine vi sarà un punto seguito dal numero progressivo
+			\item I*\ap{V} se il requisito proviene da una decisione presa internamente al gruppo, dove *\ap{V} sarà un numero progressivo
+		\end{itemize}
+\end{itemize}
+	\item \textbf{Descrizione}: descrizione sintetica ma al contempo esaustiva del requisito.
+	\item \textbf{Classificazione}: informazione ridondante, sotto forma testuale, dell’importanza del requisito. Facilita la lettura dei requisiti.
+	\item \textbf{Fonti}: definisce da dove deriva il requisito. I requisiti vengono raccolti da una o più fonti tra quelle citate di seguito:
+	\begin{itemize}
+		\item \textbf{Capitolato}: requisito individuato dalla lettura e/o analisi del capitolato
+		\item \textbf{Interno}: requisito che gli analisti hanno ritenuto opportuno aggiungere
+		\item \textbf{Caso d’uso}: il requisito è derivato da uno o più casi d’uso. Riportare anche il/i codice/i identificativo/i del/i caso/i d’uso.
+		\item \textbf{Verbale}: requisito derivato in seguito ad una richiesta di chiarimento con il committente. Riportare il nome del documento del verbale da cui deriva il requisito in questione.		
+	\end{itemize}
+\end{itemize}
+
 \subsection{Requisiti funzionali}
 {
 \rowcolors{2}{grigetto}{white}
