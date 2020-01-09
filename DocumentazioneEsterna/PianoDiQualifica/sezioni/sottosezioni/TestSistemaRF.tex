@@ -11,15 +11,43 @@
 % test Tommaso
 
 % da R1FA4.1 a R1FA4.3
-TSF-X & Selezione della modalità di tracciamento & \begin{itemize}
+TSF-X & Selezione della modalità di tracciamento & \begin{enumerate}
     \item Verificare che l'utente possa inserire la modalità di tracciamento anonima.
     \item Verificare che l'utente possa inserire la modalità di tracciamento autenticata.
-\end{itemize}
+\end{enumerate}
 Se l'utente si trova presso un luogo di un'organizzazione:
-\begin{itemize}
+\begin{enumerate}
     \item Verificare che nel passaggio dalla modalità di tracciamento autenticato a quella anonima venga inviata al sistema la richiesta di uscita dell'utente dal luogo e la successiva richiesta di ingresso di utente anonimo.
     \item Verificare che nel passaggio dalla modalità di tracciamento anonima a quella autenticata venga inviata al sistema la richiesta di uscita dell'utente dal luogo e la successiva richiesta di ingresso di utente riconosciuto.
-\end{itemize}
+\end{enumerate} \\
+
+TSF-X & Storico degli accessi dell'utente presso un'organizzazione & \begin{enumerate}
+    \item Verificare che l'utente possa vedere il proprio storico accessi presso un'organizzazione. Ogni accesso deve mostrare la data in cui è stato compiuto, il luogo corrispondente, il tempo totale trascorso all'interno nel luogo.
+    \item Come al punto 1, ma la lista degli accessi deve risultare ordinata per data in ordine decrescente\ap{G}.
+    \item Come al punto 1, ma la lista degli accessi deve risultare ordinata per data in ordine crescente\ap{G}.
+    \item Come al punto 1, ma della lista vengono mostrati solo gli accessi che rispettano i parametri di ricerca sul giorno cercato.
+    \item Verificare che in assenza di accessi effettuati presso un'organizzazione l'utente visualizzi un messaggio informativo.
+\end{enumerate}
+Se l'utente si trova presso un luogo di un'organizzazione:
+\begin{enumerate}
+    \item Verificare che l'utente possa visualizzare il tempo trascorso all'interno di tutti i luoghi dell'organizzazione dall'ultimo ingresso preceduto da un'uscita da un luogo di un'altra organizzazione se avvenuto nella stessa giornata o dall'inizio della giornata se quest'uscita è di un giorno precedente. % NON SONO SICURO, MOLTO COMPLESSO E FORSE NON FATTIBILE
+\end{enumerate}
+Se l'utente si trova presso un luogo di un'organizzazione e sta visualizzando lo storico accessi presso la stesso luogo:
+\begin{enumerate}
+    \item Verificare che l'utente possa visualizzare il tempo trascorso all'interno dall'ultimo ingresso effettuato.
+\end{enumerate} \\
+
+TSF-X & Storico degli accessi dell'utente presso un luogo di un'organizzazione & \begin{enumerate}
+    \item Verificare che l'utente possa vedere il proprio storico accessi presso il luogo di un'organizzazione. Ogni accesso deve mostrare la data in cui è stato compiuto, il luogo corrispondente, il tempo totale trascorso all'interno nel luogo.
+    \item Come al punto 1, ma la lista degli accessi deve risultare ordinata per data in ordine decrescente\ap{G}.
+    \item Come al punto 1, ma la lista degli accessi deve risultare ordinata per data in ordine crescente\ap{G}.
+    \item Come al punto 1, ma della lista vengono mostrati solo gli accessi che rispettano i parametri di ricerca sul giorno cercato.
+    \item Verificare che in assenza di accessi effettuati presso il luogo di un'organizzazione selezionato l'utente visualizzi un messaggio informativo.
+\end{enumerate}
+Se l'utente si trova presso lo stesso luogo:
+\begin{enumerate}
+    \item Verificare che l'utente possa visualizzare il tempo trascorso all'interno del luogo dall'ultimo ingresso effettuato.
+\end{enumerate} \\
 % fine test Tommaso
 
 

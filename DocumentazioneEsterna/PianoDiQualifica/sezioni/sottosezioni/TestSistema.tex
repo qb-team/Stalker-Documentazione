@@ -3,10 +3,12 @@
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}
 \centering
-\begin{longtable}{ >{\centering}p{0.10\textwidth} >{}p{0.30\textwidth} > {}p{0.50\textwidth}}
+\begin{longtable}{ c | C{3cm} | C{11cm} }
 \caption{Elenco dei test di sistema}\\
 \rowcolor{rossoep}
 \textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Titolo}} & \textcolor{white}{\textbf{Descrizione}} \\
+\hline
+\endhead
     \input{sezioni/sottosezioni/TestSistemaRF.tex}
     \input{sezioni/sottosezioni/TestSistemaRV.tex}
     \input{sezioni/sottosezioni/TestSistemaRP.tex}
