@@ -1,22 +1,29 @@
-\subsubsection{Panoramica UCA 7}%kite level
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.4, center]{sezioni/UseCase/Immagini/PanoramicaUCA7.png}
-	\caption{Panoramica UCA 7}
-\end{figure}
+
 
 
 \subsubsection{UCA 7 - Autenticazione con credenziali LDAP}%kite level
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4, center]{sezioni/UseCase/Immagini/UCA7.png}
+	\caption{UCA 7 - Autenticazione con credenziali LDAP}
+\end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo 
 	\item \textbf{Attori secondari:} server LDAP\ap{G} dell'organizzazione.
 	\item \textbf{Precondizione:} L'utente è autenticato con le proprie credenziali Stalker.
-	\item \textbf{Postcondizione:} L'utente è autenticato all'interno dell'organizzazione\ap{G} con credenziali LDAP.
-	\item \textbf{Scenario principale:} L'utente autenticato come utente anonimo effettua l'autenticazione con credenziali LDAP\ap{G} [UCA 7.1] per autenticarsi come utente riconosciuto all'interno della relativa organizzazione.
+	\item \textbf{Postcondizione:} L'utente è autenticato all'interno dell'organizzazione\ap{G} con credenziali LDAP\ap{G}.
+	\item \textbf{Scenario principale:} L'utente autenticato come utente anonimo effettua l'autenticazione con credenziali LDAP\ap{G} [UCA 7.1] per autenticarsi come utente riconosciuto all'interno della relativa organizzazione\ap{G}.
 \end{itemize}
 
 \subsubsection{UCA 7.1 - Inserimento credenziali}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5, center]{sezioni/UseCase/Immagini/UCA7.1.png}
+	\caption{UCA 7.1 - Inserimento credenziali}
+\end{figure}
+
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo 
 	\item \textbf{Attori secondari:} server LDAP\ap{G} dell'organizzazione.
@@ -31,7 +38,7 @@
 	\item \textbf{Scenario alternativo:} Il tentativo di autenticazione\ap{G} fallisce perché le credenziali inserite sono errate [UCA 8.7.1].
 	\item \textbf{Estensioni:}
 	\begin{itemize}
-		\item UCA 8.7.1 - Visualizzazione messaggio di errore credenziali LDAP aziendali errate.
+		\item UCA 8.7.1 - Visualizzazione messaggio di errore credenziali LDAP\ap{G} aziendali errate.
 	\end{itemize}
 \end{itemize}
 
