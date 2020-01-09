@@ -14,6 +14,12 @@ Ogni metrica ha un codice univoco ed è strutturato in questo formato \textbf{MP
     \item \textbf{00}: numero incrementale
 \end{itemize}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.53]{sezioni/Immagini/Iso_Iec_12207.png}
+    \caption{Schema dello standard ISO/IEC 12207. In rosso sono indicati i processi e le relative attività di interesse per il progetto.}
+\end{figure}
+
 \subsection{Processi primari}
 Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software e hanno lo scopo di soddisfare tutti i requisiti concordati con il cliente.
 
@@ -45,12 +51,13 @@ Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software
         \begin{itemize}
             \item $N$ = numero classi non appartenenti alla gerarchia di ereditarietà della classe in esame
             \item $C_i$ =
-            \[
-            \begin{cases}
-                1, & la \; $i$-esima \; classe \; \grave{e} \; correlata \; a \; quella \; in \; esame \\
-                0, & altrimenti
-            \end{cases}
-            \]
+            \begin{math} {
+                \begin{cases}
+                    1, & la \; $i$-esima \; classe \; \grave{e} \; correlata \; a \; quella \; in \; esame \\
+                    0, & la \; $i$-esima \; classe \; non \; \grave{e} \; correlata \; a \; quella \; in \; esame
+                \end{cases}
+            }
+            \end{math}
         \end{itemize}
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
@@ -222,7 +229,7 @@ Sono i processi\ap{G} e le attività che coprono gli aspetti organizzativi e di 
         \caption{Ciclo PDCA - Plan Do Check Act}
     \end{figure}
 
-    \textbf{Fasi del ciclo PDCA:}:
+    \textbf{Fasi del ciclo PDCA:}
     \begin{itemize}
         \item \textbf{Plan}: definisce attività e scadenze necessarie al raggiungimento dei specifici obiettivi di miglioramento;
         \item \textbf{Do}: esegue le attività di "Plan";
