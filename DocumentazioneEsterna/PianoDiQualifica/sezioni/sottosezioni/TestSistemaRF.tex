@@ -2,28 +2,100 @@
 
 % test Christian R1FI1 a R1FA2(compreso) e R2FA6.1 a R2FA6.9 e R1FC3 a R1FI8 e R1FS6.1 a R1FS7.6 e R1FS10.11 a R1FS9.11
 
-%da R1FI1 a R1FI1.6
-TSF-X & Accesso all'applicazione di un utente non autenticato & \begin{itemize}
+%da R1FI1 a R1FA8.4
+TSF-X & Accesso all'applicazione di un utente non autenticato & \begin{enumerate}
     \item Verificare che l'utente possa autenticarsi con le credenziali Stalker.
     \item Verificare che l'utente possa registrarsi creando un account Stalker.
-\end{itemize}
+\end{enumerate}
 Se l'utente vuole autenticarsi accedendo con le credenziali:
+\begin{enumerate}
+    \item Verificare che l'utente abbia inserito correttamente l'e-mail.
+    \item Verificare che l'utente abbia inserito correttamente la password.
+    \item Verificare che l'utente visualizzi un messaggio d'errore se l'autenticazione viene negata per inserimento di credenziali errate.
+\end{enumerate}
+Se l'utente si è dimenticato della password:
 \begin{itemize}
-    \item Verifica che l'utente ha inserito correttamente l'e-mail.
-    \item Verifica che l'utente ha inserito correttamente la password.
+    \item Verifica che l'utente possa effetturare il reset della password qualora se la fosse dimenticata.
 \end{itemize}
 Se l'utente vuole autenticarsi registrandosi:
-\begin{itemize}
-    \item Verifica che l'utente ha inserito una e-mail esistente.
-    \item Verifica che l'utente ha inserito una password.
-    \item Verifica che l'utente ha confermato l'inserimento della password.
-    \item Verifica che l'utente ha accettato le condizioni generali d'uso.
-\end{itemize}
+\begin{enumerate}
+    \item Verificare che l'utente abbia inserito una e-mail esistente.
+    \item Verificare che l'utente visualizzi un messaggio d'errore se tentasse di registrarsi con un'e-mail già usata nel sistema.
+    \item Verificare che l'utente abbia inserito una password.
+    \item Verificare che l'utente visualizzi un messaggio d'errore qualora abbia inserito una password non ritenuta sicura. Il processo di autenticazione fallisce.
+    \item Verificare che l'utente abbia confermato l'inserimento della password.
+    \item Verificare che l'utente visualizzi un messaggio d'errore qualora abbia inserito una conferma password diversa dalla password. Il processo di autenticazione fallisce.
+    \item Verificare che l'utente abbia accettato le condizioni generali d'uso.
+    \item Verificare che la registrazione si interrompa e che l'applicazione si chiuda nel caso che l'utente non abbia accettato le condizioni generali d'uso.
+\end{enumerate} \\
 
-%da R2FA1.8 
-%TSF-X & L'utente si è dimenticato della password & \begin{itemize}
+% R1FA2
+TSF-X & Logout dell'utente & \begin{itemize}
+    \item Verifica che l'utente possa effettuare il logout dall'applicazione.
+\end{itemize} \\
+
+%da R2FA6.1 a R2FA6.9
+TSF-X & Tracciamento dell'utente nell'organizzazione & \begin{enumerate}
+    \item Verificare che il tracciamento del muovimento dell'utente venga registrato correttamente.
+    \item Verificare che l'utente abbia ricevuto la notifica della corretta registrazione del suo muovimento.
+    \item Verificare che se le informazioni necessarie per la registrazione del muovimento non sono memorizzate, allora l'utente dovrà ricevere una notifica di tracciatura fallita.
+\end{enumerate}
+Durante la registrazione del tracciamento del muovimento dell'utente:
+\begin{enumerate}
+    \item Verificare che la data sia memorizzata.
+    \item Verificare che l'ora sia memorizzata.
+    \item Verificare chi, in maniera generica, sia memorizzato.
+\end{enumerate}
+Se l'utente è in modalità di tracciamento autenticata:
+\begin{enumerate}
+    \item Verificare che abbia effettuato un ingresso nell'organizzazione.
+    \item Verificare che abbia effettuato l'uscita nell'organizzazione.
+\end{enumerate}
+Se l'utente è in modalità di tracciamento anonima:
+\begin{enumerate}
+    \item Verificare che abbia effettuato un ingresso nell'organizzazione.
+    \item Verificare che abbia effettuato l'uscita nell'organizzazione.
+\end{enumerate} \\
+
+%da R1FC3 a R1FI8
+TSF-X & Disponbilità organizzazioni visualizzabili dall'amministratore & \begin{itemize}
+    \item Verificare che l'amministratore possa visualizzare le organizzazioni disponibli.
+\end{itemize}
+Se l'organizzazione visualizzata è disponbile:
+\begin{enumerate}
+    \item Verificare che l'amministratore possa vedere il suo nome.
+    \item Verificare che l'amministratore possa vedere la sua immagine.
+    \item Verificare che l'amministratore possa selezionarla.
+    \item Verificare che l'amministratore possa selezionarla e vedere il suo nome.
+    \item Verificare che l'amministratore possa selezionarla e vedere la sua immagine.
+    \item Verificare che l'amministratore possa selezionarla e vedere la sua descrizione.
+    \item Verificare che l'amministratore possa selezionarla e vedere il suo indirizzo.
+\end{enumerate} \\
+
+%da R1FS6.1 a R1FS7.6
+TSF-X & Monitoraggio dell'amministratore vedendo gli utenti presenti nell'organizzazione & \begin{itemize}
+    \item Verificare che l'amministratore possa monitorare gli utenti presenti nell'organizzazione.
+\end{itemize}
+Se gli utenti monitorati presso l'organizzazione sono anonimi:
+\begin{enumerate}
+    \item Verificare che l'amministratore possa monitorare il numero degli utenti anonimi.
+    \item Verificare che l'amministratore possa monitorare il numero degli utenti anonimi in un luogo specifico.
+\end{enumerate}
+Se gli utenti monitorati presso l'organizzazione sono riconosciuti:
+\begin{enumerate}
+    \item Verificare che l'amministratore possa monitorare gli accessi degli utenti riconosciuti.
+    \item Verificare che l'amministratore possa monitorare gli accessi effettuati da uno specifico utente riconosciuto visualizzandone il nome, cognome e l'orario di accesso.
+    \item Verificare che l'amministratore possa filtrare la lista degli accessi di uno specifico utente riconosciuto per data decrescente.
+    \item Verificare che l'amministratore possa filtrare la lista degli accessi di uno specifico utente riconosciuto per data crescente.
+    \item Verificare che l'amministratore possa filtrare la lista degli accessi di uno specifico utente riconosciuto per una data precisa.
+    \item Verificare che l'amministratore possa monitorare gli accessi effettuati presso un luogo da un specifico utente riconosciuto visualizzandone il nome, il cognome e l’orario di accesso.
+\end{enumerate} \\
+
+%da R1FS10.11 a R1FS9.11
+%TSF-X & & \begin{itemize}
 
 %\end{itemize}
+
 % fine test Christian
 
 % test Riccardo
