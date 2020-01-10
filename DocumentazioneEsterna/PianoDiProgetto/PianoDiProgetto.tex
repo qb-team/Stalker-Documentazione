@@ -2,8 +2,8 @@
 \usepackage{../../template/Stiletemplate}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
-\usepackage{pdflscape}
 \usepackage[italian]{babel}
+\usepackage{pdflscape}
 \usepackage[raggedright]{titlesec}
 \usepackage{blindtext}
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
@@ -27,7 +27,11 @@
 \tableofcontents
 \clearpage
 
-\renewcommand{\listfigurename}{Elenco dei diagrammi}
+\renewcommand{\figurename}{Diagramma}
+
+\renewcommand{\listfigurename}{Elenco diagrammi}
+
+\renewcommand{\listtablename}{Elenco tabelle}
 
 \listoffigures
 \clearpage
