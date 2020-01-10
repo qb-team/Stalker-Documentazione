@@ -4,6 +4,7 @@
 
 # File generici
 *Thumbs.db
+*.DS_Store
 
 # LaTeX
 *.log

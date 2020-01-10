@@ -1,0 +1,201 @@
+% scritto da Tommaso Azzalin, Riccardo Baratin, Christian Mattei
+
+% test Christian R1FI1 a R1FA2(compreso) e R2FA6.1 a R2FA6.9 e R1FC3 a R1FI8 e R1FS6.1 a R1FS7.6 e R1FS10.11 a R1FS9.11
+
+%da R1FI1 a R1FA8.4
+TSF-X & Accesso all'applicazione di un utente non autenticato & \begin{enumerate}
+    \item Verificare che l'utente possa autenticarsi con le credenziali Stalker.
+    \item Verificare che l'utente possa registrarsi creando un account Stalker.
+\end{enumerate}
+Se l'utente vuole autenticarsi accedendo con le credenziali:
+\begin{enumerate}
+    \item Verificare che l'utente abbia inserito correttamente l'e-mail.
+    \item Verificare che l'utente abbia inserito correttamente la password.
+    \item Verificare che l'utente visualizzi un messaggio d'errore se l'autenticazione viene negata per inserimento di credenziali errate.
+\end{enumerate}
+Se l'utente si è dimenticato della password:
+\begin{itemize}
+    \item Verifica che l'utente possa effettuare il reset della password qualora se la fosse dimenticata.
+\end{itemize}
+Se l'utente vuole autenticarsi registrandosi:
+\begin{enumerate}
+    \item Verificare che l'utente abbia inserito una e-mail esistente.
+    \item Verificare che l'utente visualizzi un messaggio d'errore se tentasse di registrarsi con un'e-mail già usata nel sistema.
+    \item Verificare che l'utente abbia inserito una password.
+    \item Verificare che l'utente visualizzi un messaggio d'errore qualora abbia inserito una password non ritenuta sicura. Il processo di autenticazione fallisce.
+    \item Verificare che l'utente abbia confermato l'inserimento della password.
+    \item Verificare che l'utente visualizzi un messaggio d'errore qualora abbia inserito una conferma password diversa dalla password. Il processo di autenticazione fallisce.
+    \item Verificare che l'utente abbia accettato le condizioni generali d'uso.
+    \item Verificare che la registrazione si interrompa e che l'applicazione si chiuda nel caso che l'utente non abbia accettato le condizioni generali d'uso.
+\end{enumerate} \\
+
+% R1FA2
+TSF-X & Logout dell'utente & \begin{itemize}
+    \item Verifica che l'utente possa effettuare il logout dall'applicazione.
+\end{itemize} \\
+
+%da R2FA6.1 a R2FA6.9
+TSF-X & Tracciamento dell'utente nell'organizzazione & \begin{enumerate}
+    \item Verificare che il tracciamento del movimento dell'utente venga registrato correttamente.
+    \item Verificare che l'utente abbia ricevuto la notifica della corretta registrazione del suo movimento.
+    \item Verificare che se le informazioni necessarie per la registrazione del movimento non sono memorizzate, allora l'utente dovrà ricevere una notifica di tracciatura fallita.
+\end{enumerate}
+Durante la registrazione del tracciamento del movimento dell'utente:
+\begin{enumerate}
+    \item Verificare che la data sia memorizzata.
+    \item Verificare che l'ora sia memorizzata.
+    \item Verificare chi, in maniera generica, sia memorizzato.
+\end{enumerate}
+Se l'utente è in modalità di tracciamento autenticata:
+\begin{enumerate}
+    \item Verificare che abbia effettuato un ingresso nell'organizzazione.
+    \item Verificare che abbia effettuato l'uscita nell'organizzazione.
+\end{enumerate}
+Se l'utente è in modalità di tracciamento anonima:
+\begin{enumerate}
+    \item Verificare che abbia effettuato un ingresso nell'organizzazione.
+    \item Verificare che abbia effettuato l'uscita nell'organizzazione.
+\end{enumerate} \\
+
+%da R1FC3 a R1FI8
+TSF-X & Disponibilità organizzazioni visualizzabili dall'amministratore & \begin{itemize}
+    \item Verificare che l'amministratore possa visualizzare le organizzazioni disponibili.
+\end{itemize}
+Se l'organizzazione visualizzata è disponibile:
+\begin{enumerate}
+    \item Verificare che l'amministratore possa vedere il suo nome.
+    \item Verificare che l'amministratore possa vedere la sua immagine.
+    \item Verificare che l'amministratore possa selezionarla.
+    \item Verificare che l'amministratore possa selezionarla e vedere il suo nome.
+    \item Verificare che l'amministratore possa selezionarla e vedere la sua immagine.
+    \item Verificare che l'amministratore possa selezionarla e vedere la sua descrizione.
+    \item Verificare che l'amministratore possa selezionarla e vedere il suo indirizzo.
+\end{enumerate} \\
+
+%da R1FS6.1 a R1FS7.6
+TSF-X & Monitoraggio dell'amministratore vedendo gli utenti presenti nell'organizzazione & \begin{itemize}
+    \item Verificare che l'amministratore possa monitorare gli utenti presenti nell'organizzazione.
+\end{itemize}
+Se gli utenti monitorati presso l'organizzazione sono anonimi:
+\begin{enumerate}
+    \item Verificare che l'amministratore possa monitorare il numero degli utenti anonimi.
+    \item Verificare che l'amministratore possa monitorare il numero degli utenti anonimi in un luogo specifico.
+\end{enumerate}
+Se gli utenti monitorati presso l'organizzazione sono riconosciuti:
+\begin{enumerate}
+    \item Verificare che l'amministratore possa monitorare gli accessi degli utenti riconosciuti.
+    \item Verificare che l'amministratore possa monitorare gli accessi effettuati da uno specifico utente riconosciuto visualizzandone il nome, cognome e l'orario di accesso.
+    \item Verificare che l'amministratore possa filtrare la lista degli accessi di uno specifico utente riconosciuto per data decrescente.
+    \item Verificare che l'amministratore possa filtrare la lista degli accessi di uno specifico utente riconosciuto per data crescente.
+    \item Verificare che l'amministratore possa filtrare la lista degli accessi di uno specifico utente riconosciuto per una data precisa.
+    \item Verificare che l'amministratore possa monitorare gli accessi effettuati presso un luogo da un specifico utente riconosciuto visualizzandone il nome, il cognome e l’orario di accesso.
+\end{enumerate} \\
+
+%da R1FS10.11 a R1FS9.11
+%TSF-X & & \begin{itemize}
+
+%\end{itemize}
+
+% fine test Christian
+
+% test Riccardo
+
+% fine test Riccardo
+
+% test Tommaso
+
+% da R1FA4.1 a R1FA4.3
+TSF-X & Selezione della modalità di tracciamento & \begin{enumerate}
+    \item Verificare che l'utente possa inserire la modalità di tracciamento anonima.
+    \item Verificare che l'utente possa inserire la modalità di tracciamento autenticata.
+\end{enumerate}
+Se l'utente si trova presso un luogo di un'organizzazione:
+\begin{enumerate}
+    \item Verificare che nel passaggio dalla modalità di tracciamento autenticato a quella anonima venga inviata al sistema la richiesta di uscita dell'utente dal luogo e la successiva richiesta di ingresso di utente anonimo.
+    \item Verificare che nel passaggio dalla modalità di tracciamento anonima a quella autenticata venga inviata al sistema la richiesta di uscita dell'utente dal luogo e la successiva richiesta di ingresso di utente riconosciuto.
+\end{enumerate} \\
+
+% da R2FA5.1 a R2FA5.5, da R2FA5.10 a R2FA5.12, R2FA5.16, R2FA8.5
+TSF-X & Storico degli accessi dell'utente presso un'organizzazione & \begin{enumerate}
+    \item Verificare che l'utente possa vedere il proprio storico accessi presso un'organizzazione. Ogni accesso deve mostrare la data in cui è stato compiuto, il luogo corrispondente, il tempo totale trascorso all'interno nel luogo.
+    \item Come al punto 1, ma la lista degli accessi deve risultare ordinata per data in ordine decrescente\ap{G}.
+    \item Come al punto 1, ma la lista degli accessi deve risultare ordinata per data in ordine crescente\ap{G}.
+    \item Come al punto 1, ma della lista vengono mostrati solo gli accessi che rispettano i parametri di ricerca sul giorno cercato.
+    \item Verificare che in assenza di accessi effettuati presso un'organizzazione l'utente visualizzi un messaggio informativo.
+\end{enumerate}
+Se l'utente si trova presso un luogo di un'organizzazione:
+\begin{enumerate}
+    \item Verificare che l'utente possa visualizzare il tempo trascorso all'interno di tutti i luoghi dell'organizzazione dall'ultimo ingresso preceduto da un'uscita da un luogo di un'altra organizzazione se avvenuto nella stessa giornata o dall'inizio della giornata se quest'uscita è di un giorno precedente. % NON SONO SICURO, MOLTO COMPLESSO E FORSE NON FATTIBILE
+\end{enumerate}
+Se l'utente si trova presso un luogo di un'organizzazione e sta visualizzando lo storico accessi presso la stesso luogo:
+\begin{enumerate}
+    \item Verificare che l'utente possa visualizzare il tempo trascorso all'interno dall'ultimo ingresso effettuato.
+\end{enumerate} \\
+
+% da R2FA5.6 a R2FA5.9, da R2FA5.13 a R2FA5.15, R2FA5.17, R2FA8.6
+TSF-X & Storico degli accessi dell'utente presso un luogo di un'organizzazione & \begin{enumerate}
+    \item Verificare che l'utente possa vedere il proprio storico accessi presso il luogo di un'organizzazione. Ogni accesso deve mostrare la data in cui è stato compiuto, il luogo corrispondente, il tempo totale trascorso all'interno nel luogo.
+    \item Come al punto 1, ma la lista degli accessi deve risultare ordinata per data in ordine decrescente\ap{G}.
+    \item Come al punto 1, ma la lista degli accessi deve risultare ordinata per data in ordine crescente\ap{G}.
+    \item Come al punto 1, ma della lista vengono mostrati solo gli accessi che rispettano i parametri di ricerca sul giorno cercato.
+    \item Verificare che in assenza di accessi effettuati presso il luogo di un'organizzazione selezionato l'utente visualizzi un messaggio informativo.
+\end{enumerate}
+Se l'utente si trova presso lo stesso luogo:
+\begin{enumerate}
+    \item Verificare che l'utente possa visualizzare il tempo trascorso all'interno del luogo dall'ultimo ingresso effettuato.
+\end{enumerate} \\
+
+% da R1FI2 a R1FS1.3
+TSF-X & Accesso al server di un amministratore non autenticato & \begin{enumerate}
+    \item Verificare che l'amministratore possa inserire l'e-mail correttamente.
+    \item Verificare che l'amministratore possa inserire correttamente la password.
+    \item Verificare che l'amministratore visualizzi un messaggio d'errore se l'autenticazione viene negata per inserimento di credenziali errate.
+\end{enumerate}
+Se l'amministratore si è dimenticato della password:
+\begin{enumerate}
+    \item Verifica che l'amministratore possa effettuare il reset della password qualora se la fosse dimenticata.
+\end{enumerate} \\
+
+% R1FS2.1
+TSF-X & Logout dell'amministratore & \begin{enumerate}
+    \item Verifica che l'amministratore possa effettuare il logout dal server.
+\end{enumerate} \\
+
+% da R1FS5.1 a R1FS5.5
+TSF-X & Modifica della lista dei luoghi di tracciamento di un'organizzazione & \begin{enumerate}
+    \item Verificare che l'amministratore possa essere in grado di aggiungere un nuovo luogo in cui effettuare il tracciamento.
+    \item Verificare che l'amministratore possa essere in grado di modificare un luogo dell'organizzazione.
+    \item Verificare che l'amministratore possa essere in grado di eliminare un luogo dell'organizzazione.
+    \item Verificare che venga negata la selezione di un'area che non rispetta i vincoli imposti per l'organizzazione, visualizzando un messaggio d'errore.
+    \item Verificare che venga negato l'inserimento di un luogo se viene selezionata un'area che fuoriesce dal perimetro imposto per l'organizzazione, visualizzando un messaggio d'errore.
+\end{enumerate} \\
+
+% da R1FS5.5 a R1FS5.8
+TSF-X & Modifica di un luogo di un'organizzazione & \begin{enumerate}
+    \item Verificare che l'amministratore possa selezionare l'area geografica in cui effettuare il tracciamento mediante l'inserimento di coordinate geografiche.
+    \item Verificare che l'amministratore possa selezionare l'area geografica in cui effettuare il tracciamento mediante l'inserimento di marcatori su una mappa interattiva.
+    \item Verificare che l'amministratore possa annullare l'operazione di modifica del luogo dell'organizzazione.
+\end{enumerate} \\
+
+% da R1FS9.1 a R1FI11 (richiamo altri test????)
+TSF-X & Gestione degli amministratori nominati da un'amministratore & \begin{enumerate}
+    \item Verificare che l'amministratore possa visualizzare gli amministratori che ha precedentemente nominato, di cui si devono visualizzare e-mail, privilegi.
+    \item Verificare che l'amministratore possa nominare un nuovo amministratore.
+    \item Verificare che l'amministratore proprietario possa modificare i privilegi di un altro amministratore, inserendo il suo indirizzo e-mail.
+    \item Verificare che l'amministratore proprietario possa eliminare un amministratore, inserendo il suo indirizzo e-mail.
+    \item Verificare che se non è presente un amministratore con l'indirizzo e-mail inserito dall'amministratore proprietario venga visualizzato un messaggio d'errore.
+    \item Verificare che se non è presente un amministratore con l'indirizzo e-mail inserito dall'amministratore proprietario venga visualizzato un messaggio d'errore.
+    \item Verificare che l'amministratore proprietario possa annullare l'operazione di modifica dei privilegi di un'amministratore.
+\end{enumerate} \\
+
+% da R1FS9.2 a R1FS9.6
+TSF-X & Nomina di un nuovo amministratore da parte di un altro amministratore per la stessa organizzazione & \begin{enumerate}
+    \item Verificare che l'amministratore possa inserire l'indirizzo e-mail per il nuovo amministratore.
+    \item Verificare che l'amministratore possa inserire la password per il nuovo amministratore.
+    \item Verificare che l'amministratore possa inserire la conferma della password (che dev'essere uguale alla password).
+    \item Verificare che l'amministratore possa selezionare i privilegi per il nuovo amministratore.
+    \item Verificare che se l'indirizzo e-mail del nuovo amministratore è già presente nel sistema venga visualizzato un messaggio d'errore.
+    \item Verificare che se la password risulta troppo debole venga visualizzato un messaggio d'errore.
+    \item Verificare che se la conferma della password non combacia con la password venga visualizzato un messaggio d'errore.
+\end{enumerate} \\
+% fine test Tommaso

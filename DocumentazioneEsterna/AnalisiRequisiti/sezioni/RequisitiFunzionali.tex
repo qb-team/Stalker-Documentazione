@@ -1,14 +1,65 @@
 \renewcommand{\o}{Obbligatorio}
 \renewcommand{\d}{Desiderabile}
 \newcommand{\op}{Opzionale}
+
+Rappresentano dei requisiti che deve soddisfare il prodotto che si vuole realizzare.\\
+I requisiti saranno organizzati in forma tabellare.\\
+La tabella avrà le seguenti tre colonne:
+\begin{itemize}
+	\item Codice identificativo
+	\item Classificazione
+	\item Descrizione
+	\item Fonti
+\end{itemize}
+\paragraph{Codice identificativo dei requisiti}\mbox{}\\
+Ogni requisito sarà strutturato come segue:
+\begin{itemize}
+	\item Identificativo: \textbf{R[Importanza][Tipologia][Codice]}\\
+Dove:
+\begin{itemize}
+		\item \textbf{Importanza:}
+		\begin{itemize}
+			\item \textbf{1}: requisito obbligatorio, ovvero irrinunciabile per almeno uno degli stakeholder
+			\item \textbf{2}: requisito desiderabile, ovvero non strettamente necessario ma che porta valore aggiunto riconoscibile
+			\item \textbf{3}: requisito opzionale, ovvero relativamente utile oppure contrattabile più avanti nel progetto
+		\end{itemize}
+		\item \textbf{Tipologia:}
+		\begin{itemize}
+			\item \textbf{F}: funzionale, definisce una funzione di un sistema di uno o più dei suoi componenti
+			\item \textbf{Q}: qualitativo, definisce un requisito per garantire la qualità per un certo aspetto del progetto
+			\item \textbf{P}: prestazionale, definisce un requisito che garantisce efficienza prestazionale nel prodotto
+			\item \textbf{V}: vincolo, definisce un requisito volto a far rispettare un dato vincolo
+		\end{itemize}
+		\item \textbf{Codice:}\\
+		Composto da:
+		\begin{itemize}
+			\item A*\ap{I} se il requisito proviene da un caso d'uso dell'applicazione, dove *\ap{I} sarà composto da: il numero del caso d'uso (lato app) kite-level di provenienza, un punto e il numero progressivo univoco
+			\item S*\ap{II} se il requisito proviene da un caso d'uso del server, dove *\ap{II} sarà composto da: il numero del caso d'uso (lato server) kite-level di provenienza, un punto e il numero progressivo univoco
+			\item C*\ap{III} se il requisito proviene dal capitolato, dove *\ap{III} sarà il numero progressivo univoco
+			\item V*\ap{IV} se il requisito proviene da un verbale, dove *\ap{IV} inizierà con il numero che indica il verbale da cui proviene il requisito; il numero si calcola a partire da 1, che sarà associato al primo verbale redatto (in ordine temporale). Infine vi sarà un punto seguito dal numero progressivo
+			\item I*\ap{V} se il requisito proviene da una decisione presa internamente al gruppo, dove *\ap{V} sarà un numero progressivo
+		\end{itemize}
+\end{itemize}
+	\item \textbf{Descrizione}: descrizione sintetica ma al contempo esaustiva del requisito.
+	\item \textbf{Classificazione}: informazione ridondante, sotto forma testuale, dell’importanza del requisito. Facilita la lettura dei requisiti.
+	\item \textbf{Fonti}: definisce da dove deriva il requisito. I requisiti vengono raccolti da una o più fonti tra quelle citate di seguito:
+	\begin{itemize}
+		\item \textbf{Capitolato}: requisito individuato dalla lettura e/o analisi del capitolato
+		\item \textbf{Interno}: requisito che gli analisti hanno ritenuto opportuno aggiungere
+		\item \textbf{Caso d’uso}: il requisito è derivato da uno o più casi d’uso. Riportare anche il/i codice/i identificativo/i del/i caso/i d’uso.
+		\item \textbf{Verbale}: requisito derivato in seguito ad una richiesta di chiarimento con il committente. Riportare il nome del documento del verbale da cui deriva il requisito in questione.		
+	\end{itemize}
+\end{itemize}
+
 \subsection{Requisiti funzionali}
 {
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}
 \centering
-\begin{longtable}{ c C{4cm} c c}
+\begin{longtable}{ c C{8cm} c c}
 \rowcolor{rossoep}
 \textcolor{white}{\textbf{Identificativo}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Classificazione}} & \textcolor{white}{\textbf{Fonti}}\\	
+\endhead
 
 R1FI1 & Un utente non autenticato non può effettuare alcuna azione a meno di autenticazione e registrazione & \o & Interno\\
 
@@ -16,11 +67,11 @@ R1FA1.1 & L'autenticazione da parte di un utente necessita di e-mail & \o & UCA 
 
 R1FA1.2 & L'autenticazione da parte di un utente necessita di password & \o & UCA 1.1.2 Interno\\
 
-R1FA7.1 & L'autenticazione viene negata qualora l'utente tenti di autenticarsi con delle credenziali errate. Viene inoltre visualizzato un messaggio d'errore & \o & UCA 7.1.4 Interno\\
+R1FA8.1 & L'autenticazione viene negata qualora l'utente tenti di autenticarsi con delle credenziali errate. Viene inoltre visualizzato un messaggio d'errore & \o & UCA 8.1.4 Interno\\
 
 R1FA1.3 & La registrazione da parte di un utente necessita di e-mail & \o & UCA 1.2.1 Interno\\
 
-R1FA7.2 & Il processo di registrazione dell'utente viene negato qualora l'e-mail inserita fosse già registrata nel sistema. Viene visualizzato inoltre un messaggio d'errore & \o & UCA 7.1.1 Interno\\
+R1FA8.2 & Il processo di registrazione dell'utente viene negato qualora l'e-mail inserita fosse già registrata nel sistema. Viene visualizzato inoltre un messaggio d'errore & \o & UCA 8.1.1 Interno\\
 
 R1FA1.4 & La registrazione da parte di un utente necessita di password & \o & UCA 1.2.2 Interno\\
 
@@ -32,9 +83,9 @@ R1FA1.7 & Qualora l'utente dovesse rifiutare le condizioni generali d'uso deve v
 
 R2FA1.8 & L'utente deve essere in grado di effettuare il reset della password qualora se la fosse dimenticata & \d & UCA 1.3 Interno\\
 
-R1FA7.3 & Il processo di autenticazione viene negato qualora la password inserita non sia abbastanza sicura. Viene visualizzato inoltre un messaggio d'errore & \o & UCA 1.3 Interno\\
+R1FA8.3 & Il processo di autenticazione viene negato qualora la password inserita non sia abbastanza sicura. Viene visualizzato inoltre un messaggio d'errore & \o & UCA 8.1.3 Interno\\
 
-R1FA7.4 & Il processo di registrazione viene negato se password e conferma password inserita non combaciano. Viene visualizzato inoltre un messaggio d'errore & \o & UCA 1.3 Interno\\
+R1FA8.4 & Il processo di registrazione viene negato se password e conferma password inserita non combaciano. Viene visualizzato inoltre un messaggio d'errore & \o & UCA 8.1.3 Interno\\
 
 %PERIN
 
@@ -44,7 +95,7 @@ R1FA3.1 & L'utente può gestire la propria lista delle organizzazioni\ap{G}& \o 
 
 R1FA3.2 & L'utente deve poter essere in grado di scaricare la lista di tutte le organizzazioni\ap{G} & \o & UCA 3.1 Capitolato \\
 
-R1FA7.3 & Qualora fallisca lo scaricamento della lista delle organizzazioni\ap{G} deve venire visualizzato un messaggio d'errore che lo informa di tale evento & \o & UCA 7.3.1 Interno \\
+R1FA8.3 & Qualora fallisca lo scaricamento della lista delle organizzazioni\ap{G} deve venire visualizzato un messaggio d'errore che lo informa di tale evento & \o & UCA 8.3.1 Interno \\
 
 R1FA3.3 & L’utente deve poter essere in grado di gestire la propria lista delle organizzazioni preferite\ap{G} & \o & UCA 3.2 Interno \\
 
@@ -54,7 +105,7 @@ R1FA3.5 & Qualora l’utente inserisca un'organizzazione\ap{G} nella propria lis
 
 R1FA3.6 & L’utente può rimuovere una organizzazione\ap{G} presente nella propria lista delle organizzazioni preferite\ap{G} & \o & UCA 3.2.3 Interno \\
 
-R1FA7.4 & Qualora non sia memorizzata nessuna lista delle organizzazioni\ap{G} nel dispositivo, viene informato l’utente di questo fatto & \o & UCA 7.3.2 Interno \\
+R1FA8.4 & Qualora non sia memorizzata nessuna lista delle organizzazioni\ap{G} nel dispositivo, viene informato l’utente di questo fatto & \o & UCA 8.3.2 Interno \\
 
 R1FA3.7 & L’utente ha la possibilità di aggiornare la lista delle organizzazioni\ap{G} & \o & UCA 3.3 Interno \\
 
@@ -120,9 +171,9 @@ R2FA5.16 & L’utente se si trova all’interno dell’organizzazione\ap{G} ha l
 
 R2FA5.17 & L’utente se si trova all’interno dell’luogo dell’organizzazione\ap{G} ha la possibilità di visualizzare il tempo passato all’interno dall'ultimo ingresso effettuato & \d & UCA 5.2 Capitolato \\
 
-R2FA7.5 & Qualora non ci sono accessi effettuati presso l'organizzazione selezionata, l'utente deve essere informato di ciò & \d & UCA 7.5.1 Interno \\
+R2FA8.5 & Qualora non ci sono accessi effettuati presso l'organizzazione selezionata, l'utente deve essere informato di ciò & \d & UCA 8.5.1 Interno \\
 
-R2FA7.6 & Qualora non ci sono accessi effettuati presso il luogo selezionato, l'utente deve essere informato di ciò & \d & UCA 7.5.2 Interno \\
+R2FA8.6 & Qualora non ci sono accessi effettuati presso il luogo selezionato, l'utente deve essere informato di ciò & \d & UCA 8.5.2 Interno \\
 
 R2FA6.1 & L’utente che effettua un movimento nell’organizzazione, deve essere registrato il tracciamento della sua azione & \d & UCA 6 Capitolato \\
 
@@ -140,11 +191,19 @@ R2FA6.7 & L’utente che effettua un ingresso nell’organizzazione, deve essere
 
 R2FA6.8 & L’utente che effettua l’uscita dall’organizzazione, deve essere registrato il tracciamento della sua azione secondo la modalità di tracciamento anonima & \d & UCA 6.4 Capitolato \\
 
-R2FA 7.7 & Qualora non vengano memorizzate le informazioni necessarie per la registrazione del movimento effettuato dall’utente, deve essere notificato tale evento all’utente & \d & UCA 7.6.1 \\
+R2FA8.7 & Qualora non vengano memorizzate le informazioni necessarie per la registrazione del movimento effettuato dall’utente, deve essere notificato tale evento all’utente & \d & UCA 8.6.1 \\
 
 R2FA6.9 & Deve essere notificato all’utente che è avvenuta la corretta registrazione del suo movimento & \d & UCA 6.1.3 \\
 
 %Cisotto
+
+R1FA7.1 & L'utente anonimo deve avere la possibilità di autenticarsi con le credenziali aziendali in un'organizzazione che richiede il tracciamento riconosciuto & \o & UCA 7 Capitolato \\
+
+R1FA8.8 & Qualora le credenziali LDAP aziendali inserite dall'utente non fossero riconosciute dal server aziendale associato viene mostrato un messaggio d'errore & \o & UCA 8.7.1 Interno \\
+
+R1FA7.2 & L'utente anonimo deve avere la possibilità di inserire l'e-mail durante l'autenticazione con le credenziali LDAP aziendali & \o & UCA 7.1.1 Interno \\
+
+R1FA7.3 & L'utente anonimo deve avere la possibilità di inserire la password durante l'autenticazione con le credenziali LDAP aziendali & \o & UCA 7.1.2 Interno \\
 
 R1FI2 & Un amministratore non autenticato non può effettuare alcuna azione a meno di autenticazione & \o & Interno \\
 
@@ -243,13 +302,17 @@ R1FS6.1 & L'amministratore può monitorare l'organizzazione visualizzando il num
 
 R1FS6.2 & L'amministratore può monitorare l'organizzazione visualizzando il numero di utenti anonimi presenti in un specifico luogo dell'organizzazione  & \o & UCS 6.1 Capitolato\\
 
-R1FS7.1 & L'amministratore può monitorato gli accessi effettuati dagli utenti riconosciuti visualizzandone il nome e il cognome & \o & UCS 7 Capitolato\\
+R1FS7.1 & L'amministratore può monitorato gli accessi effettuati dagli utenti riconosciuti & \o & UCS 7 Capitolato\\
 
-R1FS7.2 & L'amministratore può monitorare gli accessi effettuati da un specifico utente riconosciuto visualizzandone il nome e il cognome & \o & UCS 7.1 Capitolato\\
+R1FS7.2 & L'amministratore può monitorare gli accessi effettuati presso una organizzazione da un specifico utente riconosciuto visualizzandone il nome, il cognome e l'orario di accesso & \o & UCS 7.1 Capitolato\\
 
-R2FS7.3 & L'amministratore può monitorare gli accessi filtrandoli in base a una data & \d & UCS 7.2 Interno\\
+R2FS7.3 & L’amministratore può filtrare la lista degli accessi di un utente riconosciuto per data decrescente & \d & UCS 7.1.1 Interno \\
 
-R2FS7.4 & Bisogna inserire una data per filtrare gli accessi in base a essa & \d & UCS 7.2.1 Interno\\
+R2FS7.4 & L’amministratore può filtrare la lista degli accessi di un utente riconosciuto per data crescente & \d & UCS 7.1.2 Interno \\
+
+R2FS7.5 & L'amministratore può monitorare gli accessi filtrandoli in base a una data precisa & \d & UCS 7.1.3 Interno\\
+
+R1FS7.6 & L'amministratore può monitorare gli accessi effettuati presso un luogo all'interno di una organizzazione da un specifico utente riconosciuto visualizzandone il nome, il cognome e l'orario di accesso & \o & UCS 7.2 Capitolato\\
 
 R1FS8.1 & L'amministratore può ricevere un report tabellare degli accessi ai luoghi dell'organizzazione & \d & UCS 8 Capitolato\\
 
