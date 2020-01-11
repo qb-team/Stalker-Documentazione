@@ -1,7 +1,7 @@
 %scritto da Federico Perin
 \subsection{Gestione della qualità}
 \subsubsection{Obiettivo}
-Il gruppo \Gruppo{} ha come obiettivo prefissato di essere sistematico\ap{G}, disciplinato\ap{G} e quantificabile\ap{G}, ai fini di:
+Il gruppo \Gruppo ha come obiettivo prefissato di essere sistematico\ap{G}, disciplinato\ap{G} e quantificabile\ap{G}, ai fini di:
 \begin{itemize}
     \item garantire la qualità nel prodotto software da realizzare;
     \item soddisfare le richieste del proponente e del committente;
@@ -9,23 +9,72 @@ Il gruppo \Gruppo{} ha come obiettivo prefissato di essere sistematico\ap{G}, di
 \end{itemize}
 
 \subsubsection{Piano di Qualifica}
-Nel documento \textbf{Piano di Qualifica} il gruppo illustra come intende gestire la qualità di processo e di prodotto, elenca le metriche definite per aderire alle definizioni dello standard e i test per verificare la soddisfazione dei requisiti del prodotto software.
-La qualità di processo e di prodotto sono due aspetti chiaramente coordinati, ma vengono gestiti separatamente e soprattutto si basano su due standard diversi:
+Nel documento \textbf{Piano di Qualifica} il gruppo \Gruppo illustra come intende gestire la qualità di processo\ap{G} e di prodotto, elenca le varie metriche definite per aderire alle definizioni dello standard e i test per verificare la soddisfazione dei requisiti del prodotto software.
+La qualità di processo\ap{G} e di prodotto sono due aspetti chiaramente coordinati, ma vengono gestiti separatamente. \\ \\
+I capitoli principali del documento sono i seguenti:
 \begin{itemize}
-    \item la qualità di processo si basa sullo standard ISO/IEC 12207;
-    \item la qualità di prodotto si basa sullo standard ISO/IEC 9126.
+    \item \textbf{Qualità di processo:} sezione dove vengono elencate le metriche inerenti al processo;
+    \item \textbf{Qualità di prodotto:} sezione dove vengono elencate le metriche inerenti al prodotto;
+    \item \textbf{Strategia di testing:} sezione dove viene elencato il piano di testing delle componenti e del sistema software nel suo complesso;
+    \item \textbf{Standard di qualità adottati:} sezione dove vengono spiegati gli standard adottati.
 \end{itemize}
-Il documento si occupa poi di indicare come poter calcolare i valori per le metriche indicate e gli strumenti per farlo.
 
-\setlength{\parindent}{-0.1em}
-\paragraph{Metriche di qualità}
-bla bla bla
-\subparagraph{Codici metriche}
-bla bla bla 2
-\subparagraph{Struttura descrittiva metriche}
-bla bla bla 3
-\subparagraph{Tabella riassuntiva metriche}
-bla bla bla 4
+\paragraph{Metriche di qualità} \mbox{} \\ \\
+\textbf{Metriche di processo:}\\
+Vengono utilizzate delle metriche che servono per monitorare lo stato dei processi scelti nello standard ISO/IEC 12207. Il Responsabile, grazie ai valori ricavati dalle metriche, è facilitato nel
+valutare il processo\ap{G} e di eseguire modifiche alla pianificazione, se necessario.\\
+
+\textbf{Metriche di prodotto:}\\
+Il modello di qualità del software descritto dalle norme ISO/IEC 9126 definisce le caratteristiche e sottocaratteristiche del software, ciascuna misurabile da metriche interne o esterne.
+Una volta specificati i requisiti di qualità del prodotto software, si identificano le caratteristiche e sottocaratteristiche di qualità che più contribuiscono ad indirizzare i requisiti elencati.
+Il gruppo \Gruppo{} si è impegnato a scegliere le metriche interne che maggiormente influenzano le caratteristiche esterne del prodotto finale, in modo che esse possano predire quanto più possibile il risultato finale.
+
+\subparagraph{Codici metriche}\mbox{} \\ \\
+Ogni metrica di processo\ap{G} ha un codice univoco ed è strutturato in questo formato \textbf{MPC-00}:
+\begin{itemize}
+    \item \textbf{M}: metrica;
+    \item \textbf{PC}: processo\ap{G};
+    \item \textbf{-} : trattino separatore;
+    \item \textbf{00}: numero incrementale.
+\end{itemize}
+Ogni metrica di prodotto ha un codice univoco ed è strutturato in questo formato \textbf{MPD-00}:
+\begin{itemize}
+    \item \textbf{M}: metrica;
+    \item \textbf{PD}: prodotto;
+    \item \textbf{-} : trattino separatore;
+    \item \textbf{00}: numero incrementale.
+\end{itemize}
+
+\subparagraph{Struttura descrittiva metriche}\mbox{} \\ \\
+Ogni caratteristica di ogni metrica viene elencata in una lista, mentre il nome della metrica rappresenta il titolo di questo elenco ed è visibile nell'indice del documento. La struttura è la seguente:
+\begin{itemize}
+    \item \textbf{Codice:} codice univoco;
+    \item \textbf{Descrizione:} breve descrizione della metrica e del contesto applicativo;
+    \item \textbf{Processo di riferimento:} questa parte riguarda esclusivamente le metriche di processo\ap{G} e viene spiegato in quale attività di processo\ap{G} viene applicata tale metrica (riferimento allo standard ISO/IEC 12207);
+    \item \textbf{Attributo di riferimento:} questa parte riguarda esclusivamente le metriche di prodotto e viene spiegato in quale attributo della caratteristica di prodotto viene applicata tale metrica (riferimento allo standard ISO/IEC 9126);
+    \item \textbf{Sigla:} nome della metrica in formato sigla, utilizzato principalmente nelle formule matematiche e nella rappresentazione dei range delle metriche.;
+    \item \textbf{Formula:} sezione opzionale nel caso che la metrica preveda una formula matematica per essere calcolata;
+    \item \textbf{Range di valori che può assumere:} sezione dove sotto ad essa vengono elencati i range accettabili ed ottimali della metrica;
+    \begin{itemize}
+        \item \textbf{Accettabile:} valore della metrica ritenuto accettabile per garantire la qualità;
+        \item \textbf{Ottimale:} valore della metrica ritenuto ottimale per garantire la qualità.
+    \end{itemize}
+\end{itemize} 
+
+\subparagraph{Tabella riassuntiva metriche}\mbox{} \\ \\
+Per riassumere tutte le metriche e le loro caratteristiche sono rappresentate in delle tabelle situate alla fine del capitolo di appartenenza. Le tabelle hanno questo formato:
+
+\rowcolors{2}{grigetto}{white}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{longtable}{ c C{4cm} c c c}
+    \caption{Tabella metriche dei processi/prodotti}\\
+    \rowcolor{darkblue}
+    \textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Valore Accettabile}} & \textcolor{white}{\textbf{Valore Ottimale}}\\
+    \end{longtable}
 
 \subsubsection{Strumenti per il controllo di qualità}
-bla bla bla 5
+\paragraph{Metrica - Indice di Gulpease}\mbox{} \\ \\
+È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Per poter calcolare tale indice bisogna utilizzare la seguente formula:
+$$IG = 89 + {{300 \; \cdot \; (numero\; delle \; frasi) \; - \; 10 \; \cdot \; (numero \; delle \; lettere)}\over numero \; delle \; parole}$$
+Basandosi su questa formula il gruppo \Gruppo ha sviluppato un algoritmo capace di ottenere l'indice di leggibilità di Gulpease dandogli in pasto come input un qualsiasi pdf 
+documentato. Grazie a questo strumento i tempi di verifica sono efficienti\ap{G} mentre per la sua efficacia\ap{G} la si ottimizzerà nella prossima consegna.
