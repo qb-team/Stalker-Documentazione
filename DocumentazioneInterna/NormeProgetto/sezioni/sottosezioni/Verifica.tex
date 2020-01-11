@@ -20,10 +20,10 @@ Per effettuare l’attività di analisi statica vengono impiegati due possibili 
 Il walkthrough è un metodo di verifica effettuato da tutti i membri del gruppo, e non solo dai verificatori, il cui obiettivo è rilevare la presenza di difetti o anomalie senza aver effettuato alcuna assunzione.
 Per il codice devono essere verificate tutte le possibili esecuzioni; mentre per i documenti si devono esaminare tutte le parti che li compongono.
 Questo metodo è utile da applicare nel periodo iniziale del progetto (antecedente alla RR), dato che non è ancora ben chiara la forma del prodotto che si sta realizzando.
-Inoltre, non tutti membri del gruppo hanno ampie conoscenze in tema di verifica, a maggior ragione su questo progetto. Una volta il prodotto in realizzazione viene considerato acquisito da tutto il gruppo, il walkthrough può venire sostituito con altri metodi meno onerosi e più mirati.
+Inoltre, non tutti membri del gruppo hanno ampie conoscenze in tema di verifica, a maggior ragione su questo progetto. Una volta che il prodotto in realizzazione viene considerato acquisito da tutto il gruppo, il walkthrough può venire sostituito con altri metodi meno onerosi e più mirati.
 \subparagraph*{Inspection} \mbox{}\\
-L'inspection è un metodo di verifica effettuato dai verificatori, il cui obiettivo è effettuare verifiche mirate sugli aspetti critici del prodotto al fine di rilevarne la presenza di difetti e anomalie.
-I verificatori, una volta aver acquisito una più ampia conoscenza sul prodotto da verificare, costruiscono e utilizzano una lista all’interno della quale vi sono gli aspetti critici da andare a verificare e dove verificarli.
+L'inspection è un metodo di verifica effettuato dai verificatori, il cui obiettivo è effettuare verifiche mirate sugli aspetti critici del prodotto al fine di rilevare la presenza di difetti e anomalie.
+I verificatori, una volta acquisita una più ampia conoscenza sul prodotto da verificare, costruiscono e utilizzano una lista all’interno della quale vi sono gli aspetti critici da andare a verificare e dove verificarli.
 
 \paragraph{Analisi dinamica} \mbox{}\\
 L'analisi dinamica è un'attività di verifica che viene eseguita esclusivamente sul prodotto software (e non sulla documentazione), in quanto ne richiede l'esecuzione per essere effettuata.
@@ -31,7 +31,7 @@ Viene applicata sul prodotto software attraverso i test, con l’obiettivo di in
 
 \subparagraph{Test} \mbox{}\\
 I test sono necessari per poter svolgere l'analisi dinamica del prodotto software.
-I test devono essere: automatici e ripetibili.
+I test devono essere automatici e ripetibili:
 \subparagraph*{Automatici} \mbox{}\\ 
 Per automatici si intende la necessità di disporre di un'automazione (per esempio un comando da CLI\ap{G}) che permetta a tutti i membri del gruppo di invocare ed eseguire tutti (o in parte) i test.
 I test devono poter essere eseguiti semplicemente e non devono richiedere alcuna interazione umana.
@@ -44,14 +44,14 @@ Per garantire questa caratteristica serve che ci sia determinismo, che è garant
     \item non cambia lo stato iniziale del sistema.
 \end{itemize}
 
-Ci sono diversi tipologie di test del software, ognuno dei quali ha un diverso oggetto di verifica e scopo.
+Ci sono diverse tipologie di test del software, ognuna delle quali ha un diverso oggetto di verifica e scopo.
 
 \subparagraph{Test di unità} \mbox{}\\
-I test di unità sono del codice, prodotto dal programmatore, che verificano il corretto comportamento di una singola unità del programma.
+I test di unità sono del codice, prodotto dal programmatore, che verifica il corretto comportamento di una singola unità del programma.
 Per unità si intende una funzionalità atomica che può essere verificata in modo isolato, in modo da assicurare che il risultato del test non sia influenzato dal comportamento di altre unità. In questo senso un'unità può essere un metodo, una classe o addirittura un package.
 È definito modulo una frazione dell'unità.
-Tipicamente un test di unità per un unità del software viene sviluppato dallo stesso programmatore che l'ha sviluppata (dato che la conosce a pieno).
-L'obiettivo è verificare l’assenza di alcuni errori, e documentare il comportamento dell’unità prodotta.
+Tipicamente un test di unità per un'unità del software viene sviluppato dallo stesso programmatore che l'ha sviluppata (dato che la conosce a pieno).
+L'obiettivo è verificare l’assenza di errori, e documentare il comportamento dell’unità prodotta.
 Per i test di unità vengono introdotti i seguenti concetti:
 \begin{itemize}
     \item \textbf{driver}: componente attiva che pilota i test (e permette l'esecuzione automatizzata);
@@ -70,10 +70,10 @@ Una volta che le unità sono verificate e passano con successo i relativi test, 
 I test di sistema verificano il comportamento dell’intero sistema.
 Si è quindi nella fase in cui tutte le componenti del sistema sono state integrate (i test di integrazione e di unità passano con successo) e si può verificare il loro comportamento all’interno del sistema in cui il prodotto dovrà essere installato o reso disponibile.
 L'obiettivo è verificare che siano rispettati i requisiti definiti con il committente.
-Quando questi test vengono svolti alla presenza del committente vengono definiti \textbf{test di accettazione} o \textbf{collaudo}. Se superati, permettono di procedere con il rilascio del prodotto software.
+Quando questi test vengono svolti con la presenza del committente vengono definiti \textbf{test di accettazione} o \textbf{collaudo}. Se superati, permettono di procedere con il rilascio del prodotto software.
 
 \subparagraph{Test di regressione} \mbox{}\\
-I test di regressione hanno come obiettivo verificare l'assenza di regressioni (ovvero malfunzionamenti o comportamenti imprevisti) nel caso in cui se c’è stata una modifica su una componente dalla quale ne dipendono altre.
-L'obiettivo di questi test è verificare che le componenti continuino a funzionare correttamente senza anomalie, ossia verificare che una modifica non pregiudichi le funzionalità già verificate con i test già effettuati in precedenza.
+I test di regressione hanno come obiettivo verificare l'assenza di regressioni (ovvero malfunzionamenti o comportamenti imprevisti) nel caso in cui si introduca una modifica su una componente dalla quale ne dipendono altre.
+L'obiettivo di questi test è verificare che le componenti continuino a funzionare correttamente senza anomalie, ossia verificare che una modifica non pregiudichi le funzionalità già verificate con i test effettuati in precedenza.
 Non è necessario identificare nuovi test, è sufficiente accertarsi che quelli presenti restituiscano i valori attesi.
 
