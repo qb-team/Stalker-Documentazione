@@ -33,11 +33,23 @@
 \newcommand{\Amministratore}{Amministratore di Progetto}
 
 % documenti
-\newcommand{\SdF}{Studio di Fattibilità}
-\newcommand{\PdQ}{Piano di Qualifica}
-\newcommand{\PdP}{Piano di Progetto}
-\newcommand{\NdP}{Norme di Progetto}
-\newcommand{\AdR}{Analisi dei Requisiti}
+\usepackage{xifthen}
+
+\newcommand{\SdF}[1]{
+    \ifthenelse{\isempty{#1}}{Studio di Fattibilità}{\textit{Studio di Fattibilità v.{#1}}}
+}
+\newcommand{\PdQ}[1]{
+    \ifthenelse{\isempty{#1}}{Piano di Qualifica}{\textit{Piano di Qualifica v.{#1}}}
+}
+\newcommand{\PdP}[1]{
+    \ifthenelse{\isempty{#1}}{Piano di Progetto}{\textit{Piano di Progetto v.{#1}}}
+}
+\newcommand{\NdP}[1]{
+    \ifthenelse{\isempty{#1}}{Norme di Progetto}{\textit{Norme di Progetto v.{#1}}}
+}
+\newcommand{\AdR}[1]{
+    \ifthenelse{\isempty{#1}}{Analisi dei Requisiti}{\textit{Analisi dei Requisiti v.{#1}}}
+}
 
 % comandi generali
 \newcommand{\glo}[1]{#1\ap{G}}
