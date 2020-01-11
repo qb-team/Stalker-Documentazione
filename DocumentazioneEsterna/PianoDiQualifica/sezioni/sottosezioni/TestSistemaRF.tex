@@ -172,8 +172,8 @@ TSF-X & Selezione della modalità di tracciamento\ap{G}& \begin{enumerate}
 \end{enumerate}
 Se l'utente si trova presso un luogo di un'organizzazione\ap{G}:
 \begin{enumerate}
-    \item Verificare che nel passaggio dalla modalità di tracciamento\ap{G}autenticato a quella anonima venga inviata al sistema la richiesta di uscita dell'utente dal luogo e la successiva richiesta di ingresso di utente anonimo.
-    \item Verificare che nel passaggio dalla modalità di tracciamento anonimo\ap{G} a quella autenticata venga inviata al sistema la richiesta di uscita dell'utente dal luogo e la successiva richiesta di ingresso di utente riconosciuto.
+    \item Verificare che nel passaggio dalla modalità di tracciamento autenticato\ap{G} a quella anonima venga inviata al sistema la richiesta di uscita dell'utente dal luogo e la successiva richiesta di ingresso di utente anonimo\ap{G}.
+    \item Verificare che nel passaggio dalla modalità di tracciamento anonimo\ap{G} a quella autenticata venga inviata al sistema la richiesta di uscita dell'utente dal luogo e la successiva richiesta di ingresso di utente riconosciuto\ap{G}.
 \end{enumerate} \\
 
 % da R2FA5.1 a R2FA5.5, da R2FA5.10 a R2FA5.12, R2FA5.16, R2FA8.5
@@ -186,7 +186,7 @@ TSF-X & Storico degli accessi\ap{G} dell'utente presso un'organizzazione\ap{G} &
 \end{enumerate}
 Se l'utente si trova presso un luogo di un'organizzazione\ap{G}:
 \begin{enumerate}
-    \item Verificare che l'utente possa visualizzare il tempo trascorso all'interno di tutti i luoghi dell'organizzazione\ap{G} dall'ultimo ingresso preceduto da un'uscita da un luogo di un'altra organizzazione\ap{G} se avvenuto nella stessa giornata o dall'inizio della giornata se quest'uscita è di un giorno precedente. % NON SONO SICURO, MOLTO COMPLESSO E FORSE NON FATTIBILE
+    \item Verificare che l'utente possa visualizzare il tempo trascorso all'interno di tutti i luoghi dell'organizzazione\ap{G} dall'ultimo ingresso. %Alla fine non puoi essere tracciato contemporaneamente in due luoghi quindi non credo abbia senso vedere l'uscita precedente ma basta riferirsi al tempo trascorso dall'ultimo accesso
 \end{enumerate}
 Se l'utente si trova presso un luogo di un'organizzazione\ap{G} e sta visualizzando lo storico accessi presso la stesso luogo:
 \begin{enumerate}
@@ -207,14 +207,14 @@ Se l'utente si trova presso lo stesso luogo:
 \end{enumerate} \\
 
 % da R1FI2 a R1FS1.3
-TSF-X & Accesso al server di un amministratore non autenticato & \begin{enumerate}
-    \item Verificare che l'amministratore possa inserire l'e-mail correttamente.
-    \item Verificare che l'amministratore possa inserire correttamente la password.
-    \item Verificare che l'amministratore visualizzi un messaggio d'errore se l'autenticazione\ap{G} viene negata per inserimento di credenziali errate.
+TSF-X & Accesso al server di un amministratore non autenticato\ap{G} & \begin{enumerate}
+    \item Verificare che l'amministratore non autenticato\ap{G} possa inserire l'e-mail correttamente.
+    \item Verificare che l'amministratore non autenticato\ap{G} possa inserire correttamente la password.
+    \item Verificare che l'amministratore non autenticato\ap{G} visualizzi un messaggio d'errore se l'autenticazione\ap{G} viene negata per inserimento di credenziali errate.
 \end{enumerate}
-Se l'amministratore si è dimenticato della password:
+Se l'amministratore non autenticato\ap{G} si è dimenticato della password:
 \begin{enumerate}
-    \item Verifica che l'amministratore possa effettuare il reset della password qualora se la fosse dimenticata.
+    \item Verifica che l'amministratore non autenticato\ap{G} possa effettuare il reset della password qualora se la fosse dimenticata.
 \end{enumerate} \\
 
 % R1FS2.1
@@ -242,7 +242,7 @@ TSF-X & Modifica di un luogo di un'organizzazione\ap{G} & \begin{enumerate}
 TSF-X & Gestione degli amministratori nominati da un amministratore & \begin{enumerate}
     \item Verificare che l'amministratore possa visualizzare gli amministratori che ha precedentemente nominato, di cui si devono visualizzare e-mail, privilegi.
     \item Verificare che l'amministratore possa nominare un nuovo amministratore.
-    \item Verificare che l'amministratore proprietario possa modificare i privilegi di un altro amministratore, inserendo il suo indirizzo e-mail.
+    \item Verificare che l'amministratore proprietario\ap{G} possa modificare i privilegi di un altro amministratore, inserendo il suo indirizzo e-mail.
     \item Verificare che l'amministratore proprietario possa eliminare un amministratore, inserendo il suo indirizzo e-mail.
     \item Verificare che se non è presente un amministratore con l'indirizzo e-mail inserito dall'amministratore proprietario venga visualizzato un messaggio d'errore.
     \item Verificare che se non è presente un amministratore con l'indirizzo e-mail inserito dall'amministratore proprietario venga visualizzato un messaggio d'errore.
