@@ -95,11 +95,6 @@ Verificare che l'amministratore visualizzatore:
     \item possa monitorare gli accessi effettuati presso un luogo da un specifico utente riconosciuto visualizzandone il nome, il cognome e l’orario di accesso.
 \end{enumerate} \\
 
-%da R1FS10.11 a R1FS9.11
-%TSF-X & & \begin{itemize}
-
-%\end{itemize}
-
 % fine test Christian
 
 % test Riccardo
@@ -187,10 +182,10 @@ Se l'organizzazione richiede il tracciamento autenticato, verificare che l'ammin
 
 % da R1FA4.1 a R1FA4.3
 TSF-X & Selezione della modalità di tracciamento\ap{G} & 
-Verificare\ap{G} che l'utente riconosciuto possa inserire la modalità di tracciamento\ap{G}:
+Verificare\ap{G} che l'utente riconosciuto:
 \begin{enumerate}
-    \item anonimo\ap{G}.
-    \item autenticato\ap{G}.
+    \item possa inserire la modalità di tracciamento\ap{G} anonimo\ap{G}.
+    \item possa inserire la modalità di tracciamento\ap{G} autenticato\ap{G}.
 \end{enumerate}
 Se l'utente riconosciuto si trova presso un luogo di un'organizzazione\ap{G}, verificare\ap{G} che:
 \begin{enumerate}
@@ -200,13 +195,13 @@ Se l'utente riconosciuto si trova presso un luogo di un'organizzazione\ap{G}, ve
 
 % da R2FA5.1 a R2FA5.5, da R2FA5.10 a R2FA5.12, R2FA5.16, R2FA8.5
 TSF-X & Storico degli accessi\ap{G} dell'utente anonimo presso un'organizzazione\ap{G} & 
-Verificare\ap{G} che:
+Verificare\ap{G} che l'utente anonimo:
 \begin{enumerate}
-    \item l'utente anonimo possa vedere il proprio storico accessi presso un'organizzazione\ap{G}. Ogni accesso deve mostrare la data in cui è stato compiuto, il luogo corrispondente, il tempo totale trascorso all'interno nel luogo;
-    \item Come al punto 1, ma la lista degli accessi\ap{G} deve risultare ordinata per data in ordine decrescente\ap{G};
-    \item Come al punto 1, ma la lista degli accessi\ap{G} deve risultare ordinata per data in ordine crescente\ap{G};
-    \item Come al punto 1, ma della lista vengono mostrati solo gli accessi che rispettano i parametri di ricerca sul giorno cercato;
-    \item in assenza di accessi effettuati presso un'organizzazione\ap{G} l'utente anonimo visualizzi un messaggio informativo.
+    \item possa vedere il proprio storico accessi presso un'organizzazione\ap{G}. Ogni accesso deve mostrare la data in cui è stato compiuto, il luogo corrispondente, il tempo totale trascorso all'interno nel luogo;
+    \item come al punto 1, ma la lista degli accessi\ap{G} deve risultare ordinata per data in ordine decrescente\ap{G};
+    \item come al punto 1, ma la lista degli accessi\ap{G} deve risultare ordinata per data in ordine crescente\ap{G};
+    \item come al punto 1, ma della lista vengono mostrati solo gli accessi che rispettano i parametri di ricerca sul giorno cercato;
+    \item riceva un messaggio informativo in assenza di accessi effettuati presso un'organizzazione\ap{G}.
 \end{enumerate}
 Se l'utente anonimo si trova presso un luogo di un'organizzazione\ap{G}, verificare\ap{G} che:
 \begin{enumerate}
@@ -246,10 +241,8 @@ Se l'amministratore non autenticato\ap{G} si è dimenticato della password, veri
 \end{enumerate} \\
 
 % R1FS2.1
-TSF-X & Logout\ap{G} dell'amministratore autenticato\ap{G} & 
-Verificare\ap{G} che:
-\begin{enumerate}
-    \item l'amministratore autenticato\ap{G} possa effettuare il logout\ap{G} dal server.
+TSF-X & Logout\ap{G} dell'amministratore autenticato\ap{G} & \begin{enumerate}
+    \item Verificare\ap{G} che l'amministratore autenticato\ap{G} possa effettuare il logout\ap{G} dal server.
 \end{enumerate} \\
 
 % da R1FS5.1 a R1FS5.5
