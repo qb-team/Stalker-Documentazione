@@ -19,17 +19,17 @@ I capitoli principali del documento sono i seguenti:
     \item \textbf{Standard di qualità adottati:} sezione dove vengono spiegati gli standard adottati.
 \end{itemize}
 
-\paragraph{Metriche di qualità} \mbox{} \\ \\
+\paragraph{Metriche di qualità}\mbox{}\\
 \textbf{Metriche di processo:}\\
 Vengono utilizzate delle metriche che servono per monitorare lo stato dei processi scelti nello standard ISO/IEC 12207. Il Responsabile, grazie ai valori ricavati dalle metriche, è facilitato nel
 valutare il processo\ap{G} e di eseguire modifiche alla pianificazione, se necessario.\\
 
 \textbf{Metriche di prodotto:}\\
-Il modello di qualità del software descritto dalle norme ISO/IEC 9126 definisce le caratteristiche e sottocaratteristiche del software, ciascuna misurabile da metriche interne o esterne.
-Una volta specificati i requisiti di qualità del prodotto software, si identificano le caratteristiche e sottocaratteristiche di qualità che più contribuiscono ad indirizzare i requisiti elencati.
+Il modello di qualità del software descritto dalle norme ISO/IEC 9126 definisce le caratteristiche e attributi del software, ciascuna misurabile da metriche interne o esterne.
+Una volta specificati i requisiti di qualità del prodotto software, si identificano le caratteristiche e attributi di qualità che più contribuiscono ad indirizzare i requisiti elencati.
 Il gruppo \Gruppo{} si è impegnato a scegliere le metriche interne che maggiormente influenzano le caratteristiche esterne del prodotto finale, in modo che esse possano predire quanto più possibile il risultato finale.
 
-\subparagraph{Codici metriche}\mbox{} \\ \\
+\subparagraph{Codici metriche}\mbox{}\\
 Ogni metrica di processo\ap{G} ha un codice univoco ed è strutturato in questo formato \textbf{MPC-00}:
 \begin{itemize}
     \item \textbf{M}: metrica;
@@ -45,7 +45,7 @@ Ogni metrica di prodotto ha un codice univoco ed è strutturato in questo format
     \item \textbf{00}: numero incrementale.
 \end{itemize}
 
-\subparagraph{Struttura descrittiva metriche}\mbox{} \\ \\
+\subparagraph{Struttura descrittiva metriche}\mbox{}\\
 Ogni caratteristica di ogni metrica viene elencata in una lista, mentre il nome della metrica rappresenta il titolo di questo elenco ed è visibile nell'indice del documento. La struttura è la seguente:
 \begin{itemize}
     \item \textbf{Codice:} codice univoco;
@@ -61,19 +61,21 @@ Ogni caratteristica di ogni metrica viene elencata in una lista, mentre il nome 
     \end{itemize}
 \end{itemize} 
 
-\subparagraph{Tabella riassuntiva metriche}\mbox{} \\ \\
+\subparagraph{Tabella riassuntiva metriche}\mbox{}\\
 Per riassumere tutte le metriche e le loro caratteristiche sono rappresentate in delle tabelle situate alla fine del capitolo di appartenenza. Le tabelle hanno questo formato:
 
+{
 \rowcolors{2}{grigetto}{white}
-    \renewcommand{\arraystretch}{1.5}
-    \begin{longtable}{ c C{4cm} c c c}
-    \caption{Tabella metriche dei processi/prodotti}\\
-    \rowcolor{darkblue}
-    \textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Valore Accettabile}} & \textcolor{white}{\textbf{Valore Ottimale}}\\
-    \end{longtable}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{ c C{4cm} c c c}
+\caption{Tabella metriche dei processi/prodotti}\\
+\rowcolor{darkblue}
+\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Valore Accettabile}} & \textcolor{white}{\textbf{Valore Ottimale}}\\
+\end{longtable}
+}
 
 \subsubsection{Strumenti per il controllo di qualità}
-\paragraph{Metrica - Indice di Gulpease}\mbox{} \\ \\
+\paragraph{Metrica - Indice di Gulpease}\mbox{}\\
 È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Per poter calcolare tale indice bisogna utilizzare la seguente formula:
 $$IG = 89 + {{300 \; \cdot \; (numero\; delle \; frasi) \; - \; 10 \; \cdot \; (numero \; delle \; lettere)}\over numero \; delle \; parole}$$
 Basandosi su questa formula il gruppo \Gruppo ha sviluppato un algoritmo capace di ottenere l'indice di leggibilità di Gulpease dandogli in pasto come input un qualsiasi pdf 
