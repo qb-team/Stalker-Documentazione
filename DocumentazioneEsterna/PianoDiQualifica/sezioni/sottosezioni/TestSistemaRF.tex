@@ -103,7 +103,64 @@ Se gli utenti monitorati presso l'organizzazione\ap{G} sono riconosciuti:
 % fine test Christian
 
 % test Riccardo
-
+% da R1FA3.1 a R2FA3.18
+TSF-X & Visualizzazione lista delle organizzazioni & \begin{enumerate}
+\item Verificare che l'utente sia in grado di scaricare la lista delle organizzazioni.
+\item Verificare che nel caso in cui si verifichi un errore durante lo scaricamento della lista di organizzazioni, l'utente visualizzi un messaggio di errore.
+\item Verificare che l'utente sia in grado di gestire la propria lista di organizzazioni preferite.
+\item Verificare che l'utente sia in grado di inserire un'organizzazione, presente nella lista di tutte le organizzazioni,  nella propria lista delle organizzazioni.
+\item Verificare che l'utente possa autenticarsi con credenziali LDAP, qualora scaricasse una organizzazione che richieda l'autenticazione con credenziali LDAP.
+\item Verificare che l'utente possa rimuovere un'organizzazione dalla propria lista delle organizzazioni preferite.
+\item Verificare che l'utente venga informato nel caso in cui non sia memorizzata nessuna lista delle organizzazioni del proprio dispositivo.
+\item Verificare che l'utente abbia la possibilità di aggiornare la lista delle organizzazioni.
+\item Verificare che l'utente possa aggiornare la lista delle organizzazioni tramite refresh manuale.
+\item Verificare che l'utente possa aggiornare la lista delle organizzazioni tramite temporizzazione.
+\item Verificare che l'utente possa visualizzare la lista delle organizzazioni.
+\item Verificare che l'utente possa visualizzare la lista delle organizzazioni ordinate alfabeticamente, dalla A alla Z.
+\item Verificare che l'utente possa visualizzare la lista delle organizzazioni ordinate secondo la politica FIFO.
+\item Verificare che l'utente possa visualizzare la lista delle organizzazioni che permettono il tracciamento anonimo.
+\item Verificare che l'utente possa visualizzare la lista delle organizzazioni che permettono il tracciamento autenticato.
+\item Verificare che l'utente possa effettuare ricerche personalizzate per cercare le organizzazioni presenti nella lista delle organizzazioni.
+\item Verificare che l'utente possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alle nazioni indicate dall'utente.
+\item  Verificare che l'utente possa ricercare organizzazioni presenti nella lista delle organizzazioni che hanno nel nome una sottostringa scelta dall'utente.
+\item  Verificare che l'utente possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alla città indicata dall'utente.
+\end{enumerate} \\
+%R1FA7.1 a R1FA7.3
+TSF-X & Autenticazione con credenziali LDAP & \begin{enumerate}
+\item Verificare che l'utente anonimo abbia la possibilità di autenticarsi con credenziali aziendali in un'organizzazione che richiede il tracciamento riconosciuto.
+\item Verificare che l'utente visualizzi un messaggio di errore qualora le credenziali LDAP non fossero riconosciute dal server.
+\item Verificare che l'utente anonimo possa inserire la propria e-mail durante l'autenticazione con le credenziali LDAP aziendali.
+\item Verificare che l'utente anonimo possa inserire la propria password durante l'autenticazione con le credenziali LDAP aziendali.
+\end{enumerate} \\
+% R1FS4.1 a R1FS4.11
+TSF-X & Modifica dei dati dell'organizzazione & \begin{enumerate}
+\item Verificare che l'amministratore possa inserire un nuovo nome dell'organizzazione.
+\item Verificare che l'amministratore possa modificare il nome dell'organizzazione.
+\item Verificare che l'amministratore possa inserire una nuova immagine della organizzazione.
+\item Verificare che l'amministratore possa modificare l'immagine della organizzazione.
+\item Verificare che l'amministratore possa inserire una nuova descrizione dell’organizzazione.
+\item Verificare che l'amministratore possa modificare la descrizione dell’organizzazione.
+\item Verificare che l'amministratore possa inserire un nuovo indirizzo dell’organizzazione.
+\item Verificare che l'amministratore possa modificare l'indirizzo dell’organizzazione.
+\item Verificare che l'amministratore possa inserire un nuovo indirizzo IP per l'organizzazione.
+\item Verificare che l'amministratore possa modificare l'indirizzo IP dell'organizzazione.
+\item Verificare che l'amministratore visualizzi un messaggio di errore qualora il nome dell'organizzazione inserito non rispetti i vincoli imposti.
+\item Verificare che l'amministratore visualizzi un messaggio di errore qualora il nome dell'organizzazione inserito sia già presente nel sistema e associato ad un'altra organizzazione.
+\item Verificare che l'amministratore visualizzi un messaggio di errore qualora l'immagine dell'organizzazione inserita non rispetti i vincoli imposti.
+\item Verificare che l'amministratore visualizzi un messaggio di errore qualora la descrizione dell'organizzazione inserita non rispetti i vincoli imposti.
+\item Verificare che l'amministratore visualizzi un messaggio di errore qualora l'indirizzo dell'organizzazione inserito non rispetti i vincoli imposti.
+\item Verificare che l'amministratore visualizzi un messaggio di errore qualora l'indirizzo IP dell'organizzazione inserito non rappresenti un server LDAP.
+\item Verificare che l'amministratore possa inviare la richiesta di eliminazione per un'organizzazione.
+\item Verificare che l'amministratore possa inserire una motivazione per la richiesta di eliminazione di un'organizzazione.
+\item Verificare che l'amministratore possa annullare le modifiche che sta apportando ad una organizzazione.
+\end{enumerate} \\
+%R1FS8.1 a R1FS8.4
+TSF-X & Report tabellare degli accessi ai luoghi dell'organizzazione  & \begin{enumerate}
+\item Verificare che l'amministratore possa ricevere un report tabellare degli accesi ai luoghi dell'organizzazione.
+\item Verificare che l'amministratore di un'organizzazione a tracciamento autenticato possa generare una tabella delle entrate e uscite degli utenti nei luoghi dell'organizzazione.
+\item Verificare che l'amministratore di un'organizzazione a tracciamento autenticato possa generare una tabella delle ore delle ore spese dagli utenti nei luoghi dell'organizzazione.
+\item Verificare che l'amministratore di un'organizzazione a tracciamento autenticato o anonimo possa generare una tabella tabella contenente il numero degli utenti e il totale delle ore passate da essi nei luoghi dell’organizzazione. 
+\end{enumerate} \\
 % fine test Riccardo
 
 % test Tommaso
