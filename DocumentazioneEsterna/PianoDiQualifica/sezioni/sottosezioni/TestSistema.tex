@@ -19,7 +19,7 @@ Verificare che l'utente non autenticato:
 \begin{enumerate}
     \item possa inserire l'indirizzo e-mail;
     \item possa inserire la password;
-    \item riceva un messaggio d'errore se l'autenticazione\ap{G} viene negata per inserimento di credenziali errate.
+    \item riceva un messaggio di errore se l'autenticazione\ap{G} viene negata per inserimento di credenziali errate.
 \end{enumerate}
 Se l'utente non autenticato si è dimenticato la sua password:
 \begin{enumerate}
@@ -31,11 +31,11 @@ TSF-X & Registrazione nell'applicazione di un utente non autenticato con credenz
 Verificare che l'utente non autenticato:
 \begin{enumerate}
     \item possa inserire l'indirizzo e-mail;
-    \item riceva un messaggio d'errore se tentasse di registrarsi con un'e-mail già usata nel sistema;
+    \item riceva un messaggio di errore se tentasse di registrarsi con un'e-mail già usata nel sistema;
     \item possa inserire una password;
     \item possa inserire nuovamente la password come conferma;
-    \item riceva un messaggio d'errore qualora abbia inserito una password non ritenuta sicura. Il processo di autenticazione\ap{G} deve fallire;
-    \item riceva un messaggio d'errore qualora abbia inserito una conferma password diversa dalla password. Il processo di autenticazione\ap{G} deve fallire;
+    \item riceva un messaggio di errore qualora abbia inserito una password non ritenuta sicura. Il processo di autenticazione\ap{G} deve fallire;
+    \item riceva un messaggio di errore qualora abbia inserito una conferma password diversa dalla password. Il processo di autenticazione\ap{G} deve fallire;
     \item possa accettare le condizioni generali d'uso;
     \item la registrazione si interrompa e che l'applicazione si chiuda nel caso che l'utente non autenticato non abbia accettato le condizioni generali d'uso.
 \end{enumerate} \\
@@ -50,7 +50,7 @@ TSF-X & Tracciamento\ap{G} dell'utente anonimo/riconosciuto nei luoghi di un'org
 Verificare che l'utente anonimo/riconosciuto:
 \begin{enumerate}
     \item riceva la notifica della corretta registrazione se il tracciamento del suo movimento\ap{G} in/da un luogo\ap{G} ha avuto successo;
-    \item riceva un messaggio d'errore qualora il tracciamento del movimento\ap{G} non sia andato a buon fine.
+    \item riceva un messaggio di errore qualora il tracciamento del movimento\ap{G} non sia andato a buon fine.
 \end{enumerate}
 Durante la registrazione del tracciamento\ap{G} del movimento\ap{G} dell'utente anonimo/riconosciuto:
 \begin{enumerate}
@@ -103,61 +103,83 @@ Verificare che l'amministratore visualizzatore:
 % fine test Christian
 
 % test Riccardo
-% da R1FA3.1 a R2FA3.18
-TSF-X & Visualizzazione lista delle organizzazioni & \begin{enumerate}
-\item Verificare che l'utente anonimo sia in grado di scaricare la lista delle organizzazioni.
-\item Verificare che nel caso in cui si verifichi un errore durante lo scaricamento della lista di organizzazioni, l'utente anonimo visualizzi un messaggio di errore.
-\item Verificare che l'utente anonimo possa autenticarsi con credenziali LDAP, qualora scaricasse una organizzazione che richieda l'autenticazione con credenziali LDAP.
-\item Verificare che l'utente anonimo possa aggiornare la lista delle organizzazioni tramite refresh manuale.
-\item Verificare che l'utente anonimo possa aggiornare la lista delle organizzazioni tramite temporizzazione.
-\item Verificare che l'utente anonimo possa visualizzare la lista delle organizzazioni ordinate alfabeticamente, dalla A alla Z.
-\item Verificare che l'utente anonimo possa visualizzare la lista delle organizzazioni ordinate secondo la politica FIFO.
-\item Verificare che l'utente anonimo possa visualizzare la lista delle organizzazioni che permettono il tracciamento anonimo.
-\item Verificare che l'utente anonimo possa visualizzare la lista delle organizzazioni che permettono il tracciamento autenticato.
-\item Verificare che l'utente anonimo possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alle nazioni indicate dall'utente.
-\item  Verificare che l'utente anonimo possa ricercare organizzazioni presenti nella lista delle organizzazioni che hanno nel nome una sotto-stringa scelta dall'utente.
-\item  Verificare che l'utente anonimo possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alla città indicata dall'utente.
+% da R1FA3.1, R1FA3.2, R1FA8.3, R1FA3.8, R1FA3.9 (a R2FA3.18)
+TSF-X & Gestione lista delle organizzazioni &
+Verificare che l'utente anonimo:
+\begin{enumerate}
+    \item possa scaricare la lista di tutte le organizzazioni;
+    \item riceva un messaggio di errore qualora lo scaricamento della lista di tutte le organizzazioni non vada a buon fine;
+    \item possa aggiornare la lista delle organizzazioni tramite refresh manuale\ap{G};
+    \item possa aggiornare la lista delle organizzazioni tramite temporizzazione\ap{G}.
 \end{enumerate} \\
-TSF-X & Gestione lista di organizzazioni preferite dell'utente anonimo & \begin{enumerate}
-\item Verificare che l'utente anonimo sia in grado di inserire un'organizzazione, presente nella lista di tutte le organizzazioni,  nella propria lista delle organizzazioni.
-\item Verificare che l'utente anonimo possa rimuovere un'organizzazione dalla propria lista delle organizzazioni preferite.
-\item Verificare che l'utente anonimo venga informato nel caso in cui non sia memorizzata nessuna lista delle organizzazioni del proprio dispositivo.
+TSF-X & Visualizzazione lista delle organizzazioni & 
+Verificare che l'utente anonimo:
+\begin{enumerate}
+% \item possa autenticarsi con credenziali LDAP, qualora scaricasse una organizzazione che richieda l'autenticazione con credenziali LDAP;
+    \item possa visionare la lista delle organizzazioni ordinate alfabeticamente;
+    \item possa visionare la lista delle organizzazioni ordinate secondo la politica FIFO\ap{G};
+    \item possa visionare la lista delle organizzazioni che permettono il tracciamento anonimo;
+    \item possa visionare la lista delle organizzazioni che permettono il tracciamento autenticato;
+    \item possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alle nazioni indicate dall'utente;
+    \item possa ricercare organizzazioni presenti nella lista delle organizzazioni che hanno nel nome una sotto-stringa scelta dall'utente;
+    \item possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alla città indicata dall'utente.
 \end{enumerate} \\
+
+% da R1FA3.3, R1FA3.4, R1FA3.5, R1FA3.6, R1FA8.4
+TSF-X & Gestione lista delle organizzazioni preferite dell'utente anonimo &
+Verificare che l'utente anonimo:
+\begin{enumerate}
+    \item possa inserire un'organizzazione, presente nella lista di tutte le organizzazioni, nella propria lista delle organizzazioni preferite;
+    \item possa rimuovere un'organizzazione dalla propria lista delle organizzazioni preferite.
+    \item venga informato nel caso in cui non sia memorizzata nessuna lista delle organizzazioni del proprio dispositivo.
+\end{enumerate} \\
+
 %R1FA7.1 a R1FA7.3
-TSF-X & Autenticazione con credenziali LDAP & \begin{enumerate}
-\item Verificare che l'utente anonimo abbia la possibilità di autenticarsi con credenziali aziendali in un'organizzazione che richiede il tracciamento riconosciuto.
-\item Verificare che l'utente anonimo visualizzi un messaggio di errore qualora le credenziali LDAP non fossero riconosciute dal server.
-\item Verificare che l'utente anonimo possa inserire la propria e-mail durante l'autenticazione con le credenziali LDAP aziendali.
-\item Verificare che l'utente anonimo possa inserire la propria password durante l'autenticazione con le credenziali LDAP aziendali.
+TSF-X & Autenticazione con credenziali LDAP &
+Verificare che l'utente anonimo:
+\begin{enumerate}
+    \item possa autenticarsi con credenziali aziendali in un'organizzazione che richiede il tracciamento riconosciuto;
+    \item riceva un messaggio di errore qualora le credenziali LDAP non fossero riconosciute dal server;
+    \item possa inserire il proprio nome utente durante l'autenticazione con le credenziali LDAP aziendali.
+    \item possa inserire la propria password durante l'autenticazione con le credenziali LDAP aziendali.
 \end{enumerate} \\
+
 % R1FS4.1 a R1FS4.11
-TSF-X & Modifica dei dati dell'organizzazione & \begin{enumerate}
-\item Verificare che l'amministratore gestore possa inserire un nuovo nome dell'organizzazione.
-\item Verificare che l'amministratore gestore possa modificare il nome dell'organizzazione.
-\item Verificare che l'amministratore gestore possa inserire una nuova immagine della organizzazione.
-\item Verificare che l'amministratore gestore possa modificare l'immagine della organizzazione.
-\item Verificare che l'amministratore gestore possa inserire una nuova descrizione dell’organizzazione.
-\item Verificare che l'amministratore gestore possa modificare la descrizione dell’organizzazione.
-\item Verificare che l'amministratore gestore possa inserire un nuovo indirizzo dell’organizzazione.
-\item Verificare che l'amministratore gestore possa modificare l'indirizzo dell’organizzazione.
-\item Verificare che l'amministratore gestore possa inserire un nuovo indirizzo IP per l'organizzazione.
-\item Verificare che l'amministratore gestore possa modificare l'indirizzo IP dell'organizzazione.
-\item Verificare che l'amministratore gestore visualizzi un messaggio di errore qualora il nome dell'organizzazione inserito non rispetti i vincoli imposti.
-\item Verificare che l'amministratore gestore visualizzi un messaggio di errore qualora il nome dell'organizzazione inserito sia già presente nel sistema e associato ad un'altra organizzazione.
-\item Verificare che l'amministratore gestore visualizzi un messaggio di errore qualora l'immagine dell'organizzazione inserita non rispetti i vincoli imposti.
-\item Verificare che l'amministratore gestore visualizzi un messaggio di errore qualora la descrizione dell'organizzazione inserita non rispetti i vincoli imposti.
-\item Verificare che l'amministratore gestore visualizzi un messaggio di errore qualora l'indirizzo dell'organizzazione inserito non rispetti i vincoli imposti.
-\item Verificare che l'amministratore gestore visualizzi un messaggio di errore qualora l'indirizzo IP dell'organizzazione inserito non rappresenti un server LDAP.
-\item Verificare che l'amministratore gestore possa inviare la richiesta di eliminazione per un'organizzazione.
-\item Verificare che l'amministratore gestore possa inserire una motivazione per la richiesta di eliminazione di un'organizzazione.
-\item Verificare che l'amministratore gestore possa annullare le modifiche che sta apportando ad una organizzazione.
+TSF-X & Modifica dei dati dell'organizzazione &
+Verificare che l'amministratore gestore:
+\begin{enumerate}
+    \item possa inserire un nuovo nome dell'organizzazione;
+    \item possa modificare il nome dell'organizzazione;
+    \item possa inserire una nuova immagine della organizzazione;
+    \item possa modificare l'immagine della organizzazione;
+    \item possa inserire una nuova descrizione dell’organizzazione;
+    \item possa modificare la descrizione dell’organizzazione;
+    \item possa inserire un nuovo indirizzo dell’organizzazione;
+    \item possa modificare l'indirizzo dell’organizzazione;
+    \item possa inserire un nuovo indirizzo IP per l'organizzazione;
+    \item possa modificare l'indirizzo IP dell'organizzazione;
+    \item riceva un messaggio di errore qualora il nome dell'organizzazione inserito non rispetti i vincoli imposti;
+    \item riceva un messaggio di errore qualora il nome dell'organizzazione inserito sia già presente nel sistema e associato ad un'altra organizzazione;
+    \item riceva un messaggio di errore qualora l'immagine dell'organizzazione inserita non rispetti i vincoli imposti;
+    \item riceva un messaggio di errore qualora la descrizione dell'organizzazione inserita non rispetti i vincoli imposti;
+    \item riceva un messaggio di errore qualora l'indirizzo dell'organizzazione inserito non rispetti i vincoli imposti;
+    \item riceva un messaggio di errore qualora l'indirizzo IP dell'organizzazione inserito non rappresenti un server LDAP;
+    \item possa inviare la richiesta di eliminazione per un'organizzazione;
+    \item possa inserire una motivazione per la richiesta di eliminazione di un'organizzazione;
+    \item possa annullare le modifiche che sta apportando ad una organizzazione.
 \end{enumerate} \\
+
 %R1FS8.1 a R1FS8.4
-TSF-X & Report tabellare degli accessi ai luoghi dell'organizzazione  & \begin{enumerate}
-\item Verificare che l'amministratore autenticato possa ricevere un report tabellare degli accesi ai luoghi dell'organizzazione.
-\item Verificare che l'amministratore autenticato di un'organizzazione a tracciamento autenticato possa generare una tabella delle entrate e uscite degli utenti nei luoghi dell'organizzazione.
-\item Verificare che l'amministratore autenticato di un'organizzazione a tracciamento autenticato possa generare una tabella delle ore delle ore spese dagli utenti nei luoghi dell'organizzazione.
-\item Verificare che l'amministratore autenticato di un'organizzazione a tracciamento autenticato o anonimo possa generare una tabella tabella contenente il numero degli utenti e il totale delle ore passate da essi nei luoghi dell’organizzazione. 
+TSF-X & Report tabellare degli accessi ai luoghi dell'organizzazione &
+Verificare che l'amministratore autenticato:
+\begin{enumerate}
+    \item possa ottenere un report tabellare degli accesi ai luoghi dell'organizzazione;
+    \item possa generare una tabella tabella contenente il numero degli utenti e il totale delle ore passate da essi nei luoghi dell’organizzazione.
+\end{enumerate}
+Se l'organizzazione richiede il tracciamento autenticato, verificare che l'amministratore autenticato:
+\begin{enumerate}
+    \item possa generare una tabella delle entrate e uscite degli utenti nei luoghi dell'organizzazione;
+    \item possa generare una tabella delle ore spese dagli utenti nei luoghi dell'organizzazione.
 \end{enumerate} \\
 % fine test Riccardo
 
@@ -208,7 +230,7 @@ Se l'utente anonimo si trova presso lo stesso luogo:
 TSF-X & Accesso al server di un amministratore non autenticato & \begin{enumerate}
     \item Verificare che l'amministratore non autenticato possa inserire l'e-mail correttamente.
     \item Verificare che l'amministratore non autenticato possa inserire correttamente la password.
-    \item Verificare che l'amministratore non autenticato visualizzi un messaggio d'errore se l'autenticazione\ap{G} viene negata per inserimento di credenziali errate.
+    \item Verificare che l'amministratore non autenticato visualizzi un messaggio di errore se l'autenticazione\ap{G} viene negata per inserimento di credenziali errate.
 \end{enumerate}
 Se l'amministratore non autenticato si è dimenticato della password:
 \begin{enumerate}
@@ -225,8 +247,8 @@ TSF-X & Modifica della lista dei luoghi di tracciamento\ap{G}di un'organizzazion
     \item Verificare che l'amministratore gestore possa essere in grado di aggiungere un nuovo luogo in cui effettuare il tracciamento.
     \item Verificare che l'amministratore gestore possa essere in grado di modificare un luogo dell'organizzazione\ap{G}.
     \item Verificare che l'amministratore gestore possa essere in grado di eliminare un luogo dell'organizzazione\ap{G}.
-    \item Verificare che venga negata la selezione di un'area che non rispetta i vincoli imposti per l'organizzazione\ap{G}, visualizzando un messaggio d'errore.
-    \item Verificare che venga negato l'inserimento di un luogo se viene selezionata un'area che fuoriesce dal perimetro imposto per l'organizzazione\ap{G}, visualizzando un messaggio d'errore.
+    \item Verificare che venga negata la selezione di un'area che non rispetta i vincoli imposti per l'organizzazione\ap{G}, visualizzando un messaggio di errore.
+    \item Verificare che venga negato l'inserimento di un luogo se viene selezionata un'area che fuoriesce dal perimetro imposto per l'organizzazione\ap{G}, visualizzando un messaggio di errore.
 \end{enumerate} \\
 
 % da R1FS5.5 a R1FS5.8
@@ -241,8 +263,8 @@ TSF-X & Gestione degli amministratori nominati da un amministratore proprietario
     \item Verificare che l'amministratore proprietario possa visualizzare gli amministratori che ha precedentemente nominato, di cui si devono visualizzare e-mail, privilegi.
     \item Verificare che l'amministratore proprietario possa modificare i privilegi di un altro amministratore, inserendo il suo indirizzo e-mail.
     \item Verificare che l'amministratore proprietario possa eliminare un amministratore, inserendo il suo indirizzo e-mail.
-    \item Verificare che se non è presente un amministratore con l'indirizzo e-mail inserito dall'amministratore proprietario venga visualizzato un messaggio d'errore.
-    \item Verificare che se non è presente un amministratore con l'indirizzo e-mail inserito dall'amministratore proprietario venga visualizzato un messaggio d'errore.
+    \item Verificare che se non è presente un amministratore con l'indirizzo e-mail inserito dall'amministratore proprietario venga visualizzato un messaggio di errore.
+    \item Verificare che se non è presente un amministratore con l'indirizzo e-mail inserito dall'amministratore proprietario venga visualizzato un messaggio di errore.
     \item Verificare che l'amministratore proprietario possa annullare l'operazione di modifica dei privilegi di un amministratore.
 \end{enumerate} \\
 
@@ -252,9 +274,9 @@ TSF-X & Nomina di un nuovo amministratore da parte di un altro amministratore pr
     \item Verificare che l'amministratore proprietario possa inserire la password per il nuovo amministratore.
     \item Verificare che l'amministratore proprietario possa inserire la conferma della password (che dev'essere uguale alla password).
     \item Verificare che l'amministratore proprietario possa selezionare i privilegi per il nuovo amministratore.
-    \item Verificare che se l'indirizzo e-mail del nuovo amministratore è già presente nel sistema venga visualizzato un messaggio d'errore.
-    \item Verificare che se la password risulta troppo debole venga visualizzato un messaggio d'errore.
-    \item Verificare che se la conferma della password non combacia con la password venga visualizzato un messaggio d'errore.
+    \item Verificare che se l'indirizzo e-mail del nuovo amministratore è già presente nel sistema venga visualizzato un messaggio di errore.
+    \item Verificare che se la password risulta troppo debole venga visualizzato un messaggio di errore.
+    \item Verificare che se la conferma della password non combacia con la password venga visualizzato un messaggio di errore.
 \end{enumerate} \\
 % fine test Tommaso
 \end{longtable}
