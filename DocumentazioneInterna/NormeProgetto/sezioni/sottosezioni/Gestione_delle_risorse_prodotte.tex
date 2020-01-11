@@ -2,21 +2,21 @@
 \subsection{Gestione delle risorse prodotte}
 \subsubsection{Obiettivo}
 
-Si vuole garantire che tutto ciò che viene prodotto dai membri del team, codice software e documenti, sia facilmente e rapidamente rintracciabile all’interno del repository, che sia etichettato con un particolare ID e a fini della manutenibilità quali pratiche devono essere addotte nelle operazioni di modifica e per il versionamento.
+Si vuole garantire che tutto ciò che viene prodotto dai membri del team, codice software e documenti, sia facilmente reperibile all’interno del repository\ap{G}. Ogni elaborato viene etichettato con un particolare ID ed a fini della manutenibilità, vengono riportate le pratiche che devono essere addotte nelle operazioni di modifica e di versionamento.
 
 \subsubsection{Versionamento}
-Allo scopo di poter mantenere la storia di documento attraverso le versioni prodotte, ogni versione di ogni documento sarà correlata da un particolare codice (codice di versione) a tre cifre. Sia quindi la seguente forma:
+Allo scopo di poter mantenere la storia di un documento, ogni versione di quest'ultimo è accompagnata da un particolare codice (codice di versione) a tre cifre. La forma del codice di versione è la seguente:
 \begin{center}
 	\textbf{X.Y.Z}
 \end{center}
 \begin{itemize}
 \item \textbf{X}: rappresenta il numero di una versione stabile. Inizia da 0 e viene incrementato ogni volta che il Responsabile approva il documento;
 \item \textbf{Y}: rappresenta una versione parzialmente stabile del documento che è stata soggetta a verifica da parte di un verificatore, tale numero indica quante verifiche effettuate sono state superate positivamente, perciò il numero Y viene incrementato dal verificatore per ogni verifica positiva. Inizia da 0 e viene azzerato ad ogni incremento del numero X;
-\item \textbf{Z}: rappresenta una versione incompleta e non stabile del documento perché il documento si trova in fase di editing (gli analisti aggiungono, modificano e eliminano i contenuti del documento). Il numero Z parte da 0 e viene incrementato ad ogni modifica di qualsiasi dimensione, di un analista. Il numero Z viene azzerato quando o il numero X o il numero Y vengono incrementati.
+\item \textbf{Z}: rappresenta una versione incompleta e non stabile del documento poichè quest'ultimo si trova in fase di editing (gli analisti aggiungono, modificano e eliminano i contenuti del documento). Il numero Z parte da 0 e viene incrementato ad ogni modifica, da parte di un analista, di qualsiasi dimensione. Il numero Z viene azzerato quando il numero X o il numero Y vengono incrementati.
 \end{itemize}
 
 \subsubsection{Codici ID per verbali degli incontri}
-Per avere una massima organizzazione\ap{G} di tutti i documenti anche i verbali degli incontri avranno un loro specifico codice.
+Per avere una massima organizzazione\ap{G} di tutti i documenti anche i verbali degli incontri hanno un loro specifico codice.
 \begin{center}
 	\textbf{V[Destinazione]\_[YYYY]\_[MM]\_[DD]}
 \end{center}
@@ -24,33 +24,33 @@ Con:
 \begin{itemize}
 \item \textbf{Destinazione}:
 	\begin{itemize}
-		\item \textbf{I}: Interno, per i verbali interni;
-		\item \textbf{E}: Esterno, per i verbali esterni.
+		\item \textbf{I:} Interno, per i verbali interni;
+		\item \textbf{E:} Esterno, per i verbali esterni.
 	\end{itemize}	
-\item \textbf{YYYY}, anno in cui è avvenuto l’incontro;
-\item \textbf{MM}, mese in cui è avvenuto l’incontro;
-\item \textbf{DD}, giorno in cui è avvenuto l’incontro.
+\item \textbf{YYYY:}anno in cui è avvenuto l’incontro;
+\item \textbf{MM:} mese in cui è avvenuto l’incontro;
+\item \textbf{DD:} giorno in cui è avvenuto l’incontro.
 	
 \end{itemize}
 
 \subsubsection{Servizi di supporto per il versionamento} 
-Come supporto per il versionamento si è adottato Git come sistema di versionamento distribuito usando GitHub per ospitare i repository del team. Il team potrà interagire con il VCS sia tramite riga di comando o sia attraverso software dedicati come GitKraken.
+Come supporto per il versionamento si è adottato Git come sistema di versionamento distribuito, usando GitHub per ospitare i repository\{G} del team. Il gruppo potrà interagire con il VCS\{G} sia tramite riga di comando o sia attraverso software dedicati come GitKraken\{G}.
 
 \subsubsection{Repository creati}
-Sono state create due repository per supportare il lavoro del team e sono:
+Sono state create due repository\{G} per supportare il lavoro del team, quali:
 \begin{itemize}
-\item \textbf{Stalker}: verrà usato per versionare il codice software prodotto dal team. Al momento, tale repository è vuoto, sarà usata in futuro dopo la RR dandogli anche una organizzazione\ap{G} consona;
-\item \textbf{Stalker-Documentazione}: verrà usata per versionare i vari documenti prodotti dal team.
+\item \textbf{Stalker}: viene usato per versionare il codice software prodotto dal team. Al momento, tale repository è vuoto, verrà usata in futuro dopo la RR dandogli anche una organizzazione\ap{G} appropriata;
+\item \textbf{Stalker-Documentazione}: viene usata per versionare i vari documenti prodotti dal team.
 \end{itemize}
 
-\subsubsection{Organizzazione\ap{G} repository per la documentazione}
-Il repository per la documentazione avrà la seguente organizzazione\ap{G} di cartelle:
+\subsubsection{Organizzazione repository per la documentazione}
+Il repository\{G} per la documentazione ha la seguente organizzazione\ap{G} di cartelle:
 \begin{itemize}
-	\item \textbf{DocumentazioneEsterna/}: al suo interno vi è la documentazione da fornire a committenti e proponenti, oltre che i verbali redatti durante gli incontri con quest'ultimi;
+	\item \textbf{DocumentazioneEsterna/}: dentro a questa cartella vi è la documentazione da fornire a committenti e proponenti, oltre che i verbali redatti durante gli incontri con quest'ultimi;
 	\begin{itemize}
-		\item \textbf{VerbaliEsterni/}: dentro a questa cartella sono presenti i verbali degli incontri fra i membri del gruppo e i proponenti del progetto. Per ogni incontro è stato redatto un verbale e questo è presente in un'unica cartella;
+		\item \textbf{VerbaliEsterni/}: dentro a questa cartella sono presenti i verbali degli incontri fra i membri del gruppo e i proponenti del progetto. Per ogni incontro è stato redatto un verbale che è presente in un'unica cartella;
 		\item \textbf{AnalisiDeiRequisiti/}: dentro a questa cartella è presente il documento dedicato all’analisi dei requisiti in formato pdf. È presente al suo interno un file Analisi\_Dei\_requisit.tex che corrispondente al file da compilare per generare il documento del verbale e una cartella sezioni/ contenente i file RegistroModifiche.tex, relativo allo storico delle modifiche del file, e Comandi.tex, contenente invece comandi utili per la stesura del documento;
-		\item \textbf{PianoDiProgetto/}: dentro a questa cartella è presente il documento dedicato al piano di progetto in formato pdf. È presente al suo interno un file Piano\_Di\_Progettorogetto.tex che corrispondente al file da compilare per generare il documento del verbale e una cartella sezioni/ contenente i file RegistroModifiche.tex, relativo allo storico delle modifiche del file, e Comandi.tex, contenente invece comandi utili per la stesura del documento;
+		\item \textbf{PianoDiProgetto/}: dentro a questa cartella è presente il documento dedicato al piano di progetto in formato pdf. È presente al suo interno un file Piano\_Di\_Progetto.tex che corrispondente al file da compilare per generare il documento del verbale e una cartella sezioni/ contenente i file RegistroModifiche.tex, relativo allo storico delle modifiche del file, e Comandi.tex, contenente invece comandi utili per la stesura del documento;
 		\item \textbf{PianoDiQualifica/}: dentro a questa cartella è presente il documento dedicato piano di qualifica in formato pdf. È presente al suo interno un file Piano\_Di\_Qualifica.tex che corrispondente al file da compilare per generare il documento del verbale e una cartella sezioni/ contenente i file RegistroModifiche.tex, relativo allo storico delle modifiche del file, e Comandi.tex, contenente invece comandi utili per la stesura del documento.
 	\end{itemize}
 	\item \textbf{DocumentazioneInterna/}: al suo interno vi è la documentazione ad uso e consumo da parte dei membri del gruppo qbteam;
@@ -83,9 +83,9 @@ Il repository viene suddivisa in vari rami, si dovranno rispettare le seguenti p
 \begin{itemize} 
 \item Ogni membro del team avrà un ramo a lui dedicato dove può lavorare al compito a lui assegnato;
 \item Ogni membro del team nel suo ramo può liberamente creare altri rami per suddividere i compiti a lui assegnati;
-\item Ogni membro del team è responsabile del proprio ramo, e quindi l’unico a essere autorizzato ad effettuare modifica;
-\item È possibile che ogni membro del team non proprietario di un ramo possa suggerire delle modifiche al proprietario il quale se valuterà positivamente i suggerimenti effettuerà la modifica suggerita;
+\item Ogni membro del team è responsabile del proprio ramo, e quindi l’unico a essere autorizzato ad effettuare le modifiche;
+\item È possibile che ogni membro del team non proprietario di un ramo possa suggerire delle modifiche al proprietario, il quale se valuterà positivamente i suggerimenti effettuerà la modifica suggerita;
 \item Ogni membro del team ha la possibilità di effettuare il merge con il ramo develop quando il compito a esso assegnato è stato terminato.
-\item Non è permesso effettuare commit nel ramo master se non attraverso un pull request che deve essere accettato dall’amministratore di progetto;
-\item Per ogni commit è opportuno commentare con chiarezza per capire cosa si è fatto in modo tale da garantire una buona organizzazione\ap{G} e chiarezza nella struttura di versionamento.
+\item Non è permesso effettuare commit\{G} nel ramo master se non attraverso un pull request\{G}  che deve essere accettato dall’amministratore di progetto;
+\item Per ogni commit\{G}  è opportuno commentare con chiarezza per capire cosa si è fatto in modo tale da garantire una buona organizzazione\ap{G} e chiarezza nella struttura di versionamento.
 \end{itemize}
