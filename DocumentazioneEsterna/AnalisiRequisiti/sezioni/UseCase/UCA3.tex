@@ -1,5 +1,5 @@
 %scritto da Federico Perin
-\subsubsection{UCA 3 - Gestione lista delle organizzazioni\ap{G}}%kite level
+\subsubsection{UCA 3 - Gestione lista delle organizzazioni}%kite level
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5, center]{sezioni/UseCase/Immagini/UCA3.png}
@@ -20,7 +20,7 @@
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{UCA 3.1 - Scaricamento lista di tutte le organizzazioni\ap{G}}%sea level
+\subsubsection{UCA 3.1 - Scaricamento lista di tutte le organizzazioni}%sea level
 \begin{itemize}
 \item \textbf{Attori primari:} Utente anonimo
 \item \textbf{Precondizione:} L'utente è autenticato e può scaricare la lista di tutte le organizzazioni\ap{G}.
@@ -34,7 +34,7 @@
   
 \end{itemize}
 
-\subsubsection{UCA 3.2 - Gestione lista delle organizzazioni\ap{G} preferite}%sea level
+\subsubsection{UCA 3.2 - Gestione lista delle organizzazioni preferite}%sea level
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.45 , center]{sezioni/UseCase/Immagini/UCA3.2.png}
@@ -58,7 +58,7 @@
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{UCA 3.2.1 - Inserimento di una organizzazione\ap{G} nella lista delle organizzazioni\ap{G} preferite dell'utente}%fish level
+\subsubsection{UCA 3.2.1 - Inserimento di una organizzazione nella lista delle organizzazioni preferite dell'utente}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato sceglie di eseguire la funzionalità di inserimento di un'organizzazione\ap{G} nella lista delle organizzazioni\ap{G} preferite\ap{G} (solo se ha scaricato precedentemente la lista delle organizzazioni\ap{G}).
@@ -70,7 +70,7 @@
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UCA 3.2.2 - Inserimento di una organizzazione\ap{G} che richiede credenziali LDAP nella lista delle organizzazioni\ap{G} preferite dell'utente}%fish level
+\subsubsection{UCA 3.2.2 - Inserimento di una organizzazione che richiede credenziali LDAP nella lista delle organizzazioni preferite dell'utente}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato e sceglie di eseguire la funzionalità di inserimento nella lista delle organizzazioni\ap{G} preferite\ap{G} solo se ha scaricato precedentemente la lista delle organizzazioni\ap{G}.
@@ -83,11 +83,11 @@
 	\end{enumerate}
 	\item \textbf{Inclusioni:}
 	\begin{itemize}
-			\item UCA 7 - Autenticazione\ap{G} con credenziali LDAP.
+			\item UCA 7 - Autenticazione con credenziali LDAP.
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{UCA 3.2.3 - Rimozione di una organizzazione\ap{G} dalla lista delle organizzazioni\ap{G} preferite dell'utente}%fish level
+\subsubsection{UCA 3.2.3 - Rimozione di una organizzazione dalla lista delle organizzazioni preferite dell'utente}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:}  L'utente è autenticato sceglie di eseguire la funzionalità di rimozione nella lista delle organizzazioni\ap{G} preferite\ap{G} solo se c'è almeno una organizzazione\ap{G} inserita nella lista delle organizzazioni\ap{G} preferite\ap{G}.
@@ -99,7 +99,7 @@
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UCA 3.3 - Aggiornare lista organizzazioni\ap{G}}%sea level
+\subsubsection{UCA 3.3 - Aggiornare lista organizzazioni}%sea level
 
 \begin{figure}[h]
 	\centering
@@ -127,7 +127,7 @@
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{UCA 3.3.1 - Aggiornare lista organizzazione\ap{G} con refresh manuale}%fish level
+\subsubsection{UCA 3.3.1 - Aggiornare lista organizzazione con refresh manuale}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente anonimo sceglie di eseguire la funzionalità aggiornamento della lista dell'organizzazione\ap{G} attraverso la modalità di refresh manuale\ap{G}.
@@ -139,7 +139,7 @@
 	
 \end{itemize}
 
-\subsubsection{UCA 3.3.2 - Aggiornare lista organizzazione\ap{G} con temporizzazione}%fish level
+\subsubsection{UCA 3.3.2 - Aggiornare lista organizzazione con temporizzazione}%fish level
 \begin{itemize} 
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente anonimo sceglie di eseguire la funzionalità aggiornamento della lista dell'organizzazione\ap{G} attraverso la modalità temporizzazione\ap{G}.
@@ -150,7 +150,7 @@
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UCA 3.4 - Visualizzazione lista delle organizzazioni\ap{G}}%sea level
+\subsubsection{UCA 3.4 - Visualizzazione lista delle organizzazioni}%sea level
 
 \begin{figure}[h]
 	\centering	
@@ -174,7 +174,7 @@
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema.
 	\item \textbf{Estensioni:}
 	\begin{itemize}
-		\item UCA 8.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni\ap{G}.
+		\item UCA 8.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni.
 	\end{itemize}
 \end{itemize}
 
@@ -200,7 +200,7 @@
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UCA 3.4.3 - Visualizzazione con filtro per tracciamento\ap{G}anonimo}%fish level
+\subsubsection{UCA 3.4.3 - Visualizzazione con filtro per tracciamento anonimo}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista che permettono un tracciamento\ap{G}anonimo\ap{G}.
@@ -211,7 +211,7 @@
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UCA 3.4.4 - Visualizzazione con filtro per tracciamento\ap{G}autenticato}%fish level
+\subsubsection{UCA 3.4.4 - Visualizzazione con filtro per tracciamento autenticato}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista che permette un tracciamento\ap{G}autenticato\ap{G}.
@@ -222,11 +222,11 @@
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UCA 3.5 - Ricerca personalizzata delle organizzazioni\ap{G}}%sea level
+\subsubsection{UCA 3.5 - Ricerca personalizzata delle organizzazioni}%sea level
 \begin{figure}[h]
 	\centering
 	
-	\includegraphics[scale=0.5,, center]{sezioni/UseCase/Immagini/UCA3.5.png}
+	\includegraphics[scale=0.5, center]{sezioni/UseCase/Immagini/UCA3.5.png}
 	\caption{UCA 3.5 - Ricerca personalizzata delle organizzazioni\ap{G}}
 \end{figure}
 \begin{itemize}
@@ -244,7 +244,7 @@
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle organizzazioni\ap{G} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.2].
 	\item \textbf{Estensioni:}
 	\begin{itemize}
-		\item UCA 8.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni\ap{G}.
+		\item UCA 8.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni.
 	\end{itemize}
 \end{itemize}
 
