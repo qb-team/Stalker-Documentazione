@@ -46,7 +46,7 @@ con:
 
 \subparagraph*{Struttura di un caso d'uso kite-level}\mbox{}\\ \\
 La seguente è una struttura ad elenco che un caso d'uso \glo{kite-level} necessariamente deve adottare.\\
-I punti dell'elenco racchiusi fra parentesi quadre indicano che tale punto è opzionale e va inserito solo se necessario.\\
+I punti dell'elenco racchiusi fra parentesi quadre (non sono inclusi fra questi [Destinazione] e [Codice]) indicano che tale punto è opzionale e va inserito solo se necessario.\\
 \textbf{UC[Destinazione] X - Nome del caso d'uso kite-level. Stile tipografico: lettera maiuscola iniziale per ciascun attore, attori separati da virgola, nessun punto fermo alla fine.} %kite level
 \begin{itemize}
 	\item \textbf{Attori primari}: Elenco degli attori primari.
@@ -65,19 +65,19 @@ I punti dell'elenco racchiusi fra parentesi quadre indicano che tale punto è op
 	Nota: se ci sono più scenari alternativi, marcare il primo come \textbf{Scenario alternativo 1} e proseguire ordinatamente con \textbf{Scenario alternativo 2}, ecc.]
 	\item \textbf{[Flusso di eventi}: Elenco ordinato di eventi che accadono e permettono il raggiungimento  della postcondizione.
 	Stile tipografico: gli elementi intermedi dell'elenco terminano con un punto e virgola, mentre l'ultimo con un punto fermo.]
-	\item \textbf{[Estensioni}: Elenco non ordinato dei casi d'uso (\textbf{UC[Destinazione] [Codice] - Nome del caso d'uso}) che estendono la normale esecuzione del caso d'uso, deviandola e impedendo il raggiungimento delle postcondizioni.
-	Tipicamente è un elenco di casi d'uso \glo{sea-level} o \glo{fish-level}.
-	Stile tipografico: gli elementi intermedi dell'elenco terminano con un punto e virgola, mentre l'ultimo con un punto fermo.]
 	\item \textbf{[Inclusioni}: Elenco non ordinato dei casi d'uso (\textbf{UC[Destinazione] [Codice] - Nome del caso d'uso}) che permettono di raggiungere le postcondizioni indicate.
 	Tipicamente si ottengono inclusioni da casi d'uso di tipo \glo{sea-level}, \glo{fish-level}.
 	Il caso d'uso descritto non conosce i dettagli dei casi d'uso inclusi ma solo i loro risultati.
-	Questi casi d'uso non sanno di essere inclusi e la loro esecuzione dipende completamente da questo caso d'uso.
+	Questi casi d'uso non sanno di essere inclusi e la loro esecuzione dipende completamente dal caso d'uso che si sta descrivendo.
+	Stile tipografico: gli elementi intermedi dell'elenco terminano con un punto e virgola, mentre l'ultimo con un punto fermo.]
+	\item \textbf{[Estensioni}: Elenco non ordinato dei casi d'uso (\textbf{UC[Destinazione] [Codice] - Nome del caso d'uso}) che estendono la normale esecuzione del caso d'uso che si sta descrivendo, deviandola e impedendo il raggiungimento delle postcondizioni.
+	Tipicamente è un elenco di casi d'uso \glo{sea-level} o \glo{fish-level}.
 	Stile tipografico: gli elementi intermedi dell'elenco terminano con un punto e virgola, mentre l'ultimo con un punto fermo.]
 \end{itemize}
 
 \subparagraph*{Struttura di un caso d'uso sea-level}\mbox{}\\ \\
 La seguente è una struttura ad elenco che un caso d'uso \glo{sea-level} necessariamente deve adottare.\\
-I punti dell'elenco racchiusi fra parentesi quadre indicano che tale punto è opzionale e va inserito solo se necessario.
+I punti dell'elenco racchiusi fra parentesi quadre (non sono inclusi fra questi [Destinazione] e [Codice]) indicano che tale punto è opzionale e va inserito solo se necessario.\\
 \textbf{UC[Destinazione] X.Y - Nome del caso d'uso sea-level. Stile tipografico: lettera maiuscola iniziale per ciascun attore, attori separati da virgola, nessun punto fermo alla fine.}%sea level
 \begin{itemize}
 	\item \textbf{Attori primari}: Come in UC[Destinazione] X.
@@ -87,19 +87,19 @@ I punti dell'elenco racchiusi fra parentesi quadre indicano che tale punto è op
 	\item \textbf{Scenario principale}: Come in UC[Destinazione] X.
 	\item \textbf{[Scenario alternativo}: Come in UC[Destinazione] X.]
 	\item \textbf{[Flusso di eventi}: Come in UC[Destinazione] X.]
-	\item \textbf{[Estensioni}: Elenco non ordinato dei casi d'uso (\textbf{UC[Destinazione] [Codice] - Nome del caso d'uso}) che estendono la normale esecuzione del caso d'uso, deviandola e impedendo il raggiungimento delle postcondizioni.
-	Tipicamente è un elenco di casi d'uso \glo{fish-level}.
-	Stile tipografico: gli elementi intermedi dell'elenco terminano con un punto e virgola, mentre l'ultimo con un punto fermo.]
 	\item \textbf{[Inclusioni}: Elenco non ordinato dei casi d'uso (\textbf{UC[Destinazione] [Codice] - Nome del caso d'uso}) che permettono di raggiungere le postcondizioni indicate.
 	Tipicamente si ottengono inclusioni da casi d'uso di tipo \glo{fish-level}.
 	Il caso d'uso descritto non conosce i dettagli dei casi d'uso inclusi ma solo i loro risultati.
-	Questi casi d'uso non sanno di essere inclusi e la loro esecuzione dipende completamente da questo caso d'uso.
+	Questi casi d'uso non sanno di essere inclusi e la loro esecuzione dipende completamente dal caso d'uso che si sta descrivendo.
+	Stile tipografico: gli elementi intermedi dell'elenco terminano con un punto e virgola, mentre l'ultimo con un punto fermo.]
+	\item \textbf{[Estensioni}: Elenco non ordinato dei casi d'uso (\textbf{UC[Destinazione] [Codice] - Nome del caso d'uso}) che estendono la normale esecuzione del caso d'uso che si sta descrivendo, deviandola e impedendo il raggiungimento delle postcondizioni.
+	Tipicamente è un elenco di casi d'uso \glo{fish-level}.
 	Stile tipografico: gli elementi intermedi dell'elenco terminano con un punto e virgola, mentre l'ultimo con un punto fermo.]
 \end{itemize}
 
 \subparagraph*{Struttura di un caso d'uso fish-level}\mbox{}\\ \\
 La seguente è una struttura ad elenco che un caso d'uso \glo{fish-level} necessariamente deve adottare.\\
-I punti dell'elenco racchiusi fra parentesi quadre indicano che tale punto è opzionale e va inserito solo se necessario.
+I punti dell'elenco racchiusi fra parentesi quadre (non sono inclusi fra questi [Destinazione] e [Codice]) indicano che tale punto è opzionale e va inserito solo se necessario.\\
 \textbf{UC[Destinazione] X.Y.Z - Nome del caso d'uso fish-level. Stile tipografico: lettera maiuscola iniziale per ciascun attore, attori separati da virgola, nessun punto fermo alla fine.}%sea level
 \begin{itemize}
 	\item \textbf{Attori primari}: Come in UC[Destinazione] X.
@@ -107,8 +107,8 @@ I punti dell'elenco racchiusi fra parentesi quadre indicano che tale punto è op
 	\item \textbf{Precondizione}: Come in UC[Destinazione] X.
 	\item \textbf{Postcondizione}: Come in UC[Destinazione] X.
 	\item \textbf{[Flusso di eventi}: Come in UC[Destinazione] X.]
-	\item \textbf{[Estensioni}: Come in UC[Destinazione] X.]
 	\item \textbf{[Inclusioni}: Come in UC[Destinazione] X.]
+	\item \textbf{[Estensioni}: Come in UC[Destinazione] X.]
 \end{itemize}
 
 \paragraph{Casi d'uso d'errore e dei messaggi informativi}\mbox{}\\ \\
@@ -162,7 +162,7 @@ La seguente è una descrizione di una riga della tabella in cui vengono elencati
 \renewcommand{\arraystretch}{1.5}
 \centering
 \begin{longtable}{C{3cm} C{3.2cm} C{4.3cm} C{4.3cm}}
-\rowcolor{rossoep}
+\rowcolor{darkblue}
 \textcolor{white}{\textbf{Identificativo}} & %1
 \textcolor{white}{\textbf{Descrizione}} & %2
 \textcolor{white}{\textbf{Classificazione}} & %3
