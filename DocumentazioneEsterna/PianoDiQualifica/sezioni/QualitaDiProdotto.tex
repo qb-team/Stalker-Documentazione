@@ -1,3 +1,4 @@
+
 \section{Qualità di prodotto}
 La qualità di un prodotto software è valutata secondo criteri semplici e comprensibili a tutti, utenti e sviluppatori, operatori e addetti alla manutenzione.
 Per valutare tale qualità il gruppo \Gruppo{} ha deciso di far riferimento allo standard ISO/IEC 9126, le quali norme descrivono:
@@ -24,16 +25,11 @@ Per valutare tale qualità il gruppo \Gruppo{} ha deciso di far riferimento allo
         \item    \textbf{Descrizione:} Misurare in percentuale il livello di aderenza delle funzioni e delle interfacce sviluppate rispetto agli standard, alle normative e alla regolamentazioni.
           \item  \textbf{Attributo di riferimento:} Aderenza alle funzionalità 
         \item    \textbf{Sigla:} $AFI$
-         \item   \textbf{Formula:} $$AFI = {A \over B}$$
-                con:
-                \begin{itemize}
-                    \item  $A$ = numero di funzioni(e/o interfacce) sviluppate che risultano aderenti a standard, regole e normative emesse al riguardo
-                    \item  $B$ = numero totale di funzioni(e/o interfacce) che devono essere aderenti a tali regole come descritto nelle specifiche
-                \end{itemize}
+         \item   \textbf{Formula:} $$AFI = {numero \; di \; funzioni/interfacce \; sviluppate \; aderenti \; alle \; regole\; descritte \; nelle \; specifiche \over numero \; totale \; di \; funzioni/interfacce \; che \; devono \; essere \; aderenti \; alle \; regole \; descritte \; dalle \; specifiche }$$
 
                 \item \textbf{Range di valori che può assumere:}
                 \begin{itemize}
-                    \item \textbf{Accettabile:} $AFI  \geq80\% $
+                    \item \textbf{Accettabile:} $AFI  \geq 80\% $
                     \item \textbf{Ottimale:} $AFI = 100\%$
                 \end{itemize}
             \end{itemize}
@@ -46,16 +42,11 @@ Per valutare tale qualità il gruppo \Gruppo{} ha deciso di far riferimento allo
         \item   \textbf{Descrizione:} Misurare in percentuale l'efficacia nel rilevare i difetti presenti nel software durante lo sviluppo del prodotto.
     \item    \textbf{Attributo di riferimento:} Maturità\ap{G}
     \item    \textbf{Sigla:} $RD$
-    \item    \textbf{Formula:} $$RD = {A \over B}$$
-            con:
-            \begin{itemize}
-                \item $A$ = numero di difetti rilevati nelle revisioni tecniche, ispezioni e test del prodotto durante lo sviluppo
-                \item $B$ = numero totale di difetti previsti durante lo sviluppo
-            \end{itemize}
+    \item    \textbf{Formula:} $$RD = {numero \; di \; difetti \; rilevati \; nelle \; revisioni \; tecniche \; e \; test \; del \; prodotto \over numero \; totale \; di \; difetti \; previsti \; durante \; lo \; sviluppo}$$
              
              \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
-            \item \textbf{Accettabile:} $RD  \geq80\% $
+            \item \textbf{Accettabile:} $RD  \geq 80\% $
             \item \textbf{Ottimale:} $RD = 100\%$
         \end{itemize}
        \end{itemize}
@@ -67,20 +58,15 @@ Capacità del prodotto software di essere comprensibile, di poter essere usato e
 	 \paragraph{Metrica - Validità dei dati d'input} 
 	    \begin{itemize}
           \item  \textbf{Codice: } MPD-03
-           \item \textbf{Descrizione:} Misurare il livello di correttezza dei dati forniti in input all'applicazione.
+           \item \textbf{Descrizione:} Misurare in percentuale la correttezza dei dati forniti in input all'applicazione.
          \item   \textbf{Attributo di riferimento:} Operabilità\ap{G}
           \item  \textbf{Sigla:} $VDI$
-         \item   \textbf{Formula:} $$VDI = {A \over B}$$
-            con:
-            \begin{itemize}
-                \item $A$ = numero dei dati di input di cui si effettua il controllo di validità 
-                \item $B$ = numero totale di dati di input previsti
-            \end{itemize}
+         \item   \textbf{Formula:} $$VDI = {numero \; dei \; dati \; di \; input \; di \; cui \; si \; effettua \; il \; controllo \; di \; validita \over numero \; totale \; di \; dati \; di \; input \; previsti}$$
              
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
-            \item \textbf{Accettabile:} $VDI = $
-            \item \textbf{Ottimale:} $VDI = $
+            \item \textbf{Accettabile:} $VDI = \geq 90\%$
+            \item \textbf{Ottimale:} $VDI = 100\%$
         \end{itemize}
        \end{itemize}
               
@@ -117,16 +103,11 @@ Capacità del prodotto software di essere comprensibile, di poter essere usato e
           \item  \textbf{Descrizione:} Misurare in percentuale il livello di diagnostica che il prodotto consente tramite le apposite funzioni.
           \item  \textbf{Attributo di riferimento:} Analizzabilità\ap{G}
          \item   \textbf{Sigla:} $D$
-          \item  \textbf{Formula:} $$D = {A \over B}$$
-          con:
-          \begin{itemize}
-            \item $A$ = numero di funzioni di diagnostica sviluppate
-            \item $B$ = numero totale di funzioni di diagnostica previste nelle specifiche
-          \end{itemize}
+          \item  \textbf{Formula:} $$D = {numero \; di \; funzioni \; di \; diagnostica \; sviluppate \over numero\; totale \; di \; funzioni \; di \; diagnostica \; previste \; nelle \; specifiche }$$
 
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
-            \item \textbf{Accettabile:} $D  \geq80\% $
+            \item \textbf{Accettabile:} $D  \geq 80\% $
             \item \textbf{Ottimale:} $D = 100\% $
         \end{itemize}
        \end{itemize}
@@ -148,8 +129,8 @@ Capacità del prodotto software di essere comprensibile, di poter essere usato e
            
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
-            \item \textbf{Accettabile:} $1\leq CS \geq7 $
-            \item \textbf{Ottimale:} $ 1\leq CS \geq4 $
+            \item \textbf{Accettabile:} $1 \leq CS \leq 7 $
+            \item \textbf{Ottimale:} $ 1 \leq CS \leq 4 $
         \end{itemize}
        \end{itemize}
               
@@ -160,16 +141,12 @@ Capacità del prodotto software di essere comprensibile, di poter essere usato e
          \item   \textbf{Descrizione:} Misurare in percentuale il numero di unità di codice con documentazione tecnica.
          \item   \textbf{Attributo di riferimento:} Modificabilità\ap{G}
          \item   \textbf{Sigla:} $RM$
-         \item   \textbf{Formula:} $$RM = {A \over B}$$
-         con:
-         \begin{itemize}
-            \item $A$ = numero di unità di codice con documentazione tecnica inserita 
-            \item $B$ = numero totale di unità di codice
-                     \end{itemize}
+         \item   \textbf{Formula:} $$RM = {numero \; di \; unita \; di \; codice \; con \; documentazione \; tecnica \; inserita \over numero \; totale \; di \; unita \; di \; codice}$$
+   
 
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
-            \item \textbf{Accettabile:} $RM  \geq90\%  $
+            \item \textbf{Accettabile:} $RM  \geq 90\%  $
             \item \textbf{Ottimale:} $RM = 100\%$
         \end{itemize}
        \end{itemize}
@@ -183,20 +160,15 @@ Le metriche relative alla qualità "esterna" indirizzano le caratteristiche este
     \paragraph{Metrica - Completezza delle funzionalità sviluppate} 
         \begin{itemize}
         \item  \textbf{Codice:} MPD-08
-        \item  \textbf{Descrizione:} Misurare il livello di completezza delle funzioni sviluppate.
+        \item  \textbf{Descrizione:} Misurare in percentuale la completezza delle funzioni sviluppate.
         \item  \textbf{Attributo di riferimento:} Adeguatezza\ap{G}
         \item  \textbf{Sigla:} $CFS$
-        \item  \textbf{Formula:} $$CFS = 1 - {A \over B}$$
-        con:
-        \begin{itemize}
-            \item $A$ = numero di funzioni omesse
-            \item $B$ = numero totale di funzioni previste nelle specifiche       
-        \end{itemize}
+        \item  \textbf{Formula:} $$CFS = 1 - { numero \; di \; funzioni \; omesse \over numero \; totale \; di \; funzioni \; previste \; nelle \; specifiche  }$$
 
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
-            \item \textbf{Accettabile:} $CFS = $
-            \item \textbf{Ottimale:} $CFS = $
+            \item \textbf{Accettabile:} $CFS = \geq 80\%$
+            \item \textbf{Ottimale:} $CFS = 100\%$
         \end{itemize}
     \end{itemize}
               
@@ -209,12 +181,8 @@ Le metriche relative alla qualità "esterna" indirizzano le caratteristiche este
         \item  \textbf{Descrizione:} Misurare la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire piena copertura dei requisiti sia funzionali che qualitativi(usabilità, affidabilità, efficienza).
         \item   \textbf{Attributo di riferimento:} Maturità\ap{G}
         \item    \textbf{Sigla:} $MT$
-        \item   \textbf{Formula:} $$MT = {A \over B}$$
-        con:
-        \begin{itemize}
-            \item $A$ = numero di casi di test eseguiti con successo
-            \item $B$ = numero totale di casi di test previsto
-        \end{itemize}
+        \item   \textbf{Formula:} $$MT = {numero \; di \; casi \; di \; test \; eseguiti \; con \; successo \over numero \; totale \; di \; casi \; di \; test \; previsto }$$
+    
         
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
@@ -232,16 +200,11 @@ Le metriche relative alla qualità "esterna" indirizzano le caratteristiche este
             \item   \textbf{Descrizione:} Misurare la percentuale di funzioni comprese dall'utente dopo aver letto la descrizione del prodotto(es. Manuale utente, specifiche funzionali).
             \item    \textbf{Attributo di riferimento:} Accuratezza\ap{G}
             \item   \textbf{Sigla:} $CDF$
-            \item   \textbf{Formula:} $$CDF = {A \over B}$$
-            con:
-            \begin{itemize}
-            \item  $A$ = numero di funzioni comprese
-            \item  $B$ = numero totale di funzioni disponibili
-            \end{itemize}
+            \item   \textbf{Formula:} $$CDF = {numero \; di \; funzioni \; comprese \over numero \; totale \; di \; funzioni \; disponibili }$$
 
             \item \textbf{Range di valori che può assumere:}
             \begin{itemize}
-                \item \textbf{Accettabile:} $CDF = 70\% $
+                \item \textbf{Accettabile:} $CDF = \geq 70\% $
                 \item \textbf{Ottimale:} $CDF = 100\% $
             \end{itemize}
         \end{itemize}
@@ -259,32 +222,32 @@ Le metriche relative alla qualità "esterna" indirizzano le caratteristiche este
         \end{itemize}
     \end{itemize}
 
-\subsection{Tabella metriche interne del prodotto}
-    \rowcolors{2}{grigetto}{white}
+        \rowcolors{2}{grigetto}{white}
     \renewcommand{\arraystretch}{1.5}
     \begin{longtable}{ c C{4cm} c c c}
+    \caption{Tabella metriche interne del prodotto}\\
     \rowcolor{darkblue}
     \textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Valore Accettabile}} & \textcolor{white}{\textbf{Valore Ottimale}}\\
-    MPD-01 & Aderenza delle Funzioni e/o delle Interfacce & $AFI$ & $AFI=100\%$ & $AFI=100\%$ \\
-    MPD-02 & Rilevamento dei Difetti & $RD$ & $ RD $ & $RD$ \\
-    MPD-03 & Validità dei Dati d'Input & $VDI$ &  $VDI $ &  $VDI$ \\
+    MPD-01 & Aderenza delle Funzioni e/o delle Interfacce & $AFI$ & $AFI = 100\%$ & $AFI = 100\%$ \\
+    MPD-02 & Rilevamento dei Difetti & $RD$ & $ RD =  \geq 80\% $ & $RD = 100\%$ \\
+    MPD-03 & Validità dei Dati d'Input & $VDI$ &  $VDI = \geq 90\%$ &  $VDI = 100\%$ \\
     MPD-04 & Attrattività delle Interfacce Utente & $AIU$ & $AIU = Attrattivo$ &  $AIU = Molto \; attrattivo$ \\
-    MPD-05 & Diagnostica & $D$ & $D $ & $D $ \\
-    MPD-06 & Complessità del Software & $CS$ & $CS$ & $CS$ \\
+    MPD-05 & Diagnostica & $D$ & $D = \geq 80\% $ & $D = 100\% $ \\
+    MPD-06 & Complessità del Software & $CS $ & $CS = 1 \leq CS \geq 7 $ & $CS = 1 \leq CS \geq 4$ \\
     \end{longtable} 
 
 \newpage %adattamento pagina pdf
 
-\subsection{Tabella metriche esterne del prodotto}
     \rowcolors{2}{grigetto}{white}
     \renewcommand{\arraystretch}{1.5}
     \begin{longtable}{ c C{4cm} c c c}
+    \caption{Tabella metriche esterne del prodotto}\\
     \rowcolor{darkblue}
     \textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Valore Accettabile}} & \textcolor{white}{\textbf{Valore Ottimale}}\\
-    MPD-07 & Registrazione delle Modifiche & $RM$ & $RM$ & $RM$ \\
-    MPD-08 & Completezza delle Funzionalità Sviluppate & $CFS$ & $CFS$ & $CFS$  \\
+    MPD-07 & Registrazione delle Modifiche & $RM$ & $RM =  \geq 90\%$ & $RM = 100\%$ \\
+    MPD-08 & Completezza delle Funzionalità Sviluppate & $CFS$ & $CFS = \geq 80\%$ & $CFS = 100\%$  \\
     MPD-09 & Maturità dei Test & $MT$ & $MT=100\% $ & $MT=100\%$  \\	
-    MPD-10 & Completezza della Descrizione Funzionale & $CDF$ & $CDF$ & $CDF$  \\
+    MPD-10 & Completezza della Descrizione Funzionale & $CDF $ & $CDF = \geq 70\%$ & $CDF = 100\%$  \\
     MPD-11 &  Profondità Strutturale dell'Applicazione & $PSA$ & $1 \leq PSA \leq 4$ &$1 \leq PSA \leq 2$  \\
     \end{longtable}  
                 
