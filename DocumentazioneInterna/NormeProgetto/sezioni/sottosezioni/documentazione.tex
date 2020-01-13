@@ -3,17 +3,17 @@
 Lo scopo di questa sezione è di redigere e standardizzare i documenti prodotti durante tutto il ciclo di vita del software. 
 Di conseguenza ci si aspetta di avere:
 \begin{itemize}
-\item una struttura ben organizzata e con una facile navigabilità;
-\item una serie di norme tipografiche da rispettare.
+\item Una struttura ben organizzata e con una facile navigabilità;
+\item Una serie di norme tipografiche da rispettare.
 \end{itemize}
 I documenti possono essere consultati nel seguente repository di \glo{GitHub}: \url{https://github.com/qb-team/Stalker-Documentazione}.
 
 \subsubsection{Ciclo di vita}
 Ogni documento prima di essere presentato deve passare per tre stati fondamentali:
 \begin{enumerate}
-\item \textbf{Stesura del documento}: creazione del documento e stesura con il linguaggio \LaTeX;
-\item \textbf{Verifica del Documento}: il documento viene assegnato ad un verificatore, il cui lavoro è controllare che il documento rispetti gli standard definiti;
-\item \textbf{Approvazione del documento}: in caso la verifica risulti positiva, il documento viene consegnato al \Responsabile{} per l'approvazione al rilascio.
+\item \textbf{Stesura del documento}: Creazione del documento e stesura con il linguaggio \LaTeX;
+\item \textbf{Verifica del Documento}: Il documento viene assegnato ad un verificatore, il cui lavoro è controllare che il documento rispetti gli standard definiti;
+\item \textbf{Approvazione del documento}: In caso la verifica risulti positiva, il documento viene consegnato al \Responsabile{} per l'approvazione al rilascio.
 \end{enumerate}
 
 \subsubsection{Template}
@@ -21,9 +21,9 @@ Ogni documento prima di essere presentato deve passare per tre stati fondamental
 Ogni documento che viene redatto deve includere al suo interno il file di stile Stiletemplate.sty presente nella cartella Utilità/Template.
 Il template fornisce i seguenti comandi:
 \begin{itemize}
-\item \textbf{\textbackslash copertina\{\}}: da inserire all'inizio del documento, ne inserisce la prima pagina (o copertina);
-\item \textbf{\textbackslash fancydoc\{\}}: da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del documento. Va utilizzato in ogni documento, ad eccezione dei verbali;
-\item \textbf{\textbackslash fancyverbale\{\}}: da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del verbale. Da utilizzare solamente nei verbali.
+\item \textbf{\textbackslash copertina\{\}}: Da inserire all'inizio del documento, ne inserisce la prima pagina (o copertina);
+\item \textbf{\textbackslash fancydoc\{\}}: Da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del documento. Va utilizzato in ogni documento, ad eccezione dei verbali;
+\item \textbf{\textbackslash fancyverbale\{\}}: Da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del verbale. Da utilizzare solamente nei verbali.
 \end{itemize}
 
 \subsubsection{Struttura dei documenti}
@@ -32,10 +32,10 @@ Di seguito viene elencato, per ogni sezione del documento, le sue caratteristich
 
 \paragraph{Prima pagina - Copertina}\mbox{}
 \begin{itemize}
-\item \textbf{Logo del gruppo}: il logo viene posizionato al centro della pagina, in alto;
-\item \textbf{Titolo del documento}: indica il nome del documento ed è posizionato sotto al logo del gruppo;
-\item \textbf{Informazioni gruppo}: nome del gruppo (\Gruppo{}) e del capitolato, seguiti subito dopo dall'e-mail del gruppo; 
-\item \textbf{Informazioni documento}: tabella posizionata al centro della pagina contenente le seguenti informazioni sul documento:
+\item \textbf{Logo del gruppo}: Il logo viene posizionato al centro della pagina, in alto;
+\item \textbf{Titolo del documento}: Indica il nome del documento ed è posizionato sotto al logo del gruppo;
+\item \textbf{Informazioni gruppo}: Nome del gruppo (\Gruppo{}) e del capitolato, seguiti subito dopo dall'e-mail del gruppo; 
+\item \textbf{Informazioni documento}: Tabella posizionata al centro della pagina contenente le seguenti informazioni sul documento:
 \begin{itemize}
 \item Versione;
 \item Approvatori;
@@ -114,39 +114,39 @@ in cui \textbf{YYYY} rappresenta l'anno, \textbf{MM} il mese e \textbf{DD} il gi
 Ogni voce di un elenco ordinato o numerato comincia con la lettera maiuscola e termina con punto e virgola (\textbf{";"}) , tranne per l'ultimo elemento dell'elenco che termina con un punto fermo (\textbf{"."}).
 Nel caso di elenchi che definiscono un termine:
 \begin{itemize}
-    \item il termine deve essere in grassetto;
-    \item il termine deve essere seguito da due punti (\textbf{":"});
-    \item la definizione del termine inizia con la lettera maiuscola.
+    \item Il termine deve essere in grassetto;
+    \item Il termine deve essere seguito da due punti (\textbf{":"});
+    \item La definizione del termine inizia con la lettera maiuscola.
 \end{itemize}
 
 \paragraph{Nomenclatura dei documenti}\mbox{} \\ \\
 I nomi di file (escludendo l'estensione) e cartelle sono scritti usando la convenzione "Camel Case\ap{G}".
 I file della documentazione prodotti avranno i seguenti nomi:
 \begin{itemize}
-    \item \textbf{AnalisiDeiRequisiti.pdf}: contenente il documento \AdR{};
-    \item \textbf{PianoDiProgetto.pdf}: contenente il documento \PdP{};
-    \item \textbf{PianoDiQualifica.pdf}: contenente il documento \PdQ{};
-    \item \textbf{NormeDiProgetto.pdf}: contenente il documento \NdP{};
-    \item \textbf{StudioDiFattibilita.pdf}: contenente il documento \SdF{}.
+    \item \textbf{AnalisiDeiRequisiti.pdf}: Contenente il documento \AdR{};
+    \item \textbf{PianoDiProgetto.pdf}: Contenente il documento \PdP{};
+    \item \textbf{PianoDiQualifica.pdf}: Contenente il documento \PdQ{};
+    \item \textbf{NormeDiProgetto.pdf}: Contenente il documento \NdP{};
+    \item \textbf{StudioDiFattibilita.pdf}: Contenente il documento \SdF{}.
 \end{itemize}
 I file dei verbali, esterni e interni, avranno i seguenti nomi:
 \begin{itemize}
-    \item \textbf{VI\_[YYYY]\_[MM]\_[DD].pdf}: contenente il verbale interno del [YYYY]-[MM]-[DD];
-    \item \textbf{VE\_[YYYY]\_[MM]\_[DD].pdf}: contenente il verbale esterno del [YYYY]-[MM]-[DD];
+    \item \textbf{VI\_[YYYY]\_[MM]\_[DD].pdf}: Contenente il verbale interno del [YYYY]-[MM]-[DD];
+    \item \textbf{VE\_[YYYY]\_[MM]\_[DD].pdf}: Contenente il verbale esterno del [YYYY]-[MM]-[DD].
 \end{itemize}
 con:
 \begin{itemize}
     \item \textbf{[YYYY]} l'anno in cui si è tenuto l'\glo{incontro formale};
     \item \textbf{[MM]} il mese in cui si è tenuto l'\glo{incontro formale};
-    \item \textbf{[DD]} il giorno in cui si è tenuto l'\glo{incontro formale};
+    \item \textbf{[DD]} il giorno in cui si è tenuto l'\glo{incontro formale}.
 \end{itemize}
 
 \paragraph{Tabelle nei documenti}\mbox{} \\ \\
 Le tabelle utilizzate nei documenti si differenziano sostanzialmente dalla loro struttura e dal colore.
 Le tabelle con intestazione di colore:
 \begin{itemize}
-    \item \textcolor{rossoep}{\textbf{Rosso}}: sono solamente le tabelle del "Registro delle modifiche";
-    \item \textcolor{darkblue}{\textbf{Blu}}: sono tutte le altre tabelle.
+    \item \textcolor{rossoep}{\textbf{Rosso}}: Sono solamente le tabelle del "Registro delle modifiche";
+    \item \textcolor{darkblue}{\textbf{Blu}}: Sono tutte le altre tabelle.
 \end{itemize}
 Le intestazioni delle tabelle devono ripetersi in ogni pagina, qualora si dovessero spezzare per mancanza di spazio.
 
@@ -168,9 +168,9 @@ I file di \LaTeX{} (file \textbf{.tex}), per generare file PDF distribuibili, de
 Per \LaTeX{} sono disponibili parecchi compilatori, ma avendo definito come ufficiali i soli editor TexStudio e Visual Studio Code,
 i compilatori e strumenti necessari per la compilazione sono:
 \begin{itemize}
-    \item \textbf{MiKTeX}: disponibile a \href{https://miktex.org/}{questo indirizzo}, se si sceglie l'utilizzo dell'editor Texmaker;
-    \item \textbf{TeX Live}: disponibile a \href{https://www.tug.org/texlive/}{questo indirizzo}, se si sceglie l'utilizzo dell'editor Visual Studio Code (nota: è una distribuzione completa di \LaTeX, quindi offre anche strumenti che possono non essere utili ai fini del progetto);
-    \item \textbf{Perl}: disponibile a \href{http://strawberryperl.com/}{questo indirizzo} per sistemi Windows, mentre, seguendo la guida di \href{https://learn.perl.org/installing/unix_linux.html}{quest'altro} per sistemi Unix/Linux, se si sceglie l'utilizzo dell'editor Visual Studio Code.
+    \item \textbf{MiKTeX}: Disponibile a \href{https://miktex.org/}{questo indirizzo}, se si sceglie l'utilizzo dell'editor Texmaker;
+    \item \textbf{TeX Live}: Disponibile a \href{https://www.tug.org/texlive/}{questo indirizzo}, se si sceglie l'utilizzo dell'editor Visual Studio Code (nota: è una distribuzione completa di \LaTeX, quindi offre anche strumenti che possono non essere utili ai fini del progetto);
+    \item \textbf{Perl}: Disponibile a \href{http://strawberryperl.com/}{questo indirizzo} per sistemi Windows, mentre, seguendo la guida di \href{https://learn.perl.org/installing/unix_linux.html}{quest'altro} per sistemi Unix/Linux, se si sceglie l'utilizzo dell'editor Visual Studio Code.
 \end{itemize}
 Per compilare un file \textbf{.tex} e generare un file PDF corretto deve essere invocato tre volte il comando \textbf{pdflatex $nomeFile$}, dove $nomeFile$ è il percorso ad un file con estensione \textbf{.tex} contenente al suo interno le istruzioni:
 \begin{itemize}
@@ -184,13 +184,13 @@ Per realizzare tutti i diagrammi in UML viene utilizzato il software \href{https
 Draw.io permette sia di salvare i file di lavoro per poterli modificare, sia di esportarli.
 Il salvataggio dei file di lavoro può avvenire in file in formato:
 \begin{itemize}
-    \item \textbf{XML}: il file ha estensione \textbf{.xml};
-    \item \textbf{Draw.io}: il file ha estensione \textbf{.drawio}.
+    \item \textbf{XML}: Il file ha estensione \textbf{.xml};
+    \item \textbf{Draw.io}: Il file ha estensione \textbf{.drawio}.
 \end{itemize}
 Il salvataggio delle immagini da includere nei documenti deve essere in formato \textbf{PNG}, con estensione \textbf{.png}, ed esportata con i seguenti parametri:
 \begin{itemize}
     \item \textbf{Spessore bordo}: 20;
     \item \textbf{DPI}: 400dpi;
-    \item \textbf{Sfondo}: non trasparente (spunta rimossa).
+    \item \textbf{Sfondo}: Non trasparente (spunta rimossa).
 \end{itemize}
 Le seguenti impostazioni di esportazioni si trovano in File $\rightarrow$ Esporta come $\rightarrow$ Avanzate\dots; il nome del file e lo zoom, così come profondità e altezza, sono indifferenti.

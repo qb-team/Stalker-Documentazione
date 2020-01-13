@@ -12,7 +12,7 @@ Allo scopo di tracciare gli incrementi del prodotto, ogni sua versione è accomp
 con:
 \begin{itemize}
 	\item \textbf{X}: Detto indice major, rappresenta il numero di una versione stabile, quando X $> 0$.
-	Viene incrementato ogni volta che il \Responsabile{} approva il prodotto, successivamente allo svolgimento del processo di verifica da parte di un verificatore.
+	Viene incrementato ogni volta che il \Responsabile{} approva il prodotto, successivamente allo svolgimento del processo di verifica da parte di un verificatore;
 	\item \textbf{Y}: Detto indice minor, rappresenta una versione del prodotto a cui sono state aggiunte funzionalità (o sezioni, se si tratta di documenti), di cui ne è garantita la correttezza dopo la verifica da parte di un verificatore.
 	Questo numero indica quante verifiche effettuate sono state superate positivamente.
 	Quindi, l'indice Y viene incrementato dal verificatore ad ogni verifica con successo.
@@ -34,7 +34,7 @@ Il gruppo \Gruppo{} potrà interagire con il \glo{VCS} sia tramite riga di coman
 Sono stati creati due \glo{repository} per supportare il lavoro del gruppo, quali:
 \begin{itemize}
 	\item \textbf{Stalker}: Viene usato per versionare il codice sorgente prodotto dal gruppo.
-	Al momento tale repository è vuoto e verrà usato dopo la RR, organizzandoli nella maniera che verrà ritenuta più appropriata.
+	Al momento tale repository è vuoto e verrà usato dopo la RR, organizzandoli nella maniera che verrà ritenuta più appropriata;
 	\item \textbf{Stalker-Documentazione}: Viene usato per versionare la documentazione prodotta dal gruppo.
 \end{itemize}
 
@@ -59,7 +59,7 @@ Il \glo{repository} per la documentazione ha la seguente \glo{organizzazione} di
 	\item \textbf{Glossario/}: In questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\Glossario{};
 	\item \textbf{Utilita/}: Dentro a questa cartella vi sono file che permettono una scrittura più rapida della documentazione.
 	Vi sono i file e le immagini comuni contente le componenti, gli stili e i comandi comuni a tutti i documenti da realizzare in \LaTeX{};
-	\item \textbf{.gitignore}: file utilizzato per garantire che non vengano versionati certi tipi di file non utili alla compilazione.
+	\item \textbf{.gitignore}: File utilizzato per garantire che non vengano versionati certi tipi di file non utili alla compilazione.
 \end{itemize}
 
 \subsubsection{Procedura di lavoro collaborativo}
@@ -71,9 +71,9 @@ Con Git Flow, lo sviluppo viene diviso in più rami, detti \glo{branch}:
 	\item \textbf{develop}: Contenente codice sorgente corretto ma non completo in tutte le parti, non pronto per essere rilasciato;
 	\item \textbf{feature/[FEATURE]}: Contenente codice sorgente altamente soggetto a modifiche perché riguardante una funzionalità in fase di sviluppo.
 	\textbf{[FEATURE]} corrisponde al nome della funzionalità in sviluppo, ed è decisa dal creatore del \glo{branch};
-	\item \textbf{release/[RELEASE]}: Contenente codice sorgente stabile e pronto per il rilascio.
+	\item \textbf{release/[RELEASE]}: Contenente codice sorgente stabile e pronto per il rilascio;
 	\item \textbf{bugfix/[BUGFIX]} e \textbf{hotfix/[HOTFIX]}: Contenente codice sorgente in cui sono presenti funzionalità o sezioni contenenti bug, i quali vanno risolti dai membri del gruppo.
-	Un \glo{branch} di bugfix o hotfix viene creato a partire dal \glo{branch} master;
+	Un \glo{branch} di bugfix o hotfix viene creato a partire dal \glo{branch} master.
 \end{itemize}
 
 Oltre all'utilizzo di Git Flow, devono venire rispettate le seguenti regole:
