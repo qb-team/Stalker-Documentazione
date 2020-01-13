@@ -21,9 +21,9 @@ Ogni documento prima di essere presentato deve passare per tre stati fondamental
 Ogni documento che viene redatto deve includere al suo interno il file di stile Stiletemplate.sty presente nella cartella Utilità/Template.
 Il template fornisce i seguenti comandi:
 \begin{itemize}
-\item \textbf{\textbackslash copertina{}}: da inserire all'inizio del documento, ne inserisce la prima pagina (o copertina);
-\item \textbf{\textbackslash fancydoc{}}: da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del documento. Va utilizzato in ogni documento, ad eccezione dei verbali;
-\item \textbf{\textbackslash fancyverbale{}}: da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del verbale. Da utilizzare solamente nei verbali.
+\item \textbf{\textbackslash copertina\{\}}: da inserire all'inizio del documento, ne inserisce la prima pagina (o copertina);
+\item \textbf{\textbackslash fancydoc\{\}}: da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del documento. Va utilizzato in ogni documento, ad eccezione dei verbali;
+\item \textbf{\textbackslash fancyverbale\{\}}: da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del verbale. Da utilizzare solamente nei verbali.
 \end{itemize}
 
 \subsubsection{Struttura dei documenti}
@@ -71,13 +71,12 @@ Il contenuto del documento è posto tra intestazione e il piè di pagina:
 \item In basso a destra è presente il numero della pagina;
 \item In basso una linea orizzontale separa il piè di pagina dal contenuto.
 \end{itemize}
-Qualora si tratti di un verbale, si trova anche la data di stesura dello stesso in basso a destra.
 
 \paragraph{Elementi grafici}\mbox{}
 \begin{itemize}
-\item \textbf{Tabelle}: Centrate con la didascalia posizionata al di sopra di esse;
-\item \textbf{Diagrammi}: Centrati con la didascalia posizionata al di sopra di essi;
-\item \textbf{Immagini}: Centrate con la didascalia posizionata al di sotto di esse.
+\item \textbf{Tabelle}: Centrate, con la didascalia posizionata al di sopra di esse;
+\item \textbf{Diagrammi}: Centrati, con la didascalia posizionata al di sopra di essi;
+\item \textbf{Immagini}: Centrate, con la didascalia posizionata al di sotto di esse.
 \end{itemize}
 
 \paragraph{Stile del testo}\mbox{}
@@ -143,9 +142,13 @@ con:
 \end{itemize}
 
 \paragraph{Tabelle nei documenti}\mbox{} \\ \\
-Le tabelle utilizzate nei documenti si differenziano sostanzialmente dalla loro struttura e dal colore. Le tabelle colorate di rosso sono riferite al "Registro delle modifiche"
-che appaiono ogni volta nelle prime pagine del documento, mentre colorate di blu scuro sono ad uso esclusivo per il resto dei contenuti della documentazione.
-Le intestazioni delle tabelle devono ripetersi in ogni pagina, qualora si dovessero spezzare non standoci nell'intera pagina.
+Le tabelle utilizzate nei documenti si differenziano sostanzialmente dalla loro struttura e dal colore.
+Le tabelle con intestazione di colore:
+\begin{itemize}
+    \item \textcolor{rossoep}{\textbf{Rosso}}: sono solamente le tabelle del "Registro delle modifiche";
+    \item \textcolor{darkblue}{\textbf{Blu}}: sono tutte le altre tabelle.
+\end{itemize}
+Le intestazioni delle tabelle devono ripetersi in ogni pagina, qualora si dovessero spezzare per mancanza di spazio.
 
 \subsubsection{Linguaggi}
 \paragraph{\LaTeX}\mbox{} \\ \\
