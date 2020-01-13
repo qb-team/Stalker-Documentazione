@@ -14,7 +14,7 @@ Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software
         \item \textbf{Descrizione:} È la percentuale dei requisiti che devono essere soddisfatti.
         \item \textbf{Processo di riferimento:} Sviluppo
         \item \textbf{Sigla:} $PRS$
-        \item \textbf{Formula:} $$PRS = {requisiti \; soddisfatti \over requisiti \; totali}\; \cdot \; 100$$
+        \item \textbf{Formula:} $$PRS = {|requisiti \; soddisfatti| \over |requisiti \; totali|}\; \cdot \; 100$$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
             \item \textbf{Accettabile:} $PRS = 100\%$
@@ -81,7 +81,7 @@ Sono i processi\ap{G} e le attività che fanno parte dello sviluppo del software
         \item \textbf{Descrizione:} È il rapporto tra linee di commento e linee di codice. Per le linee di codice si intende Logical SLOC il numero di linee di codice effettive che corrispondono al numero di statement.
         \item \textbf{Processo di riferimento:} Sviluppo
         \item \textbf{Sigla:} $LCLC$
-        \item \textbf{Formula:}$$LCLC = {linee \; di \; commento\over linee \; di \; codice}$$
+        \item \textbf{Formula:}$$LCLC = {|linee \; di \; commento| \over |linee \; di \; codice|}$$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
             \item \textbf{Accettabile:} $LCLC \geq 0.25$
@@ -99,7 +99,7 @@ Sono i processi\ap{G} e le attività che aiutano gli altri processi\ap{G} nel ra
         \item \textbf{Descrizione:} È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Il valore è un intero da 0 a 100; se esso è inferiore a 80 sarà difficile da leggere per chi ha la licenza elementare, mentre se è inferiore a 40 sarà difficili da leggere per chi ha un diploma superiore.
         \item \textbf{Processo di riferimento:} Documentazione
         \item \textbf{Sigla:} $IG$
-        \item \textbf{Formula:} $$IG = 89 + {{300 \; \cdot \; (numero\; delle \; frasi) \; - \; 10 \; \cdot \; (numero \; delle \; lettere)}\over numero \; delle \; parole}$$
+        \item \textbf{Formula:} $$IG = 89 + {{300 \; \cdot \; |frasi| \; - \; 10 \; \cdot \; |lettere|}\over |parole|}$$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
             \item \textbf{Accettabile:} $40 < IG < 100$
@@ -128,7 +128,7 @@ Sono i processi\ap{G} e le attività che aiutano gli altri processi\ap{G} nel ra
         \item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento.
         \item \textbf{Processo di riferimento:} Processi\ap{G} di verifica
         \item \textbf{Sigla:} $CC$
-        \item \textbf{Formula:} $$CC = {linee \; di \; codice \; percorse \; dai  \; test \over linee \; di \; codice \; totali} \; \cdot \; 100$$
+        \item \textbf{Formula:} $$CC = {|linee \; di \; codice \; percorse \; dai  \; test| \over |linee \; di \; codice \; totali|} \; \cdot \; 100$$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
             \item \textbf{Accettabile:} $CC = 80\%$
@@ -186,7 +186,7 @@ Sono i processi\ap{G} e le attività che coprono gli aspetti organizzativi e di 
     \caption{Tabella metriche dei processi}\\
     \rowcolor{darkblue}
     \textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Valore Accettabile}} & \textcolor{white}{\textbf{Valore Ottimale}}\\
-    MPC-01 & Percentuale Requisiti Soddisfatti & $PRS$ & $PRS=100\%$ & $PRS=100\%$ \\
+    MPC-01 & Percentuale Requisiti Soddisfatti & $PRS$ & $PRS = 100\%$ & $PRS = 100\%$ \\
     MPC-02 & Coupling Between Objects & $CBO$ & $0 \leq CBO \leq 4$ & $0 \leq CBO \leq 2$ \\
     MPC-03 & Livello Profondità Gerarchia & $LPG$ &  $1 \leq LPG \leq 3$ &  $1 \leq LPG \leq 2$ \\
     MPC-04 & Numero di Parametri per Metodo & $NPM$ & $0 < NPM < 8$ & $ 0 < NPM < 4$ \\
@@ -199,20 +199,20 @@ Sono i processi\ap{G} e le attività che coprono gli aspetti organizzativi e di 
     \end{longtable}
 
 \subsection{Ciclo di Deming}
-    Il ciclo di Deming è un metodo di gestione iterativo per il controllo e il miglioramento continuo dei processi (e anche dei prodotti) suddiviso in 4 fasi: Plan, Do, Check e Act. 
-    Anche la norma ISO/IEC 12207 utilizza questo ciclo per scopi di miglioria dei processi\ap{G}. Per garantire la qualità dei processi\ap{G} e la coerenza allo standard, il gruppo qbteam 
-    ha scelto di adottare il ciclo PDCA.
+Il ciclo di Deming è un metodo di gestione iterativo per il controllo e il miglioramento continuo dei processi (e anche dei prodotti) suddiviso in 4 fasi: Plan, Do, Check e Act. 
+Anche la norma ISO/IEC 12207 utilizza questo ciclo per scopi di miglioria dei processi\ap{G}. Per garantire la qualità dei processi\ap{G} e la coerenza allo standard, il gruppo qbteam 
+ha scelto di adottare il ciclo PDCA.
 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.2]{sezioni/Immagini/PDCA.png}
-        \caption{Ciclo PDCA - Plan Do Check Act}
-    \end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.2]{sezioni/Immagini/PDCA.png}
+    \caption{Ciclo PDCA - Plan Do Check Act}
+\end{figure}
 
-    \textbf{Fasi del ciclo PDCA:}
-    \begin{itemize}
-        \item \textbf{Plan}: definisce attività e scadenze necessarie al raggiungimento dei specifici obiettivi di miglioramento;
-        \item \textbf{Do}: esegue le attività di "Plan";
-        \item \textbf{Check}: verifica l'esito delle azioni di miglioramento rispetto alle attese. Si analizzano i risultati del "Do" e li si confrontano con gli obiettivi individuati nel "Plan";
-        \item \textbf{Act}: consolida il tutto e cerca dei metodi per il prossimo miglioramento. Se il "Check" ha dimostrato che il "Plan" implementato dal "Do" è migliore rispetto ai precedenti processi\ap{G} standard, allora questo piano diventa il nuovo processo\ap{G} standard. Altrimenti il vecchio standard in uso rimarrà la baseline\ap{G}.
-    \end{itemize}
+\textbf{Fasi del ciclo PDCA:}
+\begin{itemize}
+    \item \textbf{Plan}: definisce attività e scadenze necessarie al raggiungimento dei specifici obiettivi di miglioramento;
+    \item \textbf{Do}: esegue le attività di "Plan";
+    \item \textbf{Check}: verifica l'esito delle azioni di miglioramento rispetto alle attese. Si analizzano i risultati del "Do" e li si confrontano con gli obiettivi individuati nel "Plan";
+    \item \textbf{Act}: consolida il tutto e cerca dei metodi per il prossimo miglioramento. Se il "Check" ha dimostrato che il "Plan" implementato dal "Do" è migliore rispetto ai precedenti processi\ap{G} standard, allora questo piano diventa il nuovo processo\ap{G} standard. Altrimenti il vecchio standard in uso rimarrà la baseline\ap{G}.
+\end{itemize}
