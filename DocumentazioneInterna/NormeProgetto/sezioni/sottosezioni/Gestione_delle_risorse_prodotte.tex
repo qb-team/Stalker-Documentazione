@@ -1,91 +1,83 @@
 %scritto da Federico Perin
 \subsection{Gestione delle risorse prodotte}
 \subsubsection{Obiettivo}
-
-Si vuole garantire che tutto ciò che viene prodotto dai membri del team, codice software e documenti, sia facilmente e rapidamente rintracciabile all’interno del repository, che sia etichettato con un particolare ID e a fini della manutenibilità quali pratiche devono essere addotte nelle operazioni di modifica e per il versionamento.
+Si vuole garantire che tutto ciò che viene prodotto dal gruppo \Gruppo{}, dalla documentazione al prodotto software, sia facilmente reperibile all’interno del \glo{repository}.
+Ogni elaborato viene etichettato con un particolare codice di versione e, ai fini della manutenibilità, vengono riportate le pratiche che devono essere adottate nelle operazioni di modifica e versionamento.
 
 \subsubsection{Versionamento}
-Allo scopo di poter mantenere la storia di documento attraverso le versioni prodotte, ogni versione di ogni documento sarà correlata da un particolare codice (codice di versione) a tre cifre. Sia quindi la seguente forma:
+Allo scopo di tracciare gli incrementi del prodotto, ogni sua versione è accompagnata da un particolare codice di versione a tre numeri. Dati X, Y, Z $\in \mathbb{N}$, la forma del codice di versione è la seguente:
 \begin{center}
 	\textbf{X.Y.Z}
 \end{center}
+con:
 \begin{itemize}
-\item \textbf{X}: rappresenta il numero di una versione stabile. Inizia da 0 e viene incrementato ogni volta che il Responsabile approva il documento;
-\item \textbf{Y}: rappresenta una versione parzialmente stabile del documento che è stata soggetta a verifica da parte di un verificatore, tale numero indica quante verifiche effettuate sono state superate positivamente, perciò il numero Y viene incrementato dal verificatore per ogni verifica positiva. Inizia da 0 e viene azzerato ad ogni incremento del numero X;
-\item \textbf{Z}: rappresenta una versione incompleta e non stabile del documento perché il documento si trova in fase di editing (gli analisti aggiungono, modificano e eliminano i contenuti del documento). Il numero Z parte da 0 e viene incrementato ad ogni modifica di qualsiasi dimensione, di un analista. Il numero Z viene azzerato quando o il numero X o il numero Y vengono incrementati.
-\end{itemize}
-
-\subsubsection{Codici ID per verbali degli incontri}
-Per avere una massima organizzazione\ap{G} di tutti i documenti anche i verbali degli incontri avranno un loro specifico codice.
-\begin{center}
-	\textbf{V[Destinazione]\_[YYYY]\_[MM]\_[DD]}
-\end{center}
-Con:
-\begin{itemize}
-\item \textbf{Destinazione}:
-	\begin{itemize}
-		\item \textbf{I}: Interno, per i verbali interni;
-		\item \textbf{E}: Esterno, per i verbali esterni.
-	\end{itemize}	
-\item \textbf{YYYY}, anno in cui è avvenuto l’incontro;
-\item \textbf{MM}, mese in cui è avvenuto l’incontro;
-\item \textbf{DD}, giorno in cui è avvenuto l’incontro.
-	
+	\item \textbf{X}: Detto indice major, rappresenta il numero di una versione stabile, quando X $> 0$.
+	Viene incrementato ogni volta che il \Responsabile{} approva il prodotto, successivamente allo svolgimento del processo di verifica da parte di un verificatore;
+	\item \textbf{Y}: Detto indice minor, rappresenta una versione del prodotto a cui sono state aggiunte funzionalità (o sezioni, se si tratta di documenti), di cui ne è garantita la correttezza dopo la verifica da parte di un verificatore.
+	Questo numero indica quante verifiche effettuate sono state superate positivamente.
+	Quindi, l'indice Y viene incrementato dal verificatore ad ogni verifica con successo.
+	Viene azzerato ad ogni incremento dell'indice X;
+	\item \textbf{Z}: Detto indice patch, rappresenta una versione del prodotto in cui è stata effettuata una aggiunta o una modifica integrativa, senza aver subito una verifica da parte di un verificatore.
+	Quindi, l'indice Z viene incrementato ad ogni modifica, di qualsiasi dimensione.
+	Viene azzerato quando l'indice X o l'indice Y vengono incrementati.
 \end{itemize}
 
 \subsubsection{Servizi di supporto per il versionamento} 
-Come supporto per il versionamento si è adottato Git come sistema di versionamento distribuito usando GitHub per ospitare i repository del team. Il team potrà interagire con il VCS sia tramite riga di comando o sia attraverso software dedicati come GitKraken.
+Il gruppo ha deciso di adottare \glo{Git}, che è un software per la gestione del codice sorgente (\glo{SCM}) e controllo di versione (\glo{VCS}).
+Git è un VCS distribuito: ogni membro del gruppo \Gruppo{} ha quindi a disposizione una copia del repository e svolge il suo lavoro principalmente in locale.
+Per condividere il proprio lavoro con gli altri membri del gruppo, effettua un'operazione di \textbf{push} in remoto.
+Per ricevere il lavoro condiviso dagli altri membri del gruppo, effettua un'operazione di \textbf{pull} da remoto.
+Il repository remoto a cui tutto il gruppo fa riferimento è ospitato sulla piattaforma \glo{GitHub}.
+Il gruppo \Gruppo{} potrà interagire con il \glo{VCS} sia tramite riga di comando (git) che tramite software come \glo{GitKraken}.
 
 \subsubsection{Repository creati}
-Sono state create due repository per supportare il lavoro del team e sono:
+Sono stati creati due \glo{repository} per supportare il lavoro del gruppo, quali:
 \begin{itemize}
-\item \textbf{Stalker}: Verrà usato per versionare il codice software prodotto dal team. Al momento, tale repository è vuoto, sarà usata in futuro dopo la RR dandogli anche una organizzazione\ap{G} consona;
-\item \textbf{Stalker-Documentazione}: Verrà usata per versionare i vari documenti prodotti dal team.
+	\item \textbf{Stalker}: Viene usato per versionare il codice sorgente prodotto dal gruppo.
+	Al momento tale repository è vuoto e verrà usato dopo la RR, organizzandoli nella maniera che verrà ritenuta più appropriata;
+	\item \textbf{Stalker-Documentazione}: Viene usato per versionare la documentazione prodotta dal gruppo.
 \end{itemize}
 
-\subsubsection{Organizzazione repository per la documentazione}
-Il repository per la documentazione avrà la seguente organizzazione\ap{G} di cartelle:
+\subsubsection{Organizzazione del repository Stalker-Documentazione}
+Il \glo{repository} per la documentazione ha la seguente \glo{organizzazione} di cartelle:
 \begin{itemize}
-	\item \textbf{DocumentazioneEsterna/}: Al suo interno vi è la documentazione da fornire a committenti e proponenti, oltre che i verbali redatti durante gli incontri con quest'ultimi;
+	\item \textbf{DocumentazioneEsterna/}: Dentro a questa cartella vi è la documentazione da fornire ai committenti e al proponente, oltre che i verbali redatti durante gli incontri con quest'ultimi;
 	\begin{itemize}
-		\item \textbf{VerbaliEsterni/}: Dentro a questa cartella sono presenti i verbali degli incontri fra i membri del gruppo e i proponenti del progetto. Per ogni incontro è stato redatto un verbale e questo è presente in un'unica cartella;
-		\item \textbf{AnalisiDeiRequisiti/}: Dentro a questa cartella è presente il documento dedicato all’analisi dei requisiti in formato pdf. È presente al suo interno un file Analisi\_Dei\_requisit.tex che corrispondente al file da compilare per generare il documento del verbale e una cartella sezioni/ contenente i file RegistroModifiche.tex, relativo allo storico delle modifiche del file, e Comandi.tex, contenente invece comandi utili per la stesura del documento;
-		\item \textbf{PianoDiProgetto/}: Dentro a questa cartella è presente il documento dedicato al piano di progetto in formato pdf. È presente al suo interno un file Piano\_Di\_Progettorogetto.tex che corrispondente al file da compilare per generare il documento del verbale e una cartella sezioni/ contenente i file RegistroModifiche.tex, relativo allo storico delle modifiche del file, e Comandi.tex, contenente invece comandi utili per la stesura del documento;
-		\item \textbf{PianoDiQualifica/}: Dentro a questa cartella è presente il documento dedicato piano di qualifica in formato pdf. È presente al suo interno un file Piano\_Di\_Qualifica.tex che corrispondente al file da compilare per generare il documento del verbale e una cartella sezioni/ contenente i file RegistroModifiche.tex, relativo allo storico delle modifiche del file, e Comandi.tex, contenente invece comandi utili per la stesura del documento.
+		\item \textbf{VerbaliEsterni/}: All'interno di questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dei verbali degli \glo{incontri formali} fra i membri del gruppo e il proponente del progetto.
+		Per ogni incontro viene redatto un verbale che è presente in un'unica cartella;
+		\item \textbf{AnalisiDeiRequisiti/}: In questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\AdR{};
+		\item \textbf{PianoDiProgetto/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\PdP{};
+		\item \textbf{PianoDiQualifica/}: All'interno di questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\PdQ{}.
 	\end{itemize}
-	\item \textbf{DocumentazioneInterna/}: Al suo interno vi è la documentazione ad uso e consumo da parte dei membri del gruppo qbteam;
+	\item \textbf{DocumentazioneInterna/}: Dentro a questa cartella vi è la documentazione ad uso e consumo da parte dei membri del gruppo;
 	\begin{itemize}
-		\item \textbf{VerbaliInterni/}: Dentro a questa cartella sono presenti i verbali degli incontri fra i membri del gruppo. Per ogni incontro è stato redatto un verbale e questo è presente in un'unica cartella;
-		\begin{itemize} 
-			\item \textbf{YYYY\_MM\_DD/}: Dentro a questa cartella ci sono i file che compongono il verbale del giorno indicato (dal nome della cartella). È presente al suo interno un file YYYY\_MM\_DD.tex corrispondente al file da compilare per generare il documento del verbale e una cartella sezioni/ contenente i file RegistroModifiche.tex, relativo allo storico delle modifiche del file, e Comandi.tex, contenente invece comandi utili per la stesura del documento.
-		\end{itemize}
-		\item \textbf{StudioDiFattibilità/}: Dentro in questa cartella vi è presente il documento dedicato allo studio di fattibilità in formato pdf, un file StudioDiFattibilità.tex che corrisponde al file da compilare per generare il documento, e una cartella nominata sezioni/. Questa sottocartella contiene il file: RegistroModifiche.tex relativo allo storico delle modifiche del file rappresentato in forma tabellare, comandi.tex nella quale vi sono dei comandi sotto forma di input per la creazione della prima pagina ed infine una serie di file .tex che danno contenuto testuale al documento. I nomi dei file testuali sono distinti tra di loro dalla parte introduttiva e dal capitolato con il proprio numero rappresentativo: introduzione.tex, C1.tex,  C2.tex,  C3.tex,  C4.tex,  C5.tex e C6.tex;
-		\item \textbf{NormeDiProgetto/}: Dentro a questa cartella è presenti il documento dedicato alle norme di progetto in formato pdf. È presente al suo interno un file Norme\_Di\_Progetto.tex che corrispondente al file da compilare per generare il documento del verbale e una cartella sezioni/ contenente i file RegistroModifiche.tex, relativo allo storico delle modifiche del file, e Comandi.tex, contenente invece comandi utili per la stesura del documento.
+		\item \textbf{VerbaliInterni/}: In questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dei verbali degli \glo{incontri formali} fra i membri del gruppo.
+		Per ogni incontro viene redatto un verbale che è presente in un'unica cartella;
+		\item \textbf{StudioDiFattibilita/}: All'interno di questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\SdF{};
+		\item \textbf{NormeDiProgetto/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\NdP{}.
 	\end{itemize}	
-	\item \textbf{Glossario}: Al suo interno ci sono i file che permettono di comporre il documento contenente il glossario di progetto;
-	\item \textbf{Template}: Al suo interno vi sono i file e le immagini comuni contente le componenti, gli stili e i comandi comuni a tutti i documenti da realizzare in LaTeX;
-	\item \textbf{Immagini}: Dentro a questa cartella sono presenti le immagini comuni a più file;
-	\item \textbf{.gitignore}: File utilizzato per garantire che non vengano versionati certi tipi di file, vengono esclusi i file con le seguenti estensioni:
-	\begin{itemize} 
-		\item \textbf{.log};
-		\item \textbf{.blg};
-		\item \textbf{.bbl};
-		\item \textbf{.pdf};
-		\item \textbf{.aux};
-		\item \textbf{.blx.bib};
-		\item \textbf{.out};
-		\item \textbf{.synctex.gz};
-		\item \textbf{.toc}.
-	\end{itemize}
+	\item \textbf{Glossario/}: In questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\Glossario{};
+	\item \textbf{Utilita/}: Dentro a questa cartella vi sono file che permettono una scrittura più rapida della documentazione.
+	Vi sono i file e le immagini comuni contente le componenti, gli stili e i comandi comuni a tutti i documenti da realizzare in \LaTeX{};
+	\item \textbf{.gitignore}: File utilizzato per garantire che non vengano versionati certi tipi di file non utili alla compilazione.
 \end{itemize}
-\subsubsection{Procedure di lavoro su Git}
-Il repository viene suddivisa in vari rami, si dovranno rispettare le seguenti procedure:
-\begin{itemize} 
-\item Ogni membro del team avrà un ramo a lui dedicato dove può lavorare al compito a lui assegnato;
-\item Ogni membro del team nel suo ramo può liberamente creare altri rami per suddividere i compiti a lui assegnati;
-\item Ogni membro del team è responsabile del proprio ramo, e quindi l’unico a essere autorizzato ad effettuare modifica;
-\item È possibile che ogni membro del team non proprietario di un ramo possa suggerire delle modifiche al proprietario il quale se valuterà positivamente i suggerimenti effettuerà la modifica suggerita;
-\item Ogni membro del team ha la possibilità di effettuare il merge con il ramo develop quando il compito a esso assegnato è stato terminato.
-\item Non è permesso effettuare commit nel ramo master se non attraverso un pull request che deve essere accettato dall’amministratore di progetto;
-\item Per ogni commit è opportuno commentare con chiarezza per capire cosa si è fatto in modo tale da garantire una buona organizzazione\ap{G} e chiarezza nella struttura di versionamento.
+
+\subsubsection{Procedura di lavoro collaborativo}
+Viene scelto di utilizzare il modello \glo{Git Flow} per ogni repository gestito dal gruppo.
+Con Git Flow, lo sviluppo viene diviso in più rami, detti \glo{branch}:
+\begin{itemize}
+	\item \textbf{master}: Contenente il codice sorgente (indipendentemente dal fatto che sia per la documentazione che per il prodotto software) del prodotto rilasciato.
+	Ad ogni \glo{merge} in questo branch effettuato tramite il processo di \textbf{release} corrisponde un etichetta, che è il modo in cui \glo{Git} gestisce le versioni stabili di un prodotto;
+	\item \textbf{develop}: Contenente codice sorgente corretto ma non completo in tutte le parti, non pronto per essere rilasciato;
+	\item \textbf{feature/[FEATURE]}: Contenente codice sorgente altamente soggetto a modifiche perché riguardante una funzionalità in fase di sviluppo.
+	\textbf{[FEATURE]} corrisponde al nome della funzionalità in sviluppo, ed è decisa dal creatore del \glo{branch};
+	\item \textbf{release/[RELEASE]}: Contenente codice sorgente stabile e pronto per il rilascio;
+	\item \textbf{bugfix/[BUGFIX]} e \textbf{hotfix/[HOTFIX]}: Contenente codice sorgente in cui sono presenti funzionalità o sezioni contenenti bug, i quali vanno risolti dai membri del gruppo.
+	Un \glo{branch} di bugfix o hotfix viene creato a partire dal \glo{branch} master.
+\end{itemize}
+
+Oltre all'utilizzo di Git Flow, devono venire rispettate le seguenti regole:
+\begin{itemize}
+	\item Non è permesso effettuare \glo{commit} nel ramo master se non attraverso un \glo{pull request} che deve essere accettato dall’\Amministratore{};
+	\item Per ogni \glo{commit} è opportuno inserire nel messaggio una descrizione del lavoro svolto, anche riferendosi alle issue presenti nell'\glo{Issue Tracking System} di \glo{GitHub} indicando il numero di queste con "\#[NUM]", in cui [NUM] è un codice di issue.
 \end{itemize}
