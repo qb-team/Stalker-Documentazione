@@ -86,7 +86,7 @@ In caso del verbale, sarà presente anche la data in cui è stato steso in basso
     \begin{itemize}
         \item Utilizzato per evidenziare le voci di un elenco puntato, che vengono descritte in loco;
         \item Parole ritenute particolarmente importanti in un testo;
-        \item Termini del documento \Glossario;
+        \item Termini del documento \Glossario{};
         \item Codici identificativi, quando introdotti per la prima volta;
     \end{itemize}
     \item \textit{Corsivo}:
@@ -122,10 +122,26 @@ Nel caso di elenchi che definiscono un termine:
 
 \paragraph{Nomenclatura dei documenti}\mbox{} \\ \\
 I nomi di file (escludendo l'estensione) e cartelle sono scritti usando la convenzione "Camel Case\ap{G}".
-Inoltre, il gruppo \Gruppo{} ha scelto di adottare delle regole aggiuntive, quali:
+I file della documentazione prodotti avranno i seguenti nomi:
 \begin{itemize}
-    \item Le preposizioni nei nomi dei file non vengono omesse;
+    \item \textbf{AnalisiDeiRequisiti.pdf}: contenente il documento \AdR{};
+    \item \textbf{PianoDiProgetto.pdf}: contenente il documento \PdP{};
+    \item \textbf{PianoDiQualifica.pdf}: contenente il documento \PdQ{};
+    \item \textbf{NormeDiProgetto.pdf}: contenente il documento \NdP{};
+    \item \textbf{StudioDiFattibilita.pdf}: contenente il documento \SdF{}.
 \end{itemize}
+I file dei verbali, esterni e interni, avranno i seguenti nomi:
+\begin{itemize}
+    \item \textbf{VI_[YYYY]_[MM]_[DD].pdf}: contenente il verbale interno del [YYYY]-[MM]-[DD];
+    \item \textbf{VE_[YYYY]_[MM]_[DD].pdf}: contenente il verbale esterno del [YYYY]-[MM]-[DD];
+\end{itemize}
+con:
+\begin{itemize}
+    \item \textbf{[YYYY]} l'anno in cui si è tenuto l'\glo{incontro formale};
+    \item \textbf{[MM]} il mese in cui si è tenuto l'\glo{incontro formale};
+    \item \textbf{[DD]} il giorno in cui si è tenuto l'\glo{incontro formale};
+\end{itemize}
+
 
 \subsubsection{Linguaggi}
 \paragraph{\LaTeX}\mbox{} \\ \\
@@ -157,7 +173,7 @@ Per compilare un file \textbf{.tex} e generare un file PDF corretto deve essere 
 Questi file hanno sempre il nome del documento che producono, con le convenzioni di nomenclatura indicate nelle \NdP{}.
 
 \paragraph{UML}\mbox{}\\ \\
-Per realizzare tutti i diagrammi in UML viene utilizzato il software \href{https://draw.io}{Draw.io}, che è disponibile sia come \glo{web app} accessibile da browser, che come applicazione desktop.
+Per realizzare tutti i diagrammi in UML viene utilizzato il software \href{https://draw.io}{Draw.io}, che è disponibile sia come \glo{applicazione we} accessibile da browser, che come applicazione desktop.
 Draw.io permette sia di salvare i file di lavoro per poterli modificare, sia di esportarli.
 Il salvataggio dei file di lavoro può avvenire in file in formato:
 \begin{itemize}
