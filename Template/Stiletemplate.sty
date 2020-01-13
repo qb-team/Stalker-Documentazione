@@ -1,7 +1,22 @@
 \ProvidesPackage{Stiletemplate}	%il nostro pacchetto per swe
 \usepackage{graphbox}	% permette di modificare i margini
+\usepackage{hyperref}
 \usepackage[top=2.0cm, bottom=4.0cm, left=2.2cm, right=2.2cm]{geometry}
 
+%%Pacchetto per creare la tabella delle modifiche
+\usepackage{multirow}
+\usepackage[table]{xcolor} 
+\usepackage{longtable} 
+
+
+% Colore Links
+\definecolor{blue}{RGB}{6,69,173}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=blue,
+}
 
 \newcommand{\copertina}{
 	\begin{titlepage}
@@ -35,7 +50,7 @@
 				\multicolumn{2}{c}{\textbf{Informazioni sul documento} } \\
 				\hline %linea separatrice orrizzontale
 				\textbf{Versione} &  1.0.0\\
-				\textbf{Approvatore} & \Approvatore{} \\
+				\textbf{Approvatori} & \Approvatore{} \\
 				\textbf{Redattori} & \Redattori{} \\
 				\textbf{Verificatori} & \Verificatori{} \\
 				\textbf{Uso} & \Uso \\
@@ -111,10 +126,6 @@
 }
 %%
 
-%%Pacchetto per creare la tabella delle modifiche
-\usepackage{multirow}
-\usepackage[table]{xcolor} 
-\usepackage{longtable} 
 
 %%Separare i vari componenti della tabella
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -122,9 +133,11 @@
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 %%Colori per le tabelle
+%\definecolor{blue}{RGB}{6,69,173}
 \definecolor{grigetto}{RGB}{234, 234, 234}
 \definecolor{rossoep}{RGB}{164,60,59}
 \definecolor{darkblue}{RGB}{59,77,95}
+
 
 %%Comandi generci
 \newcommand{\Proponente}{\textit{Imola Informatica}}
