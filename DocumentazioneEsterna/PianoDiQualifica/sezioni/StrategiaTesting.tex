@@ -27,39 +27,9 @@ Allo stato attuale del progetto non è possibile definire quali test di integraz
 Questa sezione del documento verrà redatta non appena inizierà l'attività di progettazione di dettaglio.
 
 \subsubsection{Test di sistema}
-I test di sistema devono assicurare la completa copertura dei requisiti espressi nel documento \textit{Analisi dei Requisiti}.\\
-Ogni test di sistema è identificato da un codice, così formato:
-\begin{center}
-    TS-[Importanza][Tipologia][Codice]
-\end{center}
-con:
-\begin{itemize}
-    \item \textbf{[Importanza]} che può assumere uno dei seguenti valori:
-    \begin{itemize}
-        \item \textbf{1}: il test verifica il funzionamento di un requisito obbligatorio;
-        \item \textbf{2}: il test verifica il funzionamento di un requisito desiderabile;
-        \item \textbf{3}: il test verifica il funzionamento di un requisito opzionale;
-    \end{itemize}
-    \item \textbf{[Tipologia]} che può assumere uno dei seguenti valori:
-    \begin{itemize}
-        \item \textbf{F}: il requisito di riferimento è funzionale\ap{G};
-        \item \textbf{Q}: il requisito di riferimento è qualitativo\ap{G};
-        \item \textbf{P}: il requisito di riferimento è prestazionale\ap{G};
-        \item \textbf{V}: il requisito di riferimento è un vincolo\ap{G};
-    \end{itemize}
-    \item \textbf{[Codice]} che può assumere uno dei seguenti valori:
-    \begin{itemize}
-        \item \textbf{A}$u.v$: il requisito di riferimento riguarda l'applicazione, in cui $u$ indica il numero del caso d'uso (lato app) kite-level di provenienza, $v$ il numero progressivo univoco;
-        \item \textbf{S}$w.x$: il requisito di riferimento riguarda l'applicazione, in cui $w$ indica il numero del caso d'uso (lato serve) kite-level di provenienza, $x$ il numero progressivo univoco;
-        \item \textbf{C}$y$: il requisito proviene dal capitolato, dove $y$ sarà il numero progressivo univoco;
-        \item \textbf{V}*: il requisito proviene da un verbale, dove * inizierà con \textbf{I} se proviene da un verbale interno oppure \textbf{E} se proviene da un verbale esterno.
-        Poi vi sarà il numero che indica il verbale da cui proviene il requisito; il numero si calcola a partire da 1, che sarà associato al primo verbale redatto (in ordine temporale). I numeri per i verbali interni sono contati separatamente da quelli dei verbali esterni. Infine vi sarà un punto seguito dal numero progressivo nel caso in cui in un verbale vengano identificati molteplici requisiti.
-        \item \textbf{I}$z$: il requisito proviene da una decisione presa internamente al gruppo, dove $z$ sarà un numero progressivo.
-    \end{itemize}
-\end{itemize}
-
+I test di sistema devono assicurare la completa copertura dei requisiti espressi nel documento \textit{Analisi dei Requisiti}.
 Segue l'elenco dei test di sistema con la relativa descrizione.
 
 \input{sezioni/sottosezioni/TestSistema.tex}
-
+\newpage
 \input{sezioni/sottosezioni/TracciamentoTestRequisiti.tex}
