@@ -11,7 +11,7 @@
 
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo 
-	\item \textbf{Attori secondari:} server LDAP\ap{G} dell'organizzazione\ap{G}.
+	\item \textbf{Attori secondari:} Server LDAP\ap{G} dell'organizzazione\ap{G}.
 	\item \textbf{Precondizione:} L'utente è autenticato con le proprie credenziali Stalker.
 	\item \textbf{Postcondizione:} L'utente è autenticato all'interno dell'organizzazione\ap{G} con credenziali LDAP\ap{G}.
 	\item \textbf{Scenario principale:} L'utente autenticato come utente anonimo effettua l'autenticazione\ap{G} con credenziali LDAP\ap{G} [UCA 7.1] per autenticarsi come utente riconosciuto all'interno della relativa organizzazione\ap{G}.
@@ -26,13 +26,13 @@
 
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo 
-	\item \textbf{Attori secondari:} server LDAP\ap{G} dell'organizzazione\ap{G}.
+	\item \textbf{Attori secondari:} Server LDAP\ap{G} dell'organizzazione\ap{G}.
 	\item \textbf{Precondizione:} L'utente  autenticato con le proprie credenziali Stalker.
 	\item \textbf{Postcondizione:} L'utente ha inserito le proprie credenziali LDAP\ap{G}.
 	\item \textbf{Scenario principale:}: L'utente inserisce le proprie credenziali LDAP\ap{G} per potersi autenticare.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
-		\item L'utente inserisci l'indirizzo e-mail [UCA 7.1.1];
+		\item L'utente inserisce il proprio nome utente [UCA 7.1.1];
 		\item L'utente inserisce la password [UCA 7.1.2].
 	\end{enumerate}
 	\item \textbf{Scenario alternativo:} Il tentativo di autenticazione\ap{G} fallisce perché le credenziali inserite sono errate [UCA 8.7.1].
@@ -42,11 +42,11 @@
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{UCA 7.1.1 - Inserimento indirizzo e-mail}%fish level
+\subsubsection{UCA 7.1.1 - Inserimento nome utente}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
-	\item \textbf{Precondizione:} L'utente deve inserire il proprio indirizzo e-mail.
-	\item \textbf{Postcondizione:} L'utente ha inserito il proprio indirizzo e-mail.
+	\item \textbf{Precondizione:} L'utente deve inserire il proprio nome utente.
+	\item \textbf{Postcondizione:} L'utente ha inserito il proprio nome utente.
 \end{itemize}
 
 \subsubsection{UCA 7.1.2 - Inserimento password}%fish level
