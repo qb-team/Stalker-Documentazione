@@ -1,7 +1,7 @@
 %scritto da Federico Perin
 \subsection{Gestione della qualità}
 \subsubsection{Obiettivo}
-Il gruppo \Gruppo ha come obiettivo prefissato di essere \glo{sistematico}, \glo{disciplinato} e \glo{quantificabile}, ai fini di:
+Il gruppo \Gruppo{} ha come obiettivo prefissato di essere \glo{sistematico}, \glo{disciplinato} e \glo{quantificabile}, ai fini di:
 \begin{itemize}
     \item garantire la qualità nel prodotto software da realizzare;
     \item soddisfare le richieste del proponente e del committente;
@@ -9,11 +9,11 @@ Il gruppo \Gruppo ha come obiettivo prefissato di essere \glo{sistematico}, \glo
 \end{itemize}
 
 \subsubsection{Piano di Qualifica}
-Nel documento \textbf{Piano di Qualifica} il gruppo \Gruppo illustra come intende gestire la \glo{qualità di processo} e di \glo{qualità di prodotto}, elenca le varie metriche definite per aderire alle definizioni dello standard e i test per verificare la soddisfazione dei requisiti del prodotto software.
-La \glo{qualità di processo} e di \glo{qualità di prodotto} sono due aspetti chiaramente coordinati, ma vengono gestiti separatamente. \\ \\
+Nel documento \PdQ il gruppo \Gruppo{} illustra come intende gestire la qualità di processo e di qualità di prodotto, elenca le varie metriche definite per aderire alle definizioni dello standard e i test per verificare il superamento dei requisiti del prodotto software.
+La \glo{qualità di processo} e di qualità di prodotto sono due aspetti chiaramente coordinati, ma vengono gestiti separatamente. \\ \\
 I capitoli principali del documento sono i seguenti:
 \begin{itemize}
-    \item \textbf{Qualità di processo:} sezione dove vengono elencate le metriche inerenti al processo;
+    \item \textbf{Qualità di \glo{processo}:} sezione dove vengono elencate le metriche inerenti al \glo{processo};
     \item \textbf{Qualità di prodotto:} sezione dove vengono elencate le metriche inerenti al prodotto;
     \item \textbf{Strategia di testing:} sezione dove viene elencato il piano di testing delle componenti e del sistema software nel suo complesso;
     \item \textbf{Standard di qualità adottati:} sezione dove vengono spiegati gli standard adottati.
@@ -76,6 +76,9 @@ Per riassumere tutte le metriche e le loro caratteristiche sono rappresentate in
 \subsubsection{Strumenti per il controllo di qualità}
 \paragraph{Metrica - Indice di Gulpease}\mbox{}\\ \\
 È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Per poter calcolare tale indice bisogna utilizzare la seguente formula:
-$$IG = 89 + {{300 \; \cdot \; (numero\; delle \; frasi) \; - \; 10 \; \cdot \; (numero \; delle \; lettere)}\over numero \; delle \; parole}$$
-Basandosi su questa formula il gruppo \Gruppo ha sviluppato un algoritmo capace di ottenere l'indice di leggibilità di Gulpease dandogli in pasto come input un qualsiasi pdf 
-documentato. Grazie a questo strumento i tempi di verifica sono \glo{efficienti} mentre per la sua \glo{efficacia} la si ottimizzerà nella prossima consegna.
+$$IG = 89 + {{300 \; \cdot \; |frasi| \; - \; 10 \; \cdot \; |lettere|}\over |parole|}$$
+Per poter calcolare questo indice viene utilizzato un semplice \href{...}{programma} realizzato in \glo{Python} che permette l'automazione del processo per ogni file PDF che gli viene indicato.
+Lo script viene avviato da terminale e la sua esecuzione si basa sul contenuto dei file di supporto che gli indicano cosa fare: 
+\begin{itemize}
+    \item file....
+\end{itemize}
