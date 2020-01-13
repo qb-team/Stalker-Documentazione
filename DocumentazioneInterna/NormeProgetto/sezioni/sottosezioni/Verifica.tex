@@ -7,27 +7,27 @@ Deve essere svolto durante ogni \glo{fase} del ciclo di vita del software.
 \subsubsection{Attività}
 Per eseguire il processo di verifica vengono svolte le seguenti attività:
 \begin{itemize} 
-\item \textbf{Analisi statica}
-\item \textbf{Analisi dinamica}
+    \item \textbf{Analisi statica};
+    \item \textbf{Analisi dinamica}.
 \end{itemize}
 
 \paragraph{Analisi statica} \mbox{}\\ \\
 L'analisi statica è un'attività di verifica da effettuare fin da subito sulla documentazione prodotta e, non appena disponibile, sul codice sorgente, poiché non richiede alcuna esecuzione.
-Essa si accerta che ciò che il gruppo ha prodotto sia conforme alle regole indicate nel \textit{Piano di Qualifica}, che non ci siano errori e difetti, e che siano invece presenti le proprietà desiderate.
+Essa si accerta che ciò che il gruppo ha prodotto sia conforme alle regole indicate nel \PdQ{}, che non ci siano errori e difetti, e che siano invece presenti le proprietà desiderate.
 Per effettuare l’attività di analisi statica vengono impiegati due possibili metodi: \textbf{walkthrough} e \textbf{inspection}.
-\setlength{\parindent}{-0.1em}
-\subparagraph*{Walkthrough} \mbox{}\\ % \mbox serve per mettere un contenuto nella riga e andare a capo, simulando un titolo
+
+\subparagraph*{Walkthrough} \mbox{}\\
 Il walkthrough è un metodo di verifica effettuato da tutti i membri del gruppo, e non solo dai verificatori, il cui obiettivo è rilevare la presenza di difetti o anomalie senza aver effettuato alcuna assunzione.
-Per il codice devono essere verificate tutte le possibili esecuzioni; mentre per i documenti si devono esaminare tutte le parti che li compongono.
+Per il codice devono essere verificate tutte le possibili esecuzioni, mentre per i documenti si devono esaminare tutte le parti che li compongono.
 Questo metodo è utile da applicare nel periodo iniziale del progetto (antecedente alla RR), dato che non è ancora ben chiara la forma del prodotto che si sta realizzando.
 Inoltre, non tutti membri del gruppo hanno ampie conoscenze in tema di verifica, a maggior ragione su questo progetto. Una volta che il prodotto in realizzazione viene considerato acquisito da tutto il gruppo, il walkthrough può venire sostituito con altri metodi meno onerosi e più mirati.
 \subparagraph*{Inspection} \mbox{}\\
-L'inspection è un metodo di verifica effettuato dai verificatori, il cui obiettivo è effettuare verifiche mirate sugli aspetti critici del prodotto al fine di rilevare la presenza di difetti e anomalie.
+L'inspection è un metodo di verifica effettuato dai verificatori, il cui obiettivo è effettuare verifiche mirate sugli aspetti critici del prodotto al fine di rilevare la presenza di difetti e/o anomalie.
 I verificatori, una volta acquisita una più ampia conoscenza sul prodotto da verificare, costruiscono e utilizzano una lista all’interno della quale vi sono gli aspetti critici da andare a verificare e dove verificarli.
 
 \paragraph{Analisi dinamica} \mbox{}\\ \\
 L'analisi dinamica è un'attività di verifica che viene eseguita esclusivamente sul prodotto software (e non sulla documentazione), in quanto ne richiede l'esecuzione per essere effettuata.
-Viene applicata sul prodotto software attraverso i test, con l’obiettivo di individuarne difetti o anomalie.
+Viene applicata sul prodotto software attraverso i test, con l’obiettivo di individuarne difetti e/o anomalie.
 
 \subparagraph{Test} \mbox{}\\ \\
 I test sono necessari per poter svolgere l'analisi dinamica del prodotto software.
@@ -40,29 +40,26 @@ Devono essere rapidi nell’esecuzione e in grado di riconoscere e notificare la
 Per ripetibili si intende che ogni invocazione di test deve produrre sempre lo stesso risultato dato uno stesso insieme di dati in input.
 Per garantire questa caratteristica serve che ci sia determinismo, che è garantito se:
 \begin{itemize}
-    \item fra un'esecuzione di un test e l'altra non varia l'ambiente d'esecuzione (ovvero non cambia l'hardware e nemmeno il software);
-    \item non cambia lo stato iniziale del sistema.
+    \item Fra un'esecuzione di un test e l'altra non varia l'ambiente d'esecuzione (ovvero non cambia l'hardware e nemmeno il software);
+    \item Non cambia lo stato iniziale del sistema.
 \end{itemize}
 
 Ci sono diverse tipologie di test del software, ognuna delle quali ha un diverso oggetto di verifica e scopo.
 
 \subparagraph{Test di unità} \mbox{}\\ \\
-I test di unità sono del codice, prodotto dal programmatore, che verifica il corretto comportamento di una singola unità del programma.
+I test di unità sono del codice, prodotti dal programmatore, che verificano il corretto comportamento di una singola unità del programma.
 Per unità si intende una funzionalità atomica che può essere verificata in modo isolato, in modo da assicurare che il risultato del test non sia influenzato dal comportamento di altre unità. In questo senso un'unità può essere un metodo, una classe o addirittura un package.
 È definito modulo una frazione dell'unità.
-Tipicamente un test di unità per un'unità del software viene sviluppato dallo stesso programmatore che l'ha sviluppata (dato che la conosce a pieno).
-L'obiettivo è verificare l’assenza di errori, e documentare il comportamento dell’unità prodotta.
+Tipicamente l'autore di un test d'unità è il programmatore che ha codificato l'unità verificata dal test stesso.
+L'obiettivo è verificare l’assenza di errori e documentare il comportamento dell’unità prodotta.
 Per i test di unità vengono introdotti i seguenti concetti:
 \begin{itemize}
-    \item \textbf{driver}: componente attiva che pilota i test (e permette l'esecuzione automatizzata);
-    \item \textbf{stub}: componente passiva che simula il comportamento di un modulo dell'unità (si vuole verificare l'unità e non l'integrazione fra questa e il modulo);
-    \item \textbf{logger}: componente non intrusivo che registra gli esiti dell'esecuzione dei test.
+    \item \textbf{driver}: Componente attiva che pilota i test e permette l'esecuzione automatizzata;
+    \item \textbf{stub}: Componente passiva che simula il comportamento di un modulo dell'unità (si vuole verificare l'unità e non l'integrazione fra questa e il modulo);
+    \item \textbf{logger}: Componente non intrusivo che registra gli esiti dell'esecuzione dei test.
 \end{itemize}
 
 \subparagraph{Test d’integrazione} \mbox{}\\ \\
-% L'integrazione continua è una pratica che si applica in contesti in cui lo sviluppo del software avviene attraverso un sistema di versionamento.
-% Consiste nell'allineamento frequente dagli ambienti di lavoro dei programmatori verso l'ambiente condiviso.
-% Per il corretto funzionamento necessita di sistemi automatizzati, inoltre questo tipo di test e da utilizzare il prima possibile per trovare subito eventuali errori in modo tale da aver un minor costo nella loro risoluzione.
 Servono per verificare incrementalmente il corretto funzionamento delle componenti del sistema.
 Una volta che le unità sono verificate e passano con successo i relativi test, è possibile verificare il loro comportamento quando eseguite assieme.
 
@@ -77,17 +74,15 @@ Ogni test di sistema è identificato da un codice univoco, così formato:
 \end{center}
 con:
 \begin{itemize}
-    \item \textbf{[TS]} test di sistema;
-     \item \textbf{[Destinazione]} che può assumere uno dei seguenti valori:
+    \item \textbf{[Destinazione]}:
     \begin{itemize}
-        \item \textbf{A:} test di sistema che fa riferimento all'applicazione;
-        \item \textbf{S:} test di sistema che fa riferimento al server;
+        \item \textbf{A}: Test di sistema che fa riferimento all'applicazione;
+        \item \textbf{S}: Test di sistema che fa riferimento al server;
     \end{itemize}
-        \item \textbf{[Numero progressivo]} i numeri progressivi vengono incrementati per ogni test di sistema e sono calcolati separatamente in base alla destinazione. Il conteggio parte da 1.
-    \end{itemize}
+    \item \textbf{[Numero progressivo]}: Il numero del test di sistema in relazione alla sua destinazione, progressivo perché diverso per ogni test e in serie. Il conteggio parte da 1.
+\end{itemize}
 
 \subparagraph{Test di regressione} \mbox{}\\ \\
-I test di regressione hanno come obiettivo verificare l'assenza di regressioni (ovvero malfunzionamenti o comportamenti imprevisti) nel caso in cui si introduca una modifica su una componente dalla quale ne dipendono altre.
+I test di regressione hanno come obiettivo di verificare l'assenza di regressioni (ovvero malfunzionamenti o comportamenti imprevisti) nel caso in cui si introduca una modifica su una componente dalla quale ne dipendono altre.
 L'obiettivo di questi test è verificare che le componenti continuino a funzionare correttamente senza anomalie, ossia verificare che una modifica non pregiudichi le funzionalità già verificate con i test effettuati in precedenza.
 Non è necessario identificare nuovi test, è sufficiente accertarsi che quelli presenti restituiscano i valori attesi.
-
