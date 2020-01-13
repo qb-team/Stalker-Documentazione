@@ -17,13 +17,13 @@ Ogni documento prima di essere presentato deve passare per tre stati fondamental
 \end{enumerate}
 
 \subsubsection{Template}
-È presente un template per i documenti, realizzato anch'esso in \LaTeX{}, per la standardizzazione e velocizzazione della stesura della documentazione.
+È presente un template per i documenti, realizzato anch'esso in \LaTeX{}, per standardizzare e velocizzare la stesura della documentazione.
 Ogni documento che viene redatto deve includere al suo interno il file di stile Stiletemplate.sty presente nella cartella Utilità/Template.
 Il template fornisce i seguenti comandi:
 \begin{itemize}
 \item \textbf{\textbackslash copertina{}}: da inserire all'inizio del documento, ne inserisce la prima pagina (o copertina);
 \item \textbf{\textbackslash fancydoc{}}: da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del documento. Va utilizzato in ogni documento, ad eccezione dei verbali;
-\item \textbf{\textbackslash fancyverbale{}}: da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del verbale.
+\item \textbf{\textbackslash fancyverbale{}}: da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del verbale. Da utilizzare solamente nei verbali.
 \end{itemize}
 
 \subsubsection{Struttura dei documenti}
@@ -34,8 +34,8 @@ Di seguito viene elencato, per ogni sezione del documento, le sue caratteristich
 \begin{itemize}
 \item \textbf{Logo del gruppo}: il logo viene posizionato al centro della pagina, in alto;
 \item \textbf{Titolo del documento}: indica il nome del documento ed è posizionato sotto al logo del gruppo;
-\item \textbf{Informazioni gruppo}: nome del gruppo (\Gruppo{}) e del capitolato, seguiti subito dopo dall'email del gruppo; 
-\item \textbf{Informazioni documento}: tabella posizionata al centro della pagina contenente le informazioni sul documento:
+\item \textbf{Informazioni gruppo}: nome del gruppo (\Gruppo{}) e del capitolato, seguiti subito dopo dall'e-mail del gruppo; 
+\item \textbf{Informazioni documento}: tabella posizionata al centro della pagina contenente le seguenti informazioni sul documento:
 \begin{itemize}
 \item Versione;
 \item Approvatori;
@@ -65,18 +65,18 @@ Se sono presenti tabelle o immagini all'interno del documento saranno riepilogat
 Il contenuto del documento è posto tra intestazione e il piè di pagina:
 
 \begin{itemize}
-\item In alto a sinistra è presente il logo del gruppo \Gruppo;
+\item In alto a sinistra è presente il logo del gruppo \Gruppo{};
 \item In alto una linea orizzontale separa l’intestazione dal contenuto;
 \item In basso a sinistra è presente il titolo del documento;
 \item In basso a destra è presente il numero della pagina;
 \item In basso una linea orizzontale separa il piè di pagina dal contenuto.
 \end{itemize}
-In caso del verbale, sarà presente anche la data in cui è stato steso in basso a destra.
+Qualora si tratti di un verbale, si trova anche la data di stesura dello stesso in basso a destra.
 
 \paragraph{Elementi grafici}\mbox{}
 \begin{itemize}
 \item \textbf{Tabelle}: Centrate con la didascalia posizionata al di sopra di esse;
-\item \textbf{Diagrammi}: Centrate con la didascalia posizionata al di sopra di esse;
+\item \textbf{Diagrammi}: Centrati con la didascalia posizionata al di sopra di essi;
 \item \textbf{Immagini}: Centrate con la didascalia posizionata al di sotto di esse.
 \end{itemize}
 
@@ -99,7 +99,7 @@ In caso del verbale, sarà presente anche la data in cui è stato steso in basso
 \end{itemize}
 
 \paragraph{Glossario}\mbox{} \\ \\
-Ogni termine di un documento che contiene una definizione nel \Glossario viene identificato nel seguente modo:
+Ogni termine di un documento che contiene una definizione nel \Glossario  viene identificato nel seguente modo:
 \begin{center}
     \glo{termine}
 \end{center}
@@ -145,7 +145,7 @@ con:
 
 \subsubsection{Linguaggi}
 \paragraph{\LaTeX}\mbox{} \\ \\
-Per quanto riguarda la stesura dei documenti il gruppo ha scelto di utilizzare il linguaggio \LaTeX{}, il quale consente una migliore qualità tipografica rispetto ai normali software di videoscrittura, ma soprattutto permette più facilmente il versionamento e la suddivisione in parti di un documento.
+Per quanto riguarda la stesura dei documenti il gruppo ha scelto di utilizzare il linguaggio \LaTeX{}, il quale consente una migliore qualità tipografica rispetto ai normali software di videoscrittura, ma soprattutto facilita il versionamento e la suddivisione in parti di un documento.
 
 \paragraph{UML}\mbox{}\\ \\
 Per la realizzazione dei diagrammi dei casi d'uso, delle classi, dei package, delle attività e delle sequenze viene utilizzato il linguaggio di modellazione \textbf{UML}, in particolare la versione v2.0 dello standard.
@@ -163,7 +163,7 @@ i compilatori e strumenti necessari per la compilazione sono:
 \begin{itemize}
     \item \textbf{MiKTeX}: disponibile a \href{https://miktex.org/}{questo indirizzo}, se si sceglie l'utilizzo dell'editor Texmaker;
     \item \textbf{TeX Live}: disponibile a \href{https://www.tug.org/texlive/}{questo indirizzo}, se si sceglie l'utilizzo dell'editor Visual Studio Code (nota: è una distribuzione completa di \LaTeX, quindi offre anche strumenti che possono non essere utili ai fini del progetto);
-    \item \textbf{Perl}: disponibile a \href{http://strawberryperl.com/}{questo indirizzo} per sistemi Windows, mentre seguendo la guida \href{https://learn.perl.org/installing/unix_linux.html}{quest'altro} per sistemi Unix/Linux, se si sceglie l'utilizzo dell'editor Visual Studio Code.
+    \item \textbf{Perl}: disponibile a \href{http://strawberryperl.com/}{questo indirizzo} per sistemi Windows, mentre, seguendo la guida di \href{https://learn.perl.org/installing/unix_linux.html}{quest'altro} per sistemi Unix/Linux, se si sceglie l'utilizzo dell'editor Visual Studio Code.
 \end{itemize}
 Per compilare un file \textbf{.tex} e generare un file PDF corretto deve essere invocato tre volte il comando \textbf{pdflatex $nomeFile$}, dove $nomeFile$ è il percorso ad un file con estensione \textbf{.tex} contenente al suo interno le istruzioni:
 \begin{itemize}

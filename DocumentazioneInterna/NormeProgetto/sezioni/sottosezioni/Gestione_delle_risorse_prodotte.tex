@@ -43,22 +43,22 @@ Il \glo{repository} per la documentazione ha la seguente \glo{organizzazione} di
 \begin{itemize}
 	\item \textbf{DocumentazioneEsterna/}: Dentro a questa cartella vi è la documentazione da fornire ai committenti e al proponente, oltre che i verbali redatti durante gli incontri con quest'ultimi;
 	\begin{itemize}
-		\item \textbf{VerbaliEsterni/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX per la generazione dei verbali degli \glo{incontri formali} fra i membri del gruppo e il proponente del progetto;
+		\item \textbf{VerbaliEsterni/}: All'interno di questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dei verbali degli \glo{incontri formali} fra i membri del gruppo e il proponente del progetto.
 		Per ogni incontro viene redatto un verbale che è presente in un'unica cartella;
-		\item \textbf{AnalisiDeiRequisiti/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX per la generazione dell'\AdR{};
-		\item \textbf{PianoDiProgetto/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX per la generazione dell'\PdP{};
-		\item \textbf{PianoDiQualifica/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX per la generazione dell'\PdQ{};
+		\item \textbf{AnalisiDeiRequisiti/}: In questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\AdR{};
+		\item \textbf{PianoDiProgetto/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\PdP{};
+		\item \textbf{PianoDiQualifica/}: All'interno di questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\PdQ{}.
 	\end{itemize}
 	\item \textbf{DocumentazioneInterna/}: Dentro a questa cartella vi è la documentazione ad uso e consumo da parte dei membri del gruppo;
 	\begin{itemize}
-		\item \textbf{VerbaliInterni/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX per la generazione dei verbali degli \glo{incontri formali} fra i membri del gruppo.
+		\item \textbf{VerbaliInterni/}: In questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dei verbali degli \glo{incontri formali} fra i membri del gruppo.
 		Per ogni incontro viene redatto un verbale che è presente in un'unica cartella;
-		\item \textbf{StudioDiFattibilita/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX per la generazione dell'\SdF{};
-		\item \textbf{NormeDiProgetto/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX per la generazione dell'\NdP{};
+		\item \textbf{StudioDiFattibilita/}: All'interno di questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\SdF{};
+		\item \textbf{NormeDiProgetto/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\NdP{}.
 	\end{itemize}	
-	\item \textbf{Glossario/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX per la generazione dell'\Glossario{};
+	\item \textbf{Glossario/}: In questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\Glossario{};
 	\item \textbf{Utilita/}: Dentro a questa cartella vi sono file che permettono una scrittura più rapida della documentazione.
-	Vi sono i file e le immagini comuni contente le componenti, gli stili e i comandi comuni a tutti i documenti da realizzare in \LaTeX;
+	Vi sono i file e le immagini comuni contente le componenti, gli stili e i comandi comuni a tutti i documenti da realizzare in \LaTeX{};
 	\item \textbf{.gitignore}: file utilizzato per garantire che non vengano versionati certi tipi di file non utili alla compilazione.
 \end{itemize}
 
@@ -72,7 +72,7 @@ Con Git Flow, lo sviluppo viene diviso in più rami, detti \glo{branch}:
 	\item \textbf{feature/[FEATURE]}: Contenente codice sorgente altamente soggetto a modifiche perché riguardante una funzionalità in fase di sviluppo.
 	\textbf{[FEATURE]} corrisponde al nome della funzionalità in sviluppo, ed è decisa dal creatore del \glo{branch};
 	\item \textbf{release/[RELEASE]}: Contenente codice sorgente stabile e pronto per il rilascio.
-	\item \textbf{bugfix/[BUGFIX]} e \textbf{hotfix/[HOTFIX]}: Contenente codice sorgente in cui sono presenti funzionalità o sezioni bacate, che vanno risolte dai membri del gruppo.
+	\item \textbf{bugfix/[BUGFIX]} e \textbf{hotfix/[HOTFIX]}: Contenente codice sorgente in cui sono presenti funzionalità o sezioni contenenti bug, i quali vanno risolti dai membri del gruppo.
 	Un \glo{branch} di bugfix o hotfix viene creato a partire dal \glo{branch} master;
 \end{itemize}
 
