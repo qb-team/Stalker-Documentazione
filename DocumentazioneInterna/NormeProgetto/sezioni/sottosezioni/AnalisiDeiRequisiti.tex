@@ -1,5 +1,6 @@
 \subsubsection{Analisi dei requisiti}
 \paragraph{Scopo}\mbox{}\\ \\
+L'analisi dei requisiti è un'attività che avviene prima di quella di sviluppo.\\
 Il documento \AdR{}, redatto dagli analisti, ha come scopo i seguenti punti:
 \begin{itemize}
 \item definire lo scopo del prodotto da realizzare;
@@ -7,20 +8,12 @@ Il documento \AdR{}, redatto dagli analisti, ha come scopo i seguenti punti:
 \item fornire ai progettisti riferimenti precisi ed affidabili per la progettazione dell'architettura software;
 \item definire una base per integrare i raffinamenti che permettono un miglioramento continuo del prodotto e del \glo{processo} di sviluppo;
 \item fornire ai verificatori dei riferimenti per l’attività di controllo;
-\item fornire una stima del quantitativo di lavoro svolto per tracciare una stima dei costi. 
+\item fornire una stima del quantitativo di lavoro da svolgere per tracciare una stima dei costi. 
 \end{itemize}
 
 \paragraph{Aspettative}\mbox{}\\ \\
 L'obiettivo è quello di creare un documento formale contenente tutti i \glo{requisiti} richiesti e concordati col proponente.
 Deve essere possibile fare riferimento a quanto redatto nel documento \AdR{} qualora sorgessero incomprensioni e dubbi al momento del collaudo del prodotto.
-
-\paragraph{Descrizione}\mbox{}\\ \\
-I requisiti sono raccolti dalle seguenti fonti:
-\begin{itemize}
-\item capitolato;
-\item gruppo \Gruppo{}, qualora si ritenga sensato aggiungerne alcuni;
-\item proponente \Proponente{}, concordando requisiti aggiuntivi o scartandone altri.
-\end{itemize}
 
 \paragraph{Casi d'uso}\mbox{}\\ \\
 Definiscono uno scenario in cui uno o più attori interagiscono con il sistema.
@@ -34,7 +27,7 @@ con:
 	\item \textbf{[Destinazione]}:
 		\begin{itemize}
 			\item \textbf{A}, se il caso d’uso descrive un comportamento o una funzione che l’\glo{utente} ha a disposizione nell'applicazione mobile;
-			\item \textbf{S}, se il caso d’uso descrive un comportamento o una funzione che l'\glo{amministratore} ha a disposizione nell'interfaccia utente per il server;
+			\item \textbf{S}, se il caso d’uso descrive un comportamento o una funzione che l'\glo{amministratore} ha a disposizione nell'interfaccia utente per il server.
 		\end{itemize}
 	\item \textbf{[Codice]} (dati X, Y, Z $\in \mathbb{Z_+}$):
 	\begin{itemize}
@@ -112,13 +105,11 @@ I punti dell'elenco racchiusi fra parentesi quadre (non sono inclusi fra questi 
 \end{itemize}
 
 \paragraph{Casi d'uso d'errore e dei messaggi informativi}\mbox{}\\ \\
-L'ultimo caso d'uso \glo{kite-level} inerente all'applicazione (\textbf{UCA}) e al server (\textbf{UCS}) contiene tutti i casi d'uso che descrivono le situazioni di errore. 
-L'attore coinvolto nei casi d'uso appena citati visionerà un messaggio che lo informerà della natura dell'errore.
-
-
+L'ultimo caso d'uso \glo{kite-level}, sia lato applicazione (\textbf{UCA}) che lato server (\textbf{UCS}), contiene tutti i casi d'uso che descrivono situazioni d'errore e situazioni in cui l'attore del caso d'uso deve essere informato con un messaggio per tutti i casi d'uso lato applicazione e lato server rispettivamente.\\
+\'E stato scelto di raggruppare i casi d'uso degli errori in questa maniera per favorirne il riuso.
 % Questa decisione viene presa per avere un unico punto in cui concentrare tutte queste situazioni.
 \paragraph{Requisiti}\mbox{}\\ \\
-Un requisito è un obiettivo da raggiungere per risolvere un problema, necessario per almeno uno stakeholder o una caratteristica che deve essere soddisfatta per soddisfare una richiesta di uno stakeholder. \\
+Un requisito è un obiettivo da raggiungere per risolvere un problema, necessario per almeno uno stakeholder o una caratteristica che deve essere soddisfatta per esaudire una richiesta di uno stakeholder. \\
 I requisiti vengono organizzati in forma tabellare, che deve contenere le seguenti colonne:
 \begin{itemize}
 	\item Codice identificativo di un requisito;
@@ -138,22 +129,22 @@ con:
 	\begin{itemize}
 		\item \textbf{1}: requisito obbligatorio, ovvero irrinunciabile per almeno uno degli stakeholder;
 		\item \textbf{2}: requisito desiderabile, ovvero non strettamente necessario ma che porta valore aggiunto riconoscibile;
-		\item \textbf{3}: requisito opzionale, ovvero relativamente utile oppure contrattabile più avanti nel progetto;
+		\item \textbf{3}: requisito opzionale, ovvero relativamente utile oppure contrattabile più avanti nel progetto.
 	\end{itemize}
 	\item \textbf{[Tipologia]}:
 	\begin{itemize}
 		\item \textbf{F}: funzionale, definisce una funzione di uno o più componenti del sistema;
 		\item \textbf{Q}: qualitativo, definisce un requisito per garantire la qualità per un determinato aspetto del prodotto;
 		\item \textbf{P}: prestazionale, definisce un requisito che garantisce efficienza prestazionale nel prodotto;
-		\item \textbf{V}: vincolo, definisce un requisito volto a far rispettare un dato vincolo presente nel capitolato;
+		\item \textbf{V}: vincolo, definisce un requisito volto a far rispettare un dato vincolo presente nel capitolato.
 	\end{itemize}
 	\item \textbf{[Codice]}:
 	\begin{itemize}
-		\item A*\ap{1} se il requisito proviene da un caso d'uso dell'applicazione, dove al posto di *\ap{1} è presente: il valore X del codice identificativo del caso d'uso, seguito da un punto e un numero progressivo;
-		\item S*\ap{2} se il requisito proviene da un caso d'uso del server, dove al posto di *\ap{2} è presente: il valore X del codice identificativo del caso d'uso, seguito da un punto e un numero progressivo;
+		\item A*\ap{1} se il requisito proviene da un caso d'uso dell'applicazione, dove al posto di *\ap{1} è presente: il valore X (numero del caso d'uso kite-level) del codice identificativo del caso d'uso, seguito da un punto e un numero progressivo;
+		\item S*\ap{2} se il requisito proviene da un caso d'uso del server, dove al posto di *\ap{2} è presente: il valore X (numero del caso d'uso kite-level) del codice identificativo del caso d'uso, seguito da un punto e un numero progressivo;
 		\item C*\ap{3} se il requisito proviene dal capitolato, dove al posto di *\ap{3} è presente un numero progressivo;
-		\item *\ap{4} se il requisito proviene da un verbale, dove al posto di *\ap{4} è presente: il codice identificativo della decisione di un verbale;
-		\item I*\ap{5} se il requisito proviene da una decisione presa internamente al gruppo, dove al posto di *\ap{4} è presente: un numero progressivo.
+		\item V*\ap{4} se il requisito proviene da un verbale, dove al posto di *\ap{4} è presente: il numero che indica il verbale da cui proviene il requisito; il numero si calcola a partire da 1, che sarà associato al primo verbale redatto (in ordine temporale). Infine vi sarà un punto seguito dal numero progressivo;
+		\item I*\ap{5} se il requisito proviene da una decisione presa internamente al gruppo, dove al posto di *\ap{5} è presente: un numero progressivo.
 	\end{itemize}
 \end{itemize}
 
@@ -172,14 +163,14 @@ La seguente è una descrizione di una riga della tabella in cui vengono elencati
 \textcolor{white}{\textbf{Fonti}} \\ %4
 \endhead
 Codice identificativo del requisito & %1
-Descrizione sintetica, ma al contempo esaustiva, del requisito. & %2
-Informazione ridondante, sotto forma testuale, dell’importanza del requisito. Facilita la lettura dei requisiti. & %3
+Descrizione sintetica, ma al contempo esaustiva, del requisito & %2
+Informazione ridondante, sotto forma testuale, dell’importanza del requisito. Facilita la lettura dei requisiti & %3
 Definisce da dove deriva il requisito. I requisiti vengono raccolti da una o più fonti tra quelle citate di seguito:
 \begin{itemize}
-	\item capitolato;
-	\item interno (ritenuto opportuno dagli analisti);
-	\item casi d'uso (riportare i codici identificativi);
-	\item verbale (riportare il codice identificativo).
+	\item capitolato
+	\item interno (ritenuto opportuno dagli analisti)
+	\item casi d'uso (riportare i codici identificativi)
+	\item verbale (riportare il codice identificativo)
 \end{itemize} \\
 \end{longtable}
 }
