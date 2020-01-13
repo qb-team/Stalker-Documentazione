@@ -22,7 +22,7 @@ I capitoli principali del documento sono i seguenti:
 \paragraph{Metriche di qualità}\mbox{}\\ \\
 \textbf{Metriche di processo:}\\
 Vengono utilizzate delle metriche che servono per monitorare lo stato dei processi scelti nello standard ISO/IEC 12207. Il Responsabile, grazie ai valori ricavati dalle metriche, è facilitato nel
-valutare il \glo{processo} e di eseguire modifiche alla pianificazione, se necessario.\\
+valutare il \glo{processo} e di eseguire modifiche alla pianificazione.\\
 
 \textbf{Metriche di prodotto:}\\
 Il modello di qualità del software descritto dalle norme ISO/IEC 9126 definisce le caratteristiche e attributi del software, ciascuna misurabile da metriche interne o esterne.
@@ -30,21 +30,20 @@ Una volta specificati i requisiti di qualità del prodotto software, si identifi
 Il gruppo \Gruppo{} si è impegnato a scegliere le metriche interne che maggiormente influenzano le caratteristiche esterne del prodotto finale, in modo che esse possano predire quanto più possibile il risultato finale.
 
 \subparagraph{Codici metriche}\mbox{}\\ \\
-Ogni metrica di \glo{processo} ha un codice univoco ed è strutturato in questo formato \textbf{MPC-00}:
-\begin{itemize}
-    \item \textbf{M}: metrica;
-    \item \textbf{PC}: \glo{processo};
-    \item \textbf{-} : trattino separatore;
-    \item \textbf{00}: numero incrementale.
-\end{itemize}
-Ogni metrica di prodotto ha un codice univoco ed è strutturato in questo formato \textbf{MPD-00}:
-\begin{itemize}
-    \item \textbf{M}: metrica;
-    \item \textbf{PD}: prodotto;
-    \item \textbf{-} : trattino separatore;
-    \item \textbf{00}: numero incrementale.
-\end{itemize}
-
+Ogni metrica di \glo{processo} ha un codice univoco ed è strutturato in questo formato:
+\begin{center}
+    M[Destinazione][Numero progressivo]
+\end{center}
+con:
+\begin{itemize}  
+\item \textbf{M:} metrica;
+\item \textbf{[Destinazione]} che può assumere uno dei seguenti valori:
+    \begin{itemize}
+        \item \textbf{PC:} metrica che fa riferimento al \glo{processo};
+        \item \textbf{PD:} metrica che fa riferimento al prodotto;
+    \end{itemize}
+    \item \textbf{[Numero progressivo]} i numeri progressivi vengono incrementati per ogni metrica e sono calcolati separatamente in base alla destinazione. Il conteggio parte da 1.
+ \end{itemize}
 \subparagraph{Struttura descrittiva metriche}\mbox{}\\ \\
 Ogni caratteristica di ogni metrica viene elencata in una lista, mentre il nome della metrica rappresenta il titolo di questo elenco ed è visibile nell'indice del documento. La struttura è la seguente:
 \begin{itemize}
