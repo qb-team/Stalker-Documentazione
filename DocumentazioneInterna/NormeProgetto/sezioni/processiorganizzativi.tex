@@ -22,7 +22,7 @@ I canali sono:
 	\item \textbf{\#source-code-management}: contiene tutte le discussioni relative a \glo{Git}, \glo{GitHub}, quindi sulla gestione del codice sorgente e gestione delle attività da svolgere dell'\glo{ITS} di \glo{GitHub};
 \end{itemize}
 
-In aggiunta a \glo{Slack}, per poter comunicare oralmente da remoto, viene utilizzato il software \glo{Discord}, che fornisce server gratis per gli utenti e infrastrutture per server dedicati.
+In aggiunta a \glo{Slack}, per poter comunicare oralmente da remoto, viene utilizzato il software \glo{Discord}, un software che permette di effettuare chiamate vocali grazie ad una connessione ad Internet.
 All'interno di questa piattaforma, sono stati creati dei \glo{canali} per poter discutere di diversi documenti in contemporanea senza disturbi.
 I canali sono:
 \begin{itemize}
@@ -42,7 +42,7 @@ I canali sono:
 \subsection{Comunicazioni esterne}
 In questa sezione vengono definite le norme che regolano le comunicazioni tra il gruppo e soggetti esterni, in particolare:
 \begin{itemize}
-	\item Il proponente Imola Informatica, con referenti Davide Zanetti e Tommaso Cardona.
+	\item Il proponente \Proponente{}, con referenti \ZD{} e \CT{}.
 	\item \VT{}, \CR{}, ai quali verrà fornita tutta la documentazione richiesta in ciascuna revisione di avanzamento.
 	Le comunicazioni esterne avvengono esclusivamente via mail attraverso l’indirizzo di posta elettronica del gruppo:
 	\url{qbteamswe@gmail.com}. \\
@@ -60,10 +60,10 @@ Il Responsabile di Progetto deve organizzare preventivamente tutti gli argomenti
 Tutti i membri del gruppo sono tenuti a presentarsi in orario segnalando eventuali ritardi o assenze.
 
 \subsubsection{Incontri formali esterni}
-Agli incontri formali interni, sono coinvolti i membri del gruppo \Gruppo e uno o più membri dell'azienda proponente Imola Informatica.
+Agli incontri formali esterni, sono coinvolti i membri del gruppo \Gruppo  e uno o più membri dell'azienda proponente Imola Informatica.
 Le riunioni si possono svolgere:
 \begin{itemize}
-	\item nella sede della proponente;
+	\item nella sede del proponente;
 	\item presso l’ateneo dell’Università di Padova;
 	\item tramite piattaforme virtuali di chiamata remota quali: \href{https://www.skype.com/it/}{Skype}, \href{https://hangouts.google.com/}{Hangouts}.
 \end{itemize}
@@ -102,24 +102,24 @@ schema:
 \end{enumerate}
 
 \subsection{Gestione di progetto}
-In questa sezione sono presentati tutti i sistemi e le metodologie utilizzate dal gruppo per una corretta organizzazione e collaborazione.
+In questa sezione vengono presentati tutti i sistemi e le metodologie utilizzate dal gruppo per una corretta organizzazione e collaborazione.
 \subsubsection{Ruoli di progetto}
 Ogni membro del gruppo deve, a rotazione, ricoprire almeno una volta ciascun ruolo di progetto.
 I ruoli sono i seguenti:
 \begin{itemize}
 \item \textbf{Responsabile:} ha l'incarico di pianificare, motivare, coordinare e controllare i membri del gruppo \Gruppo{}.
 Il suo compito prevede inoltre l'approvazione dei documenti e l'emanazione di piani e scadenze.
-Ha l'onere di rappresentante il gruppo presso il proponente \Proponente{}.
+Ha l'onere di rappresentante il gruppo presso il proponente \Proponente{};
 \item \textbf{Amministratore:} ha l'incarico di controllare l'efficienza dell'ambiente di lavoro e di gestire tutti i documenti relativi al progetto.
-Si occupa, inoltre, della configurazione e versionamento del prodotto.
+Si occupa, inoltre, della configurazione e del versionamento del prodotto;
 \item \textbf{Progettista:} ha l'incarico di definire l'architettura alla base del sistema del prodotto software.
-Segue lo sviluppo e non la manutenzione del prodotto.
+Segue lo sviluppo e non la manutenzione del prodotto;
 \item \textbf{Programmatore:} partecipa sia alla realizzazione che alla manutenzione del prodotto.
 È competente nella codifica e nella realizzazione di componenti necessarie all’esecuzione delle prove di verifica e validazione.
-Il codice prodotto dal programmatore deve essere mantenibile nel tempo.
+Il codice prodotto dal programmatore deve essere mantenibile nel tempo;
 \item \textbf{Analista:} segue il progetto dall'inizio fino alla fine e redige i documenti relativi allo \SdF{} e all'\AdR{}.
 Il suo lavoro si basa nel conoscere a fondo il problema e definire i requisiti espliciti ed impliciti.
-\item \textbf{Verificatore:} ha l'incarico, per l'intero ciclo di vita del progetto, di svolgere le attività di verifica e validazione.
+\item \textbf{Verificatore:} ha l'incarico, per l'intero ciclo di vita del progetto, di svolgere le attività di verifica e validazione;
 Si occupa, inoltre, di redigere il documento relativo al Piano di Qualifica che conterrà gli esiti delle verifiche e delle prove effettuate.
 \end{itemize}
 
@@ -127,7 +127,7 @@ Si occupa, inoltre, di redigere il documento relativo al Piano di Qualifica che 
 Per quanto riguarda la pianificazione del lavoro da svolgere, il gruppo \Gruppo{} ha scelto di utilizzare l'\glo{Issue Tracking System (ITS)} fornito da \glo{GitHub}.
 Le operazioni permesse dall'ITS di \glo{GitHub} sono:
 \begin{itemize}
-	\item creazione di \glo{bacheche} (chiamate "Projects") in cui avere un'istantanea delle attività da fare, in corso, completate. Queste attività corrispondo alle "issue";
+	\item creazione di \glo{bacheche} (chiamate "Projects") in cui avere un'istantanea delle attività, che possono ritrovarsi in uno e un solo dei seguenti stati: da fare, in corso e completate. Queste attività corrispondo alle "issue";
 	\item creazione di attività da svolgere, dette \glo{issue}, dotate di:
 	\begin{itemize}
 		\item titolo;
@@ -140,12 +140,12 @@ Le operazioni permesse dall'ITS di \glo{GitHub} sono:
 	\end{itemize}
 	\item creazione di una milestone, con titolo, descrizione e data di scadenza;
 	\item creazione di etichette per le issue;
-	\item creazione di pull request, in cui si richiede di effettuare il merge di un \glo{branch} all'interno di un altro, per verificare l'assenza di conflitti di \glo{merge} e discutere con i membri del gruppo delle modifiche apportate da unire;
-	\item modifica di issue, milestone, bacheche, label;
-	\item visualizzazione delle attività svolte dai membri del gruppo relative ad un'issue grazie al tracciamento e l'integrazione con il \glo{SCM} \glo{Git};
+	\item creazione di pull request, in cui si richiede di effettuare il merge di un \glo{branch} all'interno di un altro, verificare l'assenza di conflitti di \glo{merge} e discutere con i membri del gruppo delle modifiche apportate da unire;
+	\item modifica di issue, milestone, bacheche e label;
+	\item visualizzazione delle attività svolte dai membri del gruppo relative ad un'issue grazie al tracciamento e all'integrazione con il \glo{SCM} \glo{Git};
 \end{itemize}
 Oltre a queste funzionalità, l'\glo{ITS} di \glo{GitHub} fornisce altro, ma il gruppo \Gruppo{} ritiene opportuno l'utilizzo solamente di queste elencate.
-È stato creato un canale apposito su \glo{Slack} per segnalare la creazione e la chiusura di una issues in modo da consapevolizzare tutti i membri del gruppo riguardo l'andamento del progetto.
+È stato creato un canale apposito su \glo{Slack} per segnalare la creazione e la chiusura delle issues in modo da consapevolizzare tutti i membri del gruppo riguardo l'andamento del progetto.
 
 \subsubsection{Formazione dei membri del gruppo}
 Ogni membro del gruppo ha il compito di formarsi in modo autonomo per poter padroneggiare al meglio tutte le tecnologie che verranno utilizzate nel corso del progetto.
