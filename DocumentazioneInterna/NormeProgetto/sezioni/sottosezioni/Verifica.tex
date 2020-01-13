@@ -71,6 +71,20 @@ I test di sistema verificano il comportamento dell’intero sistema.
 Si è quindi nella fase in cui tutte le componenti del sistema sono state integrate (i test di integrazione e di unità passano con successo) e si può verificare il loro comportamento all’interno del sistema in cui il prodotto dovrà essere installato o reso disponibile.
 L'obiettivo è verificare che siano rispettati i requisiti definiti con il committente.
 Quando questi test vengono svolti con la presenza del committente vengono definiti \textbf{test di accettazione} o \textbf{collaudo}. Se superati, permettono di procedere con il rilascio del prodotto software.
+Ogni test di sistema è identificato da un codice univoco, così formato:
+\begin{center}
+    TS[Destinazione][Numero progressivo]
+\end{center}
+con:
+    \item \textbf{[Destinazione]} che può assumere uno dei seguenti valori:
+    \begin{itemize}
+        \item \textbf{A:} test di sistema che fa riferimento all'applicazione;
+        \item \textbf{S:} test di sistema che fa riferimento al server;
+    \end{itemize}
+    \item \textbf{[Numero progressivo:]} i numeri progressivi vengono incrementati per ogni test di sistema e sono calcolati separatamente in base alla destinazione. Il conteggio parte da 1.
+    \begin{itemize}
+
+    \end{itemize}
 
 \subparagraph{Test di regressione} \mbox{}\\ \\
 I test di regressione hanno come obiettivo verificare l'assenza di regressioni (ovvero malfunzionamenti o comportamenti imprevisti) nel caso in cui si introduca una modifica su una componente dalla quale ne dipendono altre.
