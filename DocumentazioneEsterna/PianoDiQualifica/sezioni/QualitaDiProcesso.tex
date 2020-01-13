@@ -105,24 +105,10 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
         \end{itemize}
     \end{itemize}
 
-\subsubsection{Garanzia}
-    \paragraph{Metrica - Efficacia del processo}
-    \begin{itemize}
-        \item \textbf{Codice:} MPC7
-        \item \textbf{Descrizione:} Viene indicato se il processo\ap{G} rispetta gli effetti e i risultati voluti. Un processo\ap{G} deve essere efficace\ap{G} al 100\% per garantire la sua qualità.
-        \item \textbf{Processo di riferimento:} Garanzia di qualità
-        \item \textbf{Sigla:} $EP$
-        \item \textbf{Range di valori che può assumere:}
-        \begin{itemize}
-            \item \textbf{Accettabile:} $EP = 100\%$
-            \item \textbf{Ottimale:} $EP = 100\%$
-        \end{itemize}
-    \end{itemize}
-
 \subsubsection{Verifica}
     \paragraph{Metrica - Code coverage}
     \begin{itemize}
-        \item \textbf{Codice:} MPC8
+        \item \textbf{Codice:} MPC7
         \item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento.
         \item \textbf{Processo di riferimento:} Processi\ap{G} di verifica
         \item \textbf{Sigla:} $CC$
@@ -139,7 +125,7 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
 \subsubsection{Pianificazione}
     \paragraph{Metrica - Schedule variance}
     \begin{itemize}
-        \item \textbf{Codice:} MPC9
+        \item \textbf{Codice:} MPC8
         \item \textbf{Descrizione:} È il valore che indica se si è in linea ($=0$), in anticipo ($>0$) oppure in ritardo ($<0$) rispetto alla schedulazione delle attività di progetto pianificate nella baseline\ap{G}.
         \item \textbf{Processo di riferimento:} Gestione
         \item \textbf{Sigla:} $SV$
@@ -158,7 +144,7 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
 
     \paragraph{Metrica - Budget variance}
         \begin{itemize}
-            \item \textbf{Codice:} MPC10 
+            \item \textbf{Codice:} MPC9
             \item \textbf{Descrizione:} È il valore che indica se alla data corrente si è speso di più ($>0$) o di meno ($<0$) rispetto a quanto pianificato dal budget totale $B_{tot}$.
             \item \textbf{Processo di riferimento:} Gestione
             \item \textbf{Sigla:} $BV$
@@ -190,10 +176,9 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
     MPC4 & Numero di Parametri per Metodo & $NPM$ & $0 < NPM < 8$ & $ 0 < NPM < 4$ \\
     MPC5 & Linee di Codice per Linee di Commento & $LCLC$ & $LCLC \geq 0.25$ & $LCLC \geq 0.30$ \\
     MPC6 & Indice di Gulpease & $IG$ & $40 < IG < 100$ & $80 < IG < 100$ \\
-    MPC7 & Efficacia del Processo\ap{G} & $EP$ & $EP = 100\%$ & $EP = 100\%$ \\
-    MPC8 & Code Coverage & $CC$ & $CC = 80\%$ & $CC = 100\%$  \\
-    MPC9 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\	
-    MPC10 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\
+    MPC7 & Code Coverage & $CC$ & $CC = 80\%$ & $CC = 100\%$  \\
+    MPC8 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\	
+    MPC9 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\
     \end{longtable}
 
 \subsection{Ciclo di Deming}
