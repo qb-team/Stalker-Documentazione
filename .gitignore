@@ -9,6 +9,7 @@
 # LaTeX
 *.log
 *.lof
+*.lot
 *.pdf
 *.blg
 *.bbl
