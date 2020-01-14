@@ -1,4 +1,5 @@
 \documentclass[12pt]{letter}
+\usepackage{eurosym}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{float}
@@ -20,24 +21,26 @@
         {
             Corso di Ingegneria del Software\\ Gruppo \Gruppo{}
         }
-        \opening{ Con la presente il gruppo \Gruppo{} intende comunicarVi la scelta e l'impegno alla relaizzazione del progetto da Voi commissionato, denominato:}
+        \opening{ Con la presente il gruppo \Gruppo{} intende comunicarVi la scelta e l'impegno alla realizzazione del progetto da Voi commissionato, denominato:}
         \begin{center}
             \NomeProgetto{}
         \end{center}
         proposto dall'azienda \textbf{\Proponente{}}.\\
         Tutti i dettagli relativi alla nostra proposta sono contenuti nei documenti allegati distinti in: \\
-        Esterni: 
+        \begin{itemize}
+        \item Esterni:
         \begin{itemize}
             \item \AdRv{1.0.0};
             \item \Glossariov{1.0.0};
             \item \PdPv{1.0.0};
             \item \PdQv{1.0.0}.
         \end{itemize}
-        Interni:
+        \item Interni:
         \begin{itemize}
             \item \NdPv{1.0.0};
             \item \SdFv{1.0.0}.
         \end{itemize}
+    \end{itemize}
         Inoltre sono presenti i verbali esterni ed interni:
         \begin{itemize}
             \item VE\_2019\_12\_16;
@@ -51,7 +54,7 @@
             \item VI\_2019\_12\_13;
             \item VI\_2019\_12\_18.
         \end{itemize}
-        Il gruppo stima di consegnare il prodotto entro il 2020-05-10 con un preventivo di 14.656,00 euro, come specificato nel documento \PdP{1.0.0}.
+        Il gruppo stima di consegnare il prodotto entro il 2020-05-10 con un preventivo di \euro{} 14.656,00, come specificato nel documento \PdP{1.0.0}.
         \closing{Cordiali saluti,}
         \vspace{10mm}
     \end{letter}
