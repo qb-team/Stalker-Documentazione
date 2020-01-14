@@ -10,8 +10,8 @@ L'analisi e il controllo dell'elaborazione dei filmati deve essere gestibile tra
 \subsection{Prerequisiti e tecnologie coinvolte}
 Prerequisiti:
 \begin{itemize}
-\item NodeJS\ap{G};
-\item HTML5\ap{G}, CSS3\ap{G} e Javascript\ap{G}.
+\item Node.js\ap{G};
+\item HTML5\ap{G}, CSS3\ap{G} e JavaScript\ap{G}.
 \end{itemize}
 Il capitolato richiede in gran parte l'utilizzo di tecnologie fornite da Amazon Web Services\ap{G} (AWS).
 In particolare, di questo \`e richiesto l'uso di:
@@ -21,7 +21,7 @@ In particolare, di questo \`e richiesto l'uso di:
 \item \textbf{Rekognition Video}: Servizio che permette di analizzare filmati per comprendere le persone o gli oggetti presenti, i loro movimenti ed eventualmente i contenuti inappropriati;
 \item \textbf{Transcode}: Servizio che permette una conversione efficiente di video in numerosi formati per la loro successiva distribuzione;
 \item \textbf{DynamoDB}: Database NoSQL\ap{G} ad elevate prestazioni da utilizzare per memorizzare i dati delle elaborazioni dei video e altre informazioni di supporto;
-\item \textbf{Elastic Container Service (ECS) o Elastic Kubernetes Service (EKS)}: Servizio che permette la gestione di numerosi container, ad alte prestazioni e ad alta scalabilit\`a.
+\item \textbf{Elastic Container Service (ECS) o Elastic Kubernetes Service (EKS)}: Servizio che permette la gestione di numerosi container, ad alte prestazioni e ad alta scalabilità.
 \end{itemize}
 Inoltre, viene ritenuto opportuno l'utilizzo di linguaggi come Python\ap{G} per lo sviluppo delle componenti che gestiscono il modello di apprendimento automatico e di JavaScript\ap{G} per la creazione di REST\ap{G} API\ap{G} in Node.js\ap{G}. Per la creazione dell'interfaccia web \`e consigliato l'utilizzo del framework Bootstrap\ap{G}, il quale richiede conoscenze pregresse di HTML5\ap{G}, CSS3\ap{G} e JavaScript\ap{G}.
 
@@ -44,7 +44,7 @@ Infine, richiede di condividere:
 
 \subsection{Aspetti positivi}
 \begin{itemize}
-\item \`E richiesto l'utilizzo di numerosi servizi forniti da AWS\ap{G}, alcuni più trasversali, altri meno, che potrebbero risultare molto utili in altri ambiti ed in futuro. I più trasversali possono essere ad esempio ECS, EKS, Dynamo DB;
+\item \`E richiesto l'utilizzo di numerosi servizi forniti da AWS\ap{G}, alcuni più trasversali, altri meno, che potrebbero risultare molto utili in altri ambiti ed in futuro. I più trasversali possono essere ad esempio ECS, EKS, DynamoDB;
 \item Nel capitolato si tratta l'argomento del machine learning\ap{G}, un argomento molto interessante e molto in voga negli ultimi anni;
 \item L'azienda risulta essere molto disponibile per seguire il gruppo nello sviluppo del progetto, e questo è senz'altro positivo per rimanere in linea con le richieste del capitolato.
 \end{itemize}
