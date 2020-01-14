@@ -22,15 +22,20 @@
 \fancydoc{}
 
 \input{Sezioni/RegistroModifiche.tex}
-\renewcommand{\listtablename}{Elenco tabelle}
 
 \clearpage
 \tableofcontents
 \clearpage
+
+\setcounter{table}{0}
+
+\renewcommand{\listtablename}{Elenco tabelle}
+
 \listoffigures
 \clearpage
 \listoftables
 \clearpage
+
 
 \input{Sezioni/Introduzione.tex}
 
@@ -48,10 +53,12 @@
 \setcounter{secnumdepth}{3}
 \section{Requisiti}
 \input{Sezioni/RequisitiFunzionali.tex}
+\clearpage
 \input{Sezioni/RequisitiPrestazionali.tex}
 \input{Sezioni/RequisitiQualitativi.tex}
 \input{Sezioni/RequisitiDiVincolo.tex}
 
+\clearpage
 \section{Tracciamento}
 \input{Sezioni/Tracciamento.tex}
 
