@@ -12,10 +12,11 @@ Sigle identificative per i ruoli indicati nelle tabelle e nei grafici:
 	
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{2}
-\begin{table}[h!]
+
 \centering
-\caption{Tabella con i costi per ogni ruolo}
-\begin{longtable}{ C{3cm} C{3cm}}
+
+\begin{longtable}[h!]{ C{3cm} C{3cm}}
+\caption{Tabella con i costi per ogni ruolo}\\
 \rowcolor{darkblue}
 	\textcolor{white}{\textbf{Ruolo}} & 
 	\textcolor{white}{\textbf{Costo per ora espresso in euro}}\\	
@@ -29,7 +30,6 @@ Sigle identificative per i ruoli indicati nelle tabelle e nei grafici:
 			
 		\end{longtable}
 		
-	\end{table}
 
 }
 
@@ -38,13 +38,14 @@ Sigle identificative per i ruoli indicati nelle tabelle e nei grafici:
 \subsubsection{Divisione Oraria}
 
 La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni componente del gruppo:
+{
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{2}
-\begin{table}[h!]
-\centering
-\caption{Tabella della divisione oraria di Analisi}	
-\begin{longtable} { C{4cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{3cm}}
 
+\centering
+
+\begin{longtable}[h!] { C{4cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{3cm}}
+\caption{Tabella della divisione oraria di Analisi}	\\
 \rowcolor{darkblue}
 	\textcolor{white}{\textbf{Membro del gruppo}} & 
 	\textcolor{white}{\textbf{RE}} & 
@@ -67,14 +68,13 @@ La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni compo
         \textbf{Ore totali ruolo} & 19 & 38 & 114 &  &  & 69 & 240 \\
         
 \end{longtable}
-\end{table}
-\newline
+}
+
 La quantità di ore che ciascun componente del gruppo ha svolto per ogni ruolo viene rappresentata nel seguente istogramma:
 \begin{figure}[h]
-	\centering
+	\centering	
+	\includegraphics[scale=2.30]{Sezioni/Istogrammi/IstogrammaAnalisi.png}
 	\caption{Disposizione ore per ruolo di ciascun componente della fase di Analisi}
-	\includegraphics[scale=2.35]{Sezioni/Istogrammi/IstogrammaAnalisi.png}
-	
 \end{figure}
 
 \clearpage
@@ -83,10 +83,10 @@ La seguente tabella rappresenta per ogni ruolo le ore totali investite e il corr
 {
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{2}
-\begin{table}[h]
 \centering
-\caption{Tabella del costo risultante di Analisi}
+
 \begin{longtable}{ C{3cm} C{2cm} C{4cm}}
+\caption{Tabella del costo risultante di Analisi}\\
 \rowcolor{darkblue}
 	\textcolor{white}{\textbf{Ruolo}} & 
 	\textcolor{white}{\textbf{Totale ore}} & 
@@ -102,16 +102,15 @@ La seguente tabella rappresenta per ogni ruolo le ore totali investite e il corr
         \textbf{Totale} & 240 & 5215 \\
 		
 	\end{longtable}
-\end{table}
+
 }
 
 
 La quantità di ore totali per ciascun ruolo viene rappresentata nel seguente areogramma:
 \begin{figure}[h]
-\centering
+\centering	
+	\includegraphics[scale=2.80]{Sezioni/Aerogrammi/AerogrammaAnalisi.png}
 	\caption{Suddivisione ore per ruolo della fase di Analisi}
-	
-	\includegraphics[scale=2.85]{Sezioni/Aerogrammi/AerogrammaAnalisi.png}
 \end{figure}
 \clearpage
 
@@ -122,9 +121,9 @@ La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni compo
 {
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{2}
-\begin{table}[h]
-\caption{Tabella della divisione oraria della Progettazione Architetturale}
-\begin{longtable}{ C{4cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{3cm}}
+
+\begin{longtable}[h]{ C{5cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{3cm}}
+\caption{Tabella della divisione oraria della Progettazione Architetturale}\\
 \rowcolor{darkblue}
 	\textcolor{white}{\textbf{Membro del gruppo}} & 
 	\textcolor{white}{\textbf{RE}} & 
@@ -147,15 +146,15 @@ La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni compo
 	\textbf{Ore totali ruolo} & 19 & 24 & 27 & 69 & 46 & 66 & 251\\
 		
 	\end{longtable}
-\end{table}
 }
 
 La suddivisione delle ore svolte da ciascun componente del gruppo per ogni ruolo viene rappresentata nel seguente istogramma:
 
 \begin{figure}[h!]
 	\centering
-	\caption{Disposizione ore per ruolo di ciascun componente della fase di Progettazione Architetturale}
+	
 	\includegraphics[scale=3]{Sezioni/Istogrammi/IstogrammaProgettArchitetturale.png}
+	\caption{Disposizione ore per ruolo di ciascun componente della fase di Progettazione Architetturale}
 \end{figure}
 
 
@@ -165,9 +164,9 @@ La seguente tabella rappresenta per ogni ruolo le ore totali investite e il corr
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{2}
 \centering
-\begin{table}[h]
-\caption{Tabella del costo risultante della Progettazione Architetturale}
+
 \begin{longtable}{ C{3cm} C{2cm} C{4cm}}
+\caption{Tabella del costo risultante della Progettazione Architetturale}\\
 \rowcolor{darkblue}
 	\textcolor{white}{\textbf{Ruolo}} & 
 	\textcolor{white}{\textbf{Totale ore}} & 
@@ -183,16 +182,17 @@ La seguente tabella rappresenta per ogni ruolo le ore totali investite e il corr
         \textbf{Totale} & 251 & 4923 \\	
         	
 	\end{longtable}
-\end{table}
+
 }
 
 La suddivisione della quantità di ore totali per ciascun ruolo viene rappresentata nel seguente areogramma:
 
 \begin{figure}[h]
 	\centering
-	\caption{Suddivisione ore per ruolo della fase di Progettazione Architetturale}
+	
 	
 	\includegraphics[scale=1.9]{Sezioni/Aerogrammi/AerogrammaProgettArchitetturale.png}
+	\caption{Suddivisione ore per ruolo della fase di Progettazione Architetturale}
 \end{figure}
 
 \clearpage
@@ -203,10 +203,11 @@ La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni compo
 {
 	\rowcolors{2}{grigetto}{white}
 	\renewcommand{\arraystretch}{2}
-	\begin{table}[h]
-	\caption{Tabella della divisione oraria della Progettazione di Dettaglio e Codifica}
+
+
 	
-\begin{longtable}{ C{4cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{3cm}}
+\begin{longtable}[h]{ C{5cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{3cm}}
+	\caption{Tabella della divisione oraria della Progettazione di Dettaglio e Codifica}\\
 \rowcolor{darkblue}
 	\textcolor{white}{\textbf{Membro del gruppo}} & 
 	\textcolor{white}{\textbf{RE}} & 
@@ -229,17 +230,18 @@ La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni compo
         \textbf{Ore totali ruolo} & 26 & 30 & & 83 & 136 & 101 & 376\\
 		
 	\end{longtable}
-\end{table}
+
 }
-\newline
+
 La suddivisione di quante ore, ciascun componente del gruppo, ha svolto per ogni ruolo viene rappresentata nel seguente istogramma:
 
 
 
 \begin{figure}[h!]
 \centering
-\caption{Disposizione ore per ruolo di ciascun componente della fase di Progettazione di Dettaglio e Codifica}
+
 \includegraphics[scale=2.5]{Sezioni/Istogrammi/IstogrammaDiDettaglio.png}
+\caption{Disposizione ore per ruolo di ciascun componente della fase di Progettazione di Dettaglio e Codifica}
 \end{figure}
 
 \subsubsection{Costo Risultante}
@@ -247,10 +249,10 @@ La seguente tabella rappresenta, per ruolo, le ore totali investite e il corrisp
 {
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{2}
-\begin{table}[h]
 \centering
-\caption{Tabella del costo risultante della Programmazione di Dettaglio e Codifica}
-\begin{longtable}{ C{3cm} C{2cm} C{4cm}}
+
+\begin{longtable}[h]{ C{3cm} C{2cm} C{4cm}}
+\caption{Tabella del costo risultante della Programmazione di Dettaglio e Codifica}\\
 \rowcolor{darkblue}
 	\textcolor{white}{\textbf{Ruolo}} & 
 	\textcolor{white}{\textbf{Totale ore}} & 
@@ -266,16 +268,15 @@ La seguente tabella rappresenta, per ruolo, le ore totali investite e il corrisp
         \textbf{Totale} & 376 & 6761 \\
 		
 	\end{longtable}
-\end{table}
+
 }
 
 La suddivisione della quantità di ore totali per ciascun ruolo viene rappresentata nel seguente areogramma:
 
 \begin{figure}[h]
-	\centering
+	\centering	
+	\includegraphics[scale=2.75]{Sezioni/Aerogrammi/AerogrammaDiDettaglio.png}
 	\caption{Suddivisione ore per ruolo della fase di Progettazione di Dettaglio e Codifica}
-	
-	\includegraphics[scale=2.8]{Sezioni/Aerogrammi/AerogrammaDiDettaglio.png}
 \end{figure}
 
 \clearpage
@@ -286,12 +287,21 @@ La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni compo
 {
 	\rowcolors{2}{grigetto}{white}
 	\renewcommand{\arraystretch}{2}
-	\begin{table}[h]
-		\caption{Tabella della divisione oraria di Validazione e Collaudo}
 
-	\begin{longtable}{ C{4cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{3cm}}
+		
+
+	\begin{longtable}{ C{5cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{3cm}}
+	\caption{Tabella della divisione oraria di Validazione e Collaudo}\\
 		\rowcolor{darkblue}
-		\textcolor{white}{\textbf{Membro del gruppo}} & \textcolor{white}{\textbf{RE}} & \textcolor{white}{\textbf{AM}} & \textcolor{white}{\textbf{AN}} & \textcolor{white}{\textbf{PT}} & \textcolor{white}{\textbf{PR}} & \textcolor{white}{\textbf{VE}} & \textcolor{white}{\textbf{Ore complessive}}\\	
+		\textcolor{white}{\textbf{Nome membro del gruppo}} & 
+		\textcolor{white}{\textbf{RE}} & 
+		\textcolor{white}{\textbf{AM}} & 
+		\textcolor{white}{\textbf{AN}} & 
+		\textcolor{white}{\textbf{PT}} & 
+		\textcolor{white}{\textbf{PR}} &
+		\textcolor{white}{\textbf{VE}} &
+		\textcolor{white}{\textbf{Ore complessive}}\\	
+		\endhead
         
         \MC{} & & & 7 & & 4 & 8 & 19\\
         \LD{} & & 4 & & 5 & & 10 & 19\\
@@ -304,7 +314,7 @@ La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni compo
         \textbf{Ore totali ruolo} & 11 & 15 & 11 & 21 & 37 & 70 & 165\\
 		
 	\end{longtable}
-\end{table}
+
 }
 
 
@@ -312,8 +322,9 @@ La suddivisione delle ore svolte da ciascun componente del gruppo per ogni ruolo
 
 \begin{figure}[h!]
 	\centering
-	\caption{Disposizione ore per ruolo di ciascun componente della fase di Validazione e Collaudo}
+	
 	\includegraphics[scale=2.5]{Sezioni/Istogrammi/IstogrammaValidazione.png}
+	\caption{Disposizione ore per ruolo di ciascun componente della fase di Validazione e Collaudo}
 \end{figure}
 
 \subsubsection{Costo Risultante}
@@ -321,12 +332,15 @@ La seguente tabella rappresenta rappresenta per ogni ruolo le ore totali investi
 {
 	\rowcolors{2}{grigetto}{white}
 	\renewcommand{\arraystretch}{2}
-\begin{table}[h!]
-	\caption{Tabella del costo risultante di Validazione e Collaudo}
-	\begin{longtable}	{ C{3cm} C{2cm} C{4cm}}
 
+	
+	\begin{longtable}[h!]	{ C{3cm} C{2cm} C{4cm}}
+	\caption{Tabella del costo risultante di Validazione e Collaudo}\\
 		\rowcolor{darkblue}
-		\textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Totale ore}} & \textcolor{white}{\textbf{Costo ruolo in euro}}\\	
+		\textcolor{white}{\textbf{Ruolo}} & 
+		\textcolor{white}{\textbf{Totale ore}} & 
+		\textcolor{white}{\textbf{Costo ruolo in euro}}\\	
+		\endhead
         
         Responsabile & 11 & 330\\
         Amministratore & 15 & 300 \\
@@ -337,7 +351,7 @@ La seguente tabella rappresenta rappresenta per ogni ruolo le ore totali investi
         \textbf{Totale} & 169 & 2972\
 	
 	\end{longtable}
-\end{table}
+
 	
 }
 
@@ -345,8 +359,9 @@ La suddivisione della quantità di ore totali per ciascun ruolo viene rappresent
 
 \begin{figure}[h]
 	\centering
+	
+	\includegraphics[scale=2.4	]{Sezioni/Aerogrammi/AerogrammaValidazione.png}
 	\caption{Suddivisione ore per ruolo della fase di Validazione e Collaudo}
-	\includegraphics[scale=2.5]{Sezioni/Aerogrammi/AerogrammaValidazione.png}
 \end{figure}
 
 
@@ -359,12 +374,19 @@ Nella seguente tabella viene mostrata la distribuzione oraria dei ruoli per ogni
 {
 	\rowcolors{2}{grigetto}{white}
 	\renewcommand{\arraystretch}{2}
-\begin{table}[h]
-		\caption{Tabella della divisione oraria complessiva}
 
-	\begin{longtable}{ C{4cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{3cm}}
+	\begin{longtable}{ C{5cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{1cm} C{3cm}}
+	\caption{Tabella della divisione oraria complessiva}\\
 		\rowcolor{darkblue}
-		\textcolor{white}{\textbf{Membro del gruppo}} & \textcolor{white}{\textbf{RE}} & \textcolor{white}{\textbf{AM}} & \textcolor{white}{\textbf{AN}} & \textcolor{white}{\textbf{PT}} & \textcolor{white}{\textbf{PR}} & \textcolor{white}{\textbf{VE}} & \textcolor{white}{\textbf{Ore complessive}}\\	
+		\textcolor{white}{\textbf{Nome membro del gruppo}} & 
+		\textcolor{white}{\textbf{RE}} & 
+		\textcolor{white}{\textbf{AM}} & 
+		\textcolor{white}{\textbf{AN}} & 
+		\textcolor{white}{\textbf{PT}} & 
+		\textcolor{white}{\textbf{PR}} & 
+		\textcolor{white}{\textbf{VE}} & 
+		\textcolor{white}{\textbf{Ore complessive}}\\	
+		\endhead
         
         \MC{} & 5 & 10 & 7 & 26 & 29 & 22 & 99 \\
         \LD{} & 14 & 4 & & 33 & 15 & 33 & 99\\
@@ -377,18 +399,21 @@ Nella seguente tabella viene mostrata la distribuzione oraria dei ruoli per ogni
         \textbf{Ore totali ruolo} & 56 & 69 & 38 & 173 & 219 & 237 &  792 \\
 
 	\end{longtable}
-\end{table}
+
 }
 \subsubsection{Costo complessivo per ruolo}
 Nella seguente tabella viene illustrato il monte ore risultante per ogni ruolo con il costo ad esso associato:
 {
 	\rowcolors{2}{grigetto}{white}
 	\renewcommand{\arraystretch}{2}
-\begin{table}[h]
-	\caption{Tabella del costo complessivo per ruolo}
+
 	\begin{longtable}{ C{3cm} C{2cm} C{4cm}}
+	\caption{Tabella del costo complessivo per ruolo}\\
 		\rowcolor{darkblue}
-		\textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Totale ore}} & \textcolor{white}{\textbf{Costo ruolo in euro}}\\	
+		\textcolor{white}{\textbf{Ruolo}} & 
+		\textcolor{white}{\textbf{Totale ore}} & 
+		\textcolor{white}{\textbf{Costo ruolo in euro}}\\	
+	\endhead
         
         Responsabile & 56 &  1680\\
         Amministratore & 69 & 1380 \\
@@ -398,7 +423,7 @@ Nella seguente tabella viene illustrato il monte ore risultante per ogni ruolo c
         Verificatore & 237 & 3555 \\
         	
 	\end{longtable}
-\end{table}
+
 }
 
 \subsubsection{Costo complessivo}
@@ -407,11 +432,13 @@ Nella seguente tabella vengono riportati i costi complessivi delle varie fasi e 
 	\rowcolors{2}{grigetto}{white}
 	\renewcommand{\arraystretch}{2}
 
-	\begin{table}[h]
-	\caption{Tabella del costo complessivo}
+	
 	\begin{longtable}{ C{5cm} C{5cm}}
+	\caption{Tabella del costo complessivo}\\
 		\rowcolor{darkblue}
-		\textcolor{white}{\textbf{Fase}} & \textcolor{white}{\textbf{Costo Fase}}\\	
+		\textcolor{white}{\textbf{Fase}} &
+		\textcolor{white}{\textbf{Costo Fase}}\\	
+		\endhead
 		
 		Progettazione Architetturale & 4923 \\
 		Progettazione di Dettaglio e Codifica & 6761 \\
@@ -419,7 +446,7 @@ Nella seguente tabella vengono riportati i costi complessivi delle varie fasi e 
 		\textbf{Totale} & 14656\\
 		
 	\end{longtable}
-\end{table}
+
 }
 
 
