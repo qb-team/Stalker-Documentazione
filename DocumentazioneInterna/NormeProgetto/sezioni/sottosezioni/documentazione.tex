@@ -4,132 +4,193 @@ Lo scopo di questa sezione è di redigere e standardizzare i documenti prodotti 
 Di conseguenza ci si aspetta di avere:
 \begin{itemize}
 \item Una struttura ben organizzata e con una facile navigabilità;
-\item Un serie di norme tipografica da rispettare.
+\item Una serie di norme tipografiche da rispettare.
 \end{itemize}
- 
-I documenti possono essere consultati nella seguente repository di GitHub: https://github.com/qb-team/Stalker-Documentazione
+I documenti possono essere consultati nel seguente repository di \glo{GitHub}: \url{https://github.com/qb-team/Stalker-Documentazione}.
 
 \subsubsection{Ciclo di vita}
-Ogni documento prima di essere presentato deve passare per 3 stati fondamentali:
+Ogni documento prima di essere presentato deve passare per tre stati fondamentali:
 \begin{enumerate}
-\item \textbf{Stesura del documento}: Creazione del documento e stesura in latex;
-\item \textbf{Verifica del Documento}: Il documento viene assegnato ad un verificatore, il quale controllerà se il documento rispetti determinati standard;
-\item \textbf{Approvazione del documento}: In caso la verifica risulti positiva, il documento sarà consegnato al responsabile il quale lo approverà per il rilascio.
+\item \textbf{Stesura del documento}: Creazione del documento e stesura con il linguaggio \LaTeX;
+\item \textbf{Verifica del Documento}: Il documento viene assegnato ad un verificatore, il cui lavoro è controllare che il documento rispetti gli standard definiti;
+\item \textbf{Approvazione del documento}: In caso la verifica risulti positiva, il documento viene consegnato al \Responsabile{} per l'approvazione al rilascio.
 \end{enumerate}
 
 \subsubsection{Template}
-È stato creato un template in Latex per standardizzare e velocizzare la stesura dei documenti.
-Ogni membro deve includere nel proprio documento il file di style Stiletemplate.sty presente nella cartella template, così facendo il suo lavoro sarà semplificato grazie all'uso di semplici comandi, dei quali i più ricorrenti:
+È presente un template per i documenti, realizzato anch'esso in \LaTeX{}, per standardizzare e velocizzare la stesura della documentazione.
+Ogni documento che viene redatto deve includere al suo interno il file di stile Stiletemplate.sty presente nella cartella Utilita/.
+Il template fornisce i seguenti comandi:
 \begin{itemize}
-\item \textbf{\textbackslash copertina{}}: Da inserire all'inizio del documento, inserisce la copertina del documento
-\item \textbf{\textbackslash fancy"nome del progetto"{}}: Da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del documento
+\item \textbf{\textbackslash copertina\{\}}: Da inserire all'inizio del documento, ne inserisce la prima pagina (o copertina);
+\item \textbf{\textbackslash fancydoc\{\}}: Da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del documento. Va utilizzato in ogni documento, ad eccezione dei verbali;
+\item \textbf{\textbackslash fancyverbale\{\}}: Da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del verbale. Da utilizzare solamente nei verbali.
 \end{itemize}
 
 \subsubsection{Struttura dei documenti}
 Ogni documento è caratterizzato da una struttura che dovrà seguire obbligatoriamente.
-Di seguito sarà elencato, per ogni elemento, le sue caratteristiche e la sua posiziona nel foglio.
+Di seguito viene elencato, per ogni sezione del documento, le sue caratteristiche e la sua posizione.
 
-\paragraph{Prima pagina - Frontespizio} 
+\paragraph{Prima pagina - Copertina}\mbox{}
 \begin{itemize}
-\item \textbf{Logo del gruppo}: Il logo è posizionato in bella vista centrato orizzontalmente in alto;
-\item \textbf{Titolo del documento}: Indica la tipologia del documento, è posizionato sotto al logo;
-\item \textbf{Informazioni qbteam}: Nome del gruppo e del capitolato in grassetto centrate, seguite subito sotto dall'email del gruppo; 
-\item \textbf{Informazioni documento}: Tabella centrata contenente le informazioni sul documento:
+\item \textbf{Logo del gruppo}: Il logo viene posizionato al centro della pagina, in alto;
+\item \textbf{Titolo del documento}: Indica il nome del documento ed è posizionato sotto al logo del gruppo;
+\item \textbf{Informazioni gruppo}: Nome del gruppo (\Gruppo{}) e del capitolato, seguiti subito dopo dall'e-mail del gruppo; 
+\item \textbf{Informazioni documento}: Tabella posizionata al centro della pagina contenente le seguenti informazioni sul documento:
 \begin{itemize}
-\item Versione
-\item Approvatore
-\item Redattori
-\item Verificatori
-\item Uso
-\item Distribuzione
+\item Versione;
+\item Approvatori;
+\item Redattori;
+\item Verificatori;
+\item Uso;
+\item Distribuzione.
 \end{itemize}
-\item \textbf{Descrizione documento}: Breve descrizione relativa al documento posizionata in centro al fondo della pagina
+\item \textbf{Descrizione documento}: Breve descrizione relativa al documento posizionata in fondo alla pagina, centrata.
 \end{itemize}
 
-\paragraph{Registro delle modifiche} 
+\paragraph{Registro delle modifiche} \mbox{} \\
 Tabella contenente diverse informazioni sul ciclo di vita del documento, composta come segue:
 \begin{itemize}
-\item Versione
-\item Data
-\item Nominativo
-\item Ruolo
-\item Descrizione
+\item Versione;
+\item Data;
+\item Nominativo;
+\item Ruolo;
+\item Descrizione.
 \end{itemize}
 
-\paragraph{Indice} 
+\paragraph{Indice}\mbox{} \\ \\
 Contiene i titoli di tutte le sezioni e sottosezioni del documento rendendo più facile la navigazione.
 Se sono presenti tabelle o immagini all'interno del documento saranno riepilogate in un indice separato.
 
-\paragraph{Intestazione - Piè di pagina} 
+\paragraph{Intestazione - Piè di pagina} \mbox{} \\ \\
 Il contenuto del documento è posto tra intestazione e il piè di pagina:
 
 \begin{itemize}
-\item In alto a sinistra è presente il logo del gruppo;
-\item Una linea orizzontale separa l’intestazione dal contenuto
-\item In basso a sinistra è presente il titolo del documento
-\item In basso a destra è presente il numero della pagina
-\item Una linea orizzontale separa il piè di pagina dal contenuto
+\item In alto a sinistra è presente il logo del gruppo \Gruppo{};
+\item In alto una linea orizzontale separa l’intestazione dal contenuto;
+\item In basso a sinistra è presente il titolo del documento;
+\item In basso a destra è presente il numero della pagina;
+\item In basso una linea orizzontale separa il piè di pagina dal contenuto.
 \end{itemize}
 
-In caso del verbale, sarà presente anche la data in cui è stato steso in basso a destra.
-
-\paragraph{Elementi grafici}
+\paragraph{Elementi grafici}\mbox{}
 \begin{itemize}
-\item Tabelle - Diagrammi: Centrate con la didascalia posizionata al di sopra di esse;
-\item Immagini: Centrate con la didascalia posizionata al di sotto di esse.
+\item \textbf{Tabelle}: Centrate, con la didascalia posizionata al di sopra di esse;
+\item \textbf{Diagrammi}: Centrati, con la didascalia posizionata al di sotto di essi;
+\item \textbf{Immagini}: Centrate, con la didascalia posizionata al di sotto di esse.
 \end{itemize}
 
-
-\subsubsection{Norme tipografiche}
-
-\paragraph{Stile del testo}
+\paragraph{Stile del testo}\mbox{}
 \begin{itemize}
-\item Grassetto:
-\begin{itemize}
-\item Utilizzato per evidenziare le voci di un elenco puntato;
-\item Titoli delle sezioni e sottosezioni;
-\item Parole importanti in un testo;
+    \item \textbf{Grassetto}:
+    \begin{itemize}
+        \item Utilizzato per evidenziare le voci di un elenco puntato, che vengono descritte in loco;
+        \item Parole ritenute particolarmente importanti in un testo;
+        \item Termini del documento \Glossario{};
+        \item Codici identificativi, quando introdotti per la prima volta;
+    \end{itemize}
+    \item \textit{Corsivo}:
+    \begin{itemize}
+        \item Nome del capitolato;
+        \item Nome del proponente;
+        \item Nome del gruppo.
+    \end{itemize}
+    \item \textcolor{blue}{Link ipertestuali}: Tutti i link ipertestuali devono essere di colore blu.
 \end{itemize}
-\item Corsivo:
-\begin{itemize}
-\item Nome del capitolato;
-\item Nome del gruppo;
-\end{itemize}
-\item Link: tutti i collegamenti URL devono essere di colore blu
-\item In basso a destra è presente il numero della pagina
-\item Una linea orizzontale separa il piè di pagina dal contenuto
 
-\end{itemize}
-
-\paragraph*{Glossario}
-Ogni termine del glossario sarà identificato nel seguente modo:
+\paragraph{Glossario}\mbox{} \\ \\
+Ogni termine di un documento che contiene una definizione nel \Glossario  viene identificato nel seguente modo:
 \begin{center}
-termine\ap{G}
+    \glo{termine}
 \end{center}
 
-\paragraph*{Data}
-%Da informarsi se gli va bene se no ci picchiano
-
-Si è deciso di seguire il formato di rappresentazione della data più diffuso al mondo:\\
+\paragraph{Data}\mbox{} \\ \\
+Si è deciso di seguire uno dei formati più diffusi per la rappresentazione della data:
 \begin{center}
-\textbf{GG-MM-YYYY}
+\textbf{YYYY-MM-DD}
 \end{center}
-Del quale \textbf{GG} indica il giorno, \textbf{MM} il mese e \textbf{YYYY} l'anno.
+in cui \textbf{YYYY} rappresenta l'anno, \textbf{MM} il mese e \textbf{DD} il giorno.
 
-\paragraph*{Elenchi puntati/numerati}
-Ogni voce di un elenco comincia con la lettera maiuscola e termina con \textbf{";"} , tranne per l'ultimo elemento che terminerà con un \textbf{"."} . 
-Nel caso di elenchi che definiscono un termine, esso sarà in grassetto seguito da \textbf{":"} e la lettera maiuscola per la descrizione del termine.
+\paragraph{Elenchi puntati/numerati}\mbox{} \\ \\
+Ogni voce di un elenco ordinato o numerato comincia con la lettera maiuscola e termina con punto e virgola (\textbf{";"}) , tranne per l'ultimo elemento dell'elenco che termina con un punto fermo (\textbf{"."}).
+Nel caso di elenchi che definiscono un termine:
+\begin{itemize}
+    \item Il termine deve essere in grassetto;
+    \item Il termine deve essere seguito da due punti (\textbf{":"});
+    \item La definizione del termine inizia con la lettera maiuscola.
+\end{itemize}
 
-\paragraph*{Nomenclatura dei documenti}
-DA DEFINIRE
+\paragraph{Nomenclatura dei documenti}\mbox{} \\ \\
+I nomi di file (escludendo l'estensione) e cartelle sono scritti usando la convenzione "Camel Case\ap{G}".
+I file della documentazione prodotti avranno i seguenti nomi:
+\begin{itemize}
+    \item \textbf{AnalisiDeiRequisiti.pdf}: Contenente il documento \AdR{};
+    \item \textbf{PianoDiProgetto.pdf}: Contenente il documento \PdP{};
+    \item \textbf{PianoDiQualifica.pdf}: Contenente il documento \PdQ{};
+    \item \textbf{NormeDiProgetto.pdf}: Contenente il documento \NdP{};
+    \item \textbf{StudioDiFattibilita.pdf}: Contenente il documento \SdF{}.
+\end{itemize}
+I file dei verbali, esterni e interni, avranno i seguenti nomi:
+\begin{itemize}
+    \item \textbf{VI\_[YYYY]\_[MM]\_[DD].pdf}: Contenente il verbale interno del [YYYY]-[MM]-[DD];
+    \item \textbf{VE\_[YYYY]\_[MM]\_[DD].pdf}: Contenente il verbale esterno del [YYYY]-[MM]-[DD].
+\end{itemize}
+con:
+\begin{itemize}
+    \item \textbf{[YYYY]} l'anno in cui si è tenuto l'\glo{incontro formale};
+    \item \textbf{[MM]} il mese in cui si è tenuto l'\glo{incontro formale};
+    \item \textbf{[DD]} il giorno in cui si è tenuto l'\glo{incontro formale}.
+\end{itemize}
+
+\paragraph{Tabelle nei documenti}\mbox{} \\ \\
+Le tabelle utilizzate nei documenti si differenziano sostanzialmente dalla loro struttura e dal colore.
+Le tabelle con intestazione di colore:
+\begin{itemize}
+    \item \textcolor{rossoep}{\textbf{Rosso}}: Sono solamente le tabelle del "Registro delle modifiche";
+    \item \textcolor{darkblue}{\textbf{Blu}}: Sono tutte le altre tabelle.
+\end{itemize}
+Le intestazioni delle tabelle devono ripetersi in ogni pagina, qualora si dovessero spezzare per mancanza di spazio.
+
+\subsubsection{Linguaggi}
+\paragraph{\LaTeX}\mbox{} \\ \\
+Per quanto riguarda la stesura dei documenti il gruppo ha scelto di utilizzare il linguaggio \LaTeX{}, il quale consente una migliore qualità tipografica rispetto ai normali software di videoscrittura, ma soprattutto facilita il versionamento e la suddivisione in parti di un documento.
+
+\paragraph{UML}\mbox{}\\ \\
+Per la realizzazione dei diagrammi dei casi d'uso, delle classi, dei package, delle attività e delle sequenze viene utilizzato il linguaggio di modellazione \textbf{UML}, in particolare la versione v2.0 dello standard.
 
 \subsubsection{Strumenti}
+\paragraph{\LaTeX}\mbox{} \\ \\
+Per quanto riguarda gli editor per l'utilizzo e la scrittura di \LaTeX{} vengono scelti come ufficiali:
+\begin{itemize}
+	\item \href{https://www.xm1math.net/texmaker/}{Texmaker}, che include editor e supporto alla correzione ortografica;
+	\item \href{https://code.visualstudio.com/}{Visual Studio Code}, insieme ai plugin \href{https://github.com/James-Yu/LaTeX-Workshop}{LaTeX Workshop} (per il supporto a \LaTeX) e \href{https://github.com/bartosz-antosik/vscode-spellright}{Spell Right} (per il supporto alla correzione ortografica).
+\end{itemize}
+I file di \LaTeX{} (file \textbf{.tex}), per generare file PDF distribuibili, devono essere compilati.
+Per \LaTeX{} sono disponibili parecchi compilatori, ma avendo definito come ufficiali i soli editor TexStudio e Visual Studio Code,
+i compilatori e strumenti necessari per la compilazione sono:
+\begin{itemize}
+    \item \textbf{MiKTeX}: Disponibile a \href{https://miktex.org/}{questo indirizzo}, se si sceglie l'utilizzo dell'editor Texmaker;
+    \item \textbf{TeX Live}: Disponibile a \href{https://www.tug.org/texlive/}{questo indirizzo}, se si sceglie l'utilizzo dell'editor Visual Studio Code (nota: è una distribuzione completa di \LaTeX, quindi offre anche strumenti che possono non essere utili ai fini del progetto);
+    \item \textbf{Perl}: Disponibile a \href{http://strawberryperl.com/}{questo indirizzo} per sistemi Windows, mentre, seguendo la guida di \href{https://learn.perl.org/installing/unix_linux.html}{quest'altro} per sistemi Unix/Linux, se si sceglie l'utilizzo dell'editor Visual Studio Code.
+\end{itemize}
+Per compilare un file \textbf{.tex} e generare un file PDF corretto deve essere invocato tre volte il comando \textbf{pdflatex $nomeFile$}, dove $nomeFile$ è il percorso ad un file con estensione \textbf{.tex} contenente al suo interno le istruzioni:
+\begin{itemize}
+    \item \textbackslash begin\{document\};
+    \item \textbackslash end\{document\}.
+\end{itemize}
+Questi file hanno sempre il nome del documento che producono, con le convenzioni di nomenclatura indicate nelle \NdP{}.
 
-\paragraph{\LaTeX}
-La scrittura dei documenti dovrà essere realizzata con \LaTeX ,  linguaggio di markup,  particolarmente  indicato  per  l'elaborazione  di  documenti.
-Gli editor utilizzati sono \TeX maker e \TeX studio.
-
-\paragraph{Draw.io}
-Una piattaforma che permette di creare diagrammi UML direttamente dal proprio browser Web.
-
-
+\paragraph{UML}\mbox{}\\ \\
+Per realizzare tutti i diagrammi in UML viene utilizzato il software \href{https://draw.io}{Draw.io}, che è disponibile sia come \glo{applicazione we} accessibile da browser, che come applicazione desktop.
+Draw.io permette sia di salvare i file di lavoro per poterli modificare, sia di esportarli.
+Il salvataggio dei file di lavoro può avvenire in file in formato:
+\begin{itemize}
+    \item \textbf{XML}: Il file ha estensione \textbf{.xml};
+    \item \textbf{Draw.io}: Il file ha estensione \textbf{.drawio}.
+\end{itemize}
+Il salvataggio delle immagini da includere nei documenti deve essere in formato \textbf{PNG}, con estensione \textbf{.png}, ed esportata con i seguenti parametri:
+\begin{itemize}
+    \item \textbf{Spessore bordo}: 20;
+    \item \textbf{DPI}: 400dpi;
+    \item \textbf{Sfondo}: Non trasparente (spunta rimossa).
+\end{itemize}
+Le seguenti impostazioni di esportazioni si trovano in File $\rightarrow$ Esporta come $\rightarrow$ Avanzate\dots; il nome del file e lo zoom, così come profondità e altezza, sono indifferenti.

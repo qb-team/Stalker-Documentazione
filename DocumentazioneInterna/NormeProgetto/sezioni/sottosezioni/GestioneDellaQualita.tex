@@ -1,0 +1,88 @@
+%scritto da \PF{}
+\subsection{Gestione della qualità}
+\subsubsection{Obiettivo}
+Il gruppo \Gruppo{} ha come obiettivo prefissato di essere \glo{sistematico}, \glo{disciplinato} e \glo{quantificabile}, ai fini di:
+\begin{itemize}
+    \item Garantire la qualità nel prodotto software da realizzare;
+    \item Soddisfare le richieste del proponente e del committente;
+    \item Migliorare le proprie capacità di gestione di un progetto software.
+\end{itemize}
+
+\subsubsection{Piano di Qualifica}
+Nel documento \PdQ{} il gruppo \Gruppo{} illustra come intende gestire la qualità di processo e di qualità di prodotto, elenca le varie metriche definite per aderire alle definizioni degli standard e i test per verificare la corretta soddisfazione dei requisiti del prodotto software.
+La qualità di processo e la qualità di prodotto sono due aspetti chiaramente coordinati, ma vengono gestiti separatamente. \\ \\
+Le sezioni principali del documento sono le seguenti:
+\begin{itemize}
+    \item \textbf{Qualità di processo:} Sezione dove vengono elencate le metriche inerenti ai \glo{processi};
+    \item \textbf{Qualità di prodotto:} Sezione dove vengono elencate le metriche inerenti al prodotto;
+    \item \textbf{Strategia di testing:} Sezione dove viene elencato il piano di testing delle componenti e del sistema software nel suo complesso;
+    \item \textbf{Standard di qualità adottati:} Sezione dove vengono spiegati gli standard adottati.
+\end{itemize}
+
+\paragraph{Metriche di qualità}\mbox{}\\ \\
+\subparagraph{Metriche di processo}\mbox{}\\ \\
+Per monitorare l'aderenza ai processi dallo standard ISO/IEC 12207 istanziati, vengono utilizzate delle metriche. Il Responsabile, grazie ai valori ricavati dalle metriche, è facilitato nel
+valutare il \glo{processo} e di effettuare, se necessario, modifiche alla pianificazione.\\
+
+\subparagraph{Metriche di prodotto}\mbox{}\\ \\
+Il modello di qualità del software descritto dallo standard ISO/IEC 9126 definisce le caratteristiche e gli attributi del prodotto software, ciascuna misurabile da metriche interne (che richiedono la disponibilità del codice sorgente - white box) o esterne (che richiedono il prodotto software in esecuzione - black box).
+Una volta specificati i requisiti di qualità del prodotto software, si identificano le caratteristiche e attributi di qualità che più contribuiscono a verificare l'aderenza allo standard e ai requisiti.
+Il gruppo \Gruppo{} si è impegnato a scegliere le metriche interne che maggiormente influenzano (in positivo) le caratteristiche esterne del prodotto finale, in modo che esse possano predire quanto più possibile la qualità del risultato finale.
+
+\subparagraph{Codici metriche}\mbox{}\\ \\
+Ogni metrica di \glo{processo} ha un codice univoco ed è strutturato in questo formato:
+\begin{center}
+    M[Destinazione][Numero progressivo]
+\end{center}
+con:
+\begin{itemize}  
+    \item \textbf{[Destinazione]}:
+    \begin{itemize}
+        \item \textbf{PC}: Se la metrica fa riferimento al \glo{processo};
+        \item \textbf{PD}: Se la metrica fa riferimento al prodotto.
+    \end{itemize}
+    \item \textbf{[Numero progressivo]}: Il numero della metrica in relazione alla sua destinazione, progressivo perché diverso per ogni metrica e in serie. Il conteggio parte da 1.
+\end{itemize}
+
+\subparagraph{Struttura descrittiva metriche}\mbox{}\\ \\
+La seguente è una struttura ad elenco che descrive una metrica di processo o di prodotto. \\
+I punti dell'elenco racchiusi fra parentesi quadre indicano che tale punto è opzionale e va inserito solo se necessario.\\
+Inoltre, \textbf{Processo di riferimento} deve essere presente solo nelle metriche della qualità di processo, mentre \textbf{Attributo di riferimento} solo per la qualità di prodotto.
+elencata in una lista, mentre il nome della metrica rappresenta il titolo di questo elenco ed è visibile nell'indice del documento. La struttura è la seguente:
+\begin{itemize}
+    \item \textbf{Codice}: Codice univoco;
+    \item \textbf{Descrizione}: Breve descrizione della metrica e del contesto applicativo;
+    \item \textbf{Processo di riferimento}: Viene indicata in quale \glo{processo} viene applicata tale metrica (riferendosi allo standard);
+    \item \textbf{Attributo di riferimento}: Viene indicato in quale attributo della caratteristica di prodotto viene applicata tale metrica (riferendosi allo standard);
+    \item \textbf{Sigla}: nome della metrica sotto forma di acronimo, utilizzato principalmente nelle formule matematiche e nei range di accettazione;
+    \item \textbf{[Formula:} formula matematica per poter calcolare il valore della metrica];
+    \item \textbf{Range di valori che può assumere}: sezione in cui sono descritti i range di accettazione per i valori delle metriche.
+    \begin{itemize}
+        \item \textbf{Accettabile}: range in cui i valori della metrica possono essere ritenuti accettabili per garantire la qualità;
+        \item \textbf{Ottimale}: range in cui i valori della metrica possono essere ritenuti ottimali per garantire la qualità.
+    \end{itemize}
+\end{itemize} 
+
+\subparagraph{Tabella riassuntiva metriche}\mbox{}\\ \\
+Per riassumere tutte le metriche e le loro caratteristiche descritte all'interno del \PdQ{}, alla fine della sezione in cui vengono illustrate vi sono delle tabelle riassuntive che hanno questa struttura:
+{
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{ c C{4cm} c c c}
+\caption{Tabella metriche dei processi/prodotti}\\
+\rowcolor{darkblue}
+\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
+Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
+\end{longtable}
+}
+
+\subsubsection{Strumenti per il controllo di qualità}
+In questa sezione vengono indicati gli strumenti per valutare le metriche di processo e di prodotto.
+\paragraph*{Note sugli strumenti per il controllo di qualità}\mbox{}\\ \\
+La seguente sezione, relativa agli strumenti, non è completa in quanto il suo contenuto dipende in larga parte dalle decisioni progettuali che devono essere prese con l'avanzamento del progetto.
+\paragraph{Metrica - Indice di Gulpease}\mbox{}\\ \\
+Per poter calcolare questo indice, descritto nel \PdQ{} viene utilizzato un semplice \href{...}{programma} realizzato in \glo{Python} che permette l'automazione del processo per ogni file PDF che gli viene indicato.
+Lo script viene avviato da terminale e la sua esecuzione si basa sul contenuto dei file di supporto qui indicati: 
+\begin{itemize}
+    \item file....
+\end{itemize}
