@@ -1,0 +1,389 @@
+\renewcommand{\o}{Obbligatorio}
+\renewcommand{\d}{Desiderabile}
+\newcommand{\op}{Opzionale}
+
+Rappresentano dei requisiti che deve soddisfare il prodotto che si vuole realizzare.\\
+I requisiti saranno organizzati in forma tabellare.\\
+La tabella avrà le seguenti tre colonne:
+\begin{itemize}
+	\item Codice identificativo
+	\item Classificazione
+	\item Descrizione
+	\item Fonti
+\end{itemize}
+\paragraph{Codice identificativo dei requisiti}\mbox{}\\
+Ogni requisito sarà strutturato come segue:
+\begin{itemize}
+	\item Identificativo: \textbf{R[Importanza][Tipologia][Codice]}\\
+Dove:
+\begin{itemize}
+		\item \textbf{Importanza:}
+		\begin{itemize}
+			\item \textbf{1}: requisito obbligatorio, ovvero irrinunciabile per almeno uno degli stakeholder
+			\item \textbf{2}: requisito desiderabile, ovvero non strettamente necessario ma che porta valore aggiunto riconoscibile
+			\item \textbf{3}: requisito opzionale, ovvero relativamente utile oppure contrattabile più avanti nel progetto
+		\end{itemize}
+		\item \textbf{Tipologia:}
+		\begin{itemize}
+			\item \textbf{F}: funzionale, definisce una funzione di un sistema di uno o più dei suoi componenti
+			\item \textbf{Q}: qualitativo, definisce un requisito per garantire la qualità per un certo aspetto del progetto
+			\item \textbf{P}: prestazionale, definisce un requisito che garantisce efficienza prestazionale nel prodotto
+			\item \textbf{V}: vincolo, definisce un requisito volto a far rispettare un dato vincolo
+		\end{itemize}
+		\item \textbf{Codice:}\\
+		Composto da:
+		\begin{itemize}
+			\item A*\ap{I} se il requisito proviene da un caso d'uso dell'applicazione, dove *\ap{I} sarà composto da: il numero del caso d'uso (lato app) kite-level di provenienza, un punto e il numero progressivo univoco
+			\item S*\ap{II} se il requisito proviene da un caso d'uso del server, dove *\ap{II} sarà composto da: il numero del caso d'uso (lato server) kite-level di provenienza, un punto e il numero progressivo univoco
+			\item C*\ap{III} se il requisito proviene dal capitolato, dove *\ap{III} sarà il numero progressivo univoco
+			\item V*\ap{IV} se il requisito proviene da un verbale, dove *\ap{IV} inizierà con il numero che indica il verbale da cui proviene il requisito; il numero si calcola a partire da 1, che sarà associato al primo verbale redatto (in ordine temporale). Infine vi sarà un punto seguito dal numero progressivo
+			\item I*\ap{V} se il requisito proviene da una decisione presa internamente al gruppo, dove *\ap{V} sarà un numero progressivo
+		\end{itemize}
+\end{itemize}
+	\item \textbf{Descrizione}: descrizione sintetica ma al contempo esaustiva del requisito.
+	\item \textbf{Classificazione}: informazione ridondante, sotto forma testuale, dell’importanza del requisito. Facilita la lettura dei requisiti.
+	\item \textbf{Fonti}: definisce da dove deriva il requisito. I requisiti vengono raccolti da una o più fonti tra quelle citate di seguito:
+	\begin{itemize}
+		\item \textbf{Capitolato}: requisito individuato dalla lettura e/o analisi del capitolato
+		\item \textbf{Interno}: requisito che gli analisti hanno ritenuto opportuno aggiungere
+		\item \textbf{Caso d’uso}: il requisito è derivato da uno o più casi d’uso. Riportare anche il/i codice/i identificativo/i del/i caso/i d’uso.
+		\item \textbf{Verbale}: requisito derivato in seguito ad una richiesta di chiarimento con il committente. Riportare il nome del documento del verbale da cui deriva il requisito in questione.		
+	\end{itemize}
+\end{itemize}
+
+\subsection{Requisiti funzionali}
+{
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{1.5}
+\centering
+\begin{longtable}{ c C{8cm} c c}
+\rowcolor{darkblue}
+\textcolor{white}{\textbf{Identificativo}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Classificazione}} & \textcolor{white}{\textbf{Fonti}}\\	
+\endhead
+
+R1FI1 & Un utente non autenticato non può effettuare alcuna azione a meno di autenticazione e registrazione. & \o & Interno\\
+
+R1FA1.1 & L'autenticazione da parte di un utente non autenticato necessita di e-mail. & \o & UCA 1.1.1 Interno\\
+
+R1FA1.2 & L'autenticazione da parte di un utente non autenticato necessita di password. & \o & UCA 1.1.2 Interno\\
+
+R1FA8.1 & L'autenticazione viene negata qualora l'utente non autenticato tenti di autenticarsi con delle credenziali errate. Viene inoltre visualizzato un messaggio d'errore. & \o & UCA 8.1.4 Interno\\
+
+R1FA1.3 & La registrazione da parte di un utente non autenticato necessita di e-mail. & \o & UCA 1.2.1 Interno\\
+
+R1FA8.2 & Il processo di registrazione dell'utente non autenticato viene negato qualora l'e-mail inserita fosse già registrata nel sistema. Viene visualizzato inoltre un messaggio d'errore. & \o & UCA 8.1.1 Interno\\
+
+R1FA1.4 & La registrazione da parte di un utente non autenticato necessita di password. & \o & UCA 1.2.2 Interno\\
+
+R1FA1.5 & La registrazione da parte di un utente non autenticato necessita di conferma della password. & \o & UCA 1.2.3 Interno\\
+
+R1FA1.6 & Durante la registrazione viene chiesto all'utente non autenticato di accettare le condizioni generali d'uso. & \o & UCA 1.2.4 Interno\\
+
+R1FA1.7 & Qualora l'utente non autenticato dovesse rifiutare le condizioni generali d'uso deve venir interrotta la registrazione e chiusa l'applicazione. & \o & UCA 1.2.4 Interno\\
+
+R2FA1.8 & L'utente non autenticato deve essere in grado di effettuare il reset della password qualora se la fosse dimenticata. & \d & UCA 1.3 Interno\\
+
+R2FA1.9 & Il reset della password da parte dell'utente non autenticato richiede l'e-mail del proprio account. & \d & UCA 1.3.1 Interno\\
+
+R2FA1.10 & Il reset della password da parte dell'utente non autenticato richiede l'e-mail di recupero per effettuare il cambio password. & \d & UCA 1.3.2 Interno\\
+
+R2FA1.11 & Il reset della password da parte dell'utente non autenticato richiede la nuova password. & \d & UCA 1.3.3 Interno\\
+
+R2FA1.12 & Il reset della password da parte dell'utente non autenticato richiede la conferma della nuova password. & \d & UCA 1.3.4 Interno\\
+
+R1FA8.3 & Il processo di autenticazione viene negato qualora la password inserita non sia abbastanza sicura. Viene visualizzato inoltre un messaggio d'errore. & \o & UCA 8.1.2 Interno\\
+
+R1FA8.4 & Il processo di registrazione viene negato se password e conferma password inserita non combaciano. Viene visualizzato inoltre un messaggio d'errore. & \o & UCA 8.1.3 Interno\\
+
+
+%PERIN
+
+R1FA2 & L'utente anonimo e riconosciuto deve essere in grado di effettuare il logout. & \o & UCA 2 Interno\\
+
+R1FA3.1 & L'utente anonimo può gestire la propria lista delle organizzazioni. & \o & UCA 3 Interno\\
+
+R1FA3.2 & L'utente anonimo deve poter essere in grado di scaricare la lista di tutte le organizzazioni. & \o & UCA 3.1 Capitolato \\
+
+R1FA8.3 & Qualora fallisca lo scaricamento della lista delle organizzazioni deve venire visualizzato un messaggio d'errore che lo informa di tale evento. & \o & UCA 8.3.1 Interno \\
+
+R1FA3.3 & L’utente anonimo deve poter essere in grado di gestire la propria lista delle organizzazioni preferite. & \o & UCA 3.2 Interno \\
+
+R1FA3.4 & L’utente anonimo può inserire una organizzazione presente nella lista delle organizzazioni, nella propria lista delle organizzazioni preferite. & \o & UCA 3.2.1 Interno \\
+
+R1FA3.5 & Qualora l’utente anonimo inserisca un'organizzazione nella propria lista delle organizzazioni preferite che richiede autenticazione con credenziali LDAP, deve autenticarsi con credenziali LDAP. & \o & UCA 3.2.2 Capitolato\\
+
+R1FA3.6 & L’utente anonimo può rimuovere una organizzazione presente nella propria lista delle organizzazioni preferite. & \o & UCA 3.2.3 Interno \\
+
+R1FA8.4 & Qualora non sia memorizzata nessuna lista delle organizzazioni nel dispositivo, viene informato l’utente di questo fatto. & \o & UCA 8.3.2 Interno \\
+
+R1FA3.7 & L’utente anonimo ha la possibilità di aggiornare la lista delle organizzazioni. & \o & UCA 3.3 Interno \\
+
+R1FA3.8 & L’utente anonimo può aggiornare la lista delle organizzazioni tramite refresh manuale. & \o & UCA 3.3.1 Interno \\
+
+R1FA3.9 & L’utente  anonimo può aggiornare la lista delle organizzazioni tramite temporizzazione. & \o & UCA 3.3.2 Interno \\
+
+R1FA3.10 & L’utente anonimo può visualizzare la lista delle organizzazioni. & \o & UCA 3.4 Interno \\
+
+R2FA3.11 & L’utente anonimo ha la possibilità di visualizzare la lista delle organizzazioni ordinate alfabeticamente, dalla A alla Z. & \d & UCA 3.4.1 Interno \\
+
+R2FA3.12 & L’utente anonimo ha la possibilità di visualizzare la lista delle organizzazioni ordinate secondo politica FIFO. & \d & UCA 3.4.2 Interno \\
+
+R3FA3.13 & L’utente anonimo ha la possibilità di visualizzare la lista delle organizzazioni che permettono il tracciamento anonimo. & \op & UCA 3.4.3 Interno \\
+
+R3FA3.14 & L’utente anonimo ha la possibilità di visualizzare la lista delle organizzazioni che permettono il tracciamento autenticato. & \op & UCA 3.4.4 Interno \\
+
+R1FA3.15 & L’utente anonimo può effettuare ricerche personalizzate per cercare le organizzazioni presenti nella lista delle organizzazioni. & \o & UCA 3.5 Interno\\
+
+R2FA3.16 & L’utente anonimo può ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alla nazione indicata dall’utente. & \d & UCA 3.5.1 Interno \\
+
+R1FA3.17 & L’utente anonimo può ricercare organizzazioni presenti nella lista delle organizzazioni che hanno nel nome una sotto-stringa scelta dall'utente. & \o & UCA 3.5.2 Interno \\
+
+R2FA3.18 & L’utente anonimo può ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alla città indicata dall’utente. & \d & UCA 3.5.3 Interno \\
+
+R1FA4.1 & L’utente riconosciuto deve poter inserire la modalità di tracciamento che preferisce. & \o & UCA 4 Capitolato \\
+
+R1FA4.2 & L’utente riconosciuto può selezionare la modalità di tracciamento anonimo. & \o & UCA 4.1 Capitolato \\
+
+R1FA4.3 & L’utente riconosciuto può selezionare la modalità di tracciamento autenticato. & \o & UCA 4.2 Capitolato \\
+
+R2FA5.1 & L’utente anonimo ha la possibilità di visualizzare il proprio storico degli accessi. & \d & UCA 5 Capitolato \\
+
+R2FA5.2 & L’utente anonimo ha la possibilità di visualizzare il proprio storico degli accessi presso una organizzazione . & \d & UCA 5.1 Capitolato \\
+
+R2FA5.3 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nell'organizzazione visualizza la data per ogni accesso di quando è stato fatto. & \d &  UCA 5.1 \\
+
+R2FA5.4 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nell'organizzazione visualizza il luogo per ogni accesso di quando è stato fatto. & \d &  UCA 5.1 \\
+
+R2FA5.5 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nell'organizzazione visualizza il tempo trascorso per ogni accesso di quando è stato fatto. & \d &  UCA 5.1 \\
+
+R2FA5.6 & L’utente anonimo ha la possibilità di visualizzare il proprio storico degli accessi presso un luogo dell’organizzazione. & \d & UCA 5.2 Capitolato\\
+
+R2FA5.7 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nel luogo del organizzazione visualizza la data per ogni accesso di quando è stato fatto. & \d &  UCA 5.1 \\
+
+R2FA5.8 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nel luogo del organizzazione visualizza il luogo per ogni accesso di quando è stato fatto. & \d &  UCA 5.1 \\
+
+R2FA5.9 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nel luogo del organizzazione visualizza il tempo trascorso per ogni accesso di quando è stato fatto. & \d &  UCA 5.1 \\
+
+R2FA5.10 & L’utente anonimo può visualizzare la propria lista degli accessi in una organizzazione ordinata per data decrescente. & \d & UCA 5.1.1 \\
+
+R2FA5.11 & L’utente anonimo può visualizzare la propria lista degli accessi in una organizzazione ordinata per data crescente. & \d & UCA 5.1.2 \\
+
+R3FA5.12 & L’utente anonimo può effettuare una ricerca degli accessi presso un'organizzazione in un giorno specifico& \op & UCA 5.1.3 \\
+
+R2FA5.13 & L’utente anonimo può visualizzare la propria lista degli accessi presso un luogo dell’organizzazione  ordinata per data decrescente. & \d & UCA 5.2.1 \\
+
+R2FA5.14 & L’utente anonimo può visualizzare la propria lista degli accessi presso un luogo dell’organizzazione  ordinata per data crescente. & \d & UCA 5.2.2 \\
+
+R3FA5.15 & L’utente anonimo può effettuare una ricerca degli accessi presso un luogo dell’organizzazione  in un giorno specifico. & \op & UCA 5.2.3 \\
+
+R2FA5.16 & L’utente anonimo se si trova all’interno dell’organizzazione ha la possibilità di visualizzare il tempo passato all’interno dall'ultimo ingresso effettuato. & \d & UCA 5.1 Capitolato \\
+
+R2FA5.17 & L’utente anonimo se si trova all’interno dell’luogo dell’organizzazione ha la possibilità di visualizzare il tempo passato all’interno dall'ultimo ingresso effettuato. & \d & UCA 5.2 Capitolato \\
+
+R1FA5.18 & L'utente anonimo ha la possibilità di selezionare un'organizzazione dalla lista delle organizzazioni. & \o & UCA 5.3 Interno \\
+
+R2FA8.5 & Qualora non ci sono accessi effettuati presso l'organizzazione selezionata, l'utente anonimo deve essere informato di ciò. & \d & UCA 8.5.1 Interno \\
+
+R2FA8.6 & Qualora non ci sono accessi effettuati presso il luogo selezionato, l'utente anonimo deve essere informato di ciò. & \d & UCA 8.5.2 Interno \\
+
+R2FA6.1 & L’utente che effettua un movimento nell’organizzazione, deve essere registrato il tracciamento della sua azione. & \d & UCA 6 Capitolato \\
+
+R2FA6.2 & Nella registrazione del tracciamento di un movimento dell’utente, deve essere memorizzata la data di quando è stato fatto. & \d & UCA 6.1.1 \\
+
+R2FA6.3 & Nella registrazione del tracciamento di un movimento dell’utente, deve essere memorizzata l’ora di quando è stato fatto. & \d & UCA 6.1.1 \\
+
+R2FA6.4 & Nella registrazione del tracciamento di un movimento dell’utente, deve essere memorizzata da chi è stata fatta. & \d & UCA 6 Interno \\
+
+R2FA6.5 & L’utente riconosciuto che effettua un ingresso nell’organizzazione, deve essere registrato il tracciamento della sua azione secondo la modalità di tracciamento autenticato. & \d & UCA 6.1 Capitolato \\
+
+R2FA6.6 & L’utente riconosciuto che effettua l’uscita dall’organizzazione, deve essere registrato il tracciamento della sua azione secondo la modalità di tracciamento autenticato. & \d & UCA 6.2 Capitolato \\
+
+R2FA6.7 & L’utente anonimo che effettua un ingresso nell’organizzazione, deve essere registrato il tracciamento della sua azione secondo la modalità di tracciamento anonimo. & \d & UCA 6.3 Capitolato \\
+
+R2FA6.8 & L’utente anonimo che effettua l’uscita dall’organizzazione, deve essere registrato il tracciamento della sua azione secondo la modalità di tracciamento anonimo. & \d & UCA 6.4 Capitolato \\
+
+R2FA8.7 & Qualora non vengano memorizzate le informazioni necessarie per la registrazione del movimento effettuato dall’utente, deve essere notificato tale evento all’utente. & \d & UCA 8.6.1 \\
+
+R2FA6.9 & Deve essere notificato all’utente che è avvenuta la corretta registrazione del suo movimento. & \d & UCA 6.1.3 \\
+
+%Cisotto
+
+R1FA7.1 & L'utente anonimo deve avere la possibilità di autenticarsi con le credenziali aziendali in un'organizzazione che richiede il tracciamento riconosciuto. & \o & UCA 7 Capitolato \\
+
+R1FA8.8 & Qualora le credenziali LDAP aziendali inserite dall'utente non fossero riconosciute dal server aziendale associato viene mostrato un messaggio d'errore. & \o & UCA 8.7.1 Interno \\
+
+R1FA7.2 & L'utente anonimo deve avere la possibilità di inserire il nome utente durante l'autenticazione con le credenziali LDAP aziendali. & \o & UCA 7.1.1 Interno \\
+
+R1FA7.3 & L'utente anonimo deve avere la possibilità di inserire la password durante l'autenticazione con le credenziali LDAP aziendali. & \o & UCA 7.1.2 Interno \\
+
+R1FI2 & Un amministratore non autenticato non può effettuare alcuna azione a meno di autenticazione. & \o & Interno \\
+
+R1FS1.1 & L’autenticazione da parte di un amministratore necessita di e-mail. & \o & UCS 1.1.1 Interno\\
+
+R1FS10.1 & L’autenticazione viene negata qualora l'amministratore tenti di autenticarsi con delle credenziali errate. & \o & UCS 10.1.1 Interno \\
+
+R1FS10.2 & Qualora l'amministratore tenti di autenticarsi con le credenziali errate viene visualizzato un messaggio d’errore. & \o & UCS 10.1.1 Interno \\
+
+R1FS1.2 & L’autenticazione da parte di un amministratore necessita di password. & \o & UCS 1.1.2 Interno\\
+
+R2FS1.3 & L'amministratore non autenticato deve essere in grado di effettuare il reset della password qualora se la fosse dimenticata. & \d & UCS 1.3 Interno\\
+
+R2FS1.4 & Il reset della password dell'amministratore non autenticato richiede l'e-mail. & \d & UCS 1.3.1 Interno \\
+
+R2FS1.5 & Il reset della password dell'amministratore non autenticato richiede l'e-mail di recupero per il reset della password. & \d & UCS 1.3.2 Interno \\
+
+R2FS1.6 & Il reset della password dell'amministratore non autenticato richiede la nuova password. & \d & UCS 1.3.3 Interno \\
+
+R2FS1.7 & Il reset della password dell'amministratore non autenticato richiede la conferma della password. & \d & UCS 1.3.4 Interno \\
+
+R1FS2.1 & L'amministratore deve essere in grado di effettuare il logout. & \o & UCS 2 Interno\\
+
+R1FC3 & L'amministratore visualizzatore deve poter visualizzare le organizzazioni disponibili. & \o & Capitolato\\
+
+R1FI3 & Deve venire mostrato il nome dell'organizzazione durante la sua visualizzazione da parte di un amministratore. & \o & Interno\\
+
+R2FI4 & Deve venire mostrata l'immagine dell'organizzazione durante la sua visualizzazione da parte di un amministratore. & \d & Interno\\
+
+R1FS3.1 & L'amministratore visualizzatore deve poter selezionare un'organizzazione tra quelle da lui visualizzate. & \o & UCS 3 Interno\\
+
+R1FI5 & Deve venire mostrato il nome dell'organizzazione selezionata durante la sua visualizzazione da parte di un amministratore. & \o & Interno\\
+
+R2FI6 & Deve venire mostrata l'immagine dell'organizzazione selezionata durante la sua visualizzazione da parte di un amministratore. & \d & Interno\\
+
+R2FI7 & Deve venire mostrata la descrizione dell'organizzazione selezionata durante la sua visualizzazione da parte di un amministratore. & \d & Interno\\
+
+R1FI8 & Deve venire mostrato l'indirizzo dell'organizzazione selezionata durante la sua visualizzazione da parte di un amministratore. & \o & Interno\\
+
+
+R1FS4.1 & L'amministratore gestore deve poter modificare il nome dell'organizzazione. & \o & UCS 4.1.1 Interno\\
+
+R2FS4.2 & L'amministratore gestore deve poter modificare l'immagine dell'organizzazione. & \d & UCS 4.1.2 Interno\\
+
+R2FS4.3 & L'amministratore gestore deve poter modificare la descrizione dell'organizzazione. & \d & UCS 4.1.3 Interno\\
+
+R1FS4.4 & L'amministratore gestore deve poter modificare l'indirizzo dell'organizzazione. & \o & UCS 4.1.4 Interno\\
+
+R1FS4.5 & L'amministratore gestore deve poter modificare l'indirizzo IP dell'organizzazione. & \o & UCS 4.1.5 Interno\\
+
+R1FS10.3 & Se il nome dell'organizzazione inserito dall'amministratore non rispetta i vincoli imposti viene mostrato un messaggio d'errore. & \o & UCS 10.4.2\\
+
+R1FS10.4 & Se il nome dell'organizzazione inserito dall'amministratore dovesse essere già presente nel sistema e associato ad un'altra organizzazione viene mostrato un messaggio d'errore. & \o & UCS 10.4.3\\
+
+R2FS10.5 & Se l'immagine dell'organizzazione selezionata dall'amministratore non rispetta i vincoli imposti viene mostrato un messaggio d'errore. & \d & UCS 10.4.4\\
+
+R2FS10.6 & Se la descrizione dell'organizzazione inserita dall'amministratore non rispetta i vincoli imposti viene mostrato un messaggio d'errore. & \d & UCS 10.4.5\\
+
+R1FS10.7 & Se l'indirizzo dell'organizzazione inserito dall'amministratore non rispetta i vincoli imposti viene mostrato un messaggio d'errore. & \o & UCS 10.4.6\\
+
+R1FS10.8 & Se l'indirizzo IP inserito dall'amministratore non rappresenta un server LDAP viene mostrato un messaggio d'errore. & \o & UCS 10.4.7\\
+
+R1FS4.6 & L'amministratore proprietario deve avere la possibilità di inviare la richiesta di eliminazione per un'organizzazione. & \o & UCS 4.2 Capitolato\\
+
+R3FS4.7 & L'amministratore proprietario deve poter inserire una motivazione per la richiesta di eliminazione dell'organizzazione. & \op & UCS 4.2.1 Interno \\
+
+R1FS4.8 & L'amministratore gestore deve poter annullare le modifiche che sta apportando. & \o & UCS 4.3 Interno\\
+
+
+
+% Drago
+
+R1FS5.1 & L'amministratore gestore deve poter modificare il perimetro di tracciamento\ap{G} dell'organizzazione\ap{G}. & \o & UCS 5.1 Capitolato\\
+
+R1FA10.9 & La modifica del perimetro dell'organizzazione viene negata qualora l'amministratore selezioni un area che non rispetta i vincoli imposti. Viene visualizzato un messaggio di errore. & \o & UCS 10.5.1 Capitolato \\
+
+R1FS5.2 & L'amministratore gestore deve essere in grado di creare dei nuovi luoghi di tracciamento nell'organizzazione. & \o & UCS 5.2 Capitolato\\
+
+R1FS5.3 & L'amministratore gestore deve essere in grado di modificare i luoghi di tracciamento dell'organizzazione . & \o & UCS 5.3 Capitolato\\
+
+R1FS10.10 & La creazione di nuovi luoghi e la modifica dell'area di tracciamento di essi vengono negati qualora l'amministratore selezioni un area che fuoriesce dal perimetro. Viene visualizzato un messaggio di errore. & \o & UCS 10.5.2 Capitolato \\
+
+R1FS5.4 & L'amministratore gestore deve essere in grado di eliminare i luoghi di tracciamento dell'organizzazione . & \o & UCS 5.4 Capitolato\\
+
+R1FS5.5 & L'amministratore gestore deve essere in grado di selezionare un'area geografica per il tracciamento del luogo scelto . & \o & UCS 5.5 Capitolato\\
+
+R1FS5.6 &  L'amministratore gestore può scegliere l'area di tracciamento tramite l'inserimento delle coordinate geografiche. & \o & UCS 5.5.1 Capitolato\\
+
+R2FS5.7 & L'amministratore gestore può scegliere l'area di tracciamento tramite Google Maps API. & \d & UCS 5.5.2 Interno\\
+
+R1FS5.8 & L'amministratore gestore deve poter annullare la selezione dell'area geografica per il tracciamento. & \o & UCS 5.5.3 Interno\\
+
+R1FS5.9 & L'amministratore deve poter inserire un nome per il nuovo luogo di tracciamento. & \o & UCS 5.2.1 Interno\\
+
+R1FS6.1 & L'amministratore può monitorare l'organizzazione visualizzando il numero di utenti anonimi presenti nell'organizzazione. & \o & UCS 6 Capitolato\\
+
+R1FS6.2 & L'amministratore visualizzatore può monitorare l'organizzazione visualizzando il numero di utenti anonimi presenti in un specifico luogo dell'organizzazione . & \o & UCS 6.1 Capitolato\\
+
+R1FS6.3 & L'amministratore visualizzatore ha la possibilità di ritornare al monitoraggio dell'organizzazione in generale dal monitoraggio di un luogo specifico. & \o & UCS 6.1.1 Interno\\
+
+R1FS7.1 & L'amministratore visualizzatore può monitorato gli accessi effettuati dagli utenti riconosciuti. & \o & UCS 7 Capitolato\\
+
+R1FS7.2 & L'amministratore visualizzatore può monitorare gli accessi effettuati presso una organizzazione da un specifico utente riconosciuto visualizzandone il nome, il cognome e l'orario di accesso. & \o & UCS 7.1 Capitolato\\
+
+R2FS7.3 & L’amministratore visualizzatore può filtrare la lista degli accessi di un utente riconosciuto per data decrescente. & \d & UCS 7.1.1 Interno \\
+
+R2FS7.4 & L’amministratore visualizzatore può filtrare la lista degli accessi di un utente riconosciuto per data crescente. & \d & UCS 7.1.2 Interno \\
+
+R2FS7.5 & L'amministratore visualizzatore può monitorare gli accessi filtrandoli in base a una data precisa. & \d & UCS 7.1.3 Interno\\
+
+R1FS7.6 & L'amministratore visualizzatore può monitorare gli accessi effettuati presso un luogo all'interno di una organizzazione da un specifico utente riconosciuto visualizzandone il nome, il cognome e l'orario di accesso. & \o & UCS 7.2 Capitolato\\
+
+R1FS8.1 & L'amministratore visualizzatore può ricevere un report tabellare degli accessi ai luoghi dell'organizzazione. & \d & UCS 8 Capitolato\\
+
+R1FS8.2 &  Tabella delle entrate e uscite degli utenti nei luoghi dell'organizzazione generabile dall'amministratore visualizzatore di un organizzazione a tracciamento autenticato. & \d & UCS 8.1.1 Capitolato\\
+
+R1FS8.3 & Tabella delle ore spese dagli utenti nei luoghi dell'organizzazione generabile dall'amministratore visualizzatore di un organizzazione a tracciamento autenticato. & \d & UCS 8.1.2 Capitolato\\
+
+R1FS8.4 & Tabella contenente il numero degli utenti e il totale delle ore passate da essi nei luoghi dell'organizzazione generabile dall'amministratore visualizzatore di un organizzazione a tracciamento autenticato o anonimo. & \d & UCS 8.1.3 Capitolato\\
+
+%aggiungere tabelle più particolareggiate
+
+%R3FS8.1 & Le tabelle generabili dall'amministratore possono . & \op & UCS 8.1 Interno\\
+
+%Cisotto
+
+R1FS9.1 & L'amministratore proprietario ha la possibilità di entrare nella sezione di gestione degli amministratori (per la nomina, eliminazione e modifica dei privilegi ad altri amministratori). & \o & UCS 9 Capitolato \\
+
+R1FI9 & L'amministratore proprietario ha la possibilità di visualizzare gli amministratori da esso nominati una volta entrato nella gestione degli amministratori. & \o & Interno \\
+
+R1FI10 & La visualizzazione di un amministratore deve mostrare la sua e-mail. & \o & Interno \\
+
+R1FI11 & La visualizzazione di un amministratore deve mostrare i suoi privilegi. & \o & Interno \\
+
+R1FS9.2 & L'amministratore proprietario ha la possibilità di nominare un nuovo amministratore. & \o & UCS 9.1 Capitolato\\
+
+R1FS9.3 & L'amministratore proprietario deve poter inserire un'e-mail per il nuovo amministratore da nominare. & \o & UCS 9.1.1 Interno\\
+
+R1FS10.11 & Viene mostrato un messaggio d'errore qualora l'e-mail del nuovo amministratore da nominare risulti già registrata nel sistema. & \o & UCS 10.9.1 Interno\\
+
+R1FS10.12 & Viene mostrato un messaggio d'errore qualora la password del nuovo amministratore da nominare risulti troppo debole. & \o & UCS 10.9.2 Interno\\
+
+R1FS10.13 & Viene mostrato un messaggio d'errore qualora la password non combaci con la conferma password del nuovo amministratore da nominare. & \o & UCS 10.9.3 Interno\\
+
+R1FS9.4 & L'amministratore proprietario deve poter inserire una nuova password per il nuovo amministratore da nominare. & \o & UCS 9.1.2 Interno\\
+
+R1FS9.5 & L'amministratore proprietario deve poter inserire la conferma della nuova password per il nuovo amministratore da nominare. & \o & UCS 9.1.3 Interno\\
+
+R1FS9.6 & L'amministratore proprietario deve poter selezionare i privilegi per il nuovo amministratore da nominare. & \o & UCS 9.1.4 Interno\\
+
+R1FS9.7 & L'amministratore proprietario ha la possibilità di eliminare un amministratore. & \o & UCS 9.2 Capitolato\\
+
+R1FS9.8 & L'amministratore proprietario ha la possibilità di inserire la e-mail dell'account amministratore da eliminare. & \o & UCS 9.2.1 Interno\\
+
+R1FS10.14 & Viene mostrato un messaggio d'errore qualora l'e-mail dell'amministratore da eliminare inserita non risulti registrata nel sistema. & \o & UCS 10.9.4 Interno\\
+
+R1FS9.9 & L'amministratore proprietario ha la possibilità di modificare i privilegi di un amministratore. & \o & UCS 9.3 Interno\\
+
+R1FS9.10 & L'amministratore proprietario ha la possibilità di inserire la e-mail dell'account amministratore a cui desidera modificare i privilegi. & \o & UCS 9.3.1 Interno\\
+
+R1FS10.15 & Viene mostrato un messaggio d'errore qualora l'e-mail dell'amministratore a cui si vuole modificare i privilegi non risulti registrata nel sistema. & \o & UCS 10.9.4 Interno\\
+
+R1FS9.11 & L'amministratore proprietario ha la possibilità annullare le modifiche che sta apportando agli amministratori. & \o & UCS 9.4 Interno\\
+
+R1FS10.16 & L'amministratore gestore deve poter annullare le modifiche che stava apportando all'organizzazione. & \o & UCS 10.4.1\\
+
+R1FS10.17 & L'amministratore gestore deve poter annullare la selezione della nuova area geografica per il tracciamento di un luogo o del perimetro dell'organizzazione. & \o & UCS 10.5.3 Interno\\
+
+R2FS10.18 & Deve venir mostrato un errore qualora avvenisse un errore da parte del server sulla generazione del report tabellare.. & \d & UCS 10.6.1 Interno\\
+
+\end{longtable}
+}

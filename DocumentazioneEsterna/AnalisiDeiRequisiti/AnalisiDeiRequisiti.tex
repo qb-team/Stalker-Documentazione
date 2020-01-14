@@ -1,0 +1,55 @@
+\documentclass[a4paper, oneside, dvipsnames, table]{article}
+\usepackage{../../Utilita/Stiletemplate}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[italian]{babel}
+\usepackage[raggedright]{titlesec}
+\usepackage{blindtext}
+\usepackage[export]{adjustbox}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
+
+\input{Sezioni/Comandi.tex}
+\input{../../Utilita/Comandi.tex}
+
+
+\begin{document}
+
+\copertina{}
+\newpage
+
+\input{Sezioni/RegistroModifiche.tex}
+
+\fancydoc{}
+
+\clearpage
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+
+\input{Sezioni/Introduzione.tex}
+
+\section{Descrizione generale}
+\input{Sezioni/Descrizione.tex}
+
+\section{Casi d'uso}
+\input{Sezioni/UseCase/Attori.tex}
+\clearpage
+\subsection{Elenco casi d'uso}
+\setcounter{secnumdepth}{0}
+\input{sezioni/UCsection.tex}
+\clearpage
+
+\setcounter{secnumdepth}{3}
+\section{Requisiti}
+\input{Sezioni/RequisitiFunzionali.tex}
+\input{Sezioni/RequisitiPrestazionali.tex}
+\input{Sezioni/RequisitiQualitativi.tex}
+\input{Sezioni/RequisitiDiVincolo.tex}
+
+\section{Tracciamento}
+\input{Sezioni/Tracciamento.tex}
+
+
+\end{document}
