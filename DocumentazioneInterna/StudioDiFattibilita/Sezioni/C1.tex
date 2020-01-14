@@ -1,0 +1,60 @@
+\section{Capitolato C1}
+\subsection{Titolo del capitolato}
+Il capitolato in questione si chiama \textit{"Autonomous Highlights Platform"}, il proponente \`e l'azienda \textit{Zero12} e i committenti sono \VT{} e \CR{}.
+
+\subsection{Descrizione del capitolo}
+Il capitolato presentato si pone come obiettivo finale di realizzare una piattaforma che, ricevendo in input dei video di eventi sportivi, generi in maniera automatica un breve video (di circa 5 minuti) con i momenti più salienti (gli highlights, appunto).
+La piattaforma deve essere dotata di un modello di machine learning\ap{G} per comprendere in autonomia quali sono i momenti salienti di un filmato e per raggiungere questo scopo, viene richiesto di concentrarsi su un unico sport.
+L'analisi e il controllo dell'elaborazione dei filmati deve essere gestibile tramite un'interfaccia web.
+
+\subsection{Prerequisiti e tecnologie coinvolte}
+Prerequisiti:
+\begin{itemize}
+\item Node.js\ap{G};
+\item HTML5\ap{G}, CSS3\ap{G} e JavaScript\ap{G}.
+\end{itemize}
+Il capitolato richiede in gran parte l'utilizzo di tecnologie fornite da Amazon Web Services\ap{G} (AWS).
+In particolare, di questo \`e richiesto l'uso di:
+
+\begin{itemize}
+\item \textbf{Sage Maker}: Servizio che permette di compiere tutto il lavoro necessario per creare un modello di apprendimento automatico, dall'analisi dei dati alla sua formazione, fino al controllo delle previsioni e distribuzione;
+\item \textbf{Rekognition Video}: Servizio che permette di analizzare filmati per comprendere le persone o gli oggetti presenti, i loro movimenti ed eventualmente i contenuti inappropriati;
+\item \textbf{Transcode}: Servizio che permette una conversione efficiente di video in numerosi formati per la loro successiva distribuzione;
+\item \textbf{DynamoDB}: Database NoSQL\ap{G} ad elevate prestazioni da utilizzare per memorizzare i dati delle elaborazioni dei video e altre informazioni di supporto;
+\item \textbf{Elastic Container Service (ECS) o Elastic Kubernetes Service (EKS)}: Servizio che permette la gestione di numerosi container, ad alte prestazioni e ad alta scalabilità.
+\end{itemize}
+Inoltre, viene ritenuto opportuno l'utilizzo di linguaggi come Python\ap{G} per lo sviluppo delle componenti che gestiscono il modello di apprendimento automatico e di JavaScript\ap{G} per la creazione di REST\ap{G} API\ap{G} in Node.js\ap{G}. Per la creazione dell'interfaccia web \`e consigliato l'utilizzo del framework Bootstrap\ap{G}, il quale richiede conoscenze pregresse di HTML5\ap{G}, CSS3\ap{G} e JavaScript\ap{G}.
+
+\subsection{Vincoli}
+Sebbene l'azienda non richieda esplicitamente di utilizzare tutti i servizi appena descritti, seppur li raccomandi, ritiene obbligatorio l'utilizzo di AWS Sage Maker e l'implementazione di:
+
+\begin{itemize}
+\item Un'architettura a micro-servizi: ovvero ogni componente deve poter essere compilata ed implementata autonomamente;
+\item Un servizio di caricamento dei video da linea di comando;
+\item Un'interfaccia web\ap{G} per l'analisi e il controllo dell'elaborazione dei filmati.
+\end{itemize}
+\textit{Zero12} vorrebbe essere coinvolta dal team di progetto soprattutto durante la fase di analisi preliminare, ed offre attività di formazione sull'apprendimento automatico e se necessario, repository\ap{G} git\ap{G}.
+Infine, richiede di condividere:
+\begin{itemize}
+\item Diagrammi UML\ap{G} relativi agli use case di progetto;
+\item Schema della base di dati a supporto del sistema;
+\item Documentazione dettagliata di tutte le API\ap{G};
+\item Piano di test di unità.
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+\item \`E richiesto l'utilizzo di numerosi servizi forniti da AWS\ap{G}, alcuni più trasversali, altri meno, che potrebbero risultare molto utili in altri ambiti ed in futuro. I più trasversali possono essere ad esempio ECS, EKS, DynamoDB;
+\item Nel capitolato si tratta l'argomento del machine learning\ap{G}, un argomento molto interessante e molto in voga negli ultimi anni;
+\item L'azienda risulta essere molto disponibile per seguire il gruppo nello sviluppo del progetto, e questo è senz'altro positivo per rimanere in linea con le richieste del capitolato.
+\end{itemize}
+
+\subsection{Aspetti critici}
+\begin{itemize}
+\item Il capitolato richiede l'apprendimento di molti servizi, sconosciuti dai membri del gruppo, che si basano su argomenti non conosciuti (come il machine learning\ap{G}) e non affrontati nel corso di laurea triennale. Quindi gran parte del tempo andrebbe dedicato alla formazione per l'utilizzo di questi concetti e strumenti, ed infine di applicare queste conoscenze;
+\item Oltre al tempo impiegato per l'apprendimento di questi strumenti c'è da tenere in considerazione il tempo per cercare il materiale video per addestrare il modello visionarlo ed etichettarlo.
+\end{itemize}
+
+\subsection{Conclusioni}
+Nonostante sia stato manifestato grande interesse da parte del gruppo, analizzando gli aspetti positivi e quelli critici, il gruppo ha ritenuto troppo elevata la mole di lavoro necessaria per svolgerlo e quindi il capitolato è stato rigettato.
+
