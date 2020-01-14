@@ -78,11 +78,16 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 
 \subsubsection{Strumenti per il controllo di qualità}
 In questa sezione vengono indicati gli strumenti per valutare le metriche di processo e di prodotto.
+
 \paragraph*{Note sugli strumenti per il controllo di qualità}\mbox{}\\ \\
 La seguente sezione, relativa agli strumenti, non è completa in quanto il suo contenuto dipende in larga parte dalle decisioni progettuali che devono essere prese con l'avanzamento del progetto.
+
 \paragraph{Metrica - Indice di Gulpease}\mbox{}\\ \\
-Per poter calcolare questo indice, descritto nel \PdQ{} viene utilizzato un semplice \href{...}{programma} realizzato in \glo{Python} che permette l'automazione del processo per ogni file PDF che gli viene indicato.
-Lo script viene avviato da terminale e la sua esecuzione si basa sul contenuto dei file di supporto qui indicati: 
+Per poter calcolare questo indice, descritto nel \PdQ{} viene utilizzato come strumento il "Calcolatore dell'Indice Gulpease" ospitato a \href{https://farfalla-project.org/readability_static/}{questo indirizzo}.
+Non vengono contati per l'indice di Gulpease il testo presente nelle seguenti parti o sezioni del documento:
 \begin{itemize}
-    \item file....
+    \item Copertina;
+    \item Indice;
+    \item Registro delle modifiche;
+    \item Riferimenti.
 \end{itemize}
