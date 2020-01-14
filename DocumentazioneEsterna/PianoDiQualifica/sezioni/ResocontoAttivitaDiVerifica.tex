@@ -1,0 +1,53 @@
+\section{Resoconto delle attività di verifica}
+In questa sezione vengono descritti ed analizzati gli esiti delle attività di verifica su tutti i documenti destinati alla consegna.
+
+\subsection{Revisione dei requisiti}
+
+\subsubsection{Analisi statica dei documenti}
+I membri del gruppo \Gruppo{} hanno analizzato i documenti mediante la tecnica di walkthrough che ha portato all'individuazione di 
+alcuni errori ortografici e grammaticali, grazie anche agli strumenti di controllo ortografico integrati negli editor per la produzione
+della documentazione che il gruppo ha deciso di utilizzare.
+
+\subsubsection{Esiti verifiche automatizzate}
+Attualmente, l'unico valore che può essere calcolato per verificare\ap{G} se la garanzia di qualità che il gruppo ritiene fornire è
+soddisfatta, è data dall'Indice di Gulpease (MPC6).
+Per poter calcolare questo indice, viene utilizzato come strumento il "Calcolatore dell'Indice Gulpease" ospitato a \href{https://farfalla-project.org/readability_static/}{questo indirizzo}.
+Non vengono contati per l'indice di Gulpease il testo presente nelle seguenti parti o sezioni del documento:
+\begin{itemize}
+    \item Copertina;
+    \item Indice;
+    \item Registro delle modifiche;
+    \item Riferimenti.
+\end{itemize}
+Nella seguente tabella sono riportati i risultati degli indici di Gulpease ottenuti dai documenti.
+
+{
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{1.5}
+\centering
+\begin{longtable}{ C{4cm} C{4cm} C{4cm} }
+\caption{Elenco dei test di sistema}\\
+\rowcolor{darkblue}
+\textcolor{white}{\textbf{Documento}} & \textcolor{white}{\textbf{Indici di Gulpease}} & \textcolor{white}{\textbf{Esito}} \\
+\hline
+\endhead
+\AdRv{1.0.0} & \textcolor{verde}{\textbf{95}} & Ottimale \\
+\PdPv{1.0.0} & \textcolor{verde}{\textbf{100}} & Ottimale \\
+\PdQv{1.0.0} & \textcolor{verde}{\textbf{100}} & Ottimale \\
+
+\NdPv{1.0.0} & \textcolor{giallo}{\textbf{75}} & Accettabile \\
+\SdFv{1.0.0} & \textcolor{verde}{\textbf{94}} & Ottimale \\
+
+\Glossariov{1.0.0} & \textcolor{giallo}{\textbf{67}} & Accettabile \\
+
+VI\_2019\_12\_18 & \textcolor{verde}{\textbf{100}} & Ottimale \\
+VE\_2019\_12\_16 & \textcolor{giallo}{\textbf{65}} & Accettabile \\
+VI\_2019\_12\_13 & \textcolor{verde}{\textbf{92}} & Ottimale \\
+VI\_2019\_12\_10 & \textcolor{verde}{\textbf{100}} & Ottimale \\
+VI\_2019\_12\_06 & \textcolor{verde}{\textbf{83}} & Ottimale \\
+VI\_2019\_12\_03 & \textcolor{verde}{\textbf{83}} & Ottimale \\
+VI\_2019\_11\_27 & \textcolor{verde}{\textbf{100}} & Ottimale \\
+VI\_2019\_11\_20 & \textcolor{verde}{\textbf{87}} & Ottimale \\
+
+\end{longtable}
+}

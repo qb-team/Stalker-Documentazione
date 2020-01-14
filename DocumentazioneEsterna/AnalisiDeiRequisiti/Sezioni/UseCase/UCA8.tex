@@ -1,0 +1,74 @@
+%scritto da \PF{}
+\subsubsection{UCA 8.1.1 - Visualizzazione messaggio di errore in caso di account con l'e-mail inserita già presente}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Utente non autenticato
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'utente non è registrato e ha inserito nel campo indirizzo e-mail un valore già presente nel sistema.
+\item \textbf{Postcondizione:} L'indirizzo e-mail inserito dall'utente è già presente nel sistema, pertanto riceve un messaggio di errore esplicativo che lo esorta a scegliere una nuova password.
+\end{itemize}
+
+\subsubsection{UCA 8.1.2 - Visualizzazione messaggio di errore in caso di password troppo debole}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Utente non autenticato
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'utente non è registrato e ha inserito una password poco sicura.
+\item \textbf{Postcondizione:} La password inserita dall'utente risulta essere poco sicura per il sistema, pertanto riceve un messaggio di errore che gli intima di sceglierne una più sicura.
+\end{itemize}
+
+\subsubsection{UCA 8.1.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Utente non autenticato
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'utente non è registrato e ha inserito nei campi relativi alla password e conferma password valori differenti.
+\item \textbf{Postcondizione:} La password inserita dall'utente è diversa da quella inserita nel campo conferma password, pertanto riceve un messaggio di errore esplicativo.
+\end{itemize}
+
+\subsubsection{UCA 8.1.4 - Visualizzazione messaggio di errore credenziali errate}%fish level
+\begin{itemize}
+    \item \textbf{Attori primari:} Utente non autenticato
+    \item \textbf{Precondizione:}  L'utente non è autenticato.
+    \item \textbf{Postcondizione:} L'utente visualizza un messaggio di errore a causa delle credenziali inserite in modo errato.
+\end{itemize}
+
+\subsubsection{UCA 8.3.1 - Visualizzazione di un messaggio di errore che informa del tentativo fallito di scaricare la lista}%fish level
+\begin{itemize}
+\item \textbf{Attori primari:} Utente anonimo
+\item \textbf{Precondizione:} L'utente esegue l'azione di scaricare la lista delle organizzazioni\ap{G} ma fallisce.
+\item \textbf{Postcondizione:} Viene visualizzato un messaggio d'errore che informa che il tentativo di scaricare la lista è fallito.
+
+\end{itemize}
+
+\subsubsection{UCA 8.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle organizzazioni}%fish level
+\begin{itemize}
+	\item \textbf{Attori primari:} Utente anonimo
+	\item \textbf{Precondizione:} La lista delle organizzazioni\ap{G} non è presente nel dispositivo dell'utente.
+	\item \textbf{Postcondizione:} Viene visualizzato un messaggio di errore che informa che nel dispositivo non è presente la lista delle organizzazioni\ap{G}.
+\end{itemize}
+
+\subsubsection{UCA 8.5.1 - Avviso della mancanza di accessi effettuati presso l'organizzazione selezionata}
+\begin{itemize}
+    \item \textbf{Attori primari:} Utente anonimo
+    \item \textbf{Precondizione:} L'utente ha tentato di visualizzare lo storico degli accessi\ap{G} di un'organizzazione\ap{G} nella quale non è mai entrato.
+    \item \textbf{Postcondizione:} Viene mostrato un messaggio che avvisa l'utente della mancanza di accessi presso l'organizzazione\ap{G} selezionata.
+\end{itemize}
+
+\subsubsection{UCA 8.5.2 - Avviso della mancanza di accessi effettuati presso il luogo selezionato}
+\begin{itemize}
+    \item \textbf{Attori primari:} Utente anonimo
+    \item \textbf{Precondizione:} L'utente ha tentato visualizzare lo storico degli accessi\ap{G} di un luogo di un'organizzazione\ap{G} nella quale non è mai entrato.
+    \item \textbf{Postcondizione:} L'utente visualizza un messaggio che lo avvisa della mancanza di accessi nel luogo scelto.
+\end{itemize}
+
+\subsubsection{UCA 8.6.1 - Notifica di errore se procedimento di memorizzazione del movimento al luogo è fallito}
+\begin{itemize}
+	\item \textbf{Attori primari:} Utente riconosciuto, Utente anonimo
+	\item \textbf{Precondizione:} Avviene un errore durante la registrazione dell'accesso dell'utente.
+	\item \textbf{Postcondizione:} Viene notificato l'errore all'utente.
+\end{itemize}
+
+\subsubsection{UCA 8.7.1 - Visualizzazione messaggio di errore credenziali LDAP aziendali errate}
+\begin{itemize}
+	\item \textbf{Attori primari:} Utente anonimo
+	\item \textbf{Precondizione:} L'utente ha inserito delle credenziali LDAP non riconosciute dal server aziendale.
+	\item \textbf{Postcondizione:} Viene notificato l'errore all'utente.
+\end{itemize}

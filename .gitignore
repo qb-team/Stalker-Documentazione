@@ -1,0 +1,27 @@
+# .gitignore
+# Il seguente file contiene le istruzione per git sui file da versionare.
+# I file che hanno un nome che matcha con una delle RegEx seguenti non verranno aggiunti al versionamento.
+
+# File generici
+*Thumbs.db
+*.DS_Store
+
+# LaTeX
+*.log
+*.lof
+*.lot
+*.pdf
+*.blg
+*.bbl
+*.aux
+*-blx*.bib
+*.out
+*.synctex*.gz
+*.synctex(busy)
+*.toc
+*.fdb_latexmk
+*.fls
+
+# IDE
+# VS Code
+.vscode/
