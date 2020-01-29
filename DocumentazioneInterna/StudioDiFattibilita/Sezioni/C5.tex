@@ -3,7 +3,7 @@
 Il capitolato in questione si chiama "Stalker", il proponente è l'azienda \Proponente{} e i committenti sono \VT{} e \CR{}.
 
 \subsection{Descrizione del capitolo}
-\NomeProgetto{} richiede la realizzazione di un sistema di monitoraggio delle posizioni delle persone (in versione anonima o non) grazie ad un'applicazione "complementare" installata sugli smartphone. La necessità del servizio sorge dal dover monitorare il numero e la posizione delle persone all'interno di fiere/musei/locali ai fini di sicurezza oppure per verificare la presenza e la locazione dei dipendenti di un'azienda. Nel primo caso si user\`a il tracciamento\ap{G}anonimo, nel secondo caso invece il tracciamento\ap{G}non anonimo. L'applicazione dovrà risalire alla posizione attuale grazie all'ausilio di infrastrutture e/o servizi resi disponibili dallo smartphone stesso, come per esempio beacon \ap{G}, GPS\ap{G}, dati del cellulare, ecc. Quando l'applicazione calcola la posizione aggiornata deve anche verificare se rientra in una zona da essere tracciata, in tal caso comunicherà col server remoto per autenticarsi (anonimamente o non) e risultare tracciabile dal sistema. 
+\NomeProgetto{} richiede la realizzazione di un sistema di monitoraggio delle posizioni delle persone (in versione anonima o non) grazie ad un'applicazione "complementare" installata sugli smartphone. La necessità del servizio sorge dal dover monitorare il numero e la posizione delle persone all'interno di fiere/musei/locali ai fini di sicurezza oppure per verificare la presenza e la locazione dei dipendenti di un'azienda. Nel primo caso si user\`a il \glo{tracciamento anonimo}, nel secondo caso invece il \glo{tracciamento} non anonimo. L'applicazione dovrà risalire alla posizione attuale grazie all'ausilio di infrastrutture e/o servizi resi disponibili dallo smartphone stesso, come per esempio \glo{beacon}, \glo{GPS}, dati del cellulare, ecc. Quando l'applicazione calcola la posizione aggiornata deve anche verificare se rientra in una zona da essere tracciata, in tal caso comunicherà col server remoto per autenticarsi (anonimamente o non) e risultare tracciabile dal sistema. 
 
 \subsection{Prerequisiti e tecnologie coinvolte}
 Prerequisiti:
@@ -12,21 +12,21 @@ Prerequisiti:
 \end{itemize}
 Tecnologie coinvolte:
 \begin{itemize}
-\item Utilizzo di Java (versione 8 o superiore), Python\ap{G} o Node.js\ap{G} per lo sviluppo del server back-end\ap{G};
+\item Utilizzo di Java (versione 8 o superiore), \glo{Python} o \glo{Node.js} per lo sviluppo del server \glo{back-end};
 \item Utilizzo di protocolli asincroni per le comunicazioni app mobile-server;
-\item Utilizzo del pattern di Publisher/Subscriber, ovvero mittenti (Publisher) e destinatari (Subscriber) di messaggi dialogano attraverso un tramite(dispatcher\ap{G});
-\item Utilizzo dell'IAAS Kubernetes\ap{G} o di un PAAS\ap{G}, Openshift\ap{G} o Rancher\ap{G}, per il rilascio delle componenti del Server nonché per la gestione della scalabilità orizzontale\ap{G};
-\item API REST\ap{G} attraverso le quali sia possibile utilizzare l'applicativo;
-\item Utilizzo del GPS\ap{G} o altre soluzioni per monitorare un utente;
-\item Utilizzo di un IDE\ap{G} per la creazione di applicazioni mobile (Android o iOS);
-\item Utilizzo di LDAP\ap{G} (Lightweight Directory Access Protocol) che \`e un protocollo standard per l'interrogazione e la modifica dei servizi di directory, come ad esempio un elenco aziendale di e-mail o una rubrica telefonica, o più in generale qualsiasi raggruppamento di informazioni che può essere espresso come record di dati organizzato in modo gerarchico.
+\item Utilizzo del pattern di \glo{Publisher/Subscriber}, ovvero mittenti (Publisher) e destinatari (Subscriber) di messaggi dialogano attraverso un tramite(\glo{dispatcher});
+\item Utilizzo dell'IAAS \glo{Kubernetes} o di un \glo{PAAS}, \glo{Openshift} o \glo{Rancher}, per il rilascio delle componenti del Server nonché per la gestione della \glo{scalabilità orizzontale};
+\item API \glo{REST} attraverso le quali sia possibile utilizzare l'applicativo;
+\item Utilizzo del \glo{GPS} o altre soluzioni per monitorare un utente;
+\item Utilizzo di un \glo{IDE} per la creazione di applicazioni mobile (Android o iOS);
+\item Utilizzo di \glo{LDAP} (Lightweight Directory Access Protocol) che \`e un protocollo standard per l'interrogazione e la modifica dei servizi di directory, come ad esempio un elenco aziendale di e-mail o una rubrica telefonica, o più in generale qualsiasi raggruppamento di informazioni che può essere espresso come record di dati organizzato in modo gerarchico.
 \end{itemize}
 
 \subsection{Vincoli}
 \begin{itemize}
 \item Il server deve essere in grado di scalare in base al numero di utilizzatori in modo dinamico sia in aggiunta che in riduzione;
 \item Viene richiesto di garantire una precisione sufficiente che permetta di certificare la presenza della persona all'interno degli edifici;
-\item Effettuare test di tipo end-to-end\ap{G};
+\item Effettuare test di tipo \glo{end-to-end};
 \item Creazione di un'applicazione Android/iOS con relativa interfaccia grafica.
 \end{itemize}
 
@@ -41,7 +41,7 @@ Tecnologie coinvolte:
 \subsection{Aspetti critici}
 \begin{itemize}
 \item Essendo su un dispositivo mobile, il servizio dell'applicazione che si connette al server per inviare la propria posizione deve essere molto efficiente in termine di consumo della batteria;
-\item Non sono chiari alcuni aspetti della modalità anonima\ap{G};
+\item Non sono chiari alcuni aspetti della \glo{modalità di tracciamento anonima};
 \item Bisogna rispettare le normative vigenti in tema privacy.
 \end{itemize}
 \subsection{Conclusioni}
