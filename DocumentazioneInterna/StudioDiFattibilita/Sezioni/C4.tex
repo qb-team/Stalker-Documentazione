@@ -3,37 +3,37 @@
 Il capitolato in questione si chiama \textit{"Predire in Grafana"}, il proponente è l'azienda \textit{Zucchetti} e i committenti sono \VT{} e \CR{}.
 
 \subsection{Descrizione del capitolo}
-Si vuole realizzare un plug-in\ap{G} per lo strumento di monitoraggio Grafana\ap{G}. Il plug-in\ap{G} deve calcolare una predizione con l'applicazione del Support Vector Machine\ap{G} (SVM) e della regressione lineare\ap{G} (RL) al flusso di dati ricevuti da una data sorgente. La predizione sarà utile per decretare quando sia il caso di mandare dei segnali di allarme (in caso delle apparecchiature siano a rischio di sovraccarico) ai manutentori/sistemisti dei server per agire preventivamente.
+Si vuole realizzare un \glo{plug-in} per lo strumento di monitoraggio \glo{Grafana}. Il \glo{plug-in} deve calcolare una predizione con l'applicazione del \glo{Support Vector Machine} (SVM) e della \glo{regressione lineare} (RL) al flusso di dati ricevuti da una data sorgente. La predizione sarà utile per decretare quando sia il caso di mandare dei segnali di allarme (in caso delle apparecchiature siano a rischio di sovraccarico) ai manutentori/sistemisti dei server per agire preventivamente.
 
 \subsection{Prerequisiti e tecnologie coinvolte}
 Prerequisiti:
 \begin{itemize}
-\item Cenni di calcolo numerico (RL\ap{G} e SVM\ap{G});
-\item JavaScript\ap{G} per la realizzazione dei plug-in\ap{G};
-\item Algoritmi di Machine Learning\ap{G} (l'azienda \`e disposta a fornire la formazione necessaria a riguardo).
+\item Cenni di calcolo numerico (\glo{RL} e \glo{SVM});
+\item \glo{JavaScript} per la realizzazione dei \glo{plug-in};
+\item Algoritmi di \glo{machine learning} (l'azienda \`e disposta a fornire la formazione necessaria a riguardo).
 \end{itemize}
 Tecnologie da coinvolte:
 \begin{itemize}
-\item JavaScript\ap{G}, linguaggio di programmazione richiesto per costruire i plug-in di Grafana\ap{G} ;
-\item Libreria in JavaScript\ap{G} per le SVM\ap{G};
-\item Libreria in JavaScript\ap{G} per la RL\ap{G};
-\item Libreria in JavaScript\ap{G} per le reti neurali;
-\item Prodotto di monitoraggio Grafana\ap{G}, software open-source che, ricevuti i dati in input, consente di raccoglierli in un cruscotto, visualizzarli, analizzarli, misurarli e controllarli;
-\item Orange Canvas\ap{G}, strumento per l'analisi dei dati.
+\item \glo{JavaScript}, linguaggio di programmazione richiesto per costruire i plug-in di \glo{Grafana} ;
+\item Libreria in \glo{JavaScript} per le \glo{SVM};
+\item Libreria in \glo{JavaScript} per la \glo{RL};
+\item Libreria in \glo{JavaScript} per le reti neurali;
+\item Prodotto di monitoraggio \glo{Grafana}, software open-source che, ricevuti i dati in input, consente di raccoglierli in un cruscotto, visualizzarli, analizzarli, misurarli e controllarli;
+\item \glo{Orange Canvas}, strumento per l'analisi dei dati.
 \end{itemize}
 
 
 \subsection{Vincoli}
 \begin{itemize}
-\item La realizzazione dei plug-in\ap{G} deve essere fatta attraverso JavaScript\ap{G};
+\item La realizzazione dei \glo{plug-in} deve essere fatta attraverso \glo{JavaScript};
 \item il programma dovrà svolgere le seguenti compiti:
 \begin{itemize}
-\item Produrre un file JSON dai dati di addestramento con i parametri per le previsioni con Support Vector;
-\item Machine (SVM\ap{G}) per le classificazioni o la Regressione Lineare\ap{G} (RL o LR da Linear Regression in inglese);
-\item Leggere la definizione del predittore dal file in formato JSON\ap{G};
-\item Associare i predittori letti dal file JSON al flusso di dati presente in Grafana\ap{G};
+\item Produrre un file \glo{JSON} dai dati di addestramento con i parametri per le previsioni con Support Vector;
+\item Machine (\glo{SVM}) per le classificazioni o la \glo{Regressione Lineare} (RL o LR da Linear Regression in inglese);
+\item Leggere la definizione del predittore dal file in formato \glo{JSON};
+\item Associare i predittori letti dal file JSON al flusso di dati presente in \glo{Grafana};
 \item Applicare la previsione e fornire i nuovi dati ottenuti dalla previsione al sistema di Grafana;
-\item Rendere disponibili i dati al sistema di creazione di grafici e dashboard\ap{G} per la loro visualizzazione.
+\item Rendere disponibili i dati al sistema di creazione di grafici e \glo{dashboard} per la loro visualizzazione.
 \end{itemize}
 \end{itemize}
 
@@ -51,8 +51,8 @@ Tecnologie da coinvolte:
 \begin{itemize}
 \item Non è chiaro come le librerie fornite debbano essere implementate e con che flessibilità possa analizzare diversi tipi di dati in input;
 \item La presentazione del capitolato è stata molto approssimativa;
-\item L'utilizzo di conoscenze apprese durante il corso di calcolo numerico (RL\ap{G} e SVM\ap{G}) risulta essere poco stimolante.
+\item L'utilizzo di conoscenze apprese durante il corso di calcolo numerico (\glo{RL} e \glo{SVM}) risulta essere poco stimolante.
 
 \end{itemize}
 \subsection{Conclusioni}
-Nel capitolato viene trattato l'argomento del machine learning\ap{G},  purtroppo marginalmente e l'utilizzo del software Grafana non ha stimolato grande interesse all'interno del gruppo, perciò analizzando gli aspetti positivi e quelli critici e dopo una discussione fra i membri del gruppo, \`e emerso un discreto interesse per il capitolato ci\`o nonostante \`e stato preferito accantonare il capitolato .
+Nel capitolato viene trattato l'argomento del \glo{machine learning},  purtroppo marginalmente e l'utilizzo del software Grafana non ha stimolato grande interesse all'interno del gruppo, perciò analizzando gli aspetti positivi e quelli critici e dopo una discussione fra i membri del gruppo, \`e emerso un discreto interesse per il capitolato ci\`o nonostante \`e stato preferito accantonare il capitolato .
