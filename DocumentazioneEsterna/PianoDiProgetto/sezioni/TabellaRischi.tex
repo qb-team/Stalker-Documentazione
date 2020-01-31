@@ -30,18 +30,16 @@ RR1 Disattenzione nella definizione dei requisiti & I componenti del gruppo potr
 RS1 Stime errate delle attività & Si potrebbero fare delle stime sbagliate sui costi, tempi e risorse utilizzate delle attività & Ciascun componente comunicherà al responsabile se non avrà rispettato una delle stime di qualche attività & Si cercherà di condurre una pianificazione e un preventivo attento per essere più coerenti possibili. \\
 
 
-RO1 Non rispetto delle milestone imposte & Potrebbe accadere che a causa di impegni personali o mancanza di alcune conoscenze, qualche membro del gruppo impieghi più tempo del previsto per portare a termine il compito assegnatogli. Come conseguenza immediata, il completamento del compito sforerà oltre la scadenza temporale preposta, comportando il mancato rispetto temporale delle milestone precedentemente concordate & Il componente che si trova in difficoltà avrà il compito di comunicarlo al gruppo. Tuttavia, anche gli altri membri possono valutare se un componente dovesse procede a rilento e, in tal caso, comunicare il problema al responsabile & Tutto il gruppo dovrà agire per offrire supporto in modo tale da terminare il lavoro entro la scadenza. \\
+RO1 Non rispetto delle \glo{milestone} imposte & Potrebbe accadere che a causa di impegni personali o mancanza di alcune conoscenze, qualche membro del gruppo impieghi più tempo del previsto per portare a termine il compito assegnatogli. Come conseguenza immediata, il completamento del compito sforerà oltre la scadenza temporale preposta, comportando il mancato rispetto temporale delle \glo{milestone} precedentemente concordate & Il componente che si trova in difficoltà avrà il compito di comunicarlo al gruppo. Tuttavia, anche gli altri membri possono valutare se un componente dovesse procede a rilento e, in tal caso, comunicare il problema al responsabile & Tutto il gruppo dovrà agire per offrire supporto in modo tale da terminare il lavoro entro la scadenza. \\
 
 RO2 Eccesso o difetto nell'assegnazione delle scadenze & Data la presenza di numerosi scenari nei quali abbiamo poca esperienza, potrebbe venire realizzata un'assegnazione di scadenze sovra-stimate o sotto-stimate in relazione alla difficoltà del problema da risolvere & I componenti a cui è assegnato lo svolgimento di un compito devono riferire se la scadenza a loro imposta sia ragionevole dopo aver approfondito e compreso a fondo la difficoltà del lavoro che devono portare a termine & Se i membri del gruppo assegnati a un compito riferiscono al responsabile l'errore nella valutazione delle tempistiche si procede immediatamente ad una nuova pianificazione alla luce delle affermazioni dei membri coinvolti nel compito.\\
 
 RO3 Assenza di comunicazione gruppo-proponente & Potrebbe accadere che si trascuri la comunicazione con \Proponente{} & Tutti i membri devono ricordarsi di mantenere un dialogo con l'azienda, cercando di raccogliere dubbi e avanzamenti per poi illustrarli alla stessa & In caso di assenza di comunicazione gruppo-azienda il responsabile deve fissare una data per un incontro, prima della prima scadenza di revisione, entro la quale il team deve impegnarsi a raccogliere domande, se presenti, e proporre tutti i progressi che sono stati fatti per ricevere feedback essenziali per il corretto avanzamento del prodotto. \\
 
-RO4 Impossibilità di stabilire un incontro tra i membri del gruppo & Data l'elevata numerosità del gruppo, potrebbe risultare difficile fissare una data per un incontro che risulti valida per tutti i membri e sufficientemente vicina temporalmente & Il gruppo condivide una tabella con le disponibilità di ciascun membro nei vari giorni della settimana. La tabella permette di identificare con facilità i giorni in cui i membri del gruppo sono più disponibili per trovarsi e quelli in cui lo sono meno. & Per confrontarsi e organizzarsi si possono usare servizi di chiamata telematici come Discord. Inoltre, molto raramente sarà strettamente necessaria la presenza di tutti i membri del gruppo, pertanto risulterà più facile organizzarsi in sotto-gruppi e stabilire una data valida per il ritrovo.\\
+RO4 Impossibilità di stabilire un incontro tra i membri del gruppo & Data l'elevata numerosità del gruppo, potrebbe risultare difficile fissare una data per un incontro che risulti valida per tutti i membri e sufficientemente vicina temporalmente & Il gruppo condivide una tabella con le disponibilità di ciascun membro nei vari giorni della settimana. La tabella permette di identificare con facilità i giorni in cui i membri del gruppo sono più disponibili per trovarsi e quelli in cui lo sono meno. & Per confrontarsi e organizzarsi si possono usare servizi di chiamata telematici come \glo{Discord}. Inoltre, molto raramente sarà strettamente necessaria la presenza di tutti i membri del gruppo, pertanto risulterà più facile organizzarsi in sotto-gruppi e stabilire una data valida per il ritrovo.\\
 
 \end{longtable}
 }
-
-\clearpage
 
 \subsubsection{Tabella del Grado del Rischio}
 Come descritto nelle fasi della gestione del rischio, è importante valutare il grado del rischio, ovvero stabilire la probabilità e la gravità che il rischio potrebbe avere durante il progetto.\\
@@ -82,6 +80,45 @@ Ogni colonna riporterà il codice di ciascuno dei rischi analizzati nella tabell
 		RO3 & Bassa & Media\\
 		
 		RO4 & Alta & Bassa\\
+		
+	
+	\end{longtable}
+	
+}
+
+\newpage
+\subsection{Occorrenza e mitigazione nel periodo osservato}
+
+{
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{2}
+\centering
+	
+\begin{longtable}{C{2cm} C{3cm} C{8cm}}
+\caption{Tabella occorrenza e mitigazione}\\
+\rowcolor{darkblue}
+	\textcolor{white}{\textbf{Codice}} & 
+	\textcolor{white}{\textbf{Occorrenza}} & 
+	\textcolor{white}{\textbf{Mitigazione}}\\	
+\endhead
+		
+	RT1 & Alta & Il gruppo \Gruppo{} ha cercato di apprendere le tecnologie in maniera tempestiva. Alcune volte l'apprendimento è stato più duraturo del previsto \\
+			
+	RP1 & Media & Ogni decisione progettuale è stata discussa e decisa da almeno due componenti del gruppo e poi proposta al resto del gruppo. Il risultato finale è una scelta collettiva \\
+
+	RP2 & Media & Per ridurre i tempi e i costi della progettazione vi sono state delle discussioni con il proponente; anche per fare chiarezza su certi vincoli e problemi riscontrati durante l'analisi \\
+
+	RR1 & Alta & Vi sono state frequenti difficoltà nel capire alcuni requisiti e come risolverli durante la stesura dell'analisi dei requisiti \\
+
+	RS1 & Media & Mancato controllo finale sulla pianificazione e preventivo \\
+
+	RO1 & Media & Pur di rispettare le \glo{milestone} ogni membro del gruppo ha cercato di supportarsi a vicenda nel tentativo di rispettare le scadenze. Non sempre tali scadenze sono stare rispettate \\
+
+	RO2 & Media & Per mancata esperienza l'assegnazione di alcune scadenze sono risultate sbagliate o pianificate male, per questo motivo è capitato di non rispettare le \glo{milestone} \\
+
+	RO3 & Bassa & É stato organizzato solo un incontro con il proponente \\
+
+	RO4 & Alta & Per motivi di distanza, numerosità del gruppo ed impegni personali non è stato sempre possibile effettuare gli incontri con tutti i membri. Per risolvere alcune di queste problematiche è stato creato un server \glo{Discord} per la comunicazione diretta e virtuale tra i vari componenti del gruppo \\
 		
 	
 	\end{longtable}
