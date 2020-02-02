@@ -15,3 +15,76 @@ Inoltre, data la nostra inesperienza, il modello scelto permette a eventuali cam
 In aggiunta a ciò, i rilasci successivi di funzionalità permettono di poter stabilire un confronto migliore con il proponente, riuscendo a sottoporre al suo giudizio un prodotto che sia sempre funzionante e col tempo sempre più completo e conforme alle sue aspettative. \\
 Abbiamo inoltre valutato che i principali difetti del modello incrementale, quali la degradazione della struttura causata dall'aggiunta di incrementi e l'invisibilità del processo al manager, 
 non influenzano il gruppo data la dimensione ridotta, relativamente ad ambienti aziendali dove i modelli di sviluppo sono sfruttati a pieno, del progetto che stiamo affrontando.
+
+
+\subsection{Individuazione degli incrementi}
+In seguito vi sono riportate due tabelle con i tracciamenti degli incrementi/requisiti del lato applicazione e server, in maniera tale da comprendere quali requisiti vengono soddisfatti per ogni incremento.
+I requisiti sono tracciati con un codice identificativo reperibili nel documento dell'analisi dei requisiti.
+
+{
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{2}
+\centering
+	
+\begin{longtable}{C{4cm} C{6cm} C{4cm}}
+\caption{Tabella dei tracciamenti incremento/requisiti lato applicazione}\\
+\rowcolor{darkblue}
+
+\textcolor{white}{\textbf{Incremento}} &
+\textcolor{white}{\textbf{Descrizione}} & 
+\textcolor{white}{\textbf{Requisiti}}\\
+\endfirsthead
+\endhead
+
+Incremento 1 & Accesso all'applicazione & \begin{itemize}
+    \item[ ] R1FI1
+    \item[ ] R1FA1.1
+    \item[ ] R1FA1.2
+    \item[ ] R1FA1.3
+    \item[ ] R1FA1.4
+    \item[ ] R1FA1.5
+    \item[ ] R1FA1.6
+    \item[ ] R1FA1.7
+\end{itemize}  \\
+
+Incremento 2 & Logout & \begin{itemize}
+    \item[ ] R1FA2
+\end{itemize} \\
+
+Incremento 3 & Modalità di tracciamento & \begin{itemize}
+    \item[ ] R1FA4.1
+    \item[ ] R1FA4.2
+    \item[ ] R1FA4.3
+\end{itemize}  \\
+
+
+\end{longtable}
+}
+
+
+{
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{2}
+\centering
+	
+\begin{longtable}{C{4cm} C{6cm} C{4cm}}
+\caption{Tabella dei tracciamenti incremento/requisiti lato server}\\
+\rowcolor{darkblue}
+
+\textcolor{white}{\textbf{Incremento}} &
+\textcolor{white}{\textbf{Descrizione}} & 
+\textcolor{white}{\textbf{Requisiti}}\\
+\endfirsthead	
+\endhead
+
+Incremento 1 & Accesso al server & \begin{itemize}
+    \item[ ] R1FS1.1
+    \item[ ] R1FS1.2 
+\end{itemize}  \\
+
+Incremento 2 & Logout & \begin{itemize}
+    \item[ ] R1FS2.1
+\end{itemize} \\
+
+\end{longtable}
+}
