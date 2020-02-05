@@ -69,18 +69,17 @@
             <task id="37" name="Verifica" color="#8cb6ce" meeting="false" start="2019-12-23" duration="7" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="40" name="Periodo 3" color="#000000" meeting="false" start="2020-01-01" duration="10" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true">
-            <depend id="41" type="2" difference="0" hardness="Rubber"/>
+            <depend id="79" type="2" difference="0" hardness="Rubber"/>
             <task id="50" name="Normazione" color="#8cb6ce" meeting="false" start="2020-01-01" duration="3" complete="0" thirdDate="2020-05-11" thirdDate-constraint="0" expand="true"/>
             <task id="64" name="Approfondimento delle tecnologie" color="#8cb6ce" meeting="false" start="2020-01-01" duration="4" complete="0" thirdDate="2020-05-11" thirdDate-constraint="0" expand="true"/>
             <task id="71" name="Analisi dei Requisiti" color="#8cb6ce" meeting="false" start="2020-01-01" duration="7" complete="0" thirdDate="2020-05-11" thirdDate-constraint="0" expand="true"/>
             <task id="69" name="Pianificazione attività" color="#8cb6ce" meeting="false" start="2020-01-03" duration="4" complete="0" thirdDate="2020-05-11" thirdDate-constraint="0" expand="true"/>
             <task id="67" name="Verifica" color="#8cb6ce" meeting="false" start="2020-01-06" duration="7" complete="0" thirdDate="2020-05-11" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="79" name="Periodo 4" meeting="false" start="2020-01-15" duration="4" complete="0" expand="true">
+        <task id="79" name="Periodo 4" color="#000000" meeting="false" start="2020-01-15" duration="4" complete="0" thirdDate="2020-01-15" thirdDate-constraint="0" expand="true">
             <task id="80" name="Consolidamento" meeting="false" start="2020-01-15" duration="3" complete="0" expand="true"/>
             <task id="81" name="Preparazione per la Revisione dei Requisiti" meeting="false" start="2020-01-15" duration="4" complete="0" expand="true"/>
         </task>
-        <task id="41" name="Discussione RA" color="#8cb6ce" meeting="false" start="2020-01-21" duration="1" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
