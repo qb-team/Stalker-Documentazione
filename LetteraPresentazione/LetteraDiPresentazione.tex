@@ -3,6 +3,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{longtable}
+\usepackage{../Utilita/Stiletemplate}
 \usepackage[italian]{babel}
 \input{../Utilita/Comandi.tex}
 
@@ -14,14 +16,14 @@
 \begin{document}
     \begin{letter}
         { Egregio \VT{},\\Egregio \CR{},}
-        \begin{minipage}{.5\textwidth}
+        \begin{minipage}{.4\textwidth}
             \begin{flushleft}
-                \includegraphics[width=.4\linewidth, height=80px]{../Utilita/Immagini/qbteam.png}
+                \includegraphics[width=.4\linewidth]{../Utilita/Immagini/qbteam.png}
             \end{flushleft}
         \end{minipage}
         \begin{minipage}{.5\textwidth}
             \begin{flushright}
-                \includegraphics[width=.4\linewidth, height=80px]{../Utilita/Immagini/LogoUniPD.png}
+                \includegraphics[width=.4\linewidth]{../Utilita/Immagini/LogoUniPD.png}
             \end{flushright}
         \end{minipage}
         {    
@@ -34,21 +36,21 @@
            \textbf{\NomeProgetto{}} 
         \end{center}
         proposto dall'azienda \textbf{\Proponente{}}.\\
-        Tutti i dettagli relativi alla nostra proposta sono contenuti nei documenti allegati distinti in: \\
+        Tutti i dettagli relativi alla nostra proposta sono contenuti nei documenti allegati distinti in:
         \begin{itemize}
-        \item Esterni:
-        \begin{itemize}
-            \item \AdR{};
-            \item \Glossario{};
-            \item \PdP{};
-            \item \PdQ{}.
+            \item Esterni:
+            \begin{itemize}
+                \item \AdRv{1.0.0};
+                \item \Glossariov{1.0.0};
+                \item \PdPv{1.1.0};
+                \item \PdQv{1.0.0}.
+            \end{itemize}
+            \item Interni:
+            \begin{itemize}
+                \item \NdPv{1.0.0};
+                \item \SdFv{1.0.0}.
+            \end{itemize}
         \end{itemize}
-        \item Interni:
-        \begin{itemize}
-            \item \NdP{};
-            \item \SdF{}.
-        \end{itemize}
-    \end{itemize}
         Inoltre sono presenti i verbali esterni ed interni:
         \begin{itemize}
             \item VE\_2019\_12\_16;
@@ -61,6 +63,24 @@
             \item VI\_2019\_12\_18.
         \end{itemize}
         Il gruppo stima di consegnare il prodotto entro il 2020-05-10 con un preventivo di \euro{} 15.072,00, come specificato nel documento \PdP{}.\\
+        Per completezza, inseriamo di seguito la lista dei membri del gruppo, con nome, cognome, matricola e ruolo principale fino a questo momento.
+        {
+            \rowcolors{2}{grigetto}{white}
+            \renewcommand{\arraystretch}{2}
+            \begin{longtable}{ C{4cm} C{3cm} C{6cm} }
+                \rowcolor{darkblue}
+                \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Matricola}} & \textcolor{white}{\textbf{Ruolo di progetto}}\\
+                \endhead 
+                \MC{} & 1121305 & Verificatore \\
+                \LD{} & 1162190 & Analista \\
+                \CE{} & 1161514 & Analista \\
+                \SE{} & 1166175 & Responsabile \\
+                \PF{} & 1170747 & Analista \\
+                \DF{} & 1146928 & Verificatore \\
+                \BR{} & 1148142 & Analista \\
+                \AT{} & 1169740 & Amministratore \\  
+            \end{longtable}
+        }
         Cordiali saluti,
         \closing{\SE{}, \\ \textit{\Responsabile{}}\\ \includegraphics[width=.6\linewidth]{../DocumentazioneEsterna/PianoDiProgetto/sezioni/Firme/Enrico.png}}
         \vspace{10mm}
