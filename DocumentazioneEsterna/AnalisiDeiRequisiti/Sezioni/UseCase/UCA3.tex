@@ -63,6 +63,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato sceglie di eseguire la funzionalità di inserimento di un'\glo{organizzazione} nella lista delle \glo{organizzazioni preferite} (solo se ha scaricato precedentemente la lista delle \glo{organizzazioni}).
 	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione}, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
+	\item \textbf{Scenario principale:} Inserimento di una organizzazione nella lista delle organizzazioni preferite dell'utente.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente seleziona dalla lista delle \glo{organizzazioni} l'\glo{organizzazione} da inserire nella lista delle \glo{organizzazioni preferite};
@@ -75,6 +76,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato e sceglie di eseguire la funzionalità di inserimento nella lista delle \glo{organizzazioni preferite} solo se ha scaricato precedentemente la lista delle \glo{organizzazioni}.
 	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione}, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
+	\item \textbf{Scenario principale:} Inserimento di una organizzazione che richiede credenziali LDAP nella lista delle organizzazioni preferite dell'utente.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente seleziona dalla lista delle \glo{organizzazioni} l'\glo{organizzazione} da inserire nella lista delle \glo{organizzazioni preferite};
@@ -92,6 +94,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:}  L'utente è autenticato sceglie di eseguire la funzionalità di rimozione nella lista delle \glo{organizzazioni preferite} solo se c'è almeno una \glo{organizzazione} inserita nella lista delle \glo{organizzazioni preferite}.
 	\item \textbf{Postcondizione:} È stata rimossa l'\glo{organizzazione}, scelta dall'utente, dalla lista delle \glo{organizzazioni preferite}.
+	\item \textbf{Scenario principale:} Rimozione di una organizzazione dalla lista delle organizzazioni preferite dell'utente.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente seleziona nella lista delle \glo{organizzazioni preferite} l'\glo{organizzazione} da rimuovere dalla lista delle \glo{organizzazioni preferite};
@@ -132,6 +135,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente anonimo sceglie di eseguire la funzionalità aggiornamento della lista dell'\glo{organizzazione} attraverso la modalità di \glo{refresh manuale}.
 	\item \textbf{Postcondizione:} La lista delle \glo{organizzazioni} è aggiornata.	
+	\item \textbf{Scenario principale:} Aggiornamento della lista delle organizzazione con il refresh manuale.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente esegue l'aggiornamento della lista delle \glo{organizzazioni} attraverso un \glo{refresh manuale}.
@@ -144,6 +148,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente anonimo sceglie di eseguire la funzionalità aggiornamento della lista dell'\glo{organizzazione} attraverso la modalità \glo{temporizzazione}.
 	\item \textbf{Postcondizione:} La lista delle \glo{organizzazioni} è aggiornata.
+	\item \textbf{Scenario principale:} Aggiornamento della lista delle organizzazione con temporizzazione.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente esegue l'aggiornamento della lista dell'\glo{organizzazione} attraverso la modalità \glo{temporizzazione}.
@@ -183,6 +188,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista secondo un ordinamento alfabetico (dalla a alla z) per il nome dell'\glo{organizzazione}.
 	\item \textbf{Postcondizione:} Viene visualizzata la lista delle \glo{organizzazioni} in ordine alfabetico per il nome dell'\glo{organizzazione}.
+	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con ordinamento alfabetico.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle \glo{organizzazioni} presenti in ordine alfabetico.
@@ -194,6 +200,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista secondo un ordinamento \glo{FIFO}.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} secondo un ordinamento \glo{FIFO}.
+	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con ordinamento \glo{FIFO}.
 	\item \textbf{Flusso di eventi:}
 		\begin{enumerate}
 		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle \glo{organizzazioni} presenti secondo un ordinamento \glo{FIFO}.
@@ -205,6 +212,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista che permettono un \glo{tracciamento anonimo}.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che richiedono il \glo{tracciamento anonimo}.
+	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con filtro per tracciamento anonimo.
 	\item \textbf{Flusso di eventi:}
 		\begin{enumerate}
 		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle \glo{organizzazioni} che permettono il \glo{tracciamento anonimo}.
@@ -216,6 +224,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista che permette un \glo{tracciamento autenticato}.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che permettono il \glo{tracciamento autenticato}.
+	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con filtro per \glo{tracciamento autenticato}.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle \glo{organizzazioni} che permettono il \glo{tracciamento autenticato}.
@@ -253,6 +262,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di ricerca della lista per cercare le \glo{organizzazioni} di una certa nazione d'interesse.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che sono nella nazione scelta dall'utente.
+	\item \textbf{Scenario principale:} Le ricerche vengono effettuate tramite un filtro per nazione.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente esegue la funzione di ricerca personalizzata della lista delle \glo{organizzazioni} per ricercare le \glo{organizzazioni} desiderate, filtrando per la nazione scelta.
@@ -264,6 +274,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di ricerca della lista per cercare le \glo{organizzazioni} che hanno nel nome una sottostringa specificata dall'utente.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che hanno nel nome una sottostringa scelta dall'utente.
+	\item \textbf{Scenario principale:} Le ricerche vengono effettuate tramite un filtro per nome.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente esegue la funzione di ricerca personalizzata della lista delle \glo{organizzazioni} per ricercare le \glo{organizzazioni} desiderate, filtrando per il nome della \glo{organizzazione} scelta.
@@ -275,6 +286,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di ricerca della lista per cercare le \glo{organizzazioni} di una certa città d'interesse.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che sono nella città scelta dall'utente.
+	\item \textbf{Scenario principale:} Le ricerche vengono effettuate tramite un filtro per città.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente esegue la funzione di ricerca personalizzata della lista delle \glo{organizzazioni} per ricercare le \glo{organizzazioni} desiderate, filtrando per la città scelta.
