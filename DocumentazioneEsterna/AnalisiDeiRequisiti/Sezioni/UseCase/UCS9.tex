@@ -17,6 +17,7 @@
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema.
 \item \textbf{Postcondizione:} L'amministratore ha eseguito l'azione desiderata tra: nomina di un amministratore [UCS 9.1], eliminazione di un amministratore [UCS 9.2] e modifica dei privilegi di un amministratore [UCS 9.3].
+\item \textbf{Scenario principale:} L'amministratore ha la possibilità di gestire i propri amministratori.
 \item \textbf{Scenario alternativo:} L'amministratore seleziona la funzionalità per annullare le modifiche agli amministratori [UCS 9.4].
 \item \textbf{Flusso di eventi:} %elenco puntato
   \begin{enumerate}
@@ -72,6 +73,7 @@
 \item \textbf{Attori primari:} Amministratore proprietario
 \item \textbf{Precondizione:} L'amministratore si trova nella funzionalità per la nomina di un nuovo amministratore.
 \item \textbf{Postcondizione:} L'utente ha inserito l'e-mail per l'account del nuovo amministratore.
+\item \textbf{Scenario principale:} Inserimento dell'email per il nuovo amministratore.
 \end{itemize}
 
 \subsubsection{UCS 9.1.2 - Nuova password}
@@ -79,6 +81,7 @@
 \item \textbf{Attori primari:} Amministratore proprietario
 \item \textbf{Precondizione:}  L'amministratore si trova nella funzionalità per la nomina di un nuovo amministratore.
 \item \textbf{Postcondizione:} L'amministratore ha inserito la nuova password per il nuovo amministratore.
+\item \textbf{Scenario principale:} Inserimento della password per il nuovo amministratore.
 \end{itemize}
 
 \subsubsection{UCS 9.1.3 - Conferma nuova password}
@@ -86,6 +89,7 @@
 \item \textbf{Attori primari:} Amministratore proprietario
 \item \textbf{Precondizione:} L'amministratore si trova nella funzionalità per la nomina di un nuovo amministratore.
 \item \textbf{Postcondizione:} L'amministratore ha reinserito la nuova password nel campo di conferma password.
+\item \textbf{Scenario principale:} Inserimento della conferma della password per il nuovo amministratore.
 \end{itemize}
 
 \subsubsection{UCS 9.1.4 - Selezione dei privilegi del nuovo amministratore}
@@ -93,6 +97,7 @@
 \item \textbf{Attori primari:} Amministratore proprietario
 \item \textbf{Precondizione:} L'amministratore si trova nella funzionalità per la nomina di un nuovo amministratore.
 \item \textbf{Postcondizione:} L'amministratore ha selezionato tra "Visualizzatore" e "Gestore" come privilegi garantiti al nuovo amministratore da nominare.
+\item \textbf{Scenario principale:} Selezione dei privilegi per il nuovo amministratore.
 \end{itemize}
 
 \subsubsection{UCS 9.2 - Eliminazione di un amministratore}%sea level
@@ -126,6 +131,7 @@
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è nella funzionalità "Eliminazione di un amministratore".
 \item \textbf{Postcondizione:} L'amministratore ha inserito una l'e-mail dell'amministratore da eliminare.
+\item \textbf{Scenario principale:} Inserimento e-mail dell'amministratore da eliminare.
 \end{itemize}
 
 \subsubsection{UCS 9.3 - Modifica dei privilegi di un amministratore}%sea level
@@ -156,6 +162,7 @@
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è nella funzionalità "Modifica dei privilegi di un amministratore".
 \item \textbf{Postcondizione:} L'amministratore ha inserito una l'e-mail dell'amministratore a cui vuole modificare i privilegi.
+\item \textbf{Scenario principale:} Inserimento e-mail dell'amministratore a cui si vuole modificare i privilegi.
 \end{itemize}
 
 \subsubsection{UCS 9.4 - Annullamento modifiche agli amministratori}%sea level
