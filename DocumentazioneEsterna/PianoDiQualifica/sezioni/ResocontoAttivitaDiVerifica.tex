@@ -19,35 +19,49 @@ Non vengono contati per l'indice di Gulpease il testo presente nelle seguenti pa
     \item Registro delle modifiche;
     \item Riferimenti.
 \end{itemize}
-Nella seguente tabella sono riportati i risultati degli indici di Gulpease ottenuti dai documenti.
+Nella seguente tabella sono riportati i risultati degli indici di Gulpease ottenuti dai documenti per ogni periodo, successivamente ci sarà un grafico che riporterà l'andamento degli indici di Gulpease per ogni documento a seconda del periodo.
+
+\paragraph{Legenda}
+\begin{itemize}
+	\item \textbf{Documento}: Nome del documento;
+	\item \textbf{RR}: Periodo di revisione dei requisiti;
+	\item \textbf{RP}: Periodo di revisione di progettazione;
+	\item \textbf{RQ}: Periodo di revisione di qualifica;
+	\item \textbf{RA}: Periodo di revisione di accettazione;
+	\item \textbf{-}: Valore inesistente;
+	\item  \textbf{Colore giallo}: Indica che il valore ottenuto è accettabile;
+	\item  \textbf{Colore verde}: Indica che il valore ottenuto è ottimo. 
+\end{itemize}
 
 {
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}
 \centering
-\begin{longtable}{ C{4cm} C{4cm} C{4cm} }
-\caption{Elenco dei test di sistema}\\
+\begin{longtable}{C{4cm} C{1cm} C{1cm} C{1cm} C{1cm}}
+\caption{Elenco dei indici di Gulpease }\\
 \rowcolor{darkblue}
-\textcolor{white}{\textbf{Documento}} & \textcolor{white}{\textbf{Indici di Gulpease}} & \textcolor{white}{\textbf{Esito}} \\
+\textcolor{white}{\textbf{Documento}} & \textcolor{white}{\textbf{RR}} &
+\textcolor{white}{\textbf{RP}} & \textcolor{white}{\textbf{RQ}} & 
+\textcolor{white}{\textbf{RA}} \\
 \hline
 \endhead
-\AdRv{1.0.0} & \textcolor{verde}{\textbf{95}} & Ottimale \\
-\PdPv{1.0.0} & \textcolor{verde}{\textbf{100}} & Ottimale \\
-\PdQv{1.0.0} & \textcolor{verde}{\textbf{100}} & Ottimale \\
+\AdRv{1.0.0} & \textcolor{verde}{\textbf{95}} & - & - & -\\
+\PdPv{1.0.0} & \textcolor{verde}{\textbf{100}} & - & - & -\\
+\PdQv{1.0.0} & \textcolor{verde}{\textbf{100}} & - & - & - \\
 
-\NdPv{1.0.0} & \textcolor{giallo}{\textbf{75}} & Accettabile \\
-\SdFv{1.0.0} & \textcolor{verde}{\textbf{94}} & Ottimale \\
+\NdPv{1.0.0} & \textcolor{giallo}{\textbf{75}} & - & - & -\\
+\SdFv{1.0.0} & \textcolor{verde}{\textbf{94}} & - & - & -\\
 
-\Glossariov{1.0.0} & \textcolor{giallo}{\textbf{67}} & Accettabile \\
+\Glossariov{1.0.0} & \textcolor{giallo}{\textbf{67}} & - & - & -\\
 
-VI\_2019\_12\_18 & \textcolor{verde}{\textbf{100}} & Ottimale \\
-VE\_2019\_12\_16 & \textcolor{giallo}{\textbf{65}} & Accettabile \\
-VI\_2019\_12\_13 & \textcolor{verde}{\textbf{92}} & Ottimale \\
-VI\_2019\_12\_10 & \textcolor{verde}{\textbf{100}} & Ottimale \\
-VI\_2019\_12\_06 & \textcolor{verde}{\textbf{83}} & Ottimale \\
-VI\_2019\_12\_03 & \textcolor{verde}{\textbf{83}} & Ottimale \\
-VI\_2019\_11\_27 & \textcolor{verde}{\textbf{100}} & Ottimale \\
-VI\_2019\_11\_20 & \textcolor{verde}{\textbf{87}} & Ottimale \\
+VI\_2019\_12\_18 & \textcolor{verde}{\textbf{100}} & - & - & -\\
+VE\_2019\_12\_16 & \textcolor{giallo}{\textbf{65}} & - & - & -\\
+VI\_2019\_12\_13 & \textcolor{verde}{\textbf{92}} & - & - & -\\
+VI\_2019\_12\_10 & \textcolor{verde}{\textbf{100}} & - & - & -\\
+VI\_2019\_12\_06 & \textcolor{verde}{\textbf{83}} & - & - & -\\
+VI\_2019\_12\_03 & \textcolor{verde}{\textbf{83}} & - & - & -\\
+VI\_2019\_11\_27 & \textcolor{verde}{\textbf{100}} & - & - & -\\
+VI\_2019\_11\_20 & \textcolor{verde}{\textbf{87}} & - & - & -\\
 
 \end{longtable}
 }
