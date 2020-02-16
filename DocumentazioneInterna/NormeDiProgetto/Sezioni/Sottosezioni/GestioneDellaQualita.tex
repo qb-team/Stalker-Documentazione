@@ -89,9 +89,6 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
         \item \textbf{Formula:} $$PRS = {|requisiti \; soddisfatti| \over |requisiti \; totali|}\; \cdot \; 100$$
         \item \textbf{Strumenti utilizzati:}
     \end{itemize}
-\begin{itemize}
-    \item 
-\end{itemize}
 \subparagraph{Progettazione di dettaglio}\mbox{}\\
     \subsubparagraph{Metrica - Incapsulamento CBO}\mbox{}\\
     \begin{itemize}
@@ -143,7 +140,28 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
         \item \textbf{Formula:}$$LCLC = {|linee \; di \; commento| \over |linee \; di \; codice|}$$
         \item \textbf{Strumenti utilizzati:}
     \end{itemize}
+\paragraph{Processi supporto}
+\subparagraph{Implementazione}
+\subsubparagraph{Metrica - Indice di Gulpease}
+\begin{itemize}
+	\item \textbf{Codice:} MPC6
+	\item \textbf{Descrizione:} È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Il valore è un intero da 0 a 100; se esso è inferiore a 80 sarà difficile da leggere per chi ha la licenza elementare, mentre se è inferiore a 40 sarà difficili da leggere per chi ha un diploma superiore;
+	\item \textbf{Processo di riferimento:} Documentazione;
+	\item \textbf{Sigla:} $IG$
+	\item \textbf{Formula:} $$IG = 89 + {{300 \; \cdot \; |frasi| \; - \; 10 \; \cdot \; |lettere|}\over |parole|}$$
+	\item \textbf{Strumenti utilizzati:}
+\end{itemize}
 
+\subparagraph{Verifica}
+\subsubparagraph{Metrica - Code coverage}
+\begin{itemize}
+	\item \textbf{Codice:} MPC7
+	\item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento;
+	\item \textbf{Processo di riferimento:} \glo{Processi} di verifica;
+	\item \textbf{Sigla:} $CC$
+	\item \textbf{Formula:} $$CC = {|linee \; di \; codice \; percorse \; dai  \; test| \over |linee \; di \; codice \; totali|} \; \cdot \; 100$$
+	\item \textbf{Strumenti utilizzati:}
+\end{itemize}
     \paragraph{Processi organizzativi}\mbox{}\\ \\
 
 \subparagraph{Pianificazione}\mbox{}\\ \\
