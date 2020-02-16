@@ -7,6 +7,18 @@
 \setcounter{tocdepth}{5}
 \setcounter{secnumdepth}{5}
 
+\makeatletter
+\newcounter{subsubparagraph}[subparagraph]
+\newcommand\subsubparagraph{%
+  \@startsection{subsubparagraph}    % counter
+    {6}                              % level
+    {\parindent}                     % indent
+    {3.25ex \@plus 1ex \@minus .2ex} % beforeskip
+    {-1em}                           % afterskip
+    {\normalfont\normalsize\bfseries}}
+\newcommand{\subsubparagraphmark}[1]{}
+\makeatother
+
 \input{Sezioni/Comandi.tex}
 \input{../../Utilita/Comandi.tex}
 
