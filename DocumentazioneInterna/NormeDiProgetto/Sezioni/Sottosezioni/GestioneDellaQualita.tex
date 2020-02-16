@@ -140,8 +140,8 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
         \item \textbf{Formula:}$$LCLC = {|linee \; di \; commento| \over |linee \; di \; codice|}$$
         \item \textbf{Strumenti utilizzati:}
     \end{itemize}
-\paragraph{Processi di supporto}
-\subparagraph{Implementazione}
+\paragraph{Processi di supporto}\mbox{}\\ \\
+\subparagraph{Implementazione}\mbox{}\\ \\
 \subsubparagraph{Metrica - Indice di Gulpease}
 \begin{itemize}
 	\item \textbf{Codice:} MPC6
@@ -152,8 +152,8 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 	\item \textbf{Strumenti utilizzati:}
 \end{itemize}
 
-\subparagraph{Verifica}
-\subsubparagraph{Metrica - Code coverage}
+\subparagraph{Verifica}\mbox{}\\ \\
+\subsubparagraph{Metrica - Code coverage}\mbox{}\\ \\
 \begin{itemize}
 	\item \textbf{Codice:} MPC7
 	\item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento;
@@ -217,6 +217,108 @@ Capacità del prodotto software di soddisfare i requisiti funzionali e le necess
     \item \textbf{Attributo di riferimento:} Aderenza alle funzionalità;
     \item \textbf{Sigla:} $ASFI$ 
     \item \textbf{Formula:} $$ASFI = {|funzioni \; o \; interfacce \; aderenti \; a \; standard| \over |funzioni \; o \; interfacce \; che \; devono \; aderire \; a \; standard|} \cdot 100 $$ 
+    \item \textbf{Strumenti utilizzati:}
+\end{itemize}
+              
+\subparagraph{Affidabilità} \mbox{}\\ \\
+Capacità di predire se il prodotto software in questione potrà soddisfare i requisiti prescritti per l'affidabilità dal punto di vista degli sviluppatori.
+
+\subsubparagraph{Metrica - Rilevamento dei Difetti} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD2
+    \item \textbf{Descrizione:} Misurare in percentuale l'efficacia nel rilevare i difetti presenti nel software durante lo sviluppo del prodotto;
+    \item \textbf{Attributo di riferimento:} \glo{Maturità}
+    \item \textbf{Sigla:} $RD$
+    \item \textbf{Formula:} $$RD = {|difetti \; rilevati \; nei \; test \; del \; prodotto| \over |difetti \; previsti \; durante \; lo \; sviluppo|} \cdot 100 $$
+    \item \textbf{Strumenti utilizzati:}
+\end{itemize}
+
+\subparagraph{Usabilità} \mbox{}\\ \\
+Capacità del prodotto software di essere comprensibile, di poter essere usato e compreso facilmente, in ogni sua parte, da qualsiasi utente che lo voglia usare.\\
+\subsubparagraph{Metrica - Validità dei Dati d'Input} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD3
+    \item \textbf{Descrizione:} Misurare in percentuale la correttezza dei dati forniti in input all'applicazione;
+    \item \textbf{Attributo di riferimento:} \glo{Operabilità};
+    \item \textbf{Sigla:} $VDI$
+    \item \textbf{Formula:} $$VDI = {|dati \; di \; input \; controllati \; e \; validitati| \over |dati \; di \; input \; previsti|} \cdot 100$$  
+    \item \textbf{Strumenti utilizzati:}
+\end{itemize}
+
+\subsubparagraph{Metrica - Attrattività della User Interface (UI)} 
+\begin{itemize}
+    \item \textbf{Codice: } MPD4
+    \item \textbf{Descrizione:} Misurare quanto attrattive risultino le interfacce agli utenti dal punto di vista grafico.
+    Gli utenti dovranno poi compilare un questionario in base all'esperienza che hanno fatto;
+    Il valore medio di tale valutazione è ritenuto valido se almeno tre utenti hanno compilato il questionario. 
+    Viene utilizzata una scala a quattro valori: Molto attrattivo, Attrattivo, Poco attrattivo, Non Attrattivo;
+    \item \textbf{Attributo di riferimento:} \glo{Attrattività};
+    \item \textbf{Sigla:} $AUI$
+    \item \textbf{Formula:}$$AUI = V(q) $$
+    con:
+        \begin{itemize}
+        \item $V$ = Valore medio dei risultati;
+        \item $q$ = Questionario compilato;
+        \end{itemize}
+    \item \textbf{Strumenti utilizzati:}
+\end{itemize}
+
+\subparagraph{Manutenibilità} \mbox{}\\ \\
+Capacità di predire il livello di impegno richiesto per modificare il prodotto software dal punto di vista degli sviluppatori.           
+\subsubparagraph{Metrica - Complessità Ciclomatica del Software} 
+    \begin{itemize}
+    \item \textbf{Codice:} MPD5
+    \item \textbf{Descrizione:} Misurare la complessità ciclomatica dei singoli moduli sviluppati;
+    \item \textbf{Attributo di riferimento:} \glo{Modificabilità};
+    \item \textbf{Sigla:} $CCS$
+    \item \textbf{Formula:} $$CCS = e - n + p$$
+    con:
+    \begin{itemize}
+        \item $G$ = grafo del modulo;
+        \item $e$ = numero di congiunzioni tra statement (corrispondenti agli archi di un grafo);
+        \item $n$ = numero di statement (nodi presenti nel grafo);
+        \item $p$ = numero delle componenti connesse da ogni nodo (per esecuzione sequenziale: p=2, essendovi un predecessore e un successore);
+    \end{itemize}
+
+    \item \textbf{Strumenti utilizzati:}
+\end{itemize}
+
+\subsubparagraph{Metrica - Unità Documentate} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD6
+    \item \textbf{Descrizione:} Misurare in percentuale il numero di unità di codice con documentazione tecnica;
+    \item \textbf{Attributo di riferimento:} \glo{Modificabilità};
+    \item \textbf{Sigla:} $UD$
+    \item \textbf{Formula:} $$UD = {|unit\grave{a} \; di \; codice \; con \; documentazione \; tecnica| \over |unit\grave{a} \; di \; codice|} \cdot 100$$
+    \item \textbf{Strumenti utilizzati:}
+\end{itemize}
+              
+       
+\paragraph{Metriche esterne}\mbox{}\\ \\
+Le metriche relative alla qualità "esterna" indirizzano le caratteristiche esteriori del software, cioè quelle rilevabili direttamente dagli utenti e dagli operatori.
+
+\subparagraph{Affidabilità}\mbox{}\\ \\
+Capacità del prodotto software di dimostrare un adeguato livello di affidabilità quando opererà nel sistema in cui è previsto debba operare.
+    
+\subsubparagraph{Metrica - Maturità dei Test} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD7
+    \item \textbf{Descrizione:} Misurare la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire piena copertura dei requisiti sia funzionali che qualitativi(usabilità, affidabilità, efficienza);
+    \item \textbf{Attributo di riferimento:} \glo{Maturità};
+    \item \textbf{Sigla:} $MT$
+    \item \textbf{Formula:} $$MT = {|casi \; di \; test \; eseguiti \; con \; successo| \over |casi \; di \; test \; previsti|} \cdot 100$$
+    \item \textbf{Strumenti utilizzati:}
+\end{itemize}
+       
+\subparagraph{Usabilità}\mbox{}\\ \\
+Capacità del prodotto software di essere facilmente comprensibile, apprendibile ed operabile per ogni utente intenzionato a usarlo.
+
+\subsubparagraph{Metrica - Profondità Strutturale dell'Interfaccia}
+\begin{itemize}
+    \item \textbf{Codice:} MPD8
+    \item \textbf{Descrizione:} È sconsigliato per le interfacce utente l'utilizzo di una struttura troppo profonda per questioni di usabilità. L'utente non deve fare troppi passaggi per raggiungere la funzionalità desiderata;
+    \item \textbf{Attributo di riferimento:} \glo{Operabilità};
+    \item \textbf{Sigla:} $PSI$
     \item \textbf{Strumenti utilizzati:}
 \end{itemize}
 % <commento ai commenti> gli strumenti per il controllo di qualità verranno integrati nelle metriche nell'apposito campo
