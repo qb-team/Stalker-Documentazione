@@ -33,11 +33,36 @@ La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni compo
 }
 
 La suddivisione delle ore svolte da ciascun componente del gruppo per ogni ruolo viene rappresentata nel seguente istogramma:
-\begin{figure}[h!]
-	\centering
-	\includegraphics{Sezioni/Istogrammi/IstogrammaProgettArchitetturale.png}
-	\caption{Disposizione ore per ruolo di ciascun componente della fase di Progettazione Architetturale}
-\end{figure}
+\begin{center}
+	\pgfplotsset{width=17cm, height=8.5cm}
+	\begin{tikzpicture}
+		\begin{axis}[
+			ybar stacked,
+			bar width=20pt,
+			legend style={
+				at={(0.5,-0.15)},
+				anchor=north,
+				legend columns=-1
+			},
+			symbolic x coords={Christian, Davide, Emanuele, Enrico, Federico, Francesco, Riccardo, Tommaso},
+			xtick=data
+		]
+			\legend{Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}
+			% Responsabile
+			\addplot coordinates {\ColonnaIstogramma{5}{8}{0}{0}{0}{0}{6}{0}};
+			% Amministratore
+			\addplot coordinates {\ColonnaIstogramma{0}{0}{8}{10}{6}{0}{0}{0}};
+			% Analista
+			\addplot coordinates {\ColonnaIstogramma{0}{0}{0}{6}{0}{13}{0}{8}};
+			% Progettista
+			\addplot coordinates {\ColonnaIstogramma{14}{18}{10}{10}{5}{5}{0}{7}};
+			% Programmatore
+			\addplot coordinates {\ColonnaIstogramma{10}{0}{5}{0}{7}{7}{17}{0}};
+			% Verificatore
+			\addplot coordinates {\ColonnaIstogramma{4}{7}{6}{6}{13}{6}{8}{16}};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
 
 \clearpage
 
@@ -67,8 +92,15 @@ Verificatore    &  66 &  990 \\
 }
 
 La quantità di ore totali per ciascun ruolo viene rappresentata nel seguente areogramma:
-\begin{figure}[h!]
-	\centering
-	\includegraphics{Sezioni/Aerogrammi/AerogrammaProgettArchitetturale.png}
-	\caption{Suddivisione ore per ruolo della fase di Progettazione Architetturale}
-\end{figure}
+\begin{center}
+	\begin{tikzpicture}
+		\pie[rotate = 180] {
+			8/Responsabile,
+			10/Amministratore,
+			11/Analista,
+			27/Progettista,
+			18/Programmatore,
+			26/Verificatore
+		}
+	\end{tikzpicture}
+\end{center}

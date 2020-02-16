@@ -33,12 +33,36 @@ La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni compo
 }
 
 La suddivisione di quante ore, ciascun componente del gruppo, ha svolto per ogni ruolo viene rappresentata nel seguente istogramma:
-\begin{figure}[h!]
-\centering
-\includegraphics{Sezioni/Istogrammi/IstogrammaDiDettaglio.png}
-\caption{Disposizione ore per ruolo di ciascun componente della fase di Progettazione di Dettaglio e Codifica}
-\end{figure}
-
+\begin{center}
+	\pgfplotsset{width=17cm, height=8.5cm}
+	\begin{tikzpicture}
+		\begin{axis}[
+			ybar stacked,
+			bar width=20pt,
+			legend style={
+				at={(0.5,-0.15)},
+				anchor=north,
+				legend columns=-1
+			},
+			symbolic x coords={Christian, Davide, Emanuele, Enrico, Federico, Francesco, Riccardo, Tommaso},
+			xtick=data
+		]
+			\legend{Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}
+			% Responsabile
+			\addplot coordinates {\ColonnaIstogramma{0}{6}{0}{0}{0}{10}{0}{10}};
+			% Amministratore
+			\addplot coordinates {\ColonnaIstogramma{10}{0}{5}{4}{8}{0}{3}{0}};
+			% Analista
+			\addplot coordinates {\ColonnaIstogramma{0}{0}{0}{0}{0}{0}{0}{0}};
+			% Progettista
+			\addplot coordinates {\ColonnaIstogramma{13}{11}{14}{12}{9}{8}{13}{11}};
+			% Programmatore
+			\addplot coordinates {\ColonnaIstogramma{16}{16}{17}{19}{20}{18}{20}{18}};
+			% Verificatore
+			\addplot coordinates {\ColonnaIstogramma{11}{17}{14}{15}{13}{14}{14}{11}};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
 \clearpage
 
 \subsubsection{Costo risultante}
@@ -67,8 +91,14 @@ Verificatore    & 109 & 1635 \\
 }
 
 La quantità di ore totali per ciascun ruolo viene rappresentata nel seguente areogramma:
-\begin{figure}[h!]
-	\centering	
-	\includegraphics{Sezioni/Aerogrammi/AerogrammaDiDettaglio.png}
-	\caption{Suddivisione ore per ruolo della fase di Progettazione di Dettaglio e Codifica}
-\end{figure}
+\begin{center}
+	\begin{tikzpicture}
+		\pie[rotate = 180] {
+			6/Responsabile,
+			8/Amministratore,
+			23/Progettista,
+			36/Programmatore,
+			27/Verificatore
+		}
+	\end{tikzpicture}
+\end{center}

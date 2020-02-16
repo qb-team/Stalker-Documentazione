@@ -34,11 +34,37 @@ La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni compo
 
 
 La suddivisione delle ore svolte da ciascun componente del gruppo per ogni ruolo viene rappresentata nel seguente istogramma:
-\begin{figure}[h!]
-	\centering
-	\includegraphics{Sezioni/Istogrammi/IstogrammaValidazione.png}
-	\caption{Disposizione ore per ruolo di ciascun componente della fase di Validazione e Collaudo}
-\end{figure}
+\begin{center}
+	\pgfplotsset{width=17cm, height=8.5cm}
+	\begin{tikzpicture}
+		\begin{axis}[
+			ybar stacked,
+			bar width=20pt,
+			legend style={
+				at={(0.5,-0.15)},
+				anchor=north,
+				legend columns=-1
+			},
+			symbolic x coords={Christian, Davide, Emanuele, Enrico, Federico, Francesco, Riccardo, Tommaso},
+			xtick=data
+		]
+			\legend{Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}
+			% Responsabile
+			\addplot coordinates {\ColonnaIstogramma{0}{0}{5}{0}{6}{0}{0}{0}};
+			% Amministratore
+			\addplot coordinates {\ColonnaIstogramma{0}{4}{0}{0}{0}{6}{5}{0}};
+			% Analista
+			\addplot coordinates {\ColonnaIstogramma{7}{0}{0}{0}{0}{0}{0}{4}};
+			% Progettista
+			\addplot coordinates {\ColonnaIstogramma{0}{5}{0}{6}{0}{0}{0}{10}};
+			% Programmatore
+			\addplot coordinates {\ColonnaIstogramma{4}{0}{6}{5}{7}{9}{6}{0}};
+			% Verificatore
+			\addplot coordinates {\ColonnaIstogramma{8}{10}{12}{9}{8}{6}{10}{7}};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+\clearpage
 
 \clearpage
 
@@ -68,8 +94,15 @@ Verificatore    &  70 & 1050 \\
 }
 
 La quantità di ore totali per ciascun ruolo viene rappresentata nel seguente areogramma:
-\begin{figure}[h!]
-	\centering
-	\includegraphics{Sezioni/Aerogrammi/AerogrammaValidazione.png}
-	\caption{Suddivisione ore per ruolo della fase di Validazione e Collaudo}
-\end{figure}
+\begin{center}
+	\begin{tikzpicture}
+		\pie[rotate = 180] {
+			7/Responsabile,
+			9/Amministratore,
+			7/Analista,
+			13/Progettista,
+			22/Programmatore,
+			42/Verificatore
+		}
+	\end{tikzpicture}
+\end{center}

@@ -33,12 +33,36 @@ La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni compo
 }
 
 La suddivisione delle ore svolte da ciascun componente del gruppo per ogni ruolo viene rappresentata nel seguente istogramma:
-\begin{figure}[h!]
-	\centering	
-	\includegraphics{Sezioni/Istogrammi/IstogrammaAnalisi.png}
-	\caption{Disposizione ore per ruolo di ciascun componente della fase di Analisi}
-\end{figure}
-
+\begin{center}
+	\pgfplotsset{width=17cm, height=8.5cm}
+	\begin{tikzpicture}
+		\begin{axis}[
+			ybar stacked,
+			bar width=20pt,
+			legend style={
+				at={(0.5,-0.15)},
+				anchor=north,
+				legend columns=-1
+			},
+			symbolic x coords={Christian, Davide, Emanuele, Enrico, Federico, Francesco, Riccardo, Tommaso},
+			xtick=data
+		]
+			\legend{Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}
+			% Responsabile
+			\addplot coordinates {\ColonnaIstogramma{0}{0}{0}{15}{0}{0}{0}{4}};
+			% Amministratore
+			\addplot coordinates {\ColonnaIstogramma{7}{5}{0}{2}{0}{7}{5}{12}};
+			% Analista
+			\addplot coordinates {\ColonnaIstogramma{12}{16}{21}{8}{21}{16}{11}{9}};
+			% Progettista
+			\addplot coordinates {\ColonnaIstogramma{0}{0}{0}{0}{0}{0}{0}{0}};
+			% Programmatore
+			\addplot coordinates {\ColonnaIstogramma{0}{0}{0}{0}{0}{0}{0}{0}};
+			% Verificatore
+			\addplot coordinates {\ColonnaIstogramma{11}{9}{9}{5}{9}{7}{14}{5}};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
 \clearpage
 
 \subsubsection{Costo risultante}
@@ -67,8 +91,13 @@ Verificatore    &  69 & 1035 \\
 }
 
 La quantità di ore totali per ciascun ruolo viene rappresentata nel seguente areogramma:
-\begin{figure}[h!]
-	\centering	
-	\includegraphics{Sezioni/Aerogrammi/AerogrammaAnalisi.png}
-	\caption{Suddivisione ore per ruolo della fase di Analisi}
-\end{figure}
+\begin{center}
+	\begin{tikzpicture}
+		\pie[rotate = 180] {
+			8/Responsabile,
+			16/Amministratore,
+			47/Analista,
+			29/Verificatore
+		}
+	\end{tikzpicture}
+\end{center}
