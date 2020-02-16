@@ -7,12 +7,9 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
 \subsection{Processi primari}
 
 \subsubsection{Analisi dei requisiti}
-    \paragraph{Metrica - Percentuale requisiti obbligatori soddisfatti}
+    \paragraph{Metrica MPC1 - Percentuale requisiti obbligatori soddisfatti}
     \begin{itemize}
-        \item \textbf{Codice:} MPC1
         \item \textbf{Descrizione:} È la percentuale dei requisiti che devono essere soddisfatti;
-        \item \textbf{Processo di riferimento:} Sviluppo;
-        \item \textbf{Sigla:} $PRS$
         \item \textbf{Formula:} $$PRS = {|requisiti \; soddisfatti| \over |requisiti \; totali|}\; \cdot \; 100$$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
@@ -21,12 +18,9 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
         \end{itemize}
     \end{itemize} 
 \subsubsection{Progettazione di dettaglio}
-    \paragraph{Metrica - Incapsulamento CBO}
+    \paragraph{Metrica MPC2 - Incapsulamento CBO}
     \begin{itemize}
-        \item \textbf{Codice:} MPC2
         \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una in esame al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling della classe in esame e più il sistema è difficile da mantenere;
-        \item \textbf{Processo di riferimento:} Sviluppo;
-        \item \textbf{Sigla:} $CBO$
         \item \textbf{Formula:} $$CBO = {\sum_{i=1}^{N} C_i}$$
         con:
         \begin{itemize}
@@ -47,12 +41,9 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
         \end{itemize}
     \end{itemize}
 
-    \paragraph{Metrica - Livello profondità gerarchia}
+    \paragraph{Metrica MPC3 - Livello profondità gerarchia}
     \begin{itemize}
-        \item \textbf{Codice:} MPC3
         \item \textbf{Descrizione:} È il valore intero che indica la profondità della gerarchia formata tra classi. Se una gerarchia è formata da una classe allora il valore è uguale a 1;
-        \item \textbf{Processo di riferimento:} Sviluppo;
-        \item \textbf{Sigla:} $LPG$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
             \item \textbf{Accettabile:} $1 \leq{} LPG \leq 3$
@@ -61,12 +52,9 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
     \end{itemize}
 
 \subsubsection{Codifica}  
-    \paragraph{Metrica - Numero di parametri per metodo} 
+    \paragraph{Metrica MPC4 - Numero di parametri per metodo} 
     \begin{itemize}
-        \item \textbf{Codice:} MPC4
         \item \textbf{Descrizione:} Un numero elevato di parametri per metodo può indicare il bisogno di ridurre funzionalità associate a tale metodo. Più è grande questo valore e più la possibilità aumenta nel commettere errori progettuali;
-        \item \textbf{Processo di riferimento:} Sviluppo;
-        \item \textbf{Sigla:} $NPM$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
             \item \textbf{Accettabile:} $0 \leq{} NPM \leq 8$
@@ -74,12 +62,9 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
         \end{itemize}
     \end{itemize}
 
-    \paragraph{Metrica - Linee di commento per linee di codice}
+    \paragraph{Metrica MPC5 - Linee di commento per linee di codice}
     \begin{itemize}
-        \item \textbf{Codice:} MPC5
         \item \textbf{Descrizione:} È il rapporto tra linee di commento e linee di codice. Per le linee di codice si intende Logical SLOC il numero di linee di codice effettive che corrispondono al numero di statement;
-        \item \textbf{Processo di riferimento:} Sviluppo;
-        \item \textbf{Sigla:} $LCLC$
         \item \textbf{Formula:}$$LCLC = {|linee \; di \; commento| \over |linee \; di \; codice|}$$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
@@ -91,12 +76,9 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
 \subsection{Processi supporto}
 
 \subsubsection{Implementazione}
-    \paragraph{Metrica - Indice di Gulpease}
+    \paragraph{Metrica MPC6 - Indice di Gulpease}
     \begin{itemize}
-        \item \textbf{Codice:} MPC6
         \item \textbf{Descrizione:} È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Il valore è un intero da 0 a 100; se esso è inferiore a 80 sarà difficile da leggere per chi ha la licenza elementare, mentre se è inferiore a 40 sarà difficili da leggere per chi ha un diploma superiore;
-        \item \textbf{Processo di riferimento:} Documentazione;
-        \item \textbf{Sigla:} $IG$
         \item \textbf{Formula:} $$IG = 89 + {{300 \; \cdot \; |frasi| \; - \; 10 \; \cdot \; |lettere|}\over |parole|}$$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
@@ -106,12 +88,9 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
     \end{itemize}
 
 \subsubsection{Verifica}
-    \paragraph{Metrica - Code coverage}
+    \paragraph{Metrica MPC7 - Code coverage}
     \begin{itemize}
-        \item \textbf{Codice:} MPC7
         \item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento;
-        \item \textbf{Processo di riferimento:} \glo{Processi} di verifica;
-        \item \textbf{Sigla:} $CC$
         \item \textbf{Formula:} $$CC = {|linee \; di \; codice \; percorse \; dai  \; test| \over |linee \; di \; codice \; totali|} \; \cdot \; 100$$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
@@ -123,12 +102,9 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
 \subsection{Processi organizzativi}
 
 \subsubsection{Pianificazione}
-    \paragraph{Metrica - Schedule variance}
+    \paragraph{Metrica MPC8 - Schedule variance}
     \begin{itemize}
-        \item \textbf{Codice:} MPC8
         \item \textbf{Descrizione:} È il valore che indica se si è in linea ($=0$), in anticipo ($>0$) oppure in ritardo ($<0$) rispetto alla schedulazione delle attività di progetto pianificate nella \glo{baseline};
-        \item \textbf{Processo di riferimento:} Gestione;
-        \item \textbf{Sigla:} $SV$
         \item \textbf{Formula:} $$SV = {BCWP \; - \; BCWS}$$
         con:
         \begin{itemize}
@@ -142,12 +118,9 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
         \end{itemize}
     \end{itemize}
 
-    \paragraph{Metrica - Budget variance}
+    \paragraph{Metrica MPC9 - Budget variance}
         \begin{itemize}
-            \item \textbf{Codice:} MPC9
             \item \textbf{Descrizione:} È il valore che indica se alla data corrente si è speso di più ($>0$) o di meno ($<0$) rispetto a quanto pianificato dal budget totale $B_{tot}$;
-            \item \textbf{Processo di riferimento:} Gestione;
-            \item \textbf{Sigla:} $BV$
             \item \textbf{Formula:} $$BV = {BCWS \; - \; ACWP}$$
             con:
             \begin{itemize}
