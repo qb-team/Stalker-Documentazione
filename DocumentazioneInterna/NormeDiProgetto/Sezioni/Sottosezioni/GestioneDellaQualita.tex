@@ -19,17 +19,8 @@ Le sezioni principali del documento sono le seguenti:
     \item \textbf{Standard di qualità adottati:} Sezione dove vengono spiegati gli standard adottati.
 \end{itemize}
 
-\paragraph{Metriche di qualità}\mbox{}\\ \\
-\subparagraph{Metriche di processo}\mbox{}\\ \\
-Per monitorare l'aderenza ai processi dallo standard ISO/IEC 12207 istanziati, vengono utilizzate delle metriche. Il Responsabile, grazie ai valori ricavati dalle metriche, è facilitato nel
-valutare il \glo{processo} e di effettuare, se necessario, modifiche alla pianificazione.\\
-
-\subparagraph{Metriche di prodotto}\mbox{}\\ \\
-Il modello di qualità del software descritto dallo standard ISO/IEC 9126 definisce le caratteristiche e gli attributi del prodotto software, ciascuna misurabile da metriche interne (che richiedono la disponibilità del codice sorgente - white box) o esterne (che richiedono il prodotto software in esecuzione - black box).
-Una volta specificati i requisiti di qualità del prodotto software, si identificano le caratteristiche e attributi di qualità che più contribuiscono a verificare l'aderenza allo standard e ai requisiti.
-Il gruppo \Gruppo{} si è impegnato a scegliere le metriche interne che maggiormente influenzano (in positivo) le caratteristiche esterne del prodotto finale, in modo che esse possano predire quanto più possibile la qualità del risultato finale.
-
-\subparagraph{Codici metriche}\mbox{}\\ \\
+\subsubsection{Metriche di qualità}\mbox{}\\ \\
+\paragraph{Codici metriche}\mbox{}\\ \\
 Ogni metrica di \glo{processo} ha un codice univoco ed è strutturato in questo formato:
 \begin{center}
     M[Destinazione][Numero progressivo]
@@ -44,7 +35,7 @@ con:
     \item \textbf{[Numero progressivo]}: Il numero della metrica in relazione alla sua destinazione, progressivo perché diverso per ogni metrica e in serie. Il conteggio parte da 1.
 \end{itemize}
 
-\subparagraph{Struttura descrittiva metriche}\mbox{}\\ \\
+\paragraph{Struttura descrittiva metriche}\mbox{}\\ \\
 La seguente è una struttura ad elenco che descrive una metrica di processo o di prodotto. \\
 I punti dell'elenco racchiusi fra parentesi quadre indicano che tale punto è opzionale e va inserito solo se necessario.\\
 Inoltre, \textbf{Processo di riferimento} deve essere presente solo nelle metriche della qualità di processo, mentre \textbf{Attributo di riferimento} solo per la qualità di prodotto.
@@ -61,9 +52,18 @@ elencata in una lista, mentre il nome della metrica rappresenta il titolo di que
         \item \textbf{Accettabile}: range in cui i valori della metrica possono essere ritenuti accettabili per garantire la qualità;
         \item \textbf{Ottimale}: range in cui i valori della metrica possono essere ritenuti ottimali per garantire la qualità.
     \end{itemize}
-\end{itemize} 
+\end{itemize}
 
-\subparagraph{Tabella riassuntiva metriche}\mbox{}\\ \\
+\paragraph{Metriche di processo}\mbox{}\\ \\
+Per monitorare l'aderenza ai processi dallo standard ISO/IEC 12207 istanziati, vengono utilizzate delle metriche. Il Responsabile, grazie ai valori ricavati dalle metriche, è facilitato nel
+valutare il \glo{processo} e di effettuare, se necessario, modifiche alla pianificazione.\\
+
+\paragraph{Metriche di prodotto}\mbox{}\\ \\
+Il modello di qualità del software descritto dallo standard ISO/IEC 9126 definisce le caratteristiche e gli attributi del prodotto software, ciascuna misurabile da metriche interne (che richiedono la disponibilità del codice sorgente - white box) o esterne (che richiedono il prodotto software in esecuzione - black box).
+Una volta specificati i requisiti di qualità del prodotto software, si identificano le caratteristiche e attributi di qualità che più contribuiscono a verificare l'aderenza allo standard e ai requisiti.
+Il gruppo \Gruppo{} si è impegnato a scegliere le metriche interne che maggiormente influenzano (in positivo) le caratteristiche esterne del prodotto finale, in modo che esse possano predire quanto più possibile la qualità del risultato finale. 
+
+\paragraph{Tabella riassuntiva metriche}\mbox{}\\ \\
 Per riassumere tutte le metriche e le loro caratteristiche descritte all'interno del \PdQ{}, alla fine della sezione in cui vengono illustrate vi sono delle tabelle riassuntive che hanno questa struttura:
 {
 \rowcolors{2}{grigetto}{white}
@@ -76,18 +76,39 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 \end{longtable}
 }
 
-\subsubsection{Strumenti per il controllo di qualità}
-In questa sezione vengono indicati gli strumenti per valutare le metriche di processo e di prodotto.
-
-\paragraph*{Note sugli strumenti per il controllo di qualità}\mbox{}\\ \\
-La seguente sezione, relativa agli strumenti, non è completa in quanto il suo contenuto dipende in larga parte dalle decisioni progettuali che devono essere prese con l'avanzamento del progetto.
-
-\paragraph{Metrica - Indice di Gulpease}\mbox{}\\ \\
-Per poter calcolare questo indice, descritto nel \PdQ{} viene utilizzato come strumento il "Calcolatore dell'Indice Gulpease" ospitato a \href{https://farfalla-project.org/readability_static/}{questo indirizzo}.
-Non vengono contati per l'indice di Gulpease il testo presente nelle seguenti parti o sezioni del documento:
+\subsubsection{Lista delle metriche}
+\paragraph{Analisi dei requisiti}
+    \subparagraph{Metrica - Percentuale requisiti obbligatori soddisfatti}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC1
+        \item \textbf{Descrizione:} È la percentuale dei requisiti che devono essere soddisfatti;
+        \item \textbf{Processo di riferimento:} Sviluppo;
+        \item \textbf{Attività di riferimento:} Analisi dei requisiti;
+        \item \textbf{Sigla:} $PRS$
+        \item \textbf{Formula:} $$PRS = {|requisiti \; soddisfatti| \over |requisiti \; totali|}\; \cdot \; 100$$
+        \item \textbf{Range di valori che può assumere:}
+        \begin{itemize}
+            \item \textbf{Accettabile:} $PRS = 100\%$
+            \item \textbf{Ottimale:} $PRS = 100\%$
+        \end{itemize}
+    \end{itemize}
 \begin{itemize}
-    \item Copertina;
-    \item Indice;
-    \item Registro delle modifiche;
-    \item Riferimenti.
+    \item 
 \end{itemize}
+% <commento ai commenti> gli strumenti per il controllo di qualità verranno integrati nelle metriche nell'apposito campo
+%\subsubsection{Strumenti per il controllo di qualità}
+%In questa sezione vengono indicati gli strumenti per valutare le metriche di processo e di prodotto.
+
+%\paragraph*{Note sugli strumenti per il controllo di qualità}\mbox{}\\ \\
+%La seguente sezione, relativa agli strumenti, non è completa in quanto il suo contenuto dipende in larga parte dalle decisioni progettuali che devono essere prese con l'avanzamento del progetto.
+
+
+%\paragraph{Metrica - Indice di Gulpease}\mbox{}\\ \\
+%Per poter calcolare questo indice, descritto nel \PdQ{} viene utilizzato come strumento il "Calcolatore dell'Indice Gulpease" ospitato a \href{https://farfalla-project.org/readability_static/}{questo indirizzo}.
+%Non vengono contati per l'indice di Gulpease il testo presente nelle seguenti parti o sezioni del documento:
+%\begin{itemize}
+%    \item Copertina;
+%    \item Indice;
+%    \item Registro delle modifiche;
+%    \item Riferimenti.
+%\end{itemize}
