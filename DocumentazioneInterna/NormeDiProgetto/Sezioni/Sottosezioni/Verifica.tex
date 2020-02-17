@@ -32,18 +32,17 @@ Viene applicata sul prodotto software attraverso i test, con l’obiettivo di in
 \subparagraph{Test} \mbox{}\\ \\
 I test sono necessari per poter svolgere l'analisi dinamica del prodotto software.
 I test devono essere automatici e ripetibili:
-\subparagraph*{Automatici} \mbox{}\\ \\
-Per automatici si intende la necessità di disporre di un'automazione (per esempio un comando da \glo{CLI}) che permetta a tutti i membri del gruppo di invocare ed eseguire tutti (o in parte) i test.
+\begin{itemize}
+\item \textbf{Automatici}: Per automatici si intende la necessità di disporre di un'automazione (per esempio un comando da \glo{CLI}) che permetta a tutti i membri del gruppo di invocare ed eseguire tutti (o in parte) i test.
 I test devono poter essere eseguiti semplicemente e non devono richiedere alcuna interazione umana.
-Devono essere rapidi nell’esecuzione e in grado di riconoscere e notificare la presenza di errori.
-\subparagraph*{Ripetibili} \mbox{}\\ \\
-Per ripetibili si intende che ogni invocazione di test deve produrre sempre lo stesso risultato dato uno stesso insieme di dati in input.
+Devono essere rapidi nell’esecuzione e in grado di riconoscere e notificare la presenza di errori;
+\item \textbf{Ripetibili}: Per ripetibili si intende che ogni invocazione di test deve produrre sempre lo stesso risultato dato uno stesso insieme di dati in input.
 Per garantire questa caratteristica serve che ci sia determinismo, che è garantito se:
 \begin{itemize}
     \item Fra un'esecuzione di un test e l'altra non varia l'ambiente d'esecuzione (ovvero non cambia l'hardware e nemmeno il software);
     \item Non cambia lo stato iniziale del sistema.
 \end{itemize}
-
+\end{itemize}
 Ci sono diverse tipologie di test del software, ognuna delle quali ha un diverso oggetto di verifica e scopo.
 
 \subparagraph{Test di unità} \mbox{}\\ \\
