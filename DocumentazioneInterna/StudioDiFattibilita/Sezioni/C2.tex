@@ -3,7 +3,7 @@
 Il capitolato in questione si chiama \textit{"Etherless"}, il proponente è l'azienda \textit{RedBabel} e i committenti sono \VT{} e \CR{}.
 
 \subsection{Descrizione del capitolo}
-Etherless è una piattaforma che permette agli sviluppatori di distribuire le proprie funzioni \glo{JavaScript} nel \glo{cloud} e fare pagare agli utenti finali l'utilizzo di queste (modello \glo{"Computation as a Service", Caas}), sfruttando gli smart contract Ethereum. 
+Etherless è una piattaforma che permette agli sviluppatori di distribuire le proprie funzioni \glo{JavaScript} nel \glo{cloud} e fare pagare agli utenti finali l'utilizzo di queste (modello \glo{"Computation as a Service", CaaS}), sfruttando gli smart contract Ethereum. 
 Etherless è gestita e mantenuta da utenti chiamati Administrators, mentre altri utenti chiamati Developers possono pubblicare in Etherless le loro funzioni. Gli utenti finali del prodotto sono chiamati Users e possono eseguire le funzioni presenti nella piattaforma pagando le quote stabilite dai Developers proprietari di quelle funzioni. Ogni quota pagata è in parte trattenuta da Etherless come compensazione per l'esecuzione (ricordarsi che la blockchain è una struttura distribuita, tutti i nodi eseguono le computazioni).
 L'obiettivo di \textit{Etherless} è integrare due tecnologie: Ethereum e Serverless. Ethereum si occuperà dei pagamenti e di scatenare (trigger) l'invocazione delle funzioni. Serverless si occuperà invece dell'esecuzione delle funzioni. Una interfaccia a linea di comando (command line interface, CLI) farà da ponte fra users e developers. La comunicazione (virtuale) fra Ethereum e Serverless sarà ottenuta ascoltando ed emettendo eventi Ethereum.
 
@@ -18,7 +18,7 @@ Per poter svolgere il capitolato \`e necessario avere chiaro il funzionamento de
 
 \begin{itemize}
 \item \textbf{Blockchain}: È un database condiviso, chiamato anche ledger (registro). Ogni dispositivo collegato con una copia del ledger è chiamato nodo. Questi ledger tengono traccia della proprietà valutaria (\glo{criptovaluta}) dove ogni nodo può verificare i conti di chiunque. Questa appena descritta \`e la parte decentralizzata della blockchain. Le interazioni tra account in una rete blockchain sono chiamate transazioni. Possono essere transazioni monetarie oppure sono trasmissioni di dati. Ogni account sulla blockchain ha una firma unica, che consente a tutti di sapere quale account ha avviato la transazione;
-\item \textbf{Ethereum}: È una piattaforma che permette all'utente di scrivere più facilmente delle applicazioni decentralizzate (Dapps) che usano la tecnologia blockchain. L'Ethereum blockchain può essere descritto come una blockchain con un linguaggio di programmazione integrato;
+\item \textbf{Ethereum}: È una piattaforma che permette all'utente di scrivere più facilmente delle applicazioni decentralizzate (Dapps) che usano la tecnologia blockchain. L'Ethereum blockchain può essere descritta come una blockchain con un linguaggio di programmazione integrato;
 \item \textbf{Ethereum Virtual Machine (EVM)}: È la parte del protocollo che gestisce lo stato interno della rete e del calcolo. EVM può essere utilizzato come un grande computer decentralizzato contenente oggetti chiamati "accounts", ciascuno in grado di mantenere un database interno, eseguire il codice e comunicare. L'EVM consente al codice di essere verificato ed eseguito sulla blockchain. Questo codice è contenuto in "smart contract", che vengono utilizzati dai Dapps per l'elaborazione dei dati sull'EVM;
 \item \textbf{Smart Contract}: È il codice che viene eseguito sull'EVM. Esso può accettare ed archiviare Ethereum, dati o la combinazione di entrambi distribuendoli ad altri account o persino ad altri smart contract;
 \item \textbf{Dapps}: Le applicazioni che utilizzano contratti intelligenti per l'elaborazione sono denominate "applicazioni decentralizzate", e ognuna delle loro parti \`e individualmente in grado di fare il suo lavoro senza dipendere dalle altre;
@@ -55,8 +55,8 @@ Inoltre, devono essere utilizzati i seguenti framework e linguaggi:
 
 \subsection{Aspetti positivi}
 \begin{itemize}
-\item È sicuramente interessante il fatto di unire in un unico progetto due delle tecnologie più discusse nell'ultimo periodo come blockchain e serverless computing;
-\item Nel capitolato viene tratto l'argomento dei pagamenti elettronici che nei ultimi tempi risulta essere molto discusso;
+\item È sicuramente interessante il fatto di unire in un unico progetto due delle tecnologie più discusse negli ultimi anni come blockchain e serverless computing;
+\item Nel capitolato viene tratto l'argomento dei pagamenti elettronici che ultimamente risulta essere molto discusso;
 \item Poter imparare linguaggi come TypeScript e \glo{JavaScript} e rafforzando l'uso corretto mediante typescript-eslint \`e formativo. Inoltre, essendo questi due linguaggi alla base di moltissimi altri framework esistenti, non sarebbero conoscenze fini a sé stesse;
 \item Poter sperimentare i concetti di calcolo distribuito e le potenzialità offerte dai linguaggi funzionali imparati nel corso di \glo{Programmazione Concorrente e Distribuita} (seppur visti in Java).
 \end{itemize}
