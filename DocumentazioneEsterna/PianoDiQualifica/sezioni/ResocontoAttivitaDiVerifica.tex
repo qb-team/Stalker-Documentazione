@@ -71,39 +71,40 @@ VI\_2019\_11\_20 & \textcolor{verde}{\textbf{87}} & - & - & -\\
 %\end{figure}
 %}
 
-	\pgfplotsset{width=17cm, height=8.5cm}
+	\pgfplotsset{width=17cm, height=10cm}
 	\begin{tikzpicture}
 	\begin{axis}[
 	x tick label style={
 		/pgf/number format/1000 sep=},
-	ylabel=Year,
-	enlargelimits=0.05,
-	legend style={at={(0.5,-0.1)},
+	ylabel=Indice di Gulpease,
+	enlargelimits=0.03,
+	legend style={at={(0.5,-0.4)},
 		anchor=north,legend columns=-1},
-	ybar interval=0.7,
+	ybar interval=0.5,
 symbolic x coords={$Analisi dei Requisiti$, $Piano di Progetto$, $Piano di Qualifica$, $Norme di Progetto$, $Studio di fattibilita$, $Glossario$,
 $VI 2019-12-18$, $VE 2019-12-16$, $VI 2019-12-13$, $VI 2019-12-10$, $VI 2019-12-06$, $VI 2019-12-03$, $VI 2019-11-27$, $VI 2019-11-20$},
+ x tick label style={rotate=45,anchor=east},
 xtick=data
 ]
-\addplot[fill=orange] coordinates
+\addplot[fill=blue] coordinates
 {($Analisi dei Requisiti$, 95) ($Piano di Progetto$, 100) ($Piano di Qualifica$, 100) 
 	($Norme di Progetto$, 75) ($Studio di fattibilita$, 94) ($Glossario$, 67)
 	($VI 2019-12-18$, 100) ($VE 2019-12-16$, 65) ($VI 2019-12-13$, 92) ($VI 2019-12-10$, 100) 
 	($VI 2019-12-06$, 83) ($VI 2019-12-03$, 83) ($VI 2019-11-27$, 100) ($VI 2019-11-20$, 87)};
 
-\addplot [fill=olive] coordinates
+\addplot [fill=orange] coordinates
 {($Analisi dei Requisiti$, 90) ($Piano di Progetto$, 0) ($Piano di Qualifica$, 0) 
 	($Norme di Progetto$, 0) ($Studio di fattibilita$, 0) ($Glossario$, 0)
 	($VI 2019-12-18$, 0) ($VE 2019-12-16$, 0) ($VI 2019-12-13$, 0) ($VI 2019-12-10$, 0) 
 	($VI 2019-12-06$, 0) ($VI 2019-12-03$, 0) ($VI 2019-11-27$, 0) ($VI 2019-11-20$, 0)};
 
-\addplot [fill=brown] coordinates
-{($Analisi dei Requisiti$, 0) ($Piano di Progetto$, 0) ($Piano di Qualifica$, 0) 
+\addplot [fill=gray] coordinates
+{($Analisi dei Requisiti$, 90) ($Piano di Progetto$, 0) ($Piano di Qualifica$, 0) 
 	($Norme di Progetto$, 0) ($Studio di fattibilita$, 0) ($Glossario$, 0) 
 ($VI 2019-12-18$, 0) ($VE 2019-12-16$, 0) ($VI 2019-12-13$, 0) ($VI 2019-12-10$, 0) 
 ($VI 2019-12-06$, 0) ($VI 2019-12-03$, 0) ($VI 2019-11-27$, 0) ($VI 2019-11-20$, 0)};
-\addplot [fill=purple] coordinates
-{($Analisi dei Requisiti$, 0) ($Piano di Progetto$, 0) ($Piano di Qualifica$, 0) 
+\addplot [fill=yellow] coordinates
+{($Analisi dei Requisiti$, 90) ($Piano di Progetto$, 0) ($Piano di Qualifica$, 0) 
 	($Norme di Progetto$, 0) ($Studio di fattibilita$, 0) ($Glossario$, 0)
 	($VI 2019-12-18$, 0) ($VE 2019-12-16$, 0) ($VI 2019-12-13$, 0) ($VI 2019-12-10$, 0) 
 	($VI 2019-12-06$, 0) ($VI 2019-12-03$, 0) ($VI 2019-11-27$, 0) ($VI 2019-11-20$, 0)};
