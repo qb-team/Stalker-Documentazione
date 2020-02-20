@@ -53,14 +53,8 @@ Nella seguente tabella sono riportati i risultati degli indici di Gulpease otten
 
 \Glossariov{1.0.0} & \textcolor{giallo}{\textbf{67}} & - & - & -\\
 
-VI\_2019\_12\_18 & \textcolor{verde}{\textbf{100}} & - & - & -\\
-VE\_2019\_12\_16 & \textcolor{giallo}{\textbf{65}} & - & - & -\\
-VI\_2019\_12\_13 & \textcolor{verde}{\textbf{92}} & - & - & -\\
-VI\_2019\_12\_10 & \textcolor{verde}{\textbf{100}} & - & - & -\\
-VI\_2019\_12\_06 & \textcolor{verde}{\textbf{83}} & - & - & -\\
-VI\_2019\_12\_03 & \textcolor{verde}{\textbf{83}} & - & - & -\\
-VI\_2019\_11\_27 & \textcolor{verde}{\textbf{100}} & - & - & -\\
-VI\_2019\_11\_20 & \textcolor{verde}{\textbf{87}} & - & - & -\\
+Media verbali interni & \textcolor{verde}{\textbf{92}} & - & - & -\\
+Media verbali esterni & \textcolor{giallo}{\textbf{65}} & - & - & -\\
 
 \end{longtable}
 
@@ -71,49 +65,47 @@ VI\_2019\_11\_20 & \textcolor{verde}{\textbf{87}} & - & - & -\\
 %\end{figure}
 %}
 
-	\pgfplotsset{width=17cm, height=10cm}
-	\begin{tikzpicture}
-	\begin{axis}[
-	x tick label style={
-		/pgf/number format/1000 sep=},
-	ylabel=Indice di Gulpease,
-	enlargelimits=0.03,
-	legend style={at={(0.5,-0.4)},
-		anchor=north,legend columns=-1},
-	ybar interval=0.5,
-symbolic x coords={$Analisi dei Requisiti$, $Piano di Progetto$, $Piano di Qualifica$, $Norme di Progetto$, $Studio di fattibilita$, $Glossario$,
-$VI 2019-12-18$, $VE 2019-12-16$, $VI 2019-12-13$, $VI 2019-12-10$, $VI 2019-12-06$, $VI 2019-12-03$, $VI 2019-11-27$, $VI 2019-11-20$},
- x tick label style={rotate=45,anchor=east},
+\pgfplotsset{width=17cm, height=10cm}
+\begin{tikzpicture}
+
+\begin{axis}[
+title=Grafico andamento dell'Indice di Gulpease per ogni periodo e documento,
+x tick label style={
+/pgf/number format/1000 sep=},
+ylabel=Indice di Gulpease,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+anchor=north,legend columns=-1},
+ybar interval=0.5,
+symbolic x coords={Analisi dei Requisiti, Piano di Progetto, Piano di Qualifica, Norme di Progetto, Studio di fattibilita, Glossario,
+Media verbali interni, Media verbali esterni, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+x tick label style={rotate=45,anchor=east},
 xtick=data
 ]
 \addplot[fill=blue] coordinates
-{($Analisi dei Requisiti$, 95) ($Piano di Progetto$, 100) ($Piano di Qualifica$, 100) 
-	($Norme di Progetto$, 75) ($Studio di fattibilita$, 94) ($Glossario$, 67)
-	($VI 2019-12-18$, 100) ($VE 2019-12-16$, 65) ($VI 2019-12-13$, 92) ($VI 2019-12-10$, 100) 
-	($VI 2019-12-06$, 83) ($VI 2019-12-03$, 83) ($VI 2019-11-27$, 100) ($VI 2019-11-20$, 87)};
+{(Analisi dei Requisiti, 95) (Piano di Progetto, 100) (Piano di Qualifica, 100) 
+(Norme di Progetto, 75) (Studio di fattibilita, 94) (Glossario, 67)
+(Media verbali interni, 92) (Media verbali esterni, 65) (tmp, 0)};
 
 \addplot [fill=orange] coordinates
-{($Analisi dei Requisiti$, 0) ($Piano di Progetto$, 0) ($Piano di Qualifica$, 0) 
-	($Norme di Progetto$, 0) ($Studio di fattibilita$, 0) ($Glossario$, 0)
-	($VI 2019-12-18$, 0) ($VE 2019-12-16$, 0) ($VI 2019-12-13$, 0) ($VI 2019-12-10$, 0) 
-	($VI 2019-12-06$, 0) ($VI 2019-12-03$, 0) ($VI 2019-11-27$, 0) ($VI 2019-11-20$, 0)};
+{(Analisi dei Requisiti, 0) (Piano di Progetto, 0) (Piano di Qualifica, 0) 
+(Norme di Progetto, 0) (Studio di fattibilita, 0) (Glossario, 0)
+(Media verbali interni, 0) (Media verbali esterni, 0) (tmp, 0)};
 
 \addplot [fill=gray] coordinates
-{($Analisi dei Requisiti$, 0) ($Piano di Progetto$, 0) ($Piano di Qualifica$, 0) 
-	($Norme di Progetto$, 0) ($Studio di fattibilita$, 0) ($Glossario$, 0) 
-($VI 2019-12-18$, 0) ($VE 2019-12-16$, 0) ($VI 2019-12-13$, 0) ($VI 2019-12-10$, 0) 
-($VI 2019-12-06$, 0) ($VI 2019-12-03$, 0) ($VI 2019-11-27$, 0) ($VI 2019-11-20$, 0)};
+{(Analisi dei Requisiti, 0) (Piano di Progetto, 0) (Piano di Qualifica, 0) 
+(Norme di Progetto, 0) (Studio di fattibilita, 0) (Glossario, 0) 
+(Media verbali interni, 0) (Media verbali esterni, 0) (tmp, 0)};
 \addplot [fill=yellow] coordinates
-{($Analisi dei Requisiti$, 0) ($Piano di Progetto$, 0) ($Piano di Qualifica$, 0) 
-	($Norme di Progetto$, 0) ($Studio di fattibilita$, 0) ($Glossario$, 0)
-	($VI 2019-12-18$, 0) ($VE 2019-12-16$, 0) ($VI 2019-12-13$, 0) ($VI 2019-12-10$, 0) 
-	($VI 2019-12-06$, 0) ($VI 2019-12-03$, 0) ($VI 2019-11-27$, 0) ($VI 2019-11-20$, 0)};
+{(Analisi dei Requisiti, 0) (Piano di Progetto, 0) (Piano di Qualifica, 0) 
+(Norme di Progetto, 0) (Studio di fattibilita, 0) (Glossario, 0)
+(Media verbali interni, 0) (Media verbali esterni, 0) (tmp, 0)};
 
 \legend{
-	RR,
-	RP,
-	RQ,
-	RA
+RR,
+RP,
+RQ,
+RA
 }
 \end{axis}
 \end{tikzpicture}
