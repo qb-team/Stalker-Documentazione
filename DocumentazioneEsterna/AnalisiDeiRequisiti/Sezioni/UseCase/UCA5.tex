@@ -58,11 +58,10 @@
     \item \textbf{Postcondizione:} L'utente visualizza lo \glo{storico degli accessi} (con nome del \glo{luogo}, \glo{timestamp} di ingresso, di uscita, e tempo di permanenza) al \glo{luogo} desiderato. Se l'utente dovesse trovarsi all'interno del \glo{luogo} stesso, viene visualizzato il tempo passato al suo interno dall'ultimo ingresso effettuato.
     \item \textbf{Scenario principale:} L'utente esegue la procedura per visualizzare lo \glo{storico degli accessi} effettuati presso il \glo{luogo} desiderato e ha la possibilità di ordinare gli accessi [UCA 5.4] o effettuare ricerche [UCA 5.5].
     \item \textbf{Scenario alternativo:} L'utente non è mai entrato nel \glo{luogo} selezionato, pertanto verrà mostrato un avviso informativo [UCA 8.5.2].
-    \item \textbf{Flusso di eventi:}
-    \begin{enumerate}
-        \item L'utente seleziona la funzionalità per mostrare gli accessi effettuati presso un luogo dell'\glo{organizzazione} precedentemente selezionata;
-        \item L'utente visiona per ogni accesso le sue informazioni.
-    \end{enumerate}
+    \item \textbf{Inclusioni:}
+    \begin{itemize}
+        \item UCA 5.2.4 - Visualizzazione informazioni accesso.
+    \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
         \item UCA 8.5.2 - Avviso della mancanza di accessi effettuati presso il luogo selezionato.
@@ -91,10 +90,6 @@
     \item \textbf{Precondizione:} L'utente seleziona la visualizzazione della lista degli accessi ordinata per data.
     \item \textbf{Postcondizione:} L'utente ottiene la \glo{lista degli accessi} riordinata \glo{per data}.
     \item \textbf{Scenario principale:} Ordinamento per data della lista degli accessi in un determinato ordine.
-    \item \textbf{Flusso di eventi:}
-    \begin{enumerate}
-        \item L'utente seleziona la funzionalità per riordinare lo \glo{storico degli accessi} \glo{per data in un determinato ordine}.
-    \end{enumerate}
 \end{itemize}
 
 \subsubsection{UCA 5.4.1 - Ordinamento per data decrescente della lista degli accessi presso un'organizzazione o un suo luogo}
@@ -106,11 +101,7 @@
 	\item \textbf{Generalizzazione:}
 	\begin{enumerate}
 		\item UCA 5.4 - Ordinamento per data della lista degli accessi presso un'organizzazione o un suo luogo.
-	\end{enumerate}
-	\item \textbf{Flusso di eventi:}
-	\begin{enumerate}
-		\item L'utente seleziona la funzionalità per riordinare lo \glo{storico degli accessi} \glo{per data in ordine decrescente}.
-	\end{enumerate}   
+	\end{enumerate} 
 \end{itemize}
 
 \subsubsection{UCA 5.4.2 - Ordinamento per data crescente della lista degli accessi presso un'organizzazione o un suo luogo}
@@ -123,10 +114,6 @@
 	\begin{enumerate}
 		\item UCA 5.4 - Ordinamento per data della lista degli accessi presso un'organizzazione o un suo luogo.
 	\end{enumerate}
-    \item \textbf{Flusso di eventi:}
-    \begin{enumerate}
-        \item L'utente seleziona la funzionalità per riordinare lo \glo{storico degli accessi} \glo{per data in ordine crescente}.
-    \end{enumerate}
 \end{itemize}
 
 \subsubsection{UCA 5.5 - Ricerca degli accessi presso un'organizzazione o un suo luogo in un giorno specifico}
@@ -135,9 +122,4 @@
     \item \textbf{Precondizione:} L'utente sta visualizzando lo storico accessi di un \glo{luogo} [UCA 5.1].
     \item \textbf{Postcondizione:} L'utente ottiene la \glo{lista degli accessi} effettuati presso il \glo{luogo} in questione nel giorno selezionato.
     \item \textbf{Scenario principale:} Ricerca degli accessi presso un luogo di un'organizzazione in un giorno specifico.
-    \item \textbf{Flusso di eventi:}
-    \begin{enumerate}
-        \item L'utente seleziona la funzionalità per visualizzare solo gli accessi avvenuti in un giorno specifico presso l'organizzazione o un suo luogo;
-        \item L'utente seleziona il giorno desiderato.
-    \end{enumerate}
 \end{itemize}
