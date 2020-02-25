@@ -8,19 +8,19 @@
 
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
-	\item \textbf{Attori secondari:} Servizi/o di localizzazione (\glo{GPS}, rete cellulare) , Server \glo{LDAP} dell'\glo{organizzazione}
-	\item \textbf{Precondizione:} L'utente autenticato sta per effettuare un \glo{movimento} in un'\glo{organizzazione} o in un luogo all'interno di essa.
-	\item \textbf{Postcondizione:} L'utente ha effettuato un \glo{movimento} presso l'\glo{organizzazione} o in un all'interno di essa e ne viene notificato. %e vengono salvate alcune cose? 
-	\item \textbf{Scenario principale:} L'utente si trova nei pressi di un'\glo{organizzazione} o un suo luogo e sta per effettuare un \glo{movimento}. L'utente riceve una notifica una volta effettuato il movimento. %Viene salvato l'orario di entrata ed uscita dall'\glo{organizzazione} e il tempo trascorso all'interno dell'\glo{organizzazione}. L'utente riceve inoltre una notifica per l'entrata e l'uscita dall'\glo{organizzazione}.
+	\item \textbf{Attori secondari:} Servizi/o di localizzazione (\glo{GPS}, rete cellulare)
+	\item \textbf{Precondizione:} L'utente sta per effettuare un \glo{movimento} in un'\glo{organizzazione} o in un luogo all'interno di essa.
+	\item \textbf{Postcondizione:} L'utente ha effettuato un \glo{movimento} presso l'\glo{organizzazione} o in un luogo all'interno di essa e ne viene notificato l'avvenimento. %e vengono salvate alcune cose (memorizzazione timestamp, ecc)? 
+	\item \textbf{Scenario principale:} L'utente si trova nei pressi o all'interno di un'\glo{organizzazione} o di un suo luogo e sta per effettuare un \glo{movimento}. L'utente riceve una notifica una volta effettuato il movimento. %Viene salvato l'orario di entrata ed uscita dall'\glo{organizzazione} e il tempo trascorso all'interno dell'\glo{organizzazione}. L'utente riceve inoltre una notifica per l'entrata e l'uscita dall'\glo{organizzazione}.
 \end{itemize}
 
 \subsubsection{UCA 6.1 - Tracciamento movimento presso un'organizzazione}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
-	\item \textbf{Attori secondari:} Servizi/o di localizzazione (\glo{GPS}, rete cellulare), server \glo{LDAP} dell'\glo{organizzazione}.
-	\item \textbf{Precondizione:} L'utente autenticato sta per effettuare un \glo{movimento} in un'\glo{organizzazione}.
-	\item \textbf{Postcondizione:} L'utente ha effettuato un \glo{movimento} presso l'\glo{organizzazione} e ne viene notificato.
-	\item \textbf{Scenario principale:} L'utente si trova nei pressi di un'\glo{organizzazione} e sta per effettuare un \glo{movimento}. L'utente riceve una notifica una volta effettuato il movimento.
+	\item \textbf{Attori secondari:} Servizi/o di localizzazione (\glo{GPS}, rete cellulare)
+	\item \textbf{Precondizione:} L'utente sta per effettuare un \glo{movimento} in un'\glo{organizzazione}.
+	\item \textbf{Postcondizione:} L'utente ha effettuato un \glo{movimento} presso l'\glo{organizzazione} e ne viene notificato l'avvenimento.
+	\item \textbf{Scenario principale:} L'utente si trova nei pressi o all'interno di un'\glo{organizzazione} e sta per effettuare un \glo{movimento}. L'utente riceve una notifica una volta effettuato il movimento.
 	%\item \textbf{Scenario alternativo:} .
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
@@ -36,18 +36,17 @@
 \subsubsection{UCA 6.1.1 - Notifica movimento effettuato presso l'organizzazione}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
-	\item \textbf{Attori secondari:} Servizi/o di localizzazione (\glo{GPS}, rete cellulare), server \glo{LDAP} dell'\glo{organizzazione}.
 	\item \textbf{Precondizione:} L'utente ha effettuato un \glo{movimento} presso l'\glo{organizzazione}.
 	\item \textbf{Postcondizione:} L'utente riceve una notifica del movimento effettuato.
-	\item \textbf{Scenario principale:} L'utente una volta effettuato il movimento ne riceve una notifica.	
+	\item \textbf{Scenario principale:} L'utente una volta effettuato il movimento riceve una notifica.	
 \end{itemize}
 
 \subsubsection{UCA 6.2 - Tracciamento movimento presso un luogo all'interno dell'organizzazione}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
-	\item \textbf{Attori secondari:} Servizi/o di localizzazione (\glo{GPS}, rete cellulare), server \glo{LDAP} dell'\glo{organizzazione}.
+	\item \textbf{Attori secondari:} Servizi/o di localizzazione (\glo{GPS}, rete cellulare).
 	\item \textbf{Precondizione:} L'utente autenticato sta per effettuare un \glo{movimento} in un luogo all'interno di un'\glo{organizzazione}.
-	\item \textbf{Postcondizione:} L'utente ha effettuato un \glo{movimento} presso un luogo all'interno di un'\glo{organizzazione} e ne viene notificato.
+	\item \textbf{Postcondizione:} L'utente ha effettuato un \glo{movimento} presso un luogo all'interno di un'\glo{organizzazione} e ne viene notificato l'avvenimento.
 	\item \textbf{Scenario principale:} L'utente sta per effettuare un movimento in un luogo all'interno di un'\glo{organizzazione}. L'utente riceve una notifica una volta effettuato il movimento.
 	%\item \textbf{Scenario alternativo:} .
 	\item \textbf{Flusso di eventi:}
@@ -67,7 +66,7 @@
 	\item \textbf{Attori secondari:} Servizi/o di localizzazione (\glo{GPS}, rete cellulare), server \glo{LDAP} dell'\glo{organizzazione}.
 	\item \textbf{Precondizione:} L'utente ha effettuato un \glo{movimento} presso un luogo all'interno dell'\glo{organizzazione}.
 	\item \textbf{Postcondizione:} L'utente riceve una notifica del movimento effettuato.
-	\item \textbf{Scenario principale:} L'utente una volta effettuato il movimento ne riceve una notifica.
+	\item \textbf{Scenario principale:} L'utente una volta effettuato il movimento riceve una notifica.
 \end{itemize}
 
 
