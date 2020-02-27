@@ -24,6 +24,29 @@
 
 \section{Resoconto}
 \subsection{Spiegazione errori casi d'uso}
-E' stata chiesta al professore Cardin, tramite videoconferenza, una spiegazione di tutti gli errori riguardanti i casi d'uso segnati nella correzione dell'RR.\\
+E' stata chiesta al professore Cardin, tramite videochiamata, una spiegazione di tutti gli errori riguardanti i casi d'uso segnati nella correzione dell'RR.\\
+\subsection{Problemi riscontrati nei caso d'uso}
+Di seguito vengono riportati tutti i problemi discussi con il professore Cardin durante la videochiamata:
+\begin{itemize}
+	\item In casi d’uso dove c’è bisogno che l’utente sia autentificato per poter poi compiere delle funzionalità, il professore ha consigliato di scriverle:
+	" precondizioni: l’utente deve essere autenticato presso il sistema”
+	UCA7 resta comunque un caso d’uso perché è una funzionalità che il nostro sistema fornisce;
+	\item UCA3.3.1 e UCA3.3.2 sono mutualmente esclusivi quindi va bene che venga usata l’ereditarietà
+	(dato che l’aggiornamento della lista delle organizzazioni viene fatto solo da una delle due tipologie, o viene fatta una o viene fatta l’altra).
+	Stessa cosa per UCA3.4 (usare l’ereditarietà perché viene scelto SOLO UN metodo di visualizzazione della lista delle organizzazioni).
+	Attenzione per i sotto casi d’uso di UCA3.4.3 e UCA3.4.4 (forse andrebbero tolti da UCA3.4 e messi come assestanti).
+	Mentre per UCA3.5: una ricerca può essere fatta o per mutua esclusione (ereditarietà) o per composizione di filtri (che non è ereditarietà perché si possono effettuare tutte le varie ricerche o un sottoinsieme di esse [in questo caso: Per Nazione, Per Nome, Per Città]) non va usato per ereditarietà perché lo scenario principale accede a più sottoinsiemi;
+	\item Nel caso d'uso UCA4, in UCA6.1 e UCA6.2 bisogna stare attenti perché l’attore primario non è l’utente ma è l’applicazione (che è il sistema), ed è essa che compie la funzionalità.
+	Quindi Cardin, in minuto 13.27 circa, dice che toglierebbe UCA6 e porterebbe i suoi sotto casi, messi come inclusione, come casi d’uso propri.
+	In 15:20 circa, Cardin dice che UCA6 è una funzionalità e quindi va bene che sia un caso d’uso, ma i suoi sotto casi non sono molto collegati con UCA4.
+	Quindi riportare le inclusioni come propri casi d'uso;
+	\item UCA4 e UCA5 le inclusioni non sono corrette perché stiamo usando i casi d’uso come dei diagrammi di attività. Invece dovrebbero essere usati ad esempio in precondizioni;
+	\item UCA5.3 e UCA3.4 vanno tolti (viene detto al minuto 18:10 circa) e devono essere messe come precondizione;
+	\item UCA5.1 ‘che cosa è stato visualizzato’ non bisogna scriverlo nelle POST ma sono suoi sotto casi d’uso per dire meglio questa funzionalità (vedere come gestire queste cose);
+	\item Domanda 6. sulla fig.20: stiamo usando un linguaggio formale in un modo informale.
+	Soluzione: spezzare e lasciare ogni caso d’uso con il suo diagramma senza raggruppare in panoramiche;
+	\item UCS7.1: visualizzazione e ordinamento sono due funzionalità differenti, quindi vanno divisi dato che i sotto casi d’uso della visualizzazione possono specificare solo che cosa viene visualizzato
+	Situazione già riscontrata nei filtri menzionati precedentemente.
+\end{itemize}
 
 \clearpage
