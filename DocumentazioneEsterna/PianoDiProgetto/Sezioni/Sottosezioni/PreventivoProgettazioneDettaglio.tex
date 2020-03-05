@@ -32,6 +32,7 @@ La seguente tabella rappresenta la distribuzione oraria dei ruoli per ogni compo
 \end{longtable}
 }
 
+% Responsabile color=blue, Amministratore color=yellow, Analista color=red, Progettista color=green, Programmatore color=grigetto, Verificatore color=orange  [ybar, fill=] blue, yellow, red, green, grigetto, orange
 La suddivisione di quante ore, ciascun componente del gruppo, ha svolto per ogni ruolo viene rappresentata nel seguente istogramma:
 \begin{center}
 	\pgfplotsset{width=17cm, height=8.5cm}
@@ -49,17 +50,17 @@ La suddivisione di quante ore, ciascun componente del gruppo, ha svolto per ogni
 		]
 			\legend{Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}
 			% Responsabile
-			\addplot coordinates {\ColonnaIstogramma{0}{6}{0}{0}{0}{10}{0}{10}};
+			\addplot [ybar, fill=blue] coordinates {\ColonnaIstogramma{0}{6}{0}{0}{0}{10}{0}{10}};
 			% Amministratore
-			\addplot coordinates {\ColonnaIstogramma{10}{0}{5}{4}{8}{0}{3}{0}};
+			\addplot [ybar, fill=yellow] coordinates {\ColonnaIstogramma{10}{0}{5}{4}{8}{0}{3}{0}};
 			% Analista
-			\addplot coordinates {\ColonnaIstogramma{0}{0}{0}{0}{0}{0}{0}{0}};
+			\addplot [ybar, fill=red] coordinates {\ColonnaIstogramma{0}{0}{0}{0}{0}{0}{0}{0}};
 			% Progettista
-			\addplot coordinates {\ColonnaIstogramma{13}{11}{14}{12}{9}{8}{13}{11}};
+			\addplot [ybar, fill=green] coordinates {\ColonnaIstogramma{13}{11}{14}{12}{9}{8}{13}{11}};
 			% Programmatore
-			\addplot coordinates {\ColonnaIstogramma{16}{16}{17}{19}{20}{18}{20}{18}};
+			\addplot [ybar, fill=grigetto] coordinates {\ColonnaIstogramma{16}{16}{17}{19}{20}{18}{20}{18}};
 			% Verificatore
-			\addplot coordinates {\ColonnaIstogramma{11}{17}{14}{15}{13}{14}{14}{11}};
+			\addplot [ybar, fill=orange] coordinates {\ColonnaIstogramma{11}{17}{14}{15}{13}{14}{14}{11}};
 		\end{axis}
 	\end{tikzpicture}
 \end{center}
@@ -90,10 +91,11 @@ Verificatore    & 109 & 1635 \\
 \end{longtable}
 }
 
+\vskip 100pt %spazio verticale
 La quantità di ore totali per ciascun ruolo viene rappresentata nel seguente areogramma:
 \begin{center}
 	\begin{tikzpicture}
-		\pie[rotate = 180] {
+		\pie[rotate = 180, color={blue, yellow, green, grigetto, orange}] {
 			6/Responsabile,
 			8/Amministratore,
 			23/Progettista,
