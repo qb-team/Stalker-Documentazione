@@ -49,23 +49,23 @@ La suddivisione delle ore svolte da ciascun componente del gruppo per ogni ruolo
 		]
 			\legend{Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}
 			% Responsabile
-			\addplot coordinates {\ColonnaIstogramma{5}{8}{0}{0}{0}{0}{6}{0}};
+			\addplot [ybar, fill=blue] coordinates {\ColonnaIstogramma{5}{8}{0}{0}{0}{0}{6}{0}};
 			% Amministratore
-			\addplot coordinates {\ColonnaIstogramma{0}{0}{8}{10}{6}{0}{0}{0}};
+			\addplot [ybar, fill=yellow] coordinates {\ColonnaIstogramma{0}{0}{8}{10}{6}{0}{0}{0}};
 			% Analista
-			\addplot coordinates {\ColonnaIstogramma{0}{0}{0}{6}{0}{13}{0}{8}};
+			\addplot [ybar, fill=red] coordinates {\ColonnaIstogramma{0}{0}{0}{6}{0}{13}{0}{8}};
 			% Progettista
-			\addplot coordinates {\ColonnaIstogramma{14}{18}{10}{10}{5}{5}{0}{7}};
+			\addplot [ybar, fill=green] coordinates {\ColonnaIstogramma{14}{18}{10}{10}{5}{5}{0}{7}};
 			% Programmatore
-			\addplot coordinates {\ColonnaIstogramma{10}{0}{5}{0}{7}{7}{17}{0}};
+			\addplot [ybar, fill=grigetto] coordinates {\ColonnaIstogramma{10}{0}{5}{0}{7}{7}{17}{0}};
 			% Verificatore
-			\addplot coordinates {\ColonnaIstogramma{4}{7}{6}{6}{13}{6}{8}{16}};
+			\addplot [ybar, fill=orange] coordinates {\ColonnaIstogramma{4}{7}{6}{6}{13}{6}{8}{16}};
 		\end{axis}
 	\end{tikzpicture}
 \end{center}
 
 \clearpage
-
+blue, yellow, red, green, grigetto, orange
 \subsubsection{Costo risultante}
 La seguente tabella rappresenta per ogni ruolo le ore totali investite e il corrispondente costo in euro:
 {
@@ -91,10 +91,11 @@ Verificatore    &  66 &  990 \\
 \end{longtable}
 }
 
+\vskip 60pt %spazio verticale
 La quantità di ore totali per ciascun ruolo viene rappresentata nel seguente areogramma:
 \begin{center}
 	\begin{tikzpicture}
-		\pie[rotate = 180] {
+		\pie[rotate = 180, color={blue, yellow, red, green, grigetto, orange}] {
 			8/Responsabile,
 			10/Amministratore,
 			11/Analista,

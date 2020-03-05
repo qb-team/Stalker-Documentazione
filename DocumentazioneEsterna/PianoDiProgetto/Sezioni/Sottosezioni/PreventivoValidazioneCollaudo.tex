@@ -50,17 +50,17 @@ La suddivisione delle ore svolte da ciascun componente del gruppo per ogni ruolo
 		]
 			\legend{Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}
 			% Responsabile
-			\addplot coordinates {\ColonnaIstogramma{0}{0}{5}{0}{6}{0}{0}{0}};
+			\addplot [ybar, fill=blue] coordinates {\ColonnaIstogramma{0}{0}{5}{0}{6}{0}{0}{0}};
 			% Amministratore
-			\addplot coordinates {\ColonnaIstogramma{0}{4}{0}{0}{0}{6}{5}{0}};
+			\addplot [ybar, fill=yellow] coordinates {\ColonnaIstogramma{0}{4}{0}{0}{0}{6}{5}{0}};
 			% Analista
-			\addplot coordinates {\ColonnaIstogramma{7}{0}{0}{0}{0}{0}{0}{4}};
+			\addplot [ybar, fill=red] coordinates {\ColonnaIstogramma{7}{0}{0}{0}{0}{0}{0}{4}};
 			% Progettista
-			\addplot coordinates {\ColonnaIstogramma{0}{5}{0}{6}{0}{0}{0}{10}};
+			\addplot [ybar, fill=green] coordinates {\ColonnaIstogramma{0}{5}{0}{6}{0}{0}{0}{10}};
 			% Programmatore
-			\addplot coordinates {\ColonnaIstogramma{4}{0}{6}{5}{7}{9}{6}{0}};
+			\addplot [ybar, fill=grigetto] coordinates {\ColonnaIstogramma{4}{0}{6}{5}{7}{9}{6}{0}};
 			% Verificatore
-			\addplot coordinates {\ColonnaIstogramma{8}{10}{12}{9}{8}{6}{10}{7}};
+			\addplot [ybar, fill=orange] coordinates {\ColonnaIstogramma{8}{10}{12}{9}{8}{6}{10}{7}};
 		\end{axis}
 	\end{tikzpicture}
 \end{center}
@@ -93,10 +93,11 @@ Verificatore    &  70 & 1050 \\
 \end{longtable}
 }
 
+\vskip 100pt %spazio verticale
 La quantità di ore totali per ciascun ruolo viene rappresentata nel seguente areogramma:
 \begin{center}
 	\begin{tikzpicture}
-		\pie[rotate = 180] {
+		\pie[rotate = 180, color={blue, yellow, red, green, grigetto, orange}] {
 			7/Responsabile,
 			9/Amministratore,
 			7/Analista,
