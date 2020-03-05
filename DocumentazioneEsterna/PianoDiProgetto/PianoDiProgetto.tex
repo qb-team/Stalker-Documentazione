@@ -1,19 +1,14 @@
 \documentclass[a4paper, oneside, dvipsnames, table]{article}
 \usepackage{../../Utilita/Stiletemplate}
 \usepackage{hyperref}
-\usepackage{eurosym}
 %\usepackage[hypertexnames=false]{hyperref} 
 \usepackage{fancyhdr}
 \usepackage[italian]{babel}
 \usepackage{pdflscape}
 \usepackage[raggedright]{titlesec}
 \usepackage{blindtext}
-\usepackage{pgf-pie}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.3}
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
-\newcommand{\ColonnaIstogramma}[8]{(Christian, #1) (Davide, #2) (Emanuele, #3) (Enrico, #4) (Federico, #5) (Francesco, #6) (Riccardo, #7) (Tommaso, #8)}
 
 \input{Sezioni/Comandi.tex}
 \input{../../Utilita/Comandi.tex}
@@ -37,7 +32,6 @@
 \setcounter{table}{0}
 
 \renewcommand{\listtablename}{Elenco tabelle}
-\renewcommand{\listfigurename}{Elenco diagrammi}
 
 \listoffigures
 \clearpage
@@ -47,6 +41,7 @@
 \input{Sezioni/Introduzione.tex}
 \clearpage
 \input{Sezioni/AnalisiDeiRischi.tex}
+\input{Sezioni/TabellaRischi.tex}
 \clearpage
 \input{Sezioni/ModelloDiSviluppo.tex}
 \clearpage
@@ -57,6 +52,8 @@
 \input{Sezioni/Consuntivo.tex}
 \clearpage
 \input{Sezioni/Organigramma.tex}
+\clearpage
+\input{sezioni/Riferimenti.tex}
 \clearpage
 
 \end{document}

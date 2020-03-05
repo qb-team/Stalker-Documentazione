@@ -1,26 +1,22 @@
-\section{Modello di sviluppo}
-Come modello di sviluppo il gruppo \Gruppo{} ha deciso di adottare il \textbf{modello incrementale}.
+\section{Modello di Sviluppo}
+Come modello di sviluppo è stato deciso di adottare il \textbf{modello incrementale}.
 \subsection{Descrizione}
-Nel modello incrementale il prodotto viene sviluppato tramite rilasci successivi. Questi rilasci hanno l'obiettivo di aggiungere funzionalità separate e accessorie a un sistema stabile in cui sono presenti requisiti di base.
-Nel caso in cui un rilascio sia fallace è molto facile tornare allo stato funzionante precedente.\\
-Il modello incrementale richiede, dunque, una suddivisione preliminare dei requisiti atta ad identificare quelli da sviluppare per primi e quali aggiungere al sistema stabile per incrementi. \\
-Inoltre, una volta implementate le caratteristiche base del sistema lo si può sottoporre al committente e al proponente per assicurarsi di star procedendo nella giusta direzione.
-In caso negativo, non è troppo tardi per cambiare la struttura del prodotto corrente. \\
-Infine, non è particolarmente dispendioso riformulare degli incrementi previsti ma che devono ancora essere implementati. 
+Nel modello incrementale si sviluppa il prodotto tramite rilasci successivi, questi rilasci hanno l'obbiettivo di aggiungere funzionalità separate e accessorie 
+a un sistema stabile in cui sono presenti requisiti di base; nel caso in cui un rilascio sia fallace è molto facile tornare allo stato funzionante precedente.\\
+Il modello incrementale richiede, dunque, una suddivisione preliminare dei requisiti atta ad identificare quelli da sviluppare per primi e quali aggiungere al sistema 
+stabile per incrementi. \\
+Inoltre una volta implementate le caratteristiche base del sistema lo si può sottoporre al committente per assicurarsi di star procedendo nella giusta direzione e, in caso negativo,
+non è troppo tardi per cambiare la struttura del prodotto corrente. Inoltre, non è particolarmente dispendioso riformulare degli incrementi che devono ancora essere implementati. 
 
 \subsection{Motivazioni}
-Il gruppo ha scelto questo modello di sviluppo perché si adatta bene alle specifiche del progetto \NomeProgetto{} del proponente \Proponente{}.
-Nella fattispecie, è stato facile identificare i requisiti minimi e separare molti requisiti accessori perfetti per essere implementati tramite rilasci incrementali su di un sistema stabile.\\
-Inoltre, data la nostra inesperienza, il modello scelto permette a eventuali cambiamenti in corso d'opera di essere poco dispendiosi dal punto di vista sia del tempo di codifica (se circoscritti a singoli rilasci), sia del lavoro di cambiamento della documentazione. \\
-In aggiunta a ciò, i rilasci successivi di funzionalità permettono di poter stabilire un confronto migliore con il proponente, riuscendo a sottoporre al suo giudizio un prodotto che sia sempre funzionante e col tempo sempre più completo e conforme alle sue aspettative. \\
-Abbiamo inoltre valutato che i principali difetti del modello incrementale, quali la degradazione della struttura causata dall'aggiunta di incrementi e l'invisibilità del processo al manager, 
-non influenzano il gruppo data la dimensione ridotta, relativamente ad ambienti aziendali dove i modelli di sviluppo sono sfruttati appieno, del progetto che stiamo affrontando.
-
-
-\subsection{Individuazione degli incrementi}
-In seguito è riportata una tabella con indicati i requisiti che vengono sviluppati in ciascun incremento, sia dell'applicazione che del server.
-I requisiti sono identificati dal loro codice identificativo e sono reperibili nel documento \AdR{}.\\
-I codici dei requisiti enfatizzati in grassetto sono obbligatori, quelli non evidenziati sono requisiti desiderabili oppure opzionali.
-La scelta di enfatizzare quelli obbligatori è puramente presa per una maggior comodità di consultazione.
-
-\input{Sezioni/Sottosezioni/Incrementi.tex}
+Il nostro gruppo ha scelto questo modello di sviluppo perché si adatta bene alle specifiche del capitolato \NomeProgetto{},
+nella fattispecie  è stato facile identificare i requisiti minimi e separare molti requisiti accessori perfetti per essere implementati
+tramite rilasci incrementali sul sistema stabile.\\
+Inoltre, data la nostra inesperienza, il modello scelto permette a eventuali cambiamenti in corso d'opera di essere poco dispendiosi dal punto di vista
+sia del tempo di codifica, se sono circoscritti a singoli rilasci, sia del lavoro di cambiamento della documentazione. \\
+In aggiunta a ciò i rilasci successivi di funzionalità ci permettono di poter stabilire un confronto migliore con \Proponente{}
+riuscendo a sottoporre al loro giudizio un prodotto che sia sempre funzionante e nel tempo sempre più completo e conforme alle loro aspettative. \\
+Abbiamo inoltre valutato che i principali difetti del modello incrementale, quali la degradazione della struttura causata dall'aggiunta di 
+incrementi e l'invisibilità del processo al manager, non ci influenzano data la dimensione ridotta, in relazione a 
+ambienti aziendali dove i modelli di sviluppo sono sfruttati a pieno, del progetto che stiamo affrontando.
+ 

@@ -1,48 +1,51 @@
-\section{Consuntivi di periodo}
-In un consuntivo di periodo viene approfondito il bilancio effettivo di una fase, ovvero la differenza tra le ore preventivate e quelle effettivamente svolte.
+\section{Consuntivo}
+
+
+Nel Consuntivo viene approfondito il bilancio effettivo della fase di Analisi, ovvero la differenza tra le ore preventivate e quelle effettive.
+
 
 \subsection{Analisi dei Requisiti}
-\subsubsection{Bilancio}
+
 Il bilancio della fase di Analisi è negativo, ovvero il gruppo ha impiegato più ore di quelle anticipate, quindi il costo finale della fase di Analisi supera l'aspettativa calcolata in precedenza.\\
 La seguente tabella illustra la differenza oraria ed economica rilevata a posteriori.
 
-{
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{2}
+
+\centering
+
 \begin{longtable}[h]{ C{2.5cm} C{2.5cm} C{2.5cm} C{2.5cm} C{1.5cm} C{2.5cm}}
 \caption{Tabella del costo complessivo per ruolo}\\
 \rowcolor{darkblue}
-
-\textcolor{white}{\textbf{Ruolo}} & 
-\textcolor{white}{\textbf{Ore preventivate}} & 
-\textcolor{white}{\textbf{Ore supplementari}} & 
-\textcolor{white}{\textbf{Costo preventivato (in \euro{})}} & 
-\textcolor{white}{\textbf{Costo effettivo (in \euro{})}} & 
-\textcolor{white}{\textbf{Differenza di costo (in \euro{})}}\\	
+	\textcolor{white}{\textbf{Ruolo}} & 
+	\textcolor{white}{\textbf{Ore preventivate}} & 
+	\textcolor{white}{\textbf{Ore supplementari}} & 
+	\textcolor{white}{\textbf{Costo preventivato}} & 
+	\textcolor{white}{\textbf{Costo effettivo}} & 
+	\textcolor{white}{\textbf{Differenza di costo}}\\	
 	
-Responsabile    &  19 &  0 &  570 &  570 &   0 \\
-Amministratore  &  38 & 15 &  760 & 1060 & 300 \\
-Analista        & 114 & 10 & 2850 & 3100 & 250 \\
-Progettista     &   0 &  0 &    0 &    0 &   0 \\
-Programmatore   &   0 &  0 &    0 &    0 &   0 \\
-Verificatore    &  69 &  4 & 1035 & 1095 &  60 \\
-\textbf{Totale} & 240 & 29 & 5215 & 5825 & 610 \\	
-
+	Responsabile & 19 & 0 & 570 & 570 & 0 \\
+	Amministratore & 38 & 15 & 760 & 1060 & 300 \\
+	Analista & 114 & 10 & 2850 & 3100 & 250 \\
+	Progettista & 0 & 0 & 0 & 0 & 0 \\
+	Programmatore & 0 & 0 & 0 & 0 & 0 \\
+	Verificatore & 69 & 4 & 1035 & 1095 & 60 \\
+	\textbf{Totale} & 240 & 29 & 5215 & 5825 & 610 \\	
+	
 \end{longtable}
-}
 
-\subsubsection{Conclusioni}
+
+\subsection{Conclusioni}
+
 Come riportato dalla tabella, il bilancio risulta essere negativo per un eccesso di ore nei seguenti ruoli:
-\begin{itemize}
-	\item \textbf{Amministratore}: È stata sottostimata l'assegnazione delle ore per la stesura delle \NdP{}, la gestione della documentazione è stata più onerosa di quanto preventivato inizialmente e non è stata fatta una giusta ed esaustiva definizione delle tecnologie per le quali è stata necessaria una loro revisione;
-	\item \textbf{Analista}: Sono servite più ore del previsto per ottenere una struttura coesa e dettagliata dei requisiti;
-	\item \textbf{Verificatore}: Un lavoro maggiore degli analisti e amministratori ha portato ad un dispendio di ore di verifica superiore rispetto alle aspettative.
-\end{itemize}
 
+\begin{itemize}
+	\item \textbf{Amministratore:} E' stata sottostimata l'assegnazione delle ore per la stesura delle \NdP{}, la gestione della documentazione è stata più onerosa di quanto preventivato inizialmente e non è stata fatta una giusta esaustiva definizione delle tecnologie per le quali è stata necessaria una loro revisione;
+	\item \textbf{Analista:} Sono servite più ore del previsto per ottenere una struttura coesa e dettagliata dei requisiti;
+	\item \textbf{Verificatore:} Un lavoro maggiore degli analisti e amministratori ha portato ad un dispendio di ore di verifica superiore rispetto alle aspettative.
+\end{itemize}
 \subsubsection{Ragionamento sugli scostamenti}
+
 In relazione alle motivazioni espresse nelle conclusioni, possiamo affermare che la principale causa dell'eccesso di ore impiegate sia stata dovuta dall'inesperienza dei membri del gruppo. Questa ha portato alla necessità di rielaborare il lavoro, precedentemente svolto in maniera inadeguata, consumando risorse limitate.
 Dunque, alla luce di questa problematica, pensiamo che nelle fasi di Progettazione riscontreremo le stesse difficoltà. Come soluzione a questo problema presteremo più attenzione nella pianificazione delle attività meno conosciute. Mentre per la produzione dei documenti, grazie all'esperienza acquisita, possiamo ridurre il margine utile ad assorbire eventuali ritardi.
 
-\subsubsection{Preventivo a finire}
-Il costo effettivo di questa prima fase non ha influenza sul preventivo in quanto esso si basa solamente sui costi preventivati nelle fasi successive di Progettazione Architetturale, Progettazione di Dettaglio e Codifica, Validazione e Collaudo.\\
-Ciò non toglie che, come evidenziato ragionando sugli scostamenti, il gruppo deve prestare più attenzione e ottimizzare il proprio tempo al fine di evitare di superare il preventivo stabilito. 
