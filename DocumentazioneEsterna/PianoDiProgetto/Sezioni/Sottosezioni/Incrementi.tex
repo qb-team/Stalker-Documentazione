@@ -3,13 +3,14 @@
 \renewcommand{\arraystretch}{2}
 \centering
 	
-\begin{longtable}{C{3cm} C{4cm} C{4cm} C{4cm}}
+\begin{longtable}{C{2.5cm} C{3.2cm} C{2.8cm} C{2.8cm} C{2.8cm}}
 \caption{Tabella degli incrementi}\\
 \rowcolor{darkblue}
 \textcolor{white}{\textbf{Incremento}} &
 \textcolor{white}{\textbf{Obiettivo dell'incremento}} & 
-\textcolor{white}{\textbf{Requisiti dell'app}} &
-\textcolor{white}{\textbf{Requisiti del server}}\\
+\textcolor{white}{\textbf{Requisiti per l'app utenti}} &
+\textcolor{white}{\textbf{Requisiti per il web-app admin}} &
+\textcolor{white}{\textbf{Requisiti per il server}} \\
 \endhead
 
 Incremento 1 & Funzionalità di autenticazione (applicazione e server) & \begin{itemize}
@@ -33,7 +34,7 @@ Incremento 1 & Funzionalità di autenticazione (applicazione e server) & \begin{
     \item[ ] \textbf{R1FA8.3}
     \item[ ] \textbf{R1FA8.4}
 \end{itemize} & \begin{itemize} 
-    % SERVER
+    % WEB-APP ADMIN
     \item[ ] \textbf{R1FI2}
     \item[ ] \textbf{R1FS1.1}
     \item[ ] \textbf{R1FS1.2}
@@ -45,6 +46,9 @@ Incremento 1 & Funzionalità di autenticazione (applicazione e server) & \begin{
     \item[ ] \textbf{R1FS2.1}
     \item[ ] \textbf{R1FS10.1}
     \item[ ] \textbf{R1FS10.2}
+\end{itemize}& \begin{itemize} 
+    % SERVER
+    \item[ ] ?
 \end{itemize}\\
 
 Incremento 2 & Lista delle organizzazioni (applicazione e server) & \begin{itemize}
@@ -70,7 +74,7 @@ Incremento 2 & Lista delle organizzazioni (applicazione e server) & \begin{itemi
     \item[ ] \textbf{R1FA8.5}
     \item[ ] \textbf{R1FA8.6}
 \end{itemize} & \begin{itemize} 
-    % SERVER
+    % WEB-APP ADMIN
     \item[ ] \textbf{R1FC3}
     \item[ ] \textbf{R1FI3}
     \item[ ] \textbf{R1FI5}
@@ -85,6 +89,9 @@ Incremento 2 & Lista delle organizzazioni (applicazione e server) & \begin{itemi
     \item[ ] R2FI4
     \item[ ] R2FI6
     \item[ ] R2FI7
+\end{itemize} & \begin{itemize} 
+    % SERVER
+    \item[ ] .
 \end{itemize}\\
 
 Incremento 3 & Tracciamento & \begin{itemize}
@@ -102,8 +109,8 @@ Incremento 3 & Tracciamento & \begin{itemize}
     \item[ ] R2FA6.8 
     \item[ ] R2FA6.9
     \item[ ] R2FA8.7
-\end{itemize} & \begin{itemize} 
-    % SERVER 
+\end{itemize}& \begin{itemize} 
+    % WEB-APP ADMIN
     \item[ ] \textbf{R1FS5.1}
     \item[ ] \textbf{R1FS5.2}
     \item[ ] \textbf{R1FS5.3}
@@ -118,6 +125,9 @@ Incremento 3 & Tracciamento & \begin{itemize}
     \item[ ] \textbf{R1FS6.3}
     \item[ ] \textbf{R1FS10.9}
     \item[ ] \textbf{R1FS10.10}
+\end{itemize} & \begin{itemize} 
+    % SERVER 
+    \item[ ] .
 \end{itemize}\\
 
 Incremento 4 & Storico accessi di un utente (applicazione) e report tabellari degli accessi (server) & \begin{itemize}
@@ -143,11 +153,14 @@ Incremento 4 & Storico accessi di un utente (applicazione) e report tabellari de
     \item[ ] R2FA8.5
     \item[ ] R2FA8.6
 \end{itemize} & \begin{itemize} 
-    % SERVER
+    % WEB-APP ADMIN
     \item[ ] \textbf{R1FS8.1}
     \item[ ] \textbf{R1FS8.2}
     \item[ ] \textbf{R1FS8.3}
-    \item[ ] \textbf{R1FS8.4}         
+    \item[ ] \textbf{R1FS8.4}  
+\end{itemize} & \begin{itemize} 
+    % SERVER
+    \item[ ] .        
 \end{itemize}\\
 
 Incremento 5 & Autenticazione presso l'organizzazione (applicazione) e modifica dell'organizzazione (server) & \begin{itemize}
@@ -157,7 +170,7 @@ Incremento 5 & Autenticazione presso l'organizzazione (applicazione) e modifica 
     \item[ ] \textbf{R1FA7.3}
     \item[ ] \textbf{R1FA8.8}
 \end{itemize} & \begin{itemize} 
-    % SERVER
+    % WEB-APP ADMIN
     \item[ ] \textbf{R1FS4.1}
     \item[ ] R2FS4.2
     \item[ ] R2FS4.3
@@ -172,13 +185,16 @@ Incremento 5 & Autenticazione presso l'organizzazione (applicazione) e modifica 
     \item[ ] R2FS10.6
     \item[ ] \textbf{R1FS10.7}
     \item[ ] \textbf{R1FS10.8}
+\end{itemize} & \begin{itemize} 
+    % SERVER
+    \item[ ] .
 \end{itemize}\\
 
 Incremento 6 & Gestione amministratori (server) & 
     % APP
     Nessun requisito dell'app previsto per questo incremento.
-& \begin{itemize}
-    % SERVER
+    & \begin{itemize} 
+    % WEB-APP ADMIN
     \item[ ] \textbf{R1FI9}
     \item[ ] \textbf{R1FI10}
     \item[ ] \textbf{R1FI11}
@@ -201,6 +217,9 @@ Incremento 6 & Gestione amministratori (server) &
     \item[ ] \textbf{R1FS10.16}
     \item[ ] \textbf{R1FS10.17}
     \item[ ] R2FS10.18
+\end{itemize} & \begin{itemize}
+    % SERVER
+    \item[ ] .
 \end{itemize}\\
 
 \end{longtable}
