@@ -23,7 +23,7 @@ Nella seguente tabella sono riportati i risultati degli indici di Gulpease otten
 \paragraph{Legenda - Tabella Gulpease}
 \begin{itemize}
 	\item \textbf{Documento}: Nome del documento;
-	\item \textbf{RR}: Periodo di revisione dei requisiti;
+	\item \textbf{RR/RP}: Periodo di revisione dei requisiti;
 	\item  \textbf{Colore giallo}: Indica che il valore ottenuto è accettabile;
 	\item  \textbf{Colore verde}: Indica che il valore ottenuto è ottimo. 
 \end{itemize}
@@ -35,20 +35,20 @@ Nella seguente tabella sono riportati i risultati degli indici di Gulpease otten
 \begin{longtable}{C{4cm} C{1cm} C{1cm} C{1cm} C{1cm}}
 \caption{Elenco degli indici di Gulpease }\\
 \rowcolor{darkblue}
-\textcolor{white}{\textbf{Documento}} & \textcolor{white}{\textbf{RR}} \\
+\textcolor{white}{\textbf{Documento}} & \textcolor{white}{\textbf{RR}} & \textcolor{white}{\textbf{RP}} \\
 \hline
 \endhead
-\AdRv{1.0.0} & \textcolor{verde}{\textbf{95}} \\
-\PdPv{1.0.0} & \textcolor{verde}{\textbf{100}} \\
-\PdQv{1.0.0} & \textcolor{verde}{\textbf{100}} \\
+\AdR & \textcolor{verde}{\textbf{95}} & \textcolor{verde}{\textbf{83}} \\
+\PdP & \textcolor{verde}{\textbf{100}} & \textcolor{verde}{\textbf{100}} \\
+\PdQ & \textcolor{verde}{\textbf{100}} & \textcolor{verde}{\textbf{92}} \\
 
-\NdPv{1.0.0} & \textcolor{giallo}{\textbf{75}} \\
-\SdFv{1.0.0} & \textcolor{verde}{\textbf{94}} \\
+\NdP & \textcolor{giallo}{\textbf{75}} & \textcolor{giallo}{\textbf{76}} \\
+\SdF & \textcolor{verde}{\textbf{94}} & \textcolor{verde}{\textbf{94}} \\
 
-\Glossariov{1.0.0} & \textcolor{giallo}{\textbf{67}} \\
+\Glossario & \textcolor{giallo}{\textbf{67}} & \textcolor{giallo}{\textbf{75}} \\
 
-Media verbali interni & \textcolor{verde}{\textbf{92}} \\
-Media verbali esterni & \textcolor{giallo}{\textbf{65}} \\
+Media verbali interni & \textcolor{verde}{\textbf{92}} & \textcolor{verde}{\textbf{87}} \\
+Media verbali esterni & \textcolor{giallo}{\textbf{65}} & \textcolor{giallo}{\textbf{70}} \\
 
 \end{longtable}
 
@@ -223,17 +223,17 @@ xtick=data
 	\textcolor{white}{\textbf{II periodo RP}} & \textcolor{white}{\textbf{III periodo RP}} \\
 	\hline
 	\endhead
-	\AdR & \textcolor{verde}{\textbf{95}} & - & - \\
-	\PdP & \textcolor{verde}{\textbf{100}} & - & - \\
-	\PdQ & \textcolor{verde}{\textbf{100}} & - & - \\
-	
-	\NdP & \textcolor{giallo}{\textbf{75}} & - & - \\
-	\SdF & \textcolor{verde}{\textbf{94}} & - & - \\
-	
-	\Glossario & \textcolor{giallo}{\textbf{67}} & - & - \\
-	
-	Media verbali interni & \textcolor{verde}{\textbf{92}} & - & - \\
-	Media verbali esterni & \textcolor{giallo}{\textbf{65}} & - & - \\
+	\AdR & \textcolor{verde}{\textbf{83}} & \textcolor{verde}{\textbf{83}} & - \\
+	\PdP & \textcolor{verde}{\textbf{100}} & \textcolor{verde}{\textbf{100}} & - \\
+	\PdQ & \textcolor{verde}{\textbf{92}} & \textcolor{verde}{\textbf{92}} & - \\
+
+	\NdP & \textcolor{giallo}{\textbf{76}} & \textcolor{giallo}{\textbf{76}} & - \\
+	\SdF & \textcolor{verde}{\textbf{94}} & \textcolor{verde}{\textbf{94}} & - \\
+
+	\Glossario & \textcolor{giallo}{\textbf{75}} & \textcolor{giallo}{\textbf{75}} & - \\
+
+	Media verbali interni & \textcolor{verde}{\textbf{87}} & \textcolor{verde}{\textbf{87}} & - \\
+	Media verbali esterni & \textcolor{giallo}{\textbf{70}} & \textcolor{giallo}{\textbf{70}}  & - \\
 	
 \end{longtable}
 
@@ -256,19 +256,21 @@ x tick label style={rotate=45,anchor=east},
 xtick=data
 ]
 \addplot[fill=blue] coordinates
-{(Analisi dei Requisiti, 95) (Piano di Progetto, 100) (Piano di Qualifica, 100) 
-	(Norme di Progetto, 75) (Studio di fattibilita, 94) (Glossario, 67)
-	(Media verbali interni, 92) (Media verbali esterni, 65) (tmp, 100)};
+{(Analisi dei Requisiti, 83) (Piano di Progetto, 100) (Piano di Qualifica, 92) 
+	(Norme di Progetto, 76) (Studio di fattibilita, 94) (Glossario, 75)
+	(Media verbali interni, 87) (Media verbali esterni, 70) (tmp, 100)};
 
 \addplot [fill=orange] coordinates
-{(Analisi dei Requisiti, 0) (Piano di Progetto, 0) (Piano di Qualifica, 0) 
-	(Norme di Progetto, 0) (Studio di fattibilita, 0) (Glossario, 0)
-	(Media verbali interni, 0) (Media verbali esterni, 0) (tmp, 0)};
+{(Analisi dei Requisiti, 83) (Piano di Progetto, 100) (Piano di Qualifica, 92) 
+	(Norme di Progetto, 76) (Studio di fattibilita, 94) (Glossario, 75)
+	(Media verbali interni, 87) (Media verbali esterni, 70) (tmp, 100)};
 
 \addplot [fill=gray] coordinates
 {(Analisi dei Requisiti, 0) (Piano di Progetto, 0) (Piano di Qualifica, 0) 
 	(Norme di Progetto, 0) (Studio di fattibilita, 0) (Glossario, 0) 
 	(Media verbali interni, 0) (Media verbali esterni, 0) (tmp, 0)};
+
+
 
 \legend{
 	I periodo RP,
