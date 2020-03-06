@@ -1,6 +1,6 @@
 %scritto da \PF{}
 \subsubsection{UCA 3 - Gestione lista delle organizzazioni}%kite level
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5, center]{Sezioni/UseCase/Immagini/UCA3.png}
 	\caption{UCA 3 - Gestione lista delle \glo{organizzazioni}}
@@ -48,7 +48,7 @@
 	\item \textbf{Flusso di eventi:}
 			\begin{enumerate}
 			\item L'utente accede alla funzionalità di "Gestioni della lista delle \glo{organizzazioni preferite}";
-			\item Vi è la possibilità di inserire un'\glo{organizzazione} nella lista delle \glo{organizzazioni preferite} dell'utente dell'applicazione [UCA 3.2.1], se però viene richiesto di inserire una \glo{organizzazione} che richiede di autenticarsi con credenziali \glo{LDAP} [UCA 3.2.2] allora l'utente dovrà inserire tali credenziali [UCA 1.1];
+			\item Vi è la possibilità di inserire un'\glo{organizzazione} nella lista delle \glo{organizzazioni preferite} dell'utente dell'applicazione [UCA 3.2.1], se però viene richiesto di inserire una \glo{organizzazione} che richiede di autenticarsi con credenziali \glo{LDAP} [UCA 3.2.2] allora l'utente dovrà inserire tali credenziali [UCA 7];
 			\item Vi è la possibilità di rimuovere un'\glo{organizzazione} dalla lista delle \glo{organizzazioni preferite} dell'utente dell'applicazione [UCA 3.2.3].
 			\end{enumerate}
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle \glo{organizzazioni} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.2];
@@ -56,17 +56,21 @@
 	\begin{itemize}
 		\item UCA 8.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle \glo{organizzazioni}.
 	\end{itemize}
+	\item \textbf{Inclusioni:}
+	\begin{itemize}
+			\item UCA 7 - Autenticazione con credenziali LDAP.
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCA 3.2.1 - Inserimento di una organizzazione nella lista delle organizzazioni preferite dell'utente}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
 	\item \textbf{Precondizione:} L'utente è autenticato sceglie di eseguire la funzionalità di inserimento di un'\glo{organizzazione} nella lista delle \glo{organizzazioni preferite} (solo se ha scaricato precedentemente la lista delle \glo{organizzazioni}).
-	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione}, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
-	\item \textbf{Scenario principale:} Inserimento di una organizzazione nella lista delle organizzazioni preferite dell'utente.
+	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione} che non richiede tracciamento autenticato, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
+	\item \textbf{Scenario principale:} Inserimento di una organizzazione che non richiede tracciamento autenticato nella lista delle organizzazioni preferite dell'utente.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
-		\item L'utente seleziona dalla lista delle \glo{organizzazioni} l'\glo{organizzazione} da inserire nella lista delle \glo{organizzazioni preferite};
+		\item L'utente seleziona dalla lista delle \glo{organizzazioni} l'\glo{organizzazione}, la quale non richiede tracciamento autenticato, da inserire nella lista delle \glo{organizzazioni preferite};
 		\item L'utente conferma l'inserimento nella lista delle \glo{organizzazioni preferite} per l'\glo{organizzazione} scelta.
 	\end{enumerate}
 \end{itemize}
@@ -75,13 +79,13 @@
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
 	\item \textbf{Precondizione:} L'utente è autenticato e sceglie di eseguire la funzionalità di inserimento nella lista delle \glo{organizzazioni preferite} solo se ha scaricato precedentemente la lista delle \glo{organizzazioni}.
-	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione}, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
-	\item \textbf{Scenario principale:} Inserimento di una organizzazione che richiede credenziali LDAP nella lista delle organizzazioni preferite dell'utente.
+	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione}, che richiede tracciamento autenticato, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
+	\item \textbf{Scenario principale:} Inserimento di una organizzazione con tracciamento autenticato nella lista delle organizzazioni preferite dell'utente.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
-		\item L'utente seleziona dalla lista delle \glo{organizzazioni} l'\glo{organizzazione} da inserire nella lista delle \glo{organizzazioni preferite};
+		\item L'utente seleziona dalla lista delle \glo{organizzazioni} l'\glo{organizzazione}, la quale richiede tracciamento autenticato, da inserire nella lista delle \glo{organizzazioni preferite};
 		\item L'utente conferma l'inserimento nella lista delle \glo{organizzazioni preferite} per l'\glo{organizzazione} scelta;
-		\item L'utente si autentica con credenziali \glo{LDAP}.
+		\item L'utente si autentica con credenziali \glo{LDAP} [UCA 7].
 	\end{enumerate}
 	\item \textbf{Inclusioni:}
 	\begin{itemize}
@@ -114,7 +118,7 @@
 	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
 	\item \textbf{Precondizione:} L'utente è autenticato e può aggiornare la lista delle \glo{organizzazioni}.
 	\item \textbf{Postcondizione:} L'utente ha aggiornato la lista di tutte le \glo{organizzazioni}.
-	\item \textbf{Scenario principale:} L'utente ha la necessità di aggiornare la lista e può farlo manualmente con l'apposita funzionalità [UCA 3.3.1] o sarà fatto automaticamente dopo un determinato lasso di tempo [UCA 3.3.2].
+	\item \textbf{Scenario principale:} L'utente ha la necessità di aggiornare la lista e può farlo manualmente con l'apposita funzionalità [UCA 3.3.1] o sarà fatto con temporizzazione [UCA 3.3.2].
 	\item \textbf{Scenario alternativo 1:} Se il tentativo di scaricare la lista fallisce viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.1].
 	\item \textbf{Scenario alternativo 2:} Se non è presente nessuna lista delle \glo{organizzazioni} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.2];
 	\item \textbf{Estensioni:}
