@@ -20,15 +20,15 @@ soddisfatta, è data dall'Indice di Gulpease (MPC6).
 %\end{itemize}
 Nella seguente tabella sono riportati i risultati degli indici di Gulpease ottenuti dai documenti per ogni periodo, successivamente ci sarà un grafico che riporterà l'andamento degli indici di Gulpease per ogni documento a seconda del periodo.
 
-\paragraph{Legenda - Tabella Gulpease}
+
+\paragraph{MPC6 - Indice di Gulpease}
+\subparagraph{Legenda}
 \begin{itemize}
 	\item \textbf{Documento}: Nome del documento;
-	\item \textbf{RR/RP}: Periodo di revisione dei requisiti;
+	\item \textbf{RR}: Periodo di revisione dei requisiti;
 	\item  \textbf{Colore giallo}: Indica che il valore ottenuto è accettabile;
 	\item  \textbf{Colore verde}: Indica che il valore ottenuto è ottimo. 
 \end{itemize}
-
-\paragraph{MPC6 - Indice di Gulpease}
 
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}
@@ -74,6 +74,7 @@ ybar interval=0.5,
 symbolic x coords={Analisi dei Requisiti, Piano di Progetto, Piano di Qualifica, Norme di Progetto, Studio di fattibilita, Glossario,
 Media verbali interni, Media verbali esterni, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
+grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
@@ -83,7 +84,7 @@ xtick=data
 
 \end{axis}
 \end{tikzpicture}
-
+\newpage
 
 \subsection{Revisione di progettazione}
 aaaa
@@ -92,7 +93,7 @@ aaaaa
 
 \subsubsection{Esiti verifiche automatizzate}
 aaaaa
-
+\newpage
 \paragraph{MPC1 - Percentuale requisiti obbligatori soddisfatti} 
 
 \pgfplotsset{width=17cm, height=8cm}
@@ -109,6 +110,7 @@ legend style={at={(0.5,-0.4)},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
+grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
@@ -133,6 +135,7 @@ legend style={at={(0.5,-0.4)},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
+grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
@@ -156,6 +159,7 @@ legend style={at={(0.5,-0.4)},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
+grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
@@ -180,6 +184,7 @@ legend style={at={(0.5,-0.4)},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
+grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
@@ -203,6 +208,7 @@ legend style={at={(0.5,-0.4)},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
+grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
@@ -210,9 +216,16 @@ xtick=data
 
 \end{axis}
 \end{tikzpicture}
-
+\newpage
 
 \paragraph{MPC6 - Indice di Gulpease}
+\subparagraph{Legenda}
+\begin{itemize}
+	\item \textbf{Documento}: Nome del documento;
+	\item \textbf{RP}: Periodo di revisione di progettazione;
+	\item  \textbf{Colore giallo}: Indica che il valore ottenuto è accettabile;
+	\item  \textbf{Colore verde}: Indica che il valore ottenuto è ottimo. 
+\end{itemize}
 
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}
@@ -238,7 +251,7 @@ xtick=data
 \end{longtable}
 
 
-\pgfplotsset{width=17cm, height=10cm}
+\pgfplotsset{width=17cm, height=9cm}
 \begin{tikzpicture}
 
 \begin{axis}[
@@ -253,6 +266,7 @@ ybar interval=0.5,
 symbolic x coords={Analisi dei Requisiti, Piano di Progetto, Piano di Qualifica, Norme di Progetto, Studio di fattibilita, Glossario,
 	Media verbali interni, Media verbali esterni, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
+grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
@@ -280,7 +294,6 @@ xtick=data
 \end{axis}
 \end{tikzpicture}
 
-\paragraph{MPC7 - Code coverage}
 
 \paragraph{MPC8 - Schedule variance}
 \pgfplotsset{width=17cm, height=8cm}
@@ -297,6 +310,7 @@ legend style={at={(0.5,-0.4)},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
+grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
@@ -320,6 +334,7 @@ legend style={at={(0.5,-0.4)},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
+grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
@@ -328,21 +343,46 @@ xtick=data
 \end{axis}
 \end{tikzpicture}
 
-
+\newpage
 \paragraph{MPD1 - Attrattività della User Interface (UI)}
 \pgfplotsset{width=17cm, height=8cm}
-\rowcolors{2}{grigetto}{white}
-\renewcommand{\arraystretch}{1.5}
-\begin{longtable}{C{4cm} C{2cm} C{2cm} C{2cm} C{2cm}}
-	\caption{Elenco delle valutazioni }\\
-	\rowcolor{darkblue}
-	\textcolor{white}{\textbf{Documento}} & \textcolor{white}{\textbf{I periodo RP}} &
-	\textcolor{white}{\textbf{II periodo RP}} & \textcolor{white}{\textbf{III periodo RP}} \\
-	\hline
-	\endhead
-	\textbf{Valutazione} & \textbf{-} & \textcolor{giallo}{\textbf{Attraente}} & \textcolor{giallo}{\textbf{Attraente}} \\
-	
-\end{longtable}
+
+\subparagraph{Legenda}
+\begin{itemize}
+	\item \textbf{1 =} Non Attrattivo;
+	\item \textbf{2 =} Poco attrattivo;
+	\item  \textbf{3 =} Attrattivo;
+	\item  \textbf{4 =} Molto attrattivo. 
+\end{itemize}
+\begin{tikzpicture}
+
+\begin{axis}[
+title=Grafico andamento della complessità ciclomatica del software per ogni periodo,
+x tick label style={
+	/pgf/number format/1000 sep=},
+ylabel=CCS,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+ybar interval=0.33,
+symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+x tick label style={rotate=45,anchor=east},
+grid=major,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+xtick=data
+]
+\addplot[fill=blue] coordinates
+{(I periodo RP, 0) (II periodo RP, 3) (III periodo RP, 3) (tmp, 4)};
+\addplot[fill=orange] coordinates
+{(I periodo RP, 0) (II periodo RP, 2) (III periodo RP, 2) (tmp, 4)};
+
+\legend{
+	Web App,
+	Mobile App
+}
+\end{axis}
+\end{tikzpicture}
 
 \paragraph{MPD2 - Complessità Ciclomatica del Software}
 \pgfplotsset{width=17cm, height=8cm}
@@ -359,10 +399,11 @@ legend style={at={(0.5,-0.4)},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
+grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
-{(I periodo RP, 0) (II periodo RP, 0) (III periodo RP, 0) (tmp, 100)};
+{(I periodo RP, 0) (II periodo RP, 2.19) (III periodo RP, 2.19) (tmp, 7)};
 
 \end{axis}
 \end{tikzpicture}
@@ -382,6 +423,7 @@ legend style={at={(0.5,-0.4)},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
+grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
@@ -390,9 +432,79 @@ xtick=data
 \end{axis}
 \end{tikzpicture}
 
-\paragraph{MPD6 - Maturità dei Test}
+\paragraph{MPD4 - Presenza di code smell}
+\pgfplotsset{width=17cm, height=8cm}
+\begin{tikzpicture}
 
-\paragraph{MPD7 - Profondità Strutturale dell'Interfaccia}
+\begin{axis}[
+title=Grafico dell'andamento del numero di code smell presenti per ogni periodo,
+x tick label style={
+	/pgf/number format/1000 sep=},
+ylabel=numero di code smell,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+ybar interval=0.33,
+symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+x tick label style={rotate=45,anchor=east},
+grid=major,
+xtick=data
+]
+\addplot[fill=blue] coordinates
+{(I periodo RP, 0) (II periodo RP, 80) (III periodo RP, 80) (tmp, 200)};
+
+\end{axis}
+\end{tikzpicture}
+
+\paragraph{MPD5 - Presenza di vulnerabilità}
+\pgfplotsset{width=17cm, height=8cm}
+\begin{tikzpicture}
+
+\begin{axis}[
+title=Grafico dell'andamento del numero di vulnerabilità presenti per ogni periodo,
+x tick label style={
+	/pgf/number format/1000 sep=},
+ylabel=numero di vulnerabilità,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+ybar interval=0.33,
+symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+x tick label style={rotate=45,anchor=east},
+grid=major,
+xtick=data
+]
+\addplot[fill=blue] coordinates
+{(I periodo RP, 0) (II periodo RP, 4) (III periodo RP, 4) (tmp, 20)};
+
+\end{axis}
+\end{tikzpicture}
+
+\paragraph{MPD6 - Presenza di bug}
+\pgfplotsset{width=17cm, height=8cm}
+\begin{tikzpicture}
+
+\begin{axis}[
+title=Grafico dell'andamento del numero di bug presenti per ogni periodo,
+x tick label style={
+	/pgf/number format/1000 sep=},
+ylabel=numero di bug,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+ybar interval=0.33,
+symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+x tick label style={rotate=45,anchor=east},
+grid=major,
+xtick=data
+]
+\addplot[fill=blue] coordinates
+{(I periodo RP, 0) (II periodo RP, 10) (III periodo RP, 10) (tmp, 20)};
+
+\end{axis}
+\end{tikzpicture}
+
+\paragraph{MPD8 - Profondità Strutturale dell'Interfaccia}
 \pgfplotsset{width=17cm, height=8cm}
 \begin{tikzpicture}
 
@@ -407,10 +519,21 @@ legend style={at={(0.5,-0.4)},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
+grid=major,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
 xtick=data
 ]
 \addplot[fill=blue] coordinates
-{(I periodo RP, 0) (II periodo RP, 0) (III periodo RP, 0) (tmp, 100)};
+{(I periodo RP, 0) (II periodo RP, 2) (III periodo RP, 2) (tmp, 5)};
+
+\addplot[fill=orange] coordinates
+{(I periodo RP, 0) (II periodo RP, 2) (III periodo RP, 2) (tmp, 5)};
+
+\legend{
+	Web App,
+	Mobile App
+}
 
 \end{axis}
 \end{tikzpicture}
