@@ -1,5 +1,5 @@
 \section{Resoconto delle attività di verifica}
-In questa sezione vengono descritti ed analizzati gli esiti delle attività di verifica su tutti i documenti destinati alla consegna.
+In questa sezione vengono descritti ed analizzati gli esiti delle attività di verifica nei vari periodi del progetto attraverso le metriche indicate precedentemente e applicate su tutti i documenti destinati alla consegna e sul prodotto da sviluppare.
 
 \subsection{Revisione dei requisiti}
 
@@ -18,7 +18,7 @@ soddisfatta, è data dall'Indice di Gulpease (MPC6).
   %  \item Registro delle modifiche;
   %  \item Riferimenti.
 %\end{itemize}
-Nella seguente tabella sono riportati i risultati degli indici di Gulpease ottenuti dai documenti per ogni periodo, successivamente ci sarà un grafico che riporterà l'andamento degli indici di Gulpease per ogni documento a seconda del periodo.
+Nella seguente tabella sono riportati i risultati degli indici di Gulpease ottenuti dai documenti per ogni periodo, successivamente ci sarà un grafico che riporterà l'andamento degli indici di Gulpease per ogni documento.
 
 
 \paragraph{MPC6 - Indice di Gulpease}
@@ -32,23 +32,23 @@ Nella seguente tabella sono riportati i risultati degli indici di Gulpease otten
 
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}
-\begin{longtable}{C{4cm} C{1cm} C{1cm} C{1cm} C{1cm}}
+\begin{longtable}{C{4cm} C{1cm} C{1cm} C{1cm}}% C{1cm}}
 \caption{Elenco degli indici di Gulpease }\\
 \rowcolor{darkblue}
-\textcolor{white}{\textbf{Documento}} & \textcolor{white}{\textbf{RR}} & \textcolor{white}{\textbf{RP}} \\
+\textcolor{white}{\textbf{Documento}} & \textcolor{white}{\textbf{RR}} \\ % & \textcolor{white}{\textbf{RP}} \\
 \hline
 \endhead
-\AdR & \textcolor{verde}{\textbf{95}} & \textcolor{verde}{\textbf{83}} \\
-\PdP & \textcolor{verde}{\textbf{100}} & \textcolor{verde}{\textbf{100}} \\
-\PdQ & \textcolor{verde}{\textbf{100}} & \textcolor{verde}{\textbf{92}} \\
+\AdR & \textcolor{verde}{\textbf{95}} \\% & \textcolor{verde}{\textbf{83}} \\
+\PdP & \textcolor{verde}{\textbf{100}} \\ % & \textcolor{verde}{\textbf{100}} \\
+\PdQ & \textcolor{verde}{\textbf{100}}\\% & \textcolor{verde}{\textbf{92}} \\
 
-\NdP & \textcolor{giallo}{\textbf{75}} & \textcolor{giallo}{\textbf{76}} \\
-\SdF & \textcolor{verde}{\textbf{94}} & \textcolor{verde}{\textbf{94}} \\
+\NdP & \textcolor{giallo}{\textbf{75}}\\% & \textcolor{giallo}{\textbf{76}} \\
+\SdF & \textcolor{verde}{\textbf{94}} \\% & \textcolor{verde}{\textbf{94}} \\
 
-\Glossario & \textcolor{giallo}{\textbf{67}} & \textcolor{giallo}{\textbf{75}} \\
+\Glossario & \textcolor{giallo}{\textbf{67}}\\ % & \textcolor{giallo}{\textbf{75}} \\
 
-Media verbali interni & \textcolor{verde}{\textbf{92}} & \textcolor{verde}{\textbf{87}} \\
-Media verbali esterni & \textcolor{giallo}{\textbf{65}} & \textcolor{giallo}{\textbf{70}} \\
+Media verbali interni & \textcolor{verde}{\textbf{92}}\\ % & \textcolor{verde}{\textbf{87}} \\
+Media verbali esterni & \textcolor{giallo}{\textbf{65}}\\ % & \textcolor{giallo}{\textbf{70}} \\
 
 \end{longtable}
 
@@ -87,13 +87,15 @@ xtick=data
 \newpage
 
 \subsection{Revisione di progettazione}
-aaaa
 \subsubsection{Analisi statica dei documenti}
-aaaaa
+In questo periodo di tempo i membri del gruppo \Gruppo{} hanno analizzato i documenti mediante la tecnica l'Inspection abbandonando la tecnica di walkthrough dato che il gruppo ha acquisito abbastanza esperienza da poter usare la tecnica di Inspection riducendo cosi i costi di verifica. In questo periodo sono stati corretti gli errori riscontrati e aggiornati i vari documenti portandoli a una nuova versione di rilascio.
+
+\subsubsection{Analisi statica del codice}
+In questo periodo di tempo il gruppo è stato molto impegnato nello sviluppo del $\glo{Proof$ $of$ $Concept}$, perciò è stato necessario adottarsi di strumenti per la stesura e verifica statica del codice. 
 
 \subsubsection{Esiti verifiche automatizzate}
-aaaaa
-\newpage
+Di seguito verranno mostrati gli esiti delle metriche di cui è stato possibile applicare purtroppo non è stato possibile applicate le metriche \textbf{MPC7} e \textbf{MPD7}, dopo la visione degli esiti ci sarà una sezione dedicata all'analisi dei risultati.
+
 \paragraph{MPC1 - Percentuale requisiti obbligatori soddisfatti} 
 
 \pgfplotsset{width=17cm, height=8cm}
