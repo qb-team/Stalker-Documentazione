@@ -112,7 +112,7 @@ x tick label style={rotate=45,anchor=east},
 xtick=data
 ]
 \addplot[fill=blue] coordinates
-{(I periodo RP, 0) (II periodo RP, 0) (III periodo RP, 0) (tmp, 100)};
+{(I periodo RP, 0) (II periodo RP, 26) (III periodo RP, 26) (tmp, 100)};
 
 \end{axis}
 \end{tikzpicture}
@@ -159,7 +159,7 @@ x tick label style={rotate=45,anchor=east},
 xtick=data
 ]
 \addplot[fill=blue] coordinates
-{(I periodo RP, 0) (II periodo RP, 0) (III periodo RP, 0) (tmp, 100)};
+{(I periodo RP, 0) (II periodo RP, 1.1) (III periodo RP, 1.1) (tmp, 5)};
 
 \end{axis}
 \end{tikzpicture}
@@ -183,7 +183,7 @@ x tick label style={rotate=45,anchor=east},
 xtick=data
 ]
 \addplot[fill=blue] coordinates
-{(I periodo RP, 0) (II periodo RP, 0) (III periodo RP, 0) (tmp, 100)};
+{(I periodo RP, 0) (II periodo RP, 0.87) (III periodo RP, 0.87) (tmp, 9)};
 
 \end{axis}
 \end{tikzpicture}
@@ -206,7 +206,7 @@ x tick label style={rotate=45,anchor=east},
 xtick=data
 ]
 \addplot[fill=blue] coordinates
-{(I periodo RP, 0) (II periodo RP, 25) (III periodo RP, 25) (tmp, 100)};
+{(I periodo RP, 0) (II periodo RP, 13) (III periodo RP, 13) (tmp, 100)};
 
 \end{axis}
 \end{tikzpicture}
@@ -326,53 +326,8 @@ xtick=data
 \end{axis}
 \end{tikzpicture}
 
-\paragraph{MPD1 - Aderenza agli Standard di Funzioni o Interfacce}
-\pgfplotsset{width=17cm, height=8cm}
-\begin{tikzpicture}
 
-\begin{axis}[
-title=Grafico andamento aderenza agli standard di funzioni o interfacce per ogni periodo,
-x tick label style={
-	/pgf/number format/1000 sep=},
-ylabel=aderenza,
-enlargelimits=0.05,
-legend style={at={(0.5,-0.4)},
-	anchor=north,legend columns=-1},
-ybar interval=0.33,
-symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
-xtick=data
-]
-\addplot[fill=blue] coordinates
-{(I periodo RP, 0) (II periodo RP, 0) (III periodo RP, 0) (tmp, 100)};
-
-\end{axis}
-\end{tikzpicture}
-
-\paragraph{MPD2 - Validità dei Dati d'Input}
-\pgfplotsset{width=17cm, height=8cm}
-\begin{tikzpicture}
-
-\begin{axis}[
-title=Grafico andamento della validità dei dati d'input per ogni periodo,
-x tick label style={
-	/pgf/number format/1000 sep=},
-ylabel=validità dei dati d'input,
-enlargelimits=0.05,
-legend style={at={(0.5,-0.4)},
-	anchor=north,legend columns=-1},
-ybar interval=0.33,
-symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
-xtick=data
-]
-\addplot[fill=blue] coordinates
-{(I periodo RP, 0) (II periodo RP, 0) (III periodo RP, 0) (tmp, 100)};
-
-\end{axis}
-\end{tikzpicture}
-
-\paragraph{MPD3 - Attrattività della User Interface (UI)}
+\paragraph{MPD1 - Attrattività della User Interface (UI)}
 \pgfplotsset{width=17cm, height=8cm}
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}
@@ -387,7 +342,7 @@ xtick=data
 	
 \end{longtable}
 
-\paragraph{MPD4 - Complessità Ciclomatica del Software}
+\paragraph{MPD2 - Complessità Ciclomatica del Software}
 \pgfplotsset{width=17cm, height=8cm}
 \begin{tikzpicture}
 
@@ -410,7 +365,7 @@ xtick=data
 \end{axis}
 \end{tikzpicture}
 
-\paragraph{MPD5 - Unità Documentate}
+\paragraph{MPD3 - Unità Documentate}
 \pgfplotsset{width=17cm, height=8cm}
 \begin{tikzpicture}
 
