@@ -32,12 +32,36 @@ Nella seguente tabella sono riportati i risultati degli indici di Gulpease otten
 	\item  \textbf{Colore verde}: Indica che il valore ottenuto è ottimo. 
 \end{itemize}
 \newpage
-{
+
+\paragraph{MPC4}
+\pgfplotsset{width=17cm, height=10cm}
+\begin{tikzpicture}
+
+\begin{axis}[
+title=Grafico andamento linee di commento per linee di codice per ogni periodo,
+x tick label style={
+/pgf/number format/1000 sep=},
+ylabel=\% linee di commento/linee di codice,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+anchor=north,legend columns=-1},
+ybar interval=0.33,
+symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+x tick label style={rotate=45,anchor=east},
+xtick=data
+]
+\addplot[fill=blue] coordinates
+{(I periodo RP, 0) (II periodo RP, 25) (III periodo RP, 25) (tmp, 100)};
+
+\end{axis}
+\end{tikzpicture}
+
+
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}
 \centering
 \begin{longtable}{C{4cm} C{1cm} C{1cm} C{1cm} C{1cm}}
-\caption{Elenco dei indici di Gulpease }\\
+\caption{Elenco degli indici di Gulpease }\\
 \rowcolor{darkblue}
 \textcolor{white}{\textbf{Documento}} & \textcolor{white}{\textbf{RR}} &
 \textcolor{white}{\textbf{RP}} & \textcolor{white}{\textbf{RQ}} & 
