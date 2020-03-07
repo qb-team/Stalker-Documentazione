@@ -187,9 +187,19 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
     \paragraph{Processi organizzativi}
 
 \subparagraph{Pianificazione}
-    \subsubparagraph{Metrica - Schedule variance}
+
+\subsubparagraph{Metrica - Actual cost}
     \begin{itemize}
         \item \textbf{Codice:} MPC10
+        \item \textbf{Descrizione:} Denaro speso fino al momento del calcolo;
+        \item \textbf{Processo di riferimento:} Gestione;
+        \item \textbf{Sigla:} $AC$
+        \item \textbf{Formula:} $$AC = {}$$
+    \end{itemize}
+
+    \subsubparagraph{Metrica - Schedule variance}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC11
         \item \textbf{Descrizione:} È il valore che indica se si è in linea ($=0$), in anticipo ($>0$) oppure in ritardo ($<0$) rispetto alla schedulazione delle attività di progetto pianificate nella \glo{baseline};
         \item \textbf{Processo di riferimento:} Gestione;
         \item \textbf{Sigla:} $SV$
@@ -199,16 +209,11 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
             \item $BCWP$ = Budgeted Cost of Work Performed (valore delle attività eseguite nella data corrente);
             \item $BCWS$ = Budgeted Cost of Work Scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente);
         \end{itemize}
-        \item \textbf{Range di valori che può assumere:}
-        \begin{itemize}
-            \item \textbf{Accettabile:} $SV = 0$
-            \item \textbf{Ottimale:} $SV > 0$
-        \end{itemize}
     \end{itemize}
 
     \subsubparagraph{Metrica - Budget variance}
         \begin{itemize}
-            \item \textbf{Codice:} MPC11
+            \item \textbf{Codice:} MPC12
             \item \textbf{Descrizione:} È il valore che indica se alla data corrente si è speso di più ($>0$) o di meno ($<0$) rispetto a quanto pianificato dal budget totale $B_{tot}$;
             \item \textbf{Processo di riferimento:} Gestione;
             \item \textbf{Sigla:} $BV$
@@ -218,11 +223,6 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
                 \item $BCWS$ = Budgeted Cost of Work Scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente);
                 \item $ACWP$ = Actual Cost of Work Performed (costo effettivamente sostenuto alla data corrente);
                 \item $B_{tot}$ = Budget totale.
-            \end{itemize}
-            \item \textbf{Range di valori che può assumere:}
-            \begin{itemize}
-                \item \textbf{Accettabile:} $0 \leq BV < ACWP$
-                \item \textbf{Ottimale:} $0 \leq BV \leq B_{tot}$
             \end{itemize}
         \end{itemize}
 \newpage
