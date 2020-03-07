@@ -1,7 +1,7 @@
 \subsubsection{UCS 5 - Modifica delle funzionalità di tracciamento dell'organizzazione}%kite level
 \begin{figure}[h]
 	\centering
-    \includegraphics[scale=0.40]{Sezioni/UseCase/Immagini/UCS5(Corretto).png}
+    \includegraphics[scale=0.40]{Sezioni/UseCase/Immagini/UCS5.png}
     \caption{UCS 5 - Modifica delle funzionalità di \glo{tracciamento} dell'\glo{organizzazione}}
 \end{figure}
 \begin{itemize}
@@ -20,7 +20,7 @@
 \subsubsection{UCS 5.1 - Modificare il perimetro di tracciamento dell'organizzazione}%sea level
 \begin{itemize}
     \item \textbf{Attori primari:} Amministratore gestore
-    \item \textbf{Precondizione:} L'amministratore si trova nella selezione dell’area geografica per il tracciamento dell'\glo{organizzazione} [UCS 5.5].
+    \item \textbf{Precondizione:} L'amministratore ha selezionato l’area geografica per il tracciamento dell'\glo{organizzazione} [UCS 5.5].
     \item \textbf{Postcondizione:} L'amministratore ha modificato con successo il \glo{perimetro} di \glo{tracciamento} dell'\glo{organizzazione}.
     \item \textbf{Scenario principale:} L'amministratore dovrà selezionare l'area geografica del \glo{perimetro} da tracciare.
      \item \textbf{Scenario alternativo:} L'amministratore ha selezionato un area che non rispetta i vincoli imposti. Verrà visualizzato un messaggio d'errore [UCS 10.5.1].
@@ -28,10 +28,6 @@
     \begin{enumerate}%flusso di eventi
         \item L'amministratore seleziona la funzionalità di modifica del \glo{perimetro} di \glo{tracciamento} dell'\glo{organizzazione};
         \item L'amministratore seleziona un'area geografica da associare al \glo{perimetro} di \glo{tracciamento} dell'\glo{organizzazione} [UCS 5.5]. L'area selezionata deve rispettare i vincoli imposti.
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{enumerate}
-        \item UCS 5.5 - Selezione dell'area geografica per il tracciamento.
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}
@@ -42,7 +38,7 @@
 \subsubsection{UCS 5.2 - Aggiunta di un luogo di tracciamento}%sea level
 \begin{itemize}
     \item \textbf{Attori primari:} Amministratore gestore
-    \item \textbf{Precondizione:} L'amministratore si trova nella selezione dell’area geografica per il tracciamento dell'\glo{organizzazione} [UCS 5.5].
+    \item \textbf{Precondizione:} L'amministratore ha selezionato l’area geografica per il tracciamento dell'\glo{organizzazione} [UCS 5.5].
     \item \textbf{Postcondizione:} L'amministratore ha aggiunto con successo un \glo{luogo} di tracciamento.
     \item \textbf{Scenario principale:} L'amministratore dovrà inserire i dati per il nuovo \glo{luogo} da tracciare e l'area geografica del luogo da tracciare.
     \item \textbf{Scenario alternativo:} L'amministratore ha selezionato un area che fuoriesce dall'area che definisce il \glo{perimetro}. Verrà visualizzato un messaggio d'errore [UCS 10.5.2].
@@ -53,10 +49,6 @@
         \item L'amministratore seleziona un'area geografica da associare al \glo{luogo} di tracciamento. L'area selezionata rispetta i vincoli imposti [UCS 5.5]; 
         \item L'amministratore seleziona la funzionalità per salvare le modifiche apportate.
     \end{enumerate}   
-    \item \textbf{Inclusioni:}
-    \begin{enumerate}
-        \item UCS 5.5 - Selezione dell'area geografica per il tracciamento.
-    \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}
         \item UCS 10.5.2 - L'area selezionata fuoriesce dall'area che definisce il perimetro.
@@ -74,7 +66,7 @@
 \subsubsection{UCS 5.3 - Modifica dell'area di tracciamento di un luogo}%sea level
 \begin{itemize}
     \item \textbf{Attori primari:} Amministratore gestore
-    \item \textbf{Precondizione:} L'amministratore si trova nella selezione dell’area geografica per il tracciamento dell'\glo{organizzazione} [UCS 5.5].
+    \item \textbf{Precondizione:} L'amministratore ha selezionato l’area geografica per il tracciamento dell'\glo{organizzazione} [UCS 5.5].
     \item \textbf{Postcondizione:} L'amministratore ha modificato con successo l'area di \glo{tracciamento} del \glo{luogo}.
     \item \textbf{Scenario principale:} L'amministratore dovrà selezionare una nuova area per il \glo{tracciamento} del \glo{luogo} scelto.
     \item \textbf{Scenario alternativo:} L'amministratore ha selezionato un area che fuoriesce dall'area che definisce il \glo{perimetro}. Verrà visualizzato un messaggio d'errore [UCS 10.5.2].
@@ -84,10 +76,6 @@
         \item L'amministratore seleziona il \glo{luogo} da modificare;
         \item L'amministratore seleziona un'area geografica da associare al \glo{luogo} di \glo{tracciamento} [UCS 5.5];
         \item L'amministratore seleziona la funzionalità per salvare le modifiche apportate.
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{enumerate}
-        \item UCS 5.5 - Selezione dell'area geografica per il tracciamento.
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{enumerate}
