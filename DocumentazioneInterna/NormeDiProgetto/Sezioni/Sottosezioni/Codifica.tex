@@ -6,6 +6,10 @@ Lo scopo della codifica consiste nell'implementare le specifiche del prodotto de
 Questa sezione viene redatta durante la fase iniziale del progetto e il suo contenuto è limitato alle disponibilità di conoscenza attuali.
 Verrà ampliata in seguito per l'attività di \textbf{Codifica}.
 
+\paragraph{Intestazione dei file}\mbox{}\\ \\
+Questa sezione viene redatta durante la fase iniziale del progetto e il suo contenuto è limitato alle disponibilità di conoscenza attuali.
+Verrà ampliata in seguito per l'attività di \textbf{Codifica}.
+
 \paragraph{Commenti}\mbox{}\\ \\
 Il codice sorgente deve essere adeguatamente commentato, sia per chi lo scrive, sia per chi lo deve leggere in futuro.
 È quindi necessario che ogni porzione di codice significativa sia dotata di commenti esplicativi, in particolar modo se le istruzioni usate non sono comuni.
@@ -33,3 +37,28 @@ I nomi delle variabili:
     \item Se formati da più parole si devono scrivere usando l'underscore come separatore (\glo{Snake Case}) oppure separando i termini con una lettera maiuscola ad ogni inizio parola (\glo{Camel Case});
     \item Devono rispettare le condizioni del linguaggio in cui vengono usate, se presenti.
 \end{itemize}
+
+\paragraph{Stile di codifica}\mbox{}\\ \\
+Il gruppo qbteam al fine di garantire una maggiore leggibilità, uniformità e manuntenibilità del codice prodotto, ha deciso di utilizzare uno standard di codifica. Per quanto riguarda la parte di applicazione mobile si è utilizzato il plugin checkstyle \href{https://checkstyle.sourceforge.io}{https://checkstyle.sourceforge.io} per \glo{maven} e per \glo{gradle}. Invece per la parte di interfaccia web il gruppo ha fatto riferimento al plugin tslint \href{https://palantir.github.io/tslint/}{https://palantir.github.io/tslint/}. 
+Per emtrambi i plugin, si è deciso di configurare lo stile di codifica seguendo le seguenti regole:
+\begin{itemize}
+	\item AbstractClassName;
+	\item BooleanExpressionComplexity;
+	\item ConstantName;
+	\item IllegalType;
+	\item Indentation;
+	\item LineLength;
+	\item MethodName;
+	\item TypeName.
+\end{itemize}
+
+Per quanto riguarda l'intestazione dei file, ogni file deve rispettare le seguenti regole: 
+\begin{itemize}
+	\item nome e cognome di chi ha prodotto il file;
+	\item data di creazione;
+	\item data ultima modifica;
+	\item breve descrizione del contenuto del file.
+\end{itemize} 
+
+Il codice e i commenti devono essere scritti in lingua inglese.
+
