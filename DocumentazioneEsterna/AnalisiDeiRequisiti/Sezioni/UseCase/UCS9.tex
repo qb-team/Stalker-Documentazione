@@ -1,11 +1,3 @@
-\newpage
-\subsubsection{Panoramica UCS 9}%sea level
-\begin{figure}[h]
-  \centering
-    \includegraphics[scale=0.5]{Sezioni/UseCase/Immagini/PanoramicaUCS9.png}
-  \caption{Panoramica UCS 9}
-\end{figure}
-
 \subsubsection{UCS 9 - Gestione degli amministratori}%sea level
 \begin{figure}[h]
     \centering
@@ -165,4 +157,35 @@
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
 \item \textbf{Postcondizione:} L'amministratore annullato le modifiche che stava apportando agli amministratori.
 \item \textbf{Scenario principale:} L'amministratore seleziona la funzionalità di annullamento modifiche.
+\end{itemize}
+
+\subsubsection{UCS 9.5 - Nomina di un nuovo amministratore già presente nel server LDAP}%sea level
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore proprietario
+%\item \textbf{Attori secondari:}%opzionale
+\item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
+\item \textbf{Postcondizione:} L'amministratore ha nominato un account già presente nel server LDAP come amministratore della propria organizzazione.
+\item \textbf{Scenario principale:} L'amministratore compila il modulo per nominare un account già presente nel sistema come amministratore della propria organizzazione.
+\item \textbf{Flusso di eventi:} %elenco puntato
+  \begin{enumerate}
+        \item Inserimento indirizzo e-mail [UCS 9.5.1];
+        \item Selezione dei privilegi del nuovo amministratore [UCS 9.5.2]. Si dovrà scegliere tra "Visualizzatore" e "Gestore".
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UCS 9.5.1 - Inserimento e-mail}
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore proprietario
+\item \textbf{Precondizione:} L'amministratore si trova nella funzionalità per la nomina di un nuovo amministratore già presente nel sistema.
+\item \textbf{Postcondizione:} L'utente ha inserito l'e-mail per l'account del nuovo amministratore.
+\item \textbf{Scenario principale:} Inserimento dell'email per il nuovo amministratore.
+\end{itemize}
+
+
+\subsubsection{UCS 9.5.2 - Selezione dei privilegi del nuovo amministratore}
+\begin{itemize}
+\item \textbf{Attori primari:} Amministratore proprietario
+\item \textbf{Precondizione:} L'amministratore si trova nella funzionalità per la nomina di un nuovo amministratore già presente nel sistema.
+\item \textbf{Postcondizione:} L'amministratore ha selezionato tra "Visualizzatore" e "Gestore" come privilegi garantiti al nuovo amministratore da nominare.
+\item \textbf{Scenario principale:} Selezione dei privilegi per il nuovo amministratore.
 \end{itemize}
