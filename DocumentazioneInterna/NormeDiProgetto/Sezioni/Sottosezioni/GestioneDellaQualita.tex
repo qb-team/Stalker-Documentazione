@@ -187,7 +187,7 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 
 \subparagraph{Pianificazione}
 
-\subsubparagraph{Metrica - Actual cost of Work Performed}
+\subsubparagraph{Metrica - Actual Cost of Work Performed}
     \begin{itemize}
         \item \textbf{Codice:} MPC10
         \item \textbf{Descrizione:} Denaro speso fino al momento del calcolo;
@@ -203,17 +203,25 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 	\item \textbf{Descrizione:} Costo pianificato per realizzare le attività di progetto fino al momento del calcolo;
 	\item \textbf{Processo di riferimento:} Gestione;
 	\item \textbf{Sigla:} $BCWS$
-	\item \textbf{Formula:} $$BCWS = {preventivo(costo pianificato) * \% di lavoro pianificato}$$
+	\item \textbf{Formula:} $$BCWS = {B_{tot} * \% \;di\; lavoro\; pianificato}$$
+	con:
+	\begin{itemize}
+		\item $B_{tot}$ = Budget totale.
+	\end{itemize}
 	\item \textbf{Strumenti utilizzati:} Fogli Google.
 \end{itemize}
 
 \subsubparagraph{Metrica - Budgeted Cost of Work Performed}
 \begin{itemize}
 	\item \textbf{Codice:} MPC12
-	\item \textbf{Descrizione:} Costo pianificato per realizzare le attività di progetto fino al momento del calcolo;
+	\item \textbf{Descrizione:} Valore del lavoro fatto fino al momento del calcolo, quanto lavoro si è fatto al costo pianificato;
 	\item \textbf{Processo di riferimento:} Gestione;
-	\item \textbf{Sigla:} $BCWS$
-	\item \textbf{Formula:} $$BCWS = {preventivo(costo pianificato) * \% di lavoro effettivamento fatto}$$
+	\item \textbf{Sigla:} $BCWP$
+	\item \textbf{Formula:} $$BCWP = {B_{tot} * \% \;di\; lavoro\; svolto}$$
+	con:
+	\begin{itemize}
+		\item $B_{tot}$ = Budget totale.
+	\end{itemize}
 	\item \textbf{Strumenti utilizzati:} Fogli Google.
 \end{itemize}
 
@@ -228,8 +236,8 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
         \begin{itemize}
             \item $BCWP$ = Budgeted Cost of Work Performed (valore delle attività eseguite nella data corrente);
             \item $BCWS$ = Budgeted Cost of Work Scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente);
-            \item \textbf{Strumenti utilizzati:} Fogli Google.
         \end{itemize}
+    \item \textbf{Strumenti utilizzati:} Fogli Google.
     \end{itemize}
 
     \subsubparagraph{Metrica - Budget variance}
