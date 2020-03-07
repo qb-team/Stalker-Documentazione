@@ -15,18 +15,18 @@ La seguente tabella illustra la differenza oraria ed economica rilevata a poster
 
 \textcolor{white}{\textbf{Ruolo}} & 
 \textcolor{white}{\textbf{Ore preventivate}} & 
-\textcolor{white}{\textbf{Ore supplementari}} & 
+\textcolor{white}{\textbf{Variazione oraria}} & 
 \textcolor{white}{\textbf{Costo preventivato (in \euro{})}} & 
 \textcolor{white}{\textbf{Costo effettivo (in \euro{})}} & 
-\textcolor{white}{\textbf{Differenza di costo (in \euro{})}}\\	
+\textcolor{white}{\textbf{Variazione di costo (in \euro{})}}\\	
 	
-Responsabile    &  19 &  0 &  570 &  570 &   0 \\
-Amministratore  &  38 & 15 &  760 & 1060 & 300 \\
-Analista        & 114 & 10 & 2850 & 3100 & 250 \\
-Progettista     &   0 &  0 &    0 &    0 &   0 \\
-Programmatore   &   0 &  0 &    0 &    0 &   0 \\
-Verificatore    &  69 &  4 & 1035 & 1095 &  60 \\
-\textbf{Totale} & 240 & 29 & 5215 & 5825 & 610 \\	
+Responsabile    &  19 &   0 &  570 &  570 &    0 \\
+Amministratore  &  38 & +15 &  760 & 1060 & +300 \\
+Analista        & 114 & +10 & 2850 & 3100 & +250 \\
+Progettista     &   0 &   0 &    0 &    0 &    0 \\
+Programmatore   &   0 &   0 &    0 &    0 &    0 \\
+Verificatore    &  69 &  +4 & 1035 & 1095 &  +60 \\
+\textbf{Totale} & 240 & +29 & 5215 & 5825 & +610 \\	
 
 \end{longtable}
 }
@@ -60,41 +60,40 @@ Ciò non toglie che, come evidenziato ragionando sugli scostamenti, il gruppo de
 
 \textcolor{white}{\textbf{Ruolo}} & 
 \textcolor{white}{\textbf{Ore preventivate}} & 
-\textcolor{white}{\textbf{Ore supplementari}} & 
+\textcolor{white}{\textbf{Variazione oraria}} & 
 \textcolor{white}{\textbf{Costo preventivato (in \euro{})}} & 
 \textcolor{white}{\textbf{Costo effettivo (in \euro{})}} & 
-\textcolor{white}{\textbf{Differenza di costo (in \euro{})}}\\	
+\textcolor{white}{\textbf{Variazione di costo (in \euro{})}}\\	
 	
-Responsabile    & 19 & -6 & 570 & 0 & 0 \\
-Amministratore  & 24 & -2 & 480 & 430 & -50 \\
-Analista        & 27 & -5 & 675 & 550 & -125 \\
-Progettista     & 69 & -30 & 1518 & 858 & -660 \\
-Programmatore   & 46 & 25 & 690 & 1065 & 375 \\
-Verificatore    & 66 & ? & 990 & ? & 0 \\
-\textbf{Totale} & 251 & ? & 4923 & 0 & 0 \\	
+Responsabile    &  19 &  -2 &  570 &  510 &  -60 \\
+Amministratore  &  24 &   0 &  480 &  480 &    0 \\
+Analista        &  27 &  -3 &  675 &  600 &  -75 \\
+Progettista     &  69 & -28 & 1518 &  902 & -616 \\
+Programmatore   &  46 & +36 &  690 & 1230 & +540 \\
+Verificatore    &  66 &  +1 &  990 & 1005 &  +15 \\
+\textbf{Totale} & 251 &  +3 & 4923 & 4727 & -196 \\	
 
 \end{longtable}
 }
 
 \subsubsection{Conclusioni}
-Come riportato dalla tabella, il bilancio risulta essere positivo per eccesso nei seguenti ruoli:
+Come riportato dalla tabella, il bilancio risulta essere particolarmente diverso da quello preventivato per i due ruoli di progettista e programmatore, mentre ci sono stati alcuni cambiamenti per gli altri.\\
+In particolar modo:
 \begin{itemize}
-	\item \textbf{Amministratore}: ;
-	\item \textbf{Analista}: ;
-	\item \textbf{Progettista}: A differenza della pianificazione calcolata la parte progettuale si è attuata in tempi nettamente inferiori. Questo è dovuto per l'inesperienza 
-	di pianificazione del gruppo; 
-	\item \textbf{Programmatore}: 
-	\item \textbf{Verificatore}: ? .
-\end{itemize}
-
-Come riportato dalla tabella, il bilancio risulta essere negativo per eccesso nei seguenti ruoli:
-\begin{itemize}
-	\item \textbf{Amministratore}: ;
-	\item \textbf{Analista}: ;
-	\item \textbf{Programmatore}: A differenza della pianificazione calcolata la parte di programmazione si è attutata in tempi nettamente maggiori. Ciò è dovuto sia per 
-	l'inesperienza di pianificazione ma anche problemi legati nella scrittura del codice, sul come integrare gli algoritmi tra di loro o legami tra applicazione e server in 
-	maniera sensata ed infine sull'interfaccia grafica.
+	\item \textbf{Amministratore}: Questo ruolo non si è discostato, dovute al fatto che le attività di suo interesse erano già state portate avanti correttamente a sufficienza nella precedente \glo{fase} e non sono state necessarie ore extra;
+	\item \textbf{Analista}: Per questo ruolo c'è stato un difetto di 3 ore rispetto a quelle preventivate poiché durante la pianificazione oraria si è cercato di essere abbastanza certi nel rimanere entro i tempi per la correzione del documento molto importante di \AdR{};
+	\item \textbf{Progettista}: A differenza della pianificazione svolta, la parte progettuale si è attuata in tempi nettamente inferiori. Questo è dovuto al fatto che il \glo{PoC} da realizzare è stato concentrato su pochi requisiti essenziali per dimostrare la validità
+	del prodotto che si vuole realizzare. Le ore di progettazione sono state quasi tutte impiegate per comprendere come realizzare l'architettura che permette alle parti del prodotto (app, web-app e server) di comunicare fra loro mentre non ci si è concentrati molto su dettagli
+	di grana più fine che sono invece oggetto della prossima fase preventivata;
+	\item \textbf{Programmatore}: A differenza della pianificazione svolta, la parte di programmazione si è attutata in tempi nettamente maggiori. Ciò è dovuto sia per 
+	l'inesperienza di pianificazione ma anche per problemi legati nella scrittura del codice, sul come integrare le unità software tra di loro e, per quanto riguarda l'app e la web-app, la realizzazione dell'interfaccia grafica;
+	\item \textbf{Verificatore}: A meno di un'ora di differenza, il lavoro necessario per il ruolo di verificatore è stato preventivato correttamente. L'ora extra è stata utilizzata per ulteriori attività di verifica di tipo "Inspection" in punti ritenuti critici.
 \end{itemize}
 \subsubsection{Ragionamento sugli scostamenti}
+Dalle conclusioni si può notare come nei ruoli in cui è stata acquisita più esperienza si è riusciti a rientrare nei limiti preventivati di budget, mentre per i nuovi ruoli di Progettista e Programmatore c'è stata un'importante differenza.
+Avendo realizzato il \glo{Proof of Concept} e apprese le tecnologie della \glo{Technology Baseline} è stato superato un importante scoglio che ha fatto superare molto il limite fissato per le ore di programmazione.
+Essendo il programmatore un ruolo a costo inferiore rispetto al progettista, l'avanzo di budget verrà sfruttato per ore extra di progettazione rispetto a quelle preventivate nella progettazione di dettaglio, potendo analizzare più in profondità il problema
+e avendo un riparo da possibili ulteriori difetti di previsione.
 
 \subsubsection{Preventivo a finire}
+Il preventivo a finire è attualmente inferiore di \euro{} 196, portandolo di conseguenza a un totale finale di \euro{} 14876. L'avanzo verrà utilizzato, come precedentemente affermato, per svolgere le attività dei prossimi periodi.
