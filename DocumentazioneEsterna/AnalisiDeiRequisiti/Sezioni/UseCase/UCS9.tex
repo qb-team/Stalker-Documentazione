@@ -1,10 +1,12 @@
 \subsubsection{UCS 9 - Gestione degli amministratori}%sea level
-\begin{figure}[h]
+
+\begin{figure}[h!]
     \centering
       \includegraphics[scale=0.5]{Sezioni/UseCase/Immagini/UCS9.png}
     \caption{UCS 9 - Gestione degli amministratori}
   \end{figure}
 \begin{itemize}
+
 \item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema.
@@ -14,7 +16,7 @@
 \item \textbf{Flusso di eventi:} %elenco puntato
   \begin{enumerate}
         \item L'amministratore seleziona la funzionalità per la gestione degli amministratori;
-        \item L'amministratore seleziona una funzionalità tra: nomina di un amministratore [UCS 9.1], eliminazione di un amministratore [UCS 9.2] e modifica dei privilegi di un amministratore [UCS 9.3].
+        \item L'amministratore seleziona una funzionalità tra: nomina di un amministratore [UCS 9.1] [UCS 9.5], eliminazione di un amministratore [UCS 9.2] e modifica dei privilegi di un amministratore [UCS 9.3].
     \end{enumerate}
 \item \textbf{Estensioni:}
 	\begin{itemize}
@@ -127,7 +129,7 @@
 \item \textbf{Scenario principale:} L'amministratore inserisce la mail dell'amministratore a cui vuole modificarne i privilegi e quindi sceglie il privilegio da assegnargli.
 \item \textbf{Flusso di eventi:} %elenco puntato
   \begin{enumerate}
-        \item Inserimento e-mail del profilo dell'amministratore da rimuovere [UCS 9.2.1];
+        \item Inserimento e-mail del profilo dell'amministratore da rimuovere [UCS 9.3.1];
         \item L'amministratore seleziona i nuovi privilegi da assegnare all'amministratore, potrà scegliere se assegnare "Gestore" oppure "Visualizzatore".
     \end{enumerate}
 \item \textbf{Inclusioni:}
@@ -159,12 +161,20 @@
 \item \textbf{Scenario principale:} L'amministratore seleziona la funzionalità di annullamento modifiche.
 \end{itemize}
 
-\subsubsection{UCS 9.5 - Nomina di un nuovo amministratore già presente nel server LDAP}%sea level
+\subsubsection{UCS 9.5 - Nomina di un nuovo amministratore già presente nel sistema}%sea level
+
+\begin{figure}[h!]
+    \centering
+      \includegraphics[scale=0.5]{Sezioni/UseCase/Immagini/UCS9.5.png}
+    \caption{UCS 9.5 - Nomina di un nuovo amministratore gi` a presente nel sistema}
+  \end{figure}
+
+
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
-\item \textbf{Postcondizione:} L'amministratore ha nominato un account già presente nel server LDAP come amministratore della propria organizzazione.
+\item \textbf{Postcondizione:} L'amministratore ha nominato un account già presente nel sistema come amministratore della propria organizzazione.
 \item \textbf{Scenario principale:} L'amministratore compila il modulo per nominare un account già presente nel sistema come amministratore della propria organizzazione.
 \item \textbf{Flusso di eventi:} %elenco puntato
   \begin{enumerate}
