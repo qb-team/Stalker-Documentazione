@@ -1,5 +1,3 @@
-\subsubsection{Panoramica UCS4}
-
 \subsubsection{UCS 4 - Modifica dei parametri dell'organizzazione}%kite level
 
 \begin{figure}[h]
@@ -44,7 +42,7 @@
 		\item modificare l'immagine dell'\glo{organizzazione} [UCS 4.1.2];
 		\item modificare la descrizione dell'\glo{organizzazione} [UCS 4.1.3];
 		\item modificare l'indirizzo dell'\glo{organizzazione} [UCS 4.1.4];
-		\item modificare l'indirizzo IP del server aziendale [UCS 4.1.5].
+		\item modificare l'indirizzo IP o URL del server aziendale [UCS 4.1.5].
 	\end{itemize}
 \end{itemize}
 
@@ -115,19 +113,19 @@
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{UCS 4.1.5 - Modifica dell'indirizzo IP del server aziendale}
+\subsubsection{UCS 4.1.5 - Modifica dell'indirizzo IP o URL del server aziendale}
 \begin{itemize}
 	\item \textbf{Attori primari:} Amministratore gestore
 	\item \textbf{Precondizione:} L'amministratore gestore si trova nella sezione di modifica dei parametri dell'\glo{organizzazione}.
-	\item \textbf{Postcondizione:} L'amministratore ha inserito un \glo{indirizzo IP} valido.
-	\item \textbf{Scenario alternativo:} L'amministratore inserisce un \glo{indirizzo IP} che non rappresenta un server LDAP. Verrà visualizzato un messaggio d'errore [UCS 10.4.7].
+	\item \textbf{Postcondizione:} L'amministratore ha inserito un \glo{indirizzo IP} o URL valido.
+	\item \textbf{Scenario alternativo:} L'amministratore inserisce un \glo{indirizzo IP} o URL che non rappresenta un server LDAP. Verrà visualizzato un messaggio d'errore [UCS 10.4.7].
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
-		\item L'amministratore inserisce il nuovo \glo{indirizzo IP}.
+		\item L'amministratore inserisce il nuovo \glo{indirizzo IP} o URL.
 	\end{enumerate}
 	\item \textbf{Estensioni:}
 	\begin{itemize}
-		\item UCS 10.4.7 - L'indirizzo IP inserito non rappresenta un server LDAP.
+		\item UCS 10.4.7 - L'indirizzo IP o URL inserito non rappresenta un server LDAP.
 	\end{itemize}
 \end{itemize}
 
