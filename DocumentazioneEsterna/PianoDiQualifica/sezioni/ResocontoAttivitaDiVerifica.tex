@@ -63,7 +63,7 @@ Media verbali esterni & \textcolor{giallo}{\textbf{65}}\\ % & \textcolor{giallo}
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico andamento dell'Indice di Gulpease per ogni periodo e documento,
+title=Grafico dell'Indice di Gulpease per ogni documento,
 x tick label style={
 /pgf/number format/1000 sep=},
 ylabel=Indice di Gulpease,
@@ -296,8 +296,88 @@ xtick=data
 \end{axis}
 \end{tikzpicture}
 
+\paragraph{MPC8 - Actual Cost of Work Performed}
+\pgfplotsset{width=17cm, height=8cm}
+\begin{tikzpicture}
 
-\paragraph{MPC8 - Schedule variance}
+\begin{axis}[
+title=Grafico andamento dell'actual cost of work performed per ogni periodo,
+x tick label style={
+	/pgf/number format/1000 sep=},
+ylabel=ACWP,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+ybar interval=0.33,
+symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+x tick label style={rotate=45,anchor=east},
+grid=major,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+xtick=data
+]
+\addplot[fill=blue] coordinates
+{(I periodo RP, 1065) (II periodo RP, 2462) (III periodo RP, 1200) (tmp, 100)};
+\addplot[fill=orange] coordinates
+{(I periodo RP, 1135) (II periodo RP, 2793) (III periodo RP, 995) (tmp, 100)};
+
+\legend{
+	ACWP,
+	Costi pianificati
+}
+\end{axis}
+\end{tikzpicture}
+
+\paragraph{MPC9 - Budgeted Cost of Work Scheduled}
+\pgfplotsset{width=17cm, height=8cm}
+\begin{tikzpicture}
+
+\begin{axis}[
+title=Grafico andamento del budgeted cost of work scheduled per ogni periodo,
+x tick label style={
+	/pgf/number format/1000 sep=},
+ylabel=BCWS,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+ybar interval=0.33,
+symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+x tick label style={rotate=45,anchor=east},
+grid=major,
+xtick=data
+]
+\addplot[fill=blue] coordinates
+{(I periodo RP, 0) (II periodo RP, 653) (III periodo RP, 0) (tmp, 800)};
+
+\end{axis}
+\end{tikzpicture}
+
+\paragraph{MPC10 - Budgeted Cost of Work Performed}
+\pgfplotsset{width=17cm, height=8cm}
+\begin{tikzpicture}
+
+\begin{axis}[
+title=Grafico andamento del budgeted cost of work performed per ogni periodo,
+x tick label style={
+	/pgf/number format/1000 sep=},
+ylabel=BCWP,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+ybar interval=0.33,
+symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+x tick label style={rotate=45,anchor=east},
+grid=major,
+xtick=data
+]
+\addplot[fill=blue] coordinates
+{(I periodo RP, 0) (II periodo RP, 653) (III periodo RP, 0) (tmp, 800)};
+
+\end{axis}
+\end{tikzpicture}
+
+
+\paragraph{MPC11 - Schedule variance}
 \pgfplotsset{width=17cm, height=8cm}
 \begin{tikzpicture}
 
@@ -321,7 +401,7 @@ xtick=data
 \end{axis}
 \end{tikzpicture}
 
-\paragraph{MPC9 - Budget variance}
+\paragraph{MPC12 - Budget variance}
 \pgfplotsset{width=17cm, height=8cm}
 \begin{tikzpicture}
 
@@ -340,7 +420,7 @@ grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
-{(I periodo RP, 0) (II periodo RP, 0) (III periodo RP, 0) (tmp, 100)};
+{(I periodo RP, -1065) (II periodo RP, -1809) (III periodo RP, -1200) (tmp, 100)};
 
 \end{axis}
 \end{tikzpicture}
@@ -363,7 +443,7 @@ xtick=data
 title=Grafico andamento della complessità ciclomatica del software per ogni periodo,
 x tick label style={
 	/pgf/number format/1000 sep=},
-ylabel=CCS,
+ylabel=gradimento,
 enlargelimits=0.05,
 legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
