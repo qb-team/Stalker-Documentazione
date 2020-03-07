@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2020-03-13" view-index="0" gantt-divider-location="697" resource-divider-location="300" version="2.8.10" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2020-03-11" view-index="0" gantt-divider-location="622" resource-divider-location="300" version="2.8.10" locale="it">
     <description/>
     <view zooming-state="default:3" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="282" order="0"/>
-        <field id="tpd4" name="Data d'inizio" width="76" order="1"/>
-        <field id="tpd5" name="Data di fine" width="85" order="2"/>
-        <field id="tpc0" name="Ruolo" width="201" order="3"/>
-        <field id="tpc1" name="Ore" width="49" order="4"/>
+        <field id="tpd3" name="Nome" width="288" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="68" order="1"/>
+        <field id="tpd5" name="Data di fine" width="61" order="2"/>
+        <field id="tpc0" name="Ruolo" width="160" order="3"/>
+        <field id="tpc1" name="Ore" width="41" order="4"/>
         <option id="color.recent"><![CDATA[#000000]]></option>
     </view>
     <view id="resource-table">

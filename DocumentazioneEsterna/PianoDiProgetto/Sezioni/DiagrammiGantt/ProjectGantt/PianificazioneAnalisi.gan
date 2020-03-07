@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-11-11" view-index="0" gantt-divider-location="880" resource-divider-location="505" version="2.8.10" locale="it_IT">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-11-04" view-index="0" gantt-divider-location="652" resource-divider-location="505" version="2.8.10" locale="it">
     <description/>
-    <view zooming-state="default:5" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="375" order="0"/>
-        <field id="tpd4" name="Data d'inizio" width="104" order="1"/>
-        <field id="tpd5" name="Data di fine" width="87" order="2"/>
-        <field id="tpc1" name="Ore" width="42" order="4"/>
-        <field id="tpc2" name="Ruolo" width="268" order="3"/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Nome" width="294" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="68" order="1"/>
+        <field id="tpd5" name="Data di fine" width="67" order="2"/>
+        <field id="tpc2" name="Ruolo" width="178" order="3"/>
+        <field id="tpc1" name="Ore" width="41" order="4"/>
         <option id="color.recent"><![CDATA[#000000]]></option>
     </view>
     <view id="resource-table">
@@ -61,8 +61,6 @@
         </taskproperties>
         <task id="13" name="Periodo 1" color="#000000" meeting="false" start="2019-11-15" duration="11" complete="0" thirdDate="2019-11-15" thirdDate-constraint="1" expand="true">
             <depend id="29" type="2" difference="0" hardness="Rubber"/>
-            <depend id="48" type="2" difference="0" hardness="Strong"/>
-            <depend id="50" type="2" difference="0" hardness="Strong"/>
             <task id="21" name="Discussione capitolati" color="#8cb6ce" meeting="false" start="2019-11-15" duration="11" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true">
                 <customproperty taskproperty-id="tpc0" value="30"/>
                 <customproperty taskproperty-id="tpc2" value=""/>
@@ -94,9 +92,9 @@
                 <customproperty taskproperty-id="tpc2" value="Verificatore"/>
             </task>
         </task>
-        <task id="40" name="Periodo 3" color="#000000" meeting="false" start="2020-01-01" duration="10" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true">
+        <task id="40" name="Periodo 3" color="#000000" meeting="false" start="2020-01-01" duration="12" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true">
             <depend id="79" type="2" difference="0" hardness="Rubber"/>
-            <task id="71" name="Analisi dei Requisiti" color="#8cb6ce" meeting="false" start="2020-01-01" duration="7" complete="0" thirdDate="2020-05-11" thirdDate-constraint="0" expand="true">
+            <task id="71" name="Analisi dei Requisiti" color="#8cb6ce" meeting="false" start="2020-01-01" duration="12" complete="0" thirdDate="2020-05-11" thirdDate-constraint="0" expand="true">
                 <customproperty taskproperty-id="tpc1" value="57"/>
                 <customproperty taskproperty-id="tpc2" value="Analista"/>
             </task>
@@ -115,9 +113,9 @@
                 <customproperty taskproperty-id="tpc2" value="Verificatore"/>
             </task>
         </task>
-        <task id="79" name="Periodo 4" color="#000000" meeting="false" start="2020-01-15" duration="4" complete="0" thirdDate="2020-01-15" thirdDate-constraint="0" expand="true">
-            <task id="81" name="Preparazione per la Revisione dei Requisiti" meeting="false" start="2020-01-15" duration="4" complete="0" expand="true"/>
-            <task id="80" name="Consolidamento" meeting="false" start="2020-01-15" duration="3" complete="0" expand="true"/>
+        <task id="79" name="Periodo 4" color="#000000" meeting="false" start="2020-01-17" duration="4" complete="0" thirdDate="2020-01-15" thirdDate-constraint="0" expand="true">
+            <task id="81" name="Preparazione per la Revisione dei Requisiti" meeting="false" start="2020-01-17" duration="4" complete="0" expand="true"/>
+            <task id="80" name="Consolidamento" meeting="false" start="2020-01-17" duration="3" complete="0" expand="true"/>
         </task>
     </tasks>
     <resources>
