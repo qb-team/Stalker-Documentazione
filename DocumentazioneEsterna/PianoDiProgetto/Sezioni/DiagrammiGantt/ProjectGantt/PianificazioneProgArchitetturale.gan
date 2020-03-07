@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2020-01-20" view-index="0" gantt-divider-location="709" resource-divider-location="300" version="2.8.10" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2020-01-20" view-index="0" gantt-divider-location="705" resource-divider-location="300" version="2.8.10" locale="it_IT">
     <description/>
     <view zooming-state="default:5" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="282" order="0"/>
-        <field id="tpd4" name="Data d'inizio" width="72" order="1"/>
-        <field id="tpd5" name="Data di fine" width="62" order="2"/>
-        <field id="tpd13" name="Risorse" width="161" order="3"/>
-        <field id="tpd12" name="Costo" width="36" order="4"/>
-        <field id="tpc0" name="Ore" width="92" order="5"/>
+        <field id="tpd3" name="Nome" width="317" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="78" order="1"/>
+        <field id="tpd5" name="Data di fine" width="67" order="2"/>
+        <field id="tpc1" name="Ruolo" width="187" order="3"/>
+        <field id="tpc0" name="Ore" width="52" order="4"/>
         <option id="color.recent"><![CDATA[#000000]]></option>
     </view>
     <view id="resource-table">
@@ -48,33 +47,76 @@
             <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
-            <taskproperty id="tpc0" name="Ore" type="custom" valuetype="double"/>
+            <taskproperty id="tpc0" name="Ore" type="custom" valuetype="text"/>
+            <taskproperty id="tpc1" name="Ruolo" type="custom" valuetype="text"/>
         </taskproperties>
         <task id="13" name="Periodo 1" color="#000000" meeting="false" start="2020-01-22" duration="26" complete="0" thirdDate="2020-01-22" thirdDate-constraint="1" expand="true">
             <depend id="29" type="2" difference="0" hardness="Rubber"/>
-            <task id="25" name="Pianificazione delle attività" color="#8cb6ce" meeting="false" start="2020-01-22" duration="7" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="30.0" cost-calculated="false"/>
+            <task id="25" name="Pianificazione delle attività" color="#8cb6ce" meeting="false" start="2020-01-22" duration="7" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="30.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="1.0"/>
+                <customproperty taskproperty-id="tpc1" value="Responsabile"/>
+            </task>
             <task id="27" name="Approfondimento e studio delle tecnologie" color="#8cb6ce" meeting="false" start="2020-01-22" duration="26" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true"/>
-            <task id="56" name="Assegnazione dei ruoli di progetto" color="#8cb6ce" meeting="false" start="2020-01-30" duration="1" complete="0" thirdDate="2020-01-20" thirdDate-constraint="0" expand="true" cost-manual-value="30.0" cost-calculated="false"/>
-            <task id="21" name="Normazione" color="#8cb6ce" meeting="false" start="2020-01-31" duration="10" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="660.0" cost-calculated="false"/>
-            <task id="28" name="Verifica" color="#8cb6ce" meeting="false" start="2020-02-10" duration="9" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="165.0" cost-calculated="false"/>
-            <task id="23" name="Analisi dei Requisiti" color="#8cb6ce" meeting="false" start="2020-02-17" duration="4" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="250.0" cost-calculated="false"/>
+            <task id="56" name="Assegnazione dei ruoli di progetto" color="#8cb6ce" meeting="false" start="2020-01-30" duration="1" complete="0" thirdDate="2020-01-20" thirdDate-constraint="0" expand="true" cost-manual-value="30.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="1.0"/>
+                <customproperty taskproperty-id="tpc1" value="Responsabile"/>
+            </task>
+            <task id="21" name="Normazione" color="#8cb6ce" meeting="false" start="2020-01-31" duration="10" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="660.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="12-14"/>
+                <customproperty taskproperty-id="tpc1" value="Amministratore e Responsabile"/>
+            </task>
+            <task id="28" name="Verifica" color="#8cb6ce" meeting="false" start="2020-02-10" duration="9" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="165.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="11"/>
+                <customproperty taskproperty-id="tpc1" value="Verificatore"/>
+            </task>
+            <task id="23" name="Analisi dei Requisiti" color="#8cb6ce" meeting="false" start="2020-02-17" duration="4" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="250.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="10"/>
+                <customproperty taskproperty-id="tpc1" value="Analista"/>
+            </task>
         </task>
         <task id="29" name="Periodo 2" color="#000000" meeting="false" start="2020-02-21" duration="11" complete="0" thirdDate="2020-02-12" thirdDate-constraint="1" expand="true">
             <depend id="73" type="2" difference="0" hardness="Rubber"/>
             <task id="30" name="Approfondimento delle tecnologie" color="#8cb6ce" meeting="false" start="2020-02-21" duration="3" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true"/>
-            <task id="45" name="Normazione" color="#8cb6ce" meeting="false" start="2020-02-21" duration="3" complete="0" thirdDate="2020-02-18" thirdDate-constraint="0" expand="true" cost-manual-value="90.0" cost-calculated="false"/>
+            <task id="45" name="Normazione" color="#8cb6ce" meeting="false" start="2020-02-21" duration="3" complete="0" thirdDate="2020-02-18" thirdDate-constraint="0" expand="true" cost-manual-value="90.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="3"/>
+                <customproperty taskproperty-id="tpc1" value="Responsabile"/>
+            </task>
             <task id="51" name="Incrementi" color="#8cb6ce" meeting="false" start="2020-02-24" duration="8" complete="0" thirdDate="2020-02-12" thirdDate-constraint="0" expand="true"/>
-            <task id="55" name="Progettazione" color="#8cb6ce" meeting="false" start="2020-02-24" duration="8" complete="0" thirdDate="2020-02-12" thirdDate-constraint="0" expand="true" cost-manual-value="759.0" cost-calculated="false"/>
-            <task id="34" name="Technology Baseline" color="#8cb6ce" meeting="false" start="2020-02-24" duration="8" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="759.0" cost-calculated="false"/>
-            <task id="35" name="Proof of Concept" color="#8cb6ce" meeting="false" start="2020-02-24" duration="8" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="345.0" cost-calculated="false"/>
-            <task id="36" name="Codifica" color="#8cb6ce" meeting="false" start="2020-02-27" duration="5" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="345.0" cost-calculated="false"/>
-            <task id="37" name="Verifica" color="#8cb6ce" meeting="false" start="2020-02-28" duration="4" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="495.0" cost-calculated="false"/>
+            <task id="55" name="Progettazione" color="#8cb6ce" meeting="false" start="2020-02-24" duration="8" complete="0" thirdDate="2020-02-12" thirdDate-constraint="0" expand="true" cost-manual-value="759.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="34"/>
+                <customproperty taskproperty-id="tpc1" value="Progettista"/>
+            </task>
+            <task id="34" name="Technology Baseline" color="#8cb6ce" meeting="false" start="2020-02-24" duration="8" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="759.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="35"/>
+                <customproperty taskproperty-id="tpc1" value="Progettista"/>
+            </task>
+            <task id="35" name="Proof of Concept" color="#8cb6ce" meeting="false" start="2020-02-24" duration="8" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="345.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="23"/>
+                <customproperty taskproperty-id="tpc1" value="Programmatore"/>
+            </task>
+            <task id="36" name="Codifica" color="#8cb6ce" meeting="false" start="2020-02-27" duration="5" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="345.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="23"/>
+                <customproperty taskproperty-id="tpc1" value="Programmatore"/>
+            </task>
+            <task id="37" name="Verifica" color="#8cb6ce" meeting="false" start="2020-02-28" duration="4" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true" cost-manual-value="495.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="33"/>
+                <customproperty taskproperty-id="tpc1" value="Verificatore"/>
+            </task>
         </task>
         <task id="73" name="Periodo 3" color="#000000" meeting="false" start="2020-03-03" duration="6" complete="0" thirdDate="2020-03-03" thirdDate-constraint="0" expand="true">
             <depend id="40" type="2" difference="0" hardness="Rubber"/>
-            <task id="69" name="Analisi dei Requisiti" color="#8cb6ce" meeting="false" start="2020-03-03" duration="4" complete="0" thirdDate="2020-03-09" thirdDate-constraint="0" expand="true" cost-manual-value="425.0" cost-calculated="false"/>
-            <task id="49" name="Miglioramento standard di qualità" color="#8cb6ce" meeting="false" start="2020-03-03" duration="4" complete="0" thirdDate="2020-03-09" thirdDate-constraint="0" expand="true" cost-manual-value="240.0" cost-calculated="false"/>
-            <task id="72" name="Verifica" color="#8cb6ce" meeting="false" start="2020-03-07" duration="2" complete="0" thirdDate="2020-01-20" thirdDate-constraint="0" expand="true" cost-manual-value="330.0" cost-calculated="false"/>
+            <task id="69" name="Analisi dei Requisiti" color="#8cb6ce" meeting="false" start="2020-03-03" duration="4" complete="0" thirdDate="2020-03-09" thirdDate-constraint="0" expand="true" cost-manual-value="425.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="17"/>
+                <customproperty taskproperty-id="tpc1" value="Analista"/>
+            </task>
+            <task id="49" name="Miglioramento standard di qualità" color="#8cb6ce" meeting="false" start="2020-03-03" duration="4" complete="0" thirdDate="2020-03-09" thirdDate-constraint="0" expand="true" cost-manual-value="240.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="12"/>
+                <customproperty taskproperty-id="tpc1" value="Amministratore"/>
+            </task>
+            <task id="72" name="Verifica" color="#8cb6ce" meeting="false" start="2020-03-07" duration="2" complete="0" thirdDate="2020-01-20" thirdDate-constraint="0" expand="true" cost-manual-value="330.0" cost-calculated="false">
+                <customproperty taskproperty-id="tpc0" value="22"/>
+                <customproperty taskproperty-id="tpc1" value="Verificatore"/>
+            </task>
         </task>
         <task id="40" name="Periodo 4" color="#000000" meeting="false" start="2020-03-09" duration="7" complete="0" thirdDate="2020-01-01" thirdDate-constraint="0" expand="true">
             <task id="44" name="Consolidamento" color="#8cb6ce" meeting="false" start="2020-03-09" duration="7" complete="0" thirdDate="2020-03-09" thirdDate-constraint="0" expand="true"/>
@@ -83,7 +125,7 @@
         </task>
     </tasks>
     <resources>
-        <resource id="0" name="Amministratore di Progetto" function="Default:0" contacts="" phone="">
+        <resource id="0" name="Amministratore" function="Default:0" contacts="" phone="">
             <rate name="standard" value="20.0"/>
         </resource>
         <resource id="1" name="Analista" function="Default:0" contacts="" phone="">
@@ -95,7 +137,7 @@
         <resource id="3" name="Programmatore" function="Default:0" contacts="" phone="">
             <rate name="standard" value="15.0"/>
         </resource>
-        <resource id="4" name="Responsabile di Progetto" function="Default:0" contacts="" phone="">
+        <resource id="4" name="Responsabile" function="Default:0" contacts="" phone="">
             <rate name="standard" value="30.0"/>
         </resource>
         <resource id="5" name="Verificatore" function="Default:0" contacts="" phone="">
@@ -107,8 +149,8 @@
         <allocation task-id="21" resource-id="0" function="Default:0" responsible="false" load="12.0"/>
         <allocation task-id="23" resource-id="1" function="Default:0" responsible="true" load="10.0"/>
         <allocation task-id="69" resource-id="1" function="Default:0" responsible="true" load="17.0"/>
-        <allocation task-id="55" resource-id="2" function="Default:0" responsible="true" load="34.5"/>
-        <allocation task-id="34" resource-id="2" function="Default:0" responsible="true" load="34.5"/>
+        <allocation task-id="55" resource-id="2" function="Default:0" responsible="true" load="34.0"/>
+        <allocation task-id="34" resource-id="2" function="Default:0" responsible="true" load="35.0"/>
         <allocation task-id="35" resource-id="3" function="Default:0" responsible="true" load="23.0"/>
         <allocation task-id="36" resource-id="3" function="Default:0" responsible="true" load="23.0"/>
         <allocation task-id="21" resource-id="4" function="Default:0" responsible="false" load="14.0"/>
