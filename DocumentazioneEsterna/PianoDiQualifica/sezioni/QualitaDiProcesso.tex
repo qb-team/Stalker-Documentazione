@@ -17,6 +17,16 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
             \item \textbf{Ottimale:} $PRS = 100\%$
         \end{itemize}
     \end{itemize} 
+%\subsubsection{Progettazione architetturale}
+
+%\paragraph{Metrica MPC2 - Structural Fan-In}
+%\begin{itemize}
+%	\item \textbf{Descrizione:} Numero di procedure che chiama questa procedura;
+%\end{itemize}
+%\paragraph{Metrica MPC3 - Structural Fan-Out}
+%\begin{itemize}
+%	\item \textbf{Descrizione:} Numero di procedure che questa procedura chiama;
+%\end{itemize}
 \subsubsection{Progettazione di dettaglio}
     \paragraph{Metrica MPC2 - Incapsulamento CBO}
     \begin{itemize}
@@ -88,7 +98,7 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
     \end{itemize}
 
 \subsubsection{Verifica}
-    \paragraph{Metrica MPC7 - Code coverage}
+    \paragraph{Metrica MPC7 - Code Coverage}
     \begin{itemize}
         \item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento;
         \item \textbf{Formula:} $$CC = {|linee \; di \; codice \; percorse \; dai  \; test| \over |linee \; di \; codice \; totali|} \; \cdot \; 100$$
@@ -102,7 +112,49 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
 \subsection{Processi organizzativi}
 
 \subsubsection{Pianificazione}
-    \paragraph{Metrica MPC8 - Schedule variance}
+
+\paragraph{Metrica MPC8 - Actual Cost of Work Performed}
+\begin{itemize}
+	\item \textbf{Descrizione:} Denaro speso fino al momento del calcolo;
+	\item \textbf{Formula:} $$ACWP = {Somma\; delle\; ore\; lavorative\; moltiplicate\; con\; il\; corrispondente\; costo\; orario}$$
+	con:
+	\begin{itemize}
+		\item $B_{tot}$ = Budget totale.
+	\end{itemize}
+	 \begin{itemize}
+		\item \textbf{Accettabile:}  $0 \leq ACWP \leq BCWS$
+		\item \textbf{Ottimale:} $0 \leq ACWP \leq B_{tot}$
+	\end{itemize}
+\end{itemize}
+
+\paragraph{Metrica MPC9 - Budgeted Cost of Work Scheduled}
+\begin{itemize}
+	\item \textbf{Descrizione:} Costo pianificato per realizzare le attività di progetto fino al momento del calcolo;
+	\item \textbf{Formula:} $$BCWS = {B_{tot} * \% di\; lavoro\; pianificato}$$
+	\begin{itemize}
+		\item $B_{tot}$ = Budget totale.
+	\end{itemize}
+	\begin{itemize}
+		\item \textbf{Accettabile:} $BCWS \geq 0$
+		\item \textbf{Ottimale:} $BCWS \geq 0$
+	\end{itemize}
+\end{itemize}
+
+\paragraph{Metrica MPC10 - Budgeted Cost of Work Performed}
+\begin{itemize}
+	\item \textbf{Descrizione:} Valore del lavoro fatto fino al momento del calcolo, quanto lavoro si è fatto al costo pianificato;
+	\item \textbf{Formula:} $$BCWP = {B_{tot} * \% di\; lavoro\; effettivamento\; fatto}$$
+	 	\begin{itemize}
+	 	\item $B_{tot}$ = Budget totale.
+	 \end{itemize}
+	 \begin{itemize}
+	 	\item \textbf{Accettabile:} $BCWP \geq 0$
+	 	\item \textbf{Ottimale:} $BCWP \geq 0$
+	 \end{itemize}
+
+\end{itemize}
+
+    \paragraph{Metrica MPC11 - Schedule Variance}
     \begin{itemize}
         \item \textbf{Descrizione:} È il valore che indica se si è in linea ($=0$), in anticipo ($>0$) oppure in ritardo ($<0$) rispetto alla schedulazione delle attività di progetto pianificate nella \glo{baseline};
         \item \textbf{Formula:} $$SV = {BCWP \; - \; BCWS}$$
@@ -118,7 +170,7 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
         \end{itemize}
     \end{itemize}
 
-    \paragraph{Metrica MPC9 - Budget variance}
+    \paragraph{Metrica MPC12 - Budget Variance}
         \begin{itemize}
             \item \textbf{Descrizione:} È il valore che indica se alla data corrente si è speso di più ($>0$) o di meno ($<0$) rispetto a quanto pianificato dal budget totale $B_{tot}$;
             \item \textbf{Formula:} $$BV = {BCWS \; - \; ACWP}$$
@@ -135,7 +187,6 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
             \end{itemize}
         \end{itemize}
 
-\newpage %adattamento pagina
 \subsection{Tabella riassuntiva metriche dei processi}
     \rowcolors{2}{grigetto}{white}
     \renewcommand{\arraystretch}{1.5}
@@ -150,9 +201,13 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
     MPC5 & Linee di Codice per Linee di Commento & $LCLC$ & $LCLC \geq 0.25$ & $LCLC \geq 0.30$ \\
     MPC6 & Indice di Gulpease & $IG$ & $40 < IG < 100$ & $80 < IG < 100$ \\
     MPC7 & Code Coverage & $CC$ & $CC = 80\%$ & $CC = 100\%$  \\
-    MPC8 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\	
-    MPC9 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\ \\
+    MPC8 & Actual Cost of Work Performed & $ACWP$ & $0 \leq ACWP \leq BCWS$ & $0 \leq ACWP \leq B_{tot}$ \\
+    MPC9 & Budgeted Cost of Work Scheduled & $BCWS$ & $BCWS \geq 0$ &  $BCWS \geq 0$ \\
+    MPC10 & Budgeted Cost of Work Performed & $BCWP$ & $BCWP \geq 0$ & $BCWP \geq 0$ \\
+    MPC11 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\	
+    MPC12 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\
     \end{longtable}
+\newpage
 \subsection{Miglioramento dei processi}
 Il Gruppo \Gruppo{} ha deciso di adottare il ciclo di Deming. Il ciclo di Deming è un metodo di gestione iterativo per il controllo e il miglioramento continuo dei processi (e anche dei prodotti) suddiviso in 4 fasi: Plan, Do, Check e Act. 
 Anche la norma ISO/IEC 12207 utilizza questo ciclo per scopi di miglioria dei \glo{processi}. Per garantire la qualità dei \glo{processi} e la coerenza allo standard, il gruppo \Gruppo{}  

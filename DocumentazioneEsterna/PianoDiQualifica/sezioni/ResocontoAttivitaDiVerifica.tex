@@ -63,7 +63,7 @@ Media verbali esterni & \textcolor{giallo}{\textbf{65}}\\ % & \textcolor{giallo}
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico andamento dell'Indice di Gulpease per ogni periodo e documento,
+title=Grafico dell'Indice di Gulpease per ogni documento,
 x tick label style={
 /pgf/number format/1000 sep=},
 ylabel=Indice di Gulpease,
@@ -91,7 +91,7 @@ xtick=data
 In questa fase i membri del gruppo \Gruppo{} hanno analizzato i documenti mediante la tecnica dell'\glo{inspection}, abbandonando la tecnica di \glo{walkthrough} dato che il gruppo ha acquisito abbastanza esperienza, riducendo così i costi di verifica. In questo periodo sono stati corretti gli errori riscontrati e aggiornati i vari documenti portandoli a una nuova versione di rilascio.
 
 \subsubsection{Analisi statica del codice}
-In questo periodo di tempo il gruppo è stato molto impegnato nello sviluppo del $\glo{Proof$ $of$ $Concept}$, perciò è stato necessario adottarsi di strumenti per la stesura e la verifica statica del codice. 
+In questo periodo il gruppo è stato molto impegnato nello sviluppo del $\glo{Proof$ $of$ $Concept}$, perciò è stato necessario adottarsi di strumenti per la stesura e la verifica statica del codice. 
 
 \subsubsection{Esiti verifiche automatizzate}
 Di seguito verranno mostrati gli esiti delle metriche che si sono riuscite a calcolare. Purtroppo, non è stato possibile calcolare le metriche \textbf{MPC7} e \textbf{MPD7}. \\ Dopo la visione degli esiti ci sarà una sezione dedicata all'analisi dei risultati.
@@ -102,7 +102,7 @@ Di seguito verranno mostrati gli esiti delle metriche che si sono riuscite a cal
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico andamento percentuale dei requisiti obbligatori soddisfatti per ogni periodo,
+title=Grafico dell'andamento percentuale dei requisiti obbligatori soddisfatti per ogni periodo,
 x tick label style={
 	/pgf/number format/1000 sep=},
 ylabel=\% dei requisiti,
@@ -111,7 +111,6 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 xtick=data
 ]
@@ -127,7 +126,7 @@ xtick=data
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico andamento incapsulamento CBO per ogni periodo,
+title=Grafico dell'andamento incapsulamento CBO per ogni periodo,
 x tick label style={
 	/pgf/number format/1000 sep=},
 ylabel=incapsulamento CBO,
@@ -136,12 +135,11 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
-{(I periodo RP, 0) (II periodo RP, 0) (III periodo RP, 0) (tmp, 100)};
+{(I periodo RP, 0) (II periodo RP, 1.5) (III periodo RP, 1.5) (tmp, 6)};
 \end{axis}
 \end{tikzpicture}
 
@@ -151,7 +149,7 @@ xtick=data
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico andamento livello profondità gerarchia per ogni periodo,
+title=Grafico dell'andamento livello profondità gerarchia per ogni periodo,
 x tick label style={
 	/pgf/number format/1000 sep=},
 ylabel=livello profondità gerarchia,
@@ -160,7 +158,6 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 xtick=data
 ]
@@ -176,7 +173,7 @@ xtick=data
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico andamento numero di parametri per metodo per ogni periodo,
+title=Grafico dell'andamento numero di parametri per metodo per ogni periodo,
 x tick label style={
 	/pgf/number format/1000 sep=},
 ylabel=numero di parametri per metodo,
@@ -185,7 +182,6 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 xtick=data
 ]
@@ -200,7 +196,7 @@ xtick=data
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico andamento linee di commento per linee di codice per ogni periodo,
+title=Grafico dell'andamento linee di commento per linee di codice per ogni periodo,
 x tick label style={
 	/pgf/number format/1000 sep=},
 ylabel=\% linee di commento/linee di codice,
@@ -209,7 +205,6 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 xtick=data
 ]
@@ -257,7 +252,7 @@ xtick=data
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico andamento dell'Indice di Gulpease per ogni periodo e documento,
+title=Grafico dell'andamento dell'Indice di Gulpease per ogni periodo e documento,
 x tick label style={
 	/pgf/number format/1000 sep=},
 ylabel=Indice di Gulpease,
@@ -296,13 +291,90 @@ xtick=data
 \end{axis}
 \end{tikzpicture}
 
-
-\paragraph{MPC8 - Schedule variance}
+\paragraph{MPC8 - Actual Cost of Work Performed}
 \pgfplotsset{width=17cm, height=8cm}
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico andamento schedule variance per ogni periodo,
+title=Grafico dell'andamento dell'actual cost of work performed per ogni periodo,
+x tick label style={
+	/pgf/number format/1000 sep=},
+ylabel=ACWP,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+ybar interval=0.33,
+symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+grid=major,
+legend style={at={(0.5,-0.4)},
+	anchor=south,legend columns=-1},
+xtick=data
+]
+\addplot[fill=blue] coordinates
+{(I periodo RP, 1065) (II periodo RP, 2462) (III periodo RP, 1200) (tmp, 100)};
+\addplot[fill=orange] coordinates
+{(I periodo RP, 1135) (II periodo RP, 2793) (III periodo RP, 995) (tmp, 100)};
+
+\legend{
+	ACWP,
+	Costi pianificati
+}
+\end{axis}
+\end{tikzpicture}
+
+\paragraph{MPC9 - Budgeted Cost of Work Scheduled}
+\pgfplotsset{width=17cm, height=8cm}
+\begin{tikzpicture}
+
+\begin{axis}[
+title=Grafico dell'andamento del budgeted cost of work scheduled per ogni periodo,
+x tick label style={
+	/pgf/number format/1000 sep=},
+ylabel=BCWS,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+ybar interval=0.33,
+symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+grid=major,
+xtick=data
+]
+\addplot[fill=blue] coordinates
+{(I periodo RP, 0) (II periodo RP, 653) (III periodo RP, 0) (tmp, 800)};
+
+\end{axis}
+\end{tikzpicture}
+
+\paragraph{MPC10 - Budgeted Cost of Work Performed}
+\pgfplotsset{width=17cm, height=8cm}
+\begin{tikzpicture}
+
+\begin{axis}[
+title=Grafico dell'andamento del budgeted cost of work performed per ogni periodo,
+x tick label style={
+	/pgf/number format/1000 sep=},
+ylabel=BCWP,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+ybar interval=0.33,
+symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+grid=major,
+xtick=data
+]
+\addplot[fill=blue] coordinates
+{(I periodo RP, 0) (II periodo RP, 653) (III periodo RP, 0) (tmp, 800)};
+
+\end{axis}
+\end{tikzpicture}
+
+
+\paragraph{MPC11 - Schedule Variance}
+\pgfplotsset{width=17cm, height=8cm}
+\begin{tikzpicture}
+
+\begin{axis}[
+title=Grafico dell' andamento del schedule variance per ogni periodo,
 x tick label style={
 	/pgf/number format/1000 sep=},
 ylabel=SV,
@@ -311,7 +383,6 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 xtick=data
 ]
@@ -321,12 +392,12 @@ xtick=data
 \end{axis}
 \end{tikzpicture}
 
-\paragraph{MPC9 - Budget variance}
+\paragraph{MPC12 - Budget Variance}
 \pgfplotsset{width=17cm, height=8cm}
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico andamento budget variance per ogni periodo,
+title=Grafico dell' andamento del budget variance per ogni periodo,
 x tick label style={
 	/pgf/number format/1000 sep=},
 ylabel=BV,
@@ -335,12 +406,11 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 xtick=data
 ]
 \addplot[fill=blue] coordinates
-{(I periodo RP, 0) (II periodo RP, 0) (III periodo RP, 0) (tmp, 100)};
+{(I periodo RP, -1065) (II periodo RP, -1809) (III periodo RP, -1200) (tmp, 100)};
 
 \end{axis}
 \end{tikzpicture}
@@ -360,19 +430,18 @@ xtick=data
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico andamento della complessità ciclomatica del software per ogni periodo,
+title=Grafico dell'andamento della complessità ciclomatica del software per ogni periodo,
 x tick label style={
 	/pgf/number format/1000 sep=},
-ylabel=CCS,
+ylabel=gradimento,
 enlargelimits=0.05,
 legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 legend style={at={(0.5,-0.4)},
-	anchor=north,legend columns=-1},
+	anchor=south,legend columns=-1},
 xtick=data
 ]
 \addplot[fill=blue] coordinates
@@ -392,7 +461,7 @@ xtick=data
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico andamento della complessità ciclomatica del software per ogni periodo,
+title=Grafico dell'andamento della complessità ciclomatica del software per ogni periodo,
 x tick label style={
 	/pgf/number format/1000 sep=},
 ylabel=CCS,
@@ -401,7 +470,6 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 xtick=data
 ]
@@ -416,7 +484,7 @@ xtick=data
 \begin{tikzpicture}
 
 \begin{axis}[
-title=Grafico percentuale dell'andamento del numero di unità documentate per ogni periodo,
+title=Grafico dell'andamento del numero di unità documentate per ogni periodo,
 x tick label style={
 	/pgf/number format/1000 sep=},
 ylabel=\% numero di unità documentate,
@@ -425,7 +493,6 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 xtick=data
 ]
@@ -435,7 +502,7 @@ xtick=data
 \end{axis}
 \end{tikzpicture}
 
-\paragraph{MPD4 - Presenza di code smell}
+\paragraph{MPD4 - Presenza di Code Smell}
 \pgfplotsset{width=17cm, height=8cm}
 \begin{tikzpicture}
 
@@ -449,7 +516,6 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 xtick=data
 ]
@@ -459,7 +525,7 @@ xtick=data
 \end{axis}
 \end{tikzpicture}
 
-\paragraph{MPD5 - Presenza di vulnerabilità}
+\paragraph{MPD5 - Presenza di Vulnerabilità}
 \pgfplotsset{width=17cm, height=8cm}
 \begin{tikzpicture}
 
@@ -473,7 +539,6 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 xtick=data
 ]
@@ -483,7 +548,7 @@ xtick=data
 \end{axis}
 \end{tikzpicture}
 
-\paragraph{MPD6 - Presenza di bug}
+\paragraph{MPD6 - Presenza di Bug}
 \pgfplotsset{width=17cm, height=8cm}
 \begin{tikzpicture}
 
@@ -497,7 +562,6 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 xtick=data
 ]
@@ -521,10 +585,9 @@ legend style={at={(0.5,-0.4)},
 	anchor=north,legend columns=-1},
 ybar interval=0.33,
 symbolic x coords={I periodo RP, II periodo RP, III periodo RP, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
-x tick label style={rotate=45,anchor=east},
 grid=major,
 legend style={at={(0.5,-0.4)},
-	anchor=north,legend columns=-1},
+	anchor=south,legend columns=-1},
 xtick=data
 ]
 \addplot[fill=blue] coordinates
@@ -540,3 +603,19 @@ xtick=data
 
 \end{axis}
 \end{tikzpicture}
+
+\subsubsection{Analisi esiti ottenuti}
+Le misurazioni sono state fatte nei tre periodi indicati nel documento \PdP, nel primo periodo sono stati corretti i documenti, nel secondo il gruppo \Gruppo{} si è impegnato nella realizzazione del $\glo{Proof$ $of$ $Concept}$, infine nel terzo si sono aggiornati i vari documenti. Nelle metriche applicate al $\glo{Proof$ $of$ $Concept}$, ci sarà che il primo periodo non sarà valorizzato mentre il secondo e il terzo avranno valori uguali, questo perché nel primo non esisteva il $\glo{Proof$ $of$ $Concept}$ mentre nel terzo periodo non lo si è modificato.\\ 
+Nella realizzazione del $\glo{Proof$ $of$ $Concept}$ il gruppo \Gruppo{} ha scelto di non concentrarsi molto sulla qualità del prodotto ma di concentrarsi nel realizzare un prodotto che ci serva per misurare la nostra capacità di "addomesticare" le tecnologie da noi scelte per realizzare il prodotto richiesto, si hanno quindi alcune metriche applicate al \glo{PoC} che ottengono buoni risultati mentre in altre si ottengono risultati non soddisfacenti. Purtroppo al fine di avere un \glo{PoC} funzionante nel tempo prestabilito non si è potuto implementare dei test perciò le metriche \textbf{MPC7} e \textbf{MPD7} risultano essere non applicabili ora. \\
+Buoni risultati si sono ottenuti nelle metriche \textbf{MPC8}, \textbf{MPC9}, \textbf{MPC10}, \textbf{MPC11} e \textbf{MPD12}, le quali mostrano che il gruppo \Gruppo{} è in linea con quanto aveva preventivato nel documento \PdP.
+ 
+ %\begin{itemize}
+% 	\item \textbf{MPC3:} Ottimale;
+ %	\item \textbf{MPC4:} Ottimale;
+ %	\item \textbf{MPD1:} Accettabile;
+ %	\item \textbf{MPD8:} Ottimale;
+%	\item \textbf{Accettabile:} 
+%	\item \textbf{Ottimale:} 
+%\end{itemize}
+%mentre nelle seguenti non si ottengono buoni risulti
+ 
