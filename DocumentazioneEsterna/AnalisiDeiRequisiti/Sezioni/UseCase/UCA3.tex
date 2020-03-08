@@ -7,7 +7,7 @@
 \end{figure} 
 
 \begin{itemize}
-\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+\item \textbf{Attori primari:} Utente anonimo
 \item \textbf{Precondizione:} L'utente è autenticato e può accedere alle funzionalità della lista delle \glo{organizzazioni}.
 \item \textbf{Postcondizione:} Vengono forniti all'utente i risultati delle funzionalità disponibili.
 \item \textbf{Scenario principale:} L'utente autenticato utilizza le funzioni di gestione delle liste di \glo{organizzazioni} per svolgere una o più delle seguenti azioni:
@@ -22,7 +22,7 @@
 
 \subsubsection{UCA 3.1 - Scaricamento lista di tutte le organizzazioni}%sea level
 \begin{itemize}
-\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+\item \textbf{Attori primari:} Utente anonimo
 \item \textbf{Precondizione:} L'utente è autenticato e può scaricare la lista di tutte le \glo{organizzazioni}.
 \item \textbf{Postcondizione:} L'utente ha a disposizione la lista di tutte le \glo{organizzazioni}.
 \item \textbf{Scenario principale:} L'utente seleziona l'esecuzione della funzione "Scaricamento della lista".
@@ -41,7 +41,7 @@
 	\caption{UCA 3.2 - Gestione lista delle \glo{organizzazioni preferite}}
 \end{figure}
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato e può gestire la propria lista delle \glo{organizzazioni preferite}.
 	\item \textbf{Postcondizione:} All'utente vengono forniti i risultati delle funzionalità disponibili.
 	\item \textbf{Scenario principale:} L'utente autenticato ha selezionato la funzionalità di gestione della lista delle \glo{organizzazioni preferite}.
@@ -64,7 +64,7 @@
 
 \subsubsection{UCA 3.2.1 - Inserimento di una organizzazione nella lista delle organizzazioni preferite dell'utente}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato sceglie di eseguire la funzionalità di inserimento di un'\glo{organizzazione} nella lista delle \glo{organizzazioni preferite} (solo se ha scaricato precedentemente la lista delle \glo{organizzazioni}).
 	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione} che non richiede tracciamento autenticato, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
 	\item \textbf{Scenario principale:} Inserimento di una organizzazione che non richiede tracciamento autenticato nella lista delle organizzazioni preferite dell'utente.
@@ -77,7 +77,7 @@
 
 \subsubsection{UCA 3.2.2 - Inserimento di una organizzazione che richiede credenziali LDAP nella lista delle organizzazioni preferite dell'utente}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato e sceglie di eseguire la funzionalità di inserimento nella lista delle \glo{organizzazioni preferite} solo se ha scaricato precedentemente la lista delle \glo{organizzazioni}.
 	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione}, che richiede tracciamento autenticato, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
 	\item \textbf{Scenario principale:} Inserimento di una organizzazione con tracciamento autenticato nella lista delle organizzazioni preferite dell'utente.
@@ -95,7 +95,7 @@
 
 \subsubsection{UCA 3.2.3 - Rimozione di una organizzazione dalla lista delle organizzazioni preferite dell'utente}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:}  L'utente è autenticato sceglie di eseguire la funzionalità di rimozione nella lista delle \glo{organizzazioni preferite} solo se c'è almeno una \glo{organizzazione} inserita nella lista delle \glo{organizzazioni preferite}.
 	\item \textbf{Postcondizione:} È stata rimossa l'\glo{organizzazione}, scelta dall'utente, dalla lista delle \glo{organizzazioni preferite}.
 	\item \textbf{Scenario principale:} Rimozione di una organizzazione dalla lista delle organizzazioni preferite dell'utente.
@@ -115,7 +115,7 @@
 \end{figure}
 
 \begin{itemize} 
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato e può aggiornare la lista delle \glo{organizzazioni}.
 	\item \textbf{Postcondizione:} L'utente ha aggiornato la lista di tutte le \glo{organizzazioni}.
 	\item \textbf{Scenario principale:} L'utente ha la necessità di aggiornare la lista e può farlo manualmente con l'apposita funzionalità [UCA 3.3.1] o sarà fatto con temporizzazione [UCA 3.3.2].
@@ -130,7 +130,7 @@
 
 \subsubsection{UCA 3.3.1 - Aggiornare lista organizzazione con refresh manuale}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente anonimo sceglie di eseguire la funzionalità aggiornamento della lista dell'\glo{organizzazione} attraverso la modalità di \glo{refresh manuale}.
 	\item \textbf{Postcondizione:} La lista delle \glo{organizzazioni} è aggiornata.	
 	\item \textbf{Scenario principale:} Aggiornamento della lista delle organizzazione con il refresh manuale.
@@ -142,7 +142,7 @@
 
 \subsubsection{UCA 3.3.2 - Aggiornare lista organizzazione con temporizzazione}%fish level
 \begin{itemize} 
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente anonimo sceglie di eseguire la funzionalità aggiornamento della lista dell'\glo{organizzazione} attraverso la modalità \glo{temporizzazione}.
 	\item \textbf{Postcondizione:} La lista delle \glo{organizzazioni} è aggiornata.
 	\item \textbf{Scenario principale:} Aggiornamento della lista delle organizzazione con temporizzazione.
@@ -161,7 +161,7 @@
 \end{figure}
 
 \begin{itemize} 
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:}  L'utente è autenticato e può visualizzare la lista delle \glo{organizzazioni}.
 	\item \textbf{Postcondizione:} L'utente visualizza la lista delle \glo{organizzazioni} nel modo che ritiene più opportuno.
 	\item \textbf{Scenario principale:}	L'utente può scegliere come visualizzare la lista tramite diversi tipi di ordinamento:
@@ -178,7 +178,7 @@
 
 \subsubsection{UCA 3.4.1 - Visualizzazione con ordinamento alfabetico}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista secondo un ordinamento alfabetico (dalla a alla z) per il nome dell'\glo{organizzazione}.
 	\item \textbf{Postcondizione:} Viene visualizzata la lista delle \glo{organizzazioni} in ordine alfabetico per il nome dell'\glo{organizzazione}.
 	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con ordinamento alfabetico.
@@ -190,7 +190,7 @@
 
 \subsubsection{UCA 3.4.2 - Visualizzazione con ordinamento \glo{FIFO}}%fish level
 \begin{itemize}	
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista secondo un ordinamento \glo{FIFO}.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} secondo un ordinamento \glo{FIFO}.
 	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con ordinamento \glo{FIFO}.
@@ -210,7 +210,7 @@
 	\caption{UCA 3.5 - Ricerca personalizzata delle \glo{organizzazioni}}
 \end{figure}
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato e può svolgere ricerche riguardo le \glo{organizzazioni}.
 	\item \textbf{Postcondizione:} Vengono forniti all'utente i risultati delle ricerche.
 	\item \textbf{Scenario principale:} L'utente deve svolgere alcune ricerche e sceglie il metodo che più lo aggrada.
@@ -230,7 +230,7 @@
 
 \subsubsection{UCA 3.5.1 - Ricerca con filtro per nazione}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di ricerca della lista per cercare le \glo{organizzazioni} di una certa nazione d'interesse.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che sono nella nazione scelta dall'utente.
 	\item \textbf{Scenario principale:} Le ricerche vengono effettuate tramite un filtro per nazione.
@@ -242,7 +242,7 @@
 
 \subsubsection{UCA 3.5.2 - Ricerca con filtro per nome}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di ricerca della lista per cercare le \glo{organizzazioni} che hanno nel nome una sottostringa specificata dall'utente.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che hanno nel nome una sottostringa scelta dall'utente.
 	\item \textbf{Scenario principale:} Le ricerche vengono effettuate tramite un filtro per nome.
@@ -254,7 +254,7 @@
 
 \subsubsection{UCA 3.5.3 - Ricerca con filtro per città}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di ricerca della lista per cercare le \glo{organizzazioni} di una certa città d'interesse.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che sono nella città scelta dall'utente.
 	\item \textbf{Scenario principale:} Le ricerche vengono effettuate tramite un filtro per città.
@@ -266,7 +266,7 @@
 
 \subsubsection{UCA 3.5.4 - Visualizzazione con filtro per tracciamento anonimo}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista che permettono un \glo{tracciamento anonimo}.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che richiedono il \glo{tracciamento anonimo}.
 	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con filtro per tracciamento anonimo.
@@ -278,7 +278,7 @@
 
 \subsubsection{UCA 3.5.5 - Visualizzazione con filtro per \glo{tracciamento autenticato}}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo, Utente riconosciuto
+	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista che permette un \glo{tracciamento autenticato}.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che permettono il \glo{tracciamento autenticato}.
 	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con filtro per \glo{tracciamento autenticato}.

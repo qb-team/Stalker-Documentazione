@@ -30,12 +30,12 @@
 	\item \textbf{Precondizione:} L'utente  autenticato con le proprie credenziali Stalker.
 	\item \textbf{Postcondizione:} L'utente ha inserito le proprie credenziali \glo{LDAP}.
 	\item \textbf{Scenario principale:} L'utente inserisce le proprie credenziali \glo{LDAP} per potersi autenticare.
+	\item \textbf{Scenario alternativo:} Il tentativo di \glo{autenticazione} fallisce perché le credenziali inserite sono errate [UCA 8.7.1].
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente inserisce il proprio nome utente [UCA 7.1.1];
 		\item L'utente inserisce la password [UCA 7.1.2].
 	\end{enumerate}
-	\item \textbf{Scenario alternativo:} Il tentativo di \glo{autenticazione} fallisce perché le credenziali inserite sono errate [UCA 8.7.1].
 	\item \textbf{Estensioni:}
 	\begin{itemize}
 		\item UCA 8.7.1 - Visualizzazione messaggio di errore credenziali LDAP aziendali errate.
