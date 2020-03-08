@@ -9,18 +9,37 @@ Allo scopo di tracciare gli incrementi del prodotto, ogni sua versione è accomp
 \begin{center}
 	\textbf{X.Y.Z}
 \end{center}
-con:
+Il gruppo ha scelto di scindere il versionamento del prodotto software dal versionamento della documentazione al fine di garantire una definizione chiara e univoca del numero di versione.\\
+Questa scelta nasce dalla distanza che intercorre tra documentazione e prodotto nell'ambito del versionamento, ovvero aumentare il numero di versione nella documentazione non è correlato con un aumento del numero di versione del prodotto software.
+I soli documenti che avranno lo stesso numero di versione del prodotto software sono: 
+\begin{itemize}
+	\item Manuale utente;
+	\item Manuale manutentore.
+\end{itemize}  
+Questo poiché saranno prodotti in contemporanea allo sviluppo delle funzionalità del prodotto e quindi le modifiche e aggiunte a quest'ultimo sono direttamente collegate ai due manuali.\\
+
+Numero versione per la documentazione:
 \begin{itemize}
 	\item \textbf{X}: Detto indice major, rappresenta il numero di una versione stabile, quando X $> 0$.
-	Viene incrementato ogni volta che il \Responsabile{} approva il prodotto, successivamente allo svolgimento del processo di verifica da parte di un verificatore;
-	\item \textbf{Y}: Detto indice minor, rappresenta una versione del prodotto a cui sono state aggiunte funzionalità (o sezioni, se si tratta di documenti), di cui ne è garantita la correttezza dopo la verifica da parte di un verificatore.
-	Questo numero indica quante verifiche effettuate sono state superate positivamente.
-	Quindi, l'indice Y viene incrementato dal verificatore ad ogni verifica con successo.
+	Viene incrementato ogni volta che il \Responsabile{} approva il documento, successivamente allo svolgimento del processo di verifica da parte di un verificatore;
+	\item \textbf{Y}: Detto indice minor, rappresenta una versione del documento a cui sono state aggiunte sezioni, sottosezioni o paragrafi, la cui correttezza è garantita dalla verifica da parte di un verificatore. 
 	Viene azzerato ad ogni incremento dell'indice X;
-	\item \textbf{Z}: Detto indice patch, rappresenta una versione del prodotto in cui è stata effettuata una aggiunta o una modifica integrativa, senza aver subito una verifica da parte di un verificatore.
-	Quindi, l'indice Z viene incrementato ad ogni modifica, di qualsiasi dimensione.
+	\item \textbf{Z}: Detto indice patch, rappresenta una versione del documento in cui è stata effettuata un'aggiunta o una modifica, questa aggiunta deve essere verificata da parte di un verificatore.
+	Quindi, l'indice Z viene incrementato ad ogni modifica e correzione, di qualsiasi dimensione, previa verifica.
 	Viene azzerato quando l'indice X o l'indice Y vengono incrementati.
 \end{itemize}
+
+Numero versione per il prodotto software e il manuale utente e manuale manutentore:
+\begin{itemize}
+	\item \textbf{X}: Detto indice major, rappresenta il numero di una versione stabile, quando X $> 0$.
+	Viene incrementato quando tutti i requisiti obbligatori sono implementati e il prodotto supera la verifica da parte dei verificatori e viene approvato dal \Responsabile{}.
+	\item \textbf{Y}: Detto indice minor, rappresenta una versione del prodotto a cui sono state aggiunte tutte le funzionalità atte a soddisfare un requisito, la correttezza di tali funzionalità deve essere garantita dai verificatori.  
+	Viene azzerato ad ogni incremento dell'indice X;
+	\item \textbf{Z}: Detto indice patch, rappresenta una versione del prodotto in cui è stata effettuata un'aggiunta o una correzione, che superi la verifica da parte di un verificatore
+	Quindi, l'indice Z viene incrementato ad ogni modifica, di qualsiasi dimensione, previa verifica.
+	Viene azzerato quando l'indice X o l'indice Y vengono incrementati.
+\end{itemize}
+Seguendo lo stesso numero di versione, il prodotto e i manuali incrementalo il loro contenuto ogni volta che viene aggiunta una funzionalità al prodotto software.
 
 \subsubsection{Servizi di supporto per il versionamento} 
 Il gruppo ha deciso di adottare \glo{Git}, che è un software per la gestione del codice sorgente (\glo{SCM}) e controllo di versione (\glo{VCS}).
@@ -33,9 +52,11 @@ Il gruppo \Gruppo{} potrà interagire con il \glo{VCS} sia tramite riga di coman
 \subsubsection{Repository creati}
 Sono stati creati due \glo{repository} per supportare il lavoro del gruppo, quali:
 \begin{itemize}
-	\item \textbf{Stalker}: Viene usato per versionare il codice sorgente prodotto dal gruppo.
-	Al momento tale repository è vuoto e verrà usato dopo la RR, organizzandoli nella maniera che verrà ritenuta più appropriata;
-	\item \textbf{Stalker-Documentazione}: Viene usato per versionare la documentazione prodotta dal gruppo.
+	\item \textbf{Stalker}: Viene usato per versionare il codice sorgente prodotto dal gruppo. Al momento tale repository è vuoto e verrà usato dopo la RR, organizzandolo nella maniera che verrà ritenuta più appropriata;
+	\item \textbf{Stalker-Documentazione}: Viene usato per versionare la documentazione prodotta dal gruppo;
+	\item \textbf{Stalker-App-PoC}: Viene usato per versionare il codice sorgente relativo dell'applicazione mobile per lo sviluppo del \glo{PoC}. Verrà integrato nel repository \textit{Stalker};
+	\item \textbf{Stalker-Backend}: Viene usato per lo sviluppo dell'applicativo lato server;
+	\item \textbf{Stalker-Admin-PoC}: Viene usato per lo sviluppo dell'interfaccia web dedicata all'amministratore. Verrà integrato nel repository \textit{Stalker}.
 \end{itemize}
 
 \subsubsection{Organizzazione del repository Stalker-Documentazione}

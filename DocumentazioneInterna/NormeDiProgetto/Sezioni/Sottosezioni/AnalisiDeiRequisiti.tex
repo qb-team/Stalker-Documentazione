@@ -12,7 +12,7 @@ Il documento \AdR{}, redatto dagli analisti, ha come scopo i seguenti punti:
 \end{itemize}
 
 \paragraph{Aspettative}\mbox{}\\ \\
-L'obiettivo è quello di creare un documento formale contenente tutti i \glo{requisiti} richiesti e concordati col proponente.
+L'obiettivo è quello di creare un documento formale contenente tutti i \glo{requisiti} richiesti e concordati col proponente.\\
 Deve essere possibile fare riferimento a quanto redatto nel documento \AdR{} qualora sorgessero incomprensioni e dubbi al momento del collaudo del prodotto.
 
 \paragraph{Casi d'uso}\mbox{}\\ \\
@@ -27,7 +27,7 @@ con:
 	\item \textbf{[Destinazione]}:
 		\begin{itemize}
 			\item \textbf{A}, se il caso d’uso descrive un comportamento o una funzione che l’\glo{utente} ha a disposizione nell'applicazione mobile;
-			\item \textbf{S}, se il caso d’uso descrive un comportamento o una funzione che l'\glo{amministratore} ha a disposizione nell'interfaccia utente per il server.
+			\item \textbf{S}, se il caso d’uso descrive un comportamento o una funzione che l'\glo{amministratore} ha a disposizione nell'applicazione web.
 		\end{itemize}
 	\item \textbf{[Codice]} (dati X, Y, Z $\in \mathbb{Z_+}$):
 	\begin{itemize}
@@ -58,6 +58,7 @@ I punti dell'elenco racchiusi fra parentesi quadre (non sono inclusi fra questi 
 	Nota: se ci sono più scenari alternativi, marcare il primo come \textbf{Scenario alternativo 1} e proseguire ordinatamente con \textbf{Scenario alternativo 2}, ecc.]
 	\item \textbf{[Flusso di eventi}: Elenco ordinato di eventi che accadono e permettono il raggiungimento  della postcondizione.
 	Stile tipografico: gli elementi intermedi dell'elenco terminano con un punto e virgola, mentre l'ultimo con un punto fermo.]
+	\item \textbf{[Generalizzazione}: Caso d'uso che è generalizzazione del caso d'uso in esame.]
 	\item \textbf{[Inclusioni}: Elenco non ordinato dei casi d'uso (\textbf{UC[Destinazione] [Codice] - Nome del caso d'uso}) che permettono di raggiungere le postcondizioni indicate.
 	Tipicamente si ottengono inclusioni da casi d'uso di tipo \glo{sea-level}, \glo{fish-level}.
 	Il caso d'uso descritto non conosce i dettagli dei casi d'uso inclusi ma solo i loro risultati.
@@ -80,6 +81,7 @@ I punti dell'elenco racchiusi fra parentesi quadre (non sono inclusi fra questi 
 	\item \textbf{Scenario principale}: Come in UC[Destinazione] X.
 	\item \textbf{[Scenario alternativo}: Come in UC[Destinazione] X.]
 	\item \textbf{[Flusso di eventi}: Come in UC[Destinazione] X.]
+	\item \textbf{[Generalizzazione}: Come in UC[Destinazione] X.]
 	\item \textbf{[Inclusioni}: Elenco non ordinato dei casi d'uso (\textbf{UC[Destinazione] [Codice] - Nome del caso d'uso}) che permettono di raggiungere le postcondizioni indicate.
 	Tipicamente si ottengono inclusioni da casi d'uso di tipo \glo{fish-level}.
 	Il caso d'uso descritto non conosce i dettagli dei casi d'uso inclusi ma solo i loro risultati.
@@ -101,6 +103,7 @@ I punti dell'elenco racchiusi fra parentesi quadre (non sono inclusi fra questi 
 	\item \textbf{Postcondizione}: Come in UC[Destinazione] X.
 	\item \textbf{Scenario principale}: Come in UC[Destinazione] X.
 	\item \textbf{[Flusso di eventi}: Come in UC[Destinazione] X.]
+	\item \textbf{[Generalizzazione}: Come in UC[Destinazione] X.]
 	\item \textbf{[Inclusioni}: Come in UC[Destinazione] X.]
 	\item \textbf{[Estensioni}: Come in UC[Destinazione] X.]
 \end{itemize}

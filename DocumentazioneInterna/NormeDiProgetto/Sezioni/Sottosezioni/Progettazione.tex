@@ -1,14 +1,16 @@
 \subsubsection{Progettazione}
 \paragraph{Scopo}\mbox{}\\ \\
 La progettazione, svolta dai Progettisti, ha lo scopo di soddisfare i requisiti stabiliti nel documento \AdR{} per trovare una soluzione accettabile per tutti gli stakeholder.
-Per fare ciò, si cerca di seguire un approccio sintetico dove si pensa prima all’architettura del prodotto e poi al codice.
+Per fare ciò, si cerca di seguire un approccio sintetico dove si pensa prima all’architettura del prodotto e poi al codice. 
+Inoltre, per la Technology Baseline è prevista la realizzazione di un \glo{Proof of Concept}.
 \paragraph{Descrizione}\mbox{}\\ \\
 La progettazione consiste nei seguenti compiti:
 \begin{itemize}
 	\item Controllare la complessità del prodotto suddividendo il sistema in parti di complessità trattabile;
 	\item Soddisfare i requisiti garantendo qualità;
 	\item Definire un’architettura logica del prodotto che dovrà avere determinate caratteristiche;
-	\item Avere una progettazione dettagliata con la consapevolezza di fermarsi quando la suddivisione porterà più svantaggi che benefici.
+	\item Avere una progettazione dettagliata con la consapevolezza di fermarsi quando la suddivisione porterà più svantaggi che benefici;
+	\item Per prendere confidenza con le tecnologie, sarà necessaria la realizzazione di un \glo{PoC} per poter affrontare la successiva fase di Codifica. Quest'ultimo sarà la nostra base dalla quale potremo attuare i successivi incrementi pianificati nel documento \PdP{}.
 \end{itemize}
 
 \paragraph{Architettura}\mbox{}\\ \\
@@ -28,13 +30,13 @@ La realizzazione dell’architettura del prodotto è divisa in due parti:
 \end{itemize}
 
 \subparagraph{Technology Baseline}\mbox{}\\ \\
-La Technology Baseline deve dimostrare l’adeguatezza dell’architettura tramite un Proof of Concept (PoC) che rappresenta la baseline per lo sviluppo. 
+La Technology Baseline deve dimostrare l’adeguatezza dell’architettura tramite un \glo{Proof of Concept} che rappresenta la baseline per lo sviluppo. 
 La Technology baseline deve includere:
 \begin{itemize}
-	\item \textbf{Le tecnologie:} dove vengono scelte le tecnologie che \Gruppo{} utilizzerà per la realizzazione del prodotto finale. Successivamente verranno ampliate le conoscenze di esse tramite una ricerca di documentazione e materiali utili per il loro apprendimento. Verranno date delle motivazioni per la scelta delle tecnologie adottate con i rispettivi pregi e difetti;
-	\item \textbf{\glo{Librerie} e \glo{Framework}:} durante la scomposizione in sottosistemi verrà considerata la disponibilità di librerie e di framework per ottenete un maggiore facilità e affidabilità;
-	\item \textbf{Creazione del \glo{Proof of Concept}:} realizzazione di un eseguibile che permette di rappresentare e validare la Technlogy Baseline;
-	\item \textbf{Diagrammi UML:} viene utilizzato il linguaggio di modellazione UML per definire delle regole e dei vincoli con l'obiettivo di supportare la progettazione del sistema software. I diagramma UML utilizzati sono i seguenti:
+	\item \textbf{Le tecnologie}: Dove vengono scelte le tecnologie che \Gruppo{} utilizzerà per la realizzazione del prodotto finale. Successivamente verranno ampliate le conoscenze di esse tramite una ricerca di documentazione e materiali utili per il loro apprendimento. Verranno date delle motivazioni per la scelta delle tecnologie adottate con i rispettivi pregi e difetti;
+	\item \textbf{\glo{Librerie} e \glo{Framework}}: Durante la scomposizione in sottosistemi verrà considerata la disponibilità di librerie e di framework per ottenete un maggiore facilità e affidabilità;
+	\item \textbf{Creazione del \glo{Proof of Concept}}: Realizzazione di un eseguibile che permette di rappresentare e validare la Technlogy Baseline;
+	\item \textbf{Diagrammi UML}: Viene utilizzato il linguaggio di modellazione UML per definire delle regole e dei vincoli con l'obiettivo di supportare la progettazione del sistema software. I diagramma UML utilizzati sono i seguenti:
 	\begin{itemize}
 		\item Diagrammi dei casi d'uso; 
 		\item Diagrammi delle classi; 
@@ -48,8 +50,8 @@ La Technology baseline deve includere:
 La Product Baseline illustrerà la baseline architetturale del prodotto, in coerenza con la Technology Baseline e la sua definizione è fondamentale per l'attività di progettazione.
 Essa deve includere un allegato che contenga:
 \begin{itemize}
-	\item \textbf{Diagrammi delle classi:} utlizzati per descrivere il tipo di un oggetto che viene usati all'interno di un sistema;
-	\item \textbf{Diagrammi di sequenza:} utlizzati per la collaborazione di un insieme di oggetti che devono implementare collettivamente un comportamento;
-	\item \textbf{Contestualizzazione dei design pattern adottati:} per avere un'organizzazione architetturale che riesca a gestire dei problemi ricorrenti è necessario capire quali design pattern il gruppo dovrà utilizzare e le funzionalità di ciascuno di essi.	
-	\item \textbf{Requisiti del test di accettazione della produzione:} bisogna effettuare dei test su tutto il SUT, che viene considerato black box, relativi agli use cases e ai requisiti concordati con il proponente.
+	\item \textbf{Diagrammi delle classi}: Utilizzati per descrivere i tipi di oggetti che vengono usati all'interno di un sistema;
+	\item \textbf{Diagrammi di sequenza}: Utilizzati per la collaborazione di un insieme di oggetti che devono implementare collettivamente un comportamento;
+	\item \textbf{Contestualizzazione dei design pattern adottati}: Per avere un'organizzazione architetturale che riesca a gestire dei problemi ricorrenti è necessario capire quali design pattern il gruppo dovrà utilizzare e le funzionalità di ciascuno di essi.	
+	\item \textbf{Requisiti del test di accettazione della produzione}: Bisogna effettuare dei test su tutto il SUT, che viene considerato black box, relativi agli use cases e ai requisiti concordati con il proponente.
 \end{itemize}
