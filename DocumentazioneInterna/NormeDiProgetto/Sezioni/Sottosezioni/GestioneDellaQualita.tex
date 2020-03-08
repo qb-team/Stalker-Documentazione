@@ -89,29 +89,28 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
         \item \textbf{Attività di riferimento:} Analisi dei requisiti;
         \item \textbf{Sigla:} $PRS$
         \item \textbf{Formula:} $$PRS = {\frac{|requisiti \; soddisfatti|}{|requisiti \; totali|}}\; \cdot \; 100$$
-        \item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
     \end{itemize}
 \subparagraph{Progettazione Architetturale}
-\subsubparagraph{Metrica - SFIN: Structural Fan-In}
-\begin{itemize}
-	\item \textbf{Codice:} MPC2
-	\item \textbf{Descrizione:} Numero di procedure che chiamano questa procedura;
-	\item \textbf{Processo di riferimento:} Sviluppo;
-	\item \textbf{Sigla:} $SFIN$
-	\item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
-\end{itemize}
-\subsubparagraph{Metrica - SFOUT: Structural Fan-Out}
-\begin{itemize}
-	\item \textbf{Codice:} MPC3
-	\item \textbf{Descrizione:} Numero di procedure che questa procedura chiama;
-	\item \textbf{Processo di riferimento:} Sviluppo;
-	\item \textbf{Sigla:} $SFOUT$
-	\item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
-\end{itemize}
-\subparagraph{Progettazione di dettaglio}
-    \subsubparagraph{Metrica - Incapsulamento CBO}
+% \subsubparagraph{Metrica - SFIN: Structural Fan-In}
+% \begin{itemize}
+% 	\item \textbf{Codice:} MPC2
+% 	\item \textbf{Descrizione:} Numero di procedure che chiamano questa procedura;
+% 	\item \textbf{Processo di riferimento:} Sviluppo;
+% 	\item \textbf{Sigla:} $SFIN$
+% 	\item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
+% \end{itemize}
+% \subsubparagraph{Metrica - SFOUT: Structural Fan-Out}
+% \begin{itemize}
+% 	\item \textbf{Codice:} MPC3
+% 	\item \textbf{Descrizione:} Numero di procedure che questa procedura chiama;
+% 	\item \textbf{Processo di riferimento:} Sviluppo;
+% 	\item \textbf{Sigla:} $SFOUT$
+% 	\item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
+% \end{itemize}
+\subsubparagraph{Metrica - Incapsulamento CBO}
     \begin{itemize}
-        \item \textbf{Codice:} MPC4
+        \item \textbf{Codice:} MPC2
         \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una classe in esame al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling della classe in esame e più il sistema è difficile da mantenere;
         \item \textbf{Processo di riferimento:} Sviluppo;
         \item \textbf{Sigla:} $CBO$
@@ -128,42 +127,44 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
             }
             \end{math}
         \end{itemize}
-        \item \textbf{Strumenti utilizzati:}
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
     \end{itemize}
+\subparagraph{Progettazione di dettaglio}
+    
 
     \subsubparagraph{Metrica - Livello profondità gerarchia}
     \begin{itemize}
-        \item \textbf{Codice:} MPC5
+        \item \textbf{Codice:} MPC3
         \item \textbf{Descrizione:} È il valore intero che indica la profondità della gerarchia formata tra classi. Se una gerarchia è formata da una classe allora il valore è uguale a 1;
         \item \textbf{Processo di riferimento:} Sviluppo;
         \item \textbf{Sigla:} $LPG$
-        \item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
     \end{itemize}
 
 \subparagraph{Codifica}
     \subsubparagraph{Metrica - Numero di parametri per metodo}
     \begin{itemize}
-        \item \textbf{Codice:} MPC6
+        \item \textbf{Codice:} MPC4
         \item \textbf{Descrizione:} Un numero elevato di parametri per metodo può indicare il bisogno di ridurre funzionalità associate a tale metodo. Più è grande questo valore e più la possibilità aumenta nel commettere errori progettuali;
         \item \textbf{Processo di riferimento:} Sviluppo;
         \item \textbf{Sigla:} $NPM$
-        \item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
     \end{itemize}
 
     \subsubparagraph{Metrica - Linee di commento per linee di codice}
     \begin{itemize}
-        \item \textbf{Codice:} MPC7
+        \item \textbf{Codice:} MPC5
         \item \textbf{Descrizione:} È il rapporto tra linee di commento e linee di codice. Per le linee di codice si intende Logical SLOC il numero di linee di codice effettive che corrispondono al numero di statement;
         \item \textbf{Processo di riferimento:} Sviluppo;
         \item \textbf{Sigla:} $LCLC$
         \item \textbf{Formula:}$$LCLC = {|linee \; di \; commento| \frac |linee \; di \; codice|}$$
-        \item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
     \end{itemize}
 \paragraph{Processi di supporto}
 \subparagraph{Documentazione}
 \subsubparagraph{Metrica - Indice di Gulpease}
 \begin{itemize}
-	\item \textbf{Codice:} MPC8
+	\item \textbf{Codice:} MPC6
 	\item \textbf{Descrizione:} È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Il valore è un intero da 0 a 100; se esso è inferiore a 80 sarà difficile da leggere per chi ha la licenza elementare, mentre se è inferiore a 40 sarà difficili da leggere per chi ha un diploma superiore;
 	\item \textbf{Processo di riferimento:} Documentazione;
 	\item \textbf{Sigla:} $IG$
@@ -174,12 +175,12 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 \subparagraph{Verifica}
 \subsubparagraph{Metrica - Code coverage}
 \begin{itemize}
-	\item \textbf{Codice:} MPC9
+	\item \textbf{Codice:} MPC7
 	\item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento;
 	\item \textbf{Processo di riferimento:} \glo{Processi} di verifica;
 	\item \textbf{Sigla:} $CC$
 	\item \textbf{Formula:} $$CC = \frac{|linee \; di \; codice \; percorse \; dai  \; test|}{|linee \; di \; codice \; totali|} \; \cdot \; 100$$
-	\item \textbf{Strumenti utilizzati:}\glo{Sonarqube}.
+	\item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
 \end{itemize}
     \paragraph{Processi organizzativi}
 
@@ -187,7 +188,7 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 
 \subsubparagraph{Metrica - Actual Cost of Work Performed}
     \begin{itemize}
-        \item \textbf{Codice:} MPC10
+        \item \textbf{Codice:} MPC8
         \item \textbf{Descrizione:} Denaro speso fino al momento del calcolo;
         \item \textbf{Processo di riferimento:} Gestione;
         \item \textbf{Sigla:} $ACWP$
@@ -197,7 +198,7 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 
 \subsubparagraph{Metrica - Budgeted Cost of Work Scheduled}
 \begin{itemize}
-	\item \textbf{Codice:} MPC11
+	\item \textbf{Codice:} MPC9
 	\item \textbf{Descrizione:} Costo pianificato per realizzare le attività di progetto fino al momento del calcolo;
 	\item \textbf{Processo di riferimento:} Gestione;
 	\item \textbf{Sigla:} $BCWS$
@@ -211,7 +212,7 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 
 \subsubparagraph{Metrica - Budgeted Cost of Work Performed}
 \begin{itemize}
-	\item \textbf{Codice:} MPC12
+	\item \textbf{Codice:} MPC10
 	\item \textbf{Descrizione:} Valore del lavoro fatto fino al momento del calcolo, quanto lavoro si è fatto al costo pianificato;
 	\item \textbf{Processo di riferimento:} Gestione;
 	\item \textbf{Sigla:} $BCWP$
@@ -225,7 +226,7 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 
     \subsubparagraph{Metrica - Schedule variance}
     \begin{itemize}
-        \item \textbf{Codice:} MPC13
+        \item \textbf{Codice:} MPC11
         \item \textbf{Descrizione:} È il valore che indica se si è in linea ($=0$), in anticipo ($>0$) oppure in ritardo ($<0$) rispetto alla schedulazione delle attività di progetto pianificate nella \glo{baseline};
         \item \textbf{Processo di riferimento:} Gestione;
         \item \textbf{Sigla:} $SV$
@@ -240,7 +241,7 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 
     \subsubparagraph{Metrica - Budget variance}
         \begin{itemize}
-            \item \textbf{Codice:} MPC14
+            \item \textbf{Codice:} MPC12
             \item \textbf{Descrizione:} È il valore che indica se alla data corrente si è speso di più ($>0$) o di meno ($<0$) rispetto a quanto pianificato dal budget totale $B_{tot}$;
             \item \textbf{Processo di riferimento:} Gestione;
             \item \textbf{Sigla:} $BV$
@@ -263,7 +264,7 @@ Capacità del prodotto software di essere comprensibile, di poter essere usato e
 
 \subsubparagraph{Metrica - Attrattività della User Interface (UI)} 
 \begin{itemize}
-    \item \textbf{Codice: } MPD1
+    \item \textbf{Codice:} MPD1
     \item \textbf{Descrizione:} Misurare quanto attrattive risultino le interfacce agli utenti dal punto di vista grafico.
     Gli utenti dovranno poi compilare un questionario in base all'esperienza che hanno fatto;
     Il valore medio di tale valutazione è ritenuto valido se almeno tre utenti hanno compilato il questionario. 
@@ -276,7 +277,7 @@ Capacità del prodotto software di essere comprensibile, di poter essere usato e
         \item $V$ = Valore medio dei risultati;
         \item $q$ = Questionario compilato;
         \end{itemize}
-    \item \textbf{Strumenti utilizzati:} Moduli Google
+    \item \textbf{Strumenti utilizzati:} Moduli Google.
 \end{itemize}
 
 \subparagraph{Manutenibilità}
@@ -295,8 +296,7 @@ Capacità di predire il livello di impegno richiesto per modificare il prodotto 
         \item $n$ = numero di statement (nodi presenti nel grafo);
         \item $p$ = numero delle componenti connesse da ogni nodo (per esecuzione sequenziale: p=2, essendovi un predecessore e un successore);
     \end{itemize}
-
-    \item \textbf{Strumenti utilizzati:}
+    \item \textbf{Strumenti utilizzati:} Non ancora definito.
 \end{itemize}
 
 \subsubparagraph{Metrica - Unità Documentate} 
@@ -306,7 +306,7 @@ Capacità di predire il livello di impegno richiesto per modificare il prodotto 
     \item \textbf{Attributo di riferimento:} \glo{Modificabilità};
     \item \textbf{Sigla:} $UD$
     \item \textbf{Formula:} $$UD = \frac{|unit\grave{a} \; di \; codice \; con \; documentazione \; tecnica|}{|unit\grave{a} \; di \; codice|} \cdot 100$$
-    \item \textbf{Strumenti utilizzati:}
+    \item \textbf{Strumenti utilizzati:} Non ancora definito.
 \end{itemize}
               
        
@@ -323,7 +323,7 @@ Capacità del prodotto software di dimostrare un adeguato livello di affidabilit
     \item \textbf{Attributo di riferimento:} \glo{Manutenibilità};
     \item \textbf{Sigla:} $CS$
     \item \textbf{Formula:} $$CS = {numero \; di \; code \; smell \; rilevati}$$
-    \item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
+    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
 \end{itemize}
 
 \subsubparagraph{Metrica - Presenza di vulnerabilità} 
@@ -333,7 +333,7 @@ Capacità del prodotto software di dimostrare un adeguato livello di affidabilit
     \item \textbf{Attributo di riferimento:} \glo{Sicurezza};
     \item \textbf{Sigla:} $VLN$
     \item \textbf{Formula:} $$VLN = {numero \; di \; vulnerabilita' \; rilevate}$$
-    \item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
+    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
 \end{itemize}
 
 \subsubparagraph{Metrica - Presenza di bug} 
@@ -343,7 +343,7 @@ Capacità del prodotto software di dimostrare un adeguato livello di affidabilit
     \item \textbf{Attributo di riferimento:} \glo{Operabilità};
     \item \textbf{Sigla:} $BUG$
     \item \textbf{Formula:} $$BUG = {numero \; di \; bug \; rilevati}$$
-    \item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
+    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
 \end{itemize}
 
 \subsubparagraph{Metrica - Maturità dei Test} 
@@ -353,7 +353,7 @@ Capacità del prodotto software di dimostrare un adeguato livello di affidabilit
     \item \textbf{Attributo di riferimento:} \glo{Maturità};
     \item \textbf{Sigla:} $MT$
     \item \textbf{Formula:} $$MT = \frac{|casi \; di \; test \; eseguiti \; con \; successo|}{|casi \; di \; test \; previsti|} \cdot 100$$
-    \item \textbf{Strumenti utilizzati:}
+    \item \textbf{Strumenti utilizzati:} Non ancora definito.
 \end{itemize}
        
 \subparagraph{Usabilità}\hbox{}
