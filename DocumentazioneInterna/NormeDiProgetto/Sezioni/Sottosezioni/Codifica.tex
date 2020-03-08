@@ -1,16 +1,12 @@
 \subsubsection{Codifica}
-\paragraph{Scopo}\mbox{}\\ \\
+\paragraph{Scopo}\hbox{}
 Lo scopo della codifica consiste nell'implementare le specifiche del prodotto definite nelle attività precedenti.
 
-\paragraph{Note sulla sezione di Codifica}\mbox{}\\ \\
+\paragraph{Note sulla sezione di Codifica}\hbox{}
 Questa sezione viene redatta durante la fase iniziale del progetto e il suo contenuto è limitato alle disponibilità di conoscenza attuali.
 Verrà ampliata in seguito per l'attività di \textbf{Codifica}.
 
-%\paragraph{Intestazione dei file}\mbox{}\\ \\
-%Questa sezione viene redatta durante la fase iniziale del progetto e il suo contenuto è limitato alle disponibilità di conoscenza attuali.
-%Verrà ampliata in seguito per l'attività di \textbf{Codifica}.
-
-\paragraph{Commenti}\mbox{}\\ \\
+\paragraph{Commenti}\hbox{}
 Il codice sorgente deve essere adeguatamente commentato, sia per chi lo scrive, sia per chi lo deve leggere in futuro.
 È quindi necessario che ogni porzione di codice significativa sia dotata di commenti esplicativi, in particolar modo se le istruzioni usate non sono comuni.
 I commenti devono essere chiari ma al contempo sintetici, per non distrarre dal contesto.
@@ -24,7 +20,7 @@ Questa sezione deve saper dire:
 \end{itemize}
 I commenti devono essere mantenuti.
 
-\paragraph{Nomi dei file e delle variabili}\mbox{}\\ \\
+\paragraph{Nomi dei file e delle variabili}\hbox{}
 I nomi dei file:
 \begin{itemize}
     \item Devono essere univoci;
@@ -38,27 +34,18 @@ I nomi delle variabili:
     \item Devono rispettare le condizioni del linguaggio in cui vengono usate, se presenti.
 \end{itemize}
 
-\paragraph{Stile di codifica}\mbox{}\\ \\
-Il gruppo \Gruppo{}, al fine di garantire una maggiore leggibilità, uniformità e manutenibilità del codice prodotto, ha deciso di utilizzare uno standard di codifica. Per quanto riguarda le parti di applicazione mobile e server backend si è utilizzato il plugin checkstyle \href{https://checkstyle.sourceforge.io}{https://checkstyle.sourceforge.io} per \glo{gradle} e per \glo{maven} rispettivamente. Invece per la parte di interfaccia web il gruppo ha fatto riferimento al plugin tslint \href{https://palantir.github.io/tslint/}{https://palantir.github.io/tslint/}. 
-Per entrambi i plugin, si è deciso di configurare lo stile di codifica seguendo le seguenti regole:
-\begin{itemize}
-	\item AbstractClassName;
-	\item BooleanExpressionComplexity;
-	\item ConstantName;
-	\item IllegalType;
-	\item Indentation;
-	\item LineLength;
-	\item MethodName;
-	\item TypeName.
-\end{itemize}
+\paragraph{Stile di codifica}\hbox{}
+Il gruppo \Gruppo{}, al fine di garantire una maggiore leggibilità, uniformità e manutenibilità del codice prodotto, ha deciso di utilizzare nei propri repository alcuni strumenti di analisi statica.
+Per quanto riguarda le parti di applicazione mobile e server backend viene utilizzato il plugin \href{https://checkstyle.sourceforge.io}{checkstyle} per gli strumenti di \glo{build automation} \glo{Gradle} e \glo{Maven}.
+Per la parte di interfaccia web viene utilizzato il plugin \textbf{} \href{https://palantir.github.io/tslint/}{tslint}.
+Il software \href{https://www.sonarqube.org/}{SonarQube} viene utilizzato anch'esso per effettuare analisi statica ma in particolar modo per fornire valori delle metriche (indicate in §4.3) per valutare l'andamento delle attività.
 
-Per quanto riguarda l'intestazione dei file, ogni file deve rispettare le seguenti regole: 
+Per semplificare il lavoro di manutenzione, i moduli software dovrebbero avere sempre indicato: 
 \begin{itemize}
-	\item Nome e cognome di chi ha prodotto il file;
+	\item Nome e cognome di chi ha prodotto l'unità;
 	\item Data di creazione;
 	\item Data ultima modifica;
-	\item Breve descrizione del contenuto del file.
+	\item Breve descrizione del contenuto dell'unità.
 \end{itemize} 
 
-Il codice e i commenti devono essere scritti in lingua inglese.
-
+Il codice e i commenti devono essere scritti preferibilmente in lingua inglese.

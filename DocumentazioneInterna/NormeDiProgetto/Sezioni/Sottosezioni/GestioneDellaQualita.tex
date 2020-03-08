@@ -1,4 +1,3 @@
-%scritto da \PF{}
 \subsection{Garanzia della qualità}
 \subsubsection{Obiettivo}
 Il gruppo \Gruppo{} ha come obiettivo prefissato di essere \glo{sistematico}, \glo{disciplinato} e \glo{quantificabile}, ai fini di:
@@ -13,8 +12,8 @@ Il gruppo \Gruppo{} ha come obiettivo prefissato di essere \glo{sistematico}, \g
 \input{Sezioni/Sottosezioni/IsoIec9126}
 
 \subsubsection{Piano di Qualifica}
-Nel documento \PdQ{} il gruppo \Gruppo{} illustra come intende gestire la qualità di processo e di qualità di prodotto, elenca le varie metriche definite per aderire alle definizioni degli standard e i test per verificare la corretta soddisfazione dei requisiti del prodotto software.
-La qualità di processo e la qualità di prodotto sono due aspetti chiaramente coordinati, ma vengono gestiti separatamente. \\ \\
+Nel documento \PdQ{} il gruppo \Gruppo{} illustra come intende gestire la qualità di processo e di qualità di prodotto, elenca le varie metriche definite per aderire alle definizioni degli standard e i test per verificare la corretta soddisfazione dei requisiti del prodotto software.\newline
+La qualità di processo e la qualità di prodotto sono due aspetti chiaramente coordinati, ma vengono gestiti separatamente.
 Le sezioni principali del documento sono le seguenti:
 \begin{itemize}
     \item \textbf{Qualità di processo:} Sezione dove vengono elencate le metriche inerenti ai \glo{processi};
@@ -24,7 +23,7 @@ Le sezioni principali del documento sono le seguenti:
 \end{itemize}
 
 \subsubsection{Metriche di qualità}
-\paragraph{Codici metriche}\mbox{}\\ \\
+\paragraph{Codici metriche}\hbox{}
 Ogni metrica di \glo{processo} ha un codice univoco ed è strutturato in questo formato:
 \begin{center}
     M[Destinazione][Numero progressivo]
@@ -39,7 +38,7 @@ con:
     \item \textbf{[Numero progressivo]}: Il numero della metrica in relazione alla sua destinazione, progressivo perché diverso per ogni metrica e in serie. Il conteggio parte da 1.
 \end{itemize}
 
-\paragraph{Struttura descrittiva metriche}\mbox{}\\ \\
+\paragraph{Struttura descrittiva metriche}\hbox{}
 La seguente è una struttura ad elenco che descrive una metrica di processo o di prodotto. \\
 I punti dell'elenco racchiusi fra parentesi quadre indicano che tale punto è opzionale e va inserito solo se necessario.\\
 Inoltre, \textbf{Processo di riferimento} deve essere presente solo nelle metriche della qualità di processo, mentre \textbf{Attributo di riferimento} solo per la qualità di prodotto.
@@ -58,16 +57,15 @@ elencata in una lista, mentre il nome della metrica rappresenta il titolo di que
     \end{itemize}
 \end{itemize}
 
-\paragraph{Metriche di processo}\mbox{}\\ \\
-Per monitorare l'aderenza ai processi dallo standard ISO/IEC 12207 istanziati, vengono utilizzate delle metriche. Il Responsabile, grazie ai valori ricavati dalle metriche, è facilitato nel
-valutare il \glo{processo} e di effettuare, se necessario, modifiche alla pianificazione.\\
+\paragraph{Metriche di processo}\hbox{}
+Per monitorare l'aderenza ai processi dallo standard ISO/IEC 12207 istanziati, vengono utilizzate delle metriche. Il Responsabile, grazie ai valori ricavati dalle metriche, è facilitato nel valutare il \glo{processo} e di effettuare, se necessario, modifiche alla pianificazione.
 
-\paragraph{Metriche di prodotto}\mbox{}\\ \\
+\paragraph{Metriche di prodotto}\hbox{}
 Il modello di qualità del software descritto dallo standard ISO/IEC 9126 definisce le caratteristiche e gli attributi del prodotto software, ciascuna misurabile da metriche interne (che richiedono la disponibilità del codice sorgente - white box) o esterne (che richiedono il prodotto software in esecuzione - black box).
 Una volta specificati i requisiti di qualità del prodotto software, si identificano le caratteristiche e attributi di qualità che più contribuiscono a verificare l'aderenza allo standard e ai requisiti.
 Il gruppo \Gruppo{} si è impegnato a scegliere le metriche interne che maggiormente influenzano (in positivo) le caratteristiche esterne del prodotto finale, in modo che esse possano predire quanto più possibile la qualità del risultato finale. 
 
-\paragraph{Tabella riassuntiva metriche}\mbox{}\\ \\
+\paragraph{Tabella riassuntiva metriche}\hbox{}
 Per riassumere tutte le metriche e le loro caratteristiche descritte all'interno del \PdQ{}, alla fine della sezione in cui vengono illustrate vi sono delle tabelle riassuntive che hanno questa struttura:
 {
 \rowcolors{2}{grigetto}{white}
@@ -90,7 +88,7 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
         \item \textbf{Processo di riferimento:} Sviluppo;
         \item \textbf{Attività di riferimento:} Analisi dei requisiti;
         \item \textbf{Sigla:} $PRS$
-        \item \textbf{Formula:} $$PRS = {|requisiti \; soddisfatti| \over |requisiti \; totali|}\; \cdot \; 100$$
+        \item \textbf{Formula:} $$PRS = {\frac{|requisiti \; soddisfatti|}{|requisiti \; totali|}}\; \cdot \; 100$$
         \item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
     \end{itemize}
 \subparagraph{Progettazione Architetturale}
@@ -158,7 +156,7 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
         \item \textbf{Descrizione:} È il rapporto tra linee di commento e linee di codice. Per le linee di codice si intende Logical SLOC il numero di linee di codice effettive che corrispondono al numero di statement;
         \item \textbf{Processo di riferimento:} Sviluppo;
         \item \textbf{Sigla:} $LCLC$
-        \item \textbf{Formula:}$$LCLC = {|linee \; di \; commento| \over |linee \; di \; codice|}$$
+        \item \textbf{Formula:}$$LCLC = {|linee \; di \; commento| \frac |linee \; di \; codice|}$$
         \item \textbf{Strumenti utilizzati:} \glo{Sonarqube}.
     \end{itemize}
 \paragraph{Processi di supporto}
@@ -169,7 +167,7 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 	\item \textbf{Descrizione:} È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Il valore è un intero da 0 a 100; se esso è inferiore a 80 sarà difficile da leggere per chi ha la licenza elementare, mentre se è inferiore a 40 sarà difficili da leggere per chi ha un diploma superiore;
 	\item \textbf{Processo di riferimento:} Documentazione;
 	\item \textbf{Sigla:} $IG$
-	\item \textbf{Formula:} $$IG = 89 + {{300 \; \cdot \; |frasi| \; - \; 10 \; \cdot \; |lettere|}\over |parole|}$$
+	\item \textbf{Formula:} $$IG = 89 + {\frac{300 \; \cdot \; |frasi| \; - \; 10 \; \cdot \; |lettere|}{|parole|}}$$
 	\item \textbf{Strumenti utilizzati:} \url{https://farfalla-project.org/readability_static/}
 \end{itemize}
 
@@ -180,7 +178,7 @@ Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 	\item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento;
 	\item \textbf{Processo di riferimento:} \glo{Processi} di verifica;
 	\item \textbf{Sigla:} $CC$
-	\item \textbf{Formula:} $$CC = {|linee \; di \; codice \; percorse \; dai  \; test| \over |linee \; di \; codice \; totali|} \; \cdot \; 100$$
+	\item \textbf{Formula:} $$CC = \frac{|linee \; di \; codice \; percorse \; dai  \; test|}{|linee \; di \; codice \; totali|} \; \cdot \; 100$$
 	\item \textbf{Strumenti utilizzati:}\glo{Sonarqube}.
 \end{itemize}
     \paragraph{Processi organizzativi}
@@ -307,15 +305,15 @@ Capacità di predire il livello di impegno richiesto per modificare il prodotto 
     \item \textbf{Descrizione:} Misurare in percentuale il numero di unità di codice con documentazione tecnica;
     \item \textbf{Attributo di riferimento:} \glo{Modificabilità};
     \item \textbf{Sigla:} $UD$
-    \item \textbf{Formula:} $$UD = {|unit\grave{a} \; di \; codice \; con \; documentazione \; tecnica| \over |unit\grave{a} \; di \; codice|} \cdot 100$$
+    \item \textbf{Formula:} $$UD = \frac{|unit\grave{a} \; di \; codice \; con \; documentazione \; tecnica|}{|unit\grave{a} \; di \; codice|} \cdot 100$$
     \item \textbf{Strumenti utilizzati:}
 \end{itemize}
               
        
-\paragraph{Metriche esterne}\mbox{}\\ \\
+\paragraph{Metriche esterne}\hbox{}
 Le metriche relative alla qualità "esterna" indirizzano le caratteristiche esteriori del software, cioè quelle rilevabili direttamente dagli utenti e dagli operatori.
 
-\subparagraph{Affidabilità}\mbox{}\\ \\
+\subparagraph{Affidabilità}\hbox{}
 Capacità del prodotto software di dimostrare un adeguato livello di affidabilità quando opererà nel sistema in cui è previsto debba operare.
   
 \subsubparagraph{Metrica - Presenza di code smell} 
@@ -354,11 +352,11 @@ Capacità del prodotto software di dimostrare un adeguato livello di affidabilit
     \item \textbf{Descrizione:} Misurare la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire piena copertura dei requisiti sia funzionali che qualitativi(usabilità, affidabilità, efficienza);
     \item \textbf{Attributo di riferimento:} \glo{Maturità};
     \item \textbf{Sigla:} $MT$
-    \item \textbf{Formula:} $$MT = {|casi \; di \; test \; eseguiti \; con \; successo| \over |casi \; di \; test \; previsti|} \cdot 100$$
+    \item \textbf{Formula:} $$MT = \frac{|casi \; di \; test \; eseguiti \; con \; successo|}{|casi \; di \; test \; previsti|} \cdot 100$$
     \item \textbf{Strumenti utilizzati:}
 \end{itemize}
        
-\subparagraph{Usabilità}\mbox{}\\ \\
+\subparagraph{Usabilità}\hbox{}
 Capacità del prodotto software di essere facilmente comprensibile, apprendibile ed operabile per ogni utente intenzionato a usarlo.
 
 \subsubparagraph{Metrica - Profondità Strutturale dell'Interfaccia}
@@ -369,20 +367,3 @@ Capacità del prodotto software di essere facilmente comprensibile, apprendibile
     \item \textbf{Sigla:} $PSI$
     \item \textbf{Strumenti utilizzati:} Controllo manuale.
 \end{itemize}
-% <commento ai commenti> gli strumenti per il controllo di qualità verranno integrati nelle metriche nell'apposito campo
-%\subsubsection{Strumenti per il controllo di qualità}
-%In questa sezione vengono indicati gli strumenti per valutare le metriche di processo e di prodotto.
-
-%\paragraph*{Note sugli strumenti per il controllo di qualità}\mbox{}\\ \\
-%La seguente sezione, relativa agli strumenti, non è completa in quanto il suo contenuto dipende in larga parte dalle decisioni progettuali che devono essere prese con l'avanzamento del progetto.
-
-
-%\paragraph{Metrica - Indice di Gulpease}\mbox{}\\ \\
-%Per poter calcolare questo indice, descritto nel \PdQ{} viene utilizzato come strumento il "Calcolatore dell'Indice Gulpease" ospitato a \href{https://farfalla-project.org/readability_static/}{questo indirizzo}.
-%Non vengono contati per l'indice di Gulpease il testo presente nelle seguenti parti o sezioni del documento:
-%\begin{itemize}
-%    \item Copertina;
-%    \item Indice;
-%    \item Registro delle modifiche;
-%    \item Riferimenti.
-%\end{itemize}
