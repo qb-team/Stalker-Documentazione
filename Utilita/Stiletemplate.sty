@@ -49,7 +49,7 @@
 			\begin{tabular}{r|L{5cm}}
 				\multicolumn{2}{c}{\textbf{Informazioni sul documento} } \\
 				\hline %linea separatrice orrizzontale
-				\textbf{Versione} &  \Versionedoc\\
+				\textbf{Versione} &  \Versionedoc{}\\
 				\textbf{Approvatori} & \Approvatore{} \\
 				\textbf{Redattori} & \Redattori{} \\
 				\textbf{Verificatori} & \Verificatori{} \\
@@ -139,3 +139,20 @@
 \definecolor{darkblue}{RGB}{59,77,95}
 \definecolor{giallo}{RGB}{251,168,11}
 \definecolor{verde}{RGB}{87,180,0}
+
+%% subsubparagraph
+
+\makeatletter
+\newcounter{subsubparagraph}[subparagraph]
+\renewcommand\thesubsubparagraph{%
+  \thesubparagraph.\@arabic\c@subsubparagraph}
+\newcommand\subsubparagraph{%
+  \@startsection{subsubparagraph}    % counter
+    {6}                              % level
+    {\parindent}                     % indent
+    {3.25ex \@plus 1ex \@minus .2ex} % beforeskip
+    {-1em}                           % afterskip
+    {\normalfont\normalsize\bfseries}}
+\newcommand\l@subsubparagraph{\@dottedtocline{6}{10em}{5em}}
+\newcommand{\subsubparagraphmark}[1]{}
+\makeatother
