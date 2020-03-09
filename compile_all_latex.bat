@@ -72,6 +72,7 @@ cd ..\VI_2020_02_26
 latexmk -pdf VI_2020_02_26.tex > NUL
 latexmk -c > NUL
 
+echo Compilazione Glossario
 cd ..\..\..
 
 cd Glossario
@@ -80,10 +81,7 @@ latexmk -c > NUL
 
 cd ..
 
-echo Copia dei file in un unica cartella
-
-
-echo Compilazione Documentazione Esterna
+echo Copia dei file Documentazione Esterna
 cd DocumentazioneEsterna
 
 cd AnalisiDeiRequisiti
@@ -102,7 +100,7 @@ copy VE_2020_02_18.pdf ..\..\..\FileCompilati\.
 cd ..\VE_2020_02_27
 copy VE_2020_02_27.pdf ..\..\..\FileCompilati\.
 
-echo Compilazione Documentazione Interna
+echo Copia dei file Documentazione Interna
 cd ..\..\..\DocumentazioneInterna
 
 cd NormeDiProgetto
@@ -137,6 +135,7 @@ copy VI_2020_02_24.pdf ..\..\..\FileCompilati\.
 cd ..\VI_2020_02_26
 copy VI_2020_02_26.pdf ..\..\..\FileCompilati\.
 
+echo Copia dei file Glossario
 cd ..\..\..
 
 cd Glossario
