@@ -1,4 +1,5 @@
 \ProvidesPackage{Stiletemplate}	%il nostro pacchetto per swe
+\usepackage[utf8]{inputenc}
 \usepackage{graphbox}	% permette di modificare i margini
 \usepackage{hyperref}
 \usepackage[top=2.0cm, bottom=4.0cm, left=2.2cm, right=2.2cm]{geometry}
@@ -6,8 +7,7 @@
 %%Pacchetto per creare la tabella delle modifiche
 \usepackage{multirow}
 \usepackage[table]{xcolor} 
-\usepackage{longtable} 
-
+\usepackage{longtable}
 
 % Colore Links
 \definecolor{blue}{RGB}{6,69,173}
@@ -74,7 +74,7 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} %0pt= distanza dalla linea verticale
 
 
-\usepackage{lastpage} %info sul # dell'ultima pagina del documento in caso dopo la metto
+% \usepackage{lastpage} %info sul # dell'ultima pagina del documento in caso dopo la metto
 \usepackage{fancyhdr} %per modificare dimensioni,margini, intestazioni e righe a piè di pagina
 
 \newcommand{\fancyverbale}{
