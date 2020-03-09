@@ -27,58 +27,46 @@
 \section{Resoconto}
 Nella discussione sono state affrontate svariate tematiche riguardanti alcune domande o dubbi legate alle tecnologie, in seguito ci sono tutte le risposte del proponente:
 
-\subsection{Quale versione di SDK Android si dovrebbe utilizzare?}
-Ha consigliato di vedere il developer Android best practies dove è possibile visionare quale versione \glo{API} di Android sarebbe opportuna da utilizzare. 
-Come minimo deve essere l'\glo{API} 28 versione 9 di Android per poter supportare Google Play.
+\subsection{Quale versione del SDK di Android si dovrebbe utilizzare?}
+Ha consigliato di vedere il sito di Android per le best practices (\href{https://developer.android.com/distribute/best-practices}{link al sito}) dove è possibile visionare quale versione \glo{API} di Android sarebbe opportuna da utilizzare. 
+Consiglia, al minimo, le \glo{API} 28 corrispondenti alla versione 9 di Android per poter supportare a pieno i servizi Google Play.
 
 \subsection{Si possono utilizzano le API di Google per la geolocalizzazione?}
-Le si possono usare tranquillamente cercando di non andare subito nella \glo{API} di Google; bisogna stare attenti nella richiesta frequente della posizione perché si rischia 
-di esaurire le chiamate gratuite. Quindi sarebbe opportuno non utilizzare una richiesta di posizione che va al di sotto dei secondi ed in caso valutare di utilizzare dei 
-mock (oggetti simulati che riproducono il comportamento degli oggetti reali in modo controllato).
-
-\newpage
-\subsection{Va bene utilizzare l'autenticazione con Google per gli utenti che desiderano entrare nelle fiere/organizzazioni pubbliche mentre per gli account dei dipendenti 
-di organizzazioni aziendali  credenziali LDAP?}
-Si è possibile agganciare l'account dell'applicazione con quella di Google e \glo{LDAP} per i dipendenti aziendali.
+Le si possono usare tranquillamente, cercando però di non utilizzarle costantemente, soprattutto per fare test: bisogna stare attenti nell'utilizzo frequente della posizione perché si rischia di esaurire il numero di richieste gratuite.
+Sarebbe opportuno non inviare richieste di controllo di posizione al di sotto del secondo ed in caso valutare di utilizzare dei mock (oggetti simulati che riproducono il comportamento degli oggetti reali in modo controllato).
 
 \subsection{Accertamenti sull'autenticazione}
-Stiamo pensando di creare noi le \glo{API} di \glo{autenticazione} che si appoggia al servizio esterno Firebase di Google, cosi è possibili far utilizzare  l'applicazione agli utenti 
-che serve per avere accesso a qualsiasi funzionalità dell'applicazione e anche per chi è amministratore che dovrà gestire l'\glo{organizzazione}. I dipendenti che devono venire 
-\glo{tracciati} tramite \glo{autenticazione} (come richiesto nel capitolato) ne richiediamo un account aggiuntivo in fase di inserimento dell'\glo{organizzazione} che è quello che usano nella 
-loro azienda (\glo{LDAP}). \\
-Il proponente ha detto che va bene e consiglia di far \glo{autenticare} l'utente in maniera diretta, perché cosi la password all'utente non la date. In generale la password in chiaro non 
-deve mai girare.
+Il gruppo intende creare le \glo{API} di \glo{autenticazione} appoggiandosi al servizio esterno Firebase di Google, per poter far utilizzare l'applicazione agli utenti ed avere accesso a qualsiasi funzionalità dell'applicazione.
+Per chi è amministratore e non usa l'applicazione Android, ma la web-app, dovrà gestire l'\glo{organizzazione} e per questo scopo utilizzerà sempre l'autenticazione che si appoggia a Firebase. I dipendenti che devono venire 
+\glo{tracciati} tramite \glo{tracciamento autenticato} (come richiesto nel capitolato) richiedono un account aggiuntivo in fase di inserimento dell'\glo{organizzazione}, che è quello che usano nella propria organizzazione (account \glo{LDAP}).\\
+Il proponente ha detto che va bene e consiglia di far \glo{autenticare} l'utente in maniera diretta (direttamente al servizio e non attraverso le nostre API), perché cosi la password dell'utente non viene inviata in chiaro. In generale la password in chiaro non deve mai girare.
 
-\subsection{Si può utilizzare Swagger OpenAPI per realizzare il backend?}
-Ha detto che va bene usarlo come tipologia di approccio il contract first, ossia prima definisci il contratto delle \glo{API} e poi si implementa la parte di codice.  Il proponente 
-consiglia di prepararsi il Yaml con Swagger  e dopo di utilizzare OpenAPI Generator Maven \glo{Plugin} su questo Yaml per generare il codice come le classi, interfacce, ecc. 
-Questo può essere comodo nel momento in cui bisogna fare delle modifiche al codice, che lo si farà direttamente sul Yaml e non sull'output del \glo{Plugin}.
+\subsection{Si possono utilizzare Swagger e la specifica OpenAPI per realizzare il backend?}
+Il proponente afferma che va bene usarlo come tipologia di approccio \textit{contract first}, ovvero prima definire il contratto delle \glo{API} e poi implementarlo. Il proponente 
+consiglia di prepararsi il file YAML con Swagger e successivamente di utilizzare il plugin per Maven "OpenAPI Generator" a partire da quel file per generare il codice automaticamente, ma in maniera decisamente più controllata di quella propria di Swagger Hub.
+Swagger Hub infatti genera codice automatico senza il controllo dell'utente, rendendolo troppo espansivo. 
+Questo può essere comodo nel momento in cui bisogna fare delle modifiche al codice (ad esempio per errori di battitura), permettendo di modificare in un singolo punto cose che altrimenti sarebbero state da modificare in molteplici file.
 
-\subsection{Un'autenticazione su LDAP si ottiene un token come nelle altre autenticazioni o è una cosa totalmente diversa?}
-Si è possibile ottenere l'access token anche da \glo{LDAP} e supporta OAuth. Quindi nell'ambito su Firebase è possibile richiedere all'utente di \glo{autenticarsi} tramite \glo{LDAP} ottenendo 
-l'access token ed in seguito di restituirlo per verificare che sul \glo{LDAP} sia tutto valido.
+\subsection{Un'autenticazione con LDAP fornisce un token come per gli altri sistemi di autenticazione o è una cosa totalmente diversa?}
+Il proponente conferma che con LDAP è possibile ottenere l'access token, che supporta OAuth.
 
-\subsection{La base di dati che vogliamo utilizzare è relazionale e le scelte da utilizzare sono MySQL o PostgreSQL, andrebbero bene?}
-Ha detto che va bene ma i problemi possono sorgere quando bisogna tenere conto dei \glo{tracciamenti} e visionarli in tempo reale su delle tabelle. Consiglia fortemente di usare 
-Kafka o Redis per questi casi, permettendo di avere l'accesso di queste informazioni come stream asincrono in maniera tale che l'informazione rimanga persistita su un file e 
-quindi lo si ritrova come una sorta di log. Quindi si ha tutte le varie entry e vengono segnalate le entrate ed uscite degli utenti e dopo, dall'altro lato queste informazioni 
-vengono scodate e vengono inserite nel database relazionale con la dovuta calma. 
+\subsection{La base di dati da realizzare è relazionale e le scelte da utilizzare sono MySQL o PostgreSQL, possono andare bene?}
+Il proponente conferma e allo stesso tempo consiglia MySQL perché molto più semplice di PostgreSQL. Successivamente fa notare che i problemi possono sorgere quando bisogna tenere conto dei \glo{tracciamenti}: visionarli in tempo reale su delle tabelle potrebbe essere eccessivamente dispendioso con un database relazionale.
+Consiglia fortemente di usare software come Apache Kafka o Redis per questi casi, permettendo di avere l'accesso a queste informazioni come stream asincrono e in maniera tale che l'informazione rimanga memorizzata su file e 
+sotto forma di log e non tabellare. Quindi le varie entry vengono segnalate come movimenti degli utenti e dopo, dall'altro lato queste informazioni vengono "scodate" e vengono inserite nel database relazionale appena possibile.
 
 \subsection{Kafka lo si può usare anche per gestire ad esempio le richieste dell'applicazione?}
-Kafka viene utilizzato esclusivamente per le richieste asincrone e non per quelle sincrone, ottenendo cosi dei risultati istantanei dall'altro lato. 
-Se ci fosse un disaccoppiatore nel mezzo non funzionerebbe.
+Kafka dovrebbe essere utilizzato esclusivamente per le richieste asincrone e non per quelle sincrone. Utilizzare Kafka per richieste sincrone non avrebbe alcun senso.
 
-\subsection{Kafka serve per risolvere i problemi che sorgono nel pattern publisher subscriber, per quale motivo lo nominate se poi viene utilizzato cosi di rado nel sistema?}
-Il publisher subscriber non lo si usa soltanto di rado, esso è un pattern che lo si usa per disaccoppiare determinate operazioni e permette di registrarti in determinati canali 
-per fare queste operazioni. In questo contesto lo si utilizzerebbe fortemente per gestire tutti i dati mandati dalle varie \glo{API} che forniscono informazioni di \glo{tracciatura}; un sistema 
+\subsection{Kafka serve per risolvere i problemi che sorgono nel pattern Publisher/Subscriber, per quale motivo lo nominate se poi viene utilizzato così di rado nel sistema?}
+Il pattern Publisher/Subscriber non lo si usa soltanto di rado, è un pattern che lo si usa per disaccoppiare determinate operazioni e permette di registrarsi in determinati canali per fare queste operazioni.
+In questo contesto lo si utilizzerebbe fortemente per gestire tutti i dati mandati dalle varie \glo{API} che forniscono informazioni di \glo{tracciamento}; un sistema 
 che non riesce a gestire tutto questo traffico rischierebbe di collassare proprio per il fatto che l'informazione arriverebbe in modo sincrono.
 
-\subsection{Per altre operazioni come ad esempio lo storico degli accessi o mostrami un report tabellare, sarebbero operazioni sincrone quindi Kafka risulterebbe poco pratico, 
-sarebbe meglio prendere i dati da MySQL?}
-Il proponente ha detto che va bene usarlo per queste operazioni.
+\subsection{Per altre operazioni come ad esempio lo storico degli accessi o la generazione di report tabellari, sarebbero operazioni sincrone quindi Kafka risulterebbe poco pratico, sarebbe meglio prendere i dati da MySQL?}
+Il proponente conferma.
 
-\subsection{Come PoC pensavamo di usare FireBase e forse il LDAP, mentre per l'applicazione trasmette le coordinate di posizione e se si entra in un luogo di un'\glo{organizzazione} gli 
-amministratori vedono il \glo{tracciamento} effettuato. Potrebbe andare bene?}
-Il proponente ci ha fatto capire che se riusciamo già a fare tutte queste procedure sarebbe ottimo.
+\subsection{Come PoC pensavamo di mostra l'autenticazione con Firebase e forse con LDAP, se si entra in un luogo di un'\glo{organizzazione} gli amministratori vedono il \glo{tracciamento} effettuato. Potrebbe andare bene?}
+Il proponente ha fatto capire che già riuscire a fare tutto questo sarebbe un buon punto di partenza.
 
 \clearpage
