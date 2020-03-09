@@ -1,0 +1,52 @@
+\section{Informazioni Generali}
+\begin{itemize}
+\item \textbf{Luogo:} aula 1BC45, presso Torre Archimede.
+\item \textbf{Data:} \Data.
+\item \textbf{Ora:} 13:00 - 13:30.
+\item \textbf{Partecipanti del gruppo:}
+\begin{itemize}
+	\item \AT{}; 
+	\item \CE{}; 
+	\item \DF{};
+	\item \LD{};
+	\item \MC{};
+	\item \PF{};
+	\item \SE{}.
+\end{itemize} 
+\item \textbf{Segretario:} \SE{}.
+\end{itemize}
+
+\section{Ordine del Giorno}
+\begin{itemize}
+	\item Videochiamata sulla piattaforma Hangouts con \CR{} per chiarire le correzioni richieste del documento \AdRv{1.0.0}.
+\end{itemize}
+
+
+\section{Resoconto}
+\subsection{Videochiamata sulla piattaforma Hangouts con \CR{} per chiarire le correzioni richieste del documento \AdRv{1.0.0}}
+È stata chiesta a \CR{}, tramite videochiamata, una spiegazione di tutti gli errori segnalati nella correzione del documento di \AdR{} presentato per la RR.\\
+Di seguito vengono riportati tutti i problemi discussi con \CR{} durante la videochiamata:
+\begin{enumerate}
+	\item In casi d'uso dove c'è bisogno che l'utente sia autentificato per poter utilizzare certe funzionalità offerte dal sistema, viene consigliato di indicarle come precondizione, e non di includerle come attività nel flusso di eventi del casi d'uso.
+	\item UCA 7 resta comunque un caso d'uso perché è una funzionalità che il nostro sistema fornisce;
+	\item UCA 3.3.1 e UCA 3.3.2 sono mutualmente esclusivi quindi va bene utilizzare l'ereditarietà fra casi d'uso per modellarne la correlazione con UCA 3.3
+	(dato che l'aggiornamento della lista delle organizzazioni viene fatto solo da una delle due tipologie per volta).
+	\item Stessa situazione del punto precedente per UCA3.4: l'ereditarietà è da usare perché viene scelto uno e un solo metodo di visualizzazione della lista delle organizzazioni.
+	Attenzione per i sotto casi d'uso di UCA 3.4.3 e UCA 3.4.4: dovrebbero venire rimossi concettualmente da UCA 3.4 e spostati come sotto casi d'uso ad altri più affini, per esempio UCA 3.5.
+	\item UCA 3.5: una ricerca può essere fatta o per mutua esclusione (modellazione con ereditarietà) o per composizione di filtri (modellazione che non è ereditarietà perché si possono effettuare ricerche con uno o più filtri assieme, nel caso in esame per nazione, per nome, per città).
+	Dato che può verificarsi la seconda situazione, non va modellato con l'ereditarietà;
+	\item In UCA 4, UCA 6.1 e UCA 6.2 bisogna stare attenti perché l'attore primario non è l'utente ma è l'applicazione (che è il sistema), ed è essa che compie la funzionalità.
+	Il professore inizialmente consiglia di rimuovere UCA 6 e porterebbe i suoi sotto casi UCA 6.1 e UCA 6.2, attualmente indicati come come inclusioni in UCA 4, come casi d'uso propri.
+	Successivamente, dopo aver portato le ragioni per la creazione del caso d'uso (ovvero l'utente non interagisce con il sistema per far sì che avvengano, ma compie delle azioni che lo fanno avvenire), il professore conviene con il gruppo che UCA 6 può essere considerato come funzionalità e che quindi va bene che sia un caso d'uso.
+	Tuttavia, consiglia di rimuovere le inclusioni in UCA 4 poiché seppur il nostro obiettivo sia far svolgere la stessa funzionalità al sistema, le precondizioni e lo scenario sono diversi.
+	Consiglia di sostituire le inclusioni con dei nuovi sotto casi d'uso;
+	\item Sempre parlando di UCA 4, ma anche di UCA 5, le inclusioni non sono corrette perché vengono usate come dei diagrammi di attività.
+	\item UCA 5.3 e UCA 3.4 vanno rimossi e integrati come precondizione per gli altri casi d'uso, dove è ritenuto necessario;
+	\item Nell'UCA 5.1 "che cosa viene visualizzato" non va scritto nella postcondizione ma deve essere indicato con ulteriori casi d'uso;
+	\item Riguardo la Figura 20: stiamo usando un linguaggio formale in un modo informale.
+	La semplice soluzione è spezzare il contenuto della figura e lasciare ogni caso d'uso con il proprio diagramma, senza raggrupparli in panoramiche;
+	\item UCS 7.1: visualizzazione e ordinamento sono due funzionalità differenti, quindi vanno divisi dato che i sotto casi d'uso della visualizzazione possono specificare solo che cosa viene visualizzato
+	Situazione già riscontrata nei filtri menzionati precedentemente.
+\end{enumerate}
+
+\clearpage

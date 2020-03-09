@@ -1,4 +1,5 @@
 \ProvidesPackage{Stiletemplate}	%il nostro pacchetto per swe
+\usepackage[utf8]{inputenc}
 \usepackage{graphbox}	% permette di modificare i margini
 \usepackage{hyperref}
 \usepackage[top=2.0cm, bottom=4.0cm, left=2.2cm, right=2.2cm]{geometry}
@@ -6,8 +7,7 @@
 %%Pacchetto per creare la tabella delle modifiche
 \usepackage{multirow}
 \usepackage[table]{xcolor} 
-\usepackage{longtable} 
-
+\usepackage{longtable}
 
 % Colore Links
 \definecolor{blue}{RGB}{6,69,173}
@@ -49,7 +49,7 @@
 			\begin{tabular}{r|L{5cm}}
 				\multicolumn{2}{c}{\textbf{Informazioni sul documento} } \\
 				\hline %linea separatrice orrizzontale
-				\textbf{Versione} &  \Versionedoc\\
+				\textbf{Versione} &  \Versionedoc{}\\
 				\textbf{Approvatori} & \Approvatore{} \\
 				\textbf{Redattori} & \Redattori{} \\
 				\textbf{Verificatori} & \Verificatori{} \\
@@ -74,7 +74,7 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} %0pt= distanza dalla linea verticale
 
 
-\usepackage{lastpage} %info sul # dell'ultima pagina del documento in caso dopo la metto
+% \usepackage{lastpage} %info sul # dell'ultima pagina del documento in caso dopo la metto
 \usepackage{fancyhdr} %per modificare dimensioni,margini, intestazioni e righe a piè di pagina
 
 \newcommand{\fancyverbale}{
@@ -139,3 +139,20 @@
 \definecolor{darkblue}{RGB}{59,77,95}
 \definecolor{giallo}{RGB}{251,168,11}
 \definecolor{verde}{RGB}{87,180,0}
+
+%% subsubparagraph
+
+\makeatletter
+\newcounter{subsubparagraph}[subparagraph]
+\renewcommand\thesubsubparagraph{%
+  \thesubparagraph.\@arabic\c@subsubparagraph}
+\newcommand\subsubparagraph{%
+  \@startsection{subsubparagraph}    % counter
+    {6}                              % level
+    {\parindent}                     % indent
+    {3.25ex \@plus 1ex \@minus .2ex} % beforeskip
+    {-1em}                           % afterskip
+    {\normalfont\normalsize\bfseries}}
+\newcommand\l@subsubparagraph{\@dottedtocline{6}{10em}{5em}}
+\newcommand{\subsubparagraphmark}[1]{}
+\makeatother
