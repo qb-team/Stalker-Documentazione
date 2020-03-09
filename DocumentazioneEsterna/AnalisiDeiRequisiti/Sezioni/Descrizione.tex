@@ -9,20 +9,26 @@ Il prodotto garantirà le seguenti funzionalità:
     \item \textbf{Amministratori:} gli amministratori dovranno essere in grado, attraverso la web app, di gestire la propria \glo{organizzazione}, visualizzare gli accessi dei dipendenti e nominare altri amministratori per assisterli nella gestione e monitoraggio. \\
         L'amministratore avrà accesso alle seguenti funzionalità:
         \begin{itemize}
-            \item Modifica ai parametri (nome, descrizione, ecc.) dell'\glo{organizzazione};
-            \item Modifica delle superfici geografiche di \glo{tracciamento} dell'\glo{organizzazione};
-            \item Gestione degli amministratori (creazione, eliminazione e modifica dei permessi);
-            \item Monitoraggio degli utenti tracciati;
-            \item Estrapolazione di report tabellari riguardanti gli accessi dei dipendenti e gli accesi ai vari luoghi dell'\glo{organizzazione}.
+            \item \textbf{Modifica ai parametri dell'\glo{organizzazione}}: L'amministratore può ridefinire il nome, la descrizione, l'immagine e l'indirizzo dell'\glo{organizzazione} selezionata;
+            \item \textbf{Modifica delle superfici geografiche di \glo{tracciamento} dell'\glo{organizzazione}}: Può modificare il perimetro di \glo{tracciamento} dell'\glo{organizzazione} e quello degli specifici \glo{luoghi}, inserendo un numero a piacere di coordinate per delimitarne la superficie di \glo{tracciamento} (manualmente o tramite Google Maps API);
+            \item \textbf{Gestione degli amministratori}: È possibile nominare e/o eliminare amministratori e modificarne i privilegi;
+            \item \textbf{Monitoraggio degli utenti tracciati}: L'amministratore può sapere, in tempo reale, quanti utenti si trovano all'interno dei vari \glo{luoghi} dell'\glo{organizzazione}, o dell'organizzazione in generale. Qualora l'\glo{organizzazione} monitorata fosse gestita con tracciamento riconosciuto, l'amministratore è anche in grado di sapere l'identità dei vari utenti tracciati;
+            \item \textbf{Visualizzazione degli accessi effettuati}: L'amministratore ha la possibilità di visualizzare lo storico degli accessi degli utenti che hanno effettuato l'accesso all'\glo{organizzazione}, qualora quest'ultima fosse monitorata con tracciamento riconosciuto. Per ogni accesso di uno specifico utente viene mostrato: il timestamp di ingresso, quello di uscita e il suo tempo di permanenza presso l'organizzazione.
+            \item \textbf{Estrapolazione di report tabellari riguardanti gli accessi dei dipendenti e gli accesi ai vari luoghi dell'\glo{organizzazione}}: L'amministratore può ricavare tabelle dei seguenti tipi:
+            \begin{itemize}
+                \item ore di entrata e uscita da un luogo per uno specifico utente;
+                \item totale di ore spese in ogni luogo per uno specifico utente;
+                \item il numero di dipendenti e il totale delle ore da loro trascorse in ogni luogo dell'\glo{organizzazione}.
+            \end{itemize}
         \end{itemize}
     \item \textbf{Utenti:} gli utenti necessiteranno della possibilità, con l'applicazione, di registrarsi e autenticarsi nell'app, di venire tracciati nelle \glo{organizzazioni} e autenticarsi presso le \glo{organizzazioni} che lo richiedono. Agli utenti saranno fornite le seguenti funzionalità:
     \begin{itemize}
-        \item Funzionalità di registrazione ed \glo{autenticazione};
-        \item Possibilità di scaricare e aggiornare la lista delle \glo{organizzazioni};
-        \item Venire tracciati nelle \glo{organizzazioni} desiderate;
-        \item Gestione delle \glo{organizzazioni} preferite;
-        \item Visualizzare gli accessi effettuati presso le varie \glo{organizzazioni} e i relativi luoghi;
-        \item Passare in tracciabilità anonima e non presso \glo{organizzazioni} private.
+        \item \textbf{Funzionalità di registrazione e \glo{autenticazione}}: L'utente può registrarsi con delle nuove credenziali o, alternativamente, effettuare l'accesso con un account già registrato nel sistema. Qualora l'utente avesse smarrito la password, avrebbe comunque la possibilità di effettuarne il reset;
+        \item \textbf{Possibilità di scaricare e aggiornare la lista delle \glo{organizzazioni}}: L'utente ha la possibilità di scaricare la lista delle organizzazioni, sia quelle con \glo{tracciamento} autenticato che quelle senza. Può inoltre effettuare l'aggiornamento della lista in maniera manuale, tramite un pulsante o temporizzata;
+        \item \textbf{Venire tracciati nelle \glo{organizzazioni} desiderate}: L'utente verrà tracciato qualora effettuasse un \glo{movimento} all'interno dell'\glo{organizzazione};
+        \item \textbf{Gestione delle \glo{organizzazioni} preferite}: L'utente può selezionare un'organizzazione e renderla preferita, così facendo essa sarà visualizzata nelle prime righe della lista delle organizzazioni;
+        \item \textbf{Visualizzare gli accessi effettuati presso le varie \glo{organizzazioni} e i relativi luoghi}: L'utente ha a disposizione un registro degli accessi in cui sarà visualizzato l'orario di entrata e uscita da una determinata organizzazione, o luogo, e il tempo trascorso al suo interno;
+        \item \textbf{Passare in tracciabilità anonima e non presso \glo{organizzazioni} private}: Un utente riconosciuto potrà decidere di passare all'anonimato, cioè di diventare un utente anonimo, selezionando l'apposita funzionalità.
     \end{itemize}
 \end{itemize}
 \subsection{Vincoli generali}
