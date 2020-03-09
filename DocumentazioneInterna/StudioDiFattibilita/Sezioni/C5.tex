@@ -3,7 +3,7 @@
 Il capitolato in questione si chiama "Stalker", il proponente è l'azienda \Proponente{} e i committenti sono \VT{} e \CR{}.
 
 \subsection{Descrizione del capitolo}
-\NomeProgetto{} richiede la realizzazione di un sistema di monitoraggio delle posizioni delle persone (in versione anonima o non) grazie ad un'applicazione "complementare" installata sugli smartphone. La necessità del servizio sorge dal dover monitorare il numero e la posizione delle persone all'interno di fiere/musei/locali ai fini di sicurezza oppure per verificare la presenza e la locazione dei dipendenti di un'azienda. Nel primo caso si user\`a il \glo{tracciamento anonimo}, nel secondo caso invece il \glo{tracciamento} non anonimo. L'applicazione dovrà risalire alla posizione attuale grazie all'ausilio di infrastrutture e/o servizi resi disponibili dallo smartphone stesso, come per esempio \glo{beacon}, \glo{GPS}, dati del cellulare, ecc. Quando l'applicazione calcola la posizione aggiornata deve anche verificare se rientra in una zona da essere tracciata, in tal caso comunicherà col server remoto per autenticarsi (anonimamente o non) e risultare tracciabile dal sistema. 
+Stalker richiede la realizzazione di un sistema di monitoraggio delle posizioni delle persone (in versione anonima o non) grazie ad un'applicazione "complementare" installata sugli smartphone. La necessità del servizio sorge dal dover monitorare il numero e la posizione delle persone all'interno di fiere/musei/locali ai fini di sicurezza oppure per verificare la presenza e la locazione dei dipendenti di un'azienda. Nel primo caso si user\`a il \glo{tracciamento anonimo}, nel secondo caso invece il \glo{tracciamento} non anonimo. L'applicazione dovrà risalire alla posizione attuale grazie all'ausilio di infrastrutture e/o servizi resi disponibili dallo smartphone stesso, come per esempio \glo{beacon}, \glo{GPS}, dati del cellulare, ecc. Quando l'applicazione calcola la posizione aggiornata deve anche verificare se rientra in una zona da essere tracciata, in tal caso comunicherà col server remoto per autenticarsi (anonimamente o non) e risultare tracciabile dal sistema. 
 
 \subsection{Prerequisiti e tecnologie coinvolte}
 Prerequisiti:
@@ -14,7 +14,7 @@ Tecnologie coinvolte:
 \begin{itemize}
 \item Utilizzo di Java (versione 8 o superiore), \glo{Python} o \glo{Node.js} per lo sviluppo del server \glo{back-end};
 \item Utilizzo di protocolli asincroni per le comunicazioni app mobile-server;
-\item Utilizzo del pattern di \glo{Publisher/Subscriber}, ovvero mittenti (Publisher) e destinatari (Subscriber) di messaggi dialogano attraverso un tramite(\glo{dispatcher});
+\item Utilizzo del pattern di \glo{Publisher/Subscriber}, ovvero mittenti (Publisher) e destinatari (Subscriber) di messaggi dialogano attraverso un tramite (detto \glo{dispatcher});
 \item Utilizzo dell'IAAS \glo{Kubernetes} o di un \glo{PAAS}, \glo{Openshift} o \glo{Rancher}, per il rilascio delle componenti del Server nonché per la gestione della \glo{scalabilità orizzontale};
 \item API \glo{REST} attraverso le quali sia possibile utilizzare l'applicativo;
 \item Utilizzo del \glo{GPS} o altre soluzioni per monitorare un utente;
