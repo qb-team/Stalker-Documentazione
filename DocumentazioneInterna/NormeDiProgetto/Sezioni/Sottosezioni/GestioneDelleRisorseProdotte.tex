@@ -1,5 +1,4 @@
-%scritto da \PF{}
-\subsection{Gestione delle risorse prodotte}
+\subsection{Gestione della configurazione}
 \subsubsection{Obiettivo}
 Si vuole garantire che tutto ciò che viene prodotto dal gruppo \Gruppo{}, dalla documentazione al prodotto software, sia facilmente reperibile all’interno del \glo{repository}.
 Ogni elaborato viene etichettato con un particolare codice di versione e, ai fini della manutenibilità, vengono riportate le pratiche che devono essere adottate nelle operazioni di modifica e versionamento.
@@ -9,17 +8,39 @@ Allo scopo di tracciare gli incrementi del prodotto, ogni sua versione è accomp
 \begin{center}
 	\textbf{X.Y.Z}
 \end{center}
-con:
+Il gruppo ha scelto di scindere il versionamento del prodotto software dal versionamento della documentazione.
+I soli documenti che avranno lo stesso numero di versione del prodotto software, in quanto strettamente legati ad esso e meno alle scelte progettuali, sono:
+\begin{itemize}
+	\item Manuale utente;
+	\item Manuale manutentore.
+\end{itemize}
+La scelta è inoltre dettata dal fatto che saranno prodotti in contemporanea allo sviluppo delle funzionalità del prodotto e quindi le modifiche e aggiunte a quest'ultimo sono direttamente collegate ai due manuali.
+
+\paragraph{Versionamento per la documentazione}
 \begin{itemize}
 	\item \textbf{X}: Detto indice major, rappresenta il numero di una versione stabile, quando X $> 0$.
-	Viene incrementato ogni volta che il \Responsabile{} approva il prodotto, successivamente allo svolgimento del processo di verifica da parte di un verificatore;
-	\item \textbf{Y}: Detto indice minor, rappresenta una versione del prodotto a cui sono state aggiunte funzionalità (o sezioni, se si tratta di documenti), di cui ne è garantita la correttezza dopo la verifica da parte di un verificatore.
-	Questo numero indica quante verifiche effettuate sono state superate positivamente.
-	Quindi, l'indice Y viene incrementato dal verificatore ad ogni verifica con successo.
+	Viene incrementato ogni volta che il \Responsabile{} approva il documento, successivamente allo svolgimento del processo di verifica da parte di un verificatore;
+	\item \textbf{Y}: Detto indice minor, rappresenta una versione del documento a cui sono state aggiunte sezioni, sottosezioni o paragrafi, la cui correttezza è garantita dalla verifica da parte di un verificatore. 
 	Viene azzerato ad ogni incremento dell'indice X;
-	\item \textbf{Z}: Detto indice patch, rappresenta una versione del prodotto in cui è stata effettuata una aggiunta o una modifica integrativa, senza aver subito una verifica da parte di un verificatore.
-	Quindi, l'indice Z viene incrementato ad ogni modifica, di qualsiasi dimensione.
+	\item \textbf{Z}: Detto indice patch, rappresenta una versione del documento in cui è stata effettuata un'aggiunta o una modifica, questa aggiunta deve essere verificata da parte di un verificatore.
+	Quindi, l'indice Z viene incrementato ad ogni modifica e correzione, di qualsiasi dimensione, previa verifica.
 	Viene azzerato quando l'indice X o l'indice Y vengono incrementati.
+\end{itemize}
+
+\paragraph{Versionamento per il prodotto software, per il manuale utente e per il manuale manutentore}
+\begin{itemize}
+	\item \textbf{X}: Detto indice major, rappresenta il numero di una versione stabile, quando X $> 0$.
+	Viene incrementato quando tutti i requisiti obbligatori sono implementati e il prodotto supera la verifica da parte dei verificatori e viene approvato dal \Responsabile{}.
+	\item \textbf{Y}: Detto indice minor, rappresenta una versione del prodotto a cui sono state aggiunte tutte le funzionalità atte a soddisfare un requisito, la correttezza di tali funzionalità deve essere garantita dai verificatori.  
+	Viene azzerato ad ogni incremento dell'indice X;
+	\item \textbf{Z}: Detto indice patch, rappresenta una versione del prodotto in cui è stata effettuata una correzione o una modifica, che superi la verifica da parte di un verificatore.
+	Quindi, l'indice Z viene incrementato ad ogni modifica, di qualsiasi dimensione, previa verifica.
+	Viene azzerato quando l'indice X o l'indice Y vengono incrementati.
+\end{itemize}
+Le versioni del prodotto software sono di due tipi:
+\begin{itemize}
+	\item \textbf{Uso interno}: il software è in lavorazione, ma i requisiti che sono dichiarati come soddisfatti (ovvero il software li soddisfa) non sono sufficienti per rendere il prodotto utilizzabile professionalmente (i requisiti dell'incremento non sono ancora tutti completati);
+	\item \textbf{Uso esterno}: il software è in lavorazione oppure è completato, i requisiti dichiarati come soddisfatti permettono al software di essere utilizzabile professionalmente (l'incremento è stato completato). A questa versione si associa un rilascio su GitHub.
 \end{itemize}
 
 \subsubsection{Servizi di supporto per il versionamento} 
@@ -31,11 +52,16 @@ Il repository remoto a cui tutto il gruppo fa riferimento è ospitato sulla piat
 Il gruppo \Gruppo{} potrà interagire con il \glo{VCS} sia tramite riga di comando (git) che tramite software come \glo{GitKraken}.
 
 \subsubsection{Repository creati}
-Sono stati creati due \glo{repository} per supportare il lavoro del gruppo, quali:
+Sono stati creati più \glo{repository} per supportare il lavoro del gruppo, quali:
 \begin{itemize}
-	\item \textbf{Stalker}: Viene usato per versionare il codice sorgente prodotto dal gruppo.
-	Al momento tale repository è vuoto e verrà usato dopo la RR, organizzandoli nella maniera che verrà ritenuta più appropriata;
-	\item \textbf{Stalker-Documentazione}: Viene usato per versionare la documentazione prodotta dal gruppo.
+	\item \textbf{Stalker-App}: Viene usato per versionare il codice sorgente prodotto dal gruppo per l'applicazione web per gli amministratori. Al momento tale repository è vuoto e verrà usato dopo la RP;
+	\item \textbf{Stalker-App}: Viene usato per versionare il codice sorgente prodotto dal gruppo per l'applicazione mobile per gli utenti. Al momento tale repository è vuoto e verrà usato dopo la RP;
+	\item \textbf{Stalker-Documentazione}: Viene usato per versionare tutta la documentazione prodotta dal gruppo;
+	\item \textbf{Stalker-App-PoC}: Viene usato per versionare il codice sorgente relativo dell'applicazione mobile per utenti per lo sviluppo del \glo{Proof of Concept}.
+	Il gruppo, intendendo seguire il modello di sviluppo incrementale, integrerà con le opportune modifiche, il suo contenuto all'interno del repository to nel repository \textit{Stalker-App} per lavorare al prodotto finale;
+	\item \textbf{Stalker-Backend}: Viene usato per versionare il codice sorgente prodotto dal gruppo per l'applicativo lato server, il cosiddetto backend;
+	\item \textbf{Stalker-Admin-PoC}: Viene usato per lo sviluppo dell'interfaccia web dedicata all'amministratore per il \glo{Proof of Concept}.
+	Come per \textit{Stalker-App-PoC}, il codice prodotto verrà integrato nel repository \textit{Stalker-Admin} per lavorare al prodotto finale.
 \end{itemize}
 
 \subsubsection{Organizzazione del repository Stalker-Documentazione}

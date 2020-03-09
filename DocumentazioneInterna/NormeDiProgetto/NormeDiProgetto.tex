@@ -3,9 +3,23 @@
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{amsfonts}
+\usepackage{amsmath}
 \usepackage[italian]{babel}
 \setcounter{tocdepth}{5}
 \setcounter{secnumdepth}{5}
+\usepackage[raggedright]{titlesec}
+\usepackage{blindtext}
+\usepackage[export]{adjustbox}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
+
+\titleformat{\subparagraph}[hang]{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
+
+%\titleformat{\subsubparagraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
+
 
 \input{Sezioni/Comandi.tex}
 \input{../../Utilita/Comandi.tex}
@@ -16,10 +30,9 @@
 \copertina{}
 \newpage
 
-\input{Sezioni/RegistroModifiche.tex}
-
-
 \fancydoc{}
+
+\input{Sezioni/RegistroModifiche.tex}
 
 \clearpage
 \tableofcontents
@@ -35,8 +48,6 @@
 \clearpage
 
 \input{Sezioni/ProcessiSupporto.tex}
-\clearpage
-\input{sezioni/Riferimenti.tex}
 \clearpage
 
 \end{document}

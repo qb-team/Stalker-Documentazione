@@ -10,22 +10,16 @@
 \rowcolor{darkblue}
 	\textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Decisione}} \\
 	VE\_\Data.1 & Al termine della redazione dei casi d'uso e dei relativi attori verificare la compatibilità con il GDPR. \\	
-	VE\_\Data.2 & Il caso d'uso che si occupa del cambio di modalità di tracciamento\ap{G} deve tenere conto di ciò che segue: quando un utente passa nella modalità di tracciamento\ap{G} anonimo\ap{G} ed è ancora presso un luogo di un’organizzazione\ap{G}, viene terminato il suo accesso e genera un accesso con tracciamento\ap{G} anonimo\ap{G} presso lo stesso luogo. \\
+	VE\_\Data.2 & Il caso d'uso che si occupa del cambio di modalità di \glo{tracciamento} deve tenere conto di ciò che segue: quando un utente passa nella modalità di \glo{tracciamento anonimo} ed è ancora presso un luogo di un’\glo{organizzazione}, viene terminato il suo accesso e genera un accesso con \glo{tracciamento anonimo} presso lo stesso luogo. \\
 	VE\_\Data.3 & Scegliere una licenza fra GNU, GPL, LGPL, MIT. \\
-	VE\_\Data.4 & L'utente utilizzatore dell'applicazione deve poter avere delle credenziali per accedere all'applicazione e memorizzare le informazioni in un profilo utente. Queste credenziali devono essere diverse da quelle di un'organizzazione\ap{G} che richiede autenticazione\ap{G}. \\
-	VE\_\Data.5 & I server LDAP\ap{G} delle organizzazioni\ap{G} che richiedono autenticazione\ap{G} devono essere esterni al sistema. Il sistema deve contenere solo informazioni come l'indirizzo del server. \\
-	VE\_\Data.6 & L'area di un luogo di un'organizzazione\ap{G} può essere approssimata ad una figura geometrica semplice, come ad esempio un quadrilatero. \\
-	VE\_\Data.7 & Gli utenti che non devono autenticarsi\ap{G} presso le organizzazioni\ap{G} generano un codice univoco che permetta di certificare la veridicità di un ingresso o di un’uscita da un luogo per il tracciamento\ap{G} anonimo\ap{G}, senza però permettere di conoscere chi lo ha generato. \\
-	VE\_\Data.8 & Gli amministratori di sistema creano le utenze per gli amministratori owner e gli assegnano l'organizzazione\ap{G}. \\
-	VE\_\Data.9 & Gli amministratori di sistema non hanno accesso alle informazioni delle organizzazioni\ap{G}, di cui ne sono invece responsabili i loro amministratori owner. \\
-	VE\_\Data.10 & Deve essere scelto come affrontare il problema del possibile monitoraggio di aree pubbliche da parte delle organizzazioni\ap{G}, scegliendo fra le seguenti possibilità:
-	\begin{itemize}
-		\item assegnare un numero massimo di luoghi per un'organizzazione\ap{G}, che può aumentare pagando un sovrapprezzo;
-		\item assegnare un'estensione massima all'area delle zone coperte da tracciamento\ap{G};
-		\item specificare un tetto massimo per gli utenti tracciabili in un luogo\ap{G};
-		\item verificare che il luogo\ap{G} tracciato sia conforme alle richieste dell'azienda.
-	\end{itemize} \mbox{} \\
-	VI\_\Data.11 & aggiornare di default l’aggiornamento temporizzato delle mappe quando si ha il dispositivo in modalità Wi-Fi, e inviare una notifica che richieda di aggiornare le mappe quando l’utente è connesso con la rete cellulare. \\
+	VE\_\Data.4 & L'utente utilizzatore dell'applicazione deve poter avere delle credenziali per accedere all'applicazione e memorizzare le informazioni in un profilo utente. Queste credenziali devono essere diverse da quelle di un'\glo{organizzazione} che richiede \glo{autenticazione}. \\
+	VE\_\Data.5 & I server \glo{LDAP} delle \glo{organizzazioni} che richiedono \glo{autenticazione} devono essere esterni al sistema. Il sistema deve contenere solo informazioni come l'indirizzo del server. \\
+	VE\_\Data.6 & L'area di un luogo di un'\glo{organizzazione} può essere approssimata ad una figura geometrica semplice, come ad esempio un quadrilatero. \\
+	VE\_\Data.7 & Gli utenti che non devono \glo{autenticarsi} presso le \glo{organizzazioni} generano un codice univoco che permetta di certificare la veridicità di un ingresso o di un’uscita da un luogo per il \glo{tracciamento anonimo}, senza però permettere di conoscere chi lo ha generato. \\
+	VE\_\Data.8 & Gli amministratori di sistema creano le utenze per gli amministratori owner e gli assegnano l'\glo{organizzazione}. \\
+	VE\_\Data.9 & Gli amministratori di sistema non hanno accesso alle informazioni delle \glo{organizzazioni}, di cui ne sono invece responsabili i loro amministratori owner. \\
+	VE\_\Data.10 & Deve essere scelto come affrontare il problema del possibile monitoraggio di aree pubbliche da parte delle \glo{organizzazioni}, scegliendo fra possibilità proposte nella sezione §3.2, sotto il paragrafo "Gerarchia degli amministratori e quali sono i loro permessi" a pag. 5. \\
+	VE\_\Data.11 & aggiornare di default l’aggiornamento temporizzato delle mappe quando si ha il dispositivo in modalità Wi-Fi, e inviare una notifica che richieda di aggiornare le mappe quando l’utente è connesso con la rete cellulare. \\
 \end{longtable}
 }
 

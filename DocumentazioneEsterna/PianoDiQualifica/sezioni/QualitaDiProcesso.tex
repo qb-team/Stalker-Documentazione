@@ -1,18 +1,15 @@
 \section{Qualità di processo}
-Per garantire la qualità dei processi\ap{G} si utilizza come riferimento lo standard ISO/IEC 12207:1995. Dopo uno studio dettagliato di tale documento sono stati scelti i processi\ap{G}
-e le attività da utilizzare. Il tutto è stato semplificato ed adattato in base alle esigenze del progetto. Come è previsto nello standard, tutti i processi\ap{G} e le attività sono raccolti 
-nei processi\ap{G}: primari, di supporto ed organizzativi. Le attività fanno parte a dei sotto processi\ap{G} rispetto a quelli appena elencati e per questo motivo la loro 
-appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
+Per garantire la qualità dei \glo{processi} si utilizza come riferimento lo standard ISO/IEC 12207:1995. Dopo uno studio dettagliato di tale documento sono stati scelti i \glo{processi}
+e le attività da utilizzare. Il tutto è stato semplificato ed adattato in base alle esigenze del progetto. Come è previsto nello standard, tutti i \glo{processi} e le attività sono raccolti 
+nei \glo{processi}: primari, di supporto ed organizzativi. Le attività fanno parte a dei sotto \glo{processi} rispetto a quelli appena elencati e per questo motivo la loro 
+appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
 
 \subsection{Processi primari}
 
 \subsubsection{Analisi dei requisiti}
-    \paragraph{Metrica - Percentuale requisiti obbligatori soddisfatti}
+    \paragraph{Metrica MPC1 - Percentuale requisiti obbligatori soddisfatti}
     \begin{itemize}
-        \item \textbf{Codice:} MPC1
         \item \textbf{Descrizione:} È la percentuale dei requisiti che devono essere soddisfatti;
-        \item \textbf{Processo di riferimento:} Sviluppo;
-        \item \textbf{Sigla:} $PRS$
         \item \textbf{Formula:} $$PRS = {|requisiti \; soddisfatti| \over |requisiti \; totali|}\; \cdot \; 100$$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
@@ -20,13 +17,20 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
             \item \textbf{Ottimale:} $PRS = 100\%$
         \end{itemize}
     \end{itemize} 
+%\subsubsection{Progettazione architetturale}
+
+%\paragraph{Metrica MPC2 - Structural Fan-In}
+%\begin{itemize}
+%	\item \textbf{Descrizione:} Numero di procedure che chiama questa procedura;
+%\end{itemize}
+%\paragraph{Metrica MPC3 - Structural Fan-Out}
+%\begin{itemize}
+%	\item \textbf{Descrizione:} Numero di procedure che questa procedura chiama;
+%\end{itemize}
 \subsubsection{Progettazione di dettaglio}
-    \paragraph{Metrica - Incapsulamento CBO}
+    \paragraph{Metrica MPC2 - Incapsulamento CBO}
     \begin{itemize}
-        \item \textbf{Codice:} MPC2
-        \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una classe in esame al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling della classe in esame e più il sistema è difficile da mantenere;
-        \item \textbf{Processo di riferimento:} Sviluppo;
-        \item \textbf{Sigla:} $CBO$
+        \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una in esame al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling della classe in esame e più il sistema è difficile da mantenere;
         \item \textbf{Formula:} $$CBO = {\sum_{i=1}^{N} C_i}$$
         con:
         \begin{itemize}
@@ -47,12 +51,9 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
         \end{itemize}
     \end{itemize}
 
-    \paragraph{Metrica - Livello profondità gerarchia}
+    \paragraph{Metrica MPC3 - Livello profondità gerarchia}
     \begin{itemize}
-        \item \textbf{Codice:} MPC3
         \item \textbf{Descrizione:} È il valore intero che indica la profondità della gerarchia formata tra classi. Se una gerarchia è formata da una classe allora il valore è uguale a 1;
-        \item \textbf{Processo di riferimento:} Sviluppo;
-        \item \textbf{Sigla:} $LPG$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
             \item \textbf{Accettabile:} $1 \leq{} LPG \leq 3$
@@ -61,12 +62,9 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
     \end{itemize}
 
 \subsubsection{Codifica}  
-    \paragraph{Metrica - Numero di parametri per metodo} 
+    \paragraph{Metrica MPC4 - Numero di parametri per metodo} 
     \begin{itemize}
-        \item \textbf{Codice:} MPC4
         \item \textbf{Descrizione:} Un numero elevato di parametri per metodo può indicare il bisogno di ridurre funzionalità associate a tale metodo. Più è grande questo valore e più la possibilità aumenta nel commettere errori progettuali;
-        \item \textbf{Processo di riferimento:} Sviluppo;
-        \item \textbf{Sigla:} $NPM$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
             \item \textbf{Accettabile:} $0 \leq{} NPM \leq 8$
@@ -74,12 +72,9 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
         \end{itemize}
     \end{itemize}
 
-    \paragraph{Metrica - Linee di commento per linee di codice}
+    \paragraph{Metrica MPC5 - Linee di commento per linee di codice}
     \begin{itemize}
-        \item \textbf{Codice:} MPC5
         \item \textbf{Descrizione:} È il rapporto tra linee di commento e linee di codice. Per le linee di codice si intende Logical SLOC il numero di linee di codice effettive che corrispondono al numero di statement;
-        \item \textbf{Processo di riferimento:} Sviluppo;
-        \item \textbf{Sigla:} $LCLC$
         \item \textbf{Formula:}$$LCLC = {|linee \; di \; commento| \over |linee \; di \; codice|}$$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
@@ -90,13 +85,10 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
 
 \subsection{Processi supporto}
 
-\subsubsection{Implementazione}
-    \paragraph{Metrica - Indice di Gulpease}
+\subsubsection{Documentazione}
+    \paragraph{Metrica MPC6 - Indice di Gulpease}
     \begin{itemize}
-        \item \textbf{Codice:} MPC6
         \item \textbf{Descrizione:} È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Il valore è un intero da 0 a 100; se esso è inferiore a 80 sarà difficile da leggere per chi ha la licenza elementare, mentre se è inferiore a 40 sarà difficili da leggere per chi ha un diploma superiore;
-        \item \textbf{Processo di riferimento:} Documentazione;
-        \item \textbf{Sigla:} $IG$
         \item \textbf{Formula:} $$IG = 89 + {{300 \; \cdot \; |frasi| \; - \; 10 \; \cdot \; |lettere|}\over |parole|}$$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
@@ -106,12 +98,9 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
     \end{itemize}
 
 \subsubsection{Verifica}
-    \paragraph{Metrica - Code coverage}
+    \paragraph{Metrica MPC7 - Code Coverage}
     \begin{itemize}
-        \item \textbf{Codice:} MPC7
         \item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento;
-        \item \textbf{Processo di riferimento:} Processi\ap{G} di verifica;
-        \item \textbf{Sigla:} $CC$
         \item \textbf{Formula:} $$CC = {|linee \; di \; codice \; percorse \; dai  \; test| \over |linee \; di \; codice \; totali|} \; \cdot \; 100$$
         \item \textbf{Range di valori che può assumere:}
         \begin{itemize}
@@ -123,12 +112,51 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
 \subsection{Processi organizzativi}
 
 \subsubsection{Pianificazione}
-    \paragraph{Metrica - Schedule variance}
+
+\paragraph{Metrica MPC8 - Actual Cost of Work Performed}
+\begin{itemize}
+	\item \textbf{Descrizione:} Denaro speso fino al momento del calcolo;
+	\item \textbf{Formula:} $$ACWP = {Somma\; delle\; ore\; lavorative\; moltiplicate\; con\; il\; corrispondente\; costo\; orario}$$
+	con:
+	\begin{itemize}
+		\item $B_{tot}$ = Budget totale.
+	\end{itemize}
+	 \begin{itemize}
+		\item \textbf{Accettabile:}  $0 \leq ACWP \leq BCWS$
+		\item \textbf{Ottimale:} $0 \leq ACWP \leq B_{tot}$
+	\end{itemize}
+\end{itemize}
+
+\paragraph{Metrica MPC9 - Budgeted Cost of Work Scheduled}
+\begin{itemize}
+	\item \textbf{Descrizione:} Costo pianificato per realizzare le attività di progetto pianificate fino al momento del calcolo. Per attività di progetto pianificate si intendono il numero di requisiti che devono soddisfatti dal prodotto software;
+	\item \textbf{Formula:} $$BCWS = {B_{tot} * \% di\; lavoro\; pianificato}$$
+	\begin{itemize}
+		\item $B_{tot}$ = Budget totale.
+	\end{itemize}
+	\begin{itemize}
+		\item \textbf{Accettabile:} $BCWS \geq 0$
+		\item \textbf{Ottimale:} $BCWS \geq 0$
+	\end{itemize}
+\end{itemize}
+
+\paragraph{Metrica MPC10 - Budgeted Cost of Work Performed}
+\begin{itemize}
+	\item \textbf{Descrizione:} Il costo del lavoro fatto fino al momento del calcolo, ovvero la variazione del numero di requisiti soddisfatti nel periodo in cui la metrica viene calcolata;
+	\item \textbf{Formula:} $$BCWP = {B_{tot} * \% di\; lavoro\; effettivamento\; fatto}$$
+	 	\begin{itemize}
+	 	\item $B_{tot}$ = Budget totale.
+	 \end{itemize}
+	 \begin{itemize}
+	 	\item \textbf{Accettabile:} $BCWP \geq 0$
+	 	\item \textbf{Ottimale:} $BCWP \geq 0$
+	 \end{itemize}
+
+\end{itemize}
+
+    \paragraph{Metrica MPC11 - Schedule Variance}
     \begin{itemize}
-        \item \textbf{Codice:} MPC8
-        \item \textbf{Descrizione:} È il valore che indica se si è in linea ($=0$), in anticipo ($>0$) oppure in ritardo ($<0$) rispetto alla schedulazione delle attività di progetto pianificate nella baseline\ap{G};
-        \item \textbf{Processo di riferimento:} Gestione;
-        \item \textbf{Sigla:} $SV$
+        \item \textbf{Descrizione:} È il valore che indica se si è in linea ($=0$), in anticipo ($>0$) oppure in ritardo ($<0$) rispetto alla schedulazione delle attività di progetto pianificate nella \glo{baseline};
         \item \textbf{Formula:} $$SV = {BCWP \; - \; BCWS}$$
         con:
         \begin{itemize}
@@ -142,12 +170,9 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
         \end{itemize}
     \end{itemize}
 
-    \paragraph{Metrica - Budget variance}
+    \paragraph{Metrica MPC12 - Budget Variance}
         \begin{itemize}
-            \item \textbf{Codice:} MPC9
             \item \textbf{Descrizione:} È il valore che indica se alla data corrente si è speso di più ($>0$) o di meno ($<0$) rispetto a quanto pianificato dal budget totale $B_{tot}$;
-            \item \textbf{Processo di riferimento:} Gestione;
-            \item \textbf{Sigla:} $BV$
             \item \textbf{Formula:} $$BV = {BCWS \; - \; ACWP}$$
             con:
             \begin{itemize}
@@ -162,11 +187,10 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
             \end{itemize}
         \end{itemize}
 
-\newpage %adattamento pagina
-
+\subsection{Tabella riassuntiva metriche dei processi}
     \rowcolors{2}{grigetto}{white}
     \renewcommand{\arraystretch}{1.5}
-    \begin{longtable}{ c C{4cm} c c c}
+    \begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
     \caption{Tabella metriche dei processi}\\
     \rowcolor{darkblue}
     \textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
@@ -177,25 +201,9 @@ appartenenza è resa chiara nella sezione: Processo\ap{G} di riferimento.
     MPC5 & Linee di Codice per Linee di Commento & $LCLC$ & $LCLC \geq 0.25$ & $LCLC \geq 0.30$ \\
     MPC6 & Indice di Gulpease & $IG$ & $40 < IG < 100$ & $80 < IG < 100$ \\
     MPC7 & Code Coverage & $CC$ & $CC = 80\%$ & $CC = 100\%$  \\
-    MPC8 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\	
-    MPC9 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\
+    MPC8 & Actual Cost of Work Performed & $ACWP$ & $0 \leq ACWP \leq BCWS$ & $0 \leq ACWP \leq B_{tot}$ \\
+    MPC9 & Budgeted Cost of Work Scheduled & $BCWS$ & $BCWS \geq 0$ &  $BCWS \geq 0$ \\
+    MPC10 & Budgeted Cost of Work Performed & $BCWP$ & $BCWP \geq 0$ & $BCWP \geq 0$ \\
+    MPC11 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\	
+    MPC12 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\
     \end{longtable}
-
-\subsection{Ciclo di Deming}
-Il ciclo di Deming è un metodo di gestione iterativo per il controllo e il miglioramento continuo dei processi (e anche dei prodotti) suddiviso in 4 fasi: Plan, Do, Check e Act. 
-Anche la norma ISO/IEC 12207 utilizza questo ciclo per scopi di miglioria dei processi\ap{G}. Per garantire la qualità dei processi\ap{G} e la coerenza allo standard, il gruppo \Gruppo  
-ha scelto di adottare il ciclo PDCA.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.2]{Sezioni/Immagini/PDCA.png}
-    \caption{Ciclo PDCA - Plan Do Check Act}
-\end{figure}
-
-\textbf{Fasi del ciclo PDCA:}
-\begin{itemize}
-    \item \textbf{Plan}: Definisce attività e scadenze necessarie al raggiungimento dei specifici obiettivi di miglioramento;
-    \item \textbf{Do}: Esegue le attività di "Plan";
-    \item \textbf{Check}: Verifica l'esito delle azioni di miglioramento rispetto alle attese. Si analizzano i risultati del "Do" e li si confrontano con gli obiettivi individuati nel "Plan";
-    \item \textbf{Act}: Consolida il tutto e cerca dei metodi per il prossimo miglioramento. Se il "Check" ha dimostrato che il "Plan" implementato dal "Do" è migliore rispetto ai precedenti processi\ap{G} standard, allora questo piano diventa il nuovo processo\ap{G} standard. Altrimenti il vecchio standard in uso rimarrà la baseline\ap{G}.
-\end{itemize}

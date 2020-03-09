@@ -3,7 +3,7 @@
 Il capitolato in questione si chiama \textit{"Natural API"}, il proponente è l'azienda \textit{teal.blue} e i committenti sono \VT{} e \CR{}.
 
 \subsection{Descrizione del capitolo}
-Considerando i vari personaggi che prendono parte allo sviluppo di un progetto (clienti, project manager, developer, ecc.), è chiaro che non tutti si esprimano nello stesso linguaggio. Le difficoltà nel descrivere l'idea che si vuole trasmettere possono ripercuotersi sull'efficienza\ap{G}, l'efficacia\ap{G} e il costo per sviluppare il progetto. \textit{Natural API\ap{G}} mira a sviluppare un toolkit\ap{G} in grado di colmare la distanza tra le specifiche di progetto e le API\ap{G}. In pratica è composta da tre processi distinti:
+Considerando i vari personaggi che prendono parte allo sviluppo di un progetto (clienti, project manager, developer, ecc.), è chiaro che non tutti si esprimano nello stesso linguaggio. Le difficoltà nel descrivere l'idea che si vuole trasmettere possono ripercuotersi sull'\glo{efficienza}, l'\glo{efficacia} e il costo per sviluppare il progetto. \textit{Natural API} mira a sviluppare un \glo{toolkit} in grado di colmare la distanza tra le specifiche di progetto e le \glo{API}. In pratica è composta da tre processi distinti:
 \begin{enumerate}
 \item \textbf{Discover}: Estrazione automatica di una lista di predicati, nomi e verbi da file testuali dati in input (per esempio guide, manuali ecc.), creando il Business Domain Language (BDL);
 \item \textbf{Design}: Combinazione delle specifiche degli stakeholders in gherkin e del BDL per creare il Business Application Language (BAL), ovvero lo step intermedio tra linguaggio naturale e codice. Il BAL deve poter integrare requisiti addizionali e poter fondere o dividere azioni ed espandere nomi in oggetti;
@@ -15,20 +15,20 @@ Il capitolato pone quindi come obiettivo l'implementazione di un sistema in grad
 \subsection{Prerequisiti e tecnologie coinvolte}
 Prerequisiti:
 \begin{itemize}
-\item \textbf{Gherkin\ap{G}}: \url{https://cucumber.io/docs/gherkin/}
-\item \textbf{Natural language processing\ap{G}}: \url{https://en.wikipedia.org/wiki Natural_language_processing}
-\item \textbf{API\ap{G} generation}: \url{https://github.com/OAI/OpenAPI-Specification}
-\item \textbf{Code generation\ap{G}}: \url{https://swagger.io/}
-\item \textbf{Behavior-driven development\ap{G}}: \url{https://dannorth.net/introducing-bdd/}
-\item \textbf{Cucumber\ap{G}}: \url{https://cucumber.io/docs}
-\item \textbf{Clean architecture\ap{G}}: \url{https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html}
+\item \textbf{\glo{Gherkin}}: \url{https://cucumber.io/docs/gherkin/}
+\item \textbf{\glo{Natural language processing}}: \url{https://en.wikipedia.org/wiki/Natural_language_processing}
+\item \textbf{\glo{API} generation}: \url{https://github.com/OAI/OpenAPI-Specification}
+\item \textbf{\glo{Code generation}}: \url{https://swagger.io/}
+\item \textbf{\glo{Behavior-driven development}}: \url{https://dannorth.net/introducing-bdd/}
+\item \textbf{\glo{Cucumber}}: \url{https://cucumber.io/docs}
+\item \textbf{\glo{Clean architecture}}: \url{https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html}
 \end{itemize}
 Tecnologie consigliate:
 \begin{itemize}
-\item Qt\ap{G};
-\item Python\ap{G};
-\item React\ap{G};
-\item Cucumber\ap{G}.
+\item \glo{Qt};
+\item \glo{Python};
+\item \glo{React};
+\item \glo{Cucumber}.
 \end{itemize}
 
 \subsection{Vincoli}
@@ -37,11 +37,11 @@ Sono imposti i seguenti vincoli:
 \item Ogni parte dell'applicazione deve soddisfare degli standard sull'output che produce almeno due modi di interagire con l'applicazione tra i seguenti:
 \begin{itemize}
 \item Linea di comando;
-\item Interfaccia grafica\ap{G};
-\item Interfaccia web\ap{G}.
+\item \glo{Interfaccia grafica};
+\item \glo{Interfaccia web}.
 \end{itemize}
 
-\item Rispettare delle specifiche sui logic layer\ap{G} (si incoraggia l'applicazione del Joel Test). I logic layers\ap{G} dovranno essere rilasciati in uno dei seguenti metodi:
+\item Rispettare delle specifiche sui \glo{logic layer} (si incoraggia l'applicazione del Joel Test). I \glo{logic layer} dovranno essere rilasciati in uno dei seguenti metodi:
 \begin{itemize}
 \item Come una libreria (statica o dinamica);
 \item Come parte di un eseguibile;
@@ -55,9 +55,9 @@ Sono imposti i seguenti vincoli:
 \item MacOS.
 \end{itemize}
 
-\item Input e output in codifica UTF-8\ap{G};
+\item Input e output in codifica \glo{UTF-8};
 \item Licenza Open Source;
-\item Il codice del progetto dovrà essere locato in un repository\ap{G} facilmente accessibile dal pubblico (ad esempio GitHub\ap{G}).
+\item Il codice del progetto dovrà essere locato in un \glo{repository} facilmente accessibile dal pubblico (ad esempio \glo{GitHub}).
 \end{itemize}
 
 \subsection{Aspetti positivi}
@@ -66,7 +66,7 @@ Sono imposti i seguenti vincoli:
 \subsection{Aspetti critici}
 \begin{itemize}
 \item Risulta poco chiaro il passaggio dal BDL al BAL;
-\item Il linguaggio utilizzato (gherkin) è di nicchia e la conversazione tra stakeholder e UML\ap{G} sono ancora lo standard.
+\item Il linguaggio utilizzato (gherkin) è di nicchia e la conversazione tra stakeholder e l'uso di \glo{UML} sono ancora lo standard.
 \end{itemize}
 
 \subsection{Conclusioni}

@@ -102,13 +102,13 @@ R1FA8.4 & Il processo di registrazione viene negato se password e conferma passw
 
 %PERIN
 
-R1FA2 & L'utente anonimo e riconosciuto deve essere in grado di effettuare il logout. & \o & UCA 2 Interno\\
+R1FA2.1 & L'utente anonimo e riconosciuto deve essere in grado di effettuare il logout. & \o & UCA 2 Interno\\
 
 R1FA3.1 & L'utente anonimo può gestire la propria lista delle organizzazioni. & \o & UCA 3 Interno\\
 
 R1FA3.2 & L'utente anonimo deve poter essere in grado di scaricare la lista di tutte le organizzazioni. & \o & UCA 3.1 Capitolato \\
 
-R1FA8.3 & Qualora fallisca lo scaricamento della lista delle organizzazioni deve venire visualizzato un messaggio d'errore che lo informa di tale evento. & \o & UCA 8.3.1 Interno \\
+R1FA8.5 & Qualora fallisca lo scaricamento della lista delle organizzazioni deve venire visualizzato un messaggio d'errore che lo informa di tale evento. & \o & UCA 8.3.1 Interno \\
 
 R1FA3.3 & L’utente anonimo deve poter essere in grado di gestire la propria lista delle organizzazioni preferite. & \o & UCA 3.2 Interno \\
 
@@ -118,7 +118,7 @@ R1FA3.5 & Qualora l’utente anonimo inserisca un'organizzazione nella propria l
 
 R1FA3.6 & L’utente anonimo può rimuovere una organizzazione presente nella propria lista delle organizzazioni preferite. & \o & UCA 3.2.3 Interno \\
 
-R1FA8.4 & Qualora non sia memorizzata nessuna lista delle organizzazioni nel dispositivo, viene informato l’utente di questo fatto. & \o & UCA 8.3.2 Interno \\
+R1FA8.6 & Qualora non sia memorizzata nessuna lista delle organizzazioni nel dispositivo, viene informato l’utente di questo fatto. & \o & UCA 8.3.2 Interno \\
 
 R1FA3.7 & L’utente anonimo ha la possibilità di aggiornare la lista delle organizzazioni. & \o & UCA 3.3 Interno \\
 
@@ -130,11 +130,11 @@ R1FA3.10 & L’utente anonimo può visualizzare la lista delle organizzazioni. &
 
 R2FA3.11 & L’utente anonimo ha la possibilità di visualizzare la lista delle organizzazioni ordinate alfabeticamente, dalla A alla Z. & \d & UCA 3.4.1 Interno \\
 
-R2FA3.12 & L’utente anonimo ha la possibilità di visualizzare la lista delle organizzazioni ordinate secondo politica FIFO. & \d & UCA 3.4.2 Interno \\
+R2FA3.12 & L’utente anonimo ha la possibilità di visualizzare la lista delle organizzazioni ordinate secondo politica \glo{FIFO}. & \d & UCA 3.4.2 Interno \\
 
 R3FA3.13 & L’utente anonimo ha la possibilità di visualizzare la lista delle organizzazioni che permettono il tracciamento anonimo. & \op & UCA 3.4.3 Interno \\
 
-R3FA3.14 & L’utente anonimo ha la possibilità di visualizzare la lista delle organizzazioni che permettono il tracciamento autenticato. & \op & UCA 3.4.4 Interno \\
+R3FA3.14 & L’utente anonimo ha la possibilità di visualizzare la lista delle organizzazioni che permettono il \glo{tracciamento autenticato}. & \op & UCA 3.4.4 Interno \\
 
 R1FA3.15 & L’utente anonimo può effettuare ricerche personalizzate per cercare le organizzazioni presenti nella lista delle organizzazioni. & \o & UCA 3.5 Interno\\
 
@@ -148,67 +148,55 @@ R1FA4.1 & L’utente riconosciuto deve poter inserire la modalità di tracciamen
 
 R1FA4.2 & L’utente riconosciuto può selezionare la modalità di tracciamento anonimo. & \o & UCA 4.1 Capitolato \\
 
-R1FA4.3 & L’utente riconosciuto può selezionare la modalità di tracciamento autenticato. & \o & UCA 4.2 Capitolato \\
+R1FA4.3 & L’utente riconosciuto può selezionare la modalità di \glo{tracciamento autenticato}. & \o & UCA 4.2 Capitolato \\
 
 R2FA5.1 & L’utente anonimo ha la possibilità di visualizzare il proprio storico degli accessi. & \d & UCA 5 Capitolato \\
 
-R2FA5.2 & L’utente anonimo ha la possibilità di visualizzare il proprio storico degli accessi presso una organizzazione . & \d & UCA 5.1 Capitolato \\
+R2FA5.2 & L’utente anonimo ha la possibilità di visualizzare il proprio storico degli accessi presso una organizzazione. & \d & UCA 5.1 Capitolato \\
 
-R2FA5.3 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nell'organizzazione visualizza la data per ogni accesso di quando è stato fatto. & \d &  UCA 5.1 \\
+R2FA5.3 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nell'organizzazione visualizza la data per ogni accesso di quando è stato fatto. & \d & UCA 5.1.4 \\
 
-R2FA5.4 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nell'organizzazione visualizza il luogo per ogni accesso di quando è stato fatto. & \d &  UCA 5.1 \\
+R2FA5.4 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nell'organizzazione visualizza il luogo per ogni accesso di quando è stato fatto. & \d & UCA 5.1.4 \\
 
-R2FA5.5 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nell'organizzazione visualizza il tempo trascorso per ogni accesso di quando è stato fatto. & \d &  UCA 5.1 \\
+R2FA5.5 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nell'organizzazione visualizza il tempo trascorso per ogni accesso. & \d & UCA 5.1.4 \\
 
 R2FA5.6 & L’utente anonimo ha la possibilità di visualizzare il proprio storico degli accessi presso un luogo dell’organizzazione. & \d & UCA 5.2 Capitolato\\
 
-R2FA5.7 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nel luogo del organizzazione visualizza la data per ogni accesso di quando è stato fatto. & \d &  UCA 5.1 \\
+R2FA5.7 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nel luogo dell'organizzazione visualizza la data per ogni accesso di quando è stato fatto. & \d &  UCA 5.2.4 \\
 
-R2FA5.8 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nel luogo del organizzazione visualizza il luogo per ogni accesso di quando è stato fatto. & \d &  UCA 5.1 \\
+R2FA5.8 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nel luogo dell'organizzazione visualizza il luogo per ogni accesso di quando è stato fatto. & \d &  UCA 5.2.4 \\
 
-R2FA5.9 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nel luogo del organizzazione visualizza il tempo trascorso per ogni accesso di quando è stato fatto. & \d &  UCA 5.1 \\
+R2FA5.9 & L'utente anonimo nella visualizzazione del proprio storico degli accessi nel luogo dell'organizzazione visualizza il tempo trascorso per ogni accesso. & \d &  UCA 5.2.4 \\
 
-R2FA5.10 & L’utente anonimo può visualizzare la propria lista degli accessi in una organizzazione ordinata per data decrescente. & \d & UCA 5.1.1 \\
+R2FA5.10 & L’utente anonimo può visualizzare la propria lista degli accessi in una organizzazione ordinata per data decrescente. & \d & UCA 5.4.1 \\
 
-R2FA5.11 & L’utente anonimo può visualizzare la propria lista degli accessi in una organizzazione ordinata per data crescente. & \d & UCA 5.1.2 \\
+R2FA5.11 & L’utente anonimo può visualizzare la propria lista degli accessi in una organizzazione ordinata per data crescente. & \d & UCA 5.4.2 \\
 
-R3FA5.12 & L’utente anonimo può effettuare una ricerca degli accessi presso un'organizzazione in un giorno specifico& \op & UCA 5.1.3 \\
+R3FA5.12 & L’utente anonimo può effettuare una ricerca degli accessi presso un'organizzazione in un giorno specifico. & \op & UCA 5.5 \\
 
-R2FA5.13 & L’utente anonimo può visualizzare la propria lista degli accessi presso un luogo dell’organizzazione  ordinata per data decrescente. & \d & UCA 5.2.1 \\
+R2FA5.13 & L’utente anonimo può visualizzare la propria lista degli accessi presso un luogo dell’organizzazione ordinata per data decrescente. & \d & UCA 5.4.1 \\
 
-R2FA5.14 & L’utente anonimo può visualizzare la propria lista degli accessi presso un luogo dell’organizzazione  ordinata per data crescente. & \d & UCA 5.2.2 \\
+R2FA5.14 & L’utente anonimo può visualizzare la propria lista degli accessi presso un luogo dell’organizzazione ordinata per data crescente. & \d & UCA 5.4.2 \\
 
-R3FA5.15 & L’utente anonimo può effettuare una ricerca degli accessi presso un luogo dell’organizzazione  in un giorno specifico. & \op & UCA 5.2.3 \\
+R3FA5.15 & L’utente anonimo può effettuare una ricerca degli accessi presso un luogo dell’organizzazione in un giorno specifico. & \op & UCA 5.5 \\
 
-R2FA5.16 & L’utente anonimo se si trova all’interno dell’organizzazione ha la possibilità di visualizzare il tempo passato all’interno dall'ultimo ingresso effettuato. & \d & UCA 5.1 Capitolato \\
+R2FA5.16 & L’utente anonimo se si trova all’interno dell’organizzazione ha la possibilità di visualizzare il tempo passato all’interno dall'ultimo ingresso effettuato. & \d & UCA 5.1.5 Capitolato \\
 
-R2FA5.17 & L’utente anonimo se si trova all’interno dell’luogo dell’organizzazione ha la possibilità di visualizzare il tempo passato all’interno dall'ultimo ingresso effettuato. & \d & UCA 5.2 Capitolato \\
-
-R1FA5.18 & L'utente anonimo ha la possibilità di selezionare un'organizzazione dalla lista delle organizzazioni. & \o & UCA 5.3 Interno \\
+R2FA5.17 & L’utente anonimo se si trova all’interno dell’luogo dell’organizzazione ha la possibilità di visualizzare il tempo passato all’interno dall'ultimo ingresso effettuato. & \d & UCA 5.2.5 Capitolato \\
 
 R2FA8.5 & Qualora non ci sono accessi effettuati presso l'organizzazione selezionata, l'utente anonimo deve essere informato di ciò. & \d & UCA 8.5.1 Interno \\
 
 R2FA8.6 & Qualora non ci sono accessi effettuati presso il luogo selezionato, l'utente anonimo deve essere informato di ciò. & \d & UCA 8.5.2 Interno \\
 
-R2FA6.1 & L’utente che effettua un movimento nell’organizzazione, deve essere registrato il tracciamento della sua azione. & \d & UCA 6 Capitolato \\
+R1FA6.1 & L’utente che effettua un movimento nell’organizzazione deve essere notificato della sua azione e il movimento deve essere memorizzato nel sistema. & \o & UCA 6.1 Capitolato \\
 
-R2FA6.2 & Nella registrazione del tracciamento di un movimento dell’utente, deve essere memorizzata la data di quando è stato fatto. & \d & UCA 6.1.1 \\
+R1FA6.2 & L’utente che effettua un movimento nell’organizzazione, deve essere notificato della sua azione. & \o & UCA 6.1.1 \\
 
-R2FA6.3 & Nella registrazione del tracciamento di un movimento dell’utente, deve essere memorizzata l’ora di quando è stato fatto. & \d & UCA 6.1.1 \\
+R1FA6.3 & L’utente che effettua un movimento in un luogo all'interno di una organizzazione, deve essere notificato della sua azione. & \o & UCA 6.2.1 \\
 
-R2FA6.4 & Nella registrazione del tracciamento di un movimento dell’utente, deve essere memorizzata da chi è stata fatta. & \d & UCA 6 Interno \\
+R1FA6.4 & L’utente che effettua un movimento in un luogo di un'organizzazione deve essere notificato della sua azione e il movimento deve essere memorizzato nel sistema. & \o & UCA 6.2 Capitolato \\
 
-R2FA6.5 & L’utente riconosciuto che effettua un ingresso nell’organizzazione, deve essere registrato il tracciamento della sua azione secondo la modalità di tracciamento autenticato. & \d & UCA 6.1 Capitolato \\
-
-R2FA6.6 & L’utente riconosciuto che effettua l’uscita dall’organizzazione, deve essere registrato il tracciamento della sua azione secondo la modalità di tracciamento autenticato. & \d & UCA 6.2 Capitolato \\
-
-R2FA6.7 & L’utente anonimo che effettua un ingresso nell’organizzazione, deve essere registrato il tracciamento della sua azione secondo la modalità di tracciamento anonimo. & \d & UCA 6.3 Capitolato \\
-
-R2FA6.8 & L’utente anonimo che effettua l’uscita dall’organizzazione, deve essere registrato il tracciamento della sua azione secondo la modalità di tracciamento anonimo. & \d & UCA 6.4 Capitolato \\
-
-R2FA8.7 & Qualora non vengano memorizzate le informazioni necessarie per la registrazione del movimento effettuato dall’utente, deve essere notificato tale evento all’utente. & \d & UCA 8.6.1 \\
-
-R2FA6.9 & Deve essere notificato all’utente che è avvenuta la corretta registrazione del suo movimento. & \d & UCA 6.1.3 \\
+R1FA8.7 & Qualora non vengano memorizzate le informazioni necessarie per la registrazione del movimento effettuato dall’utente, deve essere notificato tale evento all’utente. & \o & UCA 8.6.1 \\
 
 %Cisotto
 
@@ -291,21 +279,21 @@ R1FS4.8 & L'amministratore gestore deve poter annullare le modifiche che sta app
 
 % Drago
 
-R1FS5.1 & L'amministratore gestore deve poter modificare il perimetro di tracciamento\ap{G} dell'organizzazione\ap{G}. & \o & UCS 5.1 Capitolato\\
+R1FS5.1 & L'amministratore gestore deve poter modificare il perimetro di \glo{tracciamento} dell'\glo{organizzazione}. & \o & UCS 5.1 Capitolato\\
 
-R1FA10.9 & La modifica del perimetro dell'organizzazione viene negata qualora l'amministratore selezioni un area che non rispetta i vincoli imposti. Viene visualizzato un messaggio di errore. & \o & UCS 10.5.1 Capitolato \\
+R1FS10.9 & La modifica del perimetro dell'organizzazione viene negata qualora l'amministratore selezioni un area che non rispetta i vincoli imposti. Viene visualizzato un messaggio di errore. & \o & UCS 10.5.1 Capitolato \\
 
 R1FS5.2 & L'amministratore gestore deve essere in grado di creare dei nuovi luoghi di tracciamento nell'organizzazione. & \o & UCS 5.2 Capitolato\\
 
-R1FS5.3 & L'amministratore gestore deve essere in grado di modificare i luoghi di tracciamento dell'organizzazione . & \o & UCS 5.3 Capitolato\\
+R1FS5.3 & L'amministratore gestore deve essere in grado di modificare i luoghi di tracciamento dell'organizzazione. & \o & UCS 5.3 Capitolato\\
 
 R1FS10.10 & La creazione di nuovi luoghi e la modifica dell'area di tracciamento di essi vengono negati qualora l'amministratore selezioni un area che fuoriesce dal perimetro. Viene visualizzato un messaggio di errore. & \o & UCS 10.5.2 Capitolato \\
 
-R1FS5.4 & L'amministratore gestore deve essere in grado di eliminare i luoghi di tracciamento dell'organizzazione . & \o & UCS 5.4 Capitolato\\
+R1FS5.4 & L'amministratore gestore deve essere in grado di eliminare i luoghi di tracciamento dell'organizzazione. & \o & UCS 5.4 Capitolato\\
 
-R1FS5.5 & L'amministratore gestore deve essere in grado di selezionare un'area geografica per il tracciamento del luogo scelto . & \o & UCS 5.5 Capitolato\\
+R1FS5.5 & L'amministratore gestore deve essere in grado di selezionare un'area geografica per il tracciamento del luogo scelto. & \o & UCS 5.5 Capitolato\\
 
-R1FS5.6 &  L'amministratore gestore può scegliere l'area di tracciamento tramite l'inserimento delle coordinate geografiche. & \o & UCS 5.5.1 Capitolato\\
+R1FS5.6 & L'amministratore gestore può scegliere l'area di tracciamento tramite l'inserimento delle coordinate geografiche. & \o & UCS 5.5.1 Capitolato\\
 
 R2FS5.7 & L'amministratore gestore può scegliere l'area di tracciamento tramite Google Maps API. & \d & UCS 5.5.2 Interno\\
 
@@ -315,29 +303,35 @@ R1FS5.9 & L'amministratore deve poter inserire un nome per il nuovo luogo di tra
 
 R1FS6.1 & L'amministratore può monitorare l'organizzazione visualizzando il numero di utenti anonimi presenti nell'organizzazione. & \o & UCS 6 Capitolato\\
 
-R1FS6.2 & L'amministratore visualizzatore può monitorare l'organizzazione visualizzando il numero di utenti anonimi presenti in un specifico luogo dell'organizzazione . & \o & UCS 6.1 Capitolato\\
+R1FS6.2 & L'amministratore visualizzatore può monitorare l'organizzazione visualizzando il numero di utenti anonimi presenti in un specifico luogo dell'organizzazione. & \o & UCS 6.1 Capitolato\\
 
 R1FS6.3 & L'amministratore visualizzatore ha la possibilità di ritornare al monitoraggio dell'organizzazione in generale dal monitoraggio di un luogo specifico. & \o & UCS 6.1.1 Interno\\
 
 R1FS7.1 & L'amministratore visualizzatore può monitorato gli accessi effettuati dagli utenti riconosciuti. & \o & UCS 7 Capitolato\\
 
-R1FS7.2 & L'amministratore visualizzatore può monitorare gli accessi effettuati presso una organizzazione da un specifico utente riconosciuto visualizzandone il nome, il cognome e l'orario di accesso. & \o & UCS 7.1 Capitolato\\
+R1FS7.2 & L'amministratore visualizzatore può monitorare gli accessi effettuati presso una organizzazione da un specifico utente riconosciuto visualizzandone il nome, il cognome, l'orario di accesso, di uscita e il tempo di permanenza. & \o & UCS 7.1.4 Capitolato\\
 
-R2FS7.3 & L’amministratore visualizzatore può filtrare la lista degli accessi di un utente riconosciuto per data decrescente. & \d & UCS 7.1.1 Interno \\
+R2FS7.3 & L’amministratore visualizzatore può filtrare la lista degli accessi presso una organizzazione di un utente riconosciuto per data decrescente. & \d & UCS 7.4.1 Interno \\
 
-R2FS7.4 & L’amministratore visualizzatore può filtrare la lista degli accessi di un utente riconosciuto per data crescente. & \d & UCS 7.1.2 Interno \\
+R2FS7.4 & L’amministratore visualizzatore può filtrare la lista degli accessi presso una organizzazione  di un utente riconosciuto per data crescente. & \d & UCS 7.4.2 Interno \\
 
-R2FS7.5 & L'amministratore visualizzatore può monitorare gli accessi filtrandoli in base a una data precisa. & \d & UCS 7.1.3 Interno\\
+R2FS7.5 & L'amministratore visualizzatore può monitorare gli accessi presso una organizzazione filtrandoli in base a una data precisa. & \d & UCS 7.5 Interno\\
 
-R1FS7.6 & L'amministratore visualizzatore può monitorare gli accessi effettuati presso un luogo all'interno di una organizzazione da un specifico utente riconosciuto visualizzandone il nome, il cognome e l'orario di accesso. & \o & UCS 7.2 Capitolato\\
+R1FS7.6 & L'amministratore visualizzatore può monitorare gli accessi effettuati presso un luogo all'interno di una organizzazione da un specifico utente riconosciuto visualizzandone il nome, il cognome e l'orario di accesso. & \o & UCS 7.2.4 Capitolato\\
 
-R1FS8.1 & L'amministratore visualizzatore può ricevere un report tabellare degli accessi ai luoghi dell'organizzazione. & \d & UCS 8 Capitolato\\
+R2FS7.7 & L’amministratore visualizzatore può filtrare la lista degli accessi presso un luogo di un'organizzazione di un utente riconosciuto per data decrescente. & \d & UCS 7.4.1 Interno \\
 
-R1FS8.2 &  Tabella delle entrate e uscite degli utenti nei luoghi dell'organizzazione generabile dall'amministratore visualizzatore di un organizzazione a tracciamento autenticato. & \d & UCS 8.1.1 Capitolato\\
+R2FS7.8 & L’amministratore visualizzatore può filtrare la lista degli accessi presso un luogo di un'organizzazione di un utente riconosciuto per data crescente. & \d & UCS 7.4.2 Interno \\
 
-R1FS8.3 & Tabella delle ore spese dagli utenti nei luoghi dell'organizzazione generabile dall'amministratore visualizzatore di un organizzazione a tracciamento autenticato. & \d & UCS 8.1.2 Capitolato\\
+R2FS7.9 & L'amministratore visualizzatore può monitorare gli accessi presso un luogo di un'organizzazione filtrandoli in base a una data precisa. & \d & UCS 7.5 Interno\\
 
-R1FS8.4 & Tabella contenente il numero degli utenti e il totale delle ore passate da essi nei luoghi dell'organizzazione generabile dall'amministratore visualizzatore di un organizzazione a tracciamento autenticato o anonimo. & \d & UCS 8.1.3 Capitolato\\
+R1FS8.1 & L'amministratore visualizzatore può ricevere un report tabellare degli accessi ai luoghi dell'organizzazione. & \o & UCS 8 Capitolato\\
+
+R1FS8.2 &  Tabella delle entrate e uscite degli utenti nei luoghi dell'organizzazione generabile dall'amministratore visualizzatore di un organizzazione a \glo{tracciamento autenticato}. & \o & UCS 8.1.1 Capitolato\\
+
+R1FS8.3 & Tabella delle ore spese dagli utenti nei luoghi dell'organizzazione generabile dall'amministratore visualizzatore di un organizzazione a \glo{tracciamento autenticato}. & \o & UCS 8.1.2 Capitolato\\
+
+R1FS8.4 & Tabella contenente il numero degli utenti e il totale delle ore passate da essi nei luoghi dell'organizzazione generabile dall'amministratore visualizzatore di un organizzazione a \glo{tracciamento autenticato} o anonimo. & \o & UCS 8.1.3 Capitolato\\
 
 %aggiungere tabelle più particolareggiate
 
@@ -387,7 +381,7 @@ R1FS10.16 & L'amministratore gestore deve poter annullare le modifiche che stava
 
 R1FS10.17 & L'amministratore gestore deve poter annullare la selezione della nuova area geografica per il tracciamento di un luogo o del perimetro dell'organizzazione. & \o & UCS 10.5.3 Interno\\
 
-R2FS10.18 & Deve venir mostrato un errore qualora avvenisse un errore da parte del server sulla generazione del report tabellare.. & \d & UCS 10.6.1 Interno\\
+R2FS10.18 & Deve venir mostrato un errore qualora avvenisse un errore da parte del server sulla generazione del report tabellare. & \d & UCS 10.6.1 Interno\\
 
 \end{longtable}
 }

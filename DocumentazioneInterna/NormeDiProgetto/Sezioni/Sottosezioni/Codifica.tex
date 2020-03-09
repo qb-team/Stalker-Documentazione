@@ -1,12 +1,12 @@
-\subsection{Codifica}
-\subsubsection{Scopo}
+\subsubsection{Codifica}
+\paragraph{Scopo}
 Lo scopo della codifica consiste nell'implementare le specifiche del prodotto definite nelle attività precedenti.
 
-\subsection*{Note sulla sezione di Codifica}
+\paragraph{Note sulla sezione di Codifica}
 Questa sezione viene redatta durante la fase iniziale del progetto e il suo contenuto è limitato alle disponibilità di conoscenza attuali.
 Verrà ampliata in seguito per l'attività di \textbf{Codifica}.
 
-\subsubsection{Commenti}
+\paragraph{Commenti}
 Il codice sorgente deve essere adeguatamente commentato, sia per chi lo scrive, sia per chi lo deve leggere in futuro.
 È quindi necessario che ogni porzione di codice significativa sia dotata di commenti esplicativi, in particolar modo se le istruzioni usate non sono comuni.
 I commenti devono essere chiari ma al contempo sintetici, per non distrarre dal contesto.
@@ -20,7 +20,7 @@ Questa sezione deve saper dire:
 \end{itemize}
 I commenti devono essere mantenuti.
 
-\subsubsection{Nomi dei file e delle variabili}
+\paragraph{Nomi dei file e delle variabili}
 I nomi dei file:
 \begin{itemize}
     \item Devono essere univoci;
@@ -33,3 +33,19 @@ I nomi delle variabili:
     \item Se formati da più parole si devono scrivere usando l'underscore come separatore (\glo{Snake Case}) oppure separando i termini con una lettera maiuscola ad ogni inizio parola (\glo{Camel Case});
     \item Devono rispettare le condizioni del linguaggio in cui vengono usate, se presenti.
 \end{itemize}
+
+\paragraph{Stile di codifica}
+Il gruppo \Gruppo{}, al fine di garantire una maggiore leggibilità, uniformità e manutenibilità del codice prodotto, ha deciso di utilizzare nei propri repository alcuni strumenti di analisi statica.
+Per quanto riguarda le parti di applicazione mobile e server backend viene utilizzato il plugin \href{https://checkstyle.sourceforge.io}{checkstyle} per gli strumenti di \glo{build automation} \glo{Gradle} e \glo{Maven}.
+Per la parte di interfaccia web viene utilizzato il plugin \textbf{} \href{https://palantir.github.io/tslint/}{tslint}.
+Il software \href{https://www.sonarqube.org/}{SonarQube} viene utilizzato anch'esso per effettuare analisi statica ma in particolar modo per fornire valori delle metriche (indicate in §4.3) per valutare l'andamento delle attività.
+
+Per semplificare il lavoro di manutenzione, i moduli software dovrebbero avere sempre indicato: 
+\begin{itemize}
+	\item Nome e cognome di chi ha prodotto l'unità;
+	\item Data di creazione;
+	\item Data ultima modifica;
+	\item Breve descrizione del contenuto dell'unità.
+\end{itemize} 
+
+Il codice e i commenti devono essere scritti preferibilmente in lingua inglese.

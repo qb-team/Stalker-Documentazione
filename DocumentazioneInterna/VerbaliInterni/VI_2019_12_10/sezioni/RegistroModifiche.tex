@@ -3,16 +3,19 @@
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}
 \centering
-\begin{longtable}{ c c  C{4cm}  C{3cm} C{4cm}}
-\rowcolor{rossoep}
-\textcolor{white}{\textbf{Versione}} & \textcolor{white}{\textbf{Data}} & \textcolor{white}{\textbf{Nominativo}} & \textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Descrizione}}\\	
+\begin{longtable}{ c c  C{2.3cm} c C{3cm} C{3.2cm}}
+    \rowcolor{rossoep}
+    \textcolor{white}{\textbf{Versione}}&
+    \textcolor{white}{\textbf{Data}}&
+    \textcolor{white}{\textbf{Nominativo}}&
+    \textcolor{white}{\textbf{Ruolo}}&
+    \textcolor{white}{\textbf{Verificatore}}&
+    \textcolor{white}{\textbf{Descrizione}}\\	
+    \endhead
     
-    
-1.0.0 & 2019-12-11 & \AT{}, \SE{} & Responsabili & Approvazione per il rilascio.  \\
-        
-0.1.0 & 2019-12-11 & \MC{} & Verificatore & Verifica del documento.  \\
-		
-0.0.1 & \Data & \DF{} & Analista & Stesura del documento.  \\
+    1.0.0 & \Data & \SE{}, \AT{} & Responsabile & \MC{} & Approvazione per il rilascio.  \\
+            
+    0.1.0 & \Data & \DF{} & Analista & \MC{} & Stesura del documento.  \\
 		
 		
 \end{longtable}
