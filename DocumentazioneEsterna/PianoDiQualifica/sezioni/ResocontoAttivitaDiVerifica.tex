@@ -1,7 +1,7 @@
 \section{Resoconto delle attività di verifica}
 In questa sezione vengono descritti ed analizzati gli esiti delle attività di verifica nei vari periodi del progetto attraverso le metriche indicate precedentemente e applicate su tutti i documenti destinati alla consegna e sul prodotto da sviluppare.
 
-\subsection{Revisione dei requisiti}
+\subsection{Revisione dei Requisiti}
 
 \subsubsection{Analisi statica dei documenti}
 I membri del gruppo \Gruppo{} hanno analizzato i documenti mediante la tecnica di walkthrough che ha portato all'individuazione di 
@@ -11,23 +11,17 @@ della documentazione che il gruppo ha deciso di utilizzare.
 \subsubsection{Esiti verifiche automatizzate}
 Attualmente, l'unico valore che può essere calcolato per \glo{verificare} se la garanzia di qualità che il gruppo ritiene fornire è
 soddisfatta, è data dall'Indice di Gulpease (MPC6).
-%Per poter calcolare questo indice, viene utilizzato come strumento il "Calcolatore dell'Indice Gulpease" ospitato a \href{https://farfalla-project.org/readability_static/}{questo indirizzo}.
-%Non vengono contati per l'indice di Gulpease il testo presente nelle seguenti parti o sezioni del documento:
-%\begin{itemize}
-  %  \item Indice;
-  %  \item Registro delle modifiche;
-  %  \item Riferimenti.
-%\end{itemize}
-Nella seguente tabella sono riportati i risultati degli indici di Gulpease ottenuti dai documenti per ogni periodo, successivamente ci sarà un grafico che riporterà l'andamento degli indici di Gulpease per ogni documento.
-
+Nella seguente tabella sono riportati i risultati degli indici di Gulpease ottenuti dai documenti per la fase di Analisi.
+In seguito vi è un grafico che riporterà l'andamento degli indici di Gulpease per ogni documento.
 
 \paragraph{MPC6 - Indice di Gulpease}
-\subparagraph{Legenda}
+\subparagraph*{Legenda}
 \begin{itemize}
 	\item \textbf{Documento}: Nome del documento;
-	\item \textbf{RR}: Periodo di revisione dei requisiti;
-	\item  \textbf{Colore giallo}: Indica che il valore ottenuto è accettabile;
-	\item  \textbf{Colore verde}: Indica che il valore ottenuto è ottimo. 
+	\item \textbf{RR}: Fase di Revisione dei Requisiti;
+	\item \textbf{Colore rosso}: Indica che il valore ottenuto non è accettabile;
+	\item \textbf{Colore giallo}: Indica che il valore ottenuto è accettabile;
+	\item \textbf{Colore verde}: Indica che il valore ottenuto è ottimo. 
 \end{itemize}
 
 \rowcolors{2}{grigetto}{white}
@@ -51,13 +45,6 @@ Media verbali interni & \textcolor{verde}{\textbf{92}}\\ % & \textcolor{verde}{\
 Media verbali esterni & \textcolor{giallo}{\textbf{65}}\\ % & \textcolor{giallo}{\textbf{70}} \\
 
 \end{longtable}
-
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[scale=0.50]{Sezioni/Immagini/IG-Grafico.png}
-%	\caption{Grafico andamento dell'Indice di Gulpease per ogni periodo e documento}
-%\end{figure}
-%}
 \newpage
 \pgfplotsset{width=17cm, height=10cm}
 \begin{tikzpicture}
@@ -71,7 +58,7 @@ enlargelimits=0.05,
 legend style={at={(0.5,-0.4)},
 anchor=north,legend columns=-1},
 ybar interval=0.5,
-symbolic x coords={Analisi dei Requisiti, Piano di Progetto, Piano di Qualifica, Norme di Progetto, Studio di fattibilita, Glossario,
+symbolic x coords={Analisi dei Requisiti, Piano di Progetto, Piano di Qualifica, Norme di Progetto, Studio di Fattibilità, Glossario,
 Media verbali interni, Media verbali esterni, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
 x tick label style={rotate=45,anchor=east},
 grid=major,
@@ -79,7 +66,7 @@ xtick=data
 ]
 \addplot[fill=blue] coordinates
 {(Analisi dei Requisiti, 95) (Piano di Progetto, 100) (Piano di Qualifica, 100) 
-(Norme di Progetto, 75) (Studio di fattibilita, 94) (Glossario, 67)
+(Norme di Progetto, 75) (Studio di Fattibilità, 94) (Glossario, 67)
 (Media verbali interni, 92) (Media verbali esterni, 65) (tmp, 0)};
 
 \end{axis}
@@ -91,7 +78,7 @@ xtick=data
 In questa fase i membri del gruppo \Gruppo{} hanno analizzato i documenti mediante la tecnica dell'\glo{inspection}, abbandonando la tecnica di \glo{walkthrough} dato che il gruppo ha acquisito abbastanza esperienza, riducendo così i costi di verifica. In questo periodo sono stati corretti gli errori riscontrati e aggiornati i vari documenti portandoli a una nuova versione di rilascio.
 
 \subsubsection{Analisi statica del codice}
-In questo periodo il gruppo è stato molto impegnato nello sviluppo del $\glo{Proof$ $of$ $Concept}$, perciò è stato necessario adottarsi di strumenti per la stesura e la verifica statica del codice. 
+In questo periodo il gruppo è stato molto impegnato nello sviluppo del \glo{Proof of Concept}, perciò è stato necessario adottarsi di strumenti per la stesura e la verifica statica del codice. 
 
 \subsubsection{Esiti verifiche automatizzate}
 Di seguito verranno mostrati gli esiti delle metriche che si sono riuscite a calcolare. Purtroppo, non è stato possibile calcolare le metriche \textbf{MPC7} e \textbf{MPD7}. \\ Dopo la visione degli esiti ci sarà una sezione dedicata all'analisi dei risultati.
@@ -216,12 +203,13 @@ xtick=data
 \newpage
 
 \paragraph{MPC6 - Indice di Gulpease}
-\subparagraph{Legenda}
+\subparagraph*{Legenda}
 \begin{itemize}
 	\item \textbf{Documento}: Nome del documento;
-	\item \textbf{RP}: Periodo di revisione di progettazione;
-	\item  \textbf{Colore giallo}: Indica che il valore ottenuto è accettabile;
-	\item  \textbf{Colore verde}: Indica che il valore ottenuto è ottimo. 
+	\item \textbf{RP}: Periodo di Revisione di Progettazione;
+	\item \textbf{Colore rosso}: Indica che il valore ottenuto non è accettabile;
+	\item \textbf{Colore giallo}: Indica che il valore ottenuto è accettabile;
+	\item \textbf{Colore verde}: Indica che il valore ottenuto è ottimo. 
 \end{itemize}
 
 \rowcolors{2}{grigetto}{white}
@@ -233,20 +221,19 @@ xtick=data
 	\textcolor{white}{\textbf{II periodo RP}} & \textcolor{white}{\textbf{III periodo RP}} \\
 	\hline
 	\endhead
-	\AdR & \textcolor{verde}{\textbf{83}} & \textcolor{verde}{\textbf{83}} & - \\
-	\PdP & \textcolor{verde}{\textbf{100}} & \textcolor{verde}{\textbf{100}} & - \\
-	\PdQ & \textcolor{verde}{\textbf{92}} & \textcolor{verde}{\textbf{92}} & - \\
+	\AdR & \textcolor{verde}{\textbf{83}} & \textcolor{verde}{\textbf{83}} & \textcolor{verde}{\textbf{83}} \\
+	\PdP & \textcolor{verde}{\textbf{100}} & \textcolor{verde}{\textbf{100}} & \textcolor{verde}{\textbf{96}} \\
+	\PdQ & \textcolor{verde}{\textbf{92}} & \textcolor{verde}{\textbf{92}} & \textcolor{verde}{\textbf{90}} \\
 
-	\NdP & \textcolor{giallo}{\textbf{76}} & \textcolor{giallo}{\textbf{76}} & - \\
-	\SdF & \textcolor{verde}{\textbf{94}} & \textcolor{verde}{\textbf{94}} & - \\
+	\NdP & \textcolor{giallo}{\textbf{76}} & \textcolor{giallo}{\textbf{76}} & \textcolor{giallo}{\textbf{77}} \\
+	\SdF & \textcolor{verde}{\textbf{94}} & \textcolor{verde}{\textbf{94}} & \textcolor{verde}{\textbf{94}} \\
 
-	\Glossario & \textcolor{giallo}{\textbf{75}} & \textcolor{giallo}{\textbf{75}} & - \\
+	\Glossario & \textcolor{giallo}{\textbf{75}} & \textcolor{giallo}{\textbf{75}} & \textcolor{giallo}{\textbf{75}} \\
 
-	Media verbali interni & \textcolor{verde}{\textbf{87}} & \textcolor{verde}{\textbf{87}} & - \\
-	Media verbali esterni & \textcolor{giallo}{\textbf{70}} & \textcolor{giallo}{\textbf{70}}  & - \\
+	Media verbali interni & \textcolor{verde}{\textbf{87}} & \textcolor{verde}{\textbf{87}} & \textcolor{verde}{\textbf{87}} \\
+	Media verbali esterni & \textcolor{giallo}{\textbf{70}} & \textcolor{giallo}{\textbf{70}}  & \textcolor{giallo}{\textbf{70}} \\
 	
 \end{longtable}
-
 
 \pgfplotsset{width=17cm, height=9cm}
 \begin{tikzpicture}
@@ -277,9 +264,9 @@ xtick=data
 	(Media verbali interni, 87) (Media verbali esterni, 70) (tmp, 100)};
 
 \addplot [fill=gray] coordinates
-{(Analisi dei Requisiti, 0) (Piano di Progetto, 0) (Piano di Qualifica, 0) 
-	(Norme di Progetto, 0) (Studio di fattibilita, 0) (Glossario, 0) 
-	(Media verbali interni, 0) (Media verbali esterni, 0) (tmp, 0)};
+{(Analisi dei Requisiti, 83) (Piano di Progetto, 96) (Piano di Qualifica, 90) 
+	(Norme di Progetto, 77) (Studio di fattibilita, 94) (Glossario, 75) 
+	(Media verbali interni, 87) (Media verbali esterni, 70) (tmp, 100)};
 
 
 
@@ -417,16 +404,16 @@ xtick=data
 
 \newpage
 \paragraph{MPD1 - Attrattività della User Interface (UI)}
-\pgfplotsset{width=17cm, height=8cm}
-
-\subparagraph{Legenda}
+\subparagraph*{Legenda}
 \begin{itemize}
-	\item \textbf{0 =} Non valutato;
-	\item \textbf{1 =} Non Attrattivo;
-	\item \textbf{2 =} Poco attrattivo;
-	\item  \textbf{3 =} Attrattivo;
-	\item  \textbf{4 =} Molto attrattivo. 
+	\item \textbf{0} = Non valutato;
+	\item \textbf{1} = Non Attrattivo;
+	\item \textbf{2} = Poco attrattivo;
+	\item \textbf{3} = Attrattivo;
+	\item \textbf{4} = Molto attrattivo. 
 \end{itemize}
+
+\pgfplotsset{width=17cm, height=8cm}
 \begin{tikzpicture}
 
 \begin{axis}[
@@ -605,17 +592,11 @@ xtick=data
 \end{tikzpicture}
 
 \subsubsection{Analisi esiti ottenuti}
-Le misurazioni sono state fatte nei tre periodi indicati nel documento \PdP, nel primo periodo sono stati corretti i documenti, nel secondo il gruppo \Gruppo{} si è impegnato nella realizzazione del $\glo{Proof$ $of$ $Concept}$, infine nel terzo si sono aggiornati i vari documenti. Nelle metriche applicate al $\glo{Proof$ $of$ $Concept}$, ci sarà che il primo periodo non sarà valorizzato mentre il secondo e il terzo avranno valori uguali, questo perché nel primo non esisteva il $\glo{Proof$ $of$ $Concept}$ mentre nel terzo periodo non lo si è modificato.\\ 
-Nella realizzazione del $\glo{Proof$ $of$ $Concept}$ il gruppo \Gruppo{} ha scelto di non concentrarsi molto sulla qualità del prodotto ma di concentrarsi nel realizzare un prodotto che ci serva per misurare la nostra capacità di "addomesticare" le tecnologie da noi scelte per realizzare il prodotto richiesto, si hanno quindi alcune metriche applicate al \glo{PoC} che ottengono buoni risultati mentre in altre si ottengono risultati non soddisfacenti. Purtroppo al fine di avere un \glo{PoC} funzionante nel tempo prestabilito non si è potuto implementare dei test perciò le metriche \textbf{MPC7} e \textbf{MPD7} risultano essere non applicabili ora. \\
-Buoni risultati si sono ottenuti nelle metriche \textbf{MPC8}, \textbf{MPC9}, \textbf{MPC10}, \textbf{MPC11} e \textbf{MPD12}, le quali mostrano che il gruppo \Gruppo{} è in linea con quanto aveva preventivato nel documento \PdP.
- 
- %\begin{itemize}
-% 	\item \textbf{MPC3:} Ottimale;
- %	\item \textbf{MPC4:} Ottimale;
- %	\item \textbf{MPD1:} Accettabile;
- %	\item \textbf{MPD8:} Ottimale;
-%	\item \textbf{Accettabile:} 
-%	\item \textbf{Ottimale:} 
-%\end{itemize}
-%mentre nelle seguenti non si ottengono buoni risulti
- 
+Le misurazioni sono state fatte nei tre periodi indicati nel documento \PdP{} e disponibili fino al momento della consegna.
+Nel primo periodo sono stati corretti i documenti, nel secondo il gruppo \Gruppo{} si è impegnato nella realizzazione del \glo{Proof of Concept}, infine nel terzo si sono aggiornati i vari documenti.
+Nel quarto periodo, dal momento della consegna fino alla RP si procederà secondo la pianificazione definita nel \PdP{}.
+Nelle metriche applicate al \glo{Proof of Concept} il primo periodo non sarà valorizzato, mentre il secondo e il terzo avranno valori uguali. Questo perché nel primo non esisteva il \glo{Proof of Concept} mentre nel terzo periodo non lo si è modificato.\\ 
+Nella realizzazione del \glo{Proof of Concept} il gruppo \Gruppo{} ha scelto di non concentrarsi molto sulla qualità del prodotto ma di concentrarsi nel realizzare un prodotto con lo scopo di misurare la nostra capacità di "addomesticare" le tecnologie scelte per realizzare il prodotto richiesto.
+Si hanno quindi alcune metriche applicate al \glo{PoC} che ottengono buoni risultati, mentre in altre si ottengono risultati non soddisfacenti.
+Purtroppo al fine di avere un \glo{PoC} funzionante nel tempo prestabilito non si è potuto implementare dei test perciò le metriche \textbf{MPC7} e \textbf{MPD7} risultano essere non applicabili ora.\\
+Buoni risultati si sono ottenuti nelle metriche \textbf{MPC8}, \textbf{MPC9}, \textbf{MPC10}, \textbf{MPC11} e \textbf{MPD12}, le quali mostrano che il gruppo \Gruppo{} è in linea con quanto aveva preventivato nel documento \PdP{}.
