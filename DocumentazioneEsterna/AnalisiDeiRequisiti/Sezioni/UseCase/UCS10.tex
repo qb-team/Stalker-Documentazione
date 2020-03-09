@@ -3,90 +3,64 @@
 \item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore non è autenticato.
-\item \textbf{Postcondizione:} L'amministratore non viene autenticato e viene mostrato un messaggio d'errore. L'amministratore ha la possibilità di reinserire le sue credenziali o di cambiarle [UCS 1.1 e UCS 1.2].
+\item \textbf{Postcondizione:} L'amministratore non viene autenticato e viene mostrato un messaggio d'errore. L'amministratore ha la possibilità di reinserire le sue credenziali o di cambiarle.
+\item \textbf{Scenario principale:} Visualizzazione messaggio di errore credenziali errate.
 \end{itemize}
 
-\subsubsection{UCS 10.9.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione}%sea level
-\begin{itemize}
-    \item \textbf{Attori primari:} Amministratore proprietario
-    %\item \textbf{Attori secondari:}%opzionale
-    \item \textbf{Precondizione:} L'amministratore non è registrato e ha inserito nel campo indirizzo e-mail un valore già presente nel sistema.
-    \item \textbf{Postcondizione:} L'indirizzo e-mail inserito dall'amministratore è già presente nel sistema, pertanto riceve un messaggio di errore esplicativo che lo esorta a scegliere una nuova password.
-\end{itemize}
-
-\subsubsection{UCS 10.9.2 - Visualizzazione messaggio di errore in caso di password troppo debole}%fish level
-\begin{itemize}
-\item \textbf{Attori primari:} Amministratore proprietario
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'amministratore non è registrato e ha inserito una password poco sicura.
-\item \textbf{Postcondizione:} La password inserita dall'amministratore risulta essere poco sicura per il sistema, pertanto riceve un messaggio di errore che gli intima di sceglierne una più sicura.
-\end{itemize}
-
-\subsubsection{UCS 10.9.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse}%fish level
-\begin{itemize}
-\item \textbf{Attori primari:} Amministratore proprietario
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'amministratore non è registrato e ha inserito una password diversa dalla conferma password.
-\item \textbf{Postcondizione:} L'amministratore riceve un messaggio di errore che gli intima di reinserire password e conferma password.
-\end{itemize}
-
-\subsubsection{UCS 10.9.4 - Visualizzazione messaggio di errore in caso di e-mail non registrata nel sistema}%fish level
-\begin{itemize}
-\item \textbf{Attori primari:} Amministratore proprietario
-%\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'amministratore ha inserito una e-mail dell'amministratore da eliminare [UCS 9.2.1] che però non è registrata presso il sistema.
-\item \textbf{Postcondizione:} Viene visualizzato un messaggio di errore esplicativo che suggerisce all'amministratore di rivedere la password inserita.
-\end{itemize}
-
-\subsubsection{UCS 10.4.1 - Annullamento modifiche ai parametri dell'organizzazione}%fish level
+\subsubsection{UCS 10.4.1 - Visualizzazione del messaggio di conferma di annullamento modifiche}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha selezionato la funzionalità di annullamento delle modifiche ai \glo{parametri dell'organizzazione}.
 \item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di avvenuto annullamento delle modifiche ai \glo{parametri dell'organizzazione}.
+\item \textbf{Scenario principale:} Annullamento modifiche ai parametri dell'organizzazione.
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
         \item Viene mostrato un messaggio informativo che conferma l'annullamento delle modifiche ai \glo{parametri dell'organizzazione}.
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 10.4.2 - Il nome dell'\glo{organizzazione} inserito non rispetta i vincoli}%fish level
+\subsubsection{UCS 10.4.2 - Il nome dell'organizzazione inserito non rispetta i vincoli}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha inserito un nome per l'\glo{organizzazione} che non rispetta i vincoli imposti.
 \item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Scenario principale:} Il nome dell'\glo{organizzazione} inserito non rispetta i vincoli.
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
     \item Viene mostrato un messaggio d'errore che suggerisce di reinserire un nuovo nome per l'\glo{organizzazione}.
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 10.4.3 - Il nome dell'\glo{organizzazione} inserito è già presente nel sistema}%fish level
+\subsubsection{UCS 10.4.3 - Il nome dell'organizzazione inserito è già presente nel sistema}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha inserito un nome per l'\glo{organizzazione} che è già presente nel sistema e associato ad un'altra \glo{organizzazione}.
 \item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Scenario principale:} Il nome dell'\glo{organizzazione} inserito è già presente nel sistema.
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
     \item Viene mostrato un messaggio d'errore che suggerisce di reinserire un nuovo nome per l'\glo{organizzazione}.
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 10.4.4 - L'immagine dell'\glo{organizzazione} scelta non rispetta i vincoli imposti}%fish level
+\subsubsection{UCS 10.4.4 - L'immagine dell'organizzazione scelta non rispetta i vincoli imposti}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha ha selezionato un'icona per l'\glo{organizzazione} che non rispetta i vincoli imposti.
 \item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Scenario principale:} L'immagine dell'\glo{organizzazione} scelta non rispetta i vincoli imposti.
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
     \item Viene mostrato un messaggio d'errore che suggerisce di selezionare un'altra immagine per l'\glo{organizzazione}.
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 10.4.5 - La descrizione dell'\glo{organizzazione} inserita non rispetta i vincoli}%fish level
+\subsubsection{UCS 10.4.5 - La descrizione dell'organizzazione inserita non rispetta i vincoli}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha inserito una descrizione dell'\glo{organizzazione} che non rispetta i vincoli imposti.
 \item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Scenario principale:} La descrizione dell'\glo{organizzazione} inserita non rispetta i vincoli.
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
     \item Viene mostrato un messaggio d'errore che suggerisce modificare la descrizione dell'\glo{organizzazione} inserita in modo che rispetti i vincoli imposti.
@@ -98,20 +72,22 @@
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha inserito un indirizzo per l'\glo{organizzazione} che non rispetta i vincoli imposti.
 \item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Scenario principale:} L'indirizzo inserito non rispetta i vincoli imposti.
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
     \item Viene mostrato un messaggio d'errore che suggerisce di reinserire l'indirizzo dell'\glo{organizzazione} in modo che rispetti i vincoli imposti.
     \end{enumerate} 
 \end{itemize}
 
-\subsubsection{UCS 10.4.7 - L'indirizzo IP inserito non rappresenta un server LDAP}%fish level
+\subsubsection{UCS 10.4.7 - L'indirizzo IP o URL inserito non rappresenta un server LDAP}%fish level
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
-\item \textbf{Precondizione:} L'amministratore ha inserito un \glo{indirizzo IP} che non rappresenta un server LDAP.
+\item \textbf{Precondizione:} L'amministratore ha inserito un \glo{indirizzo IP} o URL che non rappresenta un server LDAP.
 \item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Scenario principale:} L'indirizzo IP o URL inserito non rappresenta un server LDAP.
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
-    \item Viene mostrato un messaggio d'errore che suggerisce di reinserire l'\glo{indirizzo IP} del server aziendale.
+    \item Viene mostrato un messaggio d'errore che suggerisce di reinserire l'\glo{indirizzo IP} o URL del server aziendale.
     \end{enumerate} 
 \end{itemize}
 
@@ -121,6 +97,7 @@
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha selezionato un'area di \glo{tracciamento} per il perimetro che non rispetta i vincoli imposti.
 \item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Scenario principale:} L'area selezionata non rispetta i vincoli imposti per il perimetro.
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
     \item Viene mostrato un messaggio d'errore che suggerisce di selezionare nuovamente l'area di \glo{tracciamento} del perimetro in modo che rispetti i vincoli imposti.
@@ -132,6 +109,7 @@
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore ha selezionato un'area di \glo{tracciamento} per un \glo{luogo} che fuoriesce dall'area di \glo{tracciamento} del \glo{perimetro}.
 \item \textbf{Postcondizione:} L'amministratore ha preso visione del messaggio di errore esplicativo.
+\item \textbf{Scenario principale:} L'area selezionata fuoriesce dall'area che definisce il perimetro.
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
     \item Viene mostrato un messaggio d'errore che suggerisce di selezionare nuovamente l'area di \glo{tracciamento} del luogo in modo che rientri nell'area di \glo{tracciamento} del perimetro.
@@ -143,6 +121,7 @@
 \item \textbf{Attori primari:} Amministratore gestore
 \item \textbf{Precondizione:} L'amministratore si trova nella funzionalità per la selezione dell'area geografica.
 \item \textbf{Postcondizione:} L'amministratore è uscito dalla funzionalità per la selezione dell'area geografica per il tracciamento.
+\item \textbf{Scenario principale:} Annullamento della selezione dell'area geografica per il tracciamento.
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
     \item L'amministratore seleziona la funzionalità per l'annullamento della selezione dell'area geografica;
@@ -155,9 +134,46 @@
     \item \textbf{Attori primari:} Amministratore autenticato
     \item \textbf{Precondizione:} L'amministratore ha lanciato il comando di generazione di una tabella riguardante la sua \glo{organizzazione}.
     \item \textbf{Postcondizione:} L'amministratore non ha visualizzato la tabella.
+    \item \textbf{Scenario principale:} Errore del server durante la generazione della tabella.
     \item \textbf{Flusso di eventi:} \begin{enumerate}
     \item La tabella non viene generata;
     \item L'amministratore visualizza un errore di generazione della tabella;
     \item L'amministratore ritorna sulla pagina dalla quale ha lanciato il comando.
     \end{enumerate}
+\end{itemize}
+
+\subsubsection{UCS 10.9.1 - Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione}%sea level
+\begin{itemize}
+	\item \textbf{Attori primari:} Amministratore proprietario
+	%\item \textbf{Attori secondari:}%opzionale
+	\item \textbf{Precondizione:} L'amministratore non è registrato e ha inserito nel campo indirizzo e-mail un valore già presente nel sistema.
+	\item \textbf{Postcondizione:} L'indirizzo e-mail inserito dall'amministratore è già presente nel sistema, pertanto riceve un messaggio di errore esplicativo che lo esorta a scegliere una nuova password.
+	\item \textbf{Scenario principale:} Visualizzazione messaggio di errore in caso di e-mail già presente durante la registrazione.
+\end{itemize}
+
+\subsubsection{UCS 10.9.2 - Visualizzazione messaggio di errore in caso di password troppo debole}%fish level
+\begin{itemize}
+	\item \textbf{Attori primari:} Amministratore proprietario
+	%\item \textbf{Attori secondari:}%opzionale
+	\item \textbf{Precondizione:} L'amministratore non è registrato e ha inserito una password poco sicura.
+	\item \textbf{Postcondizione:} La password inserita dall'amministratore risulta essere poco sicura per il sistema, pertanto riceve un messaggio di errore che gli intima di sceglierne una più sicura.
+	\item \textbf{Scenario principale:} Visualizzazione messaggio di errore in caso di password troppo debole.
+\end{itemize}
+
+\subsubsection{UCS 10.9.3 - Visualizzazione messaggio di errore in caso di password e conferma password diverse}%fish level
+\begin{itemize}
+	\item \textbf{Attori primari:} Amministratore proprietario
+	%\item \textbf{Attori secondari:}%opzionale
+	\item \textbf{Precondizione:} L'amministratore non è registrato e ha inserito una password diversa dalla conferma password.
+	\item \textbf{Postcondizione:} L'amministratore riceve un messaggio di errore che gli intima di reinserire password e conferma password.
+	\item \textbf{Scenario principale:} Visualizzazione messaggio di errore in caso di password e conferma password diverse.
+\end{itemize}
+
+\subsubsection{UCS 10.9.4 - Visualizzazione messaggio di errore in caso di e-mail non registrata nel sistema}%fish level
+\begin{itemize}
+	\item \textbf{Attori primari:} Amministratore proprietario
+	%\item \textbf{Attori secondari:}%opzionale
+	\item \textbf{Precondizione:} L'amministratore ha inserito una e-mail dell'amministratore da eliminare che però non è registrata presso il sistema.
+	\item \textbf{Postcondizione:} Viene visualizzato un messaggio di errore esplicativo che suggerisce all'amministratore di rivedere la password inserita.
+	\item \textbf{Scenario principale:} Visualizzazione messaggio di errore in caso di e-mail non registrata nel sistema.
 \end{itemize}

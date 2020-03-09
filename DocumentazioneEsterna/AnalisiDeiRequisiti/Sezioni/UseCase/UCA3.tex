@@ -1,8 +1,7 @@
-%scritto da \PF{}
 \subsubsection{UCA 3 - Gestione lista delle organizzazioni}%kite level
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.5, center]{Sezioni/UseCase/Immagini/UCA3.png}
+	\includegraphics[scale=0.49, center]{Sezioni/UseCase/Immagini/UCA3.png}
 	\caption{UCA 3 - Gestione lista delle \glo{organizzazioni}}
 \end{figure} 
 
@@ -48,7 +47,7 @@
 	\item \textbf{Flusso di eventi:}
 			\begin{enumerate}
 			\item L'utente accede alla funzionalità di "Gestioni della lista delle \glo{organizzazioni preferite}";
-			\item Vi è la possibilità di inserire un'\glo{organizzazione} nella lista delle \glo{organizzazioni preferite} dell'utente dell'applicazione [UCA 3.2.1], se però viene richiesto di inserire una \glo{organizzazione} che richiede di autenticarsi con credenziali \glo{LDAP} [UCA 3.2.2] allora l'utente dovrà inserire tali credenziali [UCA 1.1];
+			\item Vi è la possibilità di inserire un'\glo{organizzazione} nella lista delle \glo{organizzazioni preferite} dell'utente dell'applicazione [UCA 3.2.1], se però viene richiesto di inserire una \glo{organizzazione} che richiede di autenticarsi con credenziali \glo{LDAP} [UCA 3.2.2] allora l'utente dovrà inserire tali credenziali [UCA 7];
 			\item Vi è la possibilità di rimuovere un'\glo{organizzazione} dalla lista delle \glo{organizzazioni preferite} dell'utente dell'applicazione [UCA 3.2.3].
 			\end{enumerate}
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle \glo{organizzazioni} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.2];
@@ -56,16 +55,21 @@
 	\begin{itemize}
 		\item UCA 8.3.2 - Visualizzazione di un messaggio di errore che informa che non è salvata nessuna lista delle \glo{organizzazioni}.
 	\end{itemize}
+	\item \textbf{Inclusioni:}
+	\begin{itemize}
+			\item UCA 7 - Autenticazione con credenziali LDAP.
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCA 3.2.1 - Inserimento di una organizzazione nella lista delle organizzazioni preferite dell'utente}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato sceglie di eseguire la funzionalità di inserimento di un'\glo{organizzazione} nella lista delle \glo{organizzazioni preferite} (solo se ha scaricato precedentemente la lista delle \glo{organizzazioni}).
-	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione}, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
+	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione} che non richiede tracciamento autenticato, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
+	\item \textbf{Scenario principale:} Inserimento di una organizzazione che non richiede tracciamento autenticato nella lista delle organizzazioni preferite dell'utente.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
-		\item L'utente seleziona dalla lista delle \glo{organizzazioni} l'\glo{organizzazione} da inserire nella lista delle \glo{organizzazioni preferite};
+		\item L'utente seleziona dalla lista delle \glo{organizzazioni} l'\glo{organizzazione}, la quale non richiede tracciamento autenticato, da inserire nella lista delle \glo{organizzazioni preferite};
 		\item L'utente conferma l'inserimento nella lista delle \glo{organizzazioni preferite} per l'\glo{organizzazione} scelta.
 	\end{enumerate}
 \end{itemize}
@@ -74,12 +78,13 @@
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato e sceglie di eseguire la funzionalità di inserimento nella lista delle \glo{organizzazioni preferite} solo se ha scaricato precedentemente la lista delle \glo{organizzazioni}.
-	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione}, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
+	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione}, che richiede tracciamento autenticato, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
+	\item \textbf{Scenario principale:} Inserimento di una organizzazione con tracciamento autenticato nella lista delle organizzazioni preferite dell'utente.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
-		\item L'utente seleziona dalla lista delle \glo{organizzazioni} l'\glo{organizzazione} da inserire nella lista delle \glo{organizzazioni preferite};
+		\item L'utente seleziona dalla lista delle \glo{organizzazioni} l'\glo{organizzazione}, la quale richiede tracciamento autenticato, da inserire nella lista delle \glo{organizzazioni preferite};
 		\item L'utente conferma l'inserimento nella lista delle \glo{organizzazioni preferite} per l'\glo{organizzazione} scelta;
-		\item L'utente si autentica con credenziali \glo{LDAP}.
+		\item L'utente si autentica con credenziali \glo{LDAP} [UCA 7].
 	\end{enumerate}
 	\item \textbf{Inclusioni:}
 	\begin{itemize}
@@ -92,6 +97,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:}  L'utente è autenticato sceglie di eseguire la funzionalità di rimozione nella lista delle \glo{organizzazioni preferite} solo se c'è almeno una \glo{organizzazione} inserita nella lista delle \glo{organizzazioni preferite}.
 	\item \textbf{Postcondizione:} È stata rimossa l'\glo{organizzazione}, scelta dall'utente, dalla lista delle \glo{organizzazioni preferite}.
+	\item \textbf{Scenario principale:} Rimozione di una organizzazione dalla lista delle organizzazioni preferite dell'utente.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente seleziona nella lista delle \glo{organizzazioni preferite} l'\glo{organizzazione} da rimuovere dalla lista delle \glo{organizzazioni preferite};
@@ -111,13 +117,7 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente è autenticato e può aggiornare la lista delle \glo{organizzazioni}.
 	\item \textbf{Postcondizione:} L'utente ha aggiornato la lista di tutte le \glo{organizzazioni}.
-	\item \textbf{Scenario principale:} L'utente ha la necessità di aggiornare la lista e può farlo in diversi modi.
-	\item \textbf{Flusso di eventi:}
-	\begin{enumerate}
-		\item L'utente accede alla funzionalità di aggiornamento della lista delle \glo{organizzazioni};
-		\item L'utente ha la possibilità di effettuare l'aggiornamento lista \glo{organizzazione} con \glo{refresh manuale} [UCA 3.3.1];
-		\item L'utente ha la possibilità di effettuare l'aggiornamento lista \glo{organizzazione} con \glo{temporizzazione} [UCA 3.3.2].
-	\end{enumerate}
+	\item \textbf{Scenario principale:} L'utente ha la necessità di aggiornare la lista e può farlo manualmente con l'apposita funzionalità [UCA 3.3.1] o sarà fatto con temporizzazione [UCA 3.3.2].
 	\item \textbf{Scenario alternativo 1:} Se il tentativo di scaricare la lista fallisce viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.1].
 	\item \textbf{Scenario alternativo 2:} Se non è presente nessuna lista delle \glo{organizzazioni} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.2];
 	\item \textbf{Estensioni:}
@@ -132,11 +132,11 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente anonimo sceglie di eseguire la funzionalità aggiornamento della lista dell'\glo{organizzazione} attraverso la modalità di \glo{refresh manuale}.
 	\item \textbf{Postcondizione:} La lista delle \glo{organizzazioni} è aggiornata.	
-	\item \textbf{Flusso di eventi:}
+	\item \textbf{Scenario principale:} Aggiornamento della lista delle organizzazione con il refresh manuale.
+	\item \textbf{Generalizzazione:}
 	\begin{enumerate}
-		\item L'utente esegue l'aggiornamento della lista delle \glo{organizzazioni} attraverso un \glo{refresh manuale}.
+	\item UCA 3.3 - Aggiornare lista organizzazioni.
 	\end{enumerate}
-	
 \end{itemize}
 
 \subsubsection{UCA 3.3.2 - Aggiornare lista organizzazione con temporizzazione}%fish level
@@ -144,10 +144,11 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente anonimo sceglie di eseguire la funzionalità aggiornamento della lista dell'\glo{organizzazione} attraverso la modalità \glo{temporizzazione}.
 	\item \textbf{Postcondizione:} La lista delle \glo{organizzazioni} è aggiornata.
-	\item \textbf{Flusso di eventi:}
+	\item \textbf{Scenario principale:} Aggiornamento della lista delle organizzazione con temporizzazione.
+	\item \textbf{Generalizzazione:}
 	\begin{enumerate}
-		\item L'utente esegue l'aggiornamento della lista dell'\glo{organizzazione} attraverso la modalità \glo{temporizzazione}.
-	\end{enumerate}
+	\item UCA 3.3 - Aggiornare lista organizzazioni.
+	\end{enumerate}	
 \end{itemize}
 
 \subsubsection{UCA 3.4 - Visualizzazione lista delle organizzazioni}%sea level
@@ -162,14 +163,10 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:}  L'utente è autenticato e può visualizzare la lista delle \glo{organizzazioni}.
 	\item \textbf{Postcondizione:} L'utente visualizza la lista delle \glo{organizzazioni} nel modo che ritiene più opportuno.
-	\item \textbf{Scenario principale:}	L'utente può scegliere come visualizzare la lista tra diversi tipi di ordinamento.
-	\item \textbf{Flusso di eventi:}
+	\item \textbf{Scenario principale:}	L'utente può scegliere come visualizzare la lista tramite diversi tipi di ordinamento:
 	\begin{enumerate}
-		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle \glo{organizzazioni} presenti;
-		\item L'utente ha la possibilità di ordinare le \glo{organizzazioni} alfabeticamente [UCA 3.4.1];
-		\item L'utente ha la possibilità di ordinare le \glo{organizzazioni} secondo la politica \glo{FIFO} [UCA 3.4.2];
-		\item L'utente ha la possibilità di applicare un filtro per modalità di tracciamento anonimo [UCA 3.4.3];
-		\item L'utente ha la possibilità di applicare un filtro per modalità di \glo{tracciamento autenticato} [UCA 3.4.4].
+		\item Visualizzazione con ordinamento alfabetico [UCA 3.4.1];
+		\item Visualizzazione con ordinamento \glo{FIFO} [UCA 3.4.2];
 	\end{enumerate}
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle \glo{organizzazioni} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema.
 	\item \textbf{Estensioni:}
@@ -183,44 +180,26 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista secondo un ordinamento alfabetico (dalla a alla z) per il nome dell'\glo{organizzazione}.
 	\item \textbf{Postcondizione:} Viene visualizzata la lista delle \glo{organizzazioni} in ordine alfabetico per il nome dell'\glo{organizzazione}.
-	\item \textbf{Flusso di eventi:}
+	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con ordinamento alfabetico.
+	\item \textbf{Generalizzazione:}
 	\begin{enumerate}
-		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle \glo{organizzazioni} presenti in ordine alfabetico.
-	\end{enumerate}
+	\item UCA 3.4 - Visualizzazione lista delle organizzazioni.
+	\end{enumerate}	
 \end{itemize}
 
-\subsubsection{UCA 3.4.2 - Visualizzazione con ordinamento \glo{FIFO}}%fish level
+\subsubsection{UCA 3.4.2 - Visualizzazione con ordinamento FIFO}%fish level
 \begin{itemize}	
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista secondo un ordinamento \glo{FIFO}.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} secondo un ordinamento \glo{FIFO}.
-	\item \textbf{Flusso di eventi:}
-		\begin{enumerate}
-		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle \glo{organizzazioni} presenti secondo un ordinamento \glo{FIFO}.
-	\end{enumerate}
-\end{itemize}
-
-\subsubsection{UCA 3.4.3 - Visualizzazione con filtro per tracciamento anonimo}%fish level
-\begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo
-	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista che permettono un \glo{tracciamento anonimo}.
-	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che richiedono il \glo{tracciamento anonimo}.
-	\item \textbf{Flusso di eventi:}
-		\begin{enumerate}
-		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle \glo{organizzazioni} che permettono il \glo{tracciamento anonimo}.
-	\end{enumerate}
-\end{itemize}
-
-\subsubsection{UCA 3.4.4 - Visualizzazione con filtro per \glo{tracciamento autenticato}}%fish level
-\begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo
-	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista che permette un \glo{tracciamento autenticato}.
-	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che permettono il \glo{tracciamento autenticato}.
-	\item \textbf{Flusso di eventi:}
+	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con ordinamento \glo{FIFO}.
+	\item \textbf{Generalizzazione:}
 	\begin{enumerate}
-		\item L'utente esegue la funzione per la visualizzazione della lista, visualizzando i nomi delle \glo{organizzazioni} che permettono il \glo{tracciamento autenticato}.
-	\end{enumerate}
+	\item UCA 3.4 - Visualizzazione lista delle organizzazioni.
+	\end{enumerate}	
 \end{itemize}
+
+\newpage
 
 \subsubsection{UCA 3.5 - Ricerca personalizzata delle organizzazioni}%sea level
 \begin{figure}[h]
@@ -253,10 +232,11 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di ricerca della lista per cercare le \glo{organizzazioni} di una certa nazione d'interesse.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che sono nella nazione scelta dall'utente.
-	\item \textbf{Flusso di eventi:}
+	\item \textbf{Scenario principale:} Le ricerche vengono effettuate tramite un filtro per nazione.
+	\item \textbf{Generalizzazione:}
 	\begin{enumerate}
-		\item L'utente esegue la funzione di ricerca personalizzata della lista delle \glo{organizzazioni} per ricercare le \glo{organizzazioni} desiderate, filtrando per la nazione scelta.
-	\end{enumerate}
+	\item UCA 3.5 - Ricerca personalizzata delle organizzazioni.
+	\end{enumerate}	
 \end{itemize}
 
 \subsubsection{UCA 3.5.2 - Ricerca con filtro per nome}%fish level
@@ -264,10 +244,11 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di ricerca della lista per cercare le \glo{organizzazioni} che hanno nel nome una sottostringa specificata dall'utente.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che hanno nel nome una sottostringa scelta dall'utente.
-	\item \textbf{Flusso di eventi:}
+	\item \textbf{Scenario principale:} Le ricerche vengono effettuate tramite un filtro per nome.
+	\item \textbf{Generalizzazione:}
 	\begin{enumerate}
-		\item L'utente esegue la funzione di ricerca personalizzata della lista delle \glo{organizzazioni} per ricercare le \glo{organizzazioni} desiderate, filtrando per il nome della \glo{organizzazione} scelta.
-	\end{enumerate}
+	\item UCA 3.5 - Ricerca personalizzata delle organizzazioni.
+	\end{enumerate}	
 \end{itemize}
 
 \subsubsection{UCA 3.5.3 - Ricerca con filtro per città}%fish level
@@ -275,8 +256,33 @@
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di ricerca della lista per cercare le \glo{organizzazioni} di una certa città d'interesse.
 	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che sono nella città scelta dall'utente.
-	\item \textbf{Flusso di eventi:}
+	\item \textbf{Scenario principale:} Le ricerche vengono effettuate tramite un filtro per città.
+	\item \textbf{Generalizzazione:}
 	\begin{enumerate}
-		\item L'utente esegue la funzione di ricerca personalizzata della lista delle \glo{organizzazioni} per ricercare le \glo{organizzazioni} desiderate, filtrando per la città scelta.
-	\end{enumerate}
+	\item UCA 3.5 - Ricerca personalizzata delle organizzazioni.
+	\end{enumerate}	
+\end{itemize}
+
+\subsubsection{UCA 3.5.4 - Visualizzazione con filtro per tracciamento anonimo}%fish level
+\begin{itemize}
+	\item \textbf{Attori primari:} Utente anonimo
+	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista che permettono un \glo{tracciamento anonimo}.
+	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che richiedono il \glo{tracciamento anonimo}.
+	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con filtro per tracciamento anonimo.
+	\item \textbf{Generalizzazione:}
+	\begin{enumerate}
+	\item UCA 3.5 - Ricerca personalizzata delle organizzazioni.
+	\end{enumerate}	
+\end{itemize}
+
+\subsubsection{UCA 3.5.5 - Visualizzazione con filtro per tracciamento autenticato}%fish level
+\begin{itemize}
+	\item \textbf{Attori primari:} Utente anonimo
+	\item \textbf{Precondizione:} L'utente autenticato può utilizzare la funzionalità di visualizzazione della lista che permette un \glo{tracciamento autenticato}.
+	\item \textbf{Postcondizione:} Viene visualizzato la lista delle \glo{organizzazioni} che permettono il \glo{tracciamento autenticato}.
+	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con filtro per \glo{tracciamento autenticato}.
+	\item \textbf{Generalizzazione:}
+	\begin{enumerate}
+	\item UCA 3.5 - Ricerca personalizzata delle organizzazioni.
+	\end{enumerate}	
 \end{itemize}
