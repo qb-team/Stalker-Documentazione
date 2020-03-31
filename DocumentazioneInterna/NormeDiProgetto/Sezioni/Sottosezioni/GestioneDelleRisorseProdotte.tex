@@ -54,14 +54,22 @@ Il gruppo \Gruppo{} potrà interagire con il \glo{VCS} sia tramite riga di coman
 \subsubsection{Repository creati}
 Sono stati creati più \glo{repository} per supportare il lavoro del gruppo, quali:
 \begin{itemize}
-	\item \textbf{Stalker-App}: Viene usato per versionare il codice sorgente prodotto dal gruppo per l'applicazione web per gli amministratori. Al momento tale repository è vuoto e verrà usato dopo la RP;
+	\item \textbf{Stalker-Admin}: Viene usato per versionare il codice sorgente prodotto dal gruppo per l'applicazione web per gli amministratori. Al momento tale repository è vuoto e verrà usato dopo la RP;
 	\item \textbf{Stalker-App}: Viene usato per versionare il codice sorgente prodotto dal gruppo per l'applicazione mobile per gli utenti. Al momento tale repository è vuoto e verrà usato dopo la RP;
 	\item \textbf{Stalker-Documentazione}: Viene usato per versionare tutta la documentazione prodotta dal gruppo;
 	\item \textbf{Stalker-App-PoC}: Viene usato per versionare il codice sorgente relativo dell'applicazione mobile per utenti per lo sviluppo del \glo{Proof of Concept}.
-	Il gruppo, intendendo seguire il modello di sviluppo incrementale, integrerà con le opportune modifiche, il suo contenuto all'interno del repository to nel repository \textit{Stalker-App} per lavorare al prodotto finale;
+	Il gruppo, intendendo seguire il modello di sviluppo incrementale integrerà, con le opportune modifiche, il suo contenuto all'interno del repository \textit{Stalker-App} per lavorare al prodotto finale;
 	\item \textbf{Stalker-Backend}: Viene usato per versionare il codice sorgente prodotto dal gruppo per l'applicativo lato server, il cosiddetto backend;
 	\item \textbf{Stalker-Admin-PoC}: Viene usato per lo sviluppo dell'interfaccia web dedicata all'amministratore per il \glo{Proof of Concept}.
 	Come per \textit{Stalker-App-PoC}, il codice prodotto verrà integrato nel repository \textit{Stalker-Admin} per lavorare al prodotto finale.
+\end{itemize}
+
+\subsubsection{Template per issue}
+Per le repository di \textit{Stalker-App}, \textit{Stalker-Admin} e \textit{Stalker-Backend} sono stati implementati diversi template per semplificare la creazione di issue simili fra di loro:
+\begin{itemize}
+\item \textbf{Nuovo requisito obbligatorio}: Viene usato per creare issue riguardanti i requisiti obbligatori.
+\item \textbf{Nuovo requisito desiderabile}: Viene usato per creare issue riguardanti i requisiti desiderabili.
+\item \textbf{Nuovo requisito opzionale}: Viene usato per creare issue riguardanti i requisiti opzionali.
 \end{itemize}
 
 \subsubsection{Organizzazione del repository Stalker-Documentazione}
