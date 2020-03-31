@@ -1,0 +1,53 @@
+\section{Informazioni Generali}
+\begin{itemize}
+\item \textbf{Luogo:} Hangouts;
+\item \textbf{Data:} \Data;
+\item \textbf{Ora:} 13.35-14.10;
+\item \textbf{Partecipanti del gruppo:}
+	\begin{itemize}
+	\item \AT{}; 
+	\item \CE{}; 
+	\item \DF{};
+	\item \LD{};
+	\item \PF{};
+	\item \SE{};
+	\item \BR{};
+	\item \MC{}.
+	\end{itemize} 
+\item \textbf{Segretario:} \LD{}.
+\end{itemize}
+
+
+\section{Ordine del Giorno}
+\begin{itemize}
+	\item Chiamata con il prof \CR{} tramite Hangouts;
+	\item Discussione e chiarimenti sulle correzioni al documento \AdR{} riportate dopo la RP;
+\end{itemize}
+
+\section{Resoconto}
+\subsection{Relazioni errate}
+Durante la chiamata sono stati chiariti numerosi errori presenti nella \AdR{}.
+Per quanto riguarda le relazioni da rivedere bisogna tenere a mente che le estensioni non fanno verificare lo scenario principale del caso 
+d'uso da cui partono, quindi nel nostro caso bisogna rivederne alcune cercando di modellarle come generalizzazioni in modo da non escludere il corretto 
+funzionamento del caso d'uso generale.\\
+Un'altra cosa da segnalare è la precondizione nelle generalizzazioni deve essere più stringente rispetto al caso d'uso generale.\\
+\subsection{UCA 6.1.1}
+Serve un sotto caso d'so diverso, perchè non stiamo aggiungendo funzionlità ma stiamo specificando più in dettaglio come funziona.
+\subsection{Relazioni di inclusione}
+Come va intesa l'inclusione: ho uno scenario principale di un caso d'uso A, se includo B allora prima eseguo lo scenario principale di A e poi quello di B;
+nel nostro caso invece se intendiamo che lo scenario principale si compone di 3 passi non possiamo usare inclusioni ma bisogna modellarli come 3 sotto-casi d'uso diversi.
+Quindi UCS 5.2.1 deve essere un sotto-caso di UCS 5.2, perché specifico come è fatto il suo scenario principale\\
+In realtà potrebbe anche essere rimosso e inglobato nello scenario principale perché troppo semplice per essere un sotto-caso separato.
+
+\subsection{Angular}
+Per fare i diagrammi identifichiamo i component come classi\\
+Per l'aggiunta dinamica di elemneti grafici tramite i tag, dato che fanno parte della UI, non serve farci i diagrammi perché non portano vantaggi.
+\subsection{differenza tra aggregazione e associazione}
+Sono abbastanza intercambiabili, dipende dai vincoli che imponiamo sull'architettura.
+Nella composizione si aggiunge che le istanze sono locali e non condivisibili.
+ 
+
+
+
+
+\clearpage
