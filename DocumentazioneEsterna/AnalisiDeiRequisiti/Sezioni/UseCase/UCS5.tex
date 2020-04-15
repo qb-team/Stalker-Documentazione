@@ -37,6 +37,13 @@
 \end{itemize}
 
 \subsubsection{UCS 5.2 - Aggiunta di un luogo di tracciamento}%sea level
+
+\begin{figure}[h]
+	\centering
+    \includegraphics[scale=0.50]{Sezioni/UseCase/Immagini/UCS5.2.png}
+    \caption{UCS 5.2 - Aggiunta di un luogo di tracciamento}
+\end{figure}
+
 \begin{itemize}
     \item \textbf{Attori primari:} Amministratore gestore
     \item \textbf{Precondizione:} L'amministratore ha selezionato l’area geografica per il tracciamento dell'\glo{organizzazione}.
@@ -100,11 +107,6 @@
 
 \subsubsection{UCS 5.5 - Selezione dell'area geografica per il tracciamento}%sea level
 
-\begin{figure}[h!]
-	\centering
-    \includegraphics[scale=0.53]{Sezioni/UseCase/Immagini/UCS5.5.png}
-    \caption{UCS 5.5 - Selezione dell'area geografica di tracciamento}
-\end{figure}
 
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore gestore
@@ -118,15 +120,6 @@
     \item Sceglie dunque se il fine dell'area da tracciare è per un \glo{luogo} dell'\glo{organizzazione} oppure è per il \glo{perimetro} di tracciamento;
     \item L'amministratore può scegliere se selezionare l'area inserendo le coordinate geografiche [UCS 5.5.1] oppure tramite Google Maps API [UCS 5.5.2].
 \end{enumerate}
-%\item \textbf{Inclusioni:}
- %   \begin{enumerate}
-  %      \item UCS 5.5.1 - Selezione dell'area di \glo{tracciamento}tramite inserimento delle coordinate geografiche;
-   %     \item UCS 5.5.2 - Selezione dell'area di \glo{tracciamento}tramite Google Maps API.
-    %\end{enumerate}
-\item \textbf{Estensioni:}
-\begin{enumerate}
-    \item UCS 5.5.3 - Annullamento della selezione dell'area geografica per il tracciamento.
-\end{enumerate}
 \end{itemize}
 
 \subsubsection{UCS 5.5.1 - Selezione dell'area di tracciamento tramite inserimento delle coordinate geografiche}%fish level
@@ -139,6 +132,10 @@
 \begin{enumerate}
     \item L'amministratore inserisce un certo numero di coordinate per i rispettivi vertici dell'area di \glo{tracciamento};
 \end{enumerate}
+\item \textbf{Generalizzazione:}
+	\begin{enumerate}
+        \item UCS 5.5 - Selezione dell'area geografica per il tracciamento;
+    \end{enumerate}
 \end{itemize}
 
 \subsubsection{UCS 5.5.2 - Selezione dell'area di tracciamento tramite Google Maps API}%fish level
@@ -152,6 +149,10 @@
 \begin{enumerate}
     \item L'amministratore interagisce con Google Maps API per selezionare l'area di \glo{tracciamento}.
 \end{enumerate}
+\item \textbf{Generalizzazione:}
+	\begin{enumerate}
+        \item UCS 5.5 - Selezione dell'area geografica per il tracciamento;
+    \end{enumerate}
 \end{itemize}
 
 \subsubsection{UCS 5.5.3 - Annullamento della selezione dell'area geografica per il tracciamento}%fish level
@@ -164,5 +165,9 @@
     \begin{enumerate}
     \item L'amministratore seleziona la funzionalità per l'annullamento della selezione dell'area geografica;
     \item L'amministratore conferma di voler uscire dalla funzionalità di selezione dell'area geografica.
-    \end{enumerate} 
+    \end{enumerate}
+    \item \textbf{Generalizzazione:}
+	\begin{enumerate}
+        \item UCS 5.5 - Selezione dell'area geografica per il tracciamento;
+    \end{enumerate}
 \end{itemize}
