@@ -1,21 +1,26 @@
 \subsection{Attori}
-\subsubsection{Attori Utenti}
+\subsection{Attori generici}
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.8]{Sezioni/UseCase/Immagini/Generici.png}
+    \caption{Gerarchia dei generici}
+\end{figure}
 
+\paragraph{Utente non autenticato}
+Utente non ancora autenticato all'applicazione o all'interfaccia per amministratori che può avere o non avere le credenziali per autenticarsi.
+
+\subsubsection{Attori Utenti}
 \begin{figure}[h]
   \centering
     \includegraphics[scale=0.8]{Sezioni/UseCase/Immagini/Utenti.png}
     \caption{Gerarchia degli utenti}
 \end{figure}
 
-\paragraph{Utente non autenticato}
-Utente non ancora autenticato all'applicazione che può avere o non avere le credenziali per autenticarsi.
 \paragraph{Utente anonimo}
 Utente autenticato che può venire tracciato all'interno di una \glo{organizzazione} senza fornire dettagli sulla propria identità.
 \paragraph{Utente riconosciuto}
 Utente autenticato che è attualmente tracciato all'interno di una precisa \glo{organizzazione} fornendo dettagli sulla propria identità.
 L'utente si è precedentemente autenticato presso l'\glo{organizzazione} tramite LDAP.
-
-
 
 \subsubsection{Attori Amministratori}
 \begin{figure}[h]
@@ -24,9 +29,6 @@ L'utente si è precedentemente autenticato presso l'\glo{organizzazione} tramite
     \caption{Gerarchia degli amministratori}
 \end{figure}
 
-
-\paragraph{Amministratore non autenticato}
-Amministratore non ancora autenticato nel sistema che ha già le credenziali per autenticarsi.
 \paragraph{Amministratore autenticato}
 Amministratore che si è autenticato nel sistema.
 \paragraph{Amministratore proprietario}
