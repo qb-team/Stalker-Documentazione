@@ -1,0 +1,70 @@
+\section{Informazioni Generali}
+\begin{itemize}
+\item \textbf{Luogo:} Discord.
+\item \textbf{Data:} \Data.
+\item \textbf{Ora:} 15:20 - 16:00.
+\item \textbf{Partecipanti del gruppo:}
+	\begin{itemize}
+		\item \AT{}; 
+		\item \BR{};
+		\item \CE{}; 
+		\item \DF{};
+		\item \LD{};
+		\item \MC{};
+		\item \PF{};
+		\item \SE{}.
+	\end{itemize} 
+\item \textbf{Segretario:} \AT{}.
+\end{itemize}
+
+\section{Ordine del Giorno}
+\begin{itemize}
+	\item Modifica alla pianificazione
+	\item Connessione ai server del proponente più discussione sull'affittarne uno personale
+	\item Situazione sviluppo app, web-app, server
+	\item Requisiti soddisfatti sul totale
+\end{itemize}
+
+\section{Resoconto}
+
+\subsection{Modifica alla pianificazione}
+Dopo la decisione avanzata al committente in data 2020-03-24 si indica di seguito la nuova pianificazione a cui segue la modifica del \PdP{}.
+Nuova data di RQ: 18 maggio
+Nuova data di consegna per RQ: 11 maggio
+Nuova data entro cui terminare i requisiti obbligatori del prodotto: 3 maggio (in teoria dovrebbe coincidere con presentazione PB).
+Nuova data di RA: 18 giugno
+Nuova data di consegna per RA: 11 giugno
+
+\subsection{Connessione ai server del proponente più discussione sull'affittarne uno personale}
+Il proponente, attraverso Emanuele, ha comunicato come potersi collegare al laboratorio aziendale per provare il sistema.
+Viene visionato il tutorial fornitoci ma si discute la possibilità di acquistare per il tempo necessario un server esterno.
+
+\subsection{Situazione sviluppo app, web-app, server}
+Viene discusso fra tutti i membri del gruppo la situazione dello sviluppo.
+Il gruppo dell'app afferma che hanno portato avanti i requisiti degli incrementi 1 e 2 e hanno iniziato a vedere come svolgere i requisiti dell'incremento 3.
+Hanno deciso di adottare il pattern architetturale Model View Presenter dopo aver seguito le lezioni del corso di Ingegneria del Software. Attendono di potersi
+collegare a un'istanza del backend funzionante per poter verificare a pieno quanto fatto.\\
+Il gruppo della web-app afferma invece che hanno, grazie a SonarQube, risolto alcuni errori e/o bug presenti nel codice del PoC che hanno conseguentemente utilizzato 
+come baseline per lo sviluppo dell'applicazione web. Hanno proseguito abilitando la Continuous Integration con la piattaforma Travis CI e il calcolo della code coverage
+con Coveralls, verificandone il funzionamento implementando alcuni test di unità.
+Il gruppo del server ha invece ultimato le API seguendo la specifica OpenAPI, ha generato il codice sorgente tramite lo strumento OpenAPI Generator e lo ha utilizzato per l'implementazione del server.
+Ha deciso di usare la funzionalità multi-module di Maven per separare i vari moduli del codice sorgente e ha studiato il funzionamento del pattern Publisher/Subscriber implementato da Redis.
+Sta ultimando la progettazione dell'architettura del backend, di cui i diagrammi, e sta provando il funzionamento degli unit test.
+
+\subsection{Requisiti soddisfatti sul totale}
+Vengono soddisfatti, oltre a quelli già segnati in precedenza, i seguenti requisiti:
+\begin{itemize}
+	\item R1FA1.6
+	\item R1FA1.7 (che necessita una leggera modifica nel contenuto)
+	\item R1FA8.3
+	\item R1FA8.4
+	\item R1FA8.5
+	\item R1FA3.3
+	\item R1FA3.4
+	\item R1FA3.6
+	\item R1FA3.8
+	\item R1FA3.15
+	\item R1FA3.17
+\end{itemize}
+
+\clearpage
