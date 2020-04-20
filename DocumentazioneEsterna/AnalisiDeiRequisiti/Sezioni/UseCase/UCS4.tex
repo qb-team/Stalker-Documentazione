@@ -1,17 +1,17 @@
-\subsubsection{UCS 4 - Modifica dei parametri dell'organizzazione}%kite level
+\subsubsection{UCS 4 - Gestione dell'organizzazione}%kite level
 
 \begin{figure}[h]
 	\centering	
 	\includegraphics[scale=0.53]{Sezioni/UseCase/Immagini/UCS4.png}
-	\caption{UCS 4 - Modifica dei parametri dell'\glo{organizzazione}}
+	\caption{UCS 4 - Gestione dei parametri dell'\glo{organizzazione}}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori primari:} Amministratore gestore
 	\item \textbf{Precondizione:} L'amministratore dispone di almeno un'\glo{organizzazione}.
-	\item \textbf{Postcondizione:} L'amministratore ha modificato i parametri desiderati dell'\glo{organizzazione} e le modifiche sono state salvate nel sistema.
-	\item \textbf{Scenario principale:} L'amministratore deve scegliere l'\glo{organizzazione} che vuole modificare, selezionare la funzionalità di modifica dell'\glo{organizzazione} e quindi procedere con il cambiamento dei parametri.
-	\item \textbf{Scenario alternativo:} L'amministratore non vuole più apportare modifiche all'\glo{organizzazione}, pertanto procederà con l'annullamento dell'apporto di modifiche [UCS 4.3].
+	\item \textbf{Postcondizione:} L'amministratore ha modificato i parametri desiderati dell'\glo{organizzazione} o eliminato l'\glo{organizzazione}. Le modifiche sono state salvate nel sistema.
+	\item \textbf{Scenario principale:} L'amministratore deve scegliere l'\glo{organizzazione} che vuole modificare, selezionare la funzionalità di modifica o eliminazione dell'\glo{organizzazione} e quindi procedere con il cambiamento dei parametri.
+%	\item \textbf{Scenario alternativo:} L'amministratore non vuole più apportare modifiche all'\glo{organizzazione}, pertanto procederà con l'annullamento dell'apporto di modifiche [UCS 4.3].
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'amministratore seleziona un'\glo{organizzazione} [UCS 3];
@@ -20,10 +20,10 @@
 		\item L'amministratore ha la possibilità di modificare il \glo{perimetro} e i \glo{luoghi} di \glo{tracciamento} dell'\glo{organizzazione} [UCS 5];
 		\item L'amministratore seleziona la funzionalità per il salvataggio delle modifiche apportate.
 	\end{enumerate}
-	\item \textbf{Estensioni:}
-	\begin{enumerate}
-		\item UCS 4.3 - Annullamento modifiche ai parametri dell'organizzazione.
-	\end{enumerate}
+	%\item \textbf{Estensioni:}
+	%\begin{enumerate}
+	%	\item UCS 4.3 - Annullamento modifiche ai parametri dell'organizzazione.
+	%\end{enumerate}
 \end{itemize}
 \newpage
 \subsubsection{UCS 4.1 - Modifica dei dati dell'organizzazione}%sea level
