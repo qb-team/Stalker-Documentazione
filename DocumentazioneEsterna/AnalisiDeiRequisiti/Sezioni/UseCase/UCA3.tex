@@ -76,20 +76,15 @@
 
 \subsubsection{UCA 3.2.2 - Inserimento di una organizzazione che richiede credenziali LDAP nella lista delle organizzazioni preferite dell'utente}%fish level
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente anonimo
+	\item \textbf{Attori primari:} Utente autenticato
 	\item \textbf{Precondizione:} L'utente è autenticato e sceglie di eseguire la funzionalità di inserimento nella lista delle \glo{organizzazioni preferite} solo se ha scaricato precedentemente la lista delle \glo{organizzazioni}.
 	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione}, che richiede tracciamento autenticato, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
 	\item \textbf{Scenario principale:} Inserimento di una organizzazione con tracciamento autenticato nella lista delle organizzazioni preferite dell'utente.
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente seleziona dalla lista delle \glo{organizzazioni} l'\glo{organizzazione}, la quale richiede tracciamento autenticato, da inserire nella lista delle \glo{organizzazioni preferite};
-		\item L'utente conferma l'inserimento nella lista delle \glo{organizzazioni preferite} per l'\glo{organizzazione} scelta;
-		\item L'utente si autentica con credenziali \glo{LDAP} [UCA 7].
+		\item L'utente conferma l'inserimento nella lista delle \glo{organizzazioni preferite} per l'\glo{organizzazione} scelta.
 	\end{enumerate}
-	\item \textbf{Inclusioni:}
-	\begin{itemize}
-			\item UCA 7 - Autenticazione con credenziali LDAP.
-	\end{itemize}
 \end{itemize}
 
 \subsubsection{UCA 3.2.3 - Rimozione di una organizzazione dalla lista delle organizzazioni preferite dell'utente}%fish level
@@ -183,7 +178,7 @@
 	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con ordinamento alfabetico.
 	\item \textbf{Generalizzazione:}
 	\begin{enumerate}
-	\item UCA 3.4 - Visualizzazione lista delle organizzazioni.
+		\item UCA 3.4 - Visualizzazione lista delle organizzazioni.
 	\end{enumerate}	
 \end{itemize}
 
@@ -195,7 +190,7 @@
 	\item \textbf{Scenario principale:} Visualizzazione della lista delle organizzazioni con ordinamento \glo{FIFO}.
 	\item \textbf{Generalizzazione:}
 	\begin{enumerate}
-	\item UCA 3.4 - Visualizzazione lista delle organizzazioni.
+		\item UCA 3.4 - Visualizzazione lista delle organizzazioni.
 	\end{enumerate}	
 \end{itemize}
 
