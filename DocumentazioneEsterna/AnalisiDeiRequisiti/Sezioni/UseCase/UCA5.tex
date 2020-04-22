@@ -15,6 +15,13 @@
 \end{itemize}
 
 \subsubsection{UCA 5.1 - Visualizzazione dello storico degli accessi all'organizzazione}
+
+\begin{figure}[h]
+	\centering	
+	\includegraphics[scale=0.6]{Sezioni/UseCase/Immagini/UCA5.1.png}
+	\caption{UCA 5.1 - Visualizzazione dello \glo{storico degli accessi} all'organizzazione}
+\end{figure}
+
 \begin{itemize}
     \item \textbf{Attori primari:} Utente anonimo
     \item \textbf{Precondizione:} L'utente dispone della lista delle \glo{organizzazioni}.
@@ -26,13 +33,8 @@
         \item L'utente seleziona la funzionalità per mostrare gli accessi effettuati presso un'\glo{organizzazione};
         \item L'utente visiona per ogni accesso le sue informazioni.
     \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item UCA 5.1.4 - Visualizzazione informazioni accesso.
-    \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item UCA 5.1.5 - Visualizzazione tempo trascorso all'interno dell'organizzazione;
         \item UCA 8.5.1 - Avviso della mancanza di accessi effettuati presso l'organizzazione selezionata.
     \end{itemize}
 \end{itemize}
@@ -54,19 +56,21 @@
 \end{itemize}
 
 \subsubsection{UCA 5.2 - Visualizzazione dello storico degli accessi ad un luogo dell'organizzazione}
+
+\begin{figure}[h]
+	\centering	
+	\includegraphics[scale=0.6]{Sezioni/UseCase/Immagini/UCA5.2.png}
+	\caption{UCA 5.2 - Visualizzazione dello \glo{storico degli accessi} ad un luogo dell'organizzazione}
+\end{figure}
+
 \begin{itemize}
     \item \textbf{Attori primari:} Utente anonimo
     \item \textbf{Precondizione:} L'utente seleziona il luogo dell'\glo{organizzazione} di cui vuole visualizzare i propri accessi.
     \item \textbf{Postcondizione:} L'utente visualizza lo \glo{storico degli accessi} (con nome del \glo{luogo}, \glo{timestamp} di ingresso, di uscita e tempo di permanenza) al \glo{luogo} desiderato. Se l'utente dovesse trovarsi all'interno del \glo{luogo} stesso, viene visualizzato il tempo passato al suo interno dall'ultimo ingresso effettuato.
     \item \textbf{Scenario principale:} L'utente esegue la procedura per visualizzare lo \glo{storico degli accessi} effettuati presso il \glo{luogo} desiderato e ha la possibilità di ordinare gli accessi [UCA 5.4] o effettuare ricerche [UCA 5.5].
     \item \textbf{Scenario alternativo:} L'utente non è mai entrato nel \glo{luogo} selezionato, pertanto verrà mostrato un avviso informativo [UCA 8.5.2].
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item UCA 5.2.4 - Visualizzazione informazioni accesso.
-    \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item UCA 5.2.5 - Visualizzazione tempo trascorso all'interno di un luogo dell'organizzazione
         \item UCA 8.5.2 - Avviso della mancanza di accessi effettuati presso il luogo selezionato.
     \end{itemize}
 \end{itemize}
