@@ -1,0 +1,37 @@
+site_name: Manuale sviluppatore | Stalker
+repo_url: https://github.com/qb-team/Stalker-Documentazione/
+
+theme:
+  name: material
+
+nav:
+  - Home: "index.md"
+  - App utenti:
+      - Introduzione: "app/introduzione.md"
+      - Requisiti: "app/requisiti.md"
+      - Installazione: "app/installazione.md"
+      - Architettura: "app/architettura.md"
+      - Package: "app/package.md"
+      - Diagrammi delle classi: "app/classi.md"
+      - Diagrammi di sequenza: "app/sequenza.md"
+  - Web-app amministratori:
+      - Introduzione: "webapp/introduzione.md"
+      - Requisiti: "webapp/requisiti.md"
+      - Installazione: "webapp/installazione.md"
+      - Architettura: "webapp/architettura.md"
+      - Package: "webapp/package.md"
+      - Diagrammi delle classi: "webapp/classi.md"
+      - Diagrammi di sequenza: "webapp/sequenza.md"
+  - Backend:
+      - Introduzione: "backend/introduzione.md"
+      - Requisiti: "backend/requisiti.md"
+      - Installazione: "backend/installazione.md"
+      - Architettura: "backend/architettura.md"
+      - Package: "backend/package.md"
+      - Diagrammi delle classi: "backend/classi.md"
+      - Diagrammi di sequenza: "backend/sequenza.md"
+  - REST API:
+      - Introduzione: "restapi/introduzione.md"
+      - Specifica OpenAPI e Swagger: "restapi/openapi.md"
+      - Utilizzo: "restapi/utilizzo.md"
+      - Documentazione: "restapi/documentazione.md"
