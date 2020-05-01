@@ -33,3 +33,60 @@ Ogni riga della tabella corrisponde ad un rischio ed è composta da:
 \end{itemize}
 
 \input{Sezioni/TabellaRischi.tex}
+
+\subsection{Occorrenza delle situazioni di rischio}
+In questa sezione viene descritto quanto i rischi indicati in §2.3 si sono effettivamente verificati durante lo svolgimento del progetto.
+\input{Sezioni/Sottosezioni/OccorrenzaRischiAnalisi.tex}
+
+\input{Sezioni/Sottosezioni/OccorrenzaRischiProgettazioneArchitetturale.tex}
+
+\input{Sezioni/Sottosezioni/OccorrenzaRischiProgettazioneDettaglio.tex}
+
+\subsubsection{Andamento dell'occorrenza dei rischi}
+
+\pgfplotsset{width=17cm, height=6cm}
+\begin{tikzpicture}
+
+\begin{axis}[
+title=Grafico dell'andamento dell'occorrenza dei rischi,
+x tick label style={
+	/pgf/number format/1000 sep=},
+ylabel=Occorrenza,
+enlargelimits=0.05,
+legend style={at={(0.5,-0.4)},
+	anchor=north,legend columns=-1},
+ybar interval=0.8,
+ytick={1,2,3},
+symbolic x coords={RT1, RP1, RP2, RR1, RS1, RO1,
+	RO2, RO3, RO4, tmp},%lasciare tmp come ultima colonna per poter visualizzare tutte le colonne tranne tmp
+% x tick label style={rotate=45,anchor=east},
+grid=major,
+xtick=data
+]
+\addplot[fill=blue] coordinates {
+	(RT1, 1) (RP1, 1) (RP2, 1) 
+	(RR1, 2) (RS1, 3) (RO1, 2)
+	(RO2, 2) (RO3, 3) (RO4, 1) (tmp, 3)
+};
+
+\addplot [fill=orange] coordinates {
+	(RT1, 3) (RP1, 1) (RP2, 1) 
+	(RR1, 1) (RS1, 1) (RO1, 1)
+	(RO2, 1) (RO3, 2) (RO4, 2) (tmp, 3)
+};
+
+\addplot [fill=gray] coordinates {
+	(RT1, 3) (RP1, 2) (RP2, 1) 
+	(RR1, 1) (RS1, 3) (RO1, 3)
+	(RO2, 2) (RO3, 1) (RO4, 1) (tmp, 3)
+};
+
+
+
+\legend{
+	Fase di Analisi,
+	Fase di Progettazione Architetturale,
+	Fase di Progettazione di Dettaglio e Codifica,
+}
+\end{axis}
+\end{tikzpicture}
