@@ -3,6 +3,10 @@ repo_url: https://github.com/qb-team/Stalker-Documentazione/
 
 theme:
   name: material
+  custom_dir: "docs_theme"
+
+markdown_extensions:
+  - lightgallery
 
 nav:
   - Home: "index.md"
