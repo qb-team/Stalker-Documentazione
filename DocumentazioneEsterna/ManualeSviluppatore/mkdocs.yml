@@ -23,7 +23,7 @@ nav:
       - Requisiti: "webapp/requisiti.md"
       - Installazione: "webapp/installazione.md"
       - Architettura: "webapp/architettura.md"
-      - Package: "webapp/package.md"
+      - Diagramm dei Package: "webapp/package.md"
       - Diagrammi delle classi: "webapp/classi.md"
       - Diagrammi di sequenza: "webapp/sequenza.md"
   - Backend:
