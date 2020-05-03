@@ -2,22 +2,22 @@
 
 HTTP request | Description
 ------------- | -------------
-**GET** [**/report/organization/{organizationId}**](ReportApi.md#getTimePerUserReport) | Gets the report of total time spent per user inside the organization.
+**GET** [**/report/place/{placeId}**](ReportApi.md#getTimePerUserReport) | Gets the report of total time spent per user inside the place of an organization.
 
 
 <a name="getTimePerUserReport"></a>
 # **getTimePerUserReport**
-> List getTimePerUserReport(organizationId)
+> List getTimePerUserReport(placeId)
 
-Gets the report of total time spent per user inside the organization.
+Gets the report of total time spent per user inside the place of an organization.
 
-    Gets the report of total time spent by each user inside the organization. Only web-app administrators can access this end-point.
+    Gets the report of total time spent per user inside the place of an organization. Only web-app administrators can access this end-point.
 
 ### Parameters
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **organizationId** | **Long**| ID of the organization. The viewer administrator must have permissions for this organization.
+ **placeId** | **Long**| ID of the organization. The viewer administrator must have permissions for this organization.
 
 ### Return type
 
