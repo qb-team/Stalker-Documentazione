@@ -1,1 +1,1 @@
-![alt text](../Immagini/WebApp/login.PNG "Logo Title Text 1")
+![alt text](../Immagini/WebApp/administratorManagement.PNG "diagramma delle classi")
