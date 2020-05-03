@@ -34,17 +34,17 @@ Nel seguente package vengono ragruppate tutte le classi dedicate alle funzionali
   <figcaption > <em> Diagramma dei package - Package delle API </em> </figcaption>
 </figure>
 <br/>
-## UserNoAuthenticatedPackage ##
+## UserNoAuthenticated ##
 
 <figure align=center class="image">
-  <img src="/Immagini/WebApp/UserNoAuthenticatedPackage.png" alt="Diagramma dei package Package del UserNoAuthenticatedPackage">
-  <figcaption > <em> Diagramma dei package - Package del UserNoAuthenticatedPackage </em> </figcaption>
+  <img src="/Immagini/WebApp/UserNoAuthenticatedPackage.png" alt="Diagramma dei package Package del UserNoAuthenticated">
+  <figcaption > <em> Diagramma dei package - Package del UserNoAuthenticated </em> </figcaption>
 </figure>
 <br/>
-## AdminManagementPackage ##
+## AdminManagement ##
 
 <figure align=center class="image">
-  <img src="/Immagini/WebApp/AdminManagementPackage.png" alt="Diagramma dei package Package del AdminManagementPackage">
-  <figcaption > <em> Diagramma dei package - Package del AdminManagementPackage </em> </figcaption>
+  <img src="/Immagini/WebApp/AdminManagementPackage.png" alt="Diagramma dei package Package del AdminManagement">
+  <figcaption > <em> Diagramma dei package - Package del AdminManagement </em> </figcaption>
 </figure>
 <br/>
