@@ -61,3 +61,4 @@ nav:
         - PlaceApi: "restapi/api/PlaceApi.md"
         - PresenceApi: "restapi/api/PresenceApi.md"
         - ReportApi: "restapi/api/ReportApi.md"
+  - Registro modifiche: "registromodifiche.md"
