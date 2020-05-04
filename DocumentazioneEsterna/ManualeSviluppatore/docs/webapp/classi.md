@@ -1,1 +1,1 @@
-![alt text](../Immagini/WebApp/administratorManagement.PNG "diagramma delle classi")
+![!alt text](../Immagini/WebApp/administratorManagement.PNG "diagramma delle classi")
