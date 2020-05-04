@@ -1,1 +1,15 @@
+Vengono presentati qui di seguito i diagrammi UML delle classi relativi alla applicazione web<sup>G</sup>.
+Per redente ogni componente riutilizzabile, mantenibile e facile da testare, si è cercato di progettare componenti che abbiano al loro interno poche responsabilità e che siano il più coese possibili, tenendo pero sotto controllo il numero di dipendenze.
+
+## Administrator management
 ![!alt text](../Immagini/WebApp/administratorManagement.PNG "diagramma delle classi")
+<figcaption align=center> <em> Diagramma delle classi - Administrator </em> </figcaption>
+
+Nel precedente diagramma viene illustrato come sono state progettate le funzionalità per la gestione degli amministratori. Il component **AdministratorManagementContentComponent**  offre metodi per la modifica dei permessi di uno specifico amministratore o più amministratori, registrazione di un nuovo amministratore nell'organizzazione, sia nel caso in cui sia già esistente nel sistema Stalker, cioè è già amministratore ma in un altra organizzazione, sia che non esista nel sistema. Viene inoltre offerta anche la funzionalità di annullamento delle modifiche, infatti le modifiche fatte vengo salvate temporaneamente e solo dopo l'avvenuta conferma da parte dell'amministratore, si procede all'applicazione delle modifiche. **AdministratorManagementContentComponent** ha due dipendenze di tipo **associazione** verso **AdministratorService** e **AdministratorOrganizationDataService**. **AdministratorOrganizationDataService** fornisce l'elenco delle organizzazioni in cui l'amministratore è registrato e l'organizzazione su cui si sta lavorando. **AdministratorService** invece fornisce metodi per la comunicazione con il backend<sup>G</sup>. Più precisamente offre metodi attraverso i quali si inviano le modifiche fatte agli amministratori. Si ricorda inoltre che per usufruire di questa funzionalità occorre essere un amministratore di tipo **owner**.
+
+## Anonymous tracking
+
+![!alt text](../Immagini/WebApp/anonymousTracking.PNG "diagramma delle classi")
+<figcaption align=center> <em> Diagramma delle classi - Anonymous tracking </em> </figcaption>
+
+Nel precedente diagramma viene illustrato come sono state progettate le funzionalità per il monitoraggio dei utenti anonimi sia nelle organizzazioni sia nei luoghi<sup>G</sup> dell'organizzazione. Il component **OrganizationPresenceNumberContentComponent** permette di mostrare il numero di utenti anonimi presenti nell'organizzazione e di impostare l'intervallo di tempo per aggiornare automaticamente il contatore. Analogamente **PlacePresenceNumberContentComponent** offre le stesse funzionalità ma per i luoghi<sup>G</sup> dell'organizzazione. Esse hanno una dipendenza di tipo **associazione** verso **AdministratorOrganizationDataService** che fornisce l'organizzazione su cui si vuole fare monitoraggio. **OrganizationPresenceNumberContentComponent** ha una associazione con **OrganizationTrackingDataService** la quale 
