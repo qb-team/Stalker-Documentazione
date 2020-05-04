@@ -2,28 +2,28 @@
 Vengono presentati qui di seguito i diagrammi UML dei package relativi al backend.
 
 ## it.qbteam
-![!it.qbteam](/Immagini/BackEnd/package-itqbteam.png)
+![!it.qbteam](/Immagini/Backend/package/package-itqbteam.png)
 
 ## model
-![!model](/Immagini/BackEnd/package-model.png)
+![!model](/Immagini/Backend/package/package-model.png)
 
 ## api
-![!api](/Immagini/BackEnd/package-api.png)
+![!api](/Immagini/Backend/package/package-api.png)
 
 ## controller
-![!controller](/Immagini/BackEnd/package-controller.png)
+![!controller](/Immagini/Backend/package/package-controller.png)
 
 ## service
-![!service](/Immagini/BackEnd/package-service.png)
+![!service](/Immagini/Backend/package/package-service.png)
 
 ## serviceimpl
-![!serviceimpl](/Immagini/BackEnd/package-serviceimpl.png)
+![!serviceimpl](/Immagini/Backend/package/package-serviceimpl.png)
 
 ## repository
-![!repository](/Immagini/BackEnd/package-serviceimpl.png)
+![!repository](/Immagini/Backend/package/package-serviceimpl.png)
 
 ## movementtracker
-![!movementtracker](/Immagini/BackEnd/package-movementtracker.png)
+![!movementtracker](/Immagini/Backend/package/package-movementtracker.png)
 
 ## exception
-![!exception](/Immagini/BackEnd/package-exception.png)
+![!exception](/Immagini/Backend/package/package-exception.png)
