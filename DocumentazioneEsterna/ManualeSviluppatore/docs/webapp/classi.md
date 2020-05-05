@@ -93,7 +93,17 @@ Nel precedente diagramma viene illustrato come è stata progettata la funzionali
 
 -   **signOut()**: permette il logout<sup>G</sup>; 
 
--   **resetPassword(in email:string)**: permette il reset della password e per ottenere i permessi e le organizzazioni posseduti da un amministratore durante il processo di autenticazione. Ha perciò due associazioni, una con **AdministratorPermissionDataService** che permette di ottenere i permessi di un amministratore e successivamente se li memorizza, offrendoli a chi ne fa richiesta. A sua volta ha una associazione con **AdministratorService**, il quale permette la comunicazione con il backend<sup>G</sup>, permettendo di ottenere i permessi di un amministratore. L'altra associazione che ha **AuthenticationService** è **AdministratorOrganizationDataService** che permette di ottenere la lista delle organizzazioni a cui l'amministratore è registrato e successivamente se la memorizza, offrendola a chi ne fa richiesta. A sua volta ha una associazione con **OrganizationService**, il quale permette la comunicazione con il backend<sup>G</sup>, permettendo di ottenere la lista delle organizzazioni di un amministratore.  **ResetPasswordComponent** offre la possibilità di recuperare la password e di controllare se l'email per il recupero della password è nella forma valida.
+-   **resetPassword(in email:string)**: permette il reset della password;
+
+-   **configureTokenAndGetAdminOrganizations()**: permette di ottenere e inizializzare i permessi e le organizzazioni posseduti da un amministratore.
+
+Ha perciò due associazioni, una con **AdministratorPermissionDataService** che permette di ottenere i permessi di un amministratore attraverso il metodo **requireAdministratorPermissions(adminId:string)** e successivamente se li memorizza nell'attributo **adminPermissions**, offrendoli a chi ne fa richiesta. 
+
+A sua volta ha una associazione con **AdministratorService**, il quale permette la comunicazione con il backend<sup>G</sup>, permettendo di ottenere i permessi di un amministratore attraverso il metodo **getPermissionList(administratorId:string)** inserendo l'id dell'amministratore. 
+
+L' altra associazione che ha **AuthenticationService** è **AdministratorOrganizationDataService** che permette di ottenere la lista delle organizzazioni a cui l'amministratore è registrato attraverso il metodo **requireAdministratorOrganizations(adminId:string)** e successivamente se li memorizza nell'attributo **adminOrganization**, offrendoli a chi ne fa richiesta. Inoltre esiste il metodo **sortOrganizationsById()** che ordina la lista delle organizzazioni per id.
+
+ A sua volta ha una associazione con **OrganizationService**, il quale permette la comunicazione con il backend<sup>G</sup>, permettendo di ottenere la lista delle organizzazioni di un amministratore attraverso il metodo **getAdminOrganizations(AdminId:number)** inserendo l'id dell'amministratore.
 
 ## Menubar
 ![!alt text](../Immagini/WebApp/menubar.PNG "diagramma delle classi")
