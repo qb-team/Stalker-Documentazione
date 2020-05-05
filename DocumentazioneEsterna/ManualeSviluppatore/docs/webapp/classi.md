@@ -12,7 +12,7 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi alla app
 
 -   **Organization management**.
 
-!!! info 
+!!! info
     Per redente ogni componente riutilizzabile, mantenibile e facile da testare, si è cercato di progettare componenti che abbiano al loro interno poche responsabilità e che siano il più coese possibili, tenendo pero sotto controllo il numero di dipendenze.
 
 ## Administrator management
@@ -44,13 +44,13 @@ Viene inoltre offerta anche la funzionalità di annullamento delle modifiche, in
 
 **AdministratorService** fornisce metodi per la comunicazione con il backend<sup>G</sup>:
 
--   `updateAdminPermission(permission:Permission)`: permette la modifica dei permessi a un amministratore;
+-   `updateAdminPermission(permission: Permission)`: permette la modifica dei permessi a un amministratore;
 
--   `createNewAdministratorInOrganization(permission:Permission)`: registra un nuovo amministratore nell'organizzazione nel caso in cui non sia attualmente registrato nel sistema Stalker;
+-   `createNewAdministratorInOrganization(permission: Permission)`: registra un nuovo amministratore nell'organizzazione nel caso in cui non sia attualmente registrato nel sistema Stalker;
 
--   `bindAdministratorToOrganization(permission:Permission)`: registra un nuovo amministratore nell'organizzazione nel caso in cui sia presente nel sistema Stalker;
+-   `bindAdministratorToOrganization(permission: Permission)`: registra un nuovo amministratore nell'organizzazione nel caso in cui sia presente nel sistema Stalker;
 
--   `unbindAdministratorFromOrganization(permission:Permission)`: eliminazione di un amministratore dall'organizzazione.
+-   `unbindAdministratorFromOrganization(permission: Permission)`: eliminazione di un amministratore dall'organizzazione.
 
 Si ricorda inoltre che per usufruire di questa funzionalità occorre essere un amministratore di tipo **owner**.
 
@@ -87,8 +87,18 @@ Analogamente **PlacePresenceNumberContentComponent** ha un'associazione con **Pl
 ![!alt text](../Immagini/WebApp/authenticatedAccessesUserLDAP.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Recognized tracking </em> </figcaption>
 
+Il diagramma mostra le classi progettate per permettere di ricercare gli accessi di uno specifico utente autenticato all'interno dell'organizzazione o di un posto.
+
+**SingleUserAuthenticatedAccessesContentComponent** ha l'obiettivo di far comunicare la vista con **LdapService** e **AccessDataService**.
+
+Il component ha i seguenti campi dati:
+
+-   **userOrganizationAccesses**: memorizza una collezione degli accessi dell'utente autenticato presso l'organizzazione;
+-   **userPlaceAccesses**: memorizza una collezione degli accessi dell'utente nei vari luoghi dell'organizzazione;
+-   **user**: istanza di tipo **LdapUser** che nome e cognome al rispettivo uID dell'utente;
+
 ## Authentication
-![!alt text](../Immagini/WebApp/authentication.PNG "diagramma delle classi")
+![!alt text](/Immagini/WebApp/authentication.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Authentication </em> </figcaption>
 
 Nel precedente diagramma viene illustrato come è stata progettata la funzionalità di autenticazione nella applicazione web<sup>G</sup>.
@@ -159,7 +169,7 @@ Esiste quindi un'associazione con **AuthenticationService** per gestire il logou
 
 Vi è inoltre un'associazione con **AdministratorOrganizationDataService**, che offre la lista delle organizzazioni da cui selezionare quella che verrà memorizzata in **AdministratorOrganizationDataService** per ritornarla a chi la richiedesse.
 
-Esiste infine esiste un'associazione con **LDAPService** per permettere l'autenticazione LDAP<sup>G</sup>.
+Esiste infine esiste un'associazione con **LDAPService** per permettere l'autenticazione LDAP<sup>G</sup> attraverso il metodo **bind**, il quale comunicherà direttamente col server LDAP aziendale.
 
 ## Organization management
 
@@ -169,13 +179,13 @@ Esiste infine esiste un'associazione con **LDAPService** per permettere l'autent
 Nel precedente diagramma viene illustrato come è stata progettata la funzionalità di gestione delle organizzazioni.
 **OSMMapContentComponent** permette di gestire una mappa geografica attraverso gli attributi, `map` indica l'oggetto mappa, `zoom` indica l'evento di zoom in o zoom out fatto dall'utente e infine `intialOptions` per indicare le impostazioni iniziali della mappa. Offre inoltre `createMap()` per creare la mappa. Questa mappa viene riutilizzata per la visualizzazione delle coordinate sia dei luoghi e sia delle organizzazioni.
 
-**ViewOrganizationTrackingAreaContentComponent** permette la visualizzazione delle coordinate dell'organizzazione attraverso la mappa costruita da **OSMMapContentComponent**. 
+**ViewOrganizationTrackingAreaContentComponent** permette la visualizzazione delle coordinate dell'organizzazione attraverso la mappa costruita da **OSMMapContentComponent**.
 
 Ha i seguenti attributi:
 
 -    `currentOrganization`: indica l'organizzazione su cui si sta lavorando;
 
--    `perimeterCoordinates`: contiene le coordinate dell'organizzazione. 
+-    `perimeterCoordinates`: contiene le coordinate dell'organizzazione.
 
 Offre il metodo `subscribeToOrganization()` per ottenere le coordinate dell'organizzazione.
 
@@ -191,7 +201,7 @@ Analogo funzionamento per **ViewPlaceTrackingAreaContentComponent** che è dedic
 
 -   `updatePlace(placeId:number, place:Place)`: permette di modificare uno specifico luogo inserendo il suo id e un nuovo oggetto place con le modifiche.
 
-**ModifyPlaceTrackingAreaContentComponent** permette di modificare i parametri di un luogo specifico. Ha gli stessi attributi di **ViewPlaceTrackingAreaContentComponent**. 
+**ModifyPlaceTrackingAreaContentComponent** permette di modificare i parametri di un luogo specifico. Ha gli stessi attributi di **ViewPlaceTrackingAreaContentComponent**.
 
 Offre i seguenti metodi:
 
@@ -248,6 +258,3 @@ Ha i seguenti metodi:
 -   `modifyOrg(nome:string, ind:string, indIP:string)`: permette di modificare il nome, la via e l'indirizzo IP dell'organizzazione;
 
 -   `deleteOrg(nome:string, reason:string)`: permette di inviare la richiesta di eliminazione dell'organizzazione inserendo il nome dell'organizzazione e la motivazione per cui si è richiesto l'eliminazione.
-
-
-
