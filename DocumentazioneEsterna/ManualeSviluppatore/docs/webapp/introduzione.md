@@ -1,7 +1,7 @@
-Questa parte del prodotto è orientata all'uso da parte degli amministratori di organizzazioni ed è denominata *Web app*.
+Questa parte del prodotto è orientata all'uso da parte degli amministratori di organizzazioni ed è denominata *web-app*.
 
-## **Scopo del prodotto**
-La suddetta applicazione web<sup>G</sup> offre all'utente, l'amministratore dell'organizzazione, accesso alle seguenti funzionalità:
+## **Scopo della web-app**
+La suddetta applicazione web offre all'utente, l'amministratore dell'organizzazione, accesso alle seguenti funzionalità:
 
 -   **Modifica ai parametri dell’<span>organizzazione</span>**:
     L’amministratore può ridefinire il nome, la descrizione, l’immagine
