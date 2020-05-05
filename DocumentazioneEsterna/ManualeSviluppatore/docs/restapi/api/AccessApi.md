@@ -9,12 +9,9 @@ HTTP request | Description
 
 
 <a name="getAnonymousAccessListInOrganization"></a>
-# **getAnonymousAccessListInOrganization**
-> List getAnonymousAccessListInOrganization(exitTokens, organizationId)
+## **GET** /access/organization/{organizationId}/anonymous/{exitTokens}
 
-Returns all the anonymous accesses in an organization registered of the user owning the exitTokens (exitTokens are separated by commas).
-
-    Returns all the anonymous accesses in an organization registered of the user owning the exitTokens (exitTokens are separated by commas) that are fully registered. Fully registered means that there are both the entrance and the exit timestamp. Only app users can access this end-point.
+Returns all the anonymous accesses in an organization registered of the user owning the exitTokens (exitTokens are separated by commas) that are fully registered. Fully registered means that there are both the entrance and the exit timestamp. Only app users can access this end-point.
 
 ### Parameters
 
@@ -37,12 +34,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="getAnonymousAccessListInPlace"></a>
-# **getAnonymousAccessListInPlace**
-> List getAnonymousAccessListInPlace(exitTokens, placeId)
+## **GET** /access/place/{placeId}/anonymous/{exitTokens}
 
-Returns all the anonymous accesses in a place registered of the user owning the exitTokens (exitTokens are separated by commas).
-
-    Returns all the anonymous accesses in a place registered of the user owning the exitTokens (exitTokens are separated by commas) that are fully registered. Fully registered means that there are both the entrance and the exit timestamp. Only app users can access this end-point.
+Returns all the anonymous accesses in a place registered of the user owning the exitTokens (exitTokens are separated by commas) that are fully registered. Fully registered means that there are both the entrance and the exit timestamp. Only app users can access this end-point.
 
 ### Parameters
 
@@ -65,12 +59,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="getAuthenticatedAccessListInOrganization"></a>
-# **getAuthenticatedAccessListInOrganization**
-> List getAuthenticatedAccessListInOrganization(orgAuthServerIds, organizationId)
+## **GET** /access/organization/{organizationId}/authenticated/{orgAuthServerIds}
 
-Returns all the authenticated accesses in an organization registered of one or more users (orgAuthServerIds are separated by commas).
-
-    Returns all the authenticated accesses in an organization registered of one or more users (orgAuthServerIds are separated by commas) that are fully registered. Fully registered means that there are both the entrance and the exit timestamp. Both app users and web-app administrators can access this end-point.
+Returns all the authenticated accesses in an organization registered of one or more users (orgAuthServerIds are separated by commas) that are fully registered. Fully registered means that there are both the entrance and the exit timestamp. Both app users and web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -93,12 +84,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="getAuthenticatedAccessListInPlace"></a>
-# **getAuthenticatedAccessListInPlace**
-> List getAuthenticatedAccessListInPlace(orgAuthServerIds, placeId)
+## **GET** /access/place/{placeId}/authenticated/{orgAuthServerIds}
 
-Returns all the authenticated accesses in a place registered of one or more users (orgAuthServerIds are separated by commas).
-
-    Returns all the authenticated accesses in a place registered of one or more users (orgAuthServerIds are separated by commas) that are fully registered. Fully registered means that there are both the entrance and the exit timestamp. Both app users and web-app administrators can access this end-point.
+Returns all the authenticated accesses in a place registered of one or more users (orgAuthServerIds are separated by commas) that are fully registered. Fully registered means that there are both the entrance and the exit timestamp. Both app users and web-app administrators can access this end-point.
 
 ### Parameters
 
