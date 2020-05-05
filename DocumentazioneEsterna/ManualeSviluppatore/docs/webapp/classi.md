@@ -5,8 +5,8 @@ Per redente ogni componente riutilizzabile, mantenibile e facile da testare, si 
 ![!alt text](../Immagini/WebApp/administratorManagement.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Administrator </em> </figcaption>
 
-Nel precedente diagramma viene illustrato come sono state progettate le funzionalità per la gestione degli amministratori. 
-Il component **AdministratorManagementContentComponent**  contiene come attributi **permissionModifications** che contiene le modifiche ai permessi da applicare, **permissions** invece contiene i permessi attuali dei amministratori nella organizzazione selezionata contenuta nel attributo **currentOrganization**. 
+Nel precedente diagramma viene illustrato come sono state progettate le funzionalità per la gestione degli amministratori.
+Il component **AdministratorManagementContentComponent**  contiene come attributi **permissionModifications** che contiene le modifiche ai permessi da applicare, **permissions** invece contiene i permessi attuali dei amministratori nella organizzazione selezionata contenuta nel attributo **currentOrganization**.
 La classe offre i seguenti metodi:
 
 -   **modifyPermissionsOf(adminId: number, newPriviledgeLevel: number)**: modifica dei permessi di uno specifico amministratore inserendo come parametri l'id e la modifica del privilegio;
@@ -21,11 +21,11 @@ La classe offre i seguenti metodi:
 
 -   **unbindAdminFromTheOrganization()**: eliminazione di un amministratore dall'organizzazione. Viene letto dalla *view* l'amministratore selezionato e successivamente eliminato.
 
-Viene inoltre offerta anche la funzionalità di annullamento delle modifiche, infatti le modifiche fatte vengo salvate temporaneamente e solo dopo l'avvenuta conferma da parte dell'amministratore, si procede all'applicazione delle modifiche. 
+Viene inoltre offerta anche la funzionalità di annullamento delle modifiche, infatti le modifiche fatte vengo salvate temporaneamente e solo dopo l'avvenuta conferma da parte dell'amministratore, si procede all'applicazione delle modifiche.
 
-**AdministratorManagementContentComponent** ha due dipendenze di tipo **associazione** verso **AdministratorService** e **AdministratorOrganizationDataService**. 
+**AdministratorManagementContentComponent** ha due dipendenze di tipo **associazione** verso **AdministratorService** e **AdministratorOrganizationDataService**.
 
-**AdministratorOrganizationDataService** fornisce l'elenco delle organizzazioni in cui l'amministratore è registrato attraverso l'attributo **adminOrganizations** e l'organizzazione su cui si sta lavorando attraverso **selectedOrganization**. 
+**AdministratorOrganizationDataService** fornisce l'elenco delle organizzazioni in cui l'amministratore è registrato attraverso l'attributo **adminOrganizations** e l'organizzazione su cui si sta lavorando attraverso **selectedOrganization**.
 
 **AdministratorService** fornisce metodi per la comunicazione con il backend<sup>G</sup>:
 
@@ -45,7 +45,7 @@ Si ricorda inoltre che per usufruire di questa funzionalità occorre essere un a
 <figcaption align=center> <em> Diagramma delle classi - Anonymous tracking </em> </figcaption>
 
 Nel precedente diagramma viene illustrato come sono state progettate le funzionalità per il monitoraggio dei utenti anonimi sia nelle organizzazioni sia nei luoghi<sup>G</sup> dell'organizzazione.
-Il component **OrganizationPresenceNumberContentComponent** permette di mostrare il numero di utenti anonimi presenti nell'organizzazione attraverso l'attributo **usersNumber**. 
+Il component **OrganizationPresenceNumberContentComponent** permette di mostrare il numero di utenti anonimi presenti nell'organizzazione attraverso l'attributo **usersNumber**.
 Esistono i seguenti metodi:
 
  -  **setCounterRefreshInterval(ms:number)**:imposta l'intervallo di tempo per aggiornare automaticamente il contatore asseconda del parametro in input;
@@ -54,7 +54,7 @@ Esistono i seguenti metodi:
 
 Analogamente **PlacePresenceNumberContentComponent** offre le stesse funzionalità ma per i luoghi<sup>G</sup> dell'organizzazione.
 
-Essi hanno una dipendenza di tipo **associazione** verso **AdministratorOrganizationDataService** che fornisce l'organizzazione su cui si vuole fare monitoraggio. 
+Essi hanno una dipendenza di tipo **associazione** verso **AdministratorOrganizationDataService** che fornisce l'organizzazione su cui si vuole fare monitoraggio.
 
 **OrganizationPresenceNumberContentComponent** ha un'associazione con **OrganizationTrackingDataService** la quale permette di ottenere il numero degli utenti anonimi presenti nell'organizzazione attraverso il metodo **subscribeOrganizationPresenceCounter( orgId:number)**. Per far ciò ha bisogno di utilizzare i metodi offerti da **PresenceService**, i quali permettono di comunicare con il backend<sup>G</sup>.
 
@@ -68,7 +68,7 @@ Analogamente **PlacePresenceNumberContentComponent** ha un'associazione con **Pl
 
 **OrganizationTrackingDataService** e **PlaceTrackingDataService** sono delle specializzazioni della  classe astratta **TrakingDataService**.
 
-## Recognized tracking 
+## Recognized tracking
 ![!alt text](../Immagini/WebApp/authenticatedAccessesUserLDAP.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Recognized tracking </em> </figcaption>
 
@@ -76,11 +76,11 @@ Analogamente **PlacePresenceNumberContentComponent** ha un'associazione con **Pl
 ![!alt text](../Immagini/WebApp/authentication.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Authentication </em> </figcaption>
 
-Nel precedente diagramma viene illustrato come è stata progettata la funzionalità di autenticazione nella applicazione web<sup>G</sup>. 
+Nel precedente diagramma viene illustrato come è stata progettata la funzionalità di autenticazione nella applicazione web<sup>G</sup>.
 
 **LoginComponent** contiene gli attributi: **submitted** per indicare se è stato cliccato il bottone *invio*, **email** che contiene l'email inserita e **password** che contiene la password inserita. La classe espone i seguenti metodi:
 
--   **setupLoginForm()**: offre la possibilità di inserire email e password per l'autenticazione e di controllare se sono in una forma valida. 
+-   **setupLoginForm()**: offre la possibilità di inserire email e password per l'autenticazione e di controllare se sono in una forma valida.
 
 -   **onSubmit()**: modificare submitted col valore *true*;
 
@@ -91,20 +91,20 @@ Nel precedente diagramma viene illustrato come è stata progettata la funzionali
 **ResetPasswordComponent** ha gli stessi attributi del controller precedentemente descritto. Si segnala il metodo **resetPassword()** per richiamare i metodi per il reset della password.
 
 **LoginComponent** e **ResetPasswordComponent** hanno un'associazione con **AuthenticationService**, nel quale si segnalano gli attributi **userData**, che rappresenta l'entità dell'utente autenticato. Il component espone i seguenti metodi:
- 
+
 -   **signIn(email: string, in password: string)**: permette l'autenticazione attraverso i servizi di FireBase;
 
--   **signOut()**: permette il logout<sup>G</sup>; 
+-   **signOut()**: permette il logout<sup>G</sup>;
 
 -   **resetPassword(email: string)**: permette il reset della password;
 
 -   **configureTokenAndGetAdminOrganizations()**: permette di ottenere e inizializzare i permessi e le organizzazioni posseduti da un amministratore.
 
-La classe ha due associazioni: 
+La classe ha due associazioni:
 
 - con **AdministratorPermissionDataService** che permette di ottenere i permessi di un amministratore attraverso il metodo **requireAdministratorPermissions(adminId:string)**, che verranno successivamente memorizzati nell'attributo **adminPermissions**, offrendoli a chi ne fa richiesta.
 
-    - **AdministratorPermissionDataService** ha a sua volta un'associazione con **AdministratorService**, il quale comunicando con il backend<sup>G</sup>, permette di ottenere i permessi di un amministratore attraverso il metodo **getPermissionList(administratorId:string)**, passando l'id dell'amministratore come parametro. 
+    - **AdministratorPermissionDataService** ha a sua volta un'associazione con **AdministratorService**, il quale comunicando con il backend<sup>G</sup>, permette di ottenere i permessi di un amministratore attraverso il metodo **getPermissionList(administratorId:string)**, passando l'id dell'amministratore come parametro.
 
 - L' altra associazione che ha **AuthenticationService** è **AdministratorOrganizationDataService**, che permette di ottenere la lista delle organizzazioni a cui l'amministratore è registrato attraverso il metodo **requireAdministratorOrganizations(adminId: string)**. Successivamente memorizza le organizzazioni ottenute nell'attributo **adminOrganization**, offrendole a chi ne fa richiesta. Inoltre esiste il metodo **sortOrganizationsById()** che ordina la lista delle organizzazioni per id crescente.
 
@@ -114,7 +114,7 @@ La classe ha due associazioni:
 ![!alt text](../Immagini/WebApp/menubar.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Menubar </em> </figcaption>
 
-Nel precedente diagramma viene mostrato come è stato progettato il component **Manubar**. **Menubar** è un component che permette di gestire gli eventi generati della componente grafica omonima *menubar*. 
+Nel precedente diagramma viene mostrato come è stato progettato il component **Manubar**. **Menubar** è un component che permette di gestire gli eventi generati della componente grafica omonima *menubar*.
 Contiene i seguenti attributi:
 
 - **organization**: contiene l'organizzazione selezionata dall'utente;
