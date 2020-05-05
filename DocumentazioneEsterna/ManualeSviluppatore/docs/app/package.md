@@ -1,4 +1,4 @@
-Vengono presentati qui di seguito i diagrammi UML dei package relativi alla applicazione android.
+Vengono presentati qui di seguito i diagrammi UML dei package relativi alla applicazione Android.
 ## Visione generale delle dipendenze tra package ##
 Nel seguente diagramma UML dei package vengono mostrate tutte le dipendenze che esistono tra i vari package
   ![!Dipendenze](/Immagini/App/AppPackageDiagramm.PNG "Diagramma dei package - Visione delle dipendenze")
