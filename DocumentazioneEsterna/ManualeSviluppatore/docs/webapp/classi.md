@@ -150,3 +150,89 @@ Esiste infine esiste un'associazione con **LDAPService** per permettere l'autent
 
 ![!alt text](../Immagini/WebApp/OrgManagement.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Organization management </em> </figcaption>
+
+Nel precedente diagramma viene illustrato come è stata progettata la funzionalità di gestione delle organizzazioni.
+**OSMMapContentComponent** permette di gestire una mappa geografica attraverso gli attributi, **map** indica l'oggetto mappa, **zoom** indica l'evento di zoom in o zoom out fatto dall'utente e infine **intialOptions** per indicare le impostazioni iniziali della mappa. Offre inoltre **createMap()** per creare la mappa. Questa mappa viene riutilizzata per la visualizzazione delle coordinate sia dei luoghi e sia delle organizzazioni.
+
+**ViewOrganizationTrackingAreaContentComponent** permette la visualizzazione delle coordinate dell'organizzazione attraverso la mappa costruita da **OSMMapContentComponent**. 
+
+Ha i seguenti attributi:
+
+-    **currentOrganization**: indica l'organizzazione su cui si sta lavorando;
+
+-    **perimeterCoordinates**: contiene le coordinate dell'organizzazione. 
+
+Offre il metodo **subscribeToOrganization()** per ottenere le coordinate dell'organizzazione.
+
+Analogo funzionamento per **ViewPlaceTrackingAreaContentComponent** che è dedicato per la visualizzazione delle coordinate dei luoghi<sup>G</sup>di un'organizzazione. Ha in più l'attributo **actualPlace** che indica il luogo su cui si sta lavorando. Ha una associazione con **PlaceService** utilizzata di comunicare con il backend<sup>G</sup> per ottenere le coordinate del luogo attuale.
+
+**PlaceService** ha i seguenti metodi:
+
+-   **createNewPlace(place:Place)**: permette di creare un nuovo luogo;
+
+-   **deletePlace(placeId:number)**: permette di cancellare un luogo, indicando il suo id;
+
+-   **getPlaceListOfOrganization(orgId:number)**: permette di ottenere la lista di luoghi di una specifica organizzazione;
+
+-   **updatePlace(placeId:number, place:Place)**: permette di modificare uno specifico luogo inserendo il suo id e un nuovo oggetto place con le modifiche.
+
+**ModifyPlaceTrackingAreaContentComponent** permette di modificare i parametri di un luogo specifico. Ha gli stessi attributi di **ViewPlaceTrackingAreaContentComponent**. 
+
+Offre i seguenti metodi:
+
+-   **checkForm()**: controlla se le coordinate inserite per la modifica siano corrette;
+
+-   **subscribeToOrganization()**: permette di ottenere l'organizzazione attuale;
+
+-   **createPlace(name:string, nameOrg:string, area:string)**: permette di creare un nuovo luogo dell'organizzazione inserendo come parametri il nome del luogo, il nome dell'organizzazione di cui fa parte e infine le coordinate;
+
+-   **modifyPlace(name:string, coord:string)**: permette di modificare le coordinate di un luogo inserendo il suo nome e le modifiche alle coordinate;
+
+-   **deletePlace(name:string)**: permette di eliminare un luogo da un'organizzazione inserendo come parametro il nome del luogo.
+
+**ModifyPlaceTrackingAreaContentComponent** ha una associazione con **PlaceService**.
+
+**ModifyOrganizationTrackingAreaContentComponent** permette di modificare le coordinate di una organizzazione, ha gli stessi attributi di **ViewOrganizationTrackingAreaContentComponent**.
+
+Ha i seguenti metodi:
+
+-   **checkForm()**: controlla se le coordinate inserite per la modifica siano corrette;
+
+-   **subscribeToOrganization()**: permette di ottenere l'organizzazione attuale;
+
+-   **modifyTAOrg(coord:string)**: permette di modificare le coordinate di una organizzazione inserendo come parametro le nuove coordinate.
+
+Ha una associazione con **OrganizationService**
+
+**OrganizationService** permette di comunicare con il backend <sup>G</sup> per gestire le organizzazioni.
+Ha i seguenti metodi:
+
+-   **requestDeletionOfOrganization(orgId:number, requestReason:string)**: permette di mandare la richiesta di eliminazione di una organizzazione inserendo il suo id e la motivazione per cui si è richiesto l'eliminazione;
+
+-   **updateOrganization(orgId:number, updatedOrg:Organization)**: permette di inviare le modifiche fatte a una organizzazione inserendo come parametri il suo id e un nuovo oggetto organization con le modifiche;
+
+-   **updateOrganizationTrackingArea(orgId:number, trackingArea:string)**: permette di modificare le coordinate di una organizzazione inserendo come parametri l'id dell'organizzazione e le nuove coordinate.
+
+**OrganizationManagementContentComponent** permette di gestire le modifiche a una organizzazione.
+Ha i seguenti attributi:
+
+-   **currentOrganization**: contiene l'organizzazione su cui si sta lavorando;
+
+-   **modifiedIPAddress**: contiene il nuovo indirizzo IP<sup>G</sup> dell'organizzazione modificato dall'utente;
+
+-   **modifiedAddress**: contiene il nuovo indirizzo dell'organizzazione modificato dall'utente;
+
+-   **modifiedName**: contiene il nuovo nome dell'organizzazione modificato dall'utente.
+
+Ha i seguenti metodi:
+
+-   **checkForm()**: controlla se i dati inserite per la modifica siano nella forma corretta;
+
+-   **subscribeToOrganization()**: permette di ottenere l'organizzazione attuale;
+
+-   **modifyOrg(nome:string, ind:string, indIP:string)**: permette di modificare il nome, la via e l'indirizzo IP dell'organizzazione;
+
+-   **deleteOrg(nome:string, reason:string)**: permette di inviare la richiesta di eliminazione dell'organizzazione inserendo il nome dell'organizzazione e la motivazione per cui si è richiesto l'eliminazione.
+
+
+
