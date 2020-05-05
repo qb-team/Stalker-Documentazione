@@ -7,12 +7,9 @@ HTTP request | Description
 
 
 <a name="trackMovementInOrganization"></a>
-# **trackMovementInOrganization**
-> OrganizationMovement trackMovementInOrganization(organizationMovement)
+## **POST** /movement/track/organization
 
 Tracks the user movement inside the trackingArea of an organization.
-
-    Tracks the user movement inside the trackingArea of an organization.
 
 ### Parameters
 
@@ -34,12 +31,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="trackMovementInPlace"></a>
-# **trackMovementInPlace**
-> PlaceMovement trackMovementInPlace(placeMovement)
+## **POST** /movement/track/place
 
 Tracks the user movement inside the trackingArea of a place of an organization.
-
-    Tracks the user movement inside the trackingArea of a place of an organization.
 
 ### Parameters
 

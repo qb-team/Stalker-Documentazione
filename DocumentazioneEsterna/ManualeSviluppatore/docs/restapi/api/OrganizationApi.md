@@ -10,12 +10,9 @@ HTTP request | Description
 
 
 <a name="getOrganization"></a>
-# **getOrganization**
-> Organization getOrganization(organizationId)
+## **GET** /organization/{organizationId}
 
-Gets the available data for a single organization.
-
-    Gets the data available for a single organization.  Both app users and web-app administrators can access this end-point but,  app users can request information for all the organizations while web-app  administrators can only for the organizations they have access to.
+Gets the data available for a single organization.  Both app users and web-app administrators can access this end-point but,  app users can request information for all the organizations while web-app  administrators can only for the organizations they have access to.
 
 ### Parameters
 
@@ -37,12 +34,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="getOrganizationList"></a>
-# **getOrganizationList**
-> List getOrganizationList()
+## **GET** /organization
 
-Returns the list of all organizations.
-
-    Returns the list of all organizations available in the system. The list can be empty. Only app users can access this end-point.
+Returns the list of all organizations available in the system. The list can be empty. Only app users can access this end-point.
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -61,12 +55,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 <a name="requestDeletionOfOrganization"></a>
-# **requestDeletionOfOrganization**
-> requestDeletionOfOrganization(organizationId, requestReason)
+## **POST** /organization/{organizationId}/requestdeletion
 
-Sends a deletion request to the system. The request will be examined by Stalker administrators.
-
-    Sends a deletion request to the system.  The request will be examined by Stalker administrators. Only web-app administrators can access this end-point.
+Sends a deletion request to the system.  The request will be examined by Stalker administrators. Only web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -89,12 +80,9 @@ null (empty response body)
 - **Accept**: Not defined
 
 <a name="updateOrganization"></a>
-# **updateOrganization**
-> Organization updateOrganization(organizationId, organization)
+## **PUT** /organization/{organizationId}
 
-Updates one or more properties of an organization.
-
-    Updates one or more properties of an organization.  Only web-app administrators (if they have the correct access rights) can access this end-point.
+Updates one or more properties of an organization.  Only web-app administrators (if they have the correct access rights) can access this end-point.
 
 ### Parameters
 
@@ -117,12 +105,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="updateOrganizationTrackingArea"></a>
-# **updateOrganizationTrackingArea**
-> Organization updateOrganizationTrackingArea(organizationId, trackingArea)
+## **PATCH** /organization/{organizationId}/trackingArea
 
-Updates the coordinates of the tracking area of an organization.
-
-    Updates the coordinates of the tracking area of an organization. Only web-app administrators can access this end-point.
+Updates the coordinates of the tracking area of an organization. Only web-app administrators can access this end-point.
 
 ### Parameters
 

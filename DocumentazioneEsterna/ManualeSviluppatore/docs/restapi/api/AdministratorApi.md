@@ -11,12 +11,9 @@ HTTP request | Description
 
 
 <a name="bindAdministratorToOrganization"></a>
-# **bindAdministratorToOrganization**
-> Permission bindAdministratorToOrganization(administratorBindingRequest)
+## **POST** /administrator/bindadministrator
 
-Bind an already existent administrator to the organization.
-
-    Bind an already existent administrator to the organization. Only web-app administrators can access this end-point.
+Bind an already existent administrator to the organization. Only web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -38,12 +35,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="createNewAdministratorInOrganization"></a>
-# **createNewAdministratorInOrganization**
-> Permission createNewAdministratorInOrganization(administratorBindingRequest)
+## **POST** /administrator/createadministrator
 
-Creates and binds a new administrator to the organization.
-
-    Creates and binds a new administrator to the current organization.  Only web-app administrators can access this end-point.
+Creates and binds a new administrator to the current organization.  Only web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -65,12 +59,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="getAdministratorListOfOrganization"></a>
-# **getAdministratorListOfOrganization**
-> List getAdministratorListOfOrganization(organizationId)
+## **GET** /administrator/organization/{organizationId}
 
-Returns the list of administrators of the organization.
-
-    Returns the list of administrators of the organization. Only web-app administrators can access this end-point.
+Returns the list of administrators of the organization. Only web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -92,12 +83,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="getPermissionList"></a>
-# **getPermissionList**
-> List getPermissionList(administratorId)
+## **GET** /administrator/permission/{administratorId}
 
-Gets the list of permission that an administrator has permissions to view/manage/own.
-
-    Gets the list of organizations that an administrator has permissions to view/manage/own. Only web-app administrators can access this end-point.
+Gets the list of organizations that an administrator has permissions to view/manage/own. Only web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -119,12 +107,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="unbindAdministratorFromOrganization"></a>
-# **unbindAdministratorFromOrganization**
-> unbindAdministratorFromOrganization(permission)
+## **POST** /administrator/unbindadministrator
 
-Unbind an administrator to the organization.
-
-    Unbind an administrator to the organization. Only web-app administrators can access this end-point.
+Unbind an administrator to the organization. Only web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -146,12 +131,9 @@ null (empty response body)
 - **Accept**: Not defined
 
 <a name="updateAdministratorPermission"></a>
-# **updateAdministratorPermission**
-> Permission updateAdministratorPermission(permission)
+## **PATCH** /administrator/updatepermission
 
-Update the permission for an already existent administrator in the organization.
-
-    Update the permission for an already existent administrator in the organization. Only web-app administrators can access this end-point.
+Update the permission for an already existent administrator in the organization. Only web-app administrators can access this end-point.
 
 ### Parameters
 

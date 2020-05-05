@@ -8,12 +8,9 @@ HTTP request | Description
 
 
 <a name="addFavoriteOrganization"></a>
-# **addFavoriteOrganization**
-> Favorite addFavoriteOrganization(favorite)
+## **POST** /favorite/addfavorite
 
-Adds a new organization to the user&#39;s favorite organization list.
-
-    Adds a new organization to the user&#39;s favorite organization list. If the organization has trackingMode: authenticated, then the user account of the organization must be linked to Stalker&#39;s account. Only app users can access this end-point.
+Adds a new organization to the user&#39;s favorite organization list. If the organization has trackingMode: authenticated, then the user account of the organization must be linked to Stalker&#39;s account. Only app users can access this end-point.
 
 ### Parameters
 
@@ -35,12 +32,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="getFavoriteOrganizationList"></a>
-# **getFavoriteOrganizationList**
-> List getFavoriteOrganizationList(userId)
+## **GET** /favorite/{userId}
 
-Gets the list of favorite organizations of a user.
-
-    Gets the list of favorite organizations of a user.  Only app users can access this end-point.
+Gets the list of favorite organizations of a user.  Only app users can access this end-point.
 
 ### Parameters
 
@@ -62,12 +56,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="removeFavoriteOrganization"></a>
-# **removeFavoriteOrganization**
-> removeFavoriteOrganization(favorite)
+## **POST** /favorite/removefavorite
 
-Removes the organization from the user&#39;s favorite organization list.
-
-    Removes the organization from the user&#39;s favorite organization list. Only app users can access this end-point.
+Removes the organization from the user&#39;s favorite organization list. Only app users can access this end-point.
 
 ### Parameters
 

@@ -9,12 +9,9 @@ HTTP request | Description
 
 
 <a name="getOrganizationPresenceCounter"></a>
-# **getOrganizationPresenceCounter**
-> OrganizationPresenceCounter getOrganizationPresenceCounter(organizationId)
+## **GET** /presence/organization/{organizationId}/counter
 
-Gets the number of people currently inside the organization&#39;s trackingArea.
-
-    Gets the number of people currently inside the organization&#39;s trackingArea. Only web-app administrators can access this end-point.
+Gets the number of people currently inside the organization&#39;s trackingArea. Only web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -36,12 +33,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="getOrganizationPresenceList"></a>
-# **getOrganizationPresenceList**
-> List getOrganizationPresenceList(organizationId)
+## **GET** /presence/organization/{organizationId}
 
-Gets the list of people currently inside the organization&#39;s trackingArea.
-
-    Gets the list of people currently inside the organization&#39;s trackingArea. The organization is required to track people with trackingMode: authenticated. Only web-app administrators can access this end-point.
+Gets the list of people currently inside the organization&#39;s trackingArea. The organization is required to track people with trackingMode: authenticated. Only web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -63,12 +57,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="getPlacePresenceCounter"></a>
-# **getPlacePresenceCounter**
-> PlacePresenceCounter getPlacePresenceCounter(placeId)
+## **GET** /presence/place/{placeId}/counter
 
-Gets the number of people currently inside the place&#39;s trackingArea.
-
-    Gets the number of people currently inside the place&#39;s trackingArea. Only web-app administrators can access this end-point.
+Gets the number of people currently inside the place&#39;s trackingArea. Only web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -90,12 +81,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="getPlacePresenceList"></a>
-# **getPlacePresenceList**
-> List getPlacePresenceList(placeId)
+## **GET** /presence/place/{placeId}
 
-Gets the list of people currently inside the place&#39;s trackingArea.
-
-    Gets the list of people currently inside the place&#39;s trackingArea. The place is required to track people with trackingMode: authenticated. Only web-app administrators can access this end-point.
+Gets the list of people currently inside the place&#39;s trackingArea. The place is required to track people with trackingMode: authenticated. Only web-app administrators can access this end-point.
 
 ### Parameters
 
