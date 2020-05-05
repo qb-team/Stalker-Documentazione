@@ -1,6 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+0.12.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione. 
 0.11.2 | 2020-05-05 | Davide Lazzaro | Programmatore | | Aggiunta contenuto sezione package nel Backend.
 0.11.1 | 2020-05-05 | Tommaso Azzalin | Progettista | | Correzione documentazione API.
 0.11.0 | 2020-05-05 | Emanuele Cisotto | Progettista | | Correzione stile diagrammi classi e sequenza web-app.
