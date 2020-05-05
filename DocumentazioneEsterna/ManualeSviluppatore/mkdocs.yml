@@ -7,6 +7,7 @@ theme:
 
 markdown_extensions:
   - lightgallery
+  - admonition
 
 nav:
   - Home: "index.md"
@@ -24,7 +25,7 @@ nav:
       - Requisiti: "webapp/requisiti.md"
       - Installazione: "webapp/installazione.md"
       - Architettura: "webapp/architettura.md"
-      - Diagramm dei Package: "webapp/package.md"
+      - Package: "webapp/package.md"
       - Diagrammi delle classi: "webapp/classi.md"
       - Diagrammi di sequenza: "webapp/sequenza.md"
   - Backend:
