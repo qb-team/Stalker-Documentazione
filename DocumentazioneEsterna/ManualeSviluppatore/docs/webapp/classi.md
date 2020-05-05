@@ -1,5 +1,19 @@
-Vengono presentati qui di seguito i diagrammi UML delle classi relativi alla applicazione web<sup>G</sup>.
-Per redente ogni componente riutilizzabile, mantenibile e facile da testare, si è cercato di progettare componenti che abbiano al loro interno poche responsabilità e che siano il più coese possibili, tenendo pero sotto controllo il numero di dipendenze.
+Vengono presentati qui di seguito i diagrammi UML delle classi relativi alla applicazione web<sup>G</sup>:
+
+-   **Administrator management**;
+
+-   **Anonymous tracking**;
+
+-   **Recognized tracking**;
+
+-   **Authentication**;
+
+-   **Menubar**;
+
+-   **Organization management**.
+
+!!! info 
+    Per redente ogni componente riutilizzabile, mantenibile e facile da testare, si è cercato di progettare componenti che abbiano al loro interno poche responsabilità e che siano il più coese possibili, tenendo pero sotto controllo il numero di dipendenze.
 
 ## Administrator management
 ![!alt text](../Immagini/WebApp/administratorManagement.PNG "diagramma delle classi")
@@ -7,6 +21,7 @@ Per redente ogni componente riutilizzabile, mantenibile e facile da testare, si 
 
 Nel precedente diagramma viene illustrato come sono state progettate le funzionalità per la gestione degli amministratori.
 Il component **AdministratorManagementContentComponent**  contiene come attributi **permissionModifications** che contiene le modifiche ai permessi da applicare, **permissions** invece contiene i permessi attuali dei amministratori nella organizzazione selezionata contenuta nel attributo **currentOrganization**.
+
 La classe offre i seguenti metodi:
 
 -   **modifyPermissionsOf(adminId: number, newPriviledgeLevel: number)**: modifica dei permessi di uno specifico amministratore inserendo come parametri l'id e la modifica del privilegio;
