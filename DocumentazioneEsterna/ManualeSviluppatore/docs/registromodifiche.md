@@ -1,7 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
-
+0.11.1 | 2020-05-05| Davide Lazzaro | Programmatore | Emanuele Cisotto | Aggiunti diagrammi nella sezione classi.
 0.11.0 | 2020-05-05 | Christian Mattei | Progettista | | Aggiunto diagrammi sei package dell'applicazione. 
 0.10.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione. 
 0.9.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione. 
@@ -13,7 +13,7 @@ Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 0.5.0 | 2020-05-04 | Emanuele Cisotto | Progettista | | Stesura della introduzione e della architettura webapp.
 0.4.0 | 2020-05-04 | Christian Mattei | Progettista | | Stesura introduzione applicazione.
 0.3.0 | 2020-05-03 | Tommaso Azzalin | Progettista | | Aggiunti requisiti per il backend.
-0.2.1 | 2020-05-03 | Davide Lazzaro  | Programmatore | Emauele Cisotto | Aggiunti diagrammi delle classi e di sequenza.
+0.2.1 | 2020-05-03 | Davide Lazzaro  | Programmatore | Emauele Cisotto | Aggiunti diagrammi alle sezioni classi e sequenza.
 0.2.0 | 2020-05-03 | Tommaso Azzalin | Progettista | | Aggiunta diagrammi package per il backend.
 0.1.0 | 2020-05-03 | Tommaso Azzalin | Progettista | | Aggiunta estensione per visualizzazione di immagini a full-screen.
 0.0.1 | 2020-05-02 | Tommaso Azzalin | Progettista | | Creata struttura sito web manuale manutentore.
