@@ -73,7 +73,7 @@ Essi hanno una dipendenza di tipo `associazione` verso `AdministratorOrganizatio
 
 `OrganizationPresenceNumberContentComponent` ha un'associazione con `OrganizationTrackingDataService` la quale permette di ottenere il numero degli utenti anonimi presenti nell'organizzazione attraverso il metodo `subscribeOrganizationPresenceCounter( orgId:number)`. Per far ciò ha bisogno di utilizzare i metodi offerti da `PresenceService`, i quali permettono di comunicare con il backend<sup>G</sup>.
 
-**PresenceService** offre i seguenti metodi:
+`PresenceService` offre i seguenti metodi:
 
 -   `getOrganizationPresenceCounter(orgId:number)`: ritorna il numero di utenti anonimi presenti all'interno dell'organizzazione;
 
