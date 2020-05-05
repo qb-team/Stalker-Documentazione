@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="98fcebdb-e39c-4720-8e89-d495b1f85354" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/backend/classi.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/backend/classi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/backend/sequenza.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/backend/sequenza.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/Backend/Sequenza/tracciamento-sequenza.png" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/Backend/Sequenza/tracciamento-sequenza.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/registromodifiche.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/registromodifiche.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +36,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582628478627</updated>
-      <workItem from="1588605072735" duration="4750000" />
+      <workItem from="1588605072735" duration="6279000" />
+      <workItem from="1588619483820" duration="1189000" />
+      <workItem from="1588686213788" duration="419000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="976" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1588686239939">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="976" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1588686239939" />
   </component>
 </project>
