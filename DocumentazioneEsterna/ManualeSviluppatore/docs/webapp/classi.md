@@ -29,13 +29,13 @@ Viene inoltre offerta anche la funzionalità di annullamento delle modifiche, in
 
 **AdministratorService** fornisce metodi per la comunicazione con il backend<sup>G</sup>:
 
--   **updateAdminPermission(permission:Permission)**: permette la modifica dei permessi a un amministratore;
+-   **updateAdminPermission(permission: Permission)**: permette la modifica dei permessi a un amministratore;
 
--   **createNewAdministratorInOrganization(permission:Permission)**: registra un nuovo amministratore nell'organizzazione nel caso in cui non sia attualmente registrato nel sistema Stalker;
+-   **createNewAdministratorInOrganization(permission: Permission)**: registra un nuovo amministratore nell'organizzazione nel caso in cui non sia attualmente registrato nel sistema Stalker;
 
--   **bindAdministratorToOrganization(permission:Permission)**: registra un nuovo amministratore nell'organizzazione nel caso in cui sia presente nel sistema Stalker;
+-   **bindAdministratorToOrganization(permission: Permission)**: registra un nuovo amministratore nell'organizzazione nel caso in cui sia presente nel sistema Stalker;
 
--   **unbindAdministratorFromOrganization(permission:Permission)**: eliminazione di un amministratore dall'organizzazione.
+-   **unbindAdministratorFromOrganization(permission: Permission)**: eliminazione di un amministratore dall'organizzazione.
 
 Si ricorda inoltre che per usufruire di questa funzionalità occorre essere un amministratore di tipo **owner**.
 
@@ -72,8 +72,18 @@ Analogamente **PlacePresenceNumberContentComponent** ha un'associazione con **Pl
 ![!alt text](../Immagini/WebApp/authenticatedAccessesUserLDAP.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Recognized tracking </em> </figcaption>
 
+Il diagramma mostra le classi progettate per permettere di ricercare gli accessi di uno specifico utente autenticato all'interno dell'organizzazione o di un posto.
+
+**SingleUserAuthenticatedAccessesContentComponent** ha l'obiettivo di far comunicare la vista con **LdapService** e **AccessDataService**.
+
+Il component ha i seguenti campi dati:
+
+-   **userOrganizationAccesses**: memorizza una collezione degli accessi dell'utente autenticato presso l'organizzazione;
+-   **userPlaceAccesses**: memorizza una collezione degli accessi dell'utente nei vari luoghi dell'organizzazione;
+-   **user**: istanza di tipo **LdapUser** che nome e cognome al rispettivo uID dell'utente;
+
 ## Authentication
-![!alt text](../Immagini/WebApp/authentication.PNG "diagramma delle classi")
+![!alt text](/Immagini/WebApp/authentication.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Authentication </em> </figcaption>
 
 Nel precedente diagramma viene illustrato come è stata progettata la funzionalità di autenticazione nella applicazione web<sup>G</sup>.
@@ -144,7 +154,7 @@ Esiste quindi un'associazione con **AuthenticationService** per gestire il logou
 
 Vi è inoltre un'associazione con **AdministratorOrganizationDataService**, che offre la lista delle organizzazioni da cui selezionare quella che verrà memorizzata in **AdministratorOrganizationDataService** per ritornarla a chi la richiedesse.
 
-Esiste infine esiste un'associazione con **LDAPService** per permettere l'autenticazione LDAP<sup>G</sup>.
+Esiste infine esiste un'associazione con **LDAPService** per permettere l'autenticazione LDAP<sup>G</sup> attraverso il metodo **bind**, il quale comunicherà direttamente col server LDAP aziendale.
 
 ## Organization management
 
