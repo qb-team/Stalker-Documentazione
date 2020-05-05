@@ -1,10 +1,12 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
-0.11.1 | 2020-05-05| Davide Lazzaro | Programmatore | Emanuele Cisotto | Aggiunti diagrammi nella sezione classi.
-0.11.0 | 2020-05-05 | Christian Mattei | Progettista | | Aggiunto diagrammi sei package dell'applicazione. 
-0.10.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione. 
-0.9.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione. 
+
+0.13.0 | 2020-05-05 | Emanuele Cisotto | Progettista | | Correzione stile diagrammi classi e sequenza webapp.
+0.12.1 | 2020-05-05| Davide Lazzaro | Programmatore | Emanuele Cisotto | Aggiunti diagrammi nella sezione classi.
+0.11.0 | 2020-05-05 | Christian Mattei | Progettista | | Aggiunto diagrammi sei package dell'applicazione.
+0.10.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione.
+0.9.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione.
 0.8.0 | 2020-05-05 | Federico Perin   | Progettista | | Stesura e verifica dei diagrammi delle classi per la web-app.
 0.7.0 | 2020-05-05 | Federico Perin   | Progettista | | Stesura e verifica dei diagrammi package per la web-app.
 0.6.1 | 2020-05-05 | Emanuele Cisotto | Progettista | | Aggiunti diagrammi di sequenza per la web-app.
