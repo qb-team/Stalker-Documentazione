@@ -12,13 +12,18 @@ git clone https://github.com/qb-team/Stalker-Admin.git
 
 Di seguito vengono elencati i requisiti minimi per lo sviluppo e la manutenzione della Web app.
 
-## Requisiti minimi hardware
+## Prerequisiti hardware e software
 
--   **Sistema operativo** 
-    - Windows 10 (64-bit)
-    - MacOS 15.04 Catalina
-    - Ubuntu 18.04 LTS
--   **Processore**
-    - 
+Le tecnologie utilizzate per sviluppare l'applicazione web richiedono poche risorse, si consiglia comunque di soddisfare i seguenti requisiti minimi:
 
-## Requisiti minimi software
+!!! info
+        -   **Sistema operativo** 
+            - Windows 10 (64-bit);
+            - MacOS 15.04 Catalina;
+            - Ubuntu 18.04 LTS.
+        -   **Memoria RAM**
+            - 8GB.
+!!! attention
+        È necessario avere una connessione Internet attiva.
+
+
