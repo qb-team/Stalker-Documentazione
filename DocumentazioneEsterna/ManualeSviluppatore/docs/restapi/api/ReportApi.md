@@ -6,12 +6,9 @@ HTTP request | Description
 
 
 <a name="getTimePerUserReport"></a>
-# **getTimePerUserReport**
-> List getTimePerUserReport(placeId)
+## **GET** /report/place/{placeId}
 
-Gets the report of total time spent per user inside the place of an organization.
-
-    Gets the report of total time spent per user inside the place of an organization. Only web-app administrators can access this end-point.
+Gets the report of total time spent per user inside the place of an organization. Only web-app administrators can access this end-point.
 
 ### Parameters
 
