@@ -78,11 +78,14 @@ Analogamente per **PlacePresenceNumberContentComponent** ha una associazione con
 
 Nel precedente diagramma viene illustrato come è stata progettata la funzionalità di autenticazione nella applicazione web<sup>G</sup>. 
 
-**LoginComponent** contiene gli attributi, **submitted** per indicare se è stato cliccato il bottone *invio*, email contiene l'email inserita, password contiene la password inserita,ha i seguenti metodi:
+**LoginComponent** contiene gli attributi, **submitted** per indicare se è stato cliccato il bottone *invio*, **email** contiene l'email inserita, **password** contiene la password inserita,ha i seguenti metodi:
 
 -   **setupLoginForm()**: offre la possibilità di inserire email e password per l'autenticazione e di controllare se sono in una forma valida. 
+
 -   **onSubmit()**: modificare submitted col valore *true*;
+
 -   **sign()**: richiamare i metodi per il login;
+
 -   **callResetPassword()**: metodo che viene chiamato quando l'utente clicca sul pulsante *password dimenticata* per chiamare il controllor **ResetPasswordComponent**.
 
 **ResetPasswordComponent** ha gli stessi attributi del controllor precedentemente descritto e più o meno gli stessi metodi, si segnala il metodo **resetPassword()** per richiamare i metodi per il reset della password.
@@ -109,8 +112,24 @@ L' altra associazione che ha **AuthenticationService** è **AdministratorOrganiz
 ![!alt text](../Immagini/WebApp/menubar.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Menubar </em> </figcaption>
 
-Nel precedente diagramma viene mostrato come è stato progettato il component **Manubar**. **Menubar** è un component che permette di gestire gli eventi generati della componente grafica omonima *menubar*. Questi eventi possono richiedere azioni di logout<sup>G</sup> perciò esiste una associazione con **AuthenticationService**, azioni di selezione di una organizzazioni tra quelle disponibili e quindi si ha una associazione con **AdministratorOrganizationDataService** che offre la lista delle organizzazione da cui selezionare l'organizzazione che sarà memorizzata in **AdministratorOrganizationDataService** è ritornarla a chi lo richiede, e infine l'azione di autenticazione LDAP<sup>G</sup> nel caso in cui l'amministratore selezione una organizzazione che richiede tale tipo di autenticazione. Quindi esiste una associazione con **LDAPService** che offre l'autenticazione LDAP<sup>G</sup>.
+Nel precedente diagramma viene mostrato come è stato progettato il component **Manubar**. **Menubar** è un component che permette di gestire gli eventi generati della componente grafica omonima *menubar*. 
+Contiene i seguenti attributi, **organization** che contiene l'organizzazione selezionata dall'utente, **orgArr**, contiene la lista delle organizzazioni da mostrare all'utente, **hasLDAP** se l'organizzazione selezionata richiede autenticazione LDAP<sup>G</sup>, **isSubmitted** per indicare se è stato cliccato il bottone *invio*, **email** contiene l'email inserita, **password** contiene la password inserita,ha i seguenti metodi:
 
+-   **setupLdapForm()**: offre la possibilità di inserire email e password per l'autenticazione LDAP e di controllare se sono in una forma valida;
+
+-   **navigateToHomePage()**: per gestire l'evento di navigazione verso la *homepage*;
+
+-   **navigateToLogin()**: per gestire l'evento di navigazione verso la pagina di *Login* dopo il <sup>logout</sup>;
+
+-   **loadOrganizationList()**: carica la lista delle organizzazione da mostrare all'utente;
+
+-   **closeLdapForm()**: gestisce la chiusura del *pop-up* per l'autenticazione <sup>LDAP</sup>;
+
+-   **signOut()**: richiama il metodo per il <sup>logout()</sup>;
+
+-   **setOrganization(click:any)**: modifica **organization** con l'organizzazione selezionata dall'utente.
+
+perciò esiste una associazione con **AuthenticationService** per gestire il logout<sup>G</sup>, esiste una associazione con **AdministratorOrganizationDataService** che offre la lista delle organizzazione da cui selezionare l'organizzazione che sarà memorizzata in **AdministratorOrganizationDataService** è ritornarla a chi lo richiede, e infine esiste una associazione con **LDAPService** che offre l'autenticazione LDAP<sup>G</sup>.
 ## Organization management
 
 ![!alt text](../Immagini/WebApp/OrgManagement.PNG "diagramma delle classi")
