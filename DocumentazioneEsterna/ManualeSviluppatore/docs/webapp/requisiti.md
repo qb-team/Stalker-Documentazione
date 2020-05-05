@@ -1,4 +1,4 @@
-# Requisiti
+# Requisiti e installazione
 Per poter sviluppare sul proprio PC il webapp del sistema Stalker sono necessari i software e gli strumenti indicati in questa pagina.
 I software da installare saranno divisi in base al loro scopo.
 
@@ -117,4 +117,21 @@ ng serve
 Scrivere poi nella barra di navigazione del proprio browser `http://localhost::4200`.
 
 
+## Test
 
+Gli *unit test* sono stati codificati servendosi di *Jasmine*. Per installare Jasmine, sempre tramite *npm*, basterà lanciare il seguente comando:
+
+    npm install --save-dev jasmine
+
+Per eseguire i test si usa invece il comando:
+
+    ng test
+
+volendo si può usare l'opzione `--code-coverage` per visualizzare statistiche  in merito alla copertura del codice.  
+L'esecuzione del comando precedente avvia *Karma* che aprirà una finestra del browser per visualizzare l'esito dei test. *Karma* aprirà il browser definito nel file `karma.conf.js`.
+
+## Source code management
+
+Per poter effettuare il versionamento del codice sorgente è richiesto di utilizzare *Git*.  
+Per poterlo installare è necessario recarsi a [questa pagina](https://git-scm.com/downloads).  
+Non è strettamente necessario, ma è consigliato per integrare le proprie modifiche nel repository.
