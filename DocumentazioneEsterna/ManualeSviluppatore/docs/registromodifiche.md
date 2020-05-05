@@ -2,6 +2,7 @@
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
 
+0.12.0 | 2020-05-05 | Emanuele Cisotto | Progettista | | Correzione stile diagrammi classi e sequenza webapp.
 0.11.0 | 2020-05-05 | Christian Mattei | Progettista | | Aggiunto diagrammi sei package dell'applicazione. 
 0.10.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione. 
 0.9.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione. 
