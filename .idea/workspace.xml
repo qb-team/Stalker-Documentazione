@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fcebdb-e39c-4720-8e89-d495b1f85354" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/App/AppPackageDiagramm.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/App/LoginContract.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/App/MVP.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/Backend/Sequenza/tracciamento-sequenza.png" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/Backend/Sequenza/tracciamento-sequenza.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/WebApp/OrgManagement.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/WebApp/OrgManagement.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/WebApp/administratorManagement.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/WebApp/administratorManagement.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/WebApp/authenticatedAccessesUserLDAP.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/WebApp/authenticatedAccessesUserLDAP.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/WebApp/authentication.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/WebApp/authentication.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/WebApp/menubar.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/WebApp/menubar.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/WebApp/modify admin priv level.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/WebApp/modify admin priv level.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/app/architettura.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/app/architettura.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/app/package.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/app/package.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/backend/package.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/backend/package.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/backend/requisiti.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/backend/requisiti.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/backend/sequenza.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/backend/sequenza.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/registromodifiche.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/registromodifiche.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/webapp/classi.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/webapp/classi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/webapp/package.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/webapp/package.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/webapp/requisiti.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/webapp/requisiti.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/webapp/sequenza.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/webapp/sequenza.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +56,7 @@
       <updated>1582628478627</updated>
       <workItem from="1588605072735" duration="6279000" />
       <workItem from="1588619483820" duration="1189000" />
-      <workItem from="1588686213788" duration="419000" />
+      <workItem from="1588686213788" duration="705000" />
     </task>
     <servers />
   </component>
