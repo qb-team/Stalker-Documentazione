@@ -1,13 +1,13 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
-0.13.2 | 2020-05-05 | Davide Lazzaro | Programmatore | | Aggiunta contenuto sezione package nel Backend.
-0.13.1 | 2020-05-05 | Tommaso Azzalin | Progettista | | Correzione documentazione API.
-0.13.0 | 2020-05-05 | Emanuele Cisotto | Progettista | | Correzione stile diagrammi classi e sequenza web-app.
-0.12.1 | 2020-05-05| Davide Lazzaro | Programmatore | Emanuele Cisotto | Aggiunti diagrammi nella sezione classi.
-0.11.0 | 2020-05-05 | Christian Mattei | Progettista | | Aggiunto diagrammi sei package dell'applicazione.
-0.10.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione.
-0.9.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione.
+0.12.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione. 
+0.11.2 | 2020-05-05 | Davide Lazzaro | Programmatore | | Aggiunta contenuto sezione package nel Backend.
+0.11.1 | 2020-05-05 | Tommaso Azzalin | Progettista | | Correzione documentazione API.
+0.11.0 | 2020-05-05 | Emanuele Cisotto | Progettista | | Correzione stile diagrammi classi e sequenza web-app.
+0.10.1 | 2020-05-05| Davide Lazzaro | Programmatore | Emanuele Cisotto | Aggiunti diagrammi nella sezione classi.
+0.10.0 | 2020-05-05 | Federico Perin   | Progettista | | Stesura e verifica della sezione Requisiti e installazione.
+0.9.0 | 2020-05-05 | Christian Mattei | Progettista | | Aggiunto diagrammi dei package dell'applicazione e stesura della sezione. 
 0.8.0 | 2020-05-05 | Federico Perin   | Progettista | | Stesura e verifica dei diagrammi delle classi per la web-app.
 0.7.0 | 2020-05-05 | Federico Perin   | Progettista | | Stesura e verifica dei diagrammi package per la web-app.
 0.6.1 | 2020-05-05 | Emanuele Cisotto | Progettista | | Aggiunti diagrammi di sequenza per la web-app.

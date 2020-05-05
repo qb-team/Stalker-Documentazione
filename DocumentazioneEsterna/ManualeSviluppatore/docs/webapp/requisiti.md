@@ -2,7 +2,7 @@
 Per poter sviluppare sul proprio PC il webapp del sistema Stalker sono necessari i software e gli strumenti indicati in questa pagina.
 I software da installare saranno divisi in base al loro scopo.
 
-Per scaricare il codice sorgente del backend, è sufficiente andare nella pagina di GitHub che lo ospita, che si trova [qui](https://github.com/qb-team/Stalker-Admin), cliccare su `Clone or download` e successivamente premere su `Download ZIP`.
+Per scaricare il codice sorgente del webapp, è sufficiente andare nella pagina di GitHub che lo ospita, che si trova [qui](https://github.com/qb-team/Stalker-Admin), cliccare su `Clone or download` e successivamente premere su `Download ZIP`.
 
 Un'alternativa più efficace a questo procedimento è scaricare il progetto tramite Git. Se non si dispone di Git è possibile scaricarlo seguendo quanto indicato in [Source Code Management](#source-code-management). Per scaricare il progetto in questo modo, invocare il seguente comando tramite un terminale o prompt dei comandi nel sistema in uso:
 ```bash
@@ -36,7 +36,7 @@ L'applicazione web è stata sviluppata utilizzando il linguaggio di programmazio
 !!!info
     per maggiori informazioni o per consultare la documentazione clicca [qui](https://www.typescriptlang.org/) .
 
-Per installare Typescript sia per Windows, MacOS e Ubuntu si utilizza il seguente comando  
+Per installare Typescript sia per Windows, MacOS e Ubuntu si utilizza il seguente comando:  
 ```bash
 npm install -g typescript
 ```
@@ -59,7 +59,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-Una volta installato Node.js, è possibile installare openapi-generator-cli, da terminale o prompt dei comandi, con il seguente 0comando:
+Una volta installato Node.js, è possibile installare openapi-generator-cli, da terminale o prompt dei comandi, con il seguente comando:
 ```bash
 npm install @openapitools/openapi-generator-cli -g
 ```
@@ -108,7 +108,12 @@ npm install bootstrap
 
 Di seguito viene illustrato come creare e configurare l'ambiente di sviluppo in Angular.
 
-Una volta installate tutte le tecnologie citate precedentemente, si apra il workspace del progetto, dopo di che per avviare un server locale dove poter vedere ciò che si è sviluppato, sarà necessario utilizzare il seguente comando:
+Una volta installate tutte le tecnologie citate precedentemente, si apra il workspace del progetto precedentemente scaricato,
+si esegua il comando:
+
+    cd Stalker-Admin
+
+tale comando porterà all'interno della cartella del progetto, dopo di che per avviare un server locale dove poter vedere ciò che si è sviluppato, sarà necessario utilizzare il seguente comando:
 
 ```bash
 ng serve 
