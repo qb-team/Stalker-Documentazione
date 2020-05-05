@@ -9,12 +9,9 @@ HTTP request | Description
 
 
 <a name="createNewPlace"></a>
-# **createNewPlace**
-> Place createNewPlace(place)
+## **POST** /place
 
-Creates a new place for an organization.
-
-    Creates a new place for an organization. Only web-app administrators can access this end-point.
+Creates a new place for an organization. Only web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -36,12 +33,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="deletePlace"></a>
-# **deletePlace**
-> deletePlace(placeId)
+## **DELETE** /place/{placeId}
 
-Deletes a place of an organization.
-
-    Deletes a place of an organization. Only web-app administrators can access this end-point.
+Deletes a place of an organization. Only web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -63,12 +57,9 @@ null (empty response body)
 - **Accept**: Not defined
 
 <a name="getPlaceListOfOrganization"></a>
-# **getPlaceListOfOrganization**
-> List getPlaceListOfOrganization(organizationId)
+## **GET** /place/organization/{organizationId}
 
-Returns the list of places of the organization.
-
-    Returns the list of places of the organization. Both app users and web-app administrators can access this end-point.
+Returns the list of places of the organization. Both app users and web-app administrators can access this end-point.
 
 ### Parameters
 
@@ -90,12 +81,9 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="updatePlace"></a>
-# **updatePlace**
-> Place updatePlace(placeId, place)
+## **PUT** /place/{placeId}
 
-Updates one or more properties of a place of an organization.
-
-    Updates one or more properties of a place of an organization. Only web-app administrators can access this end-point.
+Updates one or more properties of a place of an organization. Only web-app administrators can access this end-point.
 
 ### Parameters
 
