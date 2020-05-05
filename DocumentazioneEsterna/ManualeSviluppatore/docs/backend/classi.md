@@ -1,6 +1,10 @@
 # Diagrammi delle classi
-Vengono presentati qui di seguito i diagrammi UML delle classi relativi al backend.
-##Diagrammi dei Service 
+Vengono presentati qui di seguito i diagrammi UML delle classi relativi al backend.  
+
+!!! info
+    Per redente ogni componente riutilizzabile, mantenibile e facile da testare, si è cercato di progettare componenti che abbiano al loro interno poche responsabilità e che siano il più coese possibili, tenendo però sotto controllo il numero di dipendenze.
+
+##Diagrammi dei Service
 ####Access Service
 ![!Access Service](/Immagini/Backend/Classi/AccessService.png)
 ___
@@ -26,4 +30,31 @@ ___
 ![!Presence Service](/Immagini/Backend/Classi/PresenceService.png)
 ___
 ####Report Service
-![!Report Service](/Immagini/Backend/Classi/ReportService.png)
+![!Report Service](/immagini/Backend/Classi/ReportService.png)
+___
+
+##Diagrammi dei Controller
+####Access Controller
+![!Access Controller](/Immagini/Backend/Classi/AccessApi.png)
+___
+####Administrator Controller
+![!Administrator Controller](/Immagini/Backend/Classi/AdministratorApi.png)
+___
+####Favorite Controller
+![!Favorite Controller](/Immagini/Backend/Classi/FavoriteApi.png)
+___
+####Movement Controller
+![!Movement Controller](/Immagini/Backend/Classi/MovementApi.png)
+___
+####Organization Controller
+![!Organization Controller](/Immagini/Backend/Classi/OrganizationApi.png)
+___
+####Place Controller
+![!Place Controller](/Immagini/Backend/Classi/PlaceApi.png)
+___
+####Presence Controller
+![!Presence Controller](/Immagini/Backend/Classi/PresenceApi.png)
+___
+####Report Controller
+![!Report Controller](/Immagini/Backend/Classi/ReportApi.png)
+___
