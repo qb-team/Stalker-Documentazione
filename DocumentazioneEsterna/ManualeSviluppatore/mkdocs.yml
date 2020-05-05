@@ -10,6 +10,7 @@ markdown_extensions:
 
 nav:
   - Home: "index.md"
+  - Registro modifiche: "registromodifiche.md"
   - App utenti:
       - Introduzione: "app/introduzione.md"
       - Requisiti: "app/requisiti.md"
@@ -61,4 +62,3 @@ nav:
         - PlaceApi: "restapi/api/PlaceApi.md"
         - PresenceApi: "restapi/api/PresenceApi.md"
         - ReportApi: "restapi/api/ReportApi.md"
-  - Registro modifiche: "registromodifiche.md"
