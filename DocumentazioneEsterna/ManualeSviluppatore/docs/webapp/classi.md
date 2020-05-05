@@ -92,7 +92,7 @@ Nel precedente diagramma viene illustrato come è stata progettata la funzionali
 
 **LoginComponent** e **ResetPasswordComponent** ha una associazione con **AuthenticationService** dove si segnalano gli attributi **userData** entità dell'utente autenticato. Dispone i seguenti metodi:
  
--   **signIn(in email:string, in password:string)**: permette l'autenticazione attraverso i servizi di FireBase;
+-   **signIn(email:string, password:string)**: permette l'autenticazione attraverso i servizi di FireBase;
 
 -   **signOut()**: permette il logout<sup>G</sup>; 
 
