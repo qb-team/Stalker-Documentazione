@@ -13,12 +13,12 @@ Nel seguente package vengono raggruppati altri package contenenti tutte le class
 
 ## View
 Nel seguente package vengono raggruppate tutte le classi dedicate alle funzionalità di user interface. Le classi fragment rappresentano le pagine dell'applicazione e sono collegate con i loro rispettivi file xml che modificano la loro interpretazione grafica.
-![!View](/Immagini/App/ViewPackageDiagramm.PNG "Esempio diagramma dei package dei View")
+![!View](/Immagini/App/ViewPackageDiagramm.PNG "Package del View")
 <figcaption> <em> Diagramma del package - Package del View </em> </figcaption>
 
 ## Presenter
 Nel seguente package vengono raggruppate tutte le classi dedicate alla comunicazione tra le altre due componenti dell'architettura.
-![!Presenter](/Immagini/App/PresenterPackageDiagramm.PNG "Esempio diagramma dei package dei Presenter")
+![!Presenter](/Immagini/App/PresenterPackageDiagramm.PNG "Package del Presenter")
 <figcaption> <em> Diagramma del package - Package del Presenter </em> </figcaption>
 
 ## Contract
