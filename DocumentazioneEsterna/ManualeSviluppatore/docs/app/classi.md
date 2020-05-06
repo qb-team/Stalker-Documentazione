@@ -14,7 +14,7 @@ In caso di fallimento l'utente visualizza un messaggio di errore.
 ___
 ##  Registrazione
 ![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png)
-<figcaption> <em> Diagramma delle classi del Action Tab </em> </figcaption>
+<figcaption> <em> Diagramma delle classi del SignUp </em> </figcaption>
 
 La classe SignUpFragment, così come SignUpPresenter e SignUpModel ad essa collegati, contengono tutti i metodi che permettono all'utente di registrarsi.
 L'utente per registrarsi deve; inserire l'email, inserire la password, confermare la password, accettare le condizioni d'uso e infine cliccare il pulsante Registrati.
@@ -28,10 +28,9 @@ ___
 
 La classe ActionTabFragment contiene tutti i metodi necessari per gestire la barra principale al vertice dell'applicazione e i metodi per spostarsi nelle pagine HomeFragment e MyStalkerFragment.
 
-
 ___
 ## LDAP Organization
-![!ActionTabFragment](/Immagini/App/Classi/LDAPorganizationClassDiagramm.PNG "Diagramma delle classi del LDAP Organization")
+![!LDAPorganizationFragment](/Immagini/App/Classi/LDAPorganizationClassDiagramm.PNG "Diagramma delle classi del LDAP Organization")
 <figcaption> <em> Diagramma delle classi del LDAP Organization </em> </figcaption>
 
 La classe LDAPorganizationFragment rappresenta la pagina dedicata alle organizzazioni che richiedono credenziali LDAP. La vista contiene le informazioni riferite
