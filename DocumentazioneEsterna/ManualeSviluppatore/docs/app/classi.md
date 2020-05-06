@@ -25,3 +25,9 @@ La classe offre i seguenti metodi:
 ___
 ####  Registrazione
 ![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png)
+
+
+## Action Tab
+La classe ActionTabFragment contiene tutti i metodi necessari per gestire la barra principale al vertice dell'applicazione e i metodi per spostarsi nelle pagine HomeFragment e MyStalkerFragment.
+![!ActionTabFragment](/Immagini/App/ActionTabClassDiagramm.PNG "Diagramma delle classi del Action Tab")
+<figcaption> <em> Diagramma delle classi - Diagramma delle classi del Action Tab </em> </figcaption>
