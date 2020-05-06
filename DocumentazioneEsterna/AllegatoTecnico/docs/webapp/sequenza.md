@@ -27,14 +27,14 @@ Nel diagramma viene rappresentato come reperire gli accessi effettuati da un ute
 
 ## Diagramma del contatore presenze di un'organizzazione
 
-![!alt text](../Immagini/WebApp/viewing the org presence counter.PNG "diagramma di sequenza per la visualizzazione del contatore presenze in una data organizzazione")
+![!alt text](../Immagini/WebApp/viewingTheOrgPresenceCounter.PNG "diagramma di sequenza per la visualizzazione del contatore presenze in una data organizzazione")
 <figcaption> <em> Diagramma di sequenza per la visualizzazione del contatore presenze in una data organizzazione </em> </figcaption>
 
 Nel diagramma viene rappresentata la visualizzazione del contatore presenze in una data organizzazione.
 
 ## Diagramma della modifica dei privilegi di un amministratore
 
-![!alt text](../Immagini/WebApp/modify admin priv level.PNG "diagramma di sequenza per la modifica dei privilegi di un amministratore")
+![!alt text](../Immagini/WebApp/modifyAdminPrivLevel.PNG "diagramma di sequenza per la modifica dei privilegi di un amministratore")
 <figcaption> <em> Diagramma di sequenza per la modifica dei privilegi di un amministratore </em> </figcaption>
 
 Nel diagramma viene rappresentato come avviene la modifica dei privilegi di un amministratore.

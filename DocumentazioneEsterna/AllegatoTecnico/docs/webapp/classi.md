@@ -35,7 +35,7 @@ Nel precedente diagramma viene illustrato come sono state progettate le funziona
 Il diagramma mostra le classi progettate per permettere di ricercare gli accessi di uno specifico utente autenticato all'interno dell'organizzazione o di un posto.
 
 ## Authentication
-![!alt text](/Immagini/WebApp/authentication.PNG "diagramma delle classi")
+![!alt text](../Immagini/WebApp/authentication.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Authentication </em> </figcaption>
 
 Nel precedente diagramma viene illustrato come è stata progettata la funzionalità di autenticazione nella applicazione web.

@@ -2,7 +2,7 @@
 
 È stato scelto Angular 2+ come framework per lo sviluppo della Web app. Angular implementa il pattern architetturale *Model View View Model*, che favorisce la separazione tra *business logic* (Model) e *presentation logic* (View), attraverso l'utilizzo dell'application logic (View model). Ne deriva la possibilità di aggiornare la vista appena cambia lo stato interno del modello. Allo stesso modo, interagendo con la vista e sfruttando il Data Binding e i comandi offerti dal framework, sarà semplice e immediato apportare le modifiche desiderate al modello. Ne deriva quindi l'applicazione del paradigma *separation of concerns*, che garantisce responsabilità differenti alle tre parti del pattern e ne agevola l'estendibilità e la manutenzione.
 
-![!MVVM](/Immagini/WebApp/MVVMPattern.png "MVVM di Angular")
+![!MVVM](../Immagini/WebApp/MVVMPattern.png "MVVM di Angular")
 <figcaption> <em> Schema del pattern architetturale MVVM </em> </figcaption>
 
 ### Model
@@ -32,7 +32,7 @@ I dati definiti nei servizi sono spesso istanze di EventEmitter o ReplySubject, 
 
 ### Comunicazione tra View Model e View
 
-Per l'aggiornamento automatico tra View e ViewModel, Angular implementa un *Observable pattern*. Infatti, appena cambia lo stato interno del component viene immediatamente aggiornata anche la vista. Analogamente, tramite il DataBinding e le direttive sará immediato l'aggiornamento dello stato interno del component una volta che é stata effettuata un'azione dall'utente sulla vista.
+Per l'aggiornamento automatico tra View e ViewModel, Angular implementa un *Observable pattern*. Infatti, appena cambia lo stato interno del component viene immediatamente aggiornata anche la vista. Analogamente, tramite il DataBinding e le direttive sarà immediato l'aggiornamento dello stato interno del component una volta che é stata effettuata un'azione dall'utente sulla vista.
 
 ## Dependency Injection
 Angular offre un'implementazione del pattern della *Dependency Injection* per risolvere le dipendenze tramite constructor injection. È sufficiente annotare una classe con *@Injectable* per permettere al risolutore delle dipendenze (l'Injector) di iniettarne l'istanza nei costruttori delle classi che la richiedono. Di conseguenza si ha l'*inversion of control* che sposta la complessità di creazione delle istanze di oggetti da cui siamo dipendenti nell'Injector di Angular.

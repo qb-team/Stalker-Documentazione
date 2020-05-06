@@ -5,7 +5,7 @@ Fornisce un modo semplice per mostrare la struttura del prodotto garantendo modu
 Ne deriva quindi l'applicazione del paradigma *separation of concerns*, che separa la responsabilità tra le differenti parti del pattern.
 La comunicazione tra le varie componenti è asincrona.
 
-![!MVP](/Immagini/App/MVP.png "MVP Pattern")
+![!MVP](../Immagini/App/MVP.png "MVP Pattern")
 <figcaption> <em> Schema del pattern architetturale MVP </em> </figcaption>
 
 ### Model
