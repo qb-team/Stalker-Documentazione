@@ -23,7 +23,7 @@ Il prodotto garantirà le seguenti funzionalità:
         può ridefinire il nome, la descrizione, l’immagine e l’indirizzo
         dell’organizzazione selezionata;
 
-    -   **Modifica delle superfici geografiche di tracciamentodell’organizzazione**: 
+    -   **Modifica delle superfici geografiche di tracciamento dell’organizzazione**: 
 		Può modificare il perimetro di
         tracciamento dell’organizzazione e quello degli specifici
         luoghi, inserendo un numero a piacere di coordinate per
@@ -61,7 +61,7 @@ Il prodotto garantirà le seguenti funzionalità:
             trascorse in ogni luogo dell’organizzazione.
 
 -   **Utenti:** gli utenti necessiteranno della possibilità, con
-    l’applicazione, di registrarsi e autenticarsi nell’app, di venire
+    l’applicazione, di registrarsi e autenticarsi nell'app, di venire
     tracciati nelle organizzazioni e autenticarsi presso le
     organizzazioni che lo richiedono. Agli utenti saranno fornite le
     seguenti funzionalità:
