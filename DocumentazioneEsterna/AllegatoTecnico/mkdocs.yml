@@ -1,4 +1,4 @@
-site_name: Manuale Manutentore | Stalker
+site_name: Allegato tecnico | Stalker
 repo_url: https://github.com/qb-team/Stalker-Documentazione/
 
 theme:
@@ -30,4 +30,5 @@ nav:
       - Package: "backend/package.md"
       - Diagrammi delle classi: "backend/classi.md"
       - Diagrammi di sequenza: "backend/sequenza.md"
+  - Il gruppo qbteam: "qbteam.md"
   

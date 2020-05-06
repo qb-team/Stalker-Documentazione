@@ -1,15 +1,16 @@
+# Home
 
-<p align=center>
+<p align = "center">
 
-<img src=logoqbteam.png width=300 height=69>
+<img src = "/Immagini/qbteam.png" alt = "Logo qbteam" />
 
 </p>
 
-# Scopo documento
+## Scopo dell'allegato tecnico
 
-Lo scopo del documento è quello di mostrare le scelte architetturali che sono state progettate dal gruppo **qbteam**, per il progetto **Stalker**. Nel documento saranno presentanti i diagrammi delle classi, dei package e di sequenza progettati.
+Lo scopo di questo documento è quello di mostrare le scelte architetturali che sono state adottate dal gruppo *qbteam*, per il progetto *Stalker* di *Imola Informatica*. Nel documento saranno presentanti, oltre alla descrizione delle architetture adottate, i diagrammi delle classi, dei package e di sequenza che descrivono il sistema.
 
-# Scopo prodotto 
+## Scopo prodotto 
 
 Il prodotto garantirà le seguenti funzionalità:
 
