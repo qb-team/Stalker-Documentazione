@@ -1,4 +1,12 @@
+
+<p align=center>
+
+<img src=logoqbteam.png width=300 height=69>
+
+</p>
 # Scopo documento
+
+Lo scopo del documento è quello di mostrare le scelte architetturali che sono state progettate dal gruppo **qbteam**, per il progetto **Stalker**. Nel documento saranno presentanti i diagrammi delle classi, dei package e di sequenza progettati.
 
 # Scopo prodotto 
 
