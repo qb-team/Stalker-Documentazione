@@ -1,4 +1,4 @@
-site_name: Manuale sviluppatore | Stalker
+site_name: Manuale Manutentore | Stalker
 repo_url: https://github.com/qb-team/Stalker-Documentazione/
 
 theme:
@@ -6,8 +6,12 @@ theme:
   custom_dir: "docs_theme"
 
 markdown_extensions:
+  # https://github.com/g-provost/lightgallery-markdown
   - lightgallery
+  # https://squidfunk.github.io/mkdocs-material/extensions/admonition/
   - admonition
+  # https://squidfunk.github.io/mkdocs-material/extensions/codehilite/
+  - codehilite 
 
 nav:
   - Home: "index.md"
