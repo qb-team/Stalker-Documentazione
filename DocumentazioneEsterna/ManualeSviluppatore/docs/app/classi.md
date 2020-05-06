@@ -1,6 +1,12 @@
 # Diagrammi delle classi
 Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'applicazione.  
 
+
+## Authentication 
+![!AuthenticationFragment](/Immagini/App/Classi/Authentication.png "Diagramma delle classi di Authentication")
+<figcaption> <em> Diagramma delle classi di Authentication </em> </figcaption>
+
+___
 ## Login
 ![!LoginFragment](/Immagini/App/Classi/LoginFragment.png)
 <figcaption> <em> Diagramma delle classi del Login </em> </figcaption>
@@ -10,14 +16,8 @@ L'utente per fare il Login deve inserire l'email e la password e successivamente
 In caso di successo l'utente sarà spostato nel HomePageActivity.class e visualizza un messaggio che indica il buon esito dell'autenticazione.
 In caso di fallimento l'utente visualizza un messaggio di errore.
 
-
 ___
-<<<<<<< HEAD
-##  Sign Up
-
-=======
-##  Registrazione
->>>>>>> 260185b4da5dea56fe832b538abe99c640c40842
+##  Sing Up
 ![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png)
 <figcaption> <em> Diagramma delle classi del SignUp </em> </figcaption>
 
@@ -25,13 +25,22 @@ La classe SignUpFragment, così come SignUpPresenter e SignUpModel ad essa colle
 L'utente per registrarsi deve; inserire l'email, inserire la password, confermare la password, accettare le condizioni d'uso e infine cliccare il pulsante Registrati.
 Una volta cliccato il pulsante vengono invocati i metodi della libreria Firebase che ti registrano nel sistema ed eseguono automaticamente il Login.
 
-
 ___
 ## Action Tab
 ![!ActionTabFragment](/Immagini/App/Classi/ActionTabClassDiagramm.PNG "Diagramma delle classi del Action Tab")
 <figcaption> <em> Diagramma delle classi del Action Tab </em> </figcaption>
 
 La classe ActionTabFragment contiene tutti i metodi necessari per gestire la barra principale al vertice dell'applicazione e i metodi per spostarsi nelle pagine HomeFragment e MyStalkerFragment.
+
+___
+## Home Fragment 
+![!HomeFragment](/Immagini/App/Classi/HomeFragment.png "Diagramma delle classi di Home Fragment")
+<figcaption> <em> Diagramma delle classi di di Home Fragment </em> </figcaption>
+
+___
+## My Stalker List 
+![!MyStalkerListFragment](/Immagini/App/Classi/MyStalkerListFragment.png "Diagramma delle classi di My Stalker List")
+<figcaption> <em> Diagramma delle classi di My Stalker List </em> </figcaption>
 
 ___
 ## LDAP Organization
@@ -45,19 +54,4 @@ Le credenziali che ha digitato l'utente vengono spedite al modello che interrogh
 alla vista e apparirà una notifica visibile sulla schermata per avvisare l'utente.
 
 
-___
-## Authentication 
-![!ActionTabFragment](/Immagini/App/Classi/Authentication.png "Diagramma delle classi di Authentication")
-<figcaption> <em> Diagramma delle classi di Authentication </em> </figcaption>
 
-
-___
-## My Stalker List 
-![!ActionTabFragment](/Immagini/App/Classi/MyStalkerListFragment.png "Diagramma delle classi di My Stalker List")
-<figcaption> <em> Diagramma delle classi di My Stalker List </em> </figcaption>
-
-
-___
-## Home Fragment 
-![!ActionTabFragment](/Immagini/App/Classi/HomeFragment.png "Diagramma delle classi di Home Fragment")
-<figcaption> <em> Diagramma delle classi di di Home Fragment </em> </figcaption>
