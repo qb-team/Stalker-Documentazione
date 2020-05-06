@@ -122,7 +122,9 @@ Per continuare, occorre registrate l'applicazione **Stalker-Admin** al servizio 
 
 Si aprire una nuova pagina dove chiederà di inserire un nickname e successivamente verranno fornito le chiave dell'SDK di Firebase da copiare all'interno del applicazione web.
 
-Copiare l'SDK all'interno del file `environment.ts` come mostrato dalla seguente immagine
+Copiare l'SDK all'interno del file `environment.ts` come mostrato dalla seguente immagine:
+
+![!firebaseNew](/Immagini/WebApp/Firebase3.png)
 
 
 
