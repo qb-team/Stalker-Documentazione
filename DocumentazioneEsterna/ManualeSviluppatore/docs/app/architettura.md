@@ -22,7 +22,7 @@ come ad esempio: ProgressBar, TextView, RecyclerView, ecc. In altre parole la Vi
 
 ### Presenter
 
-Il Presenter funge da livello intermedio tra la View e il Model. Tutta la logica di presentazione appartiene ad essa ed è responsabile per l'interrogazione del modello e l'aggiornamento della vista, reagendo in base alle interazioni che compie l'utente nella UI.
+Il Presenter funge da livello intermedio tra la View e il Model. Tutta la logica di presentazione appartiene ad esso ed è responsabile per l'interrogazione del modello e l'aggiornamento della vista, reagendo in base alle interazioni che compie l'utente nella UI.
 
 ### Contract
 
