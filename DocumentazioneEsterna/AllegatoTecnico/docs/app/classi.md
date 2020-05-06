@@ -5,8 +5,8 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'appl
 ## Authentication 
 ![!AuthenticationFragment](/Immagini/App/Classi/Authentication.png "Diagramma delle classi di Authentication")
 <figcaption> <em> Diagramma delle classi di Authentication </em> </figcaption>
-___
 
+___
 ## Login
 ![!LoginFragment](/Immagini/App/Classi/LoginFragment.png)
 <figcaption> <em> Diagramma delle classi del Login </em> </figcaption>
