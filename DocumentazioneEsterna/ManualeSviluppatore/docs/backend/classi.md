@@ -30,31 +30,31 @@ ___
 ![!Presence Service](/Immagini/Backend/Classi/PresenceService.png)
 ___
 ####Report Service
-![!Report Service](/immagini/Backend/Classi/ReportService.png)
+![!Report Service](/Immagini/Backend/Classi/ReportService.png)
 ___
 
 ##Diagrammi dei Controller
 ####Access Controller
-![!Access Controller](/Immagini/Backend/Classi/AccessApi.png)
+![!Access Controller](/Immagini/Backend/Classi/AccessAPI.png)
 ___
 ####Administrator Controller
 ![!Administrator Controller](/Immagini/Backend/Classi/AdministratorApi.png)
 ___
 ####Favorite Controller
-![!Favorite Controller](/Immagini/Backend/Classi/FavoriteApi.png)
+![!Favorite Controller](/Immagini/Backend/Classi/FavoriteAPI.png)
 ___
 ####Movement Controller
-![!Movement Controller](/Immagini/Backend/Classi/MovementApi.png)
+![!Movement Controller](/Immagini/Backend/Classi/MovementAPI.png)
 ___
 ####Organization Controller
-![!Organization Controller](/Immagini/Backend/Classi/OrganizationApi.png)
+![!Organization Controller](/Immagini/Backend/Classi/OrganizationAPI.png)
 ___
 ####Place Controller
-![!Place Controller](/Immagini/Backend/Classi/PlaceApi.png)
+![!Place Controller](/Immagini/Backend/Classi/PlaceAPI.png)
 ___
 ####Presence Controller
-![!Presence Controller](/Immagini/Backend/Classi/PresenceApi.png)
+![!Presence Controller](/Immagini/Backend/Classi/PresenceAPI.png)
 ___
 ####Report Controller
-![!Report Controller](/Immagini/Backend/Classi/ReportApi.png)
+![!Report Controller](/Immagini/Backend/Classi/ReportAPI.png)
 ___
