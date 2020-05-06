@@ -14,7 +14,7 @@ Lo scopo di questo documento è quello di mostrare le scelte architetturali che 
 
 Il prodotto garantirà le seguenti funzionalità:
 
--   **Amministratori:** gli amministratori dovranno essere in grado,
+-   **Amministratori**: gli amministratori dovranno essere in grado,
     attraverso la web-app, di gestire la propria organizzazione,
     visualizzare gli accessi dei dipendenti e nominare altri
     amministratori per assisterli nella gestione e monitoraggio.
@@ -53,12 +53,12 @@ Il prodotto garantirà le seguenti funzionalità:
 	
         L’amministratore può ricavare tabelle dei seguenti tipi:
 
-        -   ore di entrata e uscita da un luogo per uno specifico
+        -   Ore di entrata e uscita da un luogo per uno specifico
             utente;
 
-        -   totale di ore spese in ogni luogo per uno specifico utente;
+        -   Totale di ore spese in ogni luogo per uno specifico utente;
 
-        -   il numero di dipendenti e il totale delle ore da loro
+        -   Il numero di dipendenti e il totale delle ore da loro
             trascorse in ogni luogo dell’organizzazione.
 
 -   **Utenti:** gli utenti necessiteranno della possibilità, con
@@ -73,8 +73,8 @@ Il prodotto garantirà le seguenti funzionalità:
         Qualora l’utente avesse smarrito la password, avrebbe comunque
         la possibilità di effettuarne il reset;
 
-    -   **Possibilità di scaricare e aggiornare la lista delle
-        organizzazioni**: L’utente ha la possibilità di scaricare la
+    -   **Possibilità di scaricare e aggiornare la lista delle organizzazioni**: 
+        L’utente ha la possibilità di scaricare la
         lista delle organizzazioni, sia quelle con tracciamento
         autenticato che quelle senza. Può inoltre effettuare
         l’aggiornamento della lista in maniera manuale, tramite un
@@ -98,5 +98,3 @@ Il prodotto garantirà le seguenti funzionalità:
 		Un utente riconosciuto potrà decidere di passare
         all’anonimato, cioè di diventare un utente anonimo, selezionando
         l’apposita funzionalità.
-
-

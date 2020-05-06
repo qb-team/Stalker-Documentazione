@@ -12,7 +12,7 @@ ___
 <figcaption> <em> Diagramma delle classi del Login </em> </figcaption>
 
 ___
-## Sing Up
+## Sign Up
 ![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png)
 <figcaption> <em> Diagramma delle classi del SignUp </em> </figcaption>
 

@@ -17,9 +17,9 @@ In caso di successo l'utente sarà spostato nel HomePageActivity.class e visuali
 In caso di fallimento l'utente visualizza un messaggio di errore.
 
 ___
-##  Sing Up
+##  Sign Up
 ![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png)
-<figcaption> <em> Diagramma delle classi del SignUp </em> </figcaption>
+<figcaption> <em> Diagramma delle classi del Sign Up </em> </figcaption>
 
 La classe SignUpFragment, così come SignUpPresenter e SignUpModel ad essa collegati, contengono tutti i metodi che permettono all'utente di registrarsi.
 L'utente per registrarsi deve; inserire l'email, inserire la password, confermare la password, accettare le condizioni d'uso e infine cliccare il pulsante Registrati.
