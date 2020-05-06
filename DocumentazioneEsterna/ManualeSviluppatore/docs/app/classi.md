@@ -12,7 +12,7 @@ In caso di fallimento l'utente visualizza un messaggio di errore.
 
 
 ___
-##  Registrazione
+##  Sign Up
 
 ![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png)
 
@@ -39,3 +39,21 @@ all'organizzazione e un pulsante che fa aprire un pop-up dove è possibile inser
 Un utente, per poter essere tracciato dall'organizzazione privata, ha bisogno prima di autenticarsi ed in seguito a ciò se l'esito fosse positivo allora l'organizzazione viene automaticamente inserita nella lista delle organizzazioni MyStalker (lista preferite). In seguito apparirà uno switch dove è possibile cambiare la tipologia di tracciamento. 
 Le credenziali che ha digitato l'utente vengono spedite al modello che interrogherà il server dedicato al LDAP dell'organizzazione. L'esito di questa procedura verrà rimandata
 alla vista e apparirà una notifica visibile sulla schermata per avvisare l'utente.
+
+
+___
+## Authentication 
+![!ActionTabFragment](/Immagini/App/Classi/Authentication.png "Diagramma delle classi di Authentication")
+<figcaption> <em> Diagramma delle classi di Authentication </em> </figcaption>
+
+
+___
+## My Stalker List 
+![!ActionTabFragment](/Immagini/App/Classi/MyStalkerListFragment.png "Diagramma delle classi di My Stalker List")
+<figcaption> <em> Diagramma delle classi di My Stalker List </em> </figcaption>
+
+
+___
+## Home Fragment 
+![!ActionTabFragment](/Immagini/App/Classi/HomeFragment.png "Diagramma delle classi di Home Fragment")
+<figcaption> <em> Diagramma delle classi di di Home Fragment </em> </figcaption>
