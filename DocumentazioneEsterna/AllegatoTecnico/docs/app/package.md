@@ -3,15 +3,15 @@ Vengono presentati qui di seguito i diagrammi UML dei package relativi alla appl
 
 ## Visione generale delle dipendenze tra package
 ![!Dipendenze](/Immagini/App/AppPackageDiagramm.PNG "Diagramma dei package - Visione delle dipendenze")
-<figcaption> <em> Diagramma dei package - Visione delle dipendenze </em> </figcaption>
+<figcaption align=center> <em> Diagramma dei package - Visione delle dipendenze </em> </figcaption>
 
 ## Model
 ![!Model](/Immagini/App/ModelPackageDiagramm.PNG "Package del Model")
-<figcaption> <em> Diagramma del package - Package del Model </em> </figcaption>
+<figcaption align=center> <em> Diagramma del package - Package del Model </em> </figcaption>
 
 ## View
 ![!View](/Immagini/App/ViewPackageDiagramm.PNG "Package del View")
-<figcaption> <em> Diagramma del package - Package del View </em> </figcaption>
+<figcaption > <em> Diagramma del package - Package del View </em> </figcaption>
 
 ## Presenter
 ![!Presenter](/Immagini/App/PresenterPackageDiagramm.PNG "Package del Presenter")
