@@ -1,6 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+0.12.1 | 2020-05-05 | Tommaso Azzalin | Progettista | | Completata sezione Requisiti del Backend.
 0.12.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione. 
 0.11.2 | 2020-05-05 | Davide Lazzaro | Programmatore | | Aggiunta contenuto sezione package nel Backend.
 0.11.1 | 2020-05-05 | Tommaso Azzalin | Progettista | | Correzione documentazione API.
@@ -14,7 +15,7 @@ Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 0.6.0 | 2020-05-05 | Emanuele Cisotto | Progettista | | Stesura dei diagrammi di sequenza per la web-app.
 0.5.1 | 2020-05-04 | Emanuele Cisotto | Progettista | | Aggiunta introduzione e architettura web-app.
 0.5.0 | 2020-05-04 | Emanuele Cisotto | Progettista | | Stesura della introduzione e della architettura web-app.
-0.4.0 | 2020-05-04 | Christian Mattei | Progettista | | Stesura introduzione applicazione.
+0.4.0 | 2020-05-04 | Christian Mattei | Progettista | Tommaso Azzalin | Stesura introduzione applicazione.
 0.3.0 | 2020-05-03 | Tommaso Azzalin | Progettista | | Aggiunti requisiti per il backend.
 0.2.1 | 2020-05-03 | Davide Lazzaro  | Programmatore | Emanuele Cisotto | Aggiunti diagrammi alle sezioni classi e sequenza.
 0.2.0 | 2020-05-03 | Tommaso Azzalin | Progettista | | Aggiunta diagrammi package per il backend.
