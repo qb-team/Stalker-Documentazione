@@ -1,6 +1,8 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+0.14.1 | 2020-05-06 | Davide Lazzaro | Progettista | | Finita architettura backend.
+0.14.0 | 2020-05-06 | Davide Lazzaro | Progettista | | Aggiunta architettura backend.
 0.13.1 | 2020-05-06 | Tommaso Azzalin | Progettista | | Aggiornati diagrammi delle classi dell'applicazione.
 0.13.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura diagramma classi applicazione. 
 0.12.1 | 2020-05-05 | Tommaso Azzalin | Progettista | Federico Perin | Completata sezione Requisiti del Backend.
