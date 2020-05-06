@@ -11,50 +11,22 @@ git clone https://github.com/qb-team/Stalker-App.git
 
 <a name="prerequisiti"></a>
 ## Prerequisiti hardware e software
-Le tecnologie utilizzate per sviluppare un'applicazione Android utilizzando l'ambiente di sviluppo Android Studio richiedono, nell'esecuzione contemporanea, parecchie risorse.
-Di seguito vengono elencati i requisiti minimi e consigliati per poter installare Android Studio:
-
-### Requisiti minimi di sistema
-
--   **Sistema operativo** 
-    - Windows 7/8/10 (32 o 64 bit)  
-    - Ubuntu 12.04 o superiore (32 o 64 bit) 
-    - MacOS Mojave (10.14)
--   **Processore**
-    - 3 GB RAM
--   **Memoria**
-    - 2 GB di spazio libero sul disco
--    **Risoluzione**
-    - 1280 x 800 px di risoluzione schermo
- 
-
-### Requisiti di sistema consigliati
-
--   **Sistema operativo** 
-    - Windows 7/8/10 (32 o 64 bit)  
-    - Ubuntu 12.04 o superiore (32 o 64 bit) 
-    - MacOS Mojave (10.14)
--   **Processore**
-    - 8 GB RAM, più 1 GB per l’emulatore Android
--   **Memoria**
-    - 4 GB di spazio libero sul disco
--   **Risoluzione**
-    - 1280 x 800 px di risoluzione schermo
+Le tecnologie utilizzate per sviluppare l'applicazione Android richiedono parecchie risorse nel loro uso contemporaneo. Si consiglia quindi di avere un computer con processore almeno quad-core e RAM almeno 8 GB.
 
 ## Ambiente di sviluppo
 ### Android Studio
-L'applicazine è stata sviluppata utilizzando l'ambiente di sviluppo Android Studio, in particolare la sua ultima versione 3.6.1.
+L'applicazione è stata sviluppata utilizzando l'ambiente di sviluppo Android Studio, attualmente alla versione 3.6.1.
 
 #### Installazione di Android Studio su Windows
-È possibile scaricare Android Studio su Windows visitando il sito ufficiale che fornisce la documentazione per lo sviluppo di applicazioni. Il link per la pagina da cui si può scaricare Android Studio si trova cliccando [qui](https://developer.android.com/studio).
-Per eseguire l'installazione, bisognerà seguire la guida riportata nella sezione **MacOS** cliccando nel seguente link [qui](https://developer.android.com/studio/install).
+È possibile scaricare Android Studio su Windows visitando il sito ufficiale che fornisce la documentazione per lo sviluppo di applicazioni. Il link per la pagina da cui si può scaricare Android Studio si trova cliccando [qui](https://developer.android.com/studio), andando alla sezione "Android Studio downloads".
+Per eseguire l'installazione, bisognerà seguire la guida riportata nella sezione **Windows** cliccando nel seguente link [qui](https://developer.android.com/studio/install).
 
 #### Installazione di Android Studio su MacOS
 La guida per scaricare Android Studio per MacOS è identica a quella per Windows.
-Per eseguire l'installazione, invece, bisognerà seguire la guida riportata nella sezione **MacOS** cliccando nel seguente link [qui](https://developer.android.com/studio/install).
+Per eseguire l'installazione, invece, bisognerà seguire la guida riportata nella sezione **Mac** cliccando nel seguente link [qui](https://developer.android.com/studio/install).
 
 #### Installazione di Android Studio su Ubuntu (e derivate, e altri derivati di Debian)
-La guida per scaricare Android Studio per Ubuntu è identica a quella per Windows.
+La guida per scaricare Android Studio per Linux è identica a quella per Windows e MacOS.
 Per eseguire l'installazione, invece, bisognerà seguire la guida riportata nella sezione **Linux** cliccando nel seguente link [qui](https://developer.android.com/studio/install).
 
 ## Linguaggi utilizzati
@@ -76,8 +48,8 @@ sudo apt-get install openjdk-8-jre openjdk-8-jdk
 ```
 
 ### XML
-La configurazione del progetto e la dichiarazione delle dipendenze è gestita tramite un file denominato **AndroidManifest.xml**.
-Inoltre Andorid Studio utilizza una cartella di progetto denominata **res** che contiene file XML per gestire risorse come layout, immagini, menu, stringhe ed altro ancora.
+La configurazione dell'applicazione e alcune sue dipendenze sono gestite tramite un file denominato **AndroidManifest.xml**.
+Inoltre, lo sviluppo di applicazioni Android richiede una cartella di progetto denominata **res** che contiene file XML per gestire risorse come layout, immagini, menu, stringhe ed altro ancora.
 Quindi è richiesta una buona conoscenza del linguaggio XML.
 
 ## Librerie utilizzate
@@ -91,7 +63,7 @@ La documentazione viene fornita nel seguente [link](https://github.com/pingident
 Per verificare che è stata eseguita una corretta autenticazione su un server LDAP, sono stati svolti dei test seguendo la guida presente al [link](https://www.forumsys.com/tutorials/integration-how-to/ldap/online-ldap-test-server/).
 
 ### Retrofit
-Retrofit è una libreria Java e Android che permette di utilizzare e gestire i servizi REST, un tipo di architettura software che utilizza il protocollo HTTP per effettuare richieste al server tramite le operazioni CRUD.
+Retrofit è una libreria Java e Android che permette di utilizzare e gestire i servizi REST, un tipo di architettura software che utilizza il protocollo HTTP per effettuare richieste al server.
 Per poterla utilizzare è necessario aggiungere nel file *build.gradle(:app)* la dipendenza: 
 ```bash
 implementation 'com.squareup.retrofit2:retrofit:(2.8.1)'
@@ -124,4 +96,4 @@ Non è strettamente necessario, ma è consigliato per integrare le proprie modif
 ## Build automation
 La build automation (ovvero la gestione del processo di build) è affidata a Gradle, integrato e utilizzato in Android Studio.
 I file di build sono due: uno per tutto il progetto ed uno per il solo modulo app.
-Tramite Gradle il progetto dell'applicazione viene compilato, testato e, volendo, eseguito.
+Tramite Gradle il progetto dell'applicazione viene compilato, testato ed eseguito attraverso l'IDE Android Studio.
