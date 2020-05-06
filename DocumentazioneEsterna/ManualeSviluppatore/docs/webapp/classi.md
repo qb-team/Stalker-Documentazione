@@ -20,7 +20,9 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi alla app
 <figcaption align=center> <em> Diagramma delle classi - Administrator </em> </figcaption>
 
 Nel precedente diagramma viene illustrato come sono state progettate le funzionalità per la gestione degli amministratori.
-Il component `AdministratorManagementContentComponent`  contiene come attributi `permissionModifications` che contiene le modifiche ai permessi da applicare, `permissions` invece contiene i permessi attuali dei amministratori nella organizzazione selezionata contenuta nel attributo `currentOrganization`.
+Il component `AdministratorManagementContentComponent`  contiene come attributi:
+-   `permissionModifications`: contiene le modifiche da applicare ai permessi;
+-   `permissions`: contiene gli attuali permessi degli amministratori dell'organizzazione contenuta nel attributo `currentOrganization`. I permessi si ottengono con il metodo `getAdministratorListOfOrganization` di `AdministratorService`.
 
 La classe offre i seguenti metodi:
 
