@@ -1,32 +1,27 @@
 # Diagrammi delle classi
 Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'applicazione.  
 
-#### Login
-La classe LoginFragment, così come la classe LoginPresenter e Utente ad essa collegati, contengono tutti i metodi che permettono all'utente di autenticarsi.
-
-La classe offre i seguenti metodi:
-
--   `onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente.
-
--   `onClick(View v)`: Attende un click dell'utente al pulsante "Login" per invocare il metodo `checkLoginDetails()`
-
--   `checkLoginDetails()`: Controlla se l'utente ha scritto le proprie credenziali e le invia al metodo `initLogin(String email, String password)`, altrimenti segnala l'utente dell'assenza di esse;
-
-
-
--   `initLogin(String email, String password)`: 
-      * `login(Fragment fragment, String email, String password)` ---> `performFirebaseLogin(Fragment activity, String email, String password)` invoca i meotodi di Firebase per verificare che verificare l'email e la password, in caso positivo invoca il metodo...  `onLoginSuccess(String message)`, in caso negativo `onLoginFailure(FirebaseException e)`;
-
--   `onLoginSuccess(String message)`: L'autenticazione è andata a buon fine e l'utente sarà spostato nella HomePageActiviti.class e visualizza un messaggio che indica che si è autenticato correttamente;
-
--   `onLoginFailure(FirebaseException e)`: L'autenticazione è fallita e l'utente visualizza un messaggio che indica l'errore;
+## Login
 
 ![!LoginFragment](/Immagini/App/Classi/LoginFragment.png)
+
+La classe LoginFragment, così come LoginPresenter e LoginModel ad essa collegati, contengono tutti i metodi che permettono all'utente di autenticarsi.
+L'utente per fare il Login deve inserire l'email e la password e successivamente cliccare sul pulsante "Login" per invocare i metodi di Firebase che verificano le credenziali e creano il collegamento.
+In caso di successo l'utente sarà spostato nel HomePageActivity.class e visualizza un messaggio che indica il buon esito dell'autenticazione.
+In caso di fallimento l'utente visualizza un messaggio di errore.
+
+
 ___
-####  Registrazione
+##  Registrazione
+
 ![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png)
 
+La classe SignUpFragment, così come SignUpPresenter e SignUpModel ad essa collegati, contengono tutti i metodi che permettono all'utente di registrarsi.
+L'utente per registrarsi deve; inserire l'email, inserire la password, confermare la password, accettare le condizioni d'uso e infine cliccare il pulsante Registrati.
+Una volta cliccato il pulsante vengono invocati i metodi della libreria Firebase che ti registrano nel sistema ed eseguono automaticamente il Login.
 
+
+___
 ## Action Tab
 ![!ActionTabFragment](/Immagini/App/ActionTabClassDiagramm.PNG "Diagramma delle classi del Action Tab")
 <figcaption> <em> Diagramma delle classi del Action Tab </em> </figcaption>
