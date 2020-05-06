@@ -2,8 +2,8 @@
 Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'applicazione.  
 
 ## Login
-
 ![!LoginFragment](/Immagini/App/Classi/LoginFragment.png)
+<figcaption> <em> Diagramma delle classi del Login </em> </figcaption>
 
 La classe LoginFragment, così come LoginPresenter e LoginModel ad essa collegati, contengono tutti i metodi che permettono all'utente di autenticarsi.
 L'utente per fare il Login deve inserire l'email e la password e successivamente cliccare sul pulsante "Login" per invocare i metodi di Firebase che verificano le credenziali e creano il collegamento.
@@ -13,8 +13,8 @@ In caso di fallimento l'utente visualizza un messaggio di errore.
 
 ___
 ##  Registrazione
-
 ![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png)
+<figcaption> <em> Diagramma delle classi del Action Tab </em> </figcaption>
 
 La classe SignUpFragment, così come SignUpPresenter e SignUpModel ad essa collegati, contengono tutti i metodi che permettono all'utente di registrarsi.
 L'utente per registrarsi deve; inserire l'email, inserire la password, confermare la password, accettare le condizioni d'uso e infine cliccare il pulsante Registrati.
