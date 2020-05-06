@@ -4,6 +4,7 @@
 <img src=logoqbteam.png width=300 height=69>
 
 </p>
+
 # Scopo documento
 
 Lo scopo del documento è quello di mostrare le scelte architetturali che sono state progettate dal gruppo **qbteam**, per il progetto **Stalker**. Nel documento saranno presentanti i diagrammi delle classi, dei package e di sequenza progettati.
@@ -15,7 +16,7 @@ Il prodotto garantirà le seguenti funzionalità:
 -   **Amministratori:** gli amministratori dovranno essere in grado,
     attraverso la web-app, di gestire la propria , visualizzare gli
     accessi dei dipendenti e nominare altri amministratori per
-    assisterli nella gestione e monitoraggio.\
+    assisterli nella gestione e monitoraggio.
     L’amministratore avrà accesso alle seguenti funzionalità:
 
     -   **Modifica ai parametri dell’**: L’amministratore può ridefinire
