@@ -1,25 +1,25 @@
-Questa parte del prodotto è orientata all'uso da parte degli utenti che voglio essere tracciati dalle organizzazioni utilizzando l'*applicazione* Android.
+Questa parte del prodotto è orientata all'uso da parte degli utenti che voglio essere tracciati dalle organizzazioni utilizzando l'applicazione Android.
 
 ## **Scopo del prodotto**
 L'applicazione Android offre all'utente le seguenti funzionalità:
 
--   **Registrazione**: L'utente ha la possibilità di registrarsi inserendo un email, password e accettare le condizioni d'uso;
+- **Registrazione**: L'utente ha la possibilità di registrarsi inserendo un e-mail, password e accettando le condizioni d'uso;
 
--   **Login**: L'utente ha la possibilità di autenticarsi inserendo la propria email e password;
+- **Login**: L'utente ha la possibilità di autenticarsi inserendo la propria email e password;
 
--   **Scaricare lista delle organizzazioni**: L'utente, per poter visualizzare la lista delle organizzazioni, può scaricare le organizzazioni presenti nel server appena dopo aver eseguito l'autenticazione. Se dovesse annullare lo scaricamento oppure per cause di mancata connessione apparirà nella schermata principale un tasto che rinvita l'utente al tentativo di scaricarla nuovamente;
+- **Scaricamento della lista delle organizzazioni**: L'utente, per poter visualizzare la lista di tutte le organizzazioni disponibili in Stalker, deve prima scaricarla connettendosi al backend. Una volta richiesto lo scaricamento, se dovesse decidere di annullarlo o se venisse a mancare la connessione ad Internet, apparirebbe nella schermata principale un tasto per ritentare il download;
 
--   **Aggiornare lista delle organizzazioni**: L'utente può aggiornare la lista delle organizzazioni eseguendo uno "swipe down" nella schermata principale;
+- **Aggiornamento della lista delle organizzazioni**: L'utente può aggiornare la lista delle organizzazioni eseguendo uno *swipe down* nella schermata principale;
 
--   **Menù ad "Hamburger"**: L'utente può accedere ad una serie di funzionalità utilizzando il "menù ad Hamburger" riportato in altro a sinistra.
-È possibile avviare il tracciamento tramite uno switch che è disattivato per default; qualora fosse la prima volta che lo si attiva comparirà sulla schermata un pop-up che invita l'utente ad accettare i permessi necessari per attivare il gps. Altre funzionalità sono il logout e l'ordinamento alfabetico della lista delle organizzazioni;
+- **Drawer**: L'utente può accedere ad una serie di funzionalità utilizzando l'*Hamburger button* riportato in alto a sinistra.
+È possibile avviare il tracciamento tramite uno pulsante switch, disattivato di default. Alla prima attivazione del tracciamento compare sulla schermata dell'applicazione un pop-up che invita l'utente ad accettare i permessi necessari per permettere all'applicazione di utilizzare il GPS. Altre funzionalità in questo menu permettono attualmente il logout e l'ordinamento alfabetico della lista delle organizzazioni;
 
--   **Ricerca**: In alto vi è la barra principale dell'applicazione dove è presente una sezione di ricerca. Da essa è possibile eseguire delle ricerche testuali per filtrare e visualizzare la lista delle organizzazioni;
+- **Ricerca**: In alto vi è la barra principale dell'applicazione in vi è una sezione di ricerca. Con essa è possibile eseguire delle ricerche testuali per filtrare e visualizzare la lista delle organizzazioni;
 
--   **Visualizzazione pagina organizzazione**: L'utente può entrare nella pagina dedicata dell'organizzazione clickando l'elemento della lista ad essa appartenente. Al suo interno è possibile visualizzare il titolo, l'immagine, la descrizione, lo stato "sei dentro/sei fuori" ed un pulsante autenticati se l'organizzazione richiede credenziali LDAP;
+- **Visualizzazione pagina organizzazione**: L'utente può entrare nella pagina dedicata di un'organizzazione cliccando l'elemento della lista ad essa appartenente. Al suo interno è possibile visualizzare il nome dell'organizzazione, una descrizione, l'immagine di anteprima, ed un pulsante autenticati se l'organizzazione richiede un'autenticazione aziendale. Se l'organizzazione è aggiunta alla lista MyStalker (lista preferiti), viene visualizzato lo stato "Sei dentro/Sei fuori";
  
--   **Aggiunta organizzazione nella lista MyStalker (lista preferiti)**: L'utente, tenendo premuto sull'elemento della lista compare un pop-up dove può aggiungere l'organizzazione nella lista MyStalker oppure visualizzare il suo contenuto. Se l'organizzazione richiede credenziali LDAP allora dal pop-up è possibile solamente visualizzare la pagina; una volta acceduti nella pagina dedicata all'organizzazione bisogna autenticarsi tramite credenziali LDAP. Se l'autenticazione è avvenuta con successo allora tale organizzazione comparirà nella lista MyStalker;
+- **Aggiunta organizzazione nella lista MyStalker (lista preferiti)**: L'utente, tenendo premuto su di un elemento della lista delle organizzazione fa apparire un pop-up che permette di aggiungere l'organizzazione selezionata nella lista MyStalker, o più semplicemente visualizzarne il contenuto. Se l'organizzazione richiede un'autenticazione aziendale (tramite LDAP) allora con il pop-up è possibile solamente visualizzarne il contenuto. Una volta avuto accesso alla pagina dedicata dell'organizzazione bisogna autenticarsi tramite credenziali LDAP. Se l'autenticazione avviene con successo, tale organizzazione compare nella lista MyStalker;
 
--   **Eliminazione organizzazione dalla lista MyStalker**: L'utente tenendo premuto sull'elemento della lista delle organizzazioni MyStalker compare un pop-up dove è possibile accettare o rifiutare l'eliminazione di tale organizzazione;
+- **Eliminazione organizzazione dalla lista MyStalker**: L'utente, tenendo premuto sull'elemento della lista delle organizzazioni MyStalker, fa comparire un pop-up che richiede se si intende rimuovere l'organizzazione da tale lista;
 
--   **Tracciamento**: La funzionalità di tracciamento consente all'utente di farsi tracciare qualora dovesse essere vicino alle organizzazioni che sono presenti nella lista MyStalker.Se l'organizzazione dovesse essere privata (credenziali LDAP) allora è possibile cambiare, tramite uno switch presente nella pagina dell'organizzazione, la tipologia di tracciamento da anonimo a autenticato. Questa modalità riconosce l'identità dell'utente tracciato.
+- **Tracciamento**: La funzionalità di tracciamento consente all'utente di tracciare gli ingressi e le uscite presso le organizzazioni e presso i loro luoghi, solamente di quelli presenti nella lista MyStalker. Se l'organizzazione ha richiesto l'autenticazione con credenziali aziendali (LDAP) allora è possibile cambiare, tramite uno switch presente nella pagina dell'organizzazione, la tipologia di tracciamento da anonimo (default) ad autenticato (e viceversa). La modalità autenticato permette alle organizzazioni di visualizzare a posteriori gli accessi (insieme di un ingresso e un'uscita da un'organizzazione o luogo) di coloro che le hanno aggiunte alla lista MyStalker.

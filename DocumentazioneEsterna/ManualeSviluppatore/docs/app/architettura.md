@@ -1,6 +1,6 @@
 ## Model View Presenter
 
-È stato scelto di utilizzare come modello architetturale il Model View Presenter che è fortemente consigliato per chi sviluppa delle applicazioni per android.
+È stato scelto di utilizzare come modello architetturale il Model View Presenter che è fortemente consigliato per chi sviluppa delle applicazioni per Android.
 Fornisce un modo semplice per mostrare la struttura del prodotto garantendo modularità, testabilità e in generale una base di codice più pulita e gestibile.
 Ne deriva quindi l'applicazione del paradigma *separation of concerns*, che separa la responsabilità tra le differenti parti del pattern.
 La comunicazione tra le varie componenti è asincrona.

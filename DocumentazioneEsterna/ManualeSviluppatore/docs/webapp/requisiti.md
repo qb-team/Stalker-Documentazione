@@ -104,6 +104,33 @@ npm install bootstrap
 !!!info 
     Viene utilizzato JSON come formato per lo scambio di dati tra WebApp e Backend.
 
+### Firebase
+
+Il servizio Firebase viene utilizzato per gestire l'autenticazione dell'applicazione web.
+
+Per poterlo configurare innanzitutto bisogna creare un progetto in Firebase al seguente [link](https://console.firebase.google.com).
+
+![!firebaseNew](/Immagini/WebApp/Firebase1.png)
+
+Si verrà indirizzati nella pagina mostrata della immagine qui sopra. Per continua si clicchi sul bottone **Crea un progetto**, si aprirà un pagina dove verrà richiesto di inserire il nome del progetto, che si vuole creare, e di accettare alcune condizioni d'uso.
+
+Una volta concluso la creazione del progetto ci si troverà nella seguente schermata
+
+![!firebaseNew](/Immagini/WebApp/Firebase2.png)
+
+Per continuare, occorre registrate l'applicazione **Stalker-Admin** al servizio Firebase, per farlo si clicchi sul bottone cerchiato di rosso nell'immagine precedente.
+
+Si aprire una nuova pagina dove chiederà di inserire un nickname e successivamente verranno fornito le chiave dell'SDK di Firebase da copiare all'interno del applicazione web.
+
+Copiare l'SDK all'interno del file `environment.ts` come mostrato dalla seguente immagine:
+
+![!firebaseNew](/Immagini/WebApp/Firebase3.png)
+
+
+
+
+
+
 ## Creazione e configurazione dell'ambiente di sviluppo
 
 Di seguito viene illustrato come creare e configurare l'ambiente di sviluppo in Angular.
@@ -137,6 +164,7 @@ L'esecuzione del comando precedente avvia *Karma* che aprirà una finestra del b
 
 ## Source code management
 
+<a name="source-code-management"></a>
 Per poter effettuare il versionamento del codice sorgente è richiesto di utilizzare *Git*.  
 Per poterlo installare è necessario recarsi a [questa pagina](https://git-scm.com/downloads).  
 Non è strettamente necessario, ma è consigliato per integrare le proprie modifiche nel repository.
