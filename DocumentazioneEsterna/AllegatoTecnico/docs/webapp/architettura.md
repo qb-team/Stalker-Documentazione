@@ -3,7 +3,7 @@
 È stato scelto Angular 2+ come framework per lo sviluppo della Web app. Angular implementa il pattern architetturale *Model View View Model*, che favorisce la separazione tra *business logic* (Model) e *presentation logic* (View), attraverso l'utilizzo dell'application logic (View model). Ne deriva la possibilità di aggiornare la vista appena cambia lo stato interno del modello. Allo stesso modo, interagendo con la vista e sfruttando il Data Binding e i comandi offerti dal framework, sarà semplice e immediato apportare le modifiche desiderate al modello. Ne deriva quindi l'applicazione del paradigma *separation of concerns*, che garantisce responsabilità differenti alle tre parti del pattern e ne agevola l'estendibilità e la manutenzione.
 
 ![!MVVM](../Immagini/WebApp/MVVMPattern.png "MVVM di Angular")
-<figcaption> <em> Schema del pattern architetturale MVVM </em> </figcaption>
+<figcaption align="center"> <em> Schema del pattern architetturale MVVM </em> </figcaption>
 
 ### Model
 

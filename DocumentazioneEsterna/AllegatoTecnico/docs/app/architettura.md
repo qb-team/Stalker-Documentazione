@@ -6,7 +6,7 @@ Ne deriva quindi l'applicazione del paradigma *separation of concerns*, che sepa
 La comunicazione tra le varie componenti è asincrona.
 
 ![!MVP](../Immagini/App/MVP.png "MVP Pattern")
-<figcaption> <em> Schema del pattern architetturale MVP </em> </figcaption>
+<figcaption align="center"> <em> Schema del pattern architetturale MVP </em> </figcaption>
 
 ### Model
 
