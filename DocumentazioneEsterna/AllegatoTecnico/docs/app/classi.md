@@ -12,7 +12,7 @@ ___
 <figcaption> <em> Diagramma delle classi del Login </em> </figcaption>
 
 ___
-## Sign Up
+## SignUp
 ![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png)
 <figcaption> <em> Diagramma delle classi del SignUp </em> </figcaption>
 
@@ -24,12 +24,17 @@ ___
 ___
 ## Home Fragment 
 ![!HomeFragment](/Immagini/App/Classi/HomeFragment.png "Diagramma delle classi di Home Fragment")
-<figcaption> <em> Diagramma delle classi di di Home Fragment </em> </figcaption>
+<figcaption> <em> Diagramma delle classi di Home </em> </figcaption>
 
 ___
 ## My Stalker List 
 ![!MyStalkerListFragment](/Immagini/App/Classi/MyStalkerListFragment.png "Diagramma delle classi di My Stalker List")
 <figcaption> <em> Diagramma delle classi di My Stalker List </em> </figcaption>
+
+___
+## Standard Organization
+![!StandardOrganizationFragment](/Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del LDAP Organization")
+<figcaption> <em> Diagramma delle classi del Standard Organization</em> </figcaption>
 
 ___
 ## LDAP Organization

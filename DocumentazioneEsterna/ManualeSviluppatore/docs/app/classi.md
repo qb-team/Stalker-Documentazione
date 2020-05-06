@@ -17,9 +17,9 @@ In caso di successo l'utente sarà spostato nel HomePageActivity.class e visuali
 In caso di fallimento l'utente visualizza un messaggio di errore.
 
 ___
-##  Sign Up
+##  SignUp
 ![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png)
-<figcaption> <em> Diagramma delle classi del Sign Up </em> </figcaption>
+<figcaption> <em> Diagramma delle classi del SignUp </em> </figcaption>
 
 La classe SignUpFragment, così come SignUpPresenter e SignUpModel ad essa collegati, contengono tutti i metodi che permettono all'utente di registrarsi.
 L'utente per registrarsi deve; inserire l'email, inserire la password, confermare la password, accettare le condizioni d'uso e infine cliccare il pulsante Registrati.
@@ -35,12 +35,17 @@ La classe ActionTabFragment contiene tutti i metodi necessari per gestire la bar
 ___
 ## Home Fragment 
 ![!HomeFragment](/Immagini/App/Classi/HomeFragment.png "Diagramma delle classi di Home Fragment")
-<figcaption> <em> Diagramma delle classi di di Home Fragment </em> </figcaption>
+<figcaption> <em> Diagramma delle classi di Home</em> </figcaption>
 
 ___
 ## My Stalker List 
 ![!MyStalkerListFragment](/Immagini/App/Classi/MyStalkerListFragment.png "Diagramma delle classi di My Stalker List")
 <figcaption> <em> Diagramma delle classi di My Stalker List </em> </figcaption>
+
+___
+## Standard Organization
+![!StandardOrganizationFragment](/Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del LDAP Organization")
+<figcaption> <em> Diagramma delle classi del Standard Organization</em> </figcaption>
 
 ___
 ## LDAP Organization
