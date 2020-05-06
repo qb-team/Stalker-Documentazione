@@ -23,7 +23,7 @@ Nel seguente package vengono raggruppate tutte le classi dedicate alla comunicaz
 
 ## Contract
 Nel seguente package vengono raggruppate tutte le interfacce contract che servono per facilitare la comunicazione tra le varie componenti in maniera asincrona. Visto che a loro volta contengono altre interfacce possono essere rappresentate come dei "package".
-![!Contract](/Immagini/App/ContractPackageDiagramm.PNG "contract")
+![!Contract](/Immagini/App/ContractPackageDiagramm.PNG "Package del contract")
 <figcaption> <em> Diagramma del package - Package del Contract </em> </figcaption>
 
 ## Esempio di composizione di un Contract

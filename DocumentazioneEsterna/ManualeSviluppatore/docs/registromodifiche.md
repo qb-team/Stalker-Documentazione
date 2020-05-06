@@ -1,6 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+0.13.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura diagramma classi applicazione. 
 0.12.1 | 2020-05-05 | Tommaso Azzalin | Progettista | | Completata sezione Requisiti del Backend.
 0.12.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura architettura applicazione. 
 0.11.2 | 2020-05-05 | Davide Lazzaro | Programmatore | | Aggiunta contenuto sezione package nel Backend.
