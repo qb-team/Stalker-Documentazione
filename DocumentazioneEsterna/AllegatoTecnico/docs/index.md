@@ -98,3 +98,13 @@ Il prodotto garantirà le seguenti funzionalità:
 		Un utente riconosciuto potrà decidere di passare
         all’anonimato, cioè di diventare un utente anonimo, selezionando
         l’apposita funzionalità.
+
+## Composizione prodotto
+
+Il prodotto **Stalker** è formato dalle parti:
+
+-   **App**;
+
+-   **WebApp**;
+
+-   **Backend**.
