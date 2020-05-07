@@ -1,0 +1,25 @@
+site_name: Manuale utente | Stalker
+repo_url: https://github.com/qb-team/Stalker-ManualeUtente
+
+theme:
+  name: material
+  custom_dir: "docs_theme"
+
+markdown_extensions:
+  # https://github.com/g-provost/lightgallery-markdown
+  - lightgallery
+  # https://squidfunk.github.io/mkdocs-material/extensions/admonition/
+  - admonition
+  # https://squidfunk.github.io/mkdocs-material/extensions/codehilite/
+  - codehilite 
+
+nav:
+  - Home: "index.md"
+  - App utenti:
+      - Installazione: "app/installazione.md"
+  - Web-app amministratori:
+      - Installazione: "webapp/installazione.md"
+  - REST API:
+      - Utilizzo: "restapi/utilizzo.md"
+  - Il gruppo qbteam: "qbteam.md"
+  
