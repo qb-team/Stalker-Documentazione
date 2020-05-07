@@ -8,7 +8,7 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'appl
 
 ___
 ## Login
-![!LoginFragment](/Immagini/App/Classi/LoginFragment.png)
+![!LoginFragment](../Immagini/App/Classi/LoginFragment.png "Diagramma delle classi del Login")
 <figcaption align="center"> <em> Diagramma delle classi del Login </em> </figcaption>
 
 La classe LoginFragment, così come LoginPresenter e LoginModel ad essa collegati, contengono tutti i metodi che permettono all'utente di autenticarsi.
@@ -18,7 +18,7 @@ In caso di fallimento l'utente visualizza un messaggio di errore.
 
 ___
 ##  SignUp
-![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png)
+![!SignUpFragment](../Immagini/App/Classi/SignUpFragment.png "Diagramma delle classi di SignUp")
 <figcaption align="center"> <em> Diagramma delle classi del SignUp </em> </figcaption>
 
 La classe SignUpFragment, così come SignUpPresenter e SignUpModel ad essa collegati, contengono tutti i metodi che permettono all'utente di registrarsi.
@@ -28,7 +28,7 @@ Una volta cliccato il pulsante vengono invocati i metodi della libreria Firebase
 
 ___
 ## Action Tab
-![!ActionTabFragment](/Immagini/App/Classi/ActionTabClassDiagramm.PNG "Diagramma delle classi del Action Tab")
+![!ActionTabFragment](../Immagini/App/Classi/ActionTabClassDiagramm.PNG "Diagramma delle classi del Action Tab")
 <figcaption align="center"> <em> Diagramma delle classi del Action Tab </em> </figcaption>
 
 La classe ActionTabFragment contiene tutti i metodi necessari per gestire la barra principale al vertice dell'applicazione e i metodi per spostarsi nelle pagine HomeFragment e MyStalkerFragment.
@@ -36,25 +36,25 @@ La classe ActionTabFragment contiene tutti i metodi necessari per gestire la bar
 
 ___
 ## Home Fragment 
-![!HomeFragment](/Immagini/App/Classi/HomeFragment.png "Diagramma delle classi di Home Fragment")
+![!HomeFragment](../Immagini/App/Classi/HomeFragment.png "Diagramma delle classi di Home Fragment")
 <figcaption align="center"> <em> Diagramma delle classi di Home</em> </figcaption>
 
 
 ___
 ## My Stalker List 
-![!MyStalkerListFragment](/Immagini/App/Classi/MyStalkerListFragment.png "Diagramma delle classi di My Stalker List")
+![!MyStalkerListFragment](../Immagini/App/Classi/MyStalkerListFragment.png "Diagramma delle classi di My Stalker List")
 <figcaption align="center"> <em> Diagramma delle classi di My Stalker List </em> </figcaption>
 
 
 ___
 ## Standard Organization
-![!StandardOrganizationFragment](/Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del Standard Organization")
+![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del Standard Organization")
 <figcaption align="center"> <em> Diagramma delle classi dello Standard Organization</em> </figcaption>
 
 
 ___
 ## LDAP Organization
-![!LDAPorganizationFragment](/Immagini/App/Classi/LDAPorganizationClassDiagramm.PNG "Diagramma delle classi del LDAP Organization")
+![!LDAPorganizationFragment](../Immagini/App/Classi/LDAPorganizationClassDiagramm.PNG "Diagramma delle classi del LDAP Organization")
 <figcaption align="center"> <em> Diagramma delle classi del LDAP Organization </em> </figcaption>
 
 La classe LDAPorganizationFragment rappresenta la pagina dedicata alle organizzazioni che richiedono credenziali LDAP. La vista contiene le informazioni riferite
