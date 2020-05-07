@@ -38,5 +38,5 @@ ___
 
 ___
 ## LDAP Organization
-![!LDAPOrganizationFragment](../Immagini/App/Classi/LDAPorganizationClassDiagramm.PNG "Diagramma delle classi del LDAP Organization")
+![!LDAPorganizationFragment](../Immagini/App/Classi/LDAPorganizationClassDiagramm.PNG "Diagramma delle classi del LDAP Organization")
 <figcaption align="center"> <em> Diagramma delle classi del LDAP Organization </em> </figcaption>
