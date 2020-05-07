@@ -1,17 +1,15 @@
 ## Model View Presenter
 
-È stato scelto di utilizzare come modello architetturale il Model View Presenter che è fortemente consigliato per chi sviluppa delle applicazioni per dispositivi Android.
+È stato scelto di utilizzare come modello architetturale il **Model View Presenter** che è fortemente consigliato per chi sviluppa delle applicazioni per dispositivi Android.
 Il MVP Fornisce un modo semplice per mostrare la struttura del prodotto garantendo modularità, testabilità e in generale una base di codice più pulita e gestibile.
 Ne deriva quindi l'applicazione del paradigma *separation of concerns*, che separa la responsabilità tra le differenti parti del pattern.
-La comunicazione tra le varie componenti è **asincrona**.
 
 ![!MVP](../Immagini/App/MVP.png "MVP Pattern")
 <figcaption align="center"> <em> Schema del pattern architetturale MVP </em> </figcaption>
 
 ### Model
 
-Il Model è la parte che ha la responsabilità di gestione dei dati. La maggior parte delle operazioni e dei controlli vengono svolti al suo interno.
-Contiene anche i metodi che avviano le connessioni alle API ed interagiscono con esse eseguendo numerose funzionalità. Vi sono, ad esempio, i metodi che
+Il **Model** è la parte che ha la responsabilità di gestione dei dati e rappresenta il layer di persistenza dell'applicazione. La maggior parte delle operazioni e dei controlli vengono svolti al suo interno. Contiene anche i metodi che avviano le connessioni alle API ed interagiscono con esse eseguendo numerose funzionalità. Vi sono, ad esempio, i metodi che
 consentono la comunicazione con il Backend; parte del modello è costituito dalla lista delle organizzazioni che si ottiene avviando una connessione al server, scaricando i dati in
 formato JSON e salvandoli in seguito localmente.
 
@@ -26,7 +24,7 @@ In altre parole la View è la user interface.
 
 ### Presenter
 
-Il Presenter funge da livello intermedio tra la **View** e il **Model**. Tutta la logica di presentazione appartiene ad esso ed è responsabile dell'interrogazione del modello e l'aggiornamento della vista, reagendo alle interazioni che compie l'utente nella UI.
+Il **Presenter** funge da livello intermedio tra la **View** e il **Model**. Tutta la logica di presentazione appartiene ad esso ed è responsabile dell'interrogazione del modello e l'aggiornamento della vista, reagendo alle interazioni che compie l'utente nella UI. Un valore aggiunto è che il **Presenter** dipende dall'astrazione della **View** e non dalla sua concretizzazione, quindi non conosce la sua implementazione. Tutto ciò favorisce ad una più facile attività di test tramite anche l'utilizzo di mock.
 
 ### Contract
 
