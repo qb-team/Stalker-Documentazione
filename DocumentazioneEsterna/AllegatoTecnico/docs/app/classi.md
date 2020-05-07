@@ -22,7 +22,7 @@ ___
 <figcaption align="center"> <em> Diagramma delle classi del Action Tab </em> </figcaption>
 
 ___
-## Home Fragment 
+## Home 
 ![!HomeFragment](../Immagini/App/Classi/HomeFragment.png "Diagramma delle classi di Home Fragment")
 <figcaption align="center"> <em> Diagramma delle classi di Home </em> </figcaption>
 

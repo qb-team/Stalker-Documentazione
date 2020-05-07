@@ -35,7 +35,7 @@ La classe ActionTabFragment contiene tutti i metodi necessari per gestire la bar
 
 
 ___
-## Home Fragment 
+## Home 
 ![!HomeFragment](../Immagini/App/Classi/HomeFragment.png "Diagramma delle classi di Home Fragment")
 <figcaption align="center"> <em> Diagramma delle classi di Home</em> </figcaption>
 
