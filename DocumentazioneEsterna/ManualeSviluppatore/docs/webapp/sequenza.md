@@ -4,10 +4,10 @@ Vengono qua presentati alcuni diagrammi di sequenza per fornire chiarezza sull'i
 
 Vengono di seguito rappresentati dei diagrammi di sequenza per:
 
--   il login dell'amministratore nella web-app;
--   visualizzazione degli accessi in un luogo di un utente autenticato;
--   la visualizzazione del contatore di presenze, in tempo reale, presso l'attuale organizzazione;
--   modifica dei privilegi di un admin.
+-   Il login dell'amministratore nella web-app;
+-   Visualizzazione degli accessi in un luogo di un utente autenticato;
+-   La visualizzazione del contatore di presenze, in tempo reale, presso l'attuale organizzazione;
+-   Modifica dei privilegi di un admin.
 
 
 ## Diagramma del login dell'amministratore
