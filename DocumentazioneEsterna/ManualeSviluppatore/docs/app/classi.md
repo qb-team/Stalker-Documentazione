@@ -25,6 +25,7 @@ La classe SignUpFragment, così come SignUpPresenter e SignUpModel ad essa colle
 L'utente per registrarsi deve; inserire l'email, inserire la password, confermare la password, accettare le condizioni d'uso e infine cliccare il pulsante Registrati.
 Una volta cliccato il pulsante vengono invocati i metodi della libreria Firebase che ti registrano nel sistema ed eseguono automaticamente il Login.
 
+
 ___
 ## Action Tab
 ![!ActionTabFragment](/Immagini/App/Classi/ActionTabClassDiagramm.PNG "Diagramma delle classi del Action Tab")
@@ -32,20 +33,24 @@ ___
 
 La classe ActionTabFragment contiene tutti i metodi necessari per gestire la barra principale al vertice dell'applicazione e i metodi per spostarsi nelle pagine HomeFragment e MyStalkerFragment.
 
+
 ___
 ## Home Fragment 
 ![!HomeFragment](/Immagini/App/Classi/HomeFragment.png "Diagramma delle classi di Home Fragment")
 <figcaption> <em> Diagramma delle classi di Home</em> </figcaption>
+
 
 ___
 ## My Stalker List 
 ![!MyStalkerListFragment](/Immagini/App/Classi/MyStalkerListFragment.png "Diagramma delle classi di My Stalker List")
 <figcaption> <em> Diagramma delle classi di My Stalker List </em> </figcaption>
 
+
 ___
 ## Standard Organization
-![!StandardOrganizationFragment](/Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del LDAP Organization")
+![!StandardOrganizationFragment](/Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del Standard Organization")
 <figcaption> <em> Diagramma delle classi del Standard Organization</em> </figcaption>
+
 
 ___
 ## LDAP Organization

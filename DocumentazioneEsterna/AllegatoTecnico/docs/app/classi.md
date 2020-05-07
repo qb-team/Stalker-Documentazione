@@ -33,7 +33,7 @@ ___
 
 ___
 ## Standard Organization
-![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del LDAP Organization")
+![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del Standard Organization")
 <figcaption align="center"> <em> Diagramma delle classi del Standard Organization</em> </figcaption>
 
 ___
