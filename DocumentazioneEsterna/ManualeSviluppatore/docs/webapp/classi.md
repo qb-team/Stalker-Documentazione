@@ -13,7 +13,7 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi alla app
 -   Organization management.
 
 !!! info
-    Per redente ogni componente riutilizzabile, mantenibile e facile da testare, si è cercato di progettare componenti che abbiano al loro interno poche responsabilità e che siano il più coese possibili, tenendo pero sotto controllo il numero di dipendenze.
+    Per rendere ogni componente riutilizzabile, mantenibile e facile da testare, si è cercato di progettare componenti che abbiano al loro interno poche responsabilità e che siano il più coese possibili, tenendo però sotto controllo il numero di dipendenze.
 
 ## Administrator management
 ![!alt text](../Immagini/WebApp/administratorManagement.PNG "diagramma delle classi")
@@ -44,7 +44,7 @@ Viene inoltre offerta anche la funzionalità di annullamento delle modifiche, in
 
 `AdministratorOrganizationDataService` fornisce l'elenco delle organizzazioni in cui l'amministratore è registrato attraverso l'attributo `adminOrganizations` e l'organizzazione su cui si sta lavorando attraverso `selectedOrganization`.
 
-`AdministratorService` fornisce metodi per la comunicazione con il backend<sup>G</sup>:
+`AdministratorService` fornisce metodi per la comunicazione con il backend:
 
 -   `updateAdminPermission(permission: Permission)`: permette la modifica dei permessi a un amministratore;
 
@@ -61,7 +61,7 @@ Si ricorda inoltre che per usufruire di questa funzionalità occorre essere un a
 ![!alt text](../Immagini/WebApp/anonymousTracking.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Anonymous tracking </em> </figcaption>
 
-Nel precedente diagramma viene illustrato come sono state progettate le funzionalità per il monitoraggio dei utenti anonimi sia nelle organizzazioni sia nei luoghi<sup>G</sup> dell'organizzazione.
+Nel precedente diagramma viene illustrato come sono state progettate le funzionalità per il monitoraggio dei utenti anonimi sia nelle organizzazioni sia nei luoghi dell'organizzazione.
 Il component `OrganizationPresenceNumberContentComponent` permette di mostrare il numero di utenti anonimi presenti nell'organizzazione attraverso l'attributo `usersNumber`.
 Esistono i seguenti metodi:
 
@@ -69,11 +69,11 @@ Esistono i seguenti metodi:
 
  -  `subscribeToCounter()`: permette di mantenere aggiornato il contatore delle presenze.
 
-Analogamente `PlacePresenceNumberContentComponent` offre le stesse funzionalità ma per i luoghi<sup>G</sup> dell'organizzazione.
+Analogamente `PlacePresenceNumberContentComponent` offre le stesse funzionalità ma per i luoghi dell'organizzazione.
 
 Essi hanno una dipendenza di tipo `associazione` verso `AdministratorOrganizationDataService` che fornisce l'organizzazione su cui si vuole fare monitoraggio.
 
-`OrganizationPresenceNumberContentComponent` ha un'associazione con `OrganizationTrackingDataService` la quale permette di ottenere il numero degli utenti anonimi presenti nell'organizzazione attraverso il metodo `subscribeOrganizationPresenceCounter( orgId:number)`. Per far ciò ha bisogno di utilizzare i metodi offerti da `PresenceService`, i quali permettono di comunicare con il backend<sup>G</sup>.
+`OrganizationPresenceNumberContentComponent` ha un'associazione con `OrganizationTrackingDataService` la quale permette di ottenere il numero degli utenti anonimi presenti nell'organizzazione attraverso il metodo `subscribeOrganizationPresenceCounter( orgId:number)`. Per far ciò ha bisogno di utilizzare i metodi offerti da `PresenceService`, i quali permettono di comunicare con il backend.
 
 `PresenceService` offre i seguenti metodi:
 
@@ -81,7 +81,7 @@ Essi hanno una dipendenza di tipo `associazione` verso `AdministratorOrganizatio
 
 -   `getPlacePresenceCounter(placeId:number)`: ritorna il numero di utenti anonimi presenti all'interno di un luogo dell'organizzazione.
 
-Analogamente `PlacePresenceNumberContentComponent` ha un'associazione con `PlaceTrackingDataService` il quale offre il numero di utenti anonimi presenti all'interno di un luogo di un'organizzazione<sup>G</sup>.
+Analogamente `PlacePresenceNumberContentComponent` ha un'associazione con `PlaceTrackingDataService` il quale offre il numero di utenti anonimi presenti all'interno di un luogo di un'organizzazione.
 
 `OrganizationTrackingDataService` e `PlaceTrackingDataService` sono delle specializzazioni della  classe astratta `TrakingDataService`.
 
@@ -106,10 +106,10 @@ Infine `SingleUserAuthenticatedAccessesContentComponent` ha una relazione di ass
 `AccessDataService` espone due metodi. Il primo permette di ottenere gli accessi effettuati da un utente autenticato presso un dato luogo dell'organizzazione.  Il secondo invece richiede gli accessi di uno specifico utente autenticato presso l'organizzazione desiderata.
 
 ## Authentication
-![!alt text](/Immagini/WebApp/authentication.PNG "diagramma delle classi")
+![!alt text](../Immagini/WebApp/authentication.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Authentication </em> </figcaption>
 
-Nel precedente diagramma viene illustrato come è stata progettata la funzionalità di autenticazione nella applicazione web<sup>G</sup>.
+Nel precedente diagramma viene illustrato come è stata progettata la funzionalità di autenticazione nella applicazione web.
 
 `LoginComponent` contiene gli attributi: `submitted` per indicare se è stato cliccato il bottone *invio*, `email` che contiene l'email inserita e `password` che contiene la password inserita. La classe espone i seguenti metodi:
 
@@ -127,7 +127,7 @@ Nel precedente diagramma viene illustrato come è stata progettata la funzionali
 
 -   `signIn(email: string, in password: string)`: permette l'autenticazione attraverso i servizi di FireBase;
 
--   `signOut()`: permette il logout<sup>G</sup>;
+-   `signOut()`: permette il logout;
 
 -   `resetPassword(email: string)`: permette il reset della password;
 
@@ -137,22 +137,22 @@ La classe ha due associazioni:
 
 - con `AdministratorPermissionDataService` che permette di ottenere i permessi di un amministratore attraverso il metodo `requireAdministratorPermissions(adminId:string)`, che verranno successivamente memorizzati nell'attributo `adminPermissions`, offrendoli a chi ne fa richiesta.
 
-    - `AdministratorPermissionDataService` ha a sua volta un'associazione con `AdministratorService`, il quale comunicando con il backend<sup>G</sup>, permette di ottenere i permessi di un amministratore attraverso il metodo `getPermissionList(administratorId:string)`, passando l'id dell'amministratore come parametro.
+    - `AdministratorPermissionDataService` ha a sua volta un'associazione con `AdministratorService`, il quale comunicando con il backend, permette di ottenere i permessi di un amministratore attraverso il metodo `getPermissionList(administratorId:string)`, passando l'id dell'amministratore come parametro.
 
 - L' altra associazione che ha `AuthenticationService` è `AdministratorOrganizationDataService`, che permette di ottenere la lista delle organizzazioni a cui l'amministratore è registrato attraverso il metodo `requireAdministratorOrganizations(adminId: string)`. Successivamente memorizza le organizzazioni ottenute nell'attributo `adminOrganization`, offrendole a chi ne fa richiesta. Inoltre esiste il metodo `sortOrganizationsById()` che ordina la lista delle organizzazioni per id crescente.
 
-    - `AdministratorOrganizationDataService` ha a sua volta ha un'associazione con `OrganizationService`, il quale permette la comunicazione con il backend<sup>G</sup>, permettendo di ottenere la lista delle organizzazioni di un amministratore attraverso il metodo `getAdminOrganizations(AdminId: number)` inserendo l'id dell'amministratore.
+    - `AdministratorOrganizationDataService` ha a sua volta ha un'associazione con `OrganizationService`, il quale permette la comunicazione con il backend, permettendo di ottenere la lista delle organizzazioni di un amministratore attraverso il metodo `getAdminOrganizations(AdminId: number)` inserendo l'id dell'amministratore.
 
 ## Menubar
 ![!alt text](../Immagini/WebApp/menubar.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Menubar </em> </figcaption>
 
-Nel precedente diagramma viene mostrato come è stato progettato il component `ManubarComponent`. Menubar è un component che permette di gestire gli eventi generati della componente grafica omonima *menubar*.
+Nel precedente diagramma viene mostrato come è stato progettato il component `MenubarComponent`. Menubar è un component che permette di gestire gli eventi generati della componente grafica omonima *menubar*.
 Contiene i seguenti attributi:
 
 - `organization`: contiene l'organizzazione selezionata dall'utente;
 - `orgArr`: contiene la lista delle organizzazioni da mostrare all'utente;
-- `hasLDAP`: stabilisce se l'organizzazione selezionata richiede autenticazione LDAP<sup>G</sup>;
+- `hasLDAP`: stabilisce se l'organizzazione selezionata richiede autenticazione LDAP;
 - `isSubmitted`: indica se è stato cliccato il bottone *invio*;
 - `email`: contiene l'email inserita;
 - `password`: contiene la password inserita.
@@ -163,21 +163,21 @@ La classe espone inoltre i seguenti metodi:
 
 -   `navigateToHomePage()`: per gestire l'evento di navigazione verso la *homepage*;
 
--   `navigateToLogin()`: per gestire l'evento di navigazione verso la pagina di *Login* dopo il logout<sup>G</sup>;
+-   `navigateToLogin()`: per gestire l'evento di navigazione verso la pagina di *Login* dopo il logout;
 
 -   `loadOrganizationList()`: carica la lista delle organizzazione da mostrare all'utente;
 
--   `closeLdapForm()`: gestisce la chiusura del *pop-up* per l'autenticazione LDAP<sup>G</sup>;
+-   `closeLdapForm()`: gestisce la chiusura del *pop-up* per l'autenticazione LDAP;
 
--   `signOut()`: richiama il metodo per il logout()<sup>G</sup>;
+-   `signOut()`: richiama il metodo per il logout();
 
 -   `setOrganization(click:any)`: sostituisce `organization` con l'organizzazione selezionata dall'utente.
 
-Esiste quindi un'associazione con `AuthenticationService` per gestire il logout<sup>G</sup>.
+Esiste quindi un'associazione con `AuthenticationService` per gestire il logout.
 
 Vi è inoltre un'associazione con `AdministratorOrganizationDataService`, che offre la lista delle organizzazioni da cui selezionare quella che verrà memorizzata in `AdministratorOrganizationDataService` per ritornarla a chi la richiedesse.
 
-Esiste infine esiste un'associazione con `LDAPService` per permettere l'autenticazione LDAP<sup>G</sup> attraverso il metodo `bind`, il quale comunicherà direttamente col server LDAP aziendale.
+Esiste infine esiste un'associazione con `LDAPService` per permettere l'autenticazione LDAP attraverso il metodo `bind`, il quale comunicherà direttamente col server LDAP aziendale.
 
 ## Organization management
 
@@ -197,7 +197,7 @@ Ha i seguenti attributi:
 
 Offre il metodo `subscribeToOrganization()` per ottenere le coordinate dell'organizzazione.
 
-Analogo funzionamento per `ViewPlaceTrackingAreaContentComponent` che è dedicato per la visualizzazione delle coordinate dei luoghi<sup>G</sup>di un'organizzazione. Ha in più l'attributo `actualPlace` che indica il luogo su cui si sta lavorando. Ha una associazione con `PlaceService` utilizzata di comunicare con il backend<sup>G</sup> per ottenere le coordinate del luogo attuale.
+Analogo funzionamento per `ViewPlaceTrackingAreaContentComponent` che è dedicato per la visualizzazione delle coordinate dei luoghi di un'organizzazione. Ha in più l'attributo `actualPlace` che indica il luogo su cui si sta lavorando. Ha una associazione con `PlaceService` utilizzata di comunicare con il backend per ottenere le coordinate del luogo attuale.
 
 `PlaceService` ha i seguenti metodi:
 
@@ -237,7 +237,7 @@ Ha i seguenti metodi:
 
 Ha una associazione con `OrganizationService`
 
-`OrganizationService` permette di comunicare con il backend <sup>G</sup> per gestire le organizzazioni.
+`OrganizationService` permette di comunicare con il backend per gestire le organizzazioni.
 Ha i seguenti metodi:
 
 -   `requestDeletionOfOrganization(orgId:number, requestReason:string)`: permette di mandare la richiesta di eliminazione di una organizzazione inserendo il suo id e la motivazione per cui si è richiesto l'eliminazione;
@@ -251,7 +251,7 @@ Ha i seguenti attributi:
 
 -   `currentOrganization`: contiene l'organizzazione su cui si sta lavorando;
 
--   `modifiedIPAddress`: contiene il nuovo indirizzo IP<sup>G</sup> dell'organizzazione modificato dall'utente;
+-   `modifiedIPAddress`: contiene il nuovo indirizzo IP dell'organizzazione modificato dall'utente;
 
 -   `modifiedAddress`: contiene il nuovo indirizzo dell'organizzazione modificato dall'utente;
 

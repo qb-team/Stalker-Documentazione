@@ -11,22 +11,22 @@ git clone https://github.com/qb-team/Stalker-App.git
 
 <a name="prerequisiti"></a>
 ## Prerequisiti hardware e software
-Le tecnologie utilizzate per sviluppare l'applicazione Android richiedono parecchie risorse nel loro uso contemporaneo. Si consiglia quindi di avere un computer con processore almeno quad-core e RAM almeno 8 GB.
+Le tecnologie utilizzate per sviluppare l'applicazione Android richiedono parecchie risorse nel loro uso contemporaneo. Si consiglia quindi di avere un computer con processore almeno quad-core e una memoria RAM di almeno 8 GB.
 
 ## Ambiente di sviluppo
 ### Android Studio
 L'applicazione è stata sviluppata utilizzando l'ambiente di sviluppo Android Studio, attualmente alla versione 3.6.1.
 
 #### Installazione di Android Studio su Windows
-È possibile scaricare Android Studio su Windows visitando il sito ufficiale che fornisce la documentazione per lo sviluppo di applicazioni. Il link per la pagina da cui si può scaricare Android Studio si trova cliccando [qui](https://developer.android.com/studio), andando alla sezione "Android Studio downloads".
+È possibile scaricare Android Studio su Windows visitando il sito ufficiale riportato in seguito, che inoltre fornisce un'ottima documentazione per lo sviluppo di applicazioni. Il link per la pagina da cui si può scaricare Android Studio si trova cliccando [qui](https://developer.android.com/studio), andando alla sezione *"Android Studio downloads"*.  
 Per eseguire l'installazione, bisognerà seguire la guida riportata nella sezione **Windows** cliccando nel seguente link [qui](https://developer.android.com/studio/install).
 
 #### Installazione di Android Studio su MacOS
-La guida per scaricare Android Studio per MacOS è identica a quella per Windows.
+La guida per scaricare Android Studio per MacOS è identica a quella per Windows.  
 Per eseguire l'installazione, invece, bisognerà seguire la guida riportata nella sezione **Mac** cliccando nel seguente link [qui](https://developer.android.com/studio/install).
 
 #### Installazione di Android Studio su Ubuntu (e derivate, e altri derivati di Debian)
-La guida per scaricare Android Studio per Linux è identica a quella per Windows e MacOS.
+La guida per scaricare Android Studio per Linux è identica a quella per Windows e MacOS.  
 Per eseguire l'installazione, invece, bisognerà seguire la guida riportata nella sezione **Linux** cliccando nel seguente link [qui](https://developer.android.com/studio/install).
 
 ## Linguaggi utilizzati
@@ -95,5 +95,5 @@ Non è strettamente necessario, ma è consigliato per integrare le proprie modif
 
 ## Build automation
 La build automation (ovvero la gestione del processo di build) è affidata a Gradle, integrato e utilizzato in Android Studio.
-I file di build sono due: uno per tutto il progetto ed uno per il solo modulo app.
+I file di build sono due: uno per tutto il progetto ed uno per il solo modulo app.  
 Tramite Gradle il progetto dell'applicazione viene compilato, testato ed eseguito attraverso l'IDE Android Studio.

@@ -10,6 +10,14 @@
 
 Lo scopo di questo documento è quello di mostrare le scelte architetturali che sono state adottate dal gruppo *qbteam*, per il progetto *Stalker* di *Imola Informatica*. Nel documento saranno presentanti, oltre alla descrizione delle architetture adottate, i diagrammi delle classi, dei package e di sequenza che descrivono il sistema.
 
+## Composizione prodotto
+
+Il prodotto **Stalker** è formato dalle parti:
+
+-   [App utenti](/app/architettura/)
+-   [Web-app amministratori](/webapp/architettura/);
+-   [Backend](/backend/architettura/).
+
 ## Scopo prodotto 
 
 Il prodotto garantirà le seguenti funzionalità:
