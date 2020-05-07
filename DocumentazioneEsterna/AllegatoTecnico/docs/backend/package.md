@@ -2,27 +2,27 @@
 Vengono presentati qui di seguito i diagrammi UML dei package relativi al backend.
 
 ## Generale
-Nel seguente diagramma UML dei package vengono mostrate tutte le dipendenze che esistono tra i vari package.  
+Nel seguente diagramma dei package vengono mostrate tutte le dipendenze che esistono tra i vari package che compongono il backend.
 ![!it.qbteam](../Immagini/Backend/package/package-it.qbteam.png)
 <figcaption align=center> <em> Diagramma dei package - Package generale </em> </figcaption> 
  
 ## Model
-Nel seguente diagramma vengono rappresentate le classi che compongono il package del Modello.  
+Nel seguente diagramma vengono rappresentate le classi che compongono il package del modello.  
 ![!model](../Immagini/Backend/package/package-model.png)
 <figcaption align=center> <em> Diagramma dei package - Package del modello </em> </figcaption>
 
 ## API
-Nel seguente diagramma vengono rappresentate le interfacce che compongono il package della API.  
+Nel seguente diagramma vengono rappresentate le interfacce che compongono il package delle api, che corrispondo alle interfacce per i Controller (del pattern MVC implementato da Spring).  
 ![!api](../Immagini/Backend/package/package-api.png)
 <figcaption align=center> <em> Diagramma dei package - Package delle API</em> </figcaption>
 
 ## Controller
-Nel seguente diagramma vengono rappresentate le classi che compongono il package del Controller.  
+Nel seguente diagramma vengono rappresentate le classi che compongono il package dei controller, che corrispondono alle classi che possiedono i metodi che rispondo alle richieste REST dei client (app utenti e web-app amministratori).
 ![!controller](../Immagini/Backend/package/package-controller.png)
 <figcaption align=center> <em> Diagramma dei package - Package del controller</em> </figcaption>
 
 ## Service
-Nel seguente diagramma vengono rappresentate le interfacce che compongono il package dei Service.  
+Nel seguente diagramma vengono rappresentate le interfacce che compongono il package dei service, che rappresentano le interfacce per le classi che compongono il service layer.  
 ![!service](../Immagini/Backend/package/package-service.png)
 <figcaption align=center> <em> Diagramma dei package - Package dei service </em> </figcaption>
 
@@ -32,13 +32,12 @@ Nel seguente diagramma vengono rappresentate le classi che implementano le inter
 <figcaption align=center> <em> Diagramma dei package - Package delle implementazioni dei service</em> </figcaption>
 
 ## Repository
-Nel seguente diagramma vengono rappresentate le classi che compongono il package Repository, queste classi estendono CRUDRepository.  
+Nel seguente diagramma vengono rappresentate le classi che compongono il package Repository, che rappresenta il persistence layer. Queste interfacce estendono tutte CrudRepository.  
 ![!repository](../Immagini/Backend/package/package-repository.png)
 <figcaption align=center> <em> Diagramma dei package - Package delle repository </em> </figcaption>
 
-## Movement Tracker
-Nel seguente diagramma vengono rappresentati i due package che compongono Movement Tracker, i due package interni contengono le classi che si occupano 
-della implementazione nel sistema di **Redis** come *Message Broker*.  
+## Movementtracker
+Nel seguente diagramma vengono rappresentati i due package che compongono il Movement Tracker. Questo package si occupa di implementare il design pattern Publisher-Subscriber, consigliato nel capitolato. Disaccoppia l'atto di tracciamento dalla memorizzazione dei dati tracciati. I due package interni contengono le classi che si occupano della implementazione nel sistema di **Redis** come *Message Broker*.    
 ![!movementtracker](../Immagini/Backend/package/package-movementtracker.png)
 <figcaption align=center> <em> Diagramma dei package - Package del sistema di tracciamento </em> </figcaption>
 
