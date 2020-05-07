@@ -30,13 +30,8 @@ Il Presenter funge da livello intermedio tra la **View** e il **Model**. Tutta l
 
 ### Contract
 
-<<<<<<< HEAD
 Il **Contract**, come suggerisce il nome, può essere visto come un contratto nel quale vengono definiti tutti i metodi che verranno utilizzati dalla **View**, dal **Presenter** e dal **Model**.
 Quando si ha intenzione di scrivere una nuova funzionalità, è buona norma scrivere un **Contract** al primo passaggio. Esso descrive la comunicazione tra **View-Presenter** e
 **Model-Presenter**, consentendo una progettazione più pulita e diminuire le dipendenze tra le componenti.  
 Il **Contract** è un'interfaccia utilizzata per ogni fragment presente nell'applicazione e contiene le altre interfacce della **View**, **Presenter** e **Model** per garantire le varie comunicazioni.
-=======
-Quando si ha intenzione di scrivere una nuova funzionalità, è buona norma scrivere un contratto al primo passaggio. Il contratto descrive la comunicazione tra View-Presenter e
-Model-Presenter, esso consente una progettazione più pulita e diminuire le dipendenze tra le componenti.
-Il Contract è un'interfaccia utilizzata per ogni fragment presente nell'applicazione e contiene le altre interfacce della View, Presenter e Model per garantire le varie comunicazioni.
->>>>>>> 7e0a869e5a2b81b0741f9ed436c50e8170560ce7
+
