@@ -1,12 +1,12 @@
 ## Model View Presenter
 
-È stato scelto di utilizzare come modello architetturale il Model View Presenter che è fortemente consigliato per chi sviluppa delle applicazioni per Android.
-Fornisce un modo semplice per mostrare la struttura del prodotto garantendo modularità, testabilità e in generale una base di codice più pulita e gestibile.
+È stato scelto di utilizzare come modello architetturale il Model View Presenter che è fortemente consigliato per chi sviluppa delle applicazioni per dispositivi Android.
+Il MVP Fornisce un modo semplice per mostrare la struttura del prodotto garantendo modularità, testabilità e in generale una base di codice più pulita e gestibile.
 Ne deriva quindi l'applicazione del paradigma *separation of concerns*, che separa la responsabilità tra le differenti parti del pattern.
 La comunicazione tra le varie componenti è **asincrona**.
 
-![!MVP](/Immagini/App/MVP.png "MVP Pattern")
-<figcaption> <em> Schema del pattern architetturale MVP </em> </figcaption>
+![!MVP](../Immagini/App/MVP.png "MVP Pattern")
+<figcaption align="center"> <em> Schema del pattern architetturale MVP </em> </figcaption>
 
 ### Model
 
@@ -30,7 +30,13 @@ Il Presenter funge da livello intermedio tra la **View** e il **Model**. Tutta l
 
 ### Contract
 
+<<<<<<< HEAD
 Il **Contract**, come suggerisce il nome, può essere visto come un contratto nel quale vengono definiti tutti i metodi che verranno utilizzati dalla **View**, dal **Presenter** e dal **Model**.
 Quando si ha intenzione di scrivere una nuova funzionalità, è buona norma scrivere un **Contract** al primo passaggio. Esso descrive la comunicazione tra **View-Presenter** e
 **Model-Presenter**, consentendo una progettazione più pulita e diminuire le dipendenze tra le componenti.  
 Il **Contract** è un'interfaccia utilizzata per ogni fragment presente nell'applicazione e contiene le altre interfacce della **View**, **Presenter** e **Model** per garantire le varie comunicazioni.
+=======
+Quando si ha intenzione di scrivere una nuova funzionalità, è buona norma scrivere un contratto al primo passaggio. Il contratto descrive la comunicazione tra View-Presenter e
+Model-Presenter, esso consente una progettazione più pulita e diminuire le dipendenze tra le componenti.
+Il Contract è un'interfaccia utilizzata per ogni fragment presente nell'applicazione e contiene le altre interfacce della View, Presenter e Model per garantire le varie comunicazioni.
+>>>>>>> 7e0a869e5a2b81b0741f9ed436c50e8170560ce7

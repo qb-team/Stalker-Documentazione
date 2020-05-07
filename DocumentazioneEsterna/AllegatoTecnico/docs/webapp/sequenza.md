@@ -4,10 +4,10 @@ Vengono qua presentati alcuni diagrammi di sequenza per fornire chiarezza sull'i
 
 Vengono di seguito rappresentati dei diagrammi di sequenza per:
 
--   il login dell'amministratore nella web-app;
--   visualizzazione degli accessi in un luogo di un utente autenticato;
--   la visualizzazione del contatore di presenze, in tempo reale, presso l'attuale organizzazione;
--   modifica dei privilegi di un admin.
+-   Il login dell'amministratore nella web-app;
+-   Visualizzazione degli accessi in un luogo di un utente autenticato;
+-   La visualizzazione del contatore di presenze, in tempo reale, presso l'attuale organizzazione;
+-   Modifica dei privilegi di un admin.
 
 
 ## Diagramma del login dell'amministratore
@@ -27,14 +27,14 @@ Nel diagramma viene rappresentato come reperire gli accessi effettuati da un ute
 
 ## Diagramma del contatore presenze di un'organizzazione
 
-![!alt text](../Immagini/WebApp/viewing the org presence counter.PNG "diagramma di sequenza per la visualizzazione del contatore presenze in una data organizzazione")
+![!alt text](../Immagini/WebApp/viewingTheOrgPresenceCounter.PNG "diagramma di sequenza per la visualizzazione del contatore presenze in una data organizzazione")
 <figcaption> <em> Diagramma di sequenza per la visualizzazione del contatore presenze in una data organizzazione </em> </figcaption>
 
 Nel diagramma viene rappresentata la visualizzazione del contatore presenze in una data organizzazione.
 
 ## Diagramma della modifica dei privilegi di un amministratore
 
-![!alt text](../Immagini/WebApp/modify admin priv level.PNG "diagramma di sequenza per la modifica dei privilegi di un amministratore")
+![!alt text](../Immagini/WebApp/modifyAdminPrivLevel.PNG "diagramma di sequenza per la modifica dei privilegi di un amministratore")
 <figcaption> <em> Diagramma di sequenza per la modifica dei privilegi di un amministratore </em> </figcaption>
 
 Nel diagramma viene rappresentato come avviene la modifica dei privilegi di un amministratore.
