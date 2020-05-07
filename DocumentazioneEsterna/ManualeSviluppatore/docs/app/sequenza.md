@@ -1,6 +1,6 @@
 ## Diagramma dell'autenticazione al server LDAP
 
-![!alt text](/Immagini/App/LDAPConnectionSuccess.PNG "diagramma di sequenza dell'autenticazione al server LDAP")
+![!Diagramma di sequenza dell'autenticazione a un server LDAP](../Immagini/App/LDAPConnectionSuccess.png "Diagramma di sequenza dell'autenticazione al server LDAP")
 
 Questo diagramma di sequenza rappresenta la serie di azioni svolte dall'applicazione quando viene effettuata l'autenticazione LDAP.
 
