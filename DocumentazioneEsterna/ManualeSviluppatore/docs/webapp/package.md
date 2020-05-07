@@ -1,4 +1,4 @@
-Vengono presentati qui di seguito i diagrammi UML dei package relativi alla applicazione web<sup>G</sup>.
+Vengono presentati qui di seguito i diagrammi UML dei package relativi alla applicazione web.
 ## Visione generale delle dipendenze tra package ##
 Nel seguente diagramma UML dei package vengono mostrate tutte le dipendenze che esistono tra i vari package.
 <div align="center">
@@ -21,14 +21,14 @@ Nel seguente package vengono raggruppate tutte le classi dedicate alle funzional
 </div>
 <br/>
 ## Services ##
-Nel seguente package vengono raggruppate tutti i services che contengono informazioni e metodi molto riutilizzati all'interno della applicazione web<sup>G</sup>.
+Nel seguente package vengono raggruppate tutti i services che contengono informazioni e metodi molto riutilizzati all'interno della applicazione web.
 <div align="center">
 ![!Services](/Immagini/WebApp/ServicesPackage.png "Diagramma dei package dei Services")
 <figcaption align=center> <em> Diagramma dei package - Package dei Services </em> </figcaption>
 </div>
 <br>
 ## API ##
-Nel seguente package vengono raggruppate tutti le API utilizzate per comunicare con il backend<sup>G</sup>.
+Nel seguente package vengono raggruppate tutti le API utilizzate per comunicare con il backend.
 <div align="center">
 ![!API](/Immagini/WebApp/APIPackage.png "Diagramma dei package delle API")
 <figcaption align=center> <em> Diagramma dei package - Package delle API </em> </figcaption>
