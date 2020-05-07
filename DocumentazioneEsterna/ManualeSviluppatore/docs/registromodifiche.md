@@ -18,7 +18,7 @@ Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 0.6.1 | 2020-05-05 | Emanuele Cisotto | Progettista | | Aggiunti diagrammi di sequenza per la web-app.
 0.6.0 | 2020-05-05 | Emanuele Cisotto | Progettista | | Stesura dei diagrammi di sequenza per la web-app.
 0.5.1 | 2020-05-04 | Emanuele Cisotto | Progettista | | Aggiunta introduzione e architettura web-app.
-0.5.0 | 2020-05-04 | Emanuele Cisotto | Progettista | | Stesura della introduzione e della architettura web-app.
+0.5.0 | 2020-05-04 | Emanuele Cisotto | Progettista | Tommaso Azzalin | Stesura della introduzione e della architettura web-app.
 0.4.1 | 2020-05-04 | Enrico Salmaso | Progettista | Tommaso Azzalin | Stesura sezione Requisiti.
 0.4.0 | 2020-05-04 | Christian Mattei | Progettista | Tommaso Azzalin | Stesura introduzione applicazione e struttura della sezione Requisiti.
 0.3.0 | 2020-05-03 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunti requisiti per il backend.
