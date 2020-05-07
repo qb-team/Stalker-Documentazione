@@ -2,7 +2,7 @@
 Vengono presentati qui di seguito i diagrammi UML delle classi relativi al backend.  
 
 !!! info
-    Per redente ogni componente riutilizzabile, mantenibile e facile da testare, si è cercato di progettare componenti che abbiano al loro interno poche responsabilità e che siano il più coese possibili, tenendo però sotto controllo il numero di dipendenze.
+    Per rendere ogni componente riutilizzabile, mantenibile e facile da testare, si è cercato di progettare componenti che abbiano al loro interno poche responsabilità e che siano il più coese possibili, tenendo però sotto controllo il numero di dipendenze.
 
 ## Diagrammi dei Service
 
