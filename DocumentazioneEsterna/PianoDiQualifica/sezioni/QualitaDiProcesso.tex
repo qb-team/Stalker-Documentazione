@@ -15,6 +15,7 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
    	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
    	MPC1 & Percentuale Requisiti Soddisfatti & $PRS$ & $PRS = 100\%$ & $PRS = 100\%$ \\
    \end{longtable}
+\vspace{0.3cm}
 \subsubsection{Progettazione architetturale}
 
 \paragraph{Metrica MPC2 - Structural Fan-In}
@@ -25,6 +26,7 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
 \begin{itemize}
 	\item \textbf{Descrizione:} Numero di procedure che questa procedura chiama;
 \end{itemize}
+\vspace{0.3cm}
 \subsubsection{Progettazione di dettaglio}
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}
@@ -35,149 +37,52 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
     MPC2 & Coupling Between Objects & $CBO$ & $0 \leq CBO \leq 4$ & $0 \leq CBO \leq 2$ \\
     MPC3 & Livello Profondità Gerarchia & $LPG$ &  $1 \leq LPG \leq 3$ &  $1 \leq LPG \leq 2$ \\
 \end{longtable}
+\newpage
 \subsubsection{Codifica}  
-    \paragraph{Metrica MPC4 - Numero di parametri per metodo} 
-    \begin{itemize}
-        \item \textbf{Descrizione:} Un numero elevato di parametri per metodo può indicare il bisogno di ridurre funzionalità associate a tale metodo. Più è grande questo valore e più la possibilità aumenta nel commettere errori progettuali;
-        \item \textbf{Range di valori che può assumere:}
-        \begin{itemize}
-            \item \textbf{Accettabile:} $0 \leq{} NPM \leq 8$
-            \item \textbf{Ottimale:} $0 \leq{} NPM \leq 4$
-        \end{itemize}
-    \end{itemize}
-
-    \paragraph{Metrica MPC5 - Linee di commento per linee di codice}
-    \begin{itemize}
-        \item \textbf{Descrizione:} È il rapporto tra linee di commento e linee di codice. Per le linee di codice si intende Logical SLOC il numero di linee di codice effettive che corrispondono al numero di statement;
-        \item \textbf{Formula:}$$LCLC = {|linee \; di \; commento| \over |linee \; di \; codice|}$$
-        \item \textbf{Range di valori che può assumere:}
-        \begin{itemize}
-            \item \textbf{Accettabile:} $LCLC \geq 0.25$
-            \item \textbf{Ottimale:} $LCLC \geq 0.30$
-        \end{itemize}
-    \end{itemize}
-
+     \rowcolors{2}{grigetto}{white}
+     \renewcommand{\arraystretch}{1.5}
+     \begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
+     	\caption{Tabella metriche per la codifica}\\
+     	\rowcolor{darkblue}
+     	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
+		MPC4 & Numero di Parametri per Metodo & $NPM$ & $0 < NPM < 8$ & $ 0 < NPM < 4$ \\
+		MPC5 & Linee di Codice per Linee di Commento & $LCLC$ & $LCLC \geq 0.25$ & $LCLC \geq 0.30$ \\
+	\end{longtable}
+\vspace{0.3cm}
 \subsection{Processi supporto}
 
 \subsubsection{Documentazione}
-    \paragraph{Metrica MPC6 - Indice di Gulpease}
-    \begin{itemize}
-        \item \textbf{Descrizione:} È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Il valore è un intero da 0 a 100; se esso è inferiore a 80 sarà difficile da leggere per chi ha la licenza elementare, mentre se è inferiore a 40 sarà difficili da leggere per chi ha un diploma superiore;
-        \item \textbf{Formula:} $$IG = 89 + {{300 \; \cdot \; |frasi| \; - \; 10 \; \cdot \; |lettere|}\over |parole|}$$
-        \item \textbf{Range di valori che può assumere:}
-        \begin{itemize}
-            \item \textbf{Accettabile:} $40 < IG < 100$
-            \item \textbf{Ottimale:} $80 < IG < 100$
-        \end{itemize}
-    \end{itemize}
-
-\subsubsection{Verifica}
-    \paragraph{Metrica MPC7 - Code Coverage}
-    \begin{itemize}
-        \item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento;
-        \item \textbf{Formula:} $$CC = {|linee \; di \; codice \; percorse \; dai  \; test| \over |linee \; di \; codice \; totali|} \; \cdot \; 100$$
-        \item \textbf{Range di valori che può assumere:}
-        \begin{itemize}
-            \item \textbf{Accettabile:} $CC = 80\%$
-            \item \textbf{Ottimale:} $CC = 100\%$
-        \end{itemize}
-    \end{itemize}
-
-\subsection{Processi organizzativi}
-
-\subsubsection{Pianificazione}
-
-\paragraph{Metrica MPC8 - Actual Cost of Work Performed}
-\begin{itemize}
-	\item \textbf{Descrizione:} Denaro speso fino al momento del calcolo;
-	\item \textbf{Formula:} $$ACWP = {Somma\; delle\; ore\; lavorative\; moltiplicate\; con\; il\; corrispondente\; costo\; orario}$$
-	con:
-	\begin{itemize}
-		\item $B_{tot}$ = Budget totale.
-	\end{itemize}
-	 \begin{itemize}
-		\item \textbf{Accettabile:}  $0 \leq ACWP \leq BCWS$
-		\item \textbf{Ottimale:} $0 \leq ACWP \leq B_{tot}$
-	\end{itemize}
-\end{itemize}
-
-\paragraph{Metrica MPC9 - Budgeted Cost of Work Scheduled}
-\begin{itemize}
-	\item \textbf{Descrizione:} Costo pianificato per realizzare le attività di progetto pianificate fino al momento del calcolo. Per attività di progetto pianificate si intendono il numero di requisiti che devono soddisfatti dal prodotto software;
-	\item \textbf{Formula:} $$BCWS = {B_{tot} * \% di\; lavoro\; pianificato}$$
-	\begin{itemize}
-		\item $B_{tot}$ = Budget totale.
-	\end{itemize}
-	\begin{itemize}
-		\item \textbf{Accettabile:} $BCWS \geq 0$
-		\item \textbf{Ottimale:} $BCWS \geq 0$
-	\end{itemize}
-\end{itemize}
-
-\paragraph{Metrica MPC10 - Budgeted Cost of Work Performed}
-\begin{itemize}
-	\item \textbf{Descrizione:} Il costo del lavoro fatto fino al momento del calcolo, ovvero la variazione del numero di requisiti soddisfatti nel periodo in cui la metrica viene calcolata;
-	\item \textbf{Formula:} $$BCWP = {B_{tot} * \% di\; lavoro\; effettivamento\; fatto}$$
-	 	\begin{itemize}
-	 	\item $B_{tot}$ = Budget totale.
-	 \end{itemize}
-	 \begin{itemize}
-	 	\item \textbf{Accettabile:} $BCWP \geq 0$
-	 	\item \textbf{Ottimale:} $BCWP \geq 0$
-	 \end{itemize}
-
-\end{itemize}
-
-    \paragraph{Metrica MPC11 - Schedule Variance}
-    \begin{itemize}
-        \item \textbf{Descrizione:} È il valore che indica se si è in linea ($=0$), in anticipo ($>0$) oppure in ritardo ($<0$) rispetto alla schedulazione delle attività di progetto pianificate nella \glo{baseline};
-        \item \textbf{Formula:} $$SV = {BCWP \; - \; BCWS}$$
-        con:
-        \begin{itemize}
-            \item $BCWP$ = Budgeted Cost of Work Performed (valore delle attività eseguite nella data corrente);
-            \item $BCWS$ = Budgeted Cost of Work Scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente);
-        \end{itemize}
-        \item \textbf{Range di valori che può assumere:}
-        \begin{itemize}
-            \item \textbf{Accettabile:} $SV = 0$
-            \item \textbf{Ottimale:} $SV > 0$
-        \end{itemize}
-    \end{itemize}
-
-    \paragraph{Metrica MPC12 - Budget Variance}
-        \begin{itemize}
-            \item \textbf{Descrizione:} È il valore che indica se alla data corrente si è speso di più ($>0$) o di meno ($<0$) rispetto a quanto pianificato dal budget totale $B_{tot}$;
-            \item \textbf{Formula:} $$BV = {BCWS \; - \; ACWP}$$
-            con:
-            \begin{itemize}
-                \item $BCWS$ = Budgeted Cost of Work Scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente);
-                \item $ACWP$ = Actual Cost of Work Performed (costo effettivamente sostenuto alla data corrente);
-                \item $B_{tot}$ = Budget totale.
-            \end{itemize}
-            \item \textbf{Range di valori che può assumere:}
-            \begin{itemize}
-                \item \textbf{Accettabile:} $0 \leq BV < ACWP$
-                \item \textbf{Ottimale:} $0 \leq BV \leq B_{tot}$
-            \end{itemize}
-        \end{itemize}
-
-\subsection{Tabella riassuntiva metriche dei processi}
     \rowcolors{2}{grigetto}{white}
     \renewcommand{\arraystretch}{1.5}
     \begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
-    \caption{Tabella metriche dei processi}\\
-    \rowcolor{darkblue}
-    \textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
-    MPC1 & Percentuale Requisiti Soddisfatti & $PRS$ & $PRS = 100\%$ & $PRS = 100\%$ \\
-    MPC2 & Coupling Between Objects & $CBO$ & $0 \leq CBO \leq 4$ & $0 \leq CBO \leq 2$ \\
-    MPC3 & Livello Profondità Gerarchia & $LPG$ &  $1 \leq LPG \leq 3$ &  $1 \leq LPG \leq 2$ \\
-    MPC4 & Numero di Parametri per Metodo & $NPM$ & $0 < NPM < 8$ & $ 0 < NPM < 4$ \\
-    MPC5 & Linee di Codice per Linee di Commento & $LCLC$ & $LCLC \geq 0.25$ & $LCLC \geq 0.30$ \\
-    MPC6 & Indice di Gulpease & $IG$ & $40 < IG < 100$ & $80 < IG < 100$ \\
-    MPC7 & Code Coverage & $CC$ & $CC = 80\%$ & $CC = 100\%$  \\
-    MPC8 & Actual Cost of Work Performed & $ACWP$ & $0 \leq ACWP \leq BCWS$ & $0 \leq ACWP \leq B_{tot}$ \\
-    MPC9 & Budgeted Cost of Work Scheduled & $BCWS$ & $BCWS \geq 0$ &  $BCWS \geq 0$ \\
-    MPC10 & Budgeted Cost of Work Performed & $BCWP$ & $BCWP \geq 0$ & $BCWP \geq 0$ \\
-    MPC11 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\	
-    MPC12 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\
+    	\caption{Tabella metriche per la documentazione}\\
+    	\rowcolor{darkblue}
+    	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
+    	MPC6 & Indice di Gulpease & $IG$ & $40 < IG < 100$ & $80 < IG < 100$ \\
     \end{longtable}
+\vspace{0.3cm}
+\subsubsection{Verifica}
+    \rowcolors{2}{grigetto}{white}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
+    	\caption{Tabella metriche per la verifica}\\
+    	\rowcolor{darkblue}
+    	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
+    	MPC7 & Code Coverage & $CC$ & $CC = 80\%$ & $CC = 100\%$  \\
+    \end{longtable}
+\vspace{0.3cm}
+\subsection{Processi organizzativi}
+
+\subsubsection{Pianificazione}
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
+	\caption{Tabella metriche per la pianificazione}\\
+	\rowcolor{darkblue}
+	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
+		MPC8 & Actual Cost of Work Performed & $ACWP$ & $0 \leq ACWP \leq BCWS$ & $0 \leq ACWP \leq B_{tot}$ \\
+		MPC9 & Budgeted Cost of Work Scheduled & $BCWS$ & $BCWS \geq 0$ &  $BCWS \geq 0$ \\
+		MPC10 & Budgeted Cost of Work Performed & $BCWP$ & $BCWP \geq 0$ & $BCWP \geq 0$ \\
+		MPC11 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\	
+		MPC12 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\
+	\end{longtable}
