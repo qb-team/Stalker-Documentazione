@@ -7,60 +7,34 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
 \subsection{Processi primari}
 
 \subsubsection{Analisi dei requisiti}
-    \paragraph{Metrica MPC1 - Percentuale requisiti obbligatori soddisfatti}
-    \begin{itemize}
-        \item \textbf{Descrizione:} È la percentuale dei requisiti che devono essere soddisfatti;
-        \item \textbf{Formula:} $$PRS = {|requisiti \; soddisfatti| \over |requisiti \; totali|}\; \cdot \; 100$$
-        \item \textbf{Range di valori che può assumere:}
-        \begin{itemize}
-            \item \textbf{Accettabile:} $PRS = 100\%$
-            \item \textbf{Ottimale:} $PRS = 100\%$
-        \end{itemize}
-    \end{itemize} 
-%\subsubsection{Progettazione architetturale}
+   \rowcolors{2}{grigetto}{white}
+   \renewcommand{\arraystretch}{1.5}
+   \begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
+   	\caption{Tabella metriche per l'analisi dei requisiti}\\
+   	\rowcolor{darkblue}
+   	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
+   	MPC1 & Percentuale Requisiti Soddisfatti & $PRS$ & $PRS = 100\%$ & $PRS = 100\%$ \\
+   \end{longtable}
+\subsubsection{Progettazione architetturale}
 
-%\paragraph{Metrica MPC2 - Structural Fan-In}
-%\begin{itemize}
-%	\item \textbf{Descrizione:} Numero di procedure che chiama questa procedura;
-%\end{itemize}
-%\paragraph{Metrica MPC3 - Structural Fan-Out}
-%\begin{itemize}
-%	\item \textbf{Descrizione:} Numero di procedure che questa procedura chiama;
-%\end{itemize}
+\paragraph{Metrica MPC2 - Structural Fan-In}
+\begin{itemize}
+	\item \textbf{Descrizione:} Numero di procedure che chiama questa procedura;
+\end{itemize}
+\paragraph{Metrica MPC3 - Structural Fan-Out}
+\begin{itemize}
+	\item \textbf{Descrizione:} Numero di procedure che questa procedura chiama;
+\end{itemize}
 \subsubsection{Progettazione di dettaglio}
-    \paragraph{Metrica MPC2 - Incapsulamento CBO}
-    \begin{itemize}
-        \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una in esame al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling della classe in esame e più il sistema è difficile da mantenere;
-        \item \textbf{Formula:} $$CBO = {\sum_{i=1}^{N} C_i}$$
-        con:
-        \begin{itemize}
-            \item $N$ = numero classi non appartenenti alla gerarchia di ereditarietà della classe in esame;
-            \item $C_i$ =
-            \begin{math} {
-                \begin{cases}
-                    1, & la \; $i$-esima \; classe \; \grave{e} \; correlata \; a \; quella \; in \; esame \\
-                    0, & la \; $i$-esima \; classe \; non \; \grave{e} \; correlata \; a \; quella \; in \; esame
-                \end{cases}
-            }
-            \end{math}
-        \end{itemize}
-        \item \textbf{Range di valori che può assumere:}
-        \begin{itemize}
-            \item \textbf{Accettabile:} $0 \leq{} CBO \leq 4$
-            \item \textbf{Ottimale:} $0 \leq{} CBO \leq 2$
-        \end{itemize}
-    \end{itemize}
-
-    \paragraph{Metrica MPC3 - Livello profondità gerarchia}
-    \begin{itemize}
-        \item \textbf{Descrizione:} È il valore intero che indica la profondità della gerarchia formata tra classi. Se una gerarchia è formata da una classe allora il valore è uguale a 1;
-        \item \textbf{Range di valori che può assumere:}
-        \begin{itemize}
-            \item \textbf{Accettabile:} $1 \leq{} LPG \leq 3$
-            \item \textbf{Ottimale:} $1 \leq{} LPG \leq 2$
-        \end{itemize}
-    \end{itemize}
-
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
+	\caption{Tabella metriche per progettazione di dettaglio}\\
+	\rowcolor{darkblue}
+	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
+    MPC2 & Coupling Between Objects & $CBO$ & $0 \leq CBO \leq 4$ & $0 \leq CBO \leq 2$ \\
+    MPC3 & Livello Profondità Gerarchia & $LPG$ &  $1 \leq LPG \leq 3$ &  $1 \leq LPG \leq 2$ \\
+\end{longtable}
 \subsubsection{Codifica}  
     \paragraph{Metrica MPC4 - Numero di parametri per metodo} 
     \begin{itemize}
