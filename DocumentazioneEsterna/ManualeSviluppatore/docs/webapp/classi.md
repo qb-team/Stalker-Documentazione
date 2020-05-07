@@ -106,7 +106,7 @@ Infine `SingleUserAuthenticatedAccessesContentComponent` ha una relazione di ass
 `AccessDataService` espone due metodi. Il primo permette di ottenere gli accessi effettuati da un utente autenticato presso un dato luogo dell'organizzazione.  Il secondo invece richiede gli accessi di uno specifico utente autenticato presso l'organizzazione desiderata.
 
 ## Authentication
-![!alt text](/Immagini/WebApp/authentication.PNG "diagramma delle classi")
+![!alt text](../Immagini/WebApp/authentication.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Authentication </em> </figcaption>
 
 Nel precedente diagramma viene illustrato come è stata progettata la funzionalità di autenticazione nella applicazione web.

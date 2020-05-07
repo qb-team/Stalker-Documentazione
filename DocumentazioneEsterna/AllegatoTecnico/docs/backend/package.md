@@ -4,7 +4,8 @@ Vengono presentati qui di seguito i diagrammi UML dei package relativi al backen
 ## Generale
 Nel seguente diagramma UML dei package vengono mostrate tutte le dipendenze che esistono tra i vari package.  
 ![!it.qbteam](../Immagini/Backend/package/package-it.qbteam.png)
-<figcaption align=center> <em> Diagramma dei package - Package generale </em> </figcaption>  
+<figcaption align=center> <em> Diagramma dei package - Package generale </em> </figcaption> 
+ 
 ## Model
 Nel seguente diagramma vengono rappresentate le classi che compongono il package del Modello.  
 ![!model](../Immagini/Backend/package/package-model.png)
