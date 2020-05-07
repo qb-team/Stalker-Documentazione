@@ -49,7 +49,7 @@ ___
 ___
 ## Standard Organization
 ![!StandardOrganizationFragment](/Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del Standard Organization")
-<figcaption> <em> Diagramma delle classi del Standard Organization</em> </figcaption>
+<figcaption> <em> Diagramma delle classi dello Standard Organization</em> </figcaption>
 
 
 ___
