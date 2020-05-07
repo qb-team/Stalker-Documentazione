@@ -13,7 +13,7 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi alla app
 -   Organization management.
 
 !!! info
-    Per redente ogni componente riutilizzabile, mantenibile e facile da testare, si è cercato di progettare componenti che abbiano al loro interno poche responsabilità e che siano il più coese possibili, tenendo pero sotto controllo il numero di dipendenze.
+    Per rendere ogni componente riutilizzabile, mantenibile e facile da testare, si è cercato di progettare componenti che abbiano al loro interno poche responsabilità e che siano il più coese possibili, tenendo però sotto controllo il numero di dipendenze.
 
 ## Administrator management
 ![!alt text](../Immagini/WebApp/administratorManagement.PNG "diagramma delle classi")
@@ -147,7 +147,7 @@ La classe ha due associazioni:
 ![!alt text](../Immagini/WebApp/menubar.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Menubar </em> </figcaption>
 
-Nel precedente diagramma viene mostrato come è stato progettato il component `ManubarComponent`. Menubar è un component che permette di gestire gli eventi generati della componente grafica omonima *menubar*.
+Nel precedente diagramma viene mostrato come è stato progettato il component `MenubarComponent`. Menubar è un component che permette di gestire gli eventi generati della componente grafica omonima *menubar*.
 Contiene i seguenti attributi:
 
 - `organization`: contiene l'organizzazione selezionata dall'utente;
