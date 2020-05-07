@@ -16,9 +16,10 @@ formato JSON e salvandoli in seguito localmente.
 ### View
 
 La View ha la responsabilità di passare i dati al Presenter. Essa è implementata da:
-  * attività (activity);
-  * frammenti (fragment);
-  * qualsiasi forma grafica con cui l'utente finale dell'applicazione andrà ad interagire come ad esempio: ProgressBar, TextView, RecyclerView, ecc.   
+
+  * Attività (activity);
+  * Frammenti (fragment);
+  * Qualsiasi forma grafica con cui l'utente finale dell'applicazione andrà ad interagire come ad esempio: ProgressBar, TextView, RecyclerView, ecc.   
 
 In altre parole la View è la user interface.
 
