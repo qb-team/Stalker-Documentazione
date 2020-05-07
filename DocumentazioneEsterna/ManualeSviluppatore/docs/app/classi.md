@@ -8,7 +8,7 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'appl
 
 ___
 ## Login
-![!LoginFragment](/Immagini/App/Classi/LoginFragment.png)
+![!LoginFragment](/Immagini/App/Classi/LoginFragment.png "Diagramma delle classi di Login")
 <figcaption> <em> Diagramma delle classi del Login </em> </figcaption>
 
 La classe LoginFragment, così come LoginPresenter e LoginModel ad essa collegati, contengono tutti i metodi che permettono all'utente di autenticarsi.
@@ -18,7 +18,7 @@ In caso di fallimento l'utente visualizza un messaggio di errore.
 
 ___
 ##  SignUp
-![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png)
+![!SignUpFragment](/Immagini/App/Classi/SignUpFragment.png "Diagramma delle classi di SignUp")
 <figcaption> <em> Diagramma delle classi del SignUp </em> </figcaption>
 
 La classe SignUpFragment, così come SignUpPresenter e SignUpModel ad essa collegati, contengono tutti i metodi che permettono all'utente di registrarsi.

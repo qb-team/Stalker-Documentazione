@@ -8,12 +8,12 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'appl
 
 ___
 ## Login
-![!LoginFragment](../Immagini/App/Classi/LoginFragment.png)
+![!LoginFragment](../Immagini/App/Classi/LoginFragment.png "Diagramma delle classi di Login")
 <figcaption align="center"> <em> Diagramma delle classi del Login </em> </figcaption>
 
 ___
 ## SignUp
-![!SignUpFragment](../Immagini/App/Classi/SignUpFragment.png)
+![!SignUpFragment](../Immagini/App/Classi/SignUpFragment.png "Diagramma delle classi di SignUp")
 <figcaption align="center"> <em> Diagramma delle classi del SignUp </em> </figcaption>
 
 ___
