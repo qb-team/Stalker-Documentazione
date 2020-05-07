@@ -109,3 +109,15 @@ ___
 
 Il Report Controller si occupa di soddisfare le richieste ricevute dai client per ottenere report tabellari sugli accessi passati presso i luoghi di un'organizzazione da parte di utenti autenticati, servendosi del Report Service.
 ___
+
+## Diagrammi di altre classi
+
+### Authentication Facade
+![!Authentication Facade](../Immagini/Backend/Classi/AuthenticationFacade.png)
+
+L'Authentication Facade è una classe che implementa il design pattern Facade. Si occupa di raggruppare tutte le funzionalità comuni ai vari controller fornendole da un unico punto di accesso. Queste funzionalità sono quelle offerte dall'Authentication Service, per verificare lo stato di autenticazione di un utente o amministratore, e quelle del Permission Service, per verificare se un utente è amministratore o meno e se ha i permessi presso una determinata organizzazione.
+
+### Movement Subscriber
+![!Movement Subscriber](../Immagini/Backend/Classi/MovementSubscriber.png)
+
+Avendo deciso di implementare il pattern Publisher-Subscriber, se il Movement Service dispone del publisher, deve esserci anche un subscriber. Il Movement Subscriber è, come il publisher, implementato con il design pattern Strategy, per le stesse ragioni che ne hanno giustificato l'utilizzo nel precedente. In questo caso, il subscriber si occupa di ottenere i messaggi dal Message Broker, di analizzarli per convertirli da semplici movimenti (di ingresso o di uscita) in istanze (parziali) di accessi che vengono memorizzate tramite i supporti di persistenza per poterli ottenere successivamente tramite le API fornite per gli Access.
