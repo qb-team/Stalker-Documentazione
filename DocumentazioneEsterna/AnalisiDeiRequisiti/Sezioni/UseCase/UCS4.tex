@@ -123,14 +123,14 @@
 	\item \textbf{Precondizione:} L'amministratore gestore si trova nella sezione di modifica dei parametri dell'\glo{organizzazione}.
 	\item \textbf{Postcondizione:} L'amministratore ha inserito un \glo{indirizzo IP} o URL valido.
 	\item \textbf{Scenario principale:} L'amministratore modifica l'indirizzo del server aziendale.
-	\item \textbf{Scenario alternativo:} L'amministratore inserisce un \glo{indirizzo IP} o URL che non rappresenta un server LDAP. Verrà visualizzato un messaggio d'errore [UCS 10.4.7].
+	\item \textbf{Scenario alternativo:} L'amministratore inserisce un \glo{indirizzo IP} o URL non valido. Verrà visualizzato un messaggio d'errore [UCS 10.4.7].
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'amministratore inserisce il nuovo \glo{indirizzo IP} o URL.
 	\end{enumerate}
 	\item \textbf{Estensioni:}
 	\begin{itemize}
-		\item UCS 10.4.7 - L'indirizzo \glo{IP} o URL inserito non rappresenta un server \glo{LDAP}.
+		\item UCS 10.4.7 - L'indirizzo \glo{IP} o URL inserito non è valido.
 	\end{itemize}
 \end{itemize}
 
