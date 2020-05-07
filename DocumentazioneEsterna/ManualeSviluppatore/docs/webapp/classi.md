@@ -30,7 +30,7 @@ La classe offre i seguenti metodi:
 
 -   `addPermissionModification()`: aggiunge a `permissionModifications` i permessi da modificare. Questo metodo viene richiamato dal metodo precedentemente descritto nel caso in cui si voglia modificare contemporaneamente i permessi di più amministratori;
 
--   `applyPermissionModifications()`: permette l'applicazione delle modifiche nel vettore locale `permissions`;
+-   `updatePermissionList()`: permette l'applicazione delle modifiche nel vettore locale `permissions`;
 
 -   `registerNewAdmin()`: registra un nuovo amministratore nell'organizzazione nel caso in cui non sia presente nel sistema Stalker;
 
