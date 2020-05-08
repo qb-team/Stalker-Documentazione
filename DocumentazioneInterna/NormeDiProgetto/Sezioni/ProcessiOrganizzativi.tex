@@ -1,11 +1,102 @@
 \section{Processi organizzativi}
-In questa sezione vengono definite le norme che regolano le comunicazioni tra:
-\begin{enumerate}
+\subsection{Gestione dei Processi}
+\subsubsection{Scopo}
+Il processo di gestione dei processi ha lo scopo di:
+\begin{itemize}
+	\item identificare e gestire tutti i possibili rischi;
+	\item definire un modello di sviluppo;
+	\item pianificare le attività da eseguire tenendo traccia delle scadenze;
+	\item determinare un preventivo suddiviso per ruoli in base alle ore e ai costi;
+	\item definire un consuntivo di periodo per controllare il bilancio ottenuto.
+\end{itemize}
+
+\subsubsection{Aspettative}
+Il processo di gestione dei processi cerca di soddisfare le seguenti aspettattive:
+\begin{itemize}
+	\item fare una previsione di eventuali problemi cercando di evitarli e nel caso si verificassero sapere già come poterli gestire e risolvere;
+	\item effettuare una pianificazione equilibrata delle attività basandosi sui tempi e sulle risorse disponibili;
+	\item gestire più facilmente i ruoli che dovranno coprire ciascuno dei componenti del gruppo qbteam;
+	\item monitorare il lavoro svolto dal gruppo per tenere sotto controllo, in modo efficace, l'avanzamento del progetto.
+\end{itemize}
+
+\subsubsection{Descrizione}
+I temi riscontrati svolgendo le attività del processo di gestione dei processi sono:
+\begin{itemize}
+	\item stabilire i requisiti del processo da intraprendere;
+	\item inizializzazione dei processi;
+	\item indentificazione e classificazione dei rischi;
+	\item pianificazione delle attività; 
+	\item assegnazione dei ruoli ai componenti del gruppo;
+	\item stima dei costi in base al tempo impiegato e alle risorse utilizzate;
+	\item revisione e valutazione delle attività svolte per soddisfare i requisiti.
+\end{itemize}
+
+\subsubsection{Attività}
+\paragraph{Inizializzazione e definizione dell'ambito}
+Quando si hanno ben chiaro i requisiti del progetto il responsabile, aiutato dall'amministratore, deve stabilire quanto sia realizzabile il processo verificando che le risorse per poterlo gestire siano disponibili e sono raggiungibili i tempi necessari per il completamento.
+Per raggiungere ciò e in concordanza con il proponente, è possibile modificare i requisiti del processo.
+
+\paragraph{Pianificazione}
+In questa sezione vengono presentati tutti i sistemi e le metodologie utilizzate dal gruppo per una corretta organizzazione e collaborazione.
+
+\subparagraph*{Ruoli di progetto}
+Ogni membro del gruppo deve, a rotazione, ricoprire almeno una volta ciascun ruolo di progetto.
+I ruoli sono i seguenti:
+\begin{itemize}
+	\item \textbf{Responsabile}: Ha l'incarico di pianificare, motivare, coordinare e controllare i membri del gruppo \Gruppo{}.
+	Il suo compito prevede inoltre l'approvazione dei documenti e l'emanazione di piani e scadenze.
+	Ha l'onere di rappresentante il gruppo presso il proponente \Proponente{};
+	\item \textbf{Amministratore}: Ha l'incarico di controllare l'efficienza dell'ambiente di lavoro e di gestire tutti i documenti relativi al progetto.
+	Si occupa, inoltre, della configurazione e del versionamento del prodotto;
+	\item \textbf{Progettista}: Ha l'incarico di definire l'architettura alla base del sistema del prodotto software.
+	Segue lo sviluppo e non la manutenzione del prodotto;
+	\item \textbf{Programmatore}: Partecipa sia alla realizzazione che alla manutenzione del prodotto.
+	È competente nella codifica e nella realizzazione di componenti necessarie all’esecuzione delle prove di verifica e validazione.
+	Il codice prodotto dal programmatore deve essere mantenibile nel tempo;
+	\item \textbf{Analista}: Segue il progetto dall'inizio fino alla fine e redige i documenti relativi allo \SdF{} e all'\AdR{}.
+	Il suo lavoro si basa nel conoscere a fondo il problema e definire i requisiti espliciti ed impliciti;
+	\item \textbf{Verificatore}: Ha l'incarico, per l'intero ciclo di vita del progetto, di svolgere le attività di verifica e validazione.
+	Si occupa, inoltre, di redigere il documento \PdQ{} che conterrà gli esiti delle verifiche e delle prove effettuate.
+\end{itemize}
+
+\subparagraph*{Ruoli di sviluppo}
+Il gruppo ha deciso di spartirsi il lavoro per lo sviluppo dell'applicazione mobile, del server backend e della web app per gli amministratori. 
+I ruoli ricoperti dai membri del gruppo sono i seguenti:
+\begin{itemize}
+	\item \textbf{Applicazione mobile}: Ha l'incarico di implementare l'applicazione mobile seguendo i casi d'uso dell'applicazione presenti nel documento analisi dei requisiti;
+	\item \textbf{Server backend}: Ha l'incarico di creare il server che raccoglie e gestisce i dati presenti nell'applicazione e destinati all'interfaccia web per gli amministratori in cui sono presenti tutte le funzionalità richieste negli UCS del documento analisi dei requisiti;
+	\item \textbf{Web app per gli amministratori}: Ha l'incarico di implementare l'interfaccia web per gli amministratori in cui sono presenti tutte le funzionalità richieste negli UCS del documento analisi dei requisiti.
+\end{itemize}
+
+\subparagraph*{Processo di miglioramento}
+\begin{itemize}
+	\item \textbf{Scopo}: Il processo di miglioramento garantisce tramite misurazioni e controlli regolari il miglioramento del processo di sviluppo del prodotto;
+	
+	\item \textbf{Valutazione}: Durante lo sviluppo del prodotto l'attività di valutazione deve essere istanziata e documentata, la revisione della documentazione prodotta deve avvenire ad intervalli regolari per poter intervenire nel breve periodo;
+	
+	\item \textbf{Miglioramento}: Il gruppo deve, se necessario, compiere dei cambiamenti ai processi come emerge dall'attività di valutazione; la documentazione creata nella valutazione deve essere aggiornata in modo che rifletta i cambiamenti.\\
+	Inoltre il miglioramento deve tenere conto delle risorse temporali ed economiche per valutare il costo delle azioni di miglioramento.
+\end{itemize}
+
+\subparagraph*{Formazione dei membri del gruppo}
+Ogni membro del gruppo ha il compito di formarsi in modo autonomo per poter padroneggiare al meglio tutte le tecnologie che verranno utilizzate nel corso del progetto.
+È necessaria, inoltre, la completa disponibilità da parte di tutti i membri del gruppo di condividere le conoscenze già possedute o realizzate durante tutta la fase del progetto.
+La formazione consiste di 3 attività:
+\begin{itemize}
+	\item \textbf{Implementazione del processo}: consiste nell'analisi dettagliata del capitolato per identificare tutte le tecnologie necessarie in ogni fase per poter sviluppare il prodotto; un piano contenente la formazione necessaria scandagliata temporalmente deve essere redatto;
+	\item \textbf{Ricerca e sviluppo del materiale per la formazione}: il materiale necessario alla formazione del gruppo deve essere ricercato e fornito a ogni membro, oppure del materiale può essere prodotto da membri del gruppo per scopo interno;
+	\item \textbf{Implementazione del piano di formazione}: la formazione deve avvenire in maniera omogenea, ogni membro del gruppo è responsabile dello studio di una tecnologia e di distribuire le nozioni apprese al resto del gruppo, con l'obiettivo di garantire uno stesso livello di conoscenza a tutti i membri del gruppo.
+\end{itemize}
+
+\paragraph{Gestione delle comunicazioni}
+
+In questa attività vengono definite le norme che regolano le comunicazioni tra:
+\begin{itemize}
 	\item i membri del gruppo \Gruppo{}, dette anche "comunicazioni interne";
 	\item il gruppo e soggetti esterni, dette anche "comunicazioni esterne".
-\end{enumerate}
-	
-\subsection{Comunicazioni interne}
+\end{itemize}
+
+\subparagraph*{Comunicazioni interne}
 Per le comunicazione interne viene utilizzato un \glo{workspace} di \glo{Slack}, strumento di collaborazione molto utile per inviare messaggi ai membri del proprio gruppo.
 Grazie a questa piattaforma virtuale sono stati creati dei \glo{canali} per organizzare al meglio la suddivisione del lavoro e la collaborazione tra i membri del gruppo.
 I canali sono:
@@ -16,11 +107,9 @@ I canali sono:
 	\item \textbf{\#documentazione-progetto}: Contiene le discussioni che trattano in generale della documentazione del progetto;
 	\item \textbf{\#general}: Contiene discussioni inerenti al progetto a carattere generale, non di uno specifico tema;
 	\item \textbf{\#glossario}: Contiene discussioni per la stesura del documento \Glossario{};
-	\item \textbf{\#imola-informatica}: Contiene le discussioni con il proponente;
-	\item \textbf{\#manuale-utente}: Contiene le discussioni per la stesura della documentazione per l'utente finale (utilizzatore dell'app o web-app, sviluppatore che utilizza le \glo{REST API} fornite);
-	\item \textbf{\#manuale-sviluppatore}: Contiene le discussioni per la stesura della documentazione tecnica per gli sviluppatori che faranno attività di manutenzione al codice sorgente una volta terminato il progetto o per chiunque voglia prendere in mano il prodotto per migliorarlo;
+	\item \textbf{\#imola-informatica}: Contiene discussioni con il proponente;
 	\item \textbf{\#norme-di-progetto}: Contiene le discussioni per la stesura del documento \NdP{};
-    \item \textbf{\#piano-di-progetto}: Contiene le discussioni per la stesura del documento \PdP{};
+	\item \textbf{\#piano-di-progetto}: Contiene le discussioni per la stesura del documento \PdP{};
 	\item \textbf{\#piano-di-qualifica}: Contiene le discussioni per la stesura del documento \PdQ{};
 	\item \textbf{\#server}: Contiene discussioni per quanto riguarda lo sviluppo dell'applicativo lato server;
 	\item \textbf{\#source-code-management}: contiene tutte le discussioni relative a \glo{Git}, \glo{GitHub}, quindi sulla gestione del codice sorgente e gestione delle attività da svolgere dell'\glo{ITS} di \glo{GitHub}.
@@ -38,66 +127,59 @@ I canali sono:
 	\item \textbf{Calendario}: Come per il canale \#calendario di \glo{Slack};
 	\item \textbf{Documentazione Progetto}: Come per il canale \#documentazione-progetto di \glo{Slack};
 	\item \textbf{Generale}: Come per il canale \#general di \glo{Slack};
-	\item \textbf{Manuale Utente}: Come per il canale \#manuale-utente di \glo{Slack};
-	\item \textbf{Manuale Sviluppatore}: Come per il canale \#manuale-sviluppatore di \glo{Slack};
 	\item \textbf{Norme di Progetto}: Come per il canale \#norme-di-progetto di \glo{Slack};
-    \item \textbf{Piano di Progetto}: Come per il canale \#piano-di-progetto di \glo{Slack};
+	\item \textbf{Piano di Progetto}: Come per il canale \#piano-di-progetto di \glo{Slack};
 	\item \textbf{Piano di Qualifica}: Come per il canale \#piano-di-qualifica di \glo{Slack};
 	\item \textbf{Server}: Come per il canale \#server di \glo{Slack};
 	\item \textbf{Studio di Fattibilità}: Come per il canale \#studio-di-fattibilita di \glo{Slack};
 	\item \textbf{Verbali}: Come per il canale \#verbali di \glo{Slack};
 	\item \textbf{Source Code Management}: Come per il canale \#source-code-management di \glo{Slack};
-	\item \textbf{Web app Amministratori}: Come per il canale \#web-app-amministratori di \glo{Slack};
+	\item \textbf{Web App Amministratori}: Come per il canale \#web-app-amministratori di \glo{Slack};
 	\item \textbf{\#solo-emergenze}: L'unico canale testuale di \glo{Discord}, da usare solo nel caso in cui \glo{Slack} non sia disponibile per l'utilizzo.
 \end{itemize}
 
-\subsection{Comunicazioni esterne}
+\subparagraph*{Comunicazioni esterne}
 In questa sezione vengono definite le norme che regolano le comunicazioni tra il gruppo e soggetti esterni, in particolare:
 \begin{itemize}
 	\item Il proponente \Proponente{}, con referenti \ZD{}{} e \CT{}.
 	\item \VT{}, \CR{}, ai quali verrà fornita tutta la documentazione richiesta in ciascuna revisione di avanzamento.
 	Le comunicazioni esterne avvengono esclusivamente via mail attraverso l’indirizzo di posta elettronica del gruppo:
 	\url{qbteamswe@gmail.com}. \\
-	Ogni membro del gruppo possiede le credenziali per poter accedere al tale indirizzo e-mail.
+	Ogni membro del gruppo possiede le credenziali per poter accedere all’indirizzo e-mail.
 \end{itemize}
-	
-\subsection{Gestione degli incontri formali}
+
+\paragraph{Gestione degli incontri formali}
 Gli \glo{incontri formali} fra i membri del gruppo possono essere interni o esterni.
 All’inizio di ogni riunione il Responsabile di Progetto nomina un segretario che si occupa di prendere nota di tutto ciò che viene discusso durante l’incontro.
 Quest’ultimo, oltre ad avere l’onere di far rispettare l’ordine del giorno dovrà anche redigere il verbale dell’incontro.
 
-\subsubsection{Incontri formali interni}
+\subparagraph*{Incontri formali interni}
 Agli incontri formali interni, che avvengono principalmente di persona in luoghi prefissati, potranno parteciparvi solo i membri del gruppo \Gruppo{}.
 Il Responsabile di Progetto deve organizzare preventivamente tutti gli argomenti da trattare presenti nell’ordine del giorno e approvare il verbale redatto dal segretario.
 Tutti i membri del gruppo sono tenuti a presentarsi in orario segnalando eventuali ritardi o assenze.
 
-\subsubsection{Incontri formali esterni}
+\subparagraph*{Incontri formali esterni}
 Agli incontri formali esterni, sono coinvolti i membri del gruppo \Gruppo{} e uno o più membri dell'azienda proponente \Proponente{}.
 Le riunioni si possono svolgere:
 \begin{itemize}
 	\item Nella sede del proponente;
 	\item Presso l’ateneo dell’Università di Padova;
-	\item Tramite piattaforme virtuali di chiamata remota quali: \href{https://zoom.us/}{Zoom}, \href{https://hangouts.google.com/}{Hangouts}.
+	\item Tramite piattaforme virtuali di chiamata remota quali: \href{https://www.skype.com/it/}{Skype}, \href{https://hangouts.google.com/}{Hangouts}.
 \end{itemize}
+
 Le varie comunicazioni per stabilire gli incontri tra il gruppo e il proponente avverranno tramite posta elettronica con relativo margine di anticipo.
-
-\subsubsection{Norme di distanziamento sociale}
-A seguito dell'emanazione del Dpcm (Decreto del Presidente del Consiglio dei Ministri) 8 marzo 2020 si è reso necessario adattare quanto affermato nelle precedenti definizioni di incontri formali.
-Per rispettare le vigenti norme di distanziamento sociale, sono quindi da considerarsi "luoghi" degli incontri formali sia luoghi fisici (per esempio le aule dell'ateneo) che luoghi virtuali, come ad esempio le conferenze mediante strumenti come \glo{Discord}, Hangouts, Zoom.
-Nulla cambia nell'attuazione degli incontri: vengono comunque fissati in anticipo i temi da affrontare, segnate presenze, ritardi e assenze, redatti i verbali.
-
-\subsubsection{Verbali delle riunioni}
+\subparagraph*{Verbali delle riunioni}
 Al termine di ogni riunione il segretario dovrà redigere il relativo verbale, rispettando il seguente
 schema:
-\begin{enumerate}
+\begin{itemize}
 	\item \textbf{Informazioni generali}:
-		\begin{itemize}
-			\item Luogo dell'incontro;
-			\item Data dell'incontro;
-			\item Orario di inizio e di fine dell'incontro;
-			\item Lista dei partecipanti all'incontro;
-			\item Segretario dell'incontro.
-		\end{itemize}
+	\begin{itemize}
+		\item Luogo dell'incontro;
+		\item Data dell'incontro;
+		\item Orario di inizio e di fine dell'incontro;
+		\item Lista dei partecipanti all'incontro;
+		\item Segretario dell'incontro.
+	\end{itemize}
 	\item \textbf{Ordine del Giorno}: Argomenti trattati durante la riunione. Quest’ultimi vengono decisi dal Responsabile di Progetto e possono essere consultati in qualsiasi momento da ogni membro del gruppo;
 	\item \textbf{Resoconto}: riassunto delle discussioni svolte durante l'incontro, redatto dal segretario, seguendo i punti dell’ordine del giorno;
 	\item \textbf{Riepilogo decisioni}: Tabella in cui vengono indicate le decisioni prese durante l'incontro.
@@ -116,55 +198,113 @@ schema:
 		\item \textbf{[YYYY]-[MM]-[DD]}: data in formato anno-mese-giorno, separati da un trattino;
 		\item \textbf{X}: Dato X $\in \mathbb{N}$, X è un numero progressivo per indicare la decisione.
 	\end{itemize}
-\end{enumerate}
-
-\subsection{Gestione di progetto}
-In questa sezione vengono presentati tutti i sistemi e le metodologie utilizzate dal gruppo per una corretta organizzazione e collaborazione.
-\subsubsection{Ruoli di progetto}
-Ogni membro del gruppo deve, a rotazione, ricoprire almeno una volta ciascun ruolo di progetto.
-I ruoli sono i seguenti:
-\begin{itemize}
-\item \textbf{Responsabile}: Ha l'incarico di pianificare, motivare, coordinare e controllare i membri del gruppo \Gruppo{}.
-Il suo compito prevede inoltre l'approvazione dei documenti e l'emanazione di piani e scadenze.
-Ha l'onere di rappresentante il gruppo presso il proponente \Proponente{};
-\item \textbf{Amministratore}: Ha l'incarico di controllare l'efficienza dell'ambiente di lavoro e di gestire tutti i documenti relativi al progetto.
-Si occupa, inoltre, della configurazione e del versionamento del prodotto;
-\item \textbf{Progettista}: Ha l'incarico di definire l'architettura alla base del sistema del prodotto software.
-Segue lo sviluppo e non la manutenzione del prodotto;
-\item \textbf{Programmatore}: Partecipa sia alla realizzazione che alla manutenzione del prodotto.
-È competente nella codifica e nella realizzazione di componenti necessarie all’esecuzione delle prove di verifica e validazione.
-Il codice prodotto dal programmatore deve essere mantenibile nel tempo;
-\item \textbf{Analista}: Segue il progetto dall'inizio fino alla fine e redige i documenti relativi allo \SdF{} e all'\AdR{}.
-Il suo lavoro si basa nel conoscere a fondo il problema e definire i requisiti espliciti ed impliciti;
-\item \textbf{Verificatore}: Ha l'incarico, per l'intero ciclo di vita del progetto, di svolgere le attività di verifica e validazione.
-Si occupa, inoltre, di redigere il documento \PdQ{} che conterrà gli esiti delle verifiche e delle prove effettuate.
 \end{itemize}
 
-\subsubsection{Ruoli di sviluppo}
-Il gruppo ha deciso di dividersi il lavoro per lo sviluppo dell'applicazione mobile, del server backend e della web-app per gli amministratori. 
-I ruoli ricoperti dai membri del gruppo sono i seguenti:
+\subsubsection{Metriche}
+
+\paragraph{Actual Cost of Work Performed}
 \begin{itemize}
-	\item \textbf{Applicazione mobile}: Implementazione dell'applicazione per utenti seguendo i requisiti (e i relativi casi d'uso UCA) dell'applicazione presenti nel documento di \AdR{} e indicati negli incrementi definiti nel \PdP{};
-	\item \textbf{Server backend}: Creazione del server che raccoglie e gestisce i dati gestiti dall'applicazione e dall'interfaccia web per gli amministratori.
-	\item \textbf{Web-app per gli amministratori}: Implementazione dell'interfaccia web per gli amministratori in cui sono presenti tutte le funzionalità richieste dai requisiti e i relativi casi d'uso UCS del documento \AdR{}, seguendo gli incrementi definiti nel \PdP{}.
+	\item \textbf{Codice:} MPC10
+	\item \textbf{Descrizione:} Denaro speso fino al momento del calcolo;
+	\item \textbf{Processo di riferimento:} Gestione;
+	\item \textbf{Sigla:} $ACWP$
+	\item \textbf{Formula:} $$ACWP = {Sommatoria\; delle\; ore\; lavorative\; moltiplicate\; con\; il\; corrispondente\; costo\; orario}$$
+	\item \textbf{Strumenti utilizzati:} Fogli Google.
 \end{itemize}
 
-\subsubsection{Processo di miglioramento}
+\paragraph{Budgeted Cost of Work Scheduled}
 \begin{itemize}
-\item \textbf{Scopo}: Il processo di miglioramento garantisce tramite misurazioni e controlli regolari il miglioramento del processo di sviluppo del prodotto;
-
-\item \textbf{Valutazione}: Durante lo sviluppo del prodotto l'attività di valutazione deve essere istanziata e documentata, la revisione della documentazione prodotta deve avvenire ad intervalli regolari per poter intervenire nel breve periodo;
-
-\item \textbf{Miglioramento}: Il gruppo deve, se necessario, compiere dei cambiamenti ai processi come emerge dall'attività di valutazione; la documentazione creata nella valutazione deve essere aggiornata in modo che rifletta i cambiamenti.\\
-Inoltre il miglioramento deve tenere conto delle risorse temporali ed economiche per valutare il costo delle azioni di miglioramento.
+	\item \textbf{Codice:} MPC11
+	\item \textbf{Descrizione:} Costo pianificato per realizzare le attività di progetto fino al momento del calcolo;
+	\item \textbf{Processo di riferimento:} Gestione;
+	\item \textbf{Sigla:} $BCWS$
+	\item \textbf{Formula:} $$BCWS = {B_{tot} * \% \;di\; lavoro\; pianificato}$$
+	con:
+	\begin{itemize}
+		\item $B_{tot}$ = Budget totale.
+	\end{itemize}
+	\item \textbf{Strumenti utilizzati:} Fogli Google.
 \end{itemize}
 
-\subsubsection{Formazione dei membri del gruppo}
- Ogni membro del gruppo ha il compito di formarsi in modo autonomo per poter padroneggiare al meglio tutte le tecnologie che verranno utilizzate nel corso del progetto.
-È necessaria, inoltre, la completa disponibilità da parte di tutti i membri del gruppo di condividere le conoscenze già possedute o realizzate durante tutta la fase del progetto.
-La formazione consiste di 3 attività:
+\paragraph{Budgeted Cost of Work Performed}
 \begin{itemize}
-	\item \textbf{Implementazione del processo}: consiste nell'analisi dettagliata del capitolato per identificare tutte le tecnologie necessarie in ogni fase per poter sviluppare il prodotto; un piano contenente la formazione necessaria scandagliata temporalmente deve essere redatto;
-	\item \textbf{Ricerca e sviluppo del materiale per la formazione}: il materiale necessario alla formazione del gruppo deve essere ricercato e fornito a ogni membro, oppure del materiale può essere prodotto da membri del gruppo per scopo interno;
-	\item \textbf{Implementazione del piano di formazione}: la formazione deve avvenire in maniera omogenea, ogni membro del gruppo è responsabile dello studio di una tecnologia e di distribuire le nozioni apprese al resto del gruppo, con l'obiettivo di garantire uno stesso livello di conoscenza a tutti i membri del gruppo.
+	\item \textbf{Codice:} MPC12
+	\item \textbf{Descrizione:} Valore del lavoro fatto fino al momento del calcolo, quanto lavoro si è fatto al costo pianificato;
+	\item \textbf{Processo di riferimento:} Gestione;
+	\item \textbf{Sigla:} $BCWP$
+	\item \textbf{Formula:} $$BCWP = {B_{tot} * \% \;di\; lavoro\; svolto}$$
+	con:
+	\begin{itemize}
+		\item $B_{tot}$ = Budget totale.
+	\end{itemize}
+	\item \textbf{Strumenti utilizzati:} Fogli Google.
 \end{itemize}
+
+\paragraph{Schedule variance}
+\begin{itemize}
+	\item \textbf{Codice:} MPC13
+	\item \textbf{Descrizione:} È il valore che indica se si è in linea ($=0$), in anticipo ($>0$) oppure in ritardo ($<0$) rispetto alla schedulazione delle attività di progetto pianificate nella \glo{baseline};
+	\item \textbf{Processo di riferimento:} Gestione;
+	\item \textbf{Sigla:} $SV$
+	\item \textbf{Formula:} $$SV = {BCWP \; - \; BCWS}$$
+	con:
+	\begin{itemize}
+		\item $BCWP$ = Budgeted Cost of Work Performed (valore delle attività eseguite nella data corrente);
+		\item $BCWS$ = Budgeted Cost of Work Scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente);
+	\end{itemize}
+	\item \textbf{Strumenti utilizzati:} Fogli Google.
+\end{itemize}
+
+\paragraph{Budget variance}
+\begin{itemize}
+	\item \textbf{Codice:} MPC14
+	\item \textbf{Descrizione:} È il valore che indica se alla data corrente si è speso di più ($>0$) o di meno ($<0$) rispetto a quanto pianificato dal budget totale $B_{tot}$;
+	\item \textbf{Processo di riferimento:} Gestione;
+	\item \textbf{Sigla:} $BV$
+	\item \textbf{Formula:} $$BV = {BCWS \; - \; ACWP}$$
+	con:
+	\begin{itemize}
+		\item $BCWS$ = Budgeted Cost of Work Scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente);
+		\item $ACWP$ = Actual Cost of Work Performed (costo effettivamente sostenuto alla data corrente);
+		\item $B_{tot}$ = Budget totale.
+	\end{itemize}
+	\item \textbf{Strumenti utilizzati:} Fogli Google.
+\end{itemize}
+
+\subsubsection{Strumenti}
+Di seguito sono elencati gli strumenti utilizzati dal gruppo per sviluppare il progetto \glo{\NomeProgetto{}}:
+
+\paragraph{Telegram} 
+Servizio di messaggistica istantanea e broadcasting che viene utilizzato per comunicare con il proponente;
+\paragraph{Whastapp} 
+Servizio di messaggistica istantanea e broadcasting che viene utilizzato dai componenti del gruppo per comunicare tra di loro;
+\paragraph{Issue Tracking System} 
+Strumento che facilita la gestione del processo di sviluppo e che viene utilizzato per gestire le attività e compiti da svolgere;
+\paragraph{Skype} 
+Servizio di messaggistica istantanea e broadcasting che viene utilizzato per comunicare con il proponente;
+\paragraph{GMail} 
+Servizio di posta elettronica che viene utilizzato per le comunicazioni con il committente e i primi contatti con il proponente;
+\paragraph{Google Drive} 
+Servizio web di memorizzazione e sincronizzazione online di Google che viene utilizzato per la condivisione di risorse.
+
+
+\newpage
+
+\subsection{Gestione di Formazione}
+\subsubsection{Scopo}
+Il processo di gestione di formazione ha lo scopo di:
+
+
+\subsubsection{Aspettative}
+Il processo di gestione di formazione cerca di soddisfare le seguenti aspettattive:
+
+
+\subsubsection{Descrizione}
+I temi riscontrati svolgendo le attività del processo di gestione di formazione sono:
+
+
+\subsubsection{Attività}
+
+\subsubsection{Metriche}
+
+\subsubsection{Strumenti}
