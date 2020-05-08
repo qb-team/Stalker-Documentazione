@@ -1,6 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+0.15.0 | 2020-05-08 | Christian Mattei | Progettista | Francesco Drago | Stesura descrizioni diagrammi delle classi ed estendibilità.
 0.14.2 | 2020-05-07 | Tommaso Azzalin | Progettista | | Aggiornate descrizioni dei package del backend.
 0.14.1 | 2020-05-06 | Davide Lazzaro | Progettista | | Finita architettura backend.
 0.14.0 | 2020-05-06 | Davide Lazzaro | Progettista | | Aggiunta architettura backend.
