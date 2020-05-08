@@ -1,9 +1,20 @@
 \subsection{Gestione della configurazione}
-\subsubsection{Obiettivo}
+
+\subsubsection{Scopo}
 Si vuole garantire che tutto ciò che viene prodotto dal gruppo \Gruppo{}, dalla documentazione al prodotto software, sia facilmente reperibile all’interno del \glo{repository}.
 Ogni elaborato viene etichettato con un particolare codice di versione e, ai fini della manutenibilità, vengono riportate le pratiche che devono essere adottate nelle operazioni di modifica e versionamento.
 
-\subsubsection{Versionamento}
+\subsubsection{Aspettative}
+Con questa sezione si intende chiarire gli strumenti e le prassi da utilizzare per controllare automaticamente tutti i prodotti delle attività che svolgeremo.
+Inoltre l'introduzione di strumenti di \glo{VCS} e \glo{ITS} semplifica lo svolgimento del lavoro e la coordinazione tra i membri del gruppo.
+
+\subsubsection{Descrizione}
+Il processo di gestione della configurazione consiste nell'applicare al ciclo di vita del software delle procedure atte al monitoramento, registrazione e valutazione di tutte 
+le modifiche che subisce.
+
+\subsubsection{Attività}
+\paragraph{Implementazione del processo}
+\subparagraph*{Versionamento}
 Allo scopo di tracciare gli incrementi del prodotto, ogni sua versione è accompagnata da un particolare codice di versione a tre numeri. Dati X, Y, Z $\in \mathbb{N}$, la forma del codice di versione è la seguente:
 \begin{center}
 	\textbf{X.Y.Z}
@@ -14,9 +25,9 @@ I soli documenti che avranno lo stesso numero di versione del prodotto software,
 	\item Manuale utente;
 	\item Manuale manutentore.
 \end{itemize}
-La scelta è inoltre dettata dal fatto che saranno prodotti in contemporanea allo sviluppo delle funzionalità del prodotto e quindi le modifiche e aggiunte a quest'ultimo sono direttamente collegate ai due manuali.
+La scelta è inoltre dettata dal fatto che saranno prodotti in contemporanea allo sviluppo delle funzionalità del prodotto e quindi le modifiche e aggiunte a quest'ultimo sono direttamente collegate ai due manuali.\\
 
-\paragraph{Versionamento per la documentazione}
+\subsubparagraph*{Versionamento per la documentazione}
 \begin{itemize}
 	\item \textbf{X}: Detto indice major, rappresenta il numero di una versione stabile, quando X $> 0$.
 	Viene incrementato ogni volta che il \Responsabile{} approva il documento, successivamente allo svolgimento del processo di verifica da parte di un verificatore;
@@ -27,7 +38,7 @@ La scelta è inoltre dettata dal fatto che saranno prodotti in contemporanea all
 	Viene azzerato quando l'indice X o l'indice Y vengono incrementati.
 \end{itemize}
 
-\paragraph{Versionamento per il prodotto software, per il manuale utente e per il manuale manutentore}
+\subsubparagraph*{Versionamento per il prodotto software, per il manuale utente e per il manuale manutentore}
 \begin{itemize}
 	\item \textbf{X}: Detto indice major, rappresenta il numero di una versione stabile, quando X $> 0$.
 	Viene incrementato quando tutti i requisiti obbligatori sono implementati e il prodotto supera la verifica da parte dei verificatori e viene approvato dal \Responsabile{}.
@@ -43,7 +54,37 @@ Le versioni del prodotto software sono di due tipi:
 	\item \textbf{Uso esterno}: il software è in lavorazione oppure è completato, i requisiti dichiarati come soddisfatti permettono al software di essere utilizzabile professionalmente (l'incremento è stato completato). A questa versione si associa un rilascio su GitHub.
 \end{itemize}
 
-\subsubsection{Servizi di supporto per il versionamento} 
+\subsubsection{Metriche}
+Non sono presenti metriche per questo processo.
+
+\subsubsection{Strumenti}
+
+\paragraph{Issue Tracking System}
+Per quanto riguarda la pianificazione del lavoro da svolgere, il gruppo \Gruppo{} ha scelto di utilizzare l'\glo{Issue Tracking System (ITS)} fornito da \glo{GitHub}.
+Le operazioni permesse dall'\glo{ITS} di \glo{GitHub} sono:
+\begin{itemize}
+	\item Creazione di \glo{bacheche} (chiamate "Projects") in cui avere un'istantanea delle attività, che possono ritrovarsi in uno e un solo dei seguenti stati: da fare, in corso e completate. Queste attività corrispondo alle "issue";
+	\item Creazione di attività da svolgere, dette \glo{issue}, dotate di:
+	\begin{itemize}
+		\item Titolo;
+		\item Descrizione dei compiti da svolgere;
+		\item Numero progressivo identificativo (fondamentale per il tracciamento delle attività);
+		\item I membri del gruppo assegnati per lo svolgimento;
+		\item Etichette (chiamate "label") per favorire il filtraggio per argomento;
+		\item Milestone di riferimento;
+		\item Bacheca di riferimento (ovvero in quale \glo{bacheca} viene visualizzata l'issue).
+	\end{itemize}
+	\item Creazione di una milestone, con titolo, descrizione e data di scadenza;
+	\item Creazione di etichette per le issue;
+	\item Creazione di pull request, in cui si richiede di effettuare il merge di un \glo{branch} all'interno di un altro, verificare l'assenza di conflitti di \glo{merge} e discutere con i membri del gruppo delle modifiche apportate da unire;
+	\item Modifica di issue, milestone, bacheche e label;
+	\item Visualizzazione delle attività svolte dai membri del gruppo relative ad un issue grazie al tracciamento e all'integrazione con il \glo{SCM} \glo{Git}.
+	\item Creazioni di template per le \glo{issue} aventi: Titolo, Descrizione, assegnazioni ed etichette.
+\end{itemize}
+Oltre a queste funzionalità, l'\glo{ITS} di \glo{GitHub} fornisce altro, ma il gruppo \Gruppo{} ritiene opportuno l'utilizzo solamente di queste elencate.
+È stato creato un canale apposito su \glo{Slack} per segnalare la creazione e la chiusura delle issue in modo da consapevolizzare tutti i membri del gruppo riguardo l'andamento del progetto.
+
+\paragraph{VCS e SCM} 
 Il gruppo ha deciso di adottare \glo{Git}, che è un software per la gestione del codice sorgente (\glo{SCM}) e controllo di versione (\glo{VCS}).
 Git è un VCS distribuito: ogni membro del gruppo \Gruppo{} ha quindi a disposizione una copia del repository e svolge il suo lavoro principalmente in locale.
 Per condividere il proprio lavoro con gli altri membri del gruppo, effettua un'operazione di \textbf{push} in remoto.
@@ -51,7 +92,7 @@ Per ricevere il lavoro condiviso dagli altri membri del gruppo, effettua un'oper
 Il repository remoto a cui tutto il gruppo fa riferimento è ospitato sulla piattaforma \glo{GitHub}.
 Il gruppo \Gruppo{} potrà interagire con il \glo{VCS} sia tramite riga di comando (git) che tramite software come \glo{GitKraken}.
 
-\subsubsection{Repository creati}
+\paragraph{Repository creati}
 Sono stati creati più \glo{repository} per supportare il lavoro del gruppo, quali:
 \begin{itemize}
 	\item \textbf{Stalker-Admin}: Viene usato per versionare il codice sorgente prodotto dal gruppo per l'applicazione web per gli amministratori. Al momento tale repository è vuoto e verrà usato dopo la RP;
@@ -64,7 +105,7 @@ Sono stati creati più \glo{repository} per supportare il lavoro del gruppo, qua
 	Come per \textit{Stalker-App-PoC}, il codice prodotto verrà integrato nel repository \textit{Stalker-Admin} per lavorare al prodotto finale.
 \end{itemize}
 
-\subsubsection{Template per issue}
+\paragraph{Template per issue}
 Per le repository di \textit{Stalker-App}, \textit{Stalker-Admin} e \textit{Stalker-Backend} sono stati implementati diversi template per semplificare la creazione di issue simili fra di loro:
 \begin{itemize}
 \item \textbf{Nuovo requisito obbligatorio}: Viene usato per creare issue riguardanti i requisiti obbligatori.
@@ -72,7 +113,7 @@ Per le repository di \textit{Stalker-App}, \textit{Stalker-Admin} e \textit{Stal
 \item \textbf{Nuovo requisito opzionale}: Viene usato per creare issue riguardanti i requisiti opzionali.
 \end{itemize}
 
-\subsubsection{Organizzazione del repository Stalker-Documentazione}
+\paragraph{Organizzazione del repository Stalker-Documentazione}
 Il \glo{repository} per la documentazione ha la seguente \glo{organizzazione} di cartelle:
 \begin{itemize}
 	\item \textbf{DocumentazioneEsterna/}: Dentro a questa cartella vi è la documentazione da fornire ai committenti e al proponente, oltre che i verbali redatti durante gli incontri con quest'ultimi;
@@ -96,7 +137,7 @@ Il \glo{repository} per la documentazione ha la seguente \glo{organizzazione} di
 	\item \textbf{.gitignore}: File utilizzato per garantire che non vengano versionati certi tipi di file non utili alla compilazione.
 \end{itemize}
 
-\subsubsection{Procedura di lavoro collaborativo}
+\paragraph{Git Flow}
 Viene scelto di utilizzare il modello \glo{Git Flow} per ogni repository gestito dal gruppo.
 Con Git Flow, lo sviluppo viene diviso in più rami, detti \glo{branch}:
 \begin{itemize}
@@ -112,6 +153,7 @@ Con Git Flow, lo sviluppo viene diviso in più rami, detti \glo{branch}:
 
 Oltre all'utilizzo di Git Flow, devono venire rispettate le seguenti regole:
 \begin{itemize}
-	\item Non è permesso effettuare \glo{commit} nel ramo master se non attraverso un \glo{pull request} che deve essere accettato dall’\Amministratore{};
+	\item Non è permesso effettuare \glo{commit} nel ramo master se non attraverso una \glo{pull request} che deve essere accettata dall’\Amministratore{};
 	\item Per ogni \glo{commit} è opportuno inserire nel messaggio una descrizione del lavoro svolto, anche riferendosi alle issue presenti nell'\glo{Issue Tracking System} di \glo{GitHub} indicando il numero di queste con "\#[NUM]", in cui [NUM] è un codice di issue.
 \end{itemize}
+
