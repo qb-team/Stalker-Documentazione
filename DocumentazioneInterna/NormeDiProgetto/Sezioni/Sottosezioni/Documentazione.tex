@@ -7,8 +7,17 @@ Di conseguenza ci si aspetta di avere:
 \item Una serie di norme tipografiche da rispettare.
 \end{itemize}
 I documenti possono essere consultati nel seguente repository di \glo{GitHub}: \url{https://github.com/qb-team/Stalker-Documentazione}.
+\subsubsection{Aspettative}
+Questa sezione serve a fornire degli strumenti e indicazioni comuni ai membri del gruppo per arrivare a una produzione di documentazione coesa e professionale.
 
-\subsubsection{Ciclo di vita}
+\subsubsection{Descrizione}
+La documentazione prodotta dal \textit{processo di documentazione} registra tutte le informazioni generate durante il ciclo di vita di un processo o un'attività.
+Il \textit{processo di documentazione} deve contenere un set di attività volte a garantire la produzione, verifica e mantenimento della documentazione.
+
+\subsubsection{Attività}
+
+\paragraph{Implementazione del processo}
+\subparagraph*{Ciclo di vita}
 Ogni documento prima di essere presentato deve passare per tre stati fondamentali:
 \begin{enumerate}
 \item \textbf{Stesura del documento}: Creazione del documento e stesura con il linguaggio \LaTeX;
@@ -16,7 +25,40 @@ Ogni documento prima di essere presentato deve passare per tre stati fondamental
 \item \textbf{Approvazione del documento}: In caso la verifica risulti positiva, il documento viene consegnato al \Responsabile{} per l'approvazione al rilascio.
 \end{enumerate}
 
-\subsubsection{Template}
+\subparagraph*{Studio di Fattibilita}
+\input{Sezioni/Sottosezioni/StudioDiFattibilita.tex}
+\subparagraph*{Piano di Progetto}
+\input{Sezioni/Sottosezioni/PianoDiProgetto.tex}
+\subparagraph*{Piano di Qualifica}
+\input{Sezioni/Sottosezioni/PianoDiQualifica.tex}
+
+\subparagraph*{Analisi dei Requisiti}
+
+L'analisi dei requisiti è un'attività che avviene prima di quella di sviluppo.\\
+Il documento \AdR{}, redatto dagli analisti, ha come scopo i seguenti punti:
+\begin{itemize}
+\item Definire lo scopo del prodotto da realizzare;
+\item Fissare le funzionalità del progetto concordate col proponente;
+\item Fornire ai progettisti riferimenti precisi ed affidabili per la progettazione dell'architettura software;
+\item Definire una base per integrare i raffinamenti che permettono un miglioramento continuo del prodotto e del \glo{processo} di sviluppo;
+\item Fornire ai verificatori dei riferimenti per l’attività di controllo;
+\item Fornire una stima del quantitativo di lavoro da svolgere per tracciare una stima dei costi. 
+\end{itemize}
+
+L'obiettivo è quello di creare un documento formale contenente tutti i \glo{requisiti} richiesti e concordati col proponente.\\
+Deve essere possibile fare riferimento a quanto redatto nel documento \AdR{} qualora sorgessero incomprensioni e dubbi al momento del collaudo del prodotto.
+
+\subparagraph*{Verbali}
+
+I verbali vengono redatti per tenere traccia delle decisioni prese negli incontri sia interni che esterni, in modo che ogni membro in caso non possa presenziare ad un incontro possa ritrovare le decisioni e aggiornarsi sui temi discussi.
+
+\subparagraph*{Glossario}
+
+Il Glossario raccoglie tutte le parole che riteniamo debbano essere disambiguate o contestualizzate nell'ambito del progetto per offrire una lettura che sia il meno possibile confusionaria.
+
+\paragraph*{Progettazione e Sviluppo}
+
+\paragraph*{Template}
 È presente un template per i documenti, realizzato anch'esso in \LaTeX{}, per standardizzare e velocizzare la stesura della documentazione.
 Ogni documento che viene redatto deve includere al suo interno il file di stile Stiletemplate.sty presente nella cartella Utilita/.
 Il template fornisce i seguenti comandi:
@@ -26,11 +68,11 @@ Il template fornisce i seguenti comandi:
 \item \textbf{\textbackslash fancyverbale\{\}}: Da inserire dopo l'indice, inserisce l'intestazione e il piè di pagina del verbale. Da utilizzare solamente nei verbali.
 \end{itemize}
 
-\subsubsection{Struttura dei documenti}
+\paragraph*{Struttura dei documenti}
 Ogni documento è caratterizzato da una struttura che dovrà seguire obbligatoriamente.
 Di seguito viene elencato, per ogni sezione del documento, le sue caratteristiche e la sua posizione.
 
-\paragraph{Prima pagina - Copertina}
+\subparagraph*{Prima pagina - Copertina} 
 \begin{itemize}
 \item \textbf{Logo del gruppo}: Il logo viene posizionato al centro della pagina, in alto;
 \item \textbf{Titolo del documento}: Indica il nome del documento ed è posizionato sotto al logo del gruppo;
@@ -46,8 +88,7 @@ Di seguito viene elencato, per ogni sezione del documento, le sue caratteristich
 \end{itemize}
 \item \textbf{Descrizione documento}: Breve descrizione relativa al documento posizionata in fondo alla pagina, centrata.
 \end{itemize}
-
-\paragraph{Registro delle modifiche} 
+\subparagraph*{Registro delle modifiche}
 Tabella contenente diverse informazioni sul ciclo di vita del documento, composta come segue:
 \begin{itemize}
 \item Versione;
@@ -58,14 +99,14 @@ Tabella contenente diverse informazioni sul ciclo di vita del documento, compost
 \end{itemize}
 Questa tabella non deve rispettare la norma definita in "Elementi grafici", poiché non deve presentare una didascalia.
 
-\paragraph{Indice}
+\subparagraph*{Indice}
 Contiene i titoli di tutte le sezioni e sottosezioni del documento, rendendo più facile la navigazione.
 Se sono presenti tabelle o immagini all'interno del documento, esse possono essere riepilogate in un indice separato, se ritenuto necessario.
 
-\paragraph{Riferimenti}
+\subparagraph*{Riferimenti}
 Tutti i riferimenti bibliografici, normativi ed informativi, vengono inseriti in ogni documento in cui siano necessari come ultima sezione del documento, sotto forma di elenco puntato.
 
-\paragraph{Intestazione - Piè di pagina}
+\subparagraph*{Intestazione - Piè di pagina}
 Il contenuto del documento è posto tra intestazione e il piè di pagina:
 
 \begin{itemize}
@@ -76,14 +117,14 @@ Il contenuto del documento è posto tra intestazione e il piè di pagina:
 \item In basso una linea orizzontale separa il piè di pagina dal contenuto.
 \end{itemize}
 
-\paragraph{Elementi grafici}
+\subparagraph*{Elementi grafici}
 \begin{itemize}
 \item \textbf{Tabelle}: Centrate, con la didascalia posizionata al di sopra di esse;
 \item \textbf{Diagrammi}: Centrati, con la didascalia posizionata al di sotto di essi;
 \item \textbf{Immagini}: Centrate, con la didascalia posizionata al di sotto di esse.
 \end{itemize}
 
-\paragraph{Stile del testo}
+\subparagraph*{Stile del testo}
 \begin{itemize}
     \item \textbf{Grassetto}:
     \begin{itemize}
@@ -101,20 +142,19 @@ Il contenuto del documento è posto tra intestazione e il piè di pagina:
     \item \textcolor{blue}{Link ipertestuali}: Tutti i link ipertestuali devono essere di colore blu.
 \end{itemize}
 
-\paragraph{Glossario}
+\subparagraph*{Glossario}
 Ogni termine di un documento che contiene una definizione nel \Glossario{} viene identificato nel seguente modo:
 \begin{center}
     \glo{termine}
 \end{center}
 
-\paragraph{Data}
+\subparagraph*{Data}
 Si è deciso di seguire uno dei formati più diffusi per la rappresentazione della data:
 \begin{center}
 \textbf{YYYY-MM-DD}
 \end{center}
 in cui \textbf{YYYY} rappresenta l'anno, \textbf{MM} il mese e \textbf{DD} il giorno.
-
-\paragraph{Elenchi puntati/numerati}
+\subparagraph*{Elenchi puntati/numerati}
 Ogni voce di un elenco ordinato o numerato comincia con la lettera maiuscola e termina con punto e virgola (\textbf{";"}) , tranne per l'ultimo elemento dell'elenco che termina con un punto fermo (\textbf{"."}).
 Nel caso di elenchi che definiscono un termine:
 \begin{itemize}
@@ -123,7 +163,7 @@ Nel caso di elenchi che definiscono un termine:
     \item La definizione del termine inizia con la lettera maiuscola.
 \end{itemize}
 
-\paragraph{Nomenclatura dei documenti}
+\subparagraph*{Nomenclatura dei documenti}
 I nomi di file (escludendo l'estensione) e cartelle sono scritti usando la convenzione "\glo{Camel Case}".
 I file della documentazione prodotti avranno i seguenti nomi:
 \begin{itemize}
@@ -145,7 +185,7 @@ con:
     \item \textbf{[DD]} il giorno in cui si è tenuto l'\glo{incontro formale}.
 \end{itemize}
 
-\paragraph{Tabelle nei documenti}
+\subparagraph*{Tabelle nei documenti}
 Le tabelle utilizzate nei documenti si differenziano sostanzialmente dalla loro struttura e dal colore.
 Le tabelle con intestazione di colore:
 \begin{itemize}
@@ -154,15 +194,26 @@ Le tabelle con intestazione di colore:
 \end{itemize}
 Le intestazioni delle tabelle devono ripetersi in ogni pagina, qualora si dovessero spezzare per mancanza di spazio.
 
-\subsubsection{Linguaggi}
-\paragraph{\LaTeX}
-Per quanto riguarda la stesura dei documenti il gruppo ha scelto di utilizzare il linguaggio \LaTeX{}, il quale consente una migliore qualità tipografica rispetto ai normali software di videoscrittura, ma soprattutto facilita il versionamento e la suddivisione in parti di un documento.
+\subsubsection{Metriche}
 
-\paragraph{UML}
-Per la realizzazione dei diagrammi dei casi d'uso, delle classi, dei package, delle attività e delle sequenze viene utilizzato il linguaggio di modellazione \textbf{UML}, in particolare la versione v2.0 dello standard.
+\paragraph{Indice di Gulpease}
+\begin{itemize}
+	\item \textbf{Codice:} MPC6
+	\item \textbf{Descrizione:} È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Il valore è un intero da 0 a 100; se esso è inferiore a 80 sarà difficile da leggere per chi ha la licenza elementare, mentre se è inferiore a 40 sarà difficili da leggere per chi ha un diploma superiore;
+	\item \textbf{Processo di riferimento:} Documentazione;
+	\item \textbf{Sigla:} $IG$
+	\item \textbf{Formula:} $$IG = 89 + {\frac{300 \; \cdot \; |frasi| \; - \; 10 \; \cdot \; |lettere|}{|parole|}}$$
+	\item \textbf{Strumenti utilizzati:} \url{https://farfalla-project.org/readability_static/}
+\end{itemize}
 
 \subsubsection{Strumenti}
-\paragraph{\LaTeX}
+\paragraph*{\LaTeX}
+Per quanto riguarda la stesura dei documenti il gruppo ha scelto di utilizzare il linguaggio \LaTeX{}, il quale consente una migliore qualità tipografica rispetto ai normali software di videoscrittura, ma soprattutto facilita il versionamento e la suddivisione in parti di un documento.
+
+\paragraph*{Linguaggio UML}
+Per la realizzazione dei diagrammi dei casi d'uso, delle classi, dei package, delle attività e delle sequenze viene utilizzato il linguaggio di modellazione \textbf{UML}, in particolare la versione v2.0 dello standard.
+
+\paragraph*{Editor \LaTeX}
 Per quanto riguarda gli editor per l'utilizzo e la scrittura di \LaTeX{} vengono scelti come ufficiali:
 \begin{itemize}
 	\item \href{https://www.xm1math.net/texmaker/}{Texmaker}, che include editor e supporto alla correzione ortografica;
@@ -183,7 +234,7 @@ Per compilare un file \textbf{.tex} e generare un file PDF corretto deve essere 
 \end{itemize}
 Questi file hanno sempre il nome del documento che producono, con le convenzioni di nomenclatura indicate nelle \NdP{}.
 
-\paragraph{UML}
+\paragraph*{UML}
 Per realizzare tutti i diagrammi in UML viene utilizzato il software \href{https://draw.io}{Draw.io}, che è disponibile sia come \glo{applicazione we} accessibile da browser, che come applicazione desktop.
 Draw.io permette sia di salvare i file di lavoro per poterli modificare, sia di esportarli.
 Il salvataggio dei file di lavoro può avvenire in file in formato:
