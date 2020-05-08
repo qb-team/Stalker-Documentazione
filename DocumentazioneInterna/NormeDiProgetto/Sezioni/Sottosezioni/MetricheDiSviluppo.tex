@@ -1,0 +1,63 @@
+\subsubsection{Metriche}
+\paragraph{Analisi dei requisiti}
+    \subparagraph*{Metrica - Percentuale requisiti obbligatori soddisfatti}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC1
+        \item \textbf{Descrizione:} È la percentuale dei requisiti che devono essere soddisfatti;
+        \item \textbf{Processo di riferimento:} Sviluppo;
+        \item \textbf{Attività di riferimento:} Analisi dei requisiti;
+        \item \textbf{Sigla:} $PRS$
+        \item \textbf{Formula:} $$PRS = {\frac{|requisiti \; soddisfatti|}{|requisiti \; totali|}}\; \cdot \; 100$$
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+    \end{itemize}
+\paragraph{Progettazione Architetturale}
+\subparagraph*{Metrica - Incapsulamento CBO}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC2
+        \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una classe in esame al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling della classe in esame e più il sistema è difficile da mantenere;
+        \item \textbf{Processo di riferimento:} Sviluppo;
+        \item \textbf{Sigla:} $CBO$
+        \item \textbf{Formula:} $$CBO = {\sum_{i=1}^{N} C_i}$$
+        con:
+        \begin{itemize}
+            \item $N$ = numero classi non appartenenti alla gerarchia di ereditarietà della classe in esame;
+            \item $C_i$ =
+            \begin{math} {
+                \begin{cases}
+                    1, & la \; $i$-esima \; classe \; \grave{e} \; correlata \; a \; quella \; in \; esame \\
+                    0, & la \; $i$-esima \; classe \; non \; \grave{e} \; correlata \; a \; quella \; in \; esame
+                \end{cases}
+            }
+            \end{math}
+        \end{itemize}
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+    \end{itemize}
+\paragraph{Progettazione di dettaglio}
+    \subparagraph*{Metrica - Livello profondità gerarchia}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC3
+        \item \textbf{Descrizione:} È il valore intero che indica la profondità della gerarchia formata tra classi. Se una gerarchia è formata da una classe allora il valore è uguale a 1;
+        \item \textbf{Processo di riferimento:} Sviluppo;
+        \item \textbf{Sigla:} $LPG$
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+    \end{itemize}
+
+\paragraph{Codifica}
+    \subparagraph*{Metrica - Numero di parametri per metodo}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC4
+        \item \textbf{Descrizione:} Un numero elevato di parametri per metodo può indicare il bisogno di ridurre funzionalità associate a tale metodo. Più è grande questo valore e più la possibilità aumenta nel commettere errori progettuali;
+        \item \textbf{Processo di riferimento:} Sviluppo;
+        \item \textbf{Sigla:} $NPM$
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+    \end{itemize}
+
+    \subparagraph*{Metrica - Linee di commento per linee di codice}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC5
+        \item \textbf{Descrizione:} È il rapporto tra linee di commento e linee di codice. Per le linee di codice si intende Logical SLOC il numero di linee di codice effettive che corrispondono al numero di statement;
+        \item \textbf{Processo di riferimento:} Sviluppo;
+        \item \textbf{Sigla:} $LCLC$
+        \item \textbf{Formula:}$$LCLC = \frac{|linee \; di \; commento|}{|linee \; di \; codice|}$$
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+    \end{itemize}
