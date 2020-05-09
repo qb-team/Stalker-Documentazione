@@ -3,8 +3,6 @@
 L'applicazione Android offre all'utente le seguenti funzionalità:
 
 ## Registrazione
-[link text](https://www.youtube.com/watch?v=KJDAhm39Hs8)
-
 
 <iframe src="https://www.youtube.com/watch?v=KJDAhm39Hs8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

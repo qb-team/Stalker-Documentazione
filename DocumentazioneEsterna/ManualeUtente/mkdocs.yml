@@ -17,6 +17,7 @@ nav:
   - Home: "index.md"
   - App utenti:
       - Installazione: "app/installazione.md"
+      - Funzionalità: "app/funzionalita.md"
   - Web-app amministratori:
       - Installazione: "webapp/installazione.md"
   - REST API:
