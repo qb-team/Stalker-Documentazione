@@ -14,24 +14,15 @@ Il processo di garanzia della qualità è un processo fornisce un'adeguata garan
 \paragraph{Implementazione del processo}
 \input{Sezioni/Sottosezioni/IsoIec12207}
 \input{Sezioni/Sottosezioni/IsoIec9126}
-\subsubsection{Piano di Qualifica}
-Nel documento \PdQ{} il gruppo \Gruppo{} illustra come intende gestire la qualità di processo e di qualità di prodotto, elenca le varie metriche definite per aderire alle definizioni degli standard e i test per verificare la corretta soddisfazione dei requisiti del prodotto software.\newline
-La qualità di processo e la qualità di prodotto sono due aspetti chiaramente coordinati, ma vengono gestiti separatamente.
-Le sezioni principali del documento sono le seguenti:
-\begin{itemize}
-    \item \textbf{Qualità di processo:} Sezione dove vengono elencate le metriche inerenti ai \glo{processi};
-    \item \textbf{Qualità di prodotto:} Sezione dove vengono elencate le metriche inerenti al prodotto;
-    \item \textbf{Strategia di testing:} Sezione dove viene elencato il piano di testing delle componenti e del sistema software nel suo complesso;
-    \item \textbf{Standard di qualità adottati:} Sezione dove vengono spiegati gli standard adottati.
-\end{itemize}
+
 \paragraph{Garanzie sul prodotto}
 \begin{itemize}
     \item Deve essere garantito che tutti i requisiti richiesti dal capitolato siano documentati, rispettino il contratto, siano coerenti ed eseguiti come richiesto dal proponente;
     \item Deve essere garantito che il prodotto software e la relativa documentazione siano conformi al capitolato e aderire ai requisiti.
     \item In preparazione alla consegna del prodotto software, deve essere garantito che esso soddisfatti i requisiti contrattuali.
 \end{itemize}
-\subsubsection{Metriche di qualità}
-\paragraph{Codici metriche}\mbox{}
+\paragraph{Metriche di qualità}
+\paragraph*{Codici metriche}\mbox{}
 Ogni metrica di \glo{processo} ha un codice univoco ed è strutturato in questo formato:
 \begin{center}
     M[Destinazione][Numero progressivo]
@@ -46,7 +37,7 @@ con:
     \item \textbf{[Numero progressivo]}: Il numero della metrica in relazione alla sua destinazione, progressivo perché diverso per ogni metrica e in serie. Il conteggio parte da 1.
 \end{itemize}
 
-\paragraph{Struttura descrittiva metriche}
+\paragraph*{Struttura descrittiva metriche}
 La seguente è una struttura ad elenco che descrive una metrica di processo o di prodotto. \\
 I punti dell'elenco racchiusi fra parentesi quadre indicano che tale punto è opzionale e va inserito solo se necessario.\\
 Inoltre, \textbf{Processo di riferimento} deve essere presente solo nelle metriche della qualità di processo, mentre \textbf{Attributo di riferimento} solo per la qualità di prodotto.
@@ -65,15 +56,21 @@ elencata in una lista, mentre il nome della metrica rappresenta il titolo di que
     \end{itemize}
 \end{itemize}
 
-\paragraph{Metriche di processo}
+\paragraph*{Metriche di processo}
 Per monitorare l'aderenza ai processi dallo standard ISO/IEC 12207 istanziati, vengono utilizzate delle metriche. Il Responsabile, grazie ai valori ricavati dalle metriche, è facilitato nel valutare il \glo{processo} e di effettuare, se necessario, modifiche alla pianificazione.
 
-\paragraph{Metriche di prodotto}
+\paragraph*{Metriche di prodotto}
 Il modello di qualità del software descritto dallo standard ISO/IEC 9126 definisce le caratteristiche e gli attributi del prodotto software, ciascuna misurabile da metriche interne (che richiedono la disponibilità del codice sorgente - white box) o esterne (che richiedono il prodotto software in esecuzione - black box).
 Una volta specificati i requisiti di qualità del prodotto software, si identificano le caratteristiche e attributi di qualità che più contribuiscono a verificare l'aderenza allo standard e ai requisiti.
 Il gruppo \Gruppo{} si è impegnato a scegliere le metriche interne che maggiormente influenzano (in positivo) le caratteristiche esterne del prodotto finale, in modo che esse possano predire quanto più possibile la qualità del risultato finale. 
 
-\paragraph{Tabella riassuntiva metriche}
+\paragraph*{Metriche interne}
+Le metriche della qualità "interne" del software sono utilizzate durante la fase di sviluppo e permettono di valutare il comportamento del software dal punto di vista degli sviluppatori e di predire quello che sarà il punto di vista esterno degli utenti.
+      
+\paragraph*{Metriche esterne}
+Le metriche relative alla qualità "esterna" indirizzano le caratteristiche esteriori del software, cioè quelle rilevabili direttamente dagli utenti e dagli operatori.
+
+\paragraph*{Tabella riassuntiva metriche}
 Per riassumere tutte le metriche e le loro caratteristiche descritte all'interno del \PdQ{}, alla fine della sezione in cui vengono illustrate vi sono delle tabelle riassuntive che hanno questa struttura:
 {
 \rowcolors{2}{grigetto}{white}
@@ -85,203 +82,5 @@ Per riassumere tutte le metriche e le loro caratteristiche descritte all'interno
 Codice & Nome della metrica & Sigla & Range Accettabile & Range Ottimale \\
 \end{longtable}
 }
-
-\subsubsection{Lista delle metriche di processo}
-\paragraph{Processi di supporto}
-
-\subparagraph{Verifica}
-\subsubparagraph{Metrica - Code coverage}
-\begin{itemize}
-	\item \textbf{Codice:} MPC7
-	\item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento;
-	\item \textbf{Processo di riferimento:} \glo{Processi} di verifica;
-	\item \textbf{Sigla:} $CC$
-	\item \textbf{Formula:} $$CC = \frac{|linee \; di \; codice \; percorse \; dai  \; test|}{|linee \; di \; codice \; totali|} \; \cdot \; 100$$
-	\item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
-\end{itemize}
-   \paragraph{Processi organizzativi}
-
-\subparagraph{Pianificazione}
-
-\subsubparagraph{Metrica - Actual Cost of Work Performed}
-    \begin{itemize}
-        \item \textbf{Codice:} MPC8
-        \item \textbf{Descrizione:} Denaro speso fino al momento del calcolo;
-        \item \textbf{Processo di riferimento:} Gestione;
-        \item \textbf{Sigla:} $ACWP$
-        \item \textbf{Formula:} $$ACWP = {Sommatoria\; delle\; ore\; lavorative\; moltiplicate\; con\; il\; corrispondente\; costo\; orario}$$
-        \item \textbf{Strumenti utilizzati:} Fogli Google.
-    \end{itemize}
-
-\subsubparagraph{Metrica - Budgeted Cost of Work Scheduled}
-\begin{itemize}
-	\item \textbf{Codice:} MPC9
-    \item \textbf{Descrizione:} Costo pianificato per realizzare le attività di progetto pianificate fino al momento del calcolo.
-    Per attività di progetto pianificate si intendono il numero di requisiti che devono soddisfatti dal prodotto software;
-	\item \textbf{Processo di riferimento:} Gestione;
-	\item \textbf{Sigla:} $BCWS$
-	\item \textbf{Formula:} $$BCWS = {B_{tot} * \% \;di\; lavoro\; pianificato}$$
-	con:
-	\begin{itemize}
-		\item $B_{tot}$ = Budget totale.
-	\end{itemize}
-	\item \textbf{Strumenti utilizzati:} Fogli Google.
-\end{itemize}
-
-\subsubparagraph{Metrica - Budgeted Cost of Work Performed}
-\begin{itemize}
-	\item \textbf{Codice:} MPC10
-	\item \textbf{Descrizione:} Il costo del lavoro fatto fino al momento del calcolo, ovvero la variazione del numero di requisiti soddisfatti nel periodo in cui la metrica viene calcolata;
-	\item \textbf{Processo di riferimento:} Gestione;
-	\item \textbf{Sigla:} $BCWP$
-	\item \textbf{Formula:} $$BCWP = {B_{tot} * \% \;di\; lavoro\; svolto}$$
-	con:
-	\begin{itemize}
-		\item $B_{tot}$ = Budget totale.
-	\end{itemize}
-	\item \textbf{Strumenti utilizzati:} Fogli Google.
-\end{itemize}
-
-    \subsubparagraph{Metrica - Schedule variance}
-    \begin{itemize}
-        \item \textbf{Codice:} MPC11
-        \item \textbf{Descrizione:} È il valore che indica se si è in linea ($=0$), in anticipo ($>0$) oppure in ritardo ($<0$) rispetto alla schedulazione delle attività di progetto pianificate nella \glo{baseline};
-        \item \textbf{Processo di riferimento:} Gestione;
-        \item \textbf{Sigla:} $SV$
-        \item \textbf{Formula:} $$SV = {BCWP \; - \; BCWS}$$
-        con:
-        \begin{itemize}
-            \item $BCWP$ = Budgeted Cost of Work Performed (valore delle attività eseguite nella data corrente);
-            \item $BCWS$ = Budgeted Cost of Work Scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente);
-        \end{itemize}
-    \item \textbf{Strumenti utilizzati:} Fogli Google.
-    \end{itemize}
-
-    \subsubparagraph{Metrica - Budget variance}
-        \begin{itemize}
-            \item \textbf{Codice:} MPC12
-            \item \textbf{Descrizione:} È il valore che indica se alla data corrente si è speso di più ($>0$) o di meno ($<0$) rispetto a quanto pianificato dal budget totale $B_{tot}$;
-            \item \textbf{Processo di riferimento:} Gestione;
-            \item \textbf{Sigla:} $BV$
-            \item \textbf{Formula:} $$BV = {BCWS \; - \; ACWP}$$
-            con:
-            \begin{itemize}
-                \item $BCWS$ = Budgeted Cost of Work Scheduled (costo pianificato per la realizzazione delle attività di progetto alla data corrente);
-                \item $ACWP$ = Actual Cost of Work Performed (costo effettivamente sostenuto alla data corrente);
-                \item $B_{tot}$ = Budget totale.
-            \end{itemize}
-        \item \textbf{Strumenti utilizzati:} Fogli Google.
-        \end{itemize}
-\newpage
-\subsubsection{Lista delle metriche di prodotto}
-\paragraph{Metriche interne}
-Le metriche della qualità "interne" del software sono utilizzate durante la fase di sviluppo e permettono di valutare il comportamento del software dal punto di vista degli sviluppatori e di predire quello che sarà il punto di vista esterno degli utenti.
-
-\subparagraph{Usabilità}
-Capacità del prodotto software di essere comprensibile, di poter essere usato e compreso facilmente, in ogni sua parte, da qualsiasi utente che lo voglia usare.\\
-
-\subsubparagraph{Metrica - Attrattività della User Interface (UI)} 
-\begin{itemize}
-    \item \textbf{Codice:} MPD1
-    \item \textbf{Descrizione:} Misurare quanto attrattive risultino le interfacce agli utenti dal punto di vista grafico.
-    Gli utenti dovranno poi compilare un questionario in base all'esperienza che hanno fatto;
-    Il valore medio di tale valutazione è ritenuto valido se almeno tre utenti hanno compilato il questionario. 
-    Viene utilizzata una scala a quattro valori: Molto attrattivo, Attrattivo, Poco attrattivo, Non Attrattivo;
-    \item \textbf{Attributo di riferimento:} \glo{Attrattività};
-    \item \textbf{Sigla:} $AUI$
-    \item \textbf{Formula:}$$AUI = V(q) $$
-    con:
-        \begin{itemize}
-        \item $V$ = Valore medio dei risultati;
-        \item $q$ = Questionario compilato;
-        \end{itemize}
-    \item \textbf{Strumenti utilizzati:} Moduli Google.
-\end{itemize}
-
-\subparagraph{Manutenibilità}
-Capacità di predire il livello di impegno richiesto per modificare il prodotto software dal punto di vista degli sviluppatori.           
-\subsubparagraph{Metrica - Complessità Ciclomatica del Software} 
-    \begin{itemize}
-    \item \textbf{Codice:} MPD2
-    \item \textbf{Descrizione:} Misurare la complessità ciclomatica dei singoli moduli sviluppati;
-    \item \textbf{Attributo di riferimento:} \glo{Modificabilità};
-    \item \textbf{Sigla:} $CCS$
-    \item \textbf{Formula:} $$CCS = e - n + p$$
-    con:
-    \begin{itemize}
-        \item $G$ = grafo del modulo;
-        \item $e$ = numero di congiunzioni tra statement (corrispondenti agli archi di un grafo);
-        \item $n$ = numero di statement (nodi presenti nel grafo);
-        \item $p$ = numero delle componenti connesse da ogni nodo (per esecuzione sequenziale: p=2, essendovi un predecessore e un successore);
-    \end{itemize}
-    \item \textbf{Strumenti utilizzati:} Non ancora definito.
-\end{itemize}
-
-\subsubparagraph{Metrica - Unità Documentate} 
-\begin{itemize}
-    \item \textbf{Codice:} MPD3
-    \item \textbf{Descrizione:} Misurare in percentuale il numero di unità di codice con documentazione tecnica;
-    \item \textbf{Attributo di riferimento:} \glo{Modificabilità};
-    \item \textbf{Sigla:} $UD$
-    \item \textbf{Formula:} $$UD = \frac{|unit\grave{a} \; di \; codice \; con \; documentazione \; tecnica|}{|unit\grave{a} \; di \; codice|} \cdot 100$$
-    \item \textbf{Strumenti utilizzati:} Non ancora definito.
-\end{itemize}
-              
-       
-\paragraph{Metriche esterne}
-Le metriche relative alla qualità "esterna" indirizzano le caratteristiche esteriori del software, cioè quelle rilevabili direttamente dagli utenti e dagli operatori.
-
-\subparagraph{Affidabilità}
-Capacità del prodotto software di dimostrare un adeguato livello di affidabilità quando opererà nel sistema in cui è previsto debba operare.
-  
-\subsubparagraph{Metrica - Presenza di code smell} 
-\begin{itemize}
-    \item \textbf{Codice:} MPD4
-    \item \textbf{Descrizione:} Misurare il numero di \glo{code smell} presenti all'interno del codice del prodotto;
-    \item \textbf{Attributo di riferimento:} \glo{Manutenibilità};
-    \item \textbf{Sigla:} $CS$
-    \item \textbf{Formula:} $$CS = {numero \; di \; code \; smell \; rilevati}$$
-    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
-\end{itemize}
-
-\subsubparagraph{Metrica - Presenza di vulnerabilità} 
-\begin{itemize}
-    \item \textbf{Codice:} MPD5
-    \item \textbf{Descrizione:} Misurare il numero di \glo{vulnerabilità} presenti all'interno del codice del prodotto;
-    \item \textbf{Attributo di riferimento:} \glo{Sicurezza};
-    \item \textbf{Sigla:} $VLN$
-    \item \textbf{Formula:} $$VLN = {numero \; di \; vulnerabilit\grave{a} \; rilevate}$$
-    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
-\end{itemize}
-
-\subsubparagraph{Metrica - Presenza di bug} 
-\begin{itemize}
-    \item \textbf{Codice:} MPD6
-    \item \textbf{Descrizione:} Misurare il numero di \glo{bug} presenti all'interno del codice del prodotto;
-    \item \textbf{Attributo di riferimento:} \glo{Operabilità};
-    \item \textbf{Sigla:} $BUG$
-    \item \textbf{Formula:} $$BUG = {numero \; di \; bug \; rilevati}$$
-    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
-\end{itemize}
-
-\subsubparagraph{Metrica - Maturità dei Test} 
-\begin{itemize}
-    \item \textbf{Codice:} MPD7
-    \item \textbf{Descrizione:} Misurare la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire piena copertura dei requisiti sia funzionali che qualitativi(usabilità, affidabilità, efficienza);
-    \item \textbf{Attributo di riferimento:} \glo{Maturità};
-    \item \textbf{Sigla:} $MT$
-    \item \textbf{Formula:} $$MT = \frac{|casi \; di \; test \; eseguiti \; con \; successo|}{|casi \; di \; test \; previsti|} \cdot 100$$
-    \item \textbf{Strumenti utilizzati:} Non ancora definito.
-\end{itemize}
-       
-\subparagraph{Usabilità}
-Capacità del prodotto software di essere facilmente comprensibile, apprendibile ed operabile per ogni utente intenzionato a usarlo.
-
-\subsubparagraph{Metrica - Profondità Strutturale dell'Interfaccia}
-\begin{itemize}
-    \item \textbf{Codice:} MPD8
-    \item \textbf{Descrizione:} È sconsigliato per le interfacce utente l'utilizzo di una struttura troppo profonda per questioni di usabilità. L'utente non deve fare troppi passaggi per raggiungere la funzionalità desiderata;
-    \item \textbf{Attributo di riferimento:} \glo{Operabilità};
-    \item \textbf{Sigla:} $PSI$
-    \item \textbf{Strumenti utilizzati:} Controllo manuale.
-\end{itemize}
+\subsubsection{Strumenti}
+Non sono stati utilizzati strumenti per questo processo.

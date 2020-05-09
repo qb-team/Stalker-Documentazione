@@ -94,8 +94,11 @@ con:
 I test di regressione hanno come obiettivo di verificare l'assenza di regressioni (ovvero malfunzionamenti o comportamenti imprevisti) nel caso in cui si introduca una modifica su una componente dalla quale ne dipendono altre.
 L'obiettivo di questi test è verificare che le componenti continuino a funzionare correttamente senza anomalie, ossia verificare che una modifica non pregiudichi le funzionalità già verificate con i test effettuati in precedenza.
 Non è necessario identificare nuovi test, è sufficiente accertarsi che quelli presenti restituiscano i valori attesi.
+
+
 \subsubsection{Metriche}
-\paragraph{Metrica - Code coverage}
+
+\paragraph{Code coverage}
 \begin{itemize}
 	\item \textbf{Codice:} MPC7
 	\item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento;
@@ -104,6 +107,53 @@ Non è necessario identificare nuovi test, è sufficiente accertarsi che quelli 
 	\item \textbf{Formula:} $$CC = \frac{|linee \; di \; codice \; percorse \; dai  \; test|}{|linee \; di \; codice \; totali|} \; \cdot \; 100$$
 	\item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
 \end{itemize}
+
+\paragraph{Presenza di code smell} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD4
+    \item \textbf{Descrizione:} Misurare il numero di \glo{code smell} presenti all'interno del codice del prodotto;
+    \item \textbf{Attributo di riferimento:} \glo{Manutenibilità};
+    \item \textbf{Sigla:} $CS$
+    \item \textbf{Formula:} $$CS = {numero \; di \; code \; smell \; rilevati}$$
+    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+\end{itemize}
+
+\paragraph{Presenza di vulnerabilità} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD5
+    \item \textbf{Descrizione:} Misurare il numero di \glo{vulnerabilità} presenti all'interno del codice del prodotto;
+    \item \textbf{Attributo di riferimento:} \glo{Sicurezza};
+    \item \textbf{Sigla:} $VLN$
+    \item \textbf{Formula:} $$VLN = {numero \; di \; vulnerabilit\grave{a} \; rilevate}$$
+    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+\end{itemize}
+
+\paragraph{Presenza di bug} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD6
+    \item \textbf{Descrizione:} Misurare il numero di \glo{bug} presenti all'interno del codice del prodotto;
+    \item \textbf{Attributo di riferimento:} \glo{Operabilità};
+    \item \textbf{Sigla:} $BUG$
+    \item \textbf{Formula:} $$BUG = {numero \; di \; bug \; rilevati}$$
+    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+\end{itemize}
+
+\paragraph{Maturità dei Test} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD7
+    \item \textbf{Descrizione:} Misurare la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire piena copertura dei requisiti sia funzionali che qualitativi(usabilità, affidabilità, efficienza);
+    \item \textbf{Attributo di riferimento:} \glo{Maturità};
+    \item \textbf{Sigla:} $MT$
+    \item \textbf{Formula:} $$MT = \frac{|casi \; di \; test \; eseguiti \; con \; successo|}{|casi \; di \; test \; previsti|} \cdot 100$$
+    \item \textbf{Strumenti utilizzati:} Non ancora definito.
+\end{itemize}
+
+
 \subsubsection{Strumenti}
+
 \paragraph{Verifica ortografica}
 Il gruppo qbteam per quanto riguarda la verifica ortografica dei documenti si è affidato a TEXstudio, il quale integra uno strumento di correzione dell'ortografia. Esso permette di visualizzare in tempo reale una sottolineatura rossa al di sotto di una parola errata e una verde al di sotto di una parola ripetuta a breve distanza secondo la lingua italiana.  
+\paragraph{\glo{SonarQube}}
+\paragraph{JUnit}
+\paragraph{Jasmine}
+\paragraph{Mockito}

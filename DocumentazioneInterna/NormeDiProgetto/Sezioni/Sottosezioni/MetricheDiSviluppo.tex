@@ -1,6 +1,5 @@
 \subsubsection{Metriche}
-\paragraph{Analisi dei requisiti}
-    \subparagraph*{Metrica - Percentuale requisiti obbligatori soddisfatti}
+    \paragraph{Analisi dei requisiti - Percentuale requisiti obbligatori soddisfatti}
     \begin{itemize}
         \item \textbf{Codice:} MPC1
         \item \textbf{Descrizione:} È la percentuale dei requisiti che devono essere soddisfatti;
@@ -10,8 +9,7 @@
         \item \textbf{Formula:} $$PRS = {\frac{|requisiti \; soddisfatti|}{|requisiti \; totali|}}\; \cdot \; 100$$
         \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
     \end{itemize}
-\paragraph{Progettazione Architetturale}
-\subparagraph*{Metrica - Incapsulamento CBO}
+\subparagraph{Progettazione Architetturale - Incapsulamento CBO}
     \begin{itemize}
         \item \textbf{Codice:} MPC2
         \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una classe in esame al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling della classe in esame e più il sistema è difficile da mantenere;
@@ -32,8 +30,7 @@
         \end{itemize}
         \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
     \end{itemize}
-\paragraph{Progettazione di dettaglio}
-    \subparagraph*{Metrica - Livello profondità gerarchia}
+\paragraph{Progettazione di dettaglio - Livello profondità gerarchia}
     \begin{itemize}
         \item \textbf{Codice:} MPC3
         \item \textbf{Descrizione:} È il valore intero che indica la profondità della gerarchia formata tra classi. Se una gerarchia è formata da una classe allora il valore è uguale a 1;
@@ -42,8 +39,7 @@
         \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
     \end{itemize}
 
-\paragraph{Codifica}
-    \subparagraph*{Metrica - Numero di parametri per metodo}
+\paragraph{Codifica - Numero di parametri per metodo}
     \begin{itemize}
         \item \textbf{Codice:} MPC4
         \item \textbf{Descrizione:} Un numero elevato di parametri per metodo può indicare il bisogno di ridurre funzionalità associate a tale metodo. Più è grande questo valore e più la possibilità aumenta nel commettere errori progettuali;
@@ -52,7 +48,7 @@
         \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
     \end{itemize}
 
-    \subparagraph*{Metrica - Linee di commento per linee di codice}
+\paragraph{Codifica - Linee di commento per linee di codice}
     \begin{itemize}
         \item \textbf{Codice:} MPC5
         \item \textbf{Descrizione:} È il rapporto tra linee di commento e linee di codice. Per le linee di codice si intende Logical SLOC il numero di linee di codice effettive che corrispondono al numero di statement;
@@ -61,3 +57,47 @@
         \item \textbf{Formula:}$$LCLC = \frac{|linee \; di \; commento|}{|linee \; di \; codice|}$$
         \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
     \end{itemize}
+
+\paragraph{Codifica - Complessità Ciclomatica del Software} 
+    \begin{itemize}
+    \item \textbf{Codice:} MPD2
+    \item \textbf{Descrizione:} Misurare la complessità ciclomatica dei singoli moduli sviluppati;
+    \item \textbf{Attributo di riferimento:} \glo{Modificabilità};
+    \item \textbf{Sigla:} $CCS$
+    \item \textbf{Formula:} $$CCS = e - n + p$$
+    con:
+    \begin{itemize}
+        \item $G$ = grafo del modulo;
+        \item $e$ = numero di congiunzioni tra statement (corrispondenti agli archi di un grafo);
+        \item $n$ = numero di statement (nodi presenti nel grafo);
+        \item $p$ = numero delle componenti connesse da ogni nodo (per esecuzione sequenziale: p=2, essendovi un predecessore e un successore);
+    \end{itemize}
+    \item \textbf{Strumenti utilizzati:} Non ancora definito.
+\end{itemize}
+
+\paragraph{Usabilità - Profondità Strutturale dell'Interfaccia}
+\begin{itemize}
+    \item \textbf{Codice:} MPD8
+    \item \textbf{Descrizione:} È sconsigliato per le interfacce utente l'utilizzo di una struttura troppo profonda per questioni di usabilità. L'utente non deve fare troppi passaggi per raggiungere la funzionalità desiderata;
+    \item \textbf{Attributo di riferimento:} \glo{Operabilità};
+    \item \textbf{Sigla:} $PSI$
+    \item \textbf{Strumenti utilizzati:} Controllo manuale.
+\end{itemize}
+
+\paragraph{Usabilità - Attrattività della User Interface (UI)} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD1
+    \item \textbf{Descrizione:} Misurare quanto attrattive risultino le interfacce agli utenti dal punto di vista grafico.
+    Gli utenti dovranno poi compilare un questionario in base all'esperienza che hanno fatto;
+    Il valore medio di tale valutazione è ritenuto valido se almeno tre utenti hanno compilato il questionario. 
+    Viene utilizzata una scala a quattro valori: Molto attrattivo, Attrattivo, Poco attrattivo, Non Attrattivo;
+    \item \textbf{Attributo di riferimento:} \glo{Attrattività};
+    \item \textbf{Sigla:} $AUI$
+    \item \textbf{Formula:}$$AUI = V(q) $$
+    con:
+        \begin{itemize}
+        \item $V$ = Valore medio dei risultati;
+        \item $q$ = Questionario compilato;
+        \end{itemize}
+    \item \textbf{Strumenti utilizzati:} Moduli Google.
+\end{itemize}
