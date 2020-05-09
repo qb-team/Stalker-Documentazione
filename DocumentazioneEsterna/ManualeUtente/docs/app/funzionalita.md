@@ -4,7 +4,7 @@ L'applicazione Android offre all'utente le seguenti funzionalità:
 
 ## Registrazione
 
-<iframe src="https://www.youtube.com/watch?v=KJDAhm39Hs8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="720" src="https://www.youtube.com/embed/KJDAhm39Hs8" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 L'utente ha la possibilità di registrarsi inserendo un e-mail, password e accettando le condizioni d'uso;
 
