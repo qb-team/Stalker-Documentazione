@@ -17,11 +17,6 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
    \end{longtable}
 \vspace{0.3cm}
 \subsubsection{Progettazione architetturale}
-
-\paragraph{Metrica MPC2 - Structural Fan-In}
-\begin{itemize}
-	\item \textbf{Descrizione:} Numero di procedure che chiama questa procedura;
-\end{itemize}
 \paragraph{Metrica MPC3 - Structural Fan-Out}
 \begin{itemize}
 	\item \textbf{Descrizione:} Numero di procedure che questa procedura chiama;
@@ -59,6 +54,7 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
     	\rowcolor{darkblue}
     	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
     	MPC6 & Indice di Gulpease & $IG$ & $40 < IG < 100$ & $80 < IG < 100$ \\
+    	MPC7 & Lunghezza dei video & $LV$ & $LV < 2 minuti$ & $LV < 1 minuto$ \\
     \end{longtable}
 \vspace{0.3cm}
 \subsubsection{Verifica}
@@ -68,7 +64,9 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
     	\caption{Tabella metriche per la verifica}\\
     	\rowcolor{darkblue}
     	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
-    	MPC7 & Code Coverage & $CC$ & $CC = 80\%$ & $CC = 100\%$  \\
+    	MPC8 & Code Coverage & $CC$ & $CC = 80\%$ & $CC = 100\%$  \\
+    	MPC9 & Statement Coverage & $SC$ & $SC = 80\%$ & $SC = 100\%$ \\
+    	MPC10 & Branch Coverage & $BC$ & $BC = 80\%$ & $BC = 100\%$ \\
     \end{longtable}
 \vspace{0.3cm}
 \subsection{Processi organizzativi}
@@ -80,9 +78,9 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
 	\caption{Tabella metriche per la pianificazione}\\
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
-		MPC8 & Actual Cost of Work Performed & $ACWP$ & $0 \leq ACWP \leq BCWS$ & $0 \leq ACWP \leq B_{tot}$ \\
-		MPC9 & Budgeted Cost of Work Scheduled & $BCWS$ & $BCWS \geq 0$ &  $BCWS \geq 0$ \\
-		MPC10 & Budgeted Cost of Work Performed & $BCWP$ & $BCWP \geq 0$ & $BCWP \geq 0$ \\
-		MPC11 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\	
-		MPC12 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\
+		MPC9 & Actual Cost of Work Performed & $ACWP$ & $0 \leq ACWP \leq BCWS$ & $0 \leq ACWP \leq B_{tot}$ \\
+		MPC10 & Budgeted Cost of Work Scheduled & $BCWS$ & $BCWS \geq 0$ &  $BCWS \geq 0$ \\
+		MPC11 & Budgeted Cost of Work Performed & $BCWP$ & $BCWP \geq 0$ & $BCWP \geq 0$ \\
+		MPC12 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\	
+		MPC13 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\
 	\end{longtable}
