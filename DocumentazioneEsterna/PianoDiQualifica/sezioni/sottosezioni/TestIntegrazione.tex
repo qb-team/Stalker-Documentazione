@@ -2,7 +2,7 @@
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}
 \centering
-\begin{longtable}{ c C{8.5cm} C{1cm}}
+\begin{longtable}{ c C{13cm} C{1cm}}
 \caption{Elenco dei test di unità}\\
 \rowcolor{darkblue}
 \textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Stato}}\\
@@ -32,27 +32,27 @@ TIA18 & Si verifichi che l’integrazione tra l’applicazione Android e REST-AP
 TIA19 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia entrato in un luogo di un'organizzazione preferita inviando il codice di autenticazione LDAP ed in risposta ricevere l'exit token. & NI \\
 TIA20 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia uscito da un luogo di un'organizzazione preferita inviando il codice di autenticazione LDAP e di riconsegnare l'exit token. & NI \\
 
-TI & Si verifichi l’integrazione tra l’applicazione web e servizi di \glo{Firebase} permetta l’autenticazione a un amministratore. & NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e servizi di \glo{Firebase} permetta il reset della password a un amministratore. & NI \\
-TI & Si verifichi l’integrazione tra applicazione web sviluppata in Angular 2+ e \glo{Firebase}.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e il server LDAP permetta l’autenticazione.& NI \\
-TI & Si verifichi l’integrazione tra REST-API e \glo{backend} permetta la comunicazione fra loro.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di recuperare la lista dei permessi che ha l’amministratore autenticato.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di recuperare la lista delle organizzazioni che ha l’amministratore autenticato.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di recuperare la lista dei luoghi di un’organizzazione che ha l’amministratore autenticato.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di monitorare gli accessi all’interno di un’organizzazione.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di monitorare gli accessi all’interno di un luogo di un’organizzazione.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di visualizzare i dati relativi a un’organizzazione ricevuti dal \glo{backend}.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di visualizzare i dati relativi a un luogo di un’organizzazione ricevuti dal \glo{backend}.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di modificare i dati relativi a un’organizzazione e inviare le modifiche al \glo{backend}.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di modificare i dati relativi a un luogo di un’organizzazione e inviare le modifiche al \glo{backend}.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di creare una nuova organizzazione.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di creare un nuovo luogo di un’organizzazione.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di creare un nuovo amministratore dell’organizzazione.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di inviare al \glo{backend} una richiesta di eliminazione di un’organizzazione.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di eliminare un luogo dell’organizzazione.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di modificare i permessi di un amministratore dell’organizzazione e salvare le modifiche nel \glo{backend}.& NI \\
-TI & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di eliminare un amministratore dell’organizzazione.& NI \\
+TIW1 & Si verifichi l’integrazione tra l’applicazione web e servizi di \glo{Firebase} permetta l’autenticazione a un amministratore. & NI \\
+TIW2 & Si verifichi l’integrazione tra l’applicazione web e servizi di \glo{Firebase} permetta il reset della password a un amministratore. & NI \\
+TIW3 & Si verifichi l’integrazione tra applicazione web sviluppata in Angular 2+ e \glo{Firebase}.& NI \\
+TIW4 & Si verifichi l’integrazione tra l’applicazione web e il server LDAP permetta l’autenticazione.& NI \\
+TIW5 & Si verifichi l’integrazione tra REST-API e \glo{backend} permetta la comunicazione fra loro.& NI \\
+TIW6 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di recuperare la lista dei permessi che ha l’amministratore autenticato.& NI \\
+TIW7 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di recuperare la lista delle organizzazioni che ha l’amministratore autenticato.& NI \\
+TIW8 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di recuperare la lista dei luoghi di un’organizzazione che ha l’amministratore autenticato.& NI \\
+TIW9 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di monitorare gli accessi all’interno di un’organizzazione.& NI \\
+TIW10 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di monitorare gli accessi all’interno di un luogo di un’organizzazione.& NI \\
+TIW11 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di visualizzare i dati relativi a un’organizzazione ricevuti dal \glo{backend}.& NI \\
+TIW12 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di visualizzare i dati relativi a un luogo di un’organizzazione ricevuti dal \glo{backend}.& NI \\
+TIW13 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di modificare i dati relativi a un’organizzazione e inviare le modifiche al \glo{backend}.& NI \\
+TIW14 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di modificare i dati relativi a un luogo di un’organizzazione e inviare le modifiche al \glo{backend}.& NI \\
+TIW15 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di creare una nuova organizzazione.& NI \\
+TIW16 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di creare un nuovo luogo di un’organizzazione.& NI \\
+TIW17 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di creare un nuovo amministratore dell’organizzazione.& NI \\
+TIW18 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di inviare al \glo{backend} una richiesta di eliminazione di un’organizzazione.& NI \\
+TIW19 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di eliminare un luogo dell’organizzazione.& NI \\
+TIW20 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di modificare i permessi di un amministratore dell’organizzazione e salvare le modifiche nel \glo{backend}.& NI \\
+TIW21 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di eliminare un amministratore dell’organizzazione.& NI \\
 
 
 
