@@ -22,7 +22,7 @@ Verificare che l'utente non autenticato:
 Se l'utente non autenticato si è dimenticato la sua password:
 \begin{enumerate}[resume]
     \item Verifica che l'utente non autenticato possa effettuare il reset della password qualora se la fosse dimenticata.
-\end{enumerate} & ?? \\
+\end{enumerate} & NI \\
 
 %da R1FI1 a R1FA8.4 (con parti splittate) % Christian
 TSA2 & Registrazione nell'applicazione di un utente non autenticato con credenziali Stalker &
@@ -36,12 +36,12 @@ Verificare che l'utente non autenticato:
     \item Riceva un messaggio di errore qualora abbia inserito una conferma password diversa dalla password. Il processo di \glo{autenticazione} deve fallire;
     \item Possa accettare le condizioni generali d'uso;
     \item La registrazione si interrompa e che l'applicazione si chiuda nel caso che l'utente non autenticato non abbia accettato le condizioni generali d'uso.
-\end{enumerate} & ?? \\
+\end{enumerate} & NI \\
 
 % R1FA2.1
 TSA3  & \glo{Logout} dell'utente anonimo & \begin{enumerate}
     \item Verifica che l'utente anonimo possa effettuare il \glo{logout} dall'applicazione.
-\end{enumerate} & ?? \\
+\end{enumerate} & NI \\
 
 % da R1FA3.1, R1FA3.2, R1FA8.5, R1FA3.7, R1FA3.8, R1FA3.9 % Riccardo
 TSA4 & Gestione lista delle \glo{organizzazioni} &
@@ -51,7 +51,7 @@ Verificare che l'utente anonimo:
     \item Riceva un messaggio di errore qualora lo scaricamento della lista di tutte le organizzazioni non vada a buon fine;
     \item Possa aggiornare la lista delle organizzazioni tramite \glo{refresh manuale};
     \item Possa aggiornare la lista delle organizzazioni tramite \glo{temporizzazione}.
-\end{enumerate} & ?? \\
+\end{enumerate} & NI \\
 
 % R1FA3.10, R1FA3.11, R1FA3.12, R1FA3.13, R1FA3.14, R1FA3.15, R1FA3.16, R1FA3.17, R1FA3.18 % Riccardo
 TSA5 & Visualizzazione lista delle organizzazioni & 
@@ -65,7 +65,7 @@ Verificare che l'utente anonimo:
     \item Possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alle nazioni indicate dall'utente;
     \item Possa ricercare organizzazioni presenti nella lista delle organizzazioni che hanno nel nome una sotto-stringa scelta dall'utente;
     \item Possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alla città indicata dall'utente.
-\end{enumerate} & ?? \\
+\end{enumerate} & NI \\
 
 % da R1FA3.3, R1FA3.4, R1FA3.5, R1FA3.6, R1FA8.6 % Riccardo
 TSA6 & Gestione lista delle organizzazioni preferite dell'utente anonimo &
@@ -74,7 +74,7 @@ Verificare che l'utente anonimo:
     \item Possa inserire un'organizzazione, presente nella lista di tutte le organizzazioni, nella propria lista delle organizzazioni preferite;
     \item Possa rimuovere un'organizzazione dalla propria lista delle organizzazioni preferite;
     \item Venga informato nel caso in cui non sia memorizzata nessuna lista delle organizzazioni del proprio dispositivo.
-\end{enumerate} & ?? \\
+\end{enumerate} & NI \\
 
 % da R1FA4.1 a R1FA4.3 % Tommaso
 TSA7 & Selezione della modalità di \glo{tracciamento} & 
@@ -87,7 +87,7 @@ Se l'utente riconosciuto si trova presso un luogo di un'\glo{organizzazione}, \g
 \begin{enumerate}[resume]
     \item Nel passaggio dalla modalità di \glo{tracciamento autenticato} a quella anonima venga inviata al sistema la richiesta di uscita dell'utente riconosciuto dal luogo e la successiva richiesta di ingresso di utente anonimo;
     \item Nel passaggio dalla modalità di \glo{tracciamento anonimo} a quella autenticata venga inviata al sistema la richiesta di uscita dell'utente anonimo dal luogo e la successiva richiesta di ingresso di utente riconosciuto.
-\end{enumerate} & ?? \\
+\end{enumerate} & NI \\
 
 % da R2FA5.1 a R2FA5.5, da R2FA5.10 a R2FA5.12, R2FA5.16, R2FA8.5 % Tommaso
 TSA8 & \glo{storico degli accessi} dell'utente anonimo presso un'\glo{organizzazione} & 
@@ -102,7 +102,7 @@ TSA8 & \glo{storico degli accessi} dell'utente anonimo presso un'\glo{organizzaz
 Se l'utente anonimo si trova presso un luogo dell'\glo{organizzazione}, \glo{verificare} che:
 \begin{enumerate}[resume]
     \item Possa visionare il nome dello specifico luogo in cui si trova e il tempo trascorso da quando ha fatto l'ultimo ingresso;
-\end{enumerate} & ?? \\
+\end{enumerate} & NI \\
 
 % da R2FA5.6 a R2FA5.9, da R2FA5.13 a R2FA5.15, R2FA5.17, R2FA8.6 % Tommaso
 TSA9 & \glo{storico degli accessi} dell'utente anonimo presso un luogo di un'\glo{organizzazione} & 
@@ -117,16 +117,16 @@ TSA9 & \glo{storico degli accessi} dell'utente anonimo presso un luogo di un'\gl
 Se l'utente anonimo si trova presso lo stesso luogo, \glo{verificare} che:
 \begin{enumerate}[resume]
     \item L'utente anonimo possa visualizzare il tempo trascorso all'interno del luogo dall'ultimo ingresso effettuato.
-\end{enumerate} & ?? \\
+\end{enumerate} & NI \\
 
 %da R2FA6.1 a R2FA6.9 % Christian
-TSA10 & \glo{Tracciamento} dell'utente anonimo/riconosciuto nei luoghi di un'\glo{organizzazione} &
-Verificare che l'utente anonimo/riconosciuto:
+TSA10 & \glo{Tracciamento} dell'utente riconosciuto nei luoghi di un'\glo{organizzazione} &
+Verificare che l'utente riconosciuto:
 \begin{enumerate}
     \item Riceva la notifica della corretta registrazione se il tracciamento del suo \glo{movimento} in/da un \glo{luogo} ha avuto successo;
     \item Riceva un messaggio di errore qualora il tracciamento del \glo{movimento} non sia andato a buon fine.
 \end{enumerate}
-Durante la registrazione del \glo{tracciamento} del \glo{movimento} dell'utente anonimo/riconosciuto:
+Durante la registrazione del \glo{tracciamento} del \glo{movimento} dell'utente riconosciuto:
 \begin{enumerate}[resume]
     \item Venga memorizzato il \glo{timestamp} in cui è avvenuto il \glo{movimento}.
 \end{enumerate}
@@ -135,22 +135,41 @@ Se l'utente riconosciuto è in modalità di \glo{tracciamento autenticato} verif
     \item Venga verificata la correttezza delle credenziali \glo{LDAP};
     \item Possa effettuare un ingresso in un luogo dell'\glo{organizzazione};
     \item Possa effettuare un'uscita da un luogo dell'\glo{organizzazione}.
+\end{enumerate} & NI \\
+
+
+TSA11 & \glo{Tracciamento} dell'utente anonimo nei luoghi di un'\glo{organizzazione} &
+Verificare che l'utente anonimo:
+\begin{enumerate}
+    \item Riceva la notifica della corretta registrazione se il tracciamento del suo \glo{movimento} in/da un \glo{luogo} ha avuto successo;
+    \item Riceva un messaggio di errore qualora il tracciamento del \glo{movimento} non sia andato a buon fine.
 \end{enumerate}
-Se l'utente anonimo/riconosciuto è in \glo{modalità di tracciamento anonimo}:
+Durante la registrazione del \glo{tracciamento} del \glo{movimento} dell'utente anonimo:
+\begin{enumerate}[resume]
+    \item Venga memorizzato il \glo{timestamp} in cui è avvenuto il \glo{movimento}.
+\end{enumerate}
+Se l'utente riconosciuto passa in modalità di \glo{tracciamento anonimo} verificare che:
+\begin{enumerate}[resume]
+    \item Venga verificata la correttezza delle credenziali \glo{LDAP};
+    \item Possa effettuare un ingresso in un luogo dell'\glo{organizzazione} senza mostrare la propria identità;
+    \item Possa effettuare un'uscita da un luogo dell'\glo{organizzazione} senza mostrare la propria identità.
+\end{enumerate}
+Se l'utente anonimo è in \glo{modalità di tracciamento anonimo}:
 \begin{enumerate}[resume]
     \item Possa effettuare un ingresso in un luogo dell'\glo{organizzazione};
     \item Possa effettuare un'uscita da un luogo dell'\glo{organizzazione}.
-\end{enumerate} & ?? \\
+\end{enumerate} & NI \\
+
 
 %R1FA7.1 a R1FA7.3 % Riccardo
-TSA11 & Autenticazione con credenziali \glo{LDAP} &
+TSA12 & Autenticazione con credenziali \glo{LDAP} &
 Verificare che l'utente anonimo:
 \begin{enumerate}
     \item Possa autenticarsi con credenziali aziendali in un'organizzazione che richiede il tracciamento riconosciuto;
     \item Riceva un messaggio di errore qualora le credenziali \glo{LDAP} non fossero riconosciute dal server;
     \item Possa inserire il proprio nome utente durante l'autenticazione con le credenziali \glo{LDAP} aziendali;
     \item Possa inserire la propria password durante l'autenticazione con le credenziali \glo{LDAP} aziendali.
-\end{enumerate} & ?? \\
+\end{enumerate} & NI \\
 
 % da R1FI2 a R1FS1.3 % Tommaso
 TSS1 & Accesso al server di un amministratore non autenticato & 
