@@ -1,0 +1,103 @@
+\section{Gestione dei cambiamenti}
+In questa sezione si vogliono elencare e tracciare i cambiamenti adottati dal gruppo a seguito di segnalazioni fatte dal proponente e dal committente. Vengono perciò riportati i problemi segnalati e le relative soluzioni. 
+{
+	\rowcolors{2}{grigetto}{white}
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{longtable}{ C{2cm} C{6cm} C{6cm}}
+		\caption{Elenco dei cambiamenti effettuati}\\
+		\rowcolor{darkblue}
+		\textcolor{white}{\textbf{Ambito}} & \textcolor{white}{\textbf{Problema}} & \textcolor{white}{\textbf{Soluzione}}\\
+		\endfirsthead
+		\rowcolor{darkblue}
+		\textcolor{white}{\textbf{Ambito}} & \textcolor{white}{\textbf{Problema}} & \textcolor{white}{\textbf{Soluzione}}\\
+		\endhead
+		Lettera di presentazione & le regole del
+		bando d’appalto specificano che il prezzo minimo ammissibile per il
+		candidato fornitore nel vostro caso sia 8/7 di 13.000, superiore al prezzo da
+		voi dichiarato. Ne consegue che la vostra offerta è non conforme e dovrà
+		essere opportunamente rettificata prima che la vostra offerta venga valutata.
+		& Il preventivo è stato corretto aumentando il numero di ore preventivate in modo sensato, cosi da risultare conforme al prezzo minimo ammissibile.\\
+		
+		Registro modifiche &  Uno “scatto” di versione che
+		consegua a un’azione di incremento prima della sua verifica di validità,
+		innesca rischi di iterazione che contraddicono l’approccio incrementale che
+		avete dichiarato di adottare. & La versione del prodotto è stata aggiornata, includendo la verifica a ogni modifica.\\
+		
+		Riferimenti & Nel citare libri o collezioni occorre specificare le parti di specifico interesse. & Vengono cambiati i riferimenti rendendoli più specifici e conformi a quanto segnalato.\\
+		
+		Stile redazionale & Per convenzione e anche per funzione, i riferimenti sono riportati all’inizio del documento, invece che in conclusione. & Vengono spostati i riferimenti all'inizio del documento.\\
+		
+		Stile tipografico & non tutte le iniziali maiuscole che usate nei titoli delle parti di documento sono appropriate, e alcune sono proprio inconsistenti. Rivedete, uniformate e siate più attenti nei controlli & Rivisitazione e unificazione dei titoli e delle parti di documento. \\
+		
+		\NdP&  La codifica, che voi promuovete implicitamente a processo, è invece una attività del processo di sviluppo.& Cambiato il contenuto della sezione riguardante la codifica, vengono spostati i contenuti non adeguati nella sezione riguardante lo sviluppo.\\
+		
+		\NdP & Le attività coinvolte dal processo di fornitura sono molte di più delle
+		poche che riportate in §2.1, per esempio i rapporti con il proponente.& Vengono ampliate le attività coinvolte dal processo di fornitura.\\
+		
+		\NdP & Tra i processi di supporto (cui non appartengono i due processi di “gestione” che voi vi includete), considerate l’inclusione del processo di gestione dei cambiamenti, che sarà presto per voi essenziale per dare ordine alle attività correttive che conseguono alla rilevazione di un difetto da correggere.& Tolti dal processo di supporto i due processi di gestione e migliorata il processo di gestione dei cambiamenti. \\ 
+		
+		\NdP & Tra quelli organizzativi, sarà opportuno considerare il processo di formazione (rilevante per normare la ripartizione intelligente degli impegni e la condivisione efficace delle conoscenze acquisite), e rapportare meglio la vostra interpretazione di tale categoria di processi con quanto previsto dallo standard. & Aggiunto tra i processi organizzativi il processo di formazione, migliorata la sezione riguardante i processi organizzativi.\\
+		
+		\NdP & Grave è la totale assenza di misure di qualità associate alle attività di progettazione. & Aggiunto metriche per misurare la qualità della progettazione.\\
+		
+		\AdR & §2.2 va ampliata &Ssono stati meglio specificate le funzionalità che offre il prodotto a seconda dei vari attori. \\
+		
+		\AdR & La gerarchia di attori individuata non è corretta. L’utente
+		riconosciuto non deve avere accesso a funzionalità come la registrazione o
+		l’autenticazione. & Sistemata la gerarchia di attori nel modo corretto.\\
+		
+		\AdR & La descrizione e lo scenario principale devono essere inseriti in ogni caso d’uso, per quanto triviali esse siano. & Inserito per ogni UC la descrizione e lo scenario principale.\\
+		
+		\AdR & UCA3.2 l’inclusione non è corretta. & Tolto l'inclusione e modellata con una post condizione più corretta.\\
+		
+		\AdR & UC3.3 i sotto-casi in realtà dovrebbero essere collegati tramite ereditarietà & Aggiunto l'ereditarietà per modellare i sotto-casi di UCA3.3.\\
+		
+		\AdR & UCA6.x non è evidente che questi siano effettivamente casi d’uso. Chi è
+		l’attore principale di queste funzionalità? Quale evento le inizia? Sicuramente
+		i sotto-casi di UCA6.1 non sono corretti: sono tutti dettagli implementativi. & Mantenuto l'UCA6.x ma sistemato in modo adeguato per poter essere considerato come un caso d'uso. Eliminati tutti i sotto-casi che specificavano dettagli implementativi.\\
+		
+		\AdR & Fig. 20 quello visualizzato è un caso d’uso? Se sì, quali sono le sue pre- e	post-condizioni? Dov’è la descrizione dello scenario principale? & Tolte tutte le panoramiche perché non sono casi d'uso.\\
+		
+		\AdR & UCS7.1 dai suoi sotto-casi d’uso ci si aspetta di avere dettaglio su cosa si visualizza, non funzionalità aggiuntivi. & Specificato in dettaglio cosa si visualizza. \\
+		
+		\AdR &  R1PC1 non è verificabile, poiché non si basa su quantità misurabili. I requisiti sui test sono di qualità. & Tolto il requisito R1PC1 non è verificabile i test sono stati spostati nel tracciamento di requisiti di qualità.\\
+		
+		\PdP & §2 l’analisi dei rischi è attività dinamica, che riflette vigilanza attenta durante tutta la durata del progetto; per questo motivo, ai contenuti che riportate in questa sezione deve corrispondere una attualizzazione che ne discuta l’occorrenza e la mitigazione nel periodo osservato, e l’opportunità di
+		raffinamento dell’analisi. & Viene aggiunto contenuto che spiega come avviene l'attualizzazione del rischio discutendone l’occorrenza e la mitigazione nel periodo osservato, e l’opportunità di raffinamento dell’analisi.\\
+		
+		\PdP & §3 compito principale di ogni pianificazione aderente al modello di sviluppo incrementale, cui voi dichiarate di aderire, è specificare il numero e gli obiettivi degli incrementi previsti, ciò che voi invece omettete. & Vengono specificati il numero e gli obiettivi per ogni incremento previsto.\\
+		
+		\PdP & §6 quello che qui chiamate “Consuntivo”, fino all’ingresso in RA non può che essere “Consuntivo di periodo”. Esso serve per ragionare, in corso d’opera, sulle ragioni degli scostamenti rilevati, sulle loro possibili mitigazioni, e sui conseguenti raffinamenti di pianificazione da effettuare nei periodi successivi, da riflettere poi nel “Preventivo a finire”. & Aggiunto sezione Consultivi di periodo.\\
+		
+		\PdQ & §1.4 e §7.1 è eccessivamente ambizioso e quindi troppo oneroso assumere gli standard 9126 e 12207 come normativi. Il secondo, inoltre, per sua precisa definizione, si istanzia e non si adotta in quanto tale, perché confluisce nelle norme di progetto.  & Tolto il contenuto dove veniva indicato che si adottano i due standard come normativi. \\
+		
+		\PdQ & §3 il contenuto del PdQ dovrebbe correlare meglio con le
+		Norme per quanto riguarda l’adozione di metriche di qualità e di strumenti di
+		rilevazione e valutazione. & Migliorata la correlazione con le norme per quanto riguarda l'adozione di metriche di qualità e di strumenti di
+		rilevazione e valutazione.\\
+		
+		\PdQ & Al PdQ attiene esclusivamente la scelta dei valori obiettivi (soglie o intervalli); alle Norme invece la presentazione delle metriche di interesse e degli strumenti con esse correlati. Al momento, tra i due documenti non vi è chiara corrispondenza, anzi contraddizione, perché è irragionevole ambire a misurare la qualità di attività non strutturate per raggiungerla. Tutto ciò è fonte di confusione& Tolto contenuto in eccesso dal PdQ.\\
+		
+		\PdQ & §6: il resoconto delle attività di verifica deve riflettere tutte le metriche adottate. Esso è meglio presentato “a cruscotto”, con serie storiche e diagrammi a contento incrementale, invece che tramite tabelle che “fotografano” gli eventi, ma non li mettono in relazione tra loro. Poiché il test è parte delle attività di verifica, i suoi risultati dovranno poi confluire in questo stesso luogo. & Aggiunto grafici che mostrano "a cruscotto" i valori misurati per ogni metrica.\\
+		\hline
+		
+		Registro modifiche & Lo “scatto” di versione che voi attuate all’approvazione del documento non ha significato se rapportato con l’attribuzione di un numero di versione all’ingresso nel repository, che dovrebbe conseguire al buon esito della verifica. Per meglio comprendere, pensate alla concatenazione di azioni che confluisce in una verifica come a una transazione di scrittura. & La versione del prodotto è stata aggiornata, includendo la verifica a ogni modifica.\\
+		
+		\NdP & Resta debole la normazione tecnica relativa alla
+		progettazione (design). & Aggiunto maggior contenuto per la progettazione.\\
+		
+		\NdP & §4.2.2.1: si vedano i commenti generali. Raccogliere
+		la presentazione delle metriche in un unico contenitore le allontana dal loro
+		rispettivo contesto d’uso (attività o prodotto), e di conseguenza riduce la
+		coesione informativa. Quest’ultima non è misura la facilità di scrivere, ma
+		quella di leggere comprendendo. & Gestione migliore della sezione delle metriche di qualità cambiando.\\
+		
+		\NdP
+		
+		
+		
+		
+	\end{longtable}
+}
+
