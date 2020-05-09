@@ -85,18 +85,48 @@ In questa sezione si vogliono elencare e tracciare i cambiamenti adottati dal gr
 		Registro modifiche & Lo “scatto” di versione che voi attuate all’approvazione del documento non ha significato se rapportato con l’attribuzione di un numero di versione all’ingresso nel repository, che dovrebbe conseguire al buon esito della verifica. Per meglio comprendere, pensate alla concatenazione di azioni che confluisce in una verifica come a una transazione di scrittura. & La versione del prodotto è stata aggiornata, includendo la verifica a ogni modifica.\\
 		
 		\NdP & Resta debole la normazione tecnica relativa alla
-		progettazione (design). & Aggiunto maggior contenuto per la progettazione.\\
+		progettazione (design). & Dato che il gruppo non aveva esperienza sulla progettazione nella fase precedente, mentre ora ha acquisito maggior esperienza, si è potuto aggiungere del contenuto che normi in modo migliore e utile la progettazione.\\
 		
 		\NdP & §4.2.2.1: si vedano i commenti generali. Raccogliere
 		la presentazione delle metriche in un unico contenitore le allontana dal loro
 		rispettivo contesto d’uso (attività o prodotto), e di conseguenza riduce la
 		coesione informativa. Quest’ultima non è misura la facilità di scrivere, ma
-		quella di leggere comprendendo. & Gestione migliore della sezione delle metriche di qualità cambiando.\\
+		quella di leggere comprendendo. & Attuata una gestione migliore della sezione delle metriche di qualità cambiando la struttura delle sezione in modo tale da non riduce la coesione informativa.\\
 		
-		\NdP
+		\NdP & Presumibilmente, le condizioni correnti, di “distanziamento sociale” obbligatorio, rendono necessarie specifiche norme organizzative, per evitare scelte e azioni improvvisate e disomogenee. & Vengono ampliate le norme riguardanti la gestione delle comunicazioni da remoto rese ora obbligatorie a causa del COVID-19.\\
 		
+		\AdR & §3.1.2 non può esistere un “Amministratore non autenticato”, perché il
+		sistema non può riconoscere il ruolo di un attore esterno prima che esso sia
+		stato riconosciuto dallo stesso. & Viene cambiato l'attore in utente non autenticato e tolto l'attore amministratore non autenticato.\\
 		
+		\AdR & Fig. 4 un caso d’uso non può apparire nel suo proprio diagramma. & Modifica l'immagine in modo da essere coerente con la segnalazione.\\
 		
+		\AdR & UCA5 e UCA6 le relazioni individuate nel diagramma sono tutte da rivedere. & Correzione delle estensioni e inclusioni nei vari casi d'uso.\\
+		
+		\AdR & UCS4.2 non è sotto-caso di UCS4, ma funzionalità a se stante. & L'UCS4.2 è stato adattato per poter essere sotto-caso di UCS4.\\
+		
+		\AdR & UCS5.5 i casi d’uso individuati sono mutuamente esclusivi, e come tali dovrebbero essere in relazione gerarchica con il caso d’uso contenitore. & Viene modellato il caso d'uso UCS5.5 con la relazione di generalizzazione.\\
+		
+		\AdR & UCS6 l’estensione non è corretta & Nel UCS6 è stata tolta l'estensione errata.\\
+		
+		\AdR & In generale, rivedere tutte le inclusioni individuate nel documento.& Vengo revisionate tutte le inclusioni e corrette quelle errate.\\
+		
+		\PdP & §2 la parte più importante del riscontro dei rischi (che ora avete svolto e fornito), è analizzare criticamente l’efficacia delle misure di mitigazione previste/adottate, per alimentare la manutenzione migliorative dell’analisi dei rischi. & Viene aggiunto come viene attuata la mitigazione dei rischi. \\
+		
+		\PdP & §4: permane il vostro deficit di comprensione di come riflettere lo
+		sviluppo incrementale individuato in §3.3, nella pianificazione concreta delle
+		attività. & Viene sistemata la sezione relativa alla pianificazione aggiungendo inoltre due grafici dei Gantt.\\
+		
+		\PdP & §5 converrebbe che ciascun incremento previsto avesse un suo costo preventivo, così da tenerne sotto controllo il rapporto costi/benefici (in §6), utile al miglioramento adattivo della pianificazione residua. & \\
+		
+		\PdP & §6 ha contenuti meramente contabili, più facili da produrre, ma poco significativi.& \\
+		
+		\PdQ & §1.5 come già segnalato in sede di RR, è eccessivamente ambizioso e quindi troppo oneroso per voi assumere gli standard 9126 e 12207 come normativi. & Viene specificato che i due standard vengono adottati come informativi.\\
+		
+		\PdQ & §2 come già segnalato in sede di RR, al PdQ attiene esclusivamente la
+		scelta degli obiettivi metrici, non la presentazione delle metriche, che attiene invece alle Norme. Infatti, il solo contenuto utile e pertinente di §2 è la tabella riassuntiva posta in §2.4. Analoghe considerazioni valgono per §3. & Viene tolto tutto il contenuto in eccesso e non idoneo al documento, vengono inoltre aggiunte tabelle riassuntive per ogni metrica presente.\\
+		
+		\PdQ &  L’insieme di tali metriche (tutte) fissano il cruscotto di valutazione da riportare in §5 (o meglio in una appendice incrementale del PdQ). & La sezione riguardante l'insieme delle metriche che fissano il cruscotto di valutazione viene trasformata in una appendice incrementale.\\
 		
 	\end{longtable}
 }
