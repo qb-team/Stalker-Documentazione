@@ -1,5 +1,5 @@
 \section{Valutazioni per il miglioramento}
-In questa sezione si vogliono elencare i problemi che sono stati riscontrati dal gruppo nel corso del progetto nel corso del progetto. Lo scopo di questa sezione è quella di indicare i problemi sorti e procedere alla loro risoluzione in modo tale che non si presentino più in futuro. Viene qui applicata la PCDA.
+In questa sezione si vogliono elencare i problemi che sono stati riscontrati dal gruppo nel corso del progetto e di inserire i miglioramenti che sono stati fatti per attuare la PCDA. Vengono perciò indicati i problemi sorti e la loro relativa soluzione inoltre viene indicato cosa e come è stato migliorato.
 I problemi tracciati riguarderanno i seguenti ambiti:
 \begin{itemize}
 \item Organizzazione;
@@ -8,19 +8,12 @@ I problemi tracciati riguarderanno i seguenti ambiti:
 \end{itemize}
 Per ogni problema verrà proposta una soluzione che sarà applicata nello svolgimento delle successive attività.
 
-\subsection{RP}
-\subsubsection{Valutazioni sull'organizzazione}
-\textbf{Problema - Sessione esami}: A causa della sessione di esami vi è stato un lasso di tempo durante il quale non è stato possibile portare avanti il progetto. Come diretta conseguenza, si è dovuto svolgere i compiti in un ridotto lasso temporale.
-
-\textbf{Soluzione}: Essere coscienti sin dall'inizio dei periodi nei quali il gruppo risulta mediamente più occupato in modo da distribuire il carico di lavoro di conseguenza. 
-
-\subsubsection{Valutazione dei ruoli}
-
+\subsection{Valutazioni sull'organizzazione}
 {
 	\rowcolors{2}{grigetto}{white}
 	\renewcommand{\arraystretch}{1.5}
 	\centering
-	\begin{longtable}{ C{2cm} C{6cm} C{6cm}}
+	\begin{longtable}{ C{3cm} C{5.5cm} C{5.5cm}}
 		\caption{Elenco dei cambiamenti effettuati}\\
 		\rowcolor{darkblue}
 		\textcolor{white}{\textbf{Periodo}} & \textcolor{white}{\textbf{Problema}} & \textcolor{white}{\textbf{Soluzione}}\\
@@ -28,21 +21,74 @@ Per ogni problema verrà proposta una soluzione che sarà applicata nello svolgi
 		\rowcolor{darkblue}
 		\textcolor{white}{\textbf{Periodo}} & \textcolor{white}{\textbf{Problema}} & \textcolor{white}{\textbf{Soluzione}}\\
 		\endhead
-
-\textbf{Problema - previsione imprecisa}: Per il \glo{Proof of Concept} sono state previste un quantità di ore di progettista molto elevata rispetto a quella necessaria, infatti la maggior parte delle ore sono state impiegate per la codifica.
-
-\textbf{Soluzione}: Le ore di progettista non svolte in questa fase saranno distribuite nella prossima, riducendo quelle di codifica.
+		Periodo 1 della progettazione architetturale & A causa della sessione di esami vi è stato un lasso di tempo durante il quale non è stato possibile portare avanti il progetto. Come diretta conseguenza, si è dovuto svolgere i compiti in un ridotto lasso temporale. & Essere coscienti sin dall'inizio dei periodi nei quali il gruppo risulta mediamente più occupato in modo da distribuire il carico di lavoro di conseguenza. \\
+		
+		Periodo 2 della progettazione architetturale & Da fine febbraio a causa del COVID-19 non è più possibile effettuare incontri fisici ma solo da remoto. & Bisogna adottarsi di norme che regolino la comunicazione da remoto e i strumenti per la comunicazione da remoto adottati. \\
+		
 	\end{longtable}
 }
 
-\subsubsection{Valutazione sugli strumenti}
 
-\textbf{Problema - difficoltà di calcolo di alcune metriche}: Per il calcolo delle metriche è stato utilizzato \glo{SonarQube}, il quale è risultato essere di difficile comprensione a causa della scarsa documentazione. Come conseguenza, il calcolo di alcune metriche è stato arduo.
+\subsection{Valutazione dei ruoli}
 
-\textbf{Soluzione}: Studi più approfonditi dello strumento (\glo{SonarQube}).\\
+{
+	\rowcolors{2}{grigetto}{white}
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{longtable}{ C{3cm} C{5.5cm} C{5.5cm}}
+		\caption{Elenco dei cambiamenti effettuati}\\
+		\rowcolor{darkblue}
+		\textcolor{white}{\textbf{Periodo}} & \textcolor{white}{\textbf{Problema}} & \textcolor{white}{\textbf{Soluzione}}\\
+		\endfirsthead
+		\rowcolor{darkblue}
+		\textcolor{white}{\textbf{Periodo}} & \textcolor{white}{\textbf{Problema}} & \textcolor{white}{\textbf{Soluzione}}\\
+		\endhead
+		
+		Periodo 2 della progettazione architetturale & Per il \glo{Proof of Concept} sono state previste un quantità di ore di progettista molto elevata rispetto a quella necessaria, infatti la maggior parte delle ore sono state impiegate per la codifica. & Le ore di progettista non svolte in questa fase saranno distribuite nella prossima, riducendo quelle di codifica.\\
+		
+		Periodo 1 della progettazione di dettaglio e codifica & Durante la correzione del \PdP il responsabile ha avuto delle problematiche nella risoluzione dei problemi legati al versionamento errato. & È stato richiesto un incontro remoto con il \VT{} per risolvere i dubbi sorti.\\
+		
+		Periodo 2 della progettazione di dettaglio e codifica & Durante la progettazione si sono avuti dei problemi nell'utilizzo di design pattern. & È stato richiesto un incontro remoto con il \CR{} per risolvere i dubbi sorti da parte dei progettisti.\\
+		
+		Periodo 1 della progettazione di dettaglio e codifica & Durante la progettazione delle componenti ci si è accorti che alcune scelte implementative fatte per il \glo{Proof of Concept} non erano le soluzioni migliori. & Si sono riprogettare le varie componenti da migliorare mentre, ciò che era stato implementato è stato riadattato secondo le specifiche di progettazione. \\
+		
+		Periodo 1 della progettazione di dettaglio e codifica & L'amministratore ha segnalato la difficoltà a calcolare alcune metriche perché non si sono trovati strumenti adatti per calcolarle automaticamente. & Sono stata tolte tali metriche e sostituite con altre dove è possibile calcolarle automaticamente attraverso strumenti automatici. \\
+		
+		
+	\end{longtable}
+}
 
-\textbf{Problema - versioni di Java}: Nella creazione dell'applicazione sono stati riscontrati diversi problemi nell'utilizzo di librerie non compatibili fra loro a causa delle diverse versioni.
+\subsection{Valutazione sugli strumenti}
 
-\textbf{Soluzione}: Studio più approfondito dei vari pacchetti utilizzati e della loro compatibilità riguardo le diverse versioni di Android.
+{
+	\rowcolors{2}{grigetto}{white}
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{longtable}{ C{3cm} C{5.5cm} C{5.5cm}}
+		\caption{Elenco dei cambiamenti effettuati}\\
+		\rowcolor{darkblue}
+		\textcolor{white}{\textbf{Periodo}} & \textcolor{white}{\textbf{Problema}} & \textcolor{white}{\textbf{Soluzione}}\\
+		\endfirsthead
+		\rowcolor{darkblue}
+		\textcolor{white}{\textbf{Periodo}} & \textcolor{white}{\textbf{Problema}} & \textcolor{white}{\textbf{Soluzione}}\\
+		\endhead
+	
+	Periodo 2 della progettazione architetturale & Per il calcolo delle metriche è stato utilizzato \glo{SonarQube}, il quale è risultato essere di difficile comprensione a causa della scarsa documentazione. Come conseguenza, il calcolo di alcune metriche è stato arduo. &  Studi più approfonditi dello strumento (\glo{SonarQube}).\\
+	
+	Periodo 2 della progettazione architetturale & Durante l'implementazione dell'applicazione mobile i programmatori hanno avuto problemi con la compatibilità delle librerie con \glo{Grandle}. & I programmatori si sono temporaneamente fermati per risolvere insieme il problema, si è dovuto perciò leggere la documentazione dedicata disponibile su Internet e grazie a ciò si è trovato una soluzione.\\
+	
+	Periodo 1 della progettazione di dettaglio e codifica & Per lo sviluppo di \glo{unit test} per la applicazione web sono sorti delle difficoltà nel utilizzo di \glo{Jasmine} come mezzo per eseguire i test. & Come soluzione i programmatori si sono temporaneamente fermati per risolvere insieme il problema, si è dovuto perciò leggere la documentazione dedicata disponibile su Internet e grazie a ciò si è trovato una soluzione.\\
+	
+	Periodo 1 della progettazione di dettaglio e codifica& Lo strumento per la creazione di diagrammi \glo{Draw.io} risulta essere troppo limitante in termini di di tempo, infatti viene speso troppo tempo per poter produrre diagrammi di classe e di sequenza. & Si è deciso di abbandonare lo strumento per la creazione di diagrammi \glo{Draw.io} a favore dello strumento \glo{StarUML} ottenendo un risparmio di tempo significativo e avvolte in alcune casi un risultato visivo migliore.\\
+	
+	Periodo 2 della progettazione di dettaglio e codifica & L'utilizzo di \LaTeX{} per la scrittura dei nuovi documenti \MM e \MU risulta essere troppo dispendioso in termini di tempo speso, e poco attrattivo. & Come soluzione migliorativa è stato scelto di adottare lo strumento \glo{MkDocs} per la scrittura dei documenti \MM e \MU.\\
+	
+	
+\end{longtable}
+}
+
+
+
+
 
 
