@@ -1,0 +1,2 @@
+## Funzionalità dell'Applicazione
+
