@@ -21,17 +21,15 @@ HTTP request | Description
 **GET** [**/organization/{organizationId}**](api/OrganizationApi.md#getOrganization) | Gets the available data for a single organization.
 **GET** [**/organization**](api/OrganizationApi.md#getOrganizationList) | Returns the list of all organizations.
 **POST** [**/organization/{organizationId}/requestdeletion**](api/OrganizationApi.md#requestDeletionOfOrganization) | Sends a deletion request to the system. The request will be examined by Stalker administrators.
-**PUT** [**/organization/{organizationId}**](api/OrganizationApi.md#updateOrganization) | Updates one or more properties of an organization.
+**PUT** [**/organization**](api/OrganizationApi.md#updateOrganization) | Updates one or more properties of an organization.
 **PATCH** [**/organization/{organizationId}/trackingArea**](api/OrganizationApi.md#updateOrganizationTrackingArea) | Updates the coordinates of the tracking area of an organization.
 **POST** [**/place**](api/PlaceApi.md#createNewPlace) | Creates a new place for an organization.
 **DELETE** [**/place/{placeId}**](api/PlaceApi.md#deletePlace) | Deletes a place of an organization.
 **GET** [**/place/organization/{organizationId}**](api/PlaceApi.md#getPlaceListOfOrganization) | Returns the list of places of the organization.
-**PUT** [**/place/{placeId}**](api/PlaceApi.md#updatePlace) | Updates one or more properties of a place of an organization.
+**PUT** [**/place**](api/PlaceApi.md#updatePlace) | Updates one or more properties of a place of an organization.
 **GET** [**/presence/organization/{organizationId}/counter**](api/PresenceApi.md#getOrganizationPresenceCounter) | Gets the number of people currently inside the organization&#39;s trackingArea.
-**GET** [**/presence/organization/{organizationId}**](api/PresenceApi.md#getOrganizationPresenceList) | Gets the list of people currently inside the organization&#39;s trackingArea.
 **GET** [**/presence/place/{placeId}/counter**](api/PresenceApi.md#getPlacePresenceCounter) | Gets the number of people currently inside the place&#39;s trackingArea.
-**GET** [**/presence/place/{placeId}**](api/PresenceApi.md#getPlacePresenceList) | Gets the list of people currently inside the place&#39;s trackingArea.
-**GET** [**/report/organization/{organizationId}**](api/ReportApi.md#getTimePerUserReport) | Gets the report of total time spent per user inside the organization.
+**GET** [**/report/place/{placeId}**](api/ReportApi.md#getTimePerUserReport) | Gets the report of total time spent per user inside the place of an organization.
 
 
 <a name="documentation-for-models"></a>

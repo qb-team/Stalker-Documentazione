@@ -5,7 +5,7 @@ HTTP request | Description
 **GET** [**/organization/{organizationId}**](OrganizationApi.md#getOrganization) | Gets the available data for a single organization.
 **GET** [**/organization**](OrganizationApi.md#getOrganizationList) | Returns the list of all organizations.
 **POST** [**/organization/{organizationId}/requestdeletion**](OrganizationApi.md#requestDeletionOfOrganization) | Sends a deletion request to the system. The request will be examined by Stalker administrators.
-**PUT** [**/organization/{organizationId}**](OrganizationApi.md#updateOrganization) | Updates one or more properties of an organization.
+**PUT** [**/organization**](OrganizationApi.md#updateOrganization) | Updates one or more properties of an organization.
 **PATCH** [**/organization/{organizationId}/trackingArea**](OrganizationApi.md#updateOrganizationTrackingArea) | Updates the coordinates of the tracking area of an organization.
 
 
@@ -80,7 +80,7 @@ null (empty response body)
 - **Accept**: Not defined
 
 <a name="updateOrganization"></a>
-## **PUT** /organization/{organizationId}
+## **PUT** /organization
 
 Updates one or more properties of an organization.  Only web-app administrators (if they have the correct access rights) can access this end-point.
 
@@ -88,7 +88,6 @@ Updates one or more properties of an organization.  Only web-app administrators 
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **organizationId** | **Long**| ID of an organization.
  **organization** | [**Organization**](/restapi/model/Organization.md)|  |
 
 ### Return type

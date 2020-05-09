@@ -5,7 +5,7 @@ HTTP request | Description
 **POST** [**/place**](PlaceApi.md#createNewPlace) | Creates a new place for an organization.
 **DELETE** [**/place/{placeId}**](PlaceApi.md#deletePlace) | Deletes a place of an organization.
 **GET** [**/place/organization/{organizationId}**](PlaceApi.md#getPlaceListOfOrganization) | Returns the list of places of the organization.
-**PUT** [**/place/{placeId}**](PlaceApi.md#updatePlace) | Updates one or more properties of a place of an organization.
+**PUT** [**/place**](PlaceApi.md#updatePlace) | Updates one or more properties of a place of an organization.
 
 
 <a name="createNewPlace"></a>
@@ -81,7 +81,7 @@ Name | Type | Description
 - **Accept**: application/json
 
 <a name="updatePlace"></a>
-## **PUT** /place/{placeId}
+## **PUT** /place
 
 Updates one or more properties of a place of an organization. Only web-app administrators can access this end-point.
 
@@ -89,7 +89,6 @@ Updates one or more properties of a place of an organization. Only web-app admin
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **placeId** | **Long**| ID of a place.
  **place** | [**Place**](/restapi/model/Place.md)|  |
 
 ### Return type
