@@ -3,7 +3,7 @@
 \renewcommand{\arraystretch}{1.5}
 \centering
 \begin{longtable}{ c C{13cm} C{1cm}}
-\caption{Elenco dei test di unità}\\
+\caption{Elenco dei test di integrazione}\\
 \rowcolor{darkblue}
 \textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Stato}}\\
 \endfirsthead
@@ -33,8 +33,8 @@ TIA19 & Si verifichi che l’integrazione tra l’applicazione Android e REST-AP
 TIA20 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia uscito da un luogo di un'organizzazione preferita inviando il codice di autenticazione LDAP e di riconsegnare l'exit token. & NI \\
 TIB1 & Verificare che una richiesta (qualsiasi) al backend senza token di accesso ottenuto da Firebase restituisca codice di stato HTTP 401. & NI \\
 TIB2 & Verificare che una richiesta (qualsiasi) al backend con token di accesso non valido o scaduto ottenuto da Firebase restituisca codice di stato HTTP 401. & NI \\
-TIB3 & Verificare che una richiesta (qualsiasi) al backend con token di accesso valido di un utente dell'app (non ha permessi di amministrazione <=> è un utente dell'app) ad API per gli amministratori restituisca codice di stato HTTP 403. & NI \\
-TIB4 & Verificare che una richiesta (qualsiasi) al backend con token di accesso valido di un amministratore della web-app (ha permessi di amministrazione => è un amministratore della web-app) ad API per gli utenti restituisca codice di stato HTTP 403. & NI \\
+TIB3 & Verificare che una richiesta (qualsiasi) al backend con token di accesso valido di un utente dell'app (non ha permessi di amministrazione $\leftrightarrow$ è un utente dell'app) ad API per gli amministratori restituisca codice di stato HTTP 403. & NI \\
+TIB4 & Verificare che una richiesta (qualsiasi) al backend con token di accesso valido di un amministratore della web-app (ha permessi di amministrazione $\rightarrow$ è un amministratore della web-app) ad API per gli utenti restituisca codice di stato HTTP 403. & NI \\
 TIB5 & Verificare che una richiesta (qualsiasi) che richieda come parametro l'identificativo di un'organizzazione che però non esiste restituisca codice di stato HTTP 404. & NI \\
 TIB6 & Verificare che una richiesta (qualsiasi) che richieda come parametro l'identificativo di un luogo che però non esiste restituisca codice di stato HTTP 404. & NI \\
 TIB7 & Verificare che una richiesta di associazione di un'amministratore (già esistente) presso un'organizzazione il cui identificativo o identificativo dell'amministratore non esistano restituisca codice di stato HTTP 404. & NI \\
