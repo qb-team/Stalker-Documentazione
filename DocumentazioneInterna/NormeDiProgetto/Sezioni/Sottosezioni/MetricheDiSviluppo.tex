@@ -58,15 +58,15 @@
         \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
     \end{itemize}
     
-\paragraph{Documentazione - Indice di Gulpease}
-\begin{itemize}
-    \item \textbf{Codice:} MPC6
-    \item \textbf{Descrizione:} ;
-    \item \textbf{Processo di riferimento:} Documentazione;
-    \item \textbf{Sigla:} $IG$
-    \item \textbf{Formula:}$$IG = {}$$
-    \item \textbf{Strumenti utilizzati:} .
-\end{itemize}
+    \subsubparagraph{Documentazione - Indice di Gulpease}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC6
+        \item \textbf{Descrizione:} È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Il valore è un intero da 0 a 100; se esso è inferiore a 80 sarà difficile da leggere per chi ha la licenza elementare, mentre se è inferiore a 40 sarà difficili da leggere per chi ha un diploma superiore;
+        \item \textbf{Processo di riferimento:} Documentazione;
+        \item \textbf{Sigla:} $IG$
+        \item \textbf{Formula:} $$IG = 89 + {\frac{300 \; \cdot \; |frasi| \; - \; 10 \; \cdot \; |lettere|}{|parole|}}$$
+        \item \textbf{Strumenti utilizzati:} \url{https://farfalla-project.org/readability_static/}
+    \end{itemize}
 
 \paragraph{Documentazione - Lunghezza dei video tutorial}
 \begin{itemize}
@@ -75,36 +75,6 @@
     \item \textbf{Processo di riferimento:} Documentazione;
     \item \textbf{Sigla:} $LVT$
     \item \textbf{Strumenti utilizzati:} Nessuno.
-\end{itemize}
-
-\paragraph{Documentazione - Code Coverage}
-\begin{itemize}
-    \item \textbf{Codice:} MPC7
-    \item \textbf{Descrizione:} Percentuale di codice coperto da test;
-    \item \textbf{Processo di riferimento:} Verifica;
-    \item \textbf{Sigla:} $CC$
-    \item \textbf{Formula:} $$CC = \frac{|codice \; coperto \; da \; test|}{|codice \; totale|} $$;
-    \item \textbf{Strumenti utilizzati:} Coveralls.
-\end{itemize}
-
-\paragraph{Documentazione - Branch Coverage}
-\begin{itemize}
-    \item \textbf{Codice:} MPC14
-    \item \textbf{Descrizione:} Percentuale di rami condizionali coperti da test;
-    \item \textbf{Processo di riferimento:} Verifica;
-    \item \textbf{Sigla:} $BC$
-    \item \textbf{Formula:} $$BC = \frac{|rami \; condizionali \; coperti \; da \; test|}{|rami \; condizionali \; totali|} $$;
-    \item \textbf{Strumenti utilizzati:} Coveralls.
-\end{itemize}
-
-\paragraph{Documentazione - Statement Coverage}
-\begin{itemize}
-    \item \textbf{Codice:} MPC15
-    \item \textbf{Descrizione:} Percentuale di istruzioni coperte da test;
-    \item \textbf{Processo di riferimento:} Verifica;
-    \item \textbf{Sigla:} $SC$
-    \item \textbf{Formula:} $$SC = \frac{|istruzioni \; coperte \; da \; test|}{|istruzioni \; totali|} $$;
-    \item \textbf{Strumenti utilizzati:} Coveralls.
 \end{itemize}
 
 \paragraph{Codifica - Complessità Ciclomatica del Software} 
@@ -122,33 +92,6 @@
         \item $p$ = numero delle componenti connesse da ogni nodo (per esecuzione sequenziale: p=2, essendovi un predecessore e un successore);
     \end{itemize}
     \item \textbf{Strumenti utilizzati:} Non ancora definito.
-\end{itemize}
-
-\paragraph{Manutenibilità - Presenza di Code Smell} 
-\begin{itemize}
-    \item \textbf{Codice:} MPD4
-    \item \textbf{Descrizione:} Il numero di Code Smell presenti nel codice del prodotto che ne inficiano la manutenibilità;
-    \item \textbf{Attributo di riferimento:} \glo{Manutenibilità};
-    \item \textbf{Sigla:} $CS$
-    \item \textbf{Strumenti utilizzati:} SonarQube.
-\end{itemize}
-
-\paragraph{Manutenibilità - Presenza di Vulnerabilità} 
-\begin{itemize}
-    \item \textbf{Codice:} MPD5
-    \item \textbf{Descrizione:} Il numero di Vulnerabilità presenti nel codice del prodotto che ne inficiano la sicurezza;
-    \item \textbf{Attributo di riferimento:} \glo{Sicurezza};
-    \item \textbf{Sigla:} $VLN$
-    \item \textbf{Strumenti utilizzati:} SonarQube.
-\end{itemize}
-
-\paragraph{Manutenibilità - Presenza di Bug} 
-\begin{itemize}
-    \item \textbf{Codice:} MPD6
-    \item \textbf{Descrizione:} Il numero di Bug presenti nel codice del prodotto che ne inficiano l'efficacia;
-    \item \textbf{Attributo di riferimento:} \glo{Operabilità};
-    \item \textbf{Sigla:} $BUG$
-    \item \textbf{Strumenti utilizzati:} SonarQube.
 \end{itemize}
 
 \paragraph{Usabilità - Profondità Strutturale dell'Interfaccia}

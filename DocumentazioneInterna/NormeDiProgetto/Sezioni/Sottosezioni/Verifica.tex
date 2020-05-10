@@ -141,10 +141,30 @@ Non è necessario identificare nuovi test, è sufficiente accertarsi che quelli 
 	\item \textbf{Processo di riferimento:} \glo{Processi} di verifica;
 	\item \textbf{Sigla:} $CC$
 	\item \textbf{Formula:} $$CC = \frac{|linee \; di \; codice \; percorse \; dai  \; test|}{|linee \; di \; codice \; totali|} \; \cdot \; 100$$
-	\item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+	\item \textbf{Strumenti utilizzati:} Coveralls.
 \end{itemize}
 
-\paragraph{Presenza di code smell} 
+\paragraph{Documentazione - Branch Coverage}
+\begin{itemize}
+    \item \textbf{Codice:} MPC14
+    \item \textbf{Descrizione:} Percentuale di rami condizionali coperti da test;
+    \item \textbf{Processo di riferimento:} Verifica;
+    \item \textbf{Sigla:} $BC$
+    \item \textbf{Formula:} $$BC = \frac{|rami \; condizionali \; coperti \; da \; test|}{|rami \; condizionali \; totali|} \; \cdot \; 100$$;
+    \item \textbf{Strumenti utilizzati:} Coveralls.
+\end{itemize}
+
+\paragraph{Documentazione - Statement Coverage}
+\begin{itemize}
+    \item \textbf{Codice:} MPC15
+    \item \textbf{Descrizione:} Percentuale di istruzioni coperte da test;
+    \item \textbf{Processo di riferimento:} Verifica;
+    \item \textbf{Sigla:} $SC$
+    \item \textbf{Formula:} $$SC = \frac{|istruzioni \; coperte \; da \; test|}{|istruzioni \; totali|} \; \cdot \; 100$$;
+    \item \textbf{Strumenti utilizzati:} Coveralls.
+\end{itemize}
+
+\paragraph{Presenza di Code Smell} 
 \begin{itemize}
     \item \textbf{Codice:} MPD4
     \item \textbf{Descrizione:} Misurare il numero di \glo{code smell} presenti all'interno del codice del prodotto;
@@ -154,7 +174,7 @@ Non è necessario identificare nuovi test, è sufficiente accertarsi che quelli 
     \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
 \end{itemize}
 
-\paragraph{Presenza di vulnerabilità} 
+\paragraph{Presenza di Vulnerabilità} 
 \begin{itemize}
     \item \textbf{Codice:} MPD5
     \item \textbf{Descrizione:} Misurare il numero di \glo{vulnerabilità} presenti all'interno del codice del prodotto;
@@ -164,7 +184,7 @@ Non è necessario identificare nuovi test, è sufficiente accertarsi che quelli 
     \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
 \end{itemize}
 
-\paragraph{Presenza di bug} 
+\paragraph{Presenza di Bug} 
 \begin{itemize}
     \item \textbf{Codice:} MPD6
     \item \textbf{Descrizione:} Misurare il numero di \glo{bug} presenti all'interno del codice del prodotto;
@@ -172,16 +192,6 @@ Non è necessario identificare nuovi test, è sufficiente accertarsi che quelli 
     \item \textbf{Sigla:} $BUG$
     \item \textbf{Formula:} $$BUG = {numero \; di \; bug \; rilevati}$$
     \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
-\end{itemize}
-
-\paragraph{Maturità dei Test} 
-\begin{itemize}
-    \item \textbf{Codice:} MPD7
-    \item \textbf{Descrizione:} Misurare la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire piena copertura dei requisiti sia funzionali che qualitativi(usabilità, affidabilità, efficienza);
-    \item \textbf{Attributo di riferimento:} \glo{Maturità};
-    \item \textbf{Sigla:} $MT$
-    \item \textbf{Formula:} $$MT = \frac{|casi \; di \; test \; eseguiti \; con \; successo|}{|casi \; di \; test \; previsti|} \cdot 100$$
-    \item \textbf{Strumenti utilizzati:} Non ancora definito.
 \end{itemize}
 
 
@@ -192,4 +202,8 @@ Il gruppo qbteam per quanto riguarda la verifica ortografica dei documenti si è
 \paragraph{SonarQube}
 \paragraph{JUnit}
 \paragraph{Jasmine}
+Per il testing della web-app si è scelto Jasmine come framework per lo sviluppo dei test.
+\paragraph{Karma}
+Framework per eseguire e ottenere i risultati dei test di Jasmine.
+\paragraph{Coveralls}
 \paragraph{Mockito}
