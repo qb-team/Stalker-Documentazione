@@ -43,11 +43,25 @@ L'utente può eseguire il logout aprendo il Drawer Menù e poi cliccando su "Log
 
 L'utente, per poter visualizzare la lista di tutte le organizzazioni disponibili in Stalker, deve prima scaricarla connettendosi al backend. Una volta richiesto lo scaricamento, se dovesse decidere di annullarlo o se venisse a mancare la connessione ad Internet, apparirebbe nella schermata principale un tasto per ritentare il download.
 
+## Lista delle organizzazioni
+
+![!ListaOrganizzazioni](/Immagini/app/ListaOrg.png "ListaOrganizzazioni")
+<figcaption align="center"> <em> Lista organizzazioni </em> </figcaption>
+
+In questa sezione vi sono tutte le organizzazioni scaricate dal server.
+
 ## Aggiornamento lista delle organizzazioni 
 
 <iframe width="720" src="https://www.youtube.com/embed/cPhIBJBg2pY" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 L'utente può aggiornare la lista delle organizzazioni eseguendo uno *swipe down* nella schermata principale.
+
+## MyStalkersList
+
+![!MyStalkersList](/Immagini/app/ListaOrg.png "MyStalkersList")
+<figcaption align="center"> <em>Organizzazioni preferite MyStalkersList </em> </figcaption>
+
+In questa sezione vi sono tutte le organizzazioni che l'utente ha scelto di essere tracciato.
 
 ## Ordinamento Alfabetico lista delle organizzazioni
 
@@ -69,19 +83,19 @@ In alto c'è la barra principale dell'applicazione e vi è una sezione di ricerc
 
 L'utente può entrare nella pagina dedicata di un'organizzazione cliccando l'elemento della lista ad essa appartenente. Al suo interno è possibile visualizzare il nome dell'organizzazione, l'immagine di anteprima, una descrizione, ed un pulsante autenticati se l'organizzazione richiede un'autenticazione LDAP.
  
-## Aggiunta organizzazione nella lista MyStalker (lista preferiti) 
+## Aggiunta organizzazione nella MyStalkersList (lista preferiti) 
 
 <iframe width="720" src="https://www.youtube.com/embed/D4_vzmNqs-4" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'utente, tenendo premuto su un elemento della lista delle organizzazione fa apparire un pop-up che permette di aggiungere l'organizzazione selezionata nella lista MyStalker, o più semplicemente visualizzarne il contenuto. Se l'organizzazione richiede un'autenticazione aziendale (tramite LDAP) allora con il pop-up è possibile solamente visualizzarne il contenuto.
+L'utente, tenendo premuto su un elemento della lista delle organizzazione fa apparire un pop-up che permette di aggiungere l'organizzazione selezionata nella lista MyStalkers, o più semplicemente visualizzarne il contenuto. Se l'organizzazione richiede un'autenticazione aziendale (tramite LDAP) allora con il pop-up è possibile solamente visualizzarne il contenuto.
 
-## Autenticazione LDAP e aggiunta organizzazione privata nella lista MyStalker (lista preferiti)
+## Autenticazione LDAP e aggiunta organizzazione privata nella MyStalkersList (lista preferiti)
 
 <iframe width="720" src="https://www.youtube.com/embed/Qo5BAUyBx0g" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'utente deve accedere alla pagina dedicata dell'organizzazione privata e per poterla aggiungere alla lista MyStalker deve prima autenticarsi tramite credenziali LDAP. Se l'autenticazione avviene con successo, tale organizzazione comparirà nella lista MyStalker.
+L'utente deve accedere alla pagina dedicata dell'organizzazione privata e per poterla aggiungere alla lista MyStalkers deve prima autenticarsi tramite credenziali LDAP. Se l'autenticazione avviene con successo, tale organizzazione comparirà nella lista MyStalkers.
 
-## Eliminazione organizzazione dalla lista MyStalker
+## Eliminazione organizzazione dalla MyStalkersList
 
 <iframe width="720" src="https://www.youtube.com/embed/Uz0xGepIdYs" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -102,11 +116,10 @@ Se è la prima volta che si utilizza questa funzionalità sul dispositivo allora
 
 <iframe width="720" src="https://www.youtube.com/embed/YAfcW1RyUL8" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-La funzionalità di tracciamento consente all'utente di tracciare gli ingressi e le uscite presso le organizzazioni e presso i loro luoghi, solamente di quelli presenti nella lista MyStalker. Se l'organizzazione ha richiesto l'autenticazione con credenziali aziendali (LDAP) allora è possibile cambiare, tramite uno switch presente nella pagina dell'organizzazione, la tipologia di tracciamento da anonimo (default) ad autenticato (e viceversa). La modalità autenticato permette alle organizzazioni di visualizzare a posteriori gli accessi (insieme di un ingresso e un'uscita da un'organizzazione o luogo) di coloro che le hanno aggiunte alla lista MyStalker.
+La funzionalità di tracciamento consente all'utente di tracciare gli ingressi e le uscite presso le organizzazioni e presso i loro luoghi, solamente di quelli presenti nella lista MyStalkers. Se l'organizzazione ha richiesto l'autenticazione con credenziali aziendali (LDAP) allora è possibile cambiare, tramite uno switch presente nella pagina dell'organizzazione, la tipologia di tracciamento da anonimo (default) ad autenticato (e viceversa). La modalità autenticato permette alle organizzazioni di visualizzare a posteriori gli accessi (insieme di un ingresso e un'uscita da un'organizzazione o luogo) di coloro che le hanno aggiunte alla lista MyStalkers.
 
 ## Tracciamento in Background
 
 <iframe width="720" src="https://www.youtube.com/embed/c_spUnOrv9s" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Se il tracciamento è attivo e si esce dall'applicazione allora l'applicazione continua a funzionare passando alla modalità di tracciamento in background. È possibile notare sulla barra delle notifiche di Android un'area dedicata all'applicazione Stalker dove si può riaprirla oppure bloccare il tracciamento e conseguentemente uscire definitivamente dall'applicazione.
-
