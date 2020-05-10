@@ -96,9 +96,10 @@ La classe StandardOrganizationFragment rappresenta la pagina dedicata alle organ
 Qualora l'organizzazione dovesse essere aggiunta nella lista MyStalkers allora comparirà al suo interno una sezione che mostra se l'utente è dentro o fuori l'organizzazione.
 
 La classe offre i seguenti metodi:
+
 -    `onCreate(saveInstanceState: Bundle)`:
 
--    `onCreateView(in inflater:LayoutInflater, in container:ViewGroup, in savedInstanceState:Bundle)`:
+-   `onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente.
 
 -    `onPrepareOptionsMenu(in menu:Menu)`: rende visibile al menù action tab dell'applicazione la sezione 'aggiungi ai preferiti' e nasconde il comando di ricerca; 
 
@@ -115,9 +116,11 @@ Le credenziali che ha digitato l'utente vengono spedite al modello che interrogh
 alla vista e apparirà una notifica visibile sulla schermata per avvisare l'utente.
 
 La classe offre i seguenti metodi:
+
 -    `onCreate(saveInstanceState: Bundle)`:
 
--    `onCreateView(in inflater:LayoutInflater, in container:ViewGroup, in savedInstanceState:Bundle)`:
+-   `onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente.
+
 
 
 
