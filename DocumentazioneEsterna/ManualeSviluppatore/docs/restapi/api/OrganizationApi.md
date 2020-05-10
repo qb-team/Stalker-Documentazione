@@ -26,7 +26,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../documentazione.md#bearerAuth)
+[bearerAuth](../panoramica.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -47,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[bearerAuth](../documentazione.md#bearerAuth)
+[bearerAuth](../panoramica.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -72,7 +72,7 @@ null (empty response body)
 
 ### Authorization
 
-[bearerAuth](../documentazione.md#bearerAuth)
+[bearerAuth](../panoramica.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -96,7 +96,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../documentazione.md#bearerAuth)
+[bearerAuth](../panoramica.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -121,7 +121,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../documentazione.md#bearerAuth)
+[bearerAuth](../panoramica.md#bearerAuth)
 
 ### HTTP request headers
 

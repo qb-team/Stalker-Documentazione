@@ -26,7 +26,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../documentazione.md#bearerAuth)
+[bearerAuth](../panoramica.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -51,7 +51,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../documentazione.md#bearerAuth)
+[bearerAuth](../panoramica.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -76,7 +76,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../documentazione.md#bearerAuth)
+[bearerAuth](../panoramica.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -101,7 +101,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../documentazione.md#bearerAuth)
+[bearerAuth](../panoramica.md#bearerAuth)
 
 ### HTTP request headers
 
