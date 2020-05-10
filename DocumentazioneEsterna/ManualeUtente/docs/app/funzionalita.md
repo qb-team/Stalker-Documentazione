@@ -19,9 +19,9 @@ Qualora fosse la sua prima volta nell'utilizzare l'applicazione Stalker allora p
 
 L'utente può accedere ad una serie di funzionalità utilizzando l'*Hamburger button* riportato in alto a sinistra.
 
-
-![!HamburgerButton](../Immagini/app/HamburgerButton.png "HamburgerButton")
-
+<p align="center">
+  <img src="../Immagini/app/HamburgerButton.png">
+</p>
 <figcaption align="center"> <em> Hamburger Button </em> </figcaption>
 
 Una volta cliccato su questo bottone apparirà il Drawer menù dove è possibile accedere alle seguenti funzionalità: 
@@ -29,7 +29,9 @@ Una volta cliccato su questo bottone apparirà il Drawer menù dove è possibile
 - eseguire il logout;
 - ordinamento alfabetico lista delle organizzazioni.
 
-![!DrawerMenu](../Immagini/app/DrawerMenu.png "Drawer Menu")
+<p align="center">
+  <img src="../Immagini/app/DrawerMenu.png ">
+</p>
 <figcaption align="center"> <em> Drawer Menu</em> </figcaption>
 
 ## Logout
@@ -40,14 +42,18 @@ L'utente può eseguire il logout aprendo il Drawer Menù e poi cliccando su "Log
 
 ## Scaricamento della lista delle organizzazioni
 
-![!Scaricamento](../Immagini/app/ScaricaListaOrg.png "Scaricamento")
+<p align="center">
+  <img src="../Immagini/app/ScaricaListaOrg.png ">
+</p>
 <figcaption align="center"> <em> Pop-up scaricamento lista organizzazione </em> </figcaption>
 
 L'utente, per poter visualizzare la lista di tutte le organizzazioni disponibili in Stalker, deve prima scaricarla connettendosi al backend. Una volta richiesto lo scaricamento, se dovesse decidere di annullarlo o se venisse a mancare la connessione ad Internet, apparirebbe nella schermata principale un tasto per ritentare il download.
 
 ## Lista delle organizzazioni
 
-![!ListaOrganizzazioni](../Immagini/app/ListaOrg.png "ListaOrganizzazioni")
+<p align="center">
+  <img src="../Immagini/app/ListaOrg.png ">
+</p>
 <figcaption align="center"> <em> Lista organizzazioni </em> </figcaption>
 
 In questa sezione vi sono tutte le organizzazioni scaricate dal server.
@@ -60,7 +66,9 @@ L'utente può aggiornare la lista delle organizzazioni eseguendo uno *swipe down
 
 ## MyStalkersList
 
-![!MyStalkersList](../Immagini/app/MyStalkersList.png "MyStalkersList")
+<p align="center">
+  <img src="../Immagini/app/MyStalkersList.png ">
+</p>
 <figcaption align="center"> <em>Organizzazioni preferite MyStalkersList </em> </figcaption>
 
 In questa sezione vi sono tutte le organizzazioni che l'utente ha scelto di essere tracciato.
@@ -73,14 +81,18 @@ L'utente può eseguire l'ordinamento alfabetico della lista delle organizzazioni
 
 ## Ricerca
 
-![!RicercaOrganizzazione](../Immagini/app/RicercaOrg.png "RicercaOrganizzazione")
+<p align="center">
+  <img src="../Immagini/app/RicercaOrg.png ">
+</p>
 <figcaption align="center"> <em> Ricerca organizzazione "Torre Archimede"</em> </figcaption>
 
 In alto c'è la barra principale dell'applicazione e vi è una sezione di ricerca. Con essa è possibile eseguire delle ricerche testuali per filtrare e visualizzare la lista delle organizzazioni.
 
 ## Visualizzazione pagina organizzazione
 
-![!PaginaOrganizzazione](../Immagini/app/PaginaOrg.png "Pagina Organizzazione")
+<p align="center">
+  <img src="../Immagini/app/PaginaOrg.png ">
+</p>
 <figcaption align="center"> <em> Pagina dedicata all'organizzazione "Torre Archimede"</em> </figcaption>
 
 L'utente può entrare nella pagina dedicata di un'organizzazione cliccando l'elemento della lista ad essa appartenente. Al suo interno è possibile visualizzare il nome dell'organizzazione, l'immagine di anteprima, una descrizione, ed un pulsante autenticati se l'organizzazione richiede un'autenticazione LDAP.
@@ -111,7 +123,9 @@ Il tracciamento è possibile attivarlo dal'*Hamburger button* tramite switch. Di
 
 Se è la prima volta che si utilizza questa funzionalità sul dispositivo allora uscirà un pop-up che l'utente dovrà accettare per poter ottenere i permessi necessari per il corretto funzionamento di geolocalizzazione.
 
-![!Permessi](../Immagini/app/PermessiTracciamento.png "Permessi")
+<p align="center">
+  <img src="../Immagini/app/PermessiTracciamento.png ">
+</p>
 <figcaption align="center"> <em> Pop-up di accettazione permessi per il tracciamento </em> </figcaption>
 
 ## Tracciamento
