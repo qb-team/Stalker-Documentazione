@@ -1,6 +1,7 @@
+# 2.1 Introduzione
 Questa parte del prodotto è orientata all'uso da parte degli utenti che voglio essere tracciati dalle organizzazioni utilizzando l'applicazione Android.
 
-## Scopo del prodotto
+## 2.1.2 Scopo del prodotto
 L'applicazione Android offre all'utente le seguenti funzionalità:
 
 - **Registrazione**: L'utente ha la possibilità di registrarsi inserendo un e-mail, password e accettando le condizioni d'uso;

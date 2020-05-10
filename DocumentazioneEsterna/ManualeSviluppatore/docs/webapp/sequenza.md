@@ -1,4 +1,4 @@
-## Introduzione
+# 3.7 Diagrammi delle sequenze 
 
 Vengono qua presentati alcuni diagrammi di sequenza per fornire chiarezza sull'interazione tra gli oggetti per alcune funzionalità che richiedono l'interazione di più componenti.
 

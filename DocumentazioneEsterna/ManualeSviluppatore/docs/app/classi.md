@@ -1,10 +1,10 @@
-# Diagrammi delle classi
+# 2.6 Diagrammi delle classi
 Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'applicazione.  
 
 
 
 ## Main Activity
-![!MainActivity](../Immagini/App/Classi/Mainactivity.png "Diagramma della classe MainActivity")
+![!MainActivity](../Immagini/App/Classi/MainActivity.png "Diagramma della classe MainActivity")
 <figcaption align="center"> <em> Diagramma delle classi di Authentication </em> </figcaption>
 
 La classe MainActivity è l'Activity che appare all'utente se non è autenticato e contiene il fragment "AuthenticationFragment".

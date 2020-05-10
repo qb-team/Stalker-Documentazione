@@ -1,4 +1,5 @@
-# Requisiti e installazione
+# 3.2 Requisiti e installazione
+## 3.2.1 Requisiti
 Per poter sviluppare sul proprio PC il webapp del sistema Stalker sono necessari i software e gli strumenti indicati in questa pagina.
 I software da installare saranno divisi in base al loro scopo.
 
@@ -12,7 +13,7 @@ git clone https://github.com/qb-team/Stalker-Admin.git
 
 Di seguito vengono elencati i requisiti minimi per lo sviluppo e la manutenzione della Web app.
 
-## Prerequisiti hardware e software
+## 3.2.2 Prerequisiti hardware e software
 
 Le tecnologie utilizzate per sviluppare l'applicazione web richiedono poche risorse, si consiglia comunque di soddisfare i seguenti requisiti minimi:
 
@@ -26,11 +27,11 @@ Le tecnologie utilizzate per sviluppare l'applicazione web richiedono poche riso
 !!! attention
         È necessario avere una connessione Internet attiva.
 
-## Linguaggi utilizzati 
+## 3.2.3 Linguaggi utilizzati 
 
 Di seguito vengono illustrate quali linguaggi vengo utilizzati e come installarli.
 
-### Typescript
+### 3.2.3.1 Typescript
 
 L'applicazione web è stata sviluppata utilizzando il linguaggio di programmazione Typescript, in particolare la sua versione 3.7.5 .
 !!!info
@@ -44,11 +45,11 @@ npm install -g typescript
         È necessario aver prima installato *npm*.
     
 
-## Tecnologie utilizzate
+## 3.2.4 Tecnologie utilizzate
 
 Di seguito vengono illustrate quali tecnologie vengo utilizzate e come installarle.
 
-### Node.js
+### 3.2.4.1 Node.js
 Runtime di JavaScript open source multipiattaforma orientato agli eventi per l'esecuzione di codice JavaScript, viene utilizzato per avviare l'applicazione in locale.
 
 L'installazione di Node.js su Windows e MacOS si può fare attraverso degli installer scaricabili presso il sito dello strumento, disponibile [qui](https://nodejs.org/en/download/).
@@ -63,7 +64,7 @@ Una volta installato Node.js, è possibile installare openapi-generator-cli, da 
 ```bash
 npm install @openapitools/openapi-generator-cli -g
 ```
-### npm
+### 3.2.4.2 npm
 
 È un gestore di pacchetti per il linguaggio di programmazione JavaScript. È il gestore di pacchetti predefinito per l'ambiente di runtime JavaScript Node.js. Perciò viene utilizzato per gestire le dipendenze di pacchetti che ha l'applicazione web.
 
@@ -77,7 +78,7 @@ se non è gia installato eseguire il seguente comando per farlo:
 npm install npm@latest -g
 ```
 
-### Angular 2+
+### 3.2.4.3 Angular 2+
 Per sviluppare l'applicazione web è stato utilizzato il *framework* Angular 2+.
 
 !!!info
@@ -87,7 +88,7 @@ Ora che è stato installato Node.js e npm è possibile installare Angular 2+ att
 ```bash
 npm install @angular/cli
 ```
-### Bootstrap
+### 3.2.4.4 Bootstrap
 
 È una raccolta di strumenti liberi per la creazione di siti e applicazioni per il Web.
 
@@ -104,7 +105,7 @@ npm install bootstrap
 !!!info 
     Viene utilizzato JSON come formato per lo scambio di dati tra WebApp e Backend.
 
-### Firebase
+### 3.2.4.5 Firebase
 
 Il servizio Firebase viene utilizzato per gestire l'autenticazione dell'applicazione web.
 
@@ -128,10 +129,7 @@ Copiare dunque l'SDK all'interno del file `environment.ts` come mostrato nella s
 
 
 
-
-
-
-## Creazione e configurazione dell'ambiente di sviluppo
+## 3.2.5 reazione e configurazione dell'ambiente di sviluppo
 
 Di seguito viene illustrato come creare e configurare l'ambiente di sviluppo in Angular.
 
@@ -149,7 +147,7 @@ ng serve
 Scrivere poi nella barra di navigazione del proprio browser `http://localhost::4200`.
 
 
-## Test
+## 3.2.6 Test
 
 Gli *unit test* sono stati codificati servendosi di *Jasmine*. Per installare Jasmine, sempre tramite *npm*, basterà lanciare il seguente comando:
 
@@ -162,7 +160,7 @@ Per eseguire i test si usa invece il comando:
 volendo si può usare l'opzione `--code-coverage` per visualizzare statistiche  in merito alla copertura del codice.  
 L'esecuzione del comando precedente avvia *Karma* che aprirà una finestra del browser per visualizzare l'esito dei test. *Karma* aprirà il browser definito nel file `karma.conf.js`.
 
-## Source code management
+## 3.2.7 Source code management
 
 <a name="source-code-management"></a>
 Per poter effettuare il versionamento del codice sorgente è richiesto di utilizzare *Git*.  

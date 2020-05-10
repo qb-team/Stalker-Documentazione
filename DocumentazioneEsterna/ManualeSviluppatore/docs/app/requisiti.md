@@ -1,4 +1,6 @@
-# Requisiti
+# 2.2 Requisiti e installazione
+
+## 2.2.1 Requisiti
 Per poter sviluppare sul proprio PC l'applicazione del sistema Stalker sono necessari i software e gli strumenti indicati in questa pagina.
 I software da installare saranno divisi in base al loro scopo.
 
@@ -10,11 +12,12 @@ git clone https://github.com/qb-team/Stalker-App.git
 ```
 
 <a name="prerequisiti"></a>
-## Prerequisiti hardware e software
+
+## 2.2.2 Prerequisiti hardware e software
 Le tecnologie utilizzate per sviluppare l'applicazione Android richiedono parecchie risorse nel loro uso contemporaneo. Si consiglia quindi di avere un computer con processore almeno quad-core e una memoria RAM di almeno 8 GB.
 
-## Ambiente di sviluppo
-### Android Studio
+## 2.2.2 Ambiente di sviluppo
+### 2.2.2.1 Android Studio
 L'applicazione è stata sviluppata utilizzando l'ambiente di sviluppo Android Studio, attualmente alla versione 3.6.1.
 
 #### Installazione di Android Studio su Windows
@@ -29,8 +32,8 @@ Per eseguire l'installazione, invece, bisognerà seguire la guida riportata nell
 La guida per scaricare Android Studio per Linux è identica a quella per Windows e MacOS.  
 Per eseguire l'installazione, invece, bisognerà seguire la guida riportata nella sezione **Linux** cliccando nel seguente link [qui](https://developer.android.com/studio/install).
 
-## Linguaggi utilizzati
-### Java
+## 2.2.3 Linguaggi utilizzati
+### 2.2.3.1 Java
 L'applicazione è stata sviluppata utilizzando il linguaggio di programmazione Java, in particolare la sua versione 8 (conosciuta come Java 8).
 
 #### Installazione di Java su Windows
@@ -47,13 +50,13 @@ sudo apt-get update
 sudo apt-get install openjdk-8-jre openjdk-8-jdk
 ```
 
-### XML
+### 2.2.3.2 XML
 La configurazione dell'applicazione e alcune sue dipendenze sono gestite tramite un file denominato **AndroidManifest.xml**.
 Inoltre, lo sviluppo di applicazioni Android richiede una cartella di progetto denominata **res** che contiene file XML per gestire risorse come layout, immagini, menu, stringhe ed altro ancora.
 Quindi è richiesta una buona conoscenza del linguaggio XML.
 
-## Librerie utilizzate
-### UnboundID SDK
+## 2.2.4 Librerie utilizzate
+### 2.2.4.1 UnboundID SDK
 UnboundID SDK è una libreria Java utilizzata per effettuare l'autenticazione su un server LDAP.
 Per poterla utilizzare è necessario aggiungere nel file *build.gradle(:app)* la dipendenza:
 ```bash
@@ -62,7 +65,7 @@ implementation 'com.unboundid:unboundid-ldapsdk:4.0.14'
 La documentazione viene fornita nel seguente [link](https://github.com/pingidentity/ldapsdk).
 Per verificare che è stata eseguita una corretta autenticazione su un server LDAP, sono stati svolti dei test seguendo la guida presente al [link](https://www.forumsys.com/tutorials/integration-how-to/ldap/online-ldap-test-server/).
 
-### Retrofit
+### 2.2.4.2 Retrofit
 Retrofit è una libreria Java e Android che permette di utilizzare e gestire i servizi REST, un tipo di architettura software che utilizza il protocollo HTTP per effettuare richieste al server.
 Per poterla utilizzare è necessario aggiungere nel file *build.gradle(:app)* la dipendenza: 
 ```bash
@@ -70,7 +73,7 @@ implementation 'com.squareup.retrofit2:retrofit:(2.8.1)'
 ```
 La documentazione viene fornita nel seguente [link](https://square.github.io/retrofit/).
 
-### GSON
+### 2.2.4.3 GSON
 Gson è una libreria Java che può essere utilizzata per convertire oggetti Java nella loro rappresentazione JSON o per convertire una stringa JSON in un oggetto Java equivalente. 
 Per poterla utilizzare è necessario aggiungere nel file *build.gradle(:app)* la dipendenza: 
 ```bash
@@ -78,7 +81,7 @@ implementation 'com.google.code.gson:gson:2.8.6'
 ```
 La documentazione viene fornita nel seguente [link](https://github.com/google/gson).
 
-### UrlImageViewHelper 
+### 2.2.4.4 UrlImageViewHelper 
 UrlImageViewHelper è una libreria Java che permette di scaricare e gestire automaticamente tutte le immagini Web e ImageView.
 Per poterla utilizzare è necessario aggiungere nel file *build.gradle(:app)* la dipendenza:  
 ```bash
@@ -88,12 +91,12 @@ E' necessario scaricare e includere il file eseguibile *urlimageviewhelper-1.0.4
 La documentazione viene fornita nel seguente [link](https://github.com/koush/UrlImageViewHelper).
 
 <a name="source-code-management"></a>
-## Source code management
+## 2.2.5 Source code management
 Per poter effettuare il versionamento del codice sorgente è richiesto di utilizzare Git.
 Per poterlo installare è necessario recarsi a [questa pagina](https://git-scm.com/downloads).  
 Non è strettamente necessario, ma è consigliato per integrare le proprie modifiche nel repository.
 
-## Build automation
+## 2.2.6 Build automation
 La build automation (ovvero la gestione del processo di build) è affidata a Gradle, integrato e utilizzato in Android Studio.
 I file di build sono due: uno per tutto il progetto ed uno per il solo modulo app.  
 Tramite Gradle il progetto dell'applicazione viene compilato, testato ed eseguito attraverso l'IDE Android Studio.

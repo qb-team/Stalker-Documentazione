@@ -1,14 +1,14 @@
+# 3.1 Introduzione
 Questa parte del prodotto è orientata all'uso da parte degli amministratori di organizzazioni ed è denominata *web-app*.
 
-## Scopo della web-app
+## 3.1.1 Scopo della web-app
 La suddetta applicazione web offre all'utente, l'amministratore dell'organizzazione, accesso alle seguenti funzionalità:
 
 -   **Modifica ai parametri dell’organizzazione**:
     L’amministratore può ridefinire il nome, la descrizione, l’immagine
     e l’indirizzo dell’organizzazione selezionata;
 
--   **Modifica delle superfici geografiche di tracciamento
-    dell’organizzazione**: Può modificare il perimetro di
+-   **Modifica delle superfici geografiche di tracciamento dell’organizzazione**: Può modificare il perimetro di
     tracciamento dell’organizzazione e quello
     degli specifici luoghi, inserendo un numero a piacere
     di coordinate per delimitarne la superficie di

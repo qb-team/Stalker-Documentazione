@@ -1,4 +1,4 @@
-# Architettura 
+# 4.4 Architettura 
 Il framework Spring utilizza il pattern architetturale *MVC*, ovvero:
 
 - *Model*: sono le classi che si occupano di accedere e rappresentare i dati utili per implementare la logica di business;

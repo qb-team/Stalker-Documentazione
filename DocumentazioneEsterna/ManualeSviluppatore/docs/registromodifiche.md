@@ -1,6 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+0.16.0 | 2020-05-09 | Federico Perin | Progettista | | Aggiunta e verifica sezione scopo del documento.
 0.15.1 | 2020-05-09 | Tommaso Azzalin | Progettista | | Aggiornamento API e diagrammi delle classi backend, semplificati.
 0.15.0 | 2020-05-08 | Christian Mattei | Progettista | Francesco Drago | Stesura descrizioni diagrammi delle classi ed estendibilità dell'applicazione.
 0.14.2 | 2020-05-07 | Tommaso Azzalin | Progettista | | Aggiornate descrizioni dei package del backend.

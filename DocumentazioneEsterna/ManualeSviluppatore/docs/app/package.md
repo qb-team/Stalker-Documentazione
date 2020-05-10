@@ -1,4 +1,4 @@
-# Diagrammi dei package
+# 2.5 Diagrammi dei package
 Vengono presentati qui di seguito i diagrammi UML dei package relativi alla applicazione Android.
 
 ## Visione generale delle dipendenze tra package

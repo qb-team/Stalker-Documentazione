@@ -14,9 +14,10 @@ markdown_extensions:
   - codehilite 
 
 nav:
-  - Home: "index.md"
+  
   - Registro modifiche: "registromodifiche.md"
-  - App utenti:
+  - 1 Indroduzione: "index.md"
+  - 2 App utenti:
       - Introduzione: "app/introduzione.md"
       - Requisiti e installazione: "app/requisiti.md"
       - Estendibilità: "app/estendibilita.md"
@@ -24,7 +25,7 @@ nav:
       - Package: "app/package.md"
       - Diagrammi delle classi: "app/classi.md"
       - Diagrammi di sequenza: "app/sequenza.md"
-  - Web-app amministratori:
+  - 3 Web-app amministratori:
       - Introduzione: "webapp/introduzione.md"
       - Requisiti e installazione: "webapp/requisiti.md"
       - Estendibilità: "webapp/estendibilita.md"
@@ -32,7 +33,7 @@ nav:
       - Package: "webapp/package.md"
       - Diagrammi delle classi: "webapp/classi.md"
       - Diagrammi di sequenza: "webapp/sequenza.md"
-  - Backend:
+  - 4 Backend:
       - Introduzione: "backend/introduzione.md"
       - Requisiti e installazione: "backend/requisiti.md"
       - Estendibilità: "backend/estendibilita.md"
@@ -40,9 +41,9 @@ nav:
       - Package: "backend/package.md"
       - Diagrammi delle classi: "backend/classi.md"
       - Diagrammi di sequenza: "backend/sequenza.md"
-  - REST API:
+  - 5 REST API:
       - Introduzione: "restapi/introduzione.md"
-      - Specifica OpenAPI e Swagger: "restapi/openapi.md"
+      #- Specifica OpenAPI e Swagger: "restapi/openapi.md"
       - Utilizzo: "restapi/utilizzo.md"
       - Documentazione: "restapi/documentazione.md"
       - Modello:
@@ -68,3 +69,4 @@ nav:
         - PresenceApi: "restapi/api/PresenceApi.md"
         - ReportApi: "restapi/api/ReportApi.md"
   - Il gruppo qbteam: "qbteam.md"
+  - Glossario: "glossario.md"
