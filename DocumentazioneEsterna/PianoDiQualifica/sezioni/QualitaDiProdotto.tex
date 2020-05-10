@@ -8,19 +8,9 @@ Per valutare tale qualità il gruppo \Gruppo{} ha deciso di far riferimento allo
 \end{itemize}
 
 \subsection{Metriche interne}
-%Le metriche della qualità "interne" del software sono utilizzate durante la fase di sviluppo e permettono di valutare il comportamento del software dal punto di vista degli sviluppatori e di predire quello che sarà il punto di vista esterno degli utenti.
-
+%Le metriche della qualità "interne" del software sono utilizzate durante la fase di sviluppo e permettono di valutare il comportamento del software dal punto di vista degli sviluppatori e di predire quello che sarà il punto di vista esterno degli utenti.  
 \subsubsection{Usabilità} 
 Capacità del prodotto software di essere comprensibile, di poter essere usato e compreso facilmente, in ogni sua parte, da qualsiasi utente che lo voglia usare.\\
-
-\rowcolors{2}{grigetto}{white}
-\renewcommand{\arraystretch}{1.5}
-\begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
-	\caption{Tabella metriche per l'usabilità}\\
-	\rowcolor{darkblue}
-	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
-	MPD1 & Attrattività della User Interface (UI) & $AUI$ & $AUI = Attrattivo$ &  $AUI = Molto \; attrattivo$\\
-\end{longtable}
 \vspace{0.3cm}
 \subsubsection{Manutenibilità} 
 Capacità di predire il livello di impegno richiesto per modificare il prodotto software dal punto di vista degli sviluppatori.           
@@ -29,10 +19,7 @@ Capacità di predire il livello di impegno richiesto per modificare il prodotto 
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
 	MPD2 & Complessità Ciclomatica del Software & $CCS $ & $1 \leq CCS \leq 7 $ & $1 \leq CCS \leq 4$\\
-	MPD3 & Unità Documentate & $UD$ & $UD \geq 80\%$ & $UD = 100\%$\\
-\end{longtable}
-              
-\vspace{0.3cm}      
+\end{longtable} 
 \subsection{Metriche esterne}
 %Le metriche relative alla qualità "esterna" indirizzano le caratteristiche esteriori del software, cioè quelle rilevabili direttamente dagli utenti e dagli operatori.
 
@@ -43,9 +30,9 @@ Capacità del prodotto software di dimostrare un adeguato livello di affidabilit
 	\caption{Tabella metriche per la affidabilità}\\
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
-	MPD4 & Presenza di Code Smell & $CS$ & $CS \leq 50 $ & $CS = 0 $\\
-	MPD5 & Presenza di Vulnerabilità & $VLN$ & $VLN = 0$ & $VLN = 0 $\\
-	MPD6 & Presenza di Bug & $BUG$ & $BUG = 0 $ & $BUG = 0 $\\
+	MPD4 & Presenza di Code Smell & $CS$ & $CS \leq 50 $ & $CS = 10 $\\
+	MPD5 & Presenza di Vulnerabilità & $VLN$ & $VLN = 2$ & $VLN = 0 $\\
+	MPD6 & Presenza di Bug & $BUG$ & $BUG = 20 $ & $BUG = 0 $\\
 	MPD7 & Maturità dei Test & $MT$ & $MT = 100\%$ & $MT = 100\%$\\
 \end{longtable}
 
