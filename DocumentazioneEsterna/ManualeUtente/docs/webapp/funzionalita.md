@@ -1,4 +1,4 @@
-## Funzionalità dell'applicazione web per amministratori
+# Funzionalità dell'applicazione web per amministratori
 
 Questa parte del prodotto è orientata all'uso da parte degli amministratori di organizzazioni ed è denominata web-app.
 Essa offre le seguenti funzionalità:

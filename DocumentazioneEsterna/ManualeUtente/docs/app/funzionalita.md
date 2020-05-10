@@ -1,4 +1,4 @@
-## Funzionalità dell'applicazione per utenti
+# Funzionalità dell'applicazione per utenti
 
 L'applicazione Android viene utilizzata dagli utenti che devono o vogliono fare in modo che i loro movimenti di ingresso e uscita dalle organizzazioni e dai loro luoghi vengano tracciati. Il movimento viene tracciato solo dal punto di vista dell'orario e dell'utenza presso l'organizzazione, qualora presente e attiva.
 
