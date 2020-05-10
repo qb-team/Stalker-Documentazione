@@ -26,9 +26,9 @@ La classe AuthenticationFragment fa parte della vista e mostra all'utente la pag
 
 La classe AuthenticationFragment offre i seguenti metodi:
 
--   `onCreate(Bundle savedInstanceState)`:  Si occupa della creazione del fragment in quanto componente;
+-   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione del fragment in quanto componente;
 
--   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente e sta in attesa di un click da parte dell'utente in caso selezioni il pulsante "Login" o "Registrati" per aprire i rispettivi fragment.
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente e sta in attesa di un click da parte dell'utente in caso selezioni il pulsante "Login" o "Registrati" per aprire i rispettivi fragment.
 
 
 ___
@@ -43,19 +43,19 @@ In caso di fallimento l'utente visualizza un messaggio di errore.
 
 La classe LoginFragment offre i seguenti metodi:
 
--   `onCreate(Bundle savedInstanceState)`:  Si occupa della creazione del fragment in quanto componente;
+-   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione del fragment in quanto componente;
 
--   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
 -   `onClick(View v)`: Attende un click dell'utente al pulsante "Login" per invocare il metodo `checkLoginDetails()`;
 
--   `checkLoginDetails()`: Controlla se l'utente ha scritto le proprie credenziali e le invia al metodo `initLogin(String email, String password)`, altrimenti segnala l'utente dell'assenza di esse;
+-   `checkLoginDetails()`: Controlla se l'utente ha scritto le proprie credenziali e le invia al metodo `initLogin(email: String, password: String)`, altrimenti segnala l'utente dell'assenza di esse;
 
--   `initLogin(String email, String password)`: Tramite l' MVP invoca i meotodi di Firebase per verificare l'email e la password, in caso positivo invoca il metodo `onLoginSuccess(String message)`, in caso negativo `onLoginFailure(FirebaseException e)`;
+-   `initLogin(email: String, password: String)`: Tramite l' MVP invoca i meotodi di Firebase per verificare l'email e la password, in caso positivo invoca il metodo `onLoginSuccess(message: String)`, in caso negativo `onLoginFailure(e: FirebaseException)`;
 
--   `onLoginSuccess(String message)`: L'autenticazione è andata a buon fine, l'utente sarà spostato nella HomePageActivity.class e visualizza un messaggio che indica che si è autenticato correttamente;
+-   `onLoginSuccess(message: String)`: L'autenticazione è andata a buon fine, l'utente sarà spostato nella HomePageActivity.class e visualizza un messaggio che indica che si è autenticato correttamente;
 
--   `onLoginFailure(FirebaseException e)`: L'autenticazione è fallita e l'utente visualizza un messaggio che indica l'errorel.
+-   `onLoginFailure(e: FirebaseException)`: L'autenticazione è fallita e l'utente visualizza un messaggio che indica l'errorel.
 
 
 ___
@@ -69,23 +69,23 @@ Una volta cliccato il pulsante vengono invocati i metodi della libreria Firebase
 
 La classe SignUpFragment offre i seguenti metodi:
 
--   `onCreate(Bundle savedInstanceState)`:  Si occupa della creazione del fragment in quanto componente;
+-   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione del fragment in quanto componente;
 
--   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
--   `onClick(View v)`: Attende un click dell'utente al pulsante "Sign Up" ("Registrati") per invocare il metodo `checkSignUpDetails()`, oppure un click a "Leggi le condizioni d'uso" per invocare il metodo `showTermsofUse()`;
+-   `onClick(v: View)`: Attende un click dell'utente al pulsante "Sign Up" ("Registrati") per invocare il metodo `checkSignUpDetails()`, oppure un click a "Leggi le condizioni d'uso" per invocare il metodo `showTermsofUse()`;
 
 -   `showTermsofUse()`: Apre un pop-up che mostra le condizioni d'uso che l'utente dovrà accettare;
 
--   `checkSignUpDetails()`: Controlla se l'utente ha scritto le proprie credenziali, confermato la password e accettato le condizioni d'uso, in caso positivo le invia al metodo `checkSignUp(String email, String password)`, altrimenti segnala l'utente dell'assenza di esse;
+-   `checkSignUpDetails()`: Controlla se l'utente ha scritto le proprie credenziali, confermato la password e accettato le condizioni d'uso, in caso positivo le invia al metodo `checkSignUp(email: String, password: String)`, altrimenti segnala l'utente dell'assenza di esse;
 
--   `checkSignUp(String email, String password)`: Tramite l' MVP invoca i meotodi di Firebase per registrare l'email e la password, in caso di riuscita invoca il metodo `onSignUpSuccess(String message)`, in caso di fallimento `onSignUpFailure(FirebaseException e)`;
+-   `checkSignUp(email: String, password: String)`: Tramite l' MVP invoca i meotodi di Firebase per registrare l'email e la password, in caso di riuscita invoca il metodo `onSignUpSuccess(message: String)`, in caso di fallimento `onSignUpFailure(e: FirebaseException)`;
 
--   `onSignUpSuccess(String message)`: La registrazione è andata a buon fine, l'utente sarà spostato nella HomePageActivity.class e visualizza un messaggio che indica che si è autenticato correttamente;
+-   `onSignUpSuccess(message: String)`: La registrazione è andata a buon fine, l'utente sarà spostato nella HomePageActivity.class e visualizza un messaggio che indica che si è autenticato correttamente;
 
--   `onSignUpFailure(FirebaseException e)`: La registrazione è fallita e l'utente visualizza un messaggio che indica l'errore;
+-   `onSignUpFailure(e: FirebaseException)`: La registrazione è fallita e l'utente visualizza un messaggio che indica l'errore;
 
--   `calculate(String password)`: Calcola la complessità della password per verificarne la sicurezza.
+-   `calculate(password: String)`: Calcola la complessità della password per verificarne la sicurezza.
 
 
 ## Home Page Activity
@@ -133,11 +133,11 @@ Si occupa inoltre di gestire il menu bar principale che permette all'utente di n
 
 La classe ActionTabFragment offre i seguenti metodi:
 
--   `onCreate(Bundle savedInstanceState)`:  Si occupa della creazione del fragment in quanto componente;
+-   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione del fragment in quanto componente;
 
--   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
--   `public void onActivityCreated(Bundle savedInstanceState)`: Segnala che la creazione dell’Activity è stata completata;
+-   `public void onActivityCreated(savedInstanceState: Bundle)`: Segnala che la creazione dell’Activity è stata completata;
 
 -   `onBackPressed()`: Si occupa di recuperare il fragment appartenente all'Action Tab attualmete visibile per poi propagare la sua callBack agli altri fragment.
 
@@ -150,31 +150,31 @@ Se l'utente risulta già autenticato e avvia l'applicazione oppure ha appena eff
 
 La classe HomeFragment offre i seguenti metodi:
 
--   `onCreate( Bundle savedInstanceState)`:  Si occupa della creazione del fragment in quanto componente;
+-   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione del fragment in quanto componente;
 
--   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
 -   `checkFile()`: Si occupa di andare a caricare la lista delle organizzazioni andandole a caricare direttamente da FileSyste;
 
--   `onFailureCheckFile(String message)`: Si occupa di gestire un eventuale errore durante la lettura da FileSystem, fa visualizzare all'utente l`errore durante il caricamento;
+-   `onFailureCheckFile(message: String)`: Si occupa di gestire un eventuale errore durante la lettura da FileSystem, fa visualizzare all'utente l`errore durante il caricamento;
 
 -   `downloadList()`: Si occupa di scaricare la lista dal Server e in caso affermativo la salva su FileSystem;
 
--   `onSuccessDownloadList(String message)`: Si occupa di notificare all'utente il corretto scarimento della lista dal Server;
+-   `onSuccessDownloadList(message: String)`: Si occupa di notificare all'utente il corretto scarimento della lista dal Server;
 
--   `onFailureDownloadList(String message)`: Si occupa di notificare all'utente il fallimento dello scaricamento della lista dal Server;
+-   `onFailureDownloadList(message: String)`: Si occupa di notificare all'utente il fallimento dello scaricamento della lista dal Server;
 
--   `organizationClick(int position)`: Si occupa di inializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click;
+-   `organizationClick(position: int)`: Si occupa di inializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click;
 
--   `organizationLongClick(int position)`: Notifica all'utente un dialog contenente informazioni aggiuntive dell'organizzazione selezionata dall'utente in seguito ad un click prolungato;
+-   `organizationLongClick(position: int)`: Notifica all'utente un dialog contenente informazioni aggiuntive dell'organizzazione selezionata dall'utente in seguito ad un click prolungato;
 
 -   `alphabeticalOrder()`: Si occupa di ordinare la lista presente nella view Home Fragment in ordine alfabetico;
 
--   `onPrepareOptionsMenu( Menu menu)`: Nasconde al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e rende visibile il comando di ricerca; 
+-   `onPrepareOptionsMenu(menu: Menu)`: Nasconde al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e rende visibile il comando di ricerca; 
 
--   `onQueryTextChange(String newText)`: Si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca;
+-   `onQueryTextChange(newText: String)`: Si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca;
 
--   `onBackPressed()`: Si occupa di fa ritornare l'utente alla precendente Activity/Fragment.
+-   `onBackPressed()`: Si occupa di far ritornare l'utente alla precendente Activity/Fragment.
 
 
 ___
@@ -186,43 +186,43 @@ In questa classe compariranno tutte le organizzazioni abilitate nel tracciamento
 
 La classe MyStalkerListFragment offre i seguenti metodi:
 
--   `onServiceConnected(ComponentName name, IBinder service)`: Metodo della classe interna ServiceConnection che permette di stabile una connesione con il Bind Service;
+-   `onServiceConnected(name: ComponentName, service: IBinder)`: Metodo della classe interna ServiceConnection che permette di stabile una connesione con il Bind Service;
 
--   `onServiceDisconnected(ComponentName name)`: Metodo della classe interna ServiceConnection che permette di disconnettere la connesione con il Bind Service;
+-   `onServiceDisconnected(name: ComponentName)`: Metodo della classe interna ServiceConnection che permette di disconnettere la connesione con il Bind Service;
 
--   `onCreate( Bundle savedInstanceState)`: Si occupa della creazione del fragment in quanto componente;
+-   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
 
--   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa di creare il layout del fragment;
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa di creare il layout del fragment;
 
--   `organizationClick(int position)`: Si occupa di inializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click;
+-   `organizationClick(position: int)`: Si occupa di inializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click;
 
--   `organizationLongClick(int position)`: Notifica all'utente un dialog contenente la possibilità di eliminare l'organizzazione selezionata dall'utente in seguito ad un click prolungato;
+-   `organizationLongClick(position: int)`: Notifica all'utente un dialog contenente la possibilità di eliminare l'organizzazione selezionata dall'utente in seguito ad un click prolungato;
 
--   `onPrepareOptionsMenu(Menu menu)`: Nasconde al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e rende visibile il comando di ricerca; 
+-   `onPrepareOptionsMenu(menu: Menu)`: Nasconde al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e rende visibile il comando di ricerca; 
 
--   `onQueryTextChange(String newText)`: Si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca;
+-   `onQueryTextChange(newText: String)`: Si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca;
 
--   `addOrganization(Organization organization)`: Si occupa di aggiungere l'organizzazione ricevuta in input sia sul FileSystem sia sul Server;
+-   `addOrganization(organization: Organization)`: Si occupa di aggiungere l'organizzazione ricevuta in input sia sul FileSystem sia sul Server;
 
--   `onSuccessAddOrganization(ArrayList<Organization> list, String message)`: Notifica all'utente il successo dell'operazione di aggiunta dell'organizzazione;
+-   `onSuccessAddOrganization(list: ArrayList<Organization>, message: String)`: Notifica all'utente il successo dell'operazione di aggiunta dell'organizzazione;
 
--   `onFailureAddOrganization(String message)`: Notifica all'utente l'insuccesso dell'operazione di aggiunta dell'organizzazione;
+-   `onFailureAddOrganization(message: String)`: Notifica all'utente l'insuccesso dell'operazione di aggiunta dell'organizzazione;
 
--   `removeOrganization(int position)`: Si occupa di rimuovere un'organizzaione sia dal FileSystem sia dal Server;
+-   `removeOrganization(position: int)`: Si occupa di rimuovere un'organizzaione sia dal FileSystem sia dal Server;
 
--   `onSuccessRemoveOrganization(ArrayList<Organization> list)`: Notifica all'utente il successo dell'operazione di rimozione di una organizzazione;
+-   `onSuccessRemoveOrganization(list: ArrayList<Organization>)`: Notifica all'utente il successo dell'operazione di rimozione di una organizzazione;
 
--   `loadMyStalkerList(String UID, String userToken)`: Si occupa di scaricare dal Serve la lista delle organizzazioni aggiunte dall'utente in precedenza;
+-   `loadMyStalkerList(UID: String, userToken: String)`: Si occupa di scaricare dal Serve la lista delle organizzazioni aggiunte dall'utente in precedenza;
 
 -   `checkForUpdate()`: Si occupa di tenere traccia delle ventuali modifiche apportate dall'utente della sua lista delle organizzazioni presenti nella view MyStalkerListFragment;
 
--   `onSuccessLoadMyStalkerList(List<Organization> list)`: Notifica all'utente il successo dello scaricamneto della lua lista delle organizzazioni iserite in MyStalkerList e le mostra a schermo;
+-   `onSuccessLoadMyStalkerList(list: List<Organization>)`: Notifica all'utente il successo dello scaricamneto della lua lista delle organizzazioni iserite in MyStalkerList e le mostra a schermo;
 
 -   `onPause()`: Metodo che viene invocato quando l'Activity principale viene è in pausa e ci si aspetta un suo ritorno in breve tempo;
 
 -   `onStop()`: Metodo che viene invocato quando l'Activity principale non è più visibile all'utente, ovvero quando quest'ultimo ha deciso di chiudere l'applicazione;
 
--   `onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s)`: Metodo che viene chiamato quando una risorsa condivisa (tra due view) viene modificata, aggiunta o rimossa;
+-   `onSharedPreferenceChanged(sharedPreferences: SharedPreferences, s: String)`: Metodo che viene chiamato quando una risorsa condivisa (tra due view) viene modificata, aggiunta o rimossa;
 
 -   `startTracking()`: Metodo per gestire l'inizio del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall`utente nella view MyStalkerList;
 
@@ -239,9 +239,9 @@ Qualora l'organizzazione dovesse essere aggiunta nella lista MyStalkers allora c
 
 La classe StandardOrganizationFragment offre i seguenti metodi:
 
--   `onCreate(Bundle savedInstanceState)`: Si occupa della creazione del fragment in quanto componente;
+-   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
 
--   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
 -   `onPrepareOptionsMenu(menu:Menu)`: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca; 
 
@@ -261,7 +261,7 @@ La classe LDAPorganizationFragment offre i seguenti metodi:
 
 -   `onCreate(saveInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
 
--   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente.
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente.
 
 
 
