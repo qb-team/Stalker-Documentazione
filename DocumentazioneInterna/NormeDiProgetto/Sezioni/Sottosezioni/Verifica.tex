@@ -89,10 +89,10 @@ con:
 	\item \textbf{[Numero progressivo]}: Il numero del test di unità in relazione alla sua destinazione, progressivo perché diverso per ogni test e in serie. Il conteggio parte da 1.
 \end{itemize}
 
-\subparagraph*{Test d’integrazione} 
+\subparagraph*{Test di integrazione} 
 Servono per verificare incrementalmente il corretto funzionamento delle componenti del sistema.
 Una volta che le unità sono verificate e passano con successo i relativi test, è possibile verificare il loro comportamento quando eseguite assieme.
-Ogni test d’integrazione è identificato da un codice univoco, così formato:
+Ogni test di integrazione è identificato da un codice univoco, così formato:
 \begin{center}
 	\item \textbf{TI[Destinazione][Numero progressivo]}
 \end{center}
@@ -104,7 +104,7 @@ con:
 		\item \textbf{W}: Test di sistema che fa riferimento alla web-app;
 		\item \textbf{B}: Test di sistema che fa riferimento al server.
 	\end{itemize}
-	\item \textbf{[Numero progressivo]}: Il numero del test d’integrazione in relazione alla sua destinazione, progressivo perché diverso per ogni test e in serie. Il conteggio parte da 1.
+	\item \textbf{[Numero progressivo]}: Il numero del test di integrazione in relazione alla sua destinazione, progressivo perché diverso per ogni test e in serie. Il conteggio parte da 1.
 \end{itemize}
 
 \subparagraph*{Test di sistema} 
@@ -121,16 +121,10 @@ con:
     \item \textbf{[Destinazione]}:
     \begin{itemize}
         \item \textbf{A}: Test di sistema che fa riferimento all'applicazione;
-        \item \textbf{S}: Test di sistema che fa riferimento al server.
+        \item \textbf{S}: Test di sistema che fa riferimento alla web-app.
     \end{itemize}
     \item \textbf{[Numero progressivo]}: Il numero del test di sistema in relazione alla sua destinazione, progressivo perché diverso per ogni test e in serie. Il conteggio parte da 1.
 \end{itemize}
-
-\subparagraph*{Test di regressione}
-I test di regressione hanno come obiettivo di verificare l'assenza di regressioni (ovvero malfunzionamenti o comportamenti imprevisti) nel caso in cui si introduca una modifica su una componente dalla quale ne dipendono altre.
-L'obiettivo di questi test è verificare che le componenti continuino a funzionare correttamente senza anomalie, ossia verificare che una modifica non pregiudichi le funzionalità già verificate con i test effettuati in precedenza.
-Non è necessario identificare nuovi test, è sufficiente accertarsi che quelli presenti restituiscano i valori attesi.
-
 
 \subsubsection{Metriche}
 
