@@ -58,7 +58,7 @@ L'utente può aggiornare la lista delle organizzazioni eseguendo uno *swipe down
 
 ## MyStalkersList
 
-![!MyStalkersList](/Immagini/app/ListaOrg.png "MyStalkersList")
+![!MyStalkersList](/Immagini/app/MyStalkersList.png "MyStalkersList")
 <figcaption align="center"> <em>Organizzazioni preferite MyStalkersList </em> </figcaption>
 
 In questa sezione vi sono tutte le organizzazioni che l'utente ha scelto di essere tracciato.
