@@ -55,8 +55,17 @@ ___
 ![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del Standard Organization")
 <figcaption align="center"> <em> Diagramma delle classi dello Standard Organization</em> </figcaption>
 
-La classe StandardOrganizationFragment rappresenta la pagina dedicata alle organizzazioni pubbliche, cioè quelle che non richiedono credenziali LDAP di autenticazione. La vista contiene le informazioni riferite all'organizzazione.
+La classe StandardOrganizationFragment rappresenta la pagina dedicata alle organizzazioni pubbliche, cioè quelle che non richiedono credenziali di autenticazione LDAP. La vista contiene le informazioni riferite all'organizzazione.
 Qualora l'organizzazione dovesse essere aggiunta nella lista MyStalkers allora comparirà al suo interno una sezione che mostra se l'utente è dentro o fuori l'organizzazione.
+
+La classe offre i seguenti metodi:
+-    `onCreate(saveInstanceState: Bundle)`:
+
+-    `onCreateView(in inflater:LayoutInflater, in container:ViewGroup, in savedInstanceState:Bundle)`:
+
+-    `onPrepareOptionsMenu(in menu:Menu)`: rende visibile al menù action tab dell'applicazione la sezione 'aggiungi ai preferiti' e nasconde il comando di ricerca; 
+
+-    `onOptionsItemSelected(in item:MenuItem)`: aggiunge l'organizzazione nella lista dei preferiti.
 
 ___
 ## LDAP Organization
@@ -67,6 +76,11 @@ La classe LDAPorganizationFragment rappresenta la pagina dedicata alle organizza
 Un utente, per poter essere tracciato dall'organizzazione privata, ha bisogno prima di autenticarsi ed in seguito a ciò se l'esito fosse positivo allora l'organizzazione viene automaticamente inserita nella lista delle organizzazioni MyStalker (lista preferite). In seguito apparirà uno switch dove è possibile cambiare la tipologia di tracciamento. 
 Le credenziali che ha digitato l'utente vengono spedite al modello che interrogherà il server dedicato al LDAP dell'organizzazione. L'esito di questa procedura verrà rimandata
 alla vista e apparirà una notifica visibile sulla schermata per avvisare l'utente.
+
+La classe offre i seguenti metodi:
+-    `onCreate(saveInstanceState: Bundle)`:
+
+-    `onCreateView(in inflater:LayoutInflater, in container:ViewGroup, in savedInstanceState:Bundle)`:
 
 
 
