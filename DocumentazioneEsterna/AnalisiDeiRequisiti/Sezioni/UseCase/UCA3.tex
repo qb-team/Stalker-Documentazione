@@ -47,7 +47,7 @@
 	\item \textbf{Flusso di eventi:}
 			\begin{enumerate}
 			\item L'utente accede alla funzionalità di "Gestioni della lista delle \glo{organizzazioni preferite}";
-			\item Vi è la possibilità di inserire un'\glo{organizzazione} nella lista delle \glo{organizzazioni preferite} dell'utente dell'applicazione [UCA 3.2.1], se però viene richiesto di inserire una \glo{organizzazione} che richiede di autenticarsi con credenziali \glo{LDAP} [UCA 3.2.2] allora l'utente dovrà inserire tali credenziali [UCA 7];
+			\item Vi è la possibilità di inserire un'\glo{organizzazione} nella lista delle \glo{organizzazioni preferite} dell'utente dell'applicazione [UCA 3.2.1], opppure di inserire nella lista dei preferiti una \glo{organizzazione} che richiede di autenticarsi con credenziali \glo{LDAP} [UCA 3.2.2];
 			\item Vi è la possibilità di rimuovere un'\glo{organizzazione} dalla lista delle \glo{organizzazioni preferite} dell'utente dell'applicazione [UCA 3.2.3].
 			\end{enumerate}
 	\item \textbf{Scenario alternativo:} Se non è presente nessuna lista delle \glo{organizzazioni} viene visualizzato all'utente un messaggio di errore che lo informa di tale problema [UCA 8.3.2];
@@ -73,7 +73,7 @@
 \subsubsection{UCA 3.2.2 - Inserimento di una organizzazione che richiede credenziali LDAP nella lista delle organizzazioni preferite dell'utente}%fish level
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente autenticato
-	\item \textbf{Precondizione:} L'utente è autenticato e sceglie di eseguire la funzionalità di inserimento nella lista delle \glo{organizzazioni preferite} solo se ha scaricato precedentemente la lista delle \glo{organizzazioni}.
+	\item \textbf{Precondizione:} L'utente è autenticato con credenziali \glo{LDAP} e sceglie di eseguire la funzionalità di inserimento nella lista delle \glo{organizzazioni preferite} solo se ha scaricato precedentemente la lista delle \glo{organizzazioni}.
 	\item \textbf{Postcondizione:} È stata inserita un'\glo{organizzazione}, che richiede tracciamento autenticato, scelta dall'utente, nella lista delle \glo{organizzazioni preferite}.
 	\item \textbf{Scenario principale:} Inserimento di una organizzazione con tracciamento autenticato nella lista delle organizzazioni preferite dell'utente.
 \end{itemize}
