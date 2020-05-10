@@ -1,4 +1,4 @@
-# Home
+# 1 Introduzione
 
 <p align = "center">
 
@@ -6,7 +6,10 @@
 
 </p>
 
-## Composizione prodotto
+## 1.1 Scopo documento
+Lo scopo di questo documento è quello spiegare attraverso una raccolta di video, supportati da una corrispondente parte testuale, come utilizza il sistema *Stalker*. 
+
+## 1.2 Composizione prodotto
 
 Il prodotto **Stalker** è formato dalle parti:
 
@@ -14,7 +17,7 @@ Il prodotto **Stalker** è formato dalle parti:
 -   [Web-app amministratori](/webapp/architettura/);
 -   [Backend](/backend/architettura/).
 
-## Scopo del prodotto 
+## 1.3 Scopo del prodotto 
 
 Il prodotto garantirà le seguenti funzionalità:
 
