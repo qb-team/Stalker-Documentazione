@@ -20,6 +20,7 @@ nav:
       - Funzionalità: "app/funzionalita.md"
   - Web-app amministratori:
       - Installazione: "webapp/installazione.md"
+      - Funzionalità: "webapp/funzionalita.md"
   - REST API:
       - Utilizzo: "restapi/utilizzo.md"
   - Il gruppo qbteam: "qbteam.md"
