@@ -1,13 +1,14 @@
 # Funzionalità dell'applicazione web per amministratori
 
-Questa parte del prodotto è orientata all'uso da parte degli amministratori di organizzazioni ed è denominata web-app.
-Essa offre le seguenti funzionalità:
+L'applicazione web viene utilizzata dagli amministratori che hanno la necessità di tracciare i movimenti di ingresso e uscita dalle organizzazioni e dai luoghi in esse.
+
+All'amministratore attraverso l'applicazione web vengono offerte le funzionalità indicate in questa pagina.
 
 ## Login
 
 <iframe width="720" src="https://www.youtube.com/embed/jLTYT91HVJs" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'amministratore può autenticarsi inserendo la propria email e password.
+L'amministratore può autenticarsi inserendo la propria e-mail e password.
 
 ## Logout
 
@@ -15,53 +16,54 @@ L'amministratore può autenticarsi inserendo la propria email e password.
 
 L'amministratore può eseguire il logout in qualsiasi pagina della web-app, basterà cliccare sul pulsante in alto a destra denominato "Logout".
 
-## Reset Password
+## Reset password
 
 <iframe width="720" src="https://www.youtube.com/embed/8le7OiF9kmM" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'amministratore può effettuare il reset della password qualora non se la dovesse più ricordare. Per eseguire tale azione deve cliccare su "Password dimenticata". Poi deve inserire l'email dell'account che vuole effettuare il reset della password e gli arriverà una mail con un link dove è possibile entrare in una pagina dedicata dove si può inserire la nuova password con almeno 6 caratteri. 
+L'amministratore può effettuare il reset della password qualora non se la dovesse più ricordare. Per eseguire tale operazione deve cliccare su "Password dimenticata". Successivamente deve inserire l'email dell'account di cui vuole effettuare il reset della password e gli verrà inviata una e-mail con un link dove è possibile entrare in una pagina dedicata presso cui inserire la nuova password, di almeno 6 caratteri. 
 
-## Informazioni dell'organizzazione
+## Informazioni sull'organizzazione
 
 <iframe width="720" src="https://www.youtube.com/embed/RAMu1o1U50o" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 L'amministratore ha la possibilità di visionare le seguenti informazioni di una specifica organizzazione:
-- nome;
-- descrizione;
-- via;
-- numero civico;
-- codice postale;
-- città;
-- stato;
-- data di creazione;
-- data ultima modifica.
 
-## Tornare alla HomePage
+- Nome;
+- Descrizione;
+- Via;
+- Numero civico;
+- Codice postale;
+- Città;
+- Stato;
+- Data di inserimento dell'organizzazione in Stalker;
+- Data dell'ultima modifica.
+
+## Ritorno alla home page
 
 <iframe width="720" src="https://www.youtube.com/embed/H730w4P49oQ" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Se l'amministratore si dovesse trovare nella pagina di un'organizzazione e volesse ritornare all'HomePage bisogna cliccare sul nome dell'organizzazione nella barra principale in alto alla pagina web.
+Se l'amministratore si dovesse trovare nella pagina di un'organizzazione e volesse ritornare all'home page deve cliccare sul nome dell'organizzazione nella barra principale in alto della schermata.
 
 
 ## Presenze utenti nell'organizzazione
 
 <iframe width="720" src="https://www.youtube.com/embed/VuoW2Hc162I" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'amministratore ha la possibilità di monitorare le presenze degli utenti tracciati in tempo reale nei vari luoghi dell’organizzazione o dell’organizzazione in generale. Qualora l’organizzazione fosse gestita con tracciamento riconosciuto, l’amministratore è anche in grado di sapere l’identità dei vari utenti tracciati.
+L'amministratore ha la possibilità di monitorare le presenze degli utenti presenti in tempo reale nei vari luoghi di un'organizzazione o nell'organizzazione in generale.
 
-## Perimetro tracciamento
+## Perimetro di tracciamento
 
 <iframe width="720" src="https://www.youtube.com/embed/Q_nwWf6GkxI" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'amministratore ha la possibilità di visionare il perimetro dell'organizzazione sulla mappa. 
+L'amministratore ha la possibilità di visionare il perimetro dell'organizzazione su di una mappa. 
 
-Può anche modificare il perimetro di tracciamento dell’organizzazione e quello degli specifici luoghi, inserendo un numero a piacere di coordinate per delimitarne la superficie di tracciamento (manualmente o tramite Google Maps API).
+Può anche modificare il perimetro di tracciamento dell’organizzazione e quello degli specifici luoghi, inserendo un numero a piacere di coordinate per delimitarne la superficie di tracciamento (manualmente o tramite una mappa interattiva).
 
 ## Selezione dell'organizzazione
 
 <iframe width="720" src="https://www.youtube.com/embed/7O5l3fJ19FM" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'amministratore nell'HomePage può selezionare l'organizzazione che desidera nel menù in alto a destra accedendo alle svariate funzionalità che la web-app offre.
+L'amministratore nell'home page può selezionare l'organizzazione che desidera (fra quelle di cui ha i permessi) dal menù in alto a sinistra, accedendo alle svariate funzionalità che la web-app offre.
 
 L’amministratore può modificare il nome, la descrizione, l’immagine e l’indirizzo dell’organizzazione.
 
@@ -73,8 +75,9 @@ L’amministratore può modificare il nome, la descrizione, l’immagine e l’i
 ## Estrapolazione di report tabellari riguardanti gli accessi dei dipendenti e gli accesi ai vari luoghi dell’organizzazione
 
 L’amministratore può ricavare tabelle dei seguenti tipi:
--   Ore di entrata e uscita da un luogo per uno specifico utente;
 
--   Totale di ore spese in ogni luogo per uno specifico utente;
+-   Ore di entrata e uscita da un luogo per uno specifico utente (autenticato);
 
--   Il numero di dipendenti e il totale delle ore da loro trascorse in ogni luogo dell’organizzazione.
+-   Totale di ore spese in ogni luogo per uno specifico utente (autenticato);
+
+-   Il numero di utenti (autenticati) e il totale delle ore da loro trascorse in ogni luogo dell’organizzazione.
