@@ -19,8 +19,8 @@ Un'alternativa più efficace a questo procedimento è scaricare il progetto tram
 git clone https://github.com/qb-team/Stalker-Backend.git
 ```
 
-## 4.2.1 Linguaggi utilizzati
-### 4.2.1.1 Java
+## 4.2.3 Linguaggi utilizzati
+### 4.2.3.1 Java
 Il backend è stato sviluppato utilizzando in linguaggio di programmazione Java, in particolare la sua versione 8 (conosciuta come Java 8).
 
 #### Installazione di Java su Windows
@@ -39,11 +39,11 @@ sudo apt-get install openjdk-8-jre openjdk-8-jdk
 ```
 
 <a name="xml"></a>
-## 4.2.2 XML
+## 4.2.4 XML
 Come verrà successivamente illustrato, la configurazione del progetto e la dichiarazione delle dipendenze è gestita tramite un file denominato `pom.xml`, che si trova nella cartella principale scaricata da GitHub, il quale richiede una conoscenza almeno minima della struttura di XML, in caso si renda necessario effettuare alcune modifiche.
 
 <a name="yaml"></a>
-## 4.2.3 YAML
+## 4.2.5 YAML
 Il backend permette all'app e alla web-app di funzionare tramite delle **REST API**. La definizione delle API è stata fatta sfruttando la specifica OpenAPI e gli strumenti offerti da Swagger (per maggiori informazioni, visita la sezione [REST API](/restapi/introduzione/)). Grazie a questi due strumenti è stato possibile generare in maniera semi-automatica:
 
 - Le interfacce per il controller (visita la sezione [Architettura](/restapi/architettura/) per una spiegazione migliore di cosa si intende per Controller) del backend e le classi del modello;
@@ -58,33 +58,33 @@ source generate-sources.sh
 Per il funzionamento il comando richiede che nel sistema siano installati **Node.js** e **openapi-generator-cli**. Attenersi a quanto indicato in [Generazione del codice sorgente](#generazione-codice-sorgente) per installarli.
 
 <a name="source-code-management"></a>
-## 4.2.4 Source code management
+## 4.2.6 Source code management
 Per poter effettuare il versionamento del codice sorgente è richiesto di utilizzare **Git**.
 Per poterlo installare è necessario recarsi a [questa pagina](https://git-scm.com/downloads).  
 Non è strettamente necessario, ma è consigliato per integrare le proprie modifiche nel repository.
 
-## 4.2.5 Build automation
+## 4.2.7 Build automation
 La build automation (ovvero la gestione del processo di build) è affidata a **Maven**. Maven è installabile scaricandolo dal seguente [link](https://maven.apache.org/download.cgi).  
 Tramite Maven il progetto del backend viene compilato, rilasciato sotto forma di pacchetto .jar (formato di Java per i file eseguibili), testato e, volendo, eseguito.
 
-## 4.2.6 Containerization
+## 4.2.8 Containerization
 Il backend utilizza come supporti di persistenza [MySQL](https://www.mysql.com/it/) e [Redis](https://redis.io/). Per evitare di installarli e doverli configurare entrambi, essi vengono resi disponibili già configurati sotto forma di container Docker. L'installazione di Docker è diversa in base al sistema in uso.  
 
-### 4.2.6.1 Installazione di Docker su Windows
+### 4.2.8.1 Installazione di Docker su Windows
 È possibile installare Docker su Windows visitando il suo sito ufficiale, alla seguente [pagina](https://hub.docker.com/editions/community/docker-ce-desktop-windows). Docker su Windows richiede la virtualizzazione, come precedentemente anticipato nei [Prerequisiti](#prerequisiti).  
 La guida all'installazione e al primo utilizzo è presente nello stesso link in cui si scarica l'eseguibile per l'installazione.
 
-### 4.2.6.2 Installazione di Docker su MacOS
+### 4.2.8.2 Installazione di Docker su MacOS
 L'installazione per MacOS è identica a quella per Windows, ma la pagina a cui scaricarlo si trova a [questo link](https://hub.docker.com/editions/community/docker-ce-desktop-mac).
 
-### 4.2.6.3 Installazione di Docker su Ubuntu (e derivate, e altri derivati di Debian)
+### 4.2.8.3 Installazione di Docker su Ubuntu (e derivate, e altri derivati di Debian)
 È possibile installare Docker su Ubuntu seguendo le guide presenti sul sito ufficiale, disponibili a [questo indirizzo](https://docs.docker.com/engine/install/ubuntu/).
 
 <a name="generazione-codice-sorgente"></a>
-## Generazione codice sorgente
+## 4.2.9 Generazione codice sorgente
 Per poter generare il codice sorgente citato nella sezione [YAML](#yaml) sono necessari i due strumenti sopra citati: **Node.js** e **openapi-generator-cli**.
 
-### 4.2.6.4 Node.js
+### 4.2.9.1 Node.js
 L'installazione di Node.js su Windows e MacOS si può fare attraverso degli eseguibili scaricabili presso il sito dello strumento, disponibile [qui](https://nodejs.org/en/download/). È consigliato scaricare la versione LTS, attualmente la 12.
 
 Su sistemi Ubuntu, e al solito anche per distribuzioni derivate e distribuzioni derivate da Debian (con piccole differenze), si può installare con i seguenti comandi invocati da terminale:
@@ -93,14 +93,14 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-### 4.2.6.5 OpenAPI Generator
+### 4.2.9.2 OpenAPI Generator
 Una volta installato Node.js, è possibile installare openapi-generator-cli, da terminale o prompt dei comandi, con il seguente 0comando:
 ```bash
 npm install @openapitools/openapi-generator-cli -g
 ```
 
 <a name="firebase-authentication"></a>
-## 4.2.7 Firebase Authentication
+## 4.2.10 Firebase Authentication
 Il backend di Stalker utilizza come provider di autenticazione la piattaforma [Firebase Authentication](https://firebase.google.com/docs/auth) di Google. Per ottenere un'istanza funzionante e personale di un database di autenticazione presso la piattaforma, seguire [questa guida](https://firebase.google.com/docs/projects/learn-more#setting_up_a_firebase_project_and_adding_apps), che spiega come creare un generico progetto su Firebase.
 
 Per utilizzare Firebase Authentication (l'unico strumento che è necessario degli innumerevoli offerti), recarsi su `Impostazioni progetto`, poi su `Account di servizio` e:
@@ -110,13 +110,13 @@ Per utilizzare Firebase Authentication (l'unico strumento che è necessario degl
 
 Sia il file che la stringa vanno tenuti da parte, serviranno dopo nella spiegazione in [Variabili d'ambiente e container Docker](#env-var-container).
 
-## 4.2.8 Installazione
+## 4.2.11 Installazione
 Una volta scaricato il codice sorgente, si ottiene una cartella che contiene i seguenti file:
 ![!Contenuto della cartella Stalker-Backend](/Immagini/Backend/Requisiti/contenuto.jpg)
 
 <a name="contenuto-cartella"></a>
 
-###  4.2.8.1 Contenuto della cartella Stalker-Backend
+###  4.2.11.1 Contenuto della cartella Stalker-Backend
 Come si può vedere dall'immagine, al suo interno sono presenti cinque cartelle (evidenziate in blu) e altri file.  
 I file (in ordine di apparizione):
 
@@ -140,38 +140,38 @@ Le cartelle (in ordine di apparizione):
 - `openapi-config`: Contiene i file di configurazione per la generazione del codice sorgente;
 - `src`: Contiene il codice sorgente del prodotto, sia quello di produzione (sotto-cartella main), che quello di test (sotto-cartella test).
 
-### 4.2.8.2 Compilazione
+### 4.2.11.2 Compilazione
 Per compilare il codice del prodotto (sia il codice di produzione che di test) è sufficiente invocare il comando su un terminale o prompt dei comandi (e lo stesso per i comandi da qui in avanti):
 ```bash
 mvn compile test-compile
 ```
 
-### 4.2.8.3 Installazione sul proprio repository locale di Maven
+### 4.2.11.3 Installazione sul proprio repository locale di Maven
 Maven dispone di una cartella, una volta installato, chiamata `.m2`, in cui salva tutti i package e le librerie che vengono usati nei progetti installati e/o eseguiti nel computer in uso. Per installare il progetto sullo stesso repository, usare il seguente comando:
 ```bash
 mvn install
 ```
 
 <a name="creazione-pacchetto-jar"></a>
-### 4.2.8.3 Creazione del pacchetto .jar
+### 4.2.11.4 Creazione del pacchetto .jar
 Uno dei modi per eseguire il backend è quello di eseguire un file .jar eseguibile. Per generarlo, è necessario invocare il comando:
 ```bash
 mvn package
 ```
 
-### 4.2.8.4 Pulizia
+### 4.2.11.5 Pulizia
 Per rimuovere l'output della compilazione, contenuto nella cartella target (che viene generata una volta eseguita la compilazione, non viene e non è da mettere sotto controllo di versione), eseguire il seguente comando:
 ```bash
 mvn clean
 ```
 
-### 4.2.8.5 Altro
+### 4.2.11.6 Altro
 In generale, tutti i comandi fino ad ora elencati sono combinabili, quindi può anche essere eseguito un comando come il seguente:
 ```bash
 mvn clean install package
 ```
 
-## 4.2.9 Esecuzione
+## 4.2.12 Esecuzione
 Ci sono attualmente due modi per eseguire il backend:
 
 - Tramite comando Maven;
@@ -179,7 +179,7 @@ Ci sono attualmente due modi per eseguire il backend:
 
 <a name="env-var-container"></a>
 
-### 4.2.9.1 Variabili d'ambiente e container Docker
+### 4.2.12.1 Variabili d'ambiente e container Docker
 Oltre al file .json di Firebase Authentication illustrato nella sezione [Firebase Authentication](#firebase-authentication), se si provasse ad eseguire il backend senza eseguire quanto segue in questa sezione il backend andrebbe in crash ancor prima di partire.
 
 Il framework con cui è realizzato il backend, [Spring](https://spring.io/), fa largo uso di configurazione e in particolare, nel backend di Stalker, è largamente usata. La configurazione di Spring dipende dal valore di alcuni variabili d'ambiente. La configurazione del backend si trova sia sotto forma di classi Java, che di un file chiamato `application.properties`, situato nella cartella scaricata, dentro: `src/main/resources`.
@@ -211,13 +211,13 @@ Una volta che non è più necessario avere MySQL e Redis attivi, è possibile sp
 export docker-compose down
 ```
 
-### 4.2.9.2 Esecuzione tramite pacchetto .jar
+### 4.2.12.2 Esecuzione tramite pacchetto .jar
 Eseguendo il processo indicato in [Creazione del pacchetto .jar](#creazione-pacchetto-jar), il file generato sarà `stalker-backend-*X.Y.Z*.jar`, in cui *X.Y.Z* corrisponde alla versione del backend una volta scaricato. Il file si trova nella cartella target, e si può eseguire lanciando il comando:
 ```bash
 java -jar stalker-backend-X.Y.Z.jar
 ```
 
-### 4.2.9.3 Esecuzione tramite Maven
+### 4.2.12.3 Esecuzione tramite Maven
 Per eseguire il backend tramite Maven è necessario eseguire il seguente comando:
 ```bash
 mvn spring-boot:run

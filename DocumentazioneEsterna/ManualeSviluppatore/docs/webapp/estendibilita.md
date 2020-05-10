@@ -1,4 +1,4 @@
-# 3.3 Estendibilità webapp  
+# 3.3 Estendibilità web-app  
 ## 3.3.1 Creazione di un component  
 Per la creazione di un nuovo component si può usare il comando:
 

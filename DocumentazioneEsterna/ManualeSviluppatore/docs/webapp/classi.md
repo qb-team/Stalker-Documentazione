@@ -16,7 +16,7 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi alla app
 !!! info
     Per rendere ogni componente riutilizzabile, mantenibile e facile da testare, si è cercato di progettare componenti che abbiano al loro interno poche responsabilità e che siano il più coese possibili, tenendo però sotto controllo il numero di dipendenze.
 
-## Administrator management
+## 3.6.1 Administrator management
 ![!alt text](../Immagini/WebApp/administratorManagement.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Administrator </em> </figcaption>
 
@@ -57,7 +57,7 @@ Viene inoltre offerta anche la funzionalità di annullamento delle modifiche, in
 
 Si ricorda inoltre che per usufruire di questa funzionalità occorre essere un amministratore di tipo **owner**.
 
-## Anonymous tracking
+## 3.6.2 Anonymous tracking
 
 ![!alt text](../Immagini/WebApp/anonymousTracking.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Anonymous tracking </em> </figcaption>
@@ -86,7 +86,7 @@ Analogamente `PlacePresenceNumberContentComponent` ha un'associazione con `Place
 
 `OrganizationTrackingDataService` e `PlaceTrackingDataService` sono delle specializzazioni della  classe astratta `TrakingDataService`.
 
-## Recognized tracking
+## 3.6.3 Recognized tracking
 ![!alt text](../Immagini/WebApp/authenticatedAccessesUserLDAP.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Recognized tracking </em> </figcaption>
 
@@ -106,7 +106,7 @@ Infine `SingleUserAuthenticatedAccessesContentComponent` ha una relazione di ass
 
 `AccessDataService` espone due metodi. Il primo permette di ottenere gli accessi effettuati da un utente autenticato presso un dato luogo dell'organizzazione.  Il secondo invece richiede gli accessi di uno specifico utente autenticato presso l'organizzazione desiderata.
 
-## Authentication
+## 3.6.4 Authentication
 ![!alt text](../Immagini/WebApp/authentication.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Authentication </em> </figcaption>
 
@@ -144,7 +144,7 @@ La classe ha due associazioni:
 
     - `AdministratorOrganizationDataService` ha a sua volta ha un'associazione con `OrganizationService`, il quale permette la comunicazione con il backend, permettendo di ottenere la lista delle organizzazioni di un amministratore attraverso il metodo `getAdminOrganizations(AdminId: number)` inserendo l'id dell'amministratore.
 
-## Menubar
+## 3.6.5 Menubar
 ![!alt text](../Immagini/WebApp/menubar.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Menubar </em> </figcaption>
 
@@ -180,7 +180,7 @@ Vi è inoltre un'associazione con `AdministratorOrganizationDataService`, che of
 
 Esiste infine esiste un'associazione con `LDAPService` per permettere l'autenticazione LDAP attraverso il metodo `bind`, il quale comunicherà direttamente col server LDAP aziendale.
 
-## Organization management
+## 3.6.6 Organization management
 
 ![!alt text](../Immagini/WebApp/OrgManagement.PNG "diagramma delle classi")
 <figcaption align=center> <em> Diagramma delle classi - Organization management </em> </figcaption>

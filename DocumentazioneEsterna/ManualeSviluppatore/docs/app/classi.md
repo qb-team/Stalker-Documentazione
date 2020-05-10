@@ -3,7 +3,7 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'appl
 
 
 
-## Main Activity
+## 2.6.1 Main Activity
 ![!MainActivity](../Immagini/App/Classi/MainActivity.png "Diagramma della classe MainActivity")
 <figcaption align="center"> <em> Diagramma delle classi di Authentication </em> </figcaption>
 
@@ -18,7 +18,7 @@ La classe MainActivity offre i seguenti metodi:
 -   `goToHomePage()`:  Si occupa di spostare l'utente nell'HomePageActivity;
 
 
-## Authentication 
+## 2.6.2 Authentication 
 ![!AuthenticationFragment](../Immagini/App/Classi/Authentication.png "Diagramma delle classi di Authentication")
 <figcaption align="center"> <em> Diagramma delle classi di Authentication </em> </figcaption>
 
@@ -32,7 +32,7 @@ La classe AuthenticationFragment offre i seguenti metodi:
 
 
 ___
-## Login
+## 2.6.3 Login
 ![!LoginFragment](../Immagini/App/Classi/LoginFragment.png "Diagramma delle classi del Login")
 <figcaption align="center"> <em> Diagramma delle classi del Login </em> </figcaption>
 
@@ -51,15 +51,15 @@ La classe LoginFragment offre i seguenti metodi:
 
 -   `checkLoginDetails()`: Controlla se l'utente ha scritto le proprie credenziali e le invia al metodo `initLogin(email: String, password: String)`, altrimenti segnala l'utente dell'assenza di esse;
 
--   `initLogin(email: String, password: String)`: Tramite l' MVP invoca i meotodi di Firebase per verificare l'email e la password, in caso positivo invoca il metodo `onLoginSuccess(message: String)`, in caso negativo `onLoginFailure(e: FirebaseException)`;
+-   `initLogin(email: String, password: String)`: Tramite l' MVP invoca i metodi di Firebase per verificare l'email e la password, in caso positivo invoca il metodo `onLoginSuccess(message: String)`, in caso negativo `onLoginFailure(e: FirebaseException)`;
 
 -   `onLoginSuccess(message: String)`: L'autenticazione è andata a buon fine, l'utente sarà spostato nella HomePageActivity.class e visualizza un messaggio che indica che si è autenticato correttamente;
 
--   `onLoginFailure(e: FirebaseException)`: L'autenticazione è fallita e l'utente visualizza un messaggio che indica l'errorel.
+-   `onLoginFailure(e: FirebaseException)`: L'autenticazione è fallita e l'utente visualizza un messaggio che indica l'errore.
 
 
 ___
-##  SignUp
+## 2.6.4 SignUp
 ![!SignUpFragment](../Immagini/App/Classi/SignUpFragment.png "Diagramma delle classi di SignUp")
 <figcaption align="center"> <em> Diagramma delle classi del SignUp </em> </figcaption>
 
@@ -79,7 +79,7 @@ La classe SignUpFragment offre i seguenti metodi:
 
 -   `checkSignUpDetails()`: Controlla se l'utente ha scritto le proprie credenziali, confermato la password e accettato le condizioni d'uso, in caso positivo le invia al metodo `checkSignUp(email: String, password: String)`, altrimenti segnala l'utente dell'assenza di esse;
 
--   `checkSignUp(email: String, password: String)`: Tramite l' MVP invoca i meotodi di Firebase per registrare l'email e la password, in caso di riuscita invoca il metodo `onSignUpSuccess(message: String)`, in caso di fallimento `onSignUpFailure(e: FirebaseException)`;
+-   `checkSignUp(email: String, password: String)`: Tramite l' MVP invoca i metodi di Firebase per registrare l'email e la password, in caso di riuscita invoca il metodo `onSignUpSuccess(message: String)`, in caso di fallimento `onSignUpFailure(e: FirebaseException)`;
 
 -   `onSignUpSuccess(message: String)`: La registrazione è andata a buon fine, l'utente sarà spostato nella HomePageActivity.class e visualizza un messaggio che indica che si è autenticato correttamente;
 
@@ -88,7 +88,7 @@ La classe SignUpFragment offre i seguenti metodi:
 -   `calculate(password: String)`: Calcola la complessità della password per verificarne la sicurezza.
 
 
-## Home Page Activity
+## 2.6.5 Home Page Activity
 ![!HomePageActivity](../Immagini/App/Classi/HomePageActivity.png "Diagramma della classe HomePageActivity")
 <figcaption align="center"> <em> Diagramma delle classi di Authentication </em> </figcaption>
 
@@ -106,7 +106,7 @@ La classe HomePageActivity offre i seguenti metodi:
 
 -   `onNavigationItemSelected(menuItem: MenuItem)`:  Si occupa della gestione del drawer;
 
--   `goToMainActivity()`:  Si occupa di spostare l'utente nella MainAcitivity;
+-   `goToMainActivity()`:  Si occupa di spostare l'utente nella MainActivity;
 
 -   `checkPermissions()`:  Controlla i permessi dell'utente riguardanti il tracciamento;
 
@@ -124,11 +124,11 @@ La classe HomePageActivity offre i seguenti metodi:
 
 
 ___
-## Action Tab
+## 2.6.6 Action Tab
 ![!ActionTabFragment](../Immagini/App/Classi/ActionTabClassDiagramm.PNG "Diagramma delle classi del Action Tab")
 <figcaption align="center"> <em> Diagramma delle classi del Action Tab </em> </figcaption>
 
-La classe ActionTabFragment gestisce la view page principale dell'applicazione la quale contiene le due view pricipali ovvero: HomeFragment e MyStalkerFragment.
+La classe ActionTabFragment gestisce la view page principale dell'applicazione la quale contiene le due view principali ovvero: HomeFragment e MyStalkerFragment.
 Si occupa inoltre di gestire il menu bar principale che permette all'utente di navigare tra le pagine dell'applicazione.
 
 La classe ActionTabFragment offre i seguenti metodi:
@@ -139,10 +139,10 @@ La classe ActionTabFragment offre i seguenti metodi:
 
 -   `public void onActivityCreated(savedInstanceState: Bundle)`: Segnala che la creazione dell’Activity è stata completata;
 
--   `onBackPressed()`: Si occupa di recuperare il fragment appartenente all'Action Tab attualmete visibile per poi propagare la sua callBack agli altri fragment.
+-   `onBackPressed()`: Si occupa di recuperare il fragment appartenente all'Action Tab attualmente visibile per poi propagare la sua callBack agli altri fragment.
 
 ___
-## Home 
+## 2.6.7 Home 
 ![!HomeFragment](../Immagini/App/Classi/HomeFragment.png "Diagramma delle classi di Home Fragment")
 <figcaption align="center"> <em> Diagramma delle classi di Home</em> </figcaption>
 
@@ -154,17 +154,17 @@ La classe HomeFragment offre i seguenti metodi:
 
 -   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
--   `checkFile()`: Si occupa di andare a caricare la lista delle organizzazioni andandole a caricare direttamente da FileSyste;
+-   `checkFile()`: Si occupa di andare a caricare la lista delle organizzazioni andandole a caricare direttamente da FileSystem;
 
 -   `onFailureCheckFile(message: String)`: Si occupa di gestire un eventuale errore durante la lettura da FileSystem, fa visualizzare all'utente l`errore durante il caricamento;
 
 -   `downloadList()`: Si occupa di scaricare la lista dal Server e in caso affermativo la salva su FileSystem;
 
--   `onSuccessDownloadList(message: String)`: Si occupa di notificare all'utente il corretto scarimento della lista dal Server;
+-   `onSuccessDownloadList(message: String)`: Si occupa di notificare all'utente il corretto scaricamento della lista dal Server;
 
 -   `onFailureDownloadList(message: String)`: Si occupa di notificare all'utente il fallimento dello scaricamento della lista dal Server;
 
--   `organizationClick(position: int)`: Si occupa di inializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click;
+-   `organizationClick(position: int)`: Si occupa di inizializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click;
 
 -   `organizationLongClick(position: int)`: Notifica all'utente un dialog contenente informazioni aggiuntive dell'organizzazione selezionata dall'utente in seguito ad un click prolungato;
 
@@ -174,11 +174,11 @@ La classe HomeFragment offre i seguenti metodi:
 
 -   `onQueryTextChange(newText: String)`: Si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca;
 
--   `onBackPressed()`: Si occupa di far ritornare l'utente alla precendente Activity/Fragment.
+-   `onBackPressed()`: Si occupa di far ritornare l'utente alla precedente Activity/Fragment.
 
 
 ___
-## My Stalkers List 
+## 2.6.8 My Stalkers List 
 ![!MyStalkersListFragment](../Immagini/App/Classi/MyStalkerListFragment.png "Diagramma delle classi di My Stalker List")
 <figcaption align="center"> <em> Diagramma delle classi di My Stalkers List </em> </figcaption>
 
@@ -186,15 +186,15 @@ In questa classe compariranno tutte le organizzazioni abilitate nel tracciamento
 
 La classe MyStalkerListFragment offre i seguenti metodi:
 
--   `onServiceConnected(name: ComponentName, service: IBinder)`: Metodo della classe interna ServiceConnection che permette di stabile una connesione con il Bind Service;
+-   `onServiceConnected(name: ComponentName, service: IBinder)`: Metodo della classe interna ServiceConnection che permette di stabile una connessione con il Bind Service;
 
--   `onServiceDisconnected(name: ComponentName)`: Metodo della classe interna ServiceConnection che permette di disconnettere la connesione con il Bind Service;
+-   `onServiceDisconnected(name: ComponentName)`: Metodo della classe interna ServiceConnection che permette di disconnettere la connessione con il Bind Service;
 
 -   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
 
 -   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa di creare il layout del fragment;
 
--   `organizationClick(position: int)`: Si occupa di inializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click;
+-   `organizationClick(position: int)`: Si occupa di inizializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click;
 
 -   `organizationLongClick(position: int)`: Notifica all'utente un dialog contenente la possibilità di eliminare l'organizzazione selezionata dall'utente in seguito ad un click prolungato;
 
@@ -208,15 +208,15 @@ La classe MyStalkerListFragment offre i seguenti metodi:
 
 -   `onFailureAddOrganization(message: String)`: Notifica all'utente l'insuccesso dell'operazione di aggiunta dell'organizzazione;
 
--   `removeOrganization(position: int)`: Si occupa di rimuovere un'organizzaione sia dal FileSystem sia dal Server;
+-   `removeOrganization(position: int)`: Si occupa di rimuovere un'organizzazione sia dal FileSystem sia dal Server;
 
 -   `onSuccessRemoveOrganization(list: ArrayList<Organization>)`: Notifica all'utente il successo dell'operazione di rimozione di una organizzazione;
 
 -   `loadMyStalkerList(UID: String, userToken: String)`: Si occupa di scaricare dal Serve la lista delle organizzazioni aggiunte dall'utente in precedenza;
 
--   `checkForUpdate()`: Si occupa di tenere traccia delle ventuali modifiche apportate dall'utente della sua lista delle organizzazioni presenti nella view MyStalkerListFragment;
+-   `checkForUpdate()`: Si occupa di tenere traccia delle eventuali modifiche apportate dall'utente della sua lista delle organizzazioni presenti nella view MyStalkerListFragment;
 
--   `onSuccessLoadMyStalkerList(list: List<Organization>)`: Notifica all'utente il successo dello scaricamneto della lua lista delle organizzazioni iserite in MyStalkerList e le mostra a schermo;
+-   `onSuccessLoadMyStalkerList(list: List<Organization>)`: Notifica all'utente il successo dello scaricamento della sua lista delle organizzazioni inserite in MyStalkersList e le mostra a schermo;
 
 -   `onPause()`: Metodo che viene invocato quando l'Activity principale viene è in pausa e ci si aspetta un suo ritorno in breve tempo;
 
@@ -224,13 +224,13 @@ La classe MyStalkerListFragment offre i seguenti metodi:
 
 -   `onSharedPreferenceChanged(sharedPreferences: SharedPreferences, s: String)`: Metodo che viene chiamato quando una risorsa condivisa (tra due view) viene modificata, aggiunta o rimossa;
 
--   `startTracking()`: Metodo per gestire l'inizio del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall`utente nella view MyStalkerList;
+-   `startTracking()`: Metodo per gestire l'inizio del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view MyStalkersList;
 
--   `stopTracking()`: Metodo per gestire la terminazione del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view MyStalkerList;
+-   `stopTracking()`: Metodo per gestire la terminazione del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view MyStalkersList;
 
--   `onBackPressed()`: Si occupa di fa ritornare l'utente alla precendente Activity/Fragment.
+-   `onBackPressed()`: Si occupa di fa ritornare l'utente alla precedente Activity/Fragment.
 ___
-## Standard Organization
+## 2.6.9 Standard Organization
 ![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del Standard Organization")
 <figcaption align="center"> <em> Diagramma delle classi dello Standard Organization</em> </figcaption>
 
@@ -248,7 +248,7 @@ La classe StandardOrganizationFragment offre i seguenti metodi:
 -   `onOptionsItemSelected(item:MenuItem)`: Aggiunge l'organizzazione nella lista dei preferiti.
 
 ___
-## LDAP Organization
+## 2.6.10 LDAP Organization
 ![!LDAPorganizationFragment](../Immagini/App/Classi/LDAPorganizationClassDiagramm.PNG "Diagramma delle classi del LDAP Organization")
 <figcaption align="center"> <em> Diagramma delle classi del LDAP Organization </em> </figcaption>
 

@@ -1,9 +1,9 @@
 # 3.2 Requisiti e installazione
 ## 3.2.1 Requisiti
-Per poter sviluppare sul proprio PC il webapp del sistema Stalker sono necessari i software e gli strumenti indicati in questa pagina.
+Per poter sviluppare sul proprio PC il web-app del sistema Stalker sono necessari i software e gli strumenti indicati in questa pagina.
 I software da installare saranno divisi in base al loro scopo.
 
-Per scaricare il codice sorgente del webapp, è sufficiente andare nella pagina di GitHub che lo ospita, che si trova [qui](https://github.com/qb-team/Stalker-Admin), cliccare su `Clone or download` e successivamente premere su `Download ZIP`.
+Per scaricare il codice sorgente del web-app, è sufficiente andare nella pagina di GitHub che lo ospita, che si trova [qui](https://github.com/qb-team/Stalker-Admin), cliccare su `Clone or download` e successivamente premere su `Download ZIP`.
 
 Un'alternativa più efficace a questo procedimento è scaricare il progetto tramite Git. Se non si dispone di Git è possibile scaricarlo seguendo quanto indicato in [Source Code Management](#source-code-management). Per scaricare il progetto in questo modo, invocare il seguente comando tramite un terminale o prompt dei comandi nel sistema in uso:
 ```bash
@@ -73,7 +73,7 @@ Verificare che npm è già stato installato precede installato con il seguente c
 ```bash
 npm -v
 ```
-se non è gia installato eseguire il seguente comando per farlo:
+se non è già installato eseguire il seguente comando per farlo:
 ```bash
 npm install npm@latest -g
 ```
@@ -103,7 +103,7 @@ npm install bootstrap
 <br/>
 
 !!!info 
-    Viene utilizzato JSON come formato per lo scambio di dati tra WebApp e Backend.
+    Viene utilizzato JSON come formato per lo scambio di dati tra web-app e Backend.
 
 ### 3.2.4.5 Firebase
 
