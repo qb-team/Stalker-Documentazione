@@ -2,17 +2,29 @@
 
 L'applicazione Android offre all'utente le seguenti funzionalità:
 
-## Registrazione
+## SignUp
 
 <iframe width="720" src="https://www.youtube.com/embed/t_jtcHEzhFw" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'utente ha la possibilità di registrarsi inserendo un e-mail, password e accettando le condizioni d'uso;
+L'utente ha la possibilità di registrarsi inserendo un e-mail, password e accettando le condizioni d'uso.
 
-## Login 
-L'utente ha la possibilità di autenticarsi inserendo la propria email e password;
+<iframe width="720" src="https://www.youtube.com/embed/" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Login e scaricamento delle organizzazioni post autenticazione
+
+<iframe width="720" src="https://www.youtube.com/embed/YPHun6qWReo" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+L'utente può autenticarsi inserendo la propria email e password.
+Qualora fosse la sua prima volta nell'utilizzare l'applicazione Stalker allora post autenticazione appare un popup che richiede all'utente la possibilità di scaricare la lista delle organizzazioni dal server. Egli ha la facoltà di rifiutare o accettare tale proposta.
 
 ## Scaricamento della lista delle organizzazioni
-L'utente, per poter visualizzare la lista di tutte le organizzazioni disponibili in Stalker, deve prima scaricarla connettendosi al backend. Una volta richiesto lo scaricamento, se dovesse decidere di annullarlo o se venisse a mancare la connessione ad Internet, apparirebbe nella schermata principale un tasto per ritentare il download;
+
+<p align = "center">
+
+<img src = "/Immagini/app/ScaricaListaOrg.png" />
+
+</p>
+L'utente, per poter visualizzare la lista di tutte le organizzazioni disponibili in Stalker, deve prima scaricarla connettendosi al backend. Una volta richiesto lo scaricamento, se dovesse decidere di annullarlo o se venisse a mancare la connessione ad Internet, apparirebbe nella schermata principale un tasto per ritentare il download.
 
 ## Aggiornamento della lista delle organizzazioni 
 
