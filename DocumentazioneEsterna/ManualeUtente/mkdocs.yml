@@ -14,15 +14,15 @@ markdown_extensions:
   - codehilite 
 
 nav:
-  - Home: "index.md"
+  - Introduzione: "index.md"
   - Registro modifiche: "registromodifiche.md"
   - App utenti:
-      - Installazione: "app/installazione.md"
+     # - Installazione: "app/installazione.md"
       - Funzionalità: "app/funzionalita.md"
   - Web-app amministratori:
-      - Installazione: "webapp/installazione.md"
+    #  - Installazione: "webapp/installazione.md"
       - Funzionalità: "webapp/funzionalita.md"
-  - REST API:
-      - Utilizzo: "restapi/utilizzo.md"
+  #- REST API:
+   #   - Utilizzo: "restapi/utilizzo.md"
   - Il gruppo qbteam: "qbteam.md"
   
