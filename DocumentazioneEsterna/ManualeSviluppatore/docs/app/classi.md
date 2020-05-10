@@ -2,6 +2,22 @@
 Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'applicazione.  
 
 
+
+## Main Activity
+![!MainActivity](../Immagini/App/Classi/Mainactivity.png "Diagramma della classe MainActivity")
+<figcaption align="center"> <em> Diagramma delle classi di Authentication </em> </figcaption>
+
+La classe MainActivity è l'Activity che appare all'utente se non è autenticato e contiene il fragment "AuthenticationFragment".
+
+La classe MainActivity offre i seguenti metodi:
+
+-   `onStart()`:  Metodo che viene invocato all'apertura dell'applicazione, controlla se l'utente è autenticato e in caso positivo viene invocato il metodo `goToHomePage()`;
+
+-   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione dell'Activity e di mostrare a schermo l'AuthenticationFragment;
+
+-   `goToHomePage()`:  Si occupa di spostare l'utente nell'HomePageActivity;
+
+
 ## Authentication 
 ![!AuthenticationFragment](../Immagini/App/Classi/Authentication.png "Diagramma delle classi di Authentication")
 <figcaption align="center"> <em> Diagramma delle classi di Authentication </em> </figcaption>
@@ -70,6 +86,42 @@ La classe SignUpFragment offre i seguenti metodi:
 -   `onSignUpFailure(FirebaseException e)`: La registrazione è fallita e l'utente visualizza un messaggio che indica l'errore;
 
 -   `calculate(String password)`: Calcola la complessità della password per verificarne la sicurezza.
+
+
+## Home Page Activity
+![!HomePageActivity](../Immagini/App/Classi/HomePageActivity.png "Diagramma della classe HomePageActivity")
+<figcaption align="center"> <em> Diagramma delle classi di Authentication </em> </figcaption>
+
+La classe HomePageActivity è l'Activity principale da cui vengono istanziati i fragment riguardanti l'action tab "ActionTabFragment", la lista delle organizzazioni "HomeFragment" e la lista dei preferiti/MyStalker "MyStalkersListFragment".
+
+La classe HomePageActivity offre i seguenti metodi:
+
+-   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione dell'Activity e gestisce i fragment a esso collegati. In questo metodo è presente il controllo dell'autenticazione dell'utente, in caso l'utente non è più collegato viene invocato il metodo `goToMainActivity()`;
+
+-   `onCreateOptionsMenu(menu: Menu)`: Si occupa della creazione del menu action tab;
+
+-   `initScreen()`:  Si occupa della gestione dell'ActionTabFragment;
+
+-   `onBackPressed()`:  Si occupa della gestione del tasto indietro;
+
+-   `onNavigationItemSelected(menuItem: MenuItem)`:  Si occupa della gestione del drawer;
+
+-   `goToMainActivity()`:  Si occupa di spostare l'utente nella MainAcitivity;
+
+-   `checkPermissions()`:  Controlla i permessi dell'utente riguardanti il tracciamento;
+
+-   `requestPermissions()`: Richiede all'utente i permessi riguardanti il tracciamento;
+
+-   `onRequestPermissionsResult(requestCode: int, permissions: String[], grantResults: int[])`:  Metodo che viene invocato una volta accettati i permessi riguardanti il tracciamento, in caso siano accettati il tracciamento viene attivato altrimenti lo switcher presente nel drawer "Tracciamento" viene posto su OFF;
+
+-   `statusCheck()`:  Controlla se il GPS è attivo;
+
+-   `buildAlertMessageNoGps()`:  Si occupa di avvertire l'utente in caso il GPS non è attivo e di aiutarlo nella sua attivazione;
+
+-   `setSwitchState(requestingLocationUpdates: boolean)`:  Si occupa della gestione dello switcher "Tracciamento" presente nel drawer;
+
+-   `getuserToken()`:  Metodo che restituisce il token dell'utente.
+
 
 ___
 ## Action Tab
