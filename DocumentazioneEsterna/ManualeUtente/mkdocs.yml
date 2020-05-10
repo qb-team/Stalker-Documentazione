@@ -15,6 +15,7 @@ markdown_extensions:
 
 nav:
   - Home: "index.md"
+  - Registro modifiche: "registromodifiche.md"
   - App utenti:
       - Installazione: "app/installazione.md"
       - Funzionalità: "app/funzionalita.md"
