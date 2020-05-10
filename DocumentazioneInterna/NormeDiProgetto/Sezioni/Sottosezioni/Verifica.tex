@@ -52,6 +52,14 @@ Per garantire questa caratteristica serve che ci sia determinismo, che è garant
     \item Non cambia lo stato iniziale del sistema.
 \end{itemize}
 \end{itemize}
+Per ogni test, verrà costruita una tabella dove verranno riportato il loro stato di esecuzione:
+\begin{itemize}
+	\item \textbf{NS}: Il test non è stato superato;
+	\item \textbf{S}: Il test è stato superato;
+	\item \textbf{NI}: Il test non è stato implementato;
+	\item \textbf{I}: Il test è stato implementato.
+\end{itemize}
+
 Ci sono diverse tipologie di test del software, ognuna delle quali ha un diverso oggetto di verifica e scopo.
 
 \subparagraph*{Test di unità} 
@@ -76,7 +84,7 @@ con:
 	\begin{itemize}
 		\item \textbf{A}: Test di sistema che fa riferimento all'applicazione;
 		\item \textbf{W}: Test di sistema che fa riferimento alla web-app;
-		\item \textbf{S}: Test di sistema che fa riferimento al server.
+		\item \textbf{B}: Test di sistema che fa riferimento al server.
 	\end{itemize}
 	\item \textbf{[Numero progressivo]}: Il numero del test di unità in relazione alla sua destinazione, progressivo perché diverso per ogni test e in serie. Il conteggio parte da 1.
 \end{itemize}
@@ -93,7 +101,8 @@ con:
 	\item \textbf{[Destinazione]}:
 	\begin{itemize}
 		\item \textbf{A}: Test di sistema che fa riferimento all'applicazione;
-		\item \textbf{S}: Test di sistema che fa riferimento al server.
+		\item \textbf{W}: Test di sistema che fa riferimento alla web-app;
+		\item \textbf{B}: Test di sistema che fa riferimento al server.
 	\end{itemize}
 	\item \textbf{[Numero progressivo]}: Il numero del test d’integrazione in relazione alla sua destinazione, progressivo perché diverso per ogni test e in serie. Il conteggio parte da 1.
 \end{itemize}
@@ -105,7 +114,7 @@ L'obiettivo è verificare che siano rispettati i requisiti definiti con il commi
 Quando questi test vengono svolti con la presenza del committente vengono definiti \textbf{test di accettazione} o \textbf{collaudo}. Se superati, permettono di procedere con il rilascio del prodotto software.
 Ogni test di sistema è identificato da un codice univoco, così formato:
 \begin{center}
-    TS[Destinazione][Numero progressivo]
+    	\item \textbf{TS[Destinazione][Numero progressivo]}
 \end{center}
 con:
 \begin{itemize}
