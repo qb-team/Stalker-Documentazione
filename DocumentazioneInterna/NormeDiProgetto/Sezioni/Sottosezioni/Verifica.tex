@@ -66,10 +66,37 @@ Per i test di unità vengono introdotti i seguenti concetti:
     \item \textbf{stub}: Componente passiva che simula il comportamento di un modulo dell'unità (si vuole verificare l'unità e non l'integrazione fra questa e il modulo);
     \item \textbf{logger}: Componente non intrusivo che registra gli esiti dell'esecuzione dei test.
 \end{itemize}
+Ogni test di unità è identificato da un codice univoco, così formato:
+\begin{center}
+	\item \textbf{TU[Destinazione][Numero progressivo]}
+\end{center}
+con:
+\begin{itemize}
+	\item \textbf{[Destinazione]}:
+	\begin{itemize}
+		\item \textbf{A}: Test di sistema che fa riferimento all'applicazione;
+		\item \textbf{W}: Test di sistema che fa riferimento alla web-app;
+		\item \textbf{S}: Test di sistema che fa riferimento al server.
+	\end{itemize}
+	\item \textbf{[Numero progressivo]}: Il numero del test di unità in relazione alla sua destinazione, progressivo perché diverso per ogni test e in serie. Il conteggio parte da 1.
+\end{itemize}
 
 \subparagraph*{Test d’integrazione} 
 Servono per verificare incrementalmente il corretto funzionamento delle componenti del sistema.
 Una volta che le unità sono verificate e passano con successo i relativi test, è possibile verificare il loro comportamento quando eseguite assieme.
+Ogni test d’integrazione è identificato da un codice univoco, così formato:
+\begin{center}
+	\item \textbf{TI[Destinazione][Numero progressivo]}
+\end{center}
+con:
+\begin{itemize}
+	\item \textbf{[Destinazione]}:
+	\begin{itemize}
+		\item \textbf{A}: Test di sistema che fa riferimento all'applicazione;
+		\item \textbf{S}: Test di sistema che fa riferimento al server.
+	\end{itemize}
+	\item \textbf{[Numero progressivo]}: Il numero del test d’integrazione in relazione alla sua destinazione, progressivo perché diverso per ogni test e in serie. Il conteggio parte da 1.
+\end{itemize}
 
 \subparagraph*{Test di sistema} 
 I test di sistema verificano il comportamento dell’intero sistema.
