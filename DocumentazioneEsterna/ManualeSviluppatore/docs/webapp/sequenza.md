@@ -10,7 +10,7 @@ Vengono di seguito rappresentati dei diagrammi di sequenza per:
 -   Modifica dei privilegi di un admin.
 
 
-## Diagramma del login dell'amministratore
+## 3.7.1 Diagramma del login dell'amministratore
 
 ![!alt text](../Immagini/WebApp/login.PNG "diagramma di sequenza del login e del caricamento dei permessi e delle organizzazioni")
 <figcaption> <em> Diagramma di sequenza del login e del caricamento dei suoi permessi e delle organizzazioni </em> </figcaption>
@@ -25,7 +25,7 @@ Ora che l'autenticazione è stata completata, si ha la necessità di caricare i 
 
 Infine `as` invocherà `requireAdministratorOrganizations` di `AdministratorOrganizationService` (`aos`) per caricare le organizzazioni a cui l'amministratore ha accesso, cosicché i component e gli altri servizi possano sottoscriversi all'osservabile ritornato per ottenere i valori di cui necessitano.
 
-## Diagramma degli accessi di un utente presso un luogo
+## 3.7.2 Diagramma degli accessi di un utente presso un luogo
 
 ![!alt text](../Immagini/WebApp/SEQ_singleUserAccessesByName.PNG "diagramma di sequenza degli accessi di un utente autenticato presso uno specifico luogo")
 <figcaption> <em> Diagramma di sequenza degli accessi di un utente autenticato presso uno specifico luogo </em> </figcaption>
@@ -34,7 +34,7 @@ Nel diagramma viene rappresentato come reperire gli accessi effettuati da un ute
 
 Come messaggio iniziale abbiamo la ricezione del nome e cognome dell'utente e il luogo d'interesse. Viene quindi invocato `getUserByName` dell'`LdapService` che esegue un'operazione di tipo search al server LDAP aziendale, con i parametri ottenuti creerà un istanza di `LdapUser` che servirà ad associare gli accessi al nome. Infatti, nell'istanza `desiredUser`vi è l'uID dell'utente che possiamo usare per ottenere gli accessi da esso effettuati presso il luogo desiderato. Procediamo dunque invocando `subscribeToPlaceAccessesOf(uId)` di `AccessDataService` (`as`), il quale invocherà la chiamata API per il backend attraverso il metodo `getAuthenticatedAccessListInPlace(uID, place)`. Verranno ritornati gli accessi effettuati dall'utente desiderato presso il luogo preselezionato, cosicché una volta che `ac` ci avrà notificato della disponibilità dei dati a cui ci siamo sottoscritti, li otterremo e li mostreremo tramite la vista all'amministratore, associando nome e cognome agli accessi ricevuti.
 
-## Diagramma del contatore presenze di un'organizzazione
+## 3.7.3 Diagramma del contatore presenze di un'organizzazione
 
 ![!alt text](../Immagini/WebApp/viewing the org presence counter.PNG "diagramma di sequenza per la visualizzazione del contatore presenze in una data organizzazione")
 <figcaption> <em> Diagramma di sequenza per la visualizzazione del contatore presenze in una data organizzazione </em> </figcaption>
@@ -43,7 +43,7 @@ Il diagramma ha come segnale iniziale l'accesso, da parte dell'amministratore, n
 
 Subito dopo il messaggio iniziale e la creazione dei `ReplySubject` in `odts` e `ads` l'`opcc` invoca `getUserNumber` su `odts`. In risposta si avrà un riferimento a `userNumber` (il contatore di interesse) che attualmente è nullo a cui però ci sottoscriviamo in previsione degli "step" successivi dove verrà aggiornato, in modo da ottenere subito il `notify`. Analogamente ci sottoscriviamo all'organizzazione attuale (`currentOrganization`) e otterremo subito in risposta l'organizzazione attuale. Ora che possediamo l'ID dell'organizzazione di interesse possiamo fare una chiamata al `PresenceService` (`ps`) tramite l'`odts`. Il `notify` di `ps` aggiornerà il contatore `usersNumber`, a cui ci eravamo precedentemente sottoscritti, cosicché riceveremo il `notify` con il valore aggiornato da mostrare nella vista.
 
-## Diagramma della modifica dei privilegi di un amministratore
+## 3.7.4 Diagramma della modifica dei privilegi di un amministratore
 
 ![!alt text](../Immagini/WebApp/modify admin priv level.PNG "diagramma di sequenza per la modifica dei privilegi di un amministratore")
 <figcaption> <em> Diagramma di sequenza per la modifica dei privilegi di un amministratore </em> </figcaption>
