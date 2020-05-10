@@ -70,8 +70,15 @@ ___
 ![!ActionTabFragment](../Immagini/App/Classi/ActionTabClassDiagramm.PNG "Diagramma delle classi del Action Tab")
 <figcaption align="center"> <em> Diagramma delle classi del Action Tab </em> </figcaption>
 
-La classe ActionTabFragment contiene tutti i metodi necessari per gestire la barra principale al vertice dell'applicazione e i metodi per spostarsi nelle pagine HomeFragment e MyStalkerFragment.
+La classe ActionTabFragment gestisce la view page principale dell'applicazione la quale contiene le due view pricipali ovvero: HomeFragment e MyStalkerFragment.
+Si occupa inoltre di gestire il menu bar principale che permette all'utente di navigare tra le pagine dell'applicazione.
 
+La classe Action Tab offre i seguenti metodi:
+
+- 'onCreate(@Nullable Bundle savedInstanceState)':  si occupa della creazione del fragment in quanto componente.
+- 'onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)': si occupa di creare il layout del fragment.
+- 'public void onActivityCreated(Bundle savedInstanceState)': segnala che la creazione dell’Activity è stata completata.
+- 'onBackPressed()': si occupa di recuperare il fragment appartenente all'Action Tab attualmete visibile per poi propagare la sua callBack agli altri fragment.
 
 ___
 ## Home 
@@ -80,13 +87,54 @@ ___
 
 Se l'utente risulta già autenticato e avvia l'applicazione oppure ha appena effettuato l'autenticazione allora gli viene mostrato automaticamente la classe view del HomeFragment. In questa classe compariranno tutte le organizzazioni presenti nel server. L'utente ha la possibilità di aggiornare la lista oppure di scaricarla se dovessero incombere dei problemi.
 
+La classe Home offre i seguenti metodi:
+
+- 'onCreate(@Nullable Bundle savedInstanceState)':  si occupa della creazione del fragment in quanto componente.
+- 'onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)': si occupa di creare il layout del fragment.
+- 'checkFile()': si occupa di andare a caricare la lista delle organizzazioni andandole a caricare direttamente da FileSystem.
+- 'onFailureCheckFile(String message)': si occupa di gestire un eventuale errore durante la lettura da FileSystem, fa visualizzare all'utente l'errore durante il caricamento.
+- 'downloadList()': si occupa di scaricare la lista dal Server e in caso affermativo la salva su FileSystem.
+- 'onSuccessDownloadList(String message)': si occupa di notificare all'utente il corretto scarimento della lista dal Server.
+- 'onFailureDownloadList(String message)': si occupa di notificare all'utente il fallimento dello scaricamento della lista dal Server.
+-'organizationClick(int position)': si occupa di inializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click.
+- 'organizationLongClick(int position)':notifica all'utente un dialog contenente informazioni aggiuntive dell'organizzazione selezionata dall'utente in seguito ad un click prolungato.
+- 'alphabeticalOrder()': si occupa di ordinare la lista presente nella view Home Fragment in ordine alfabetico.
+- 'onPrepareOptionsMenu(@NonNull Menu menu)': si occupa di gestire la creazione del menu a tendina presente nella view HomeFragment.
+- 'onQueryTextChange(String newText)': si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca.
+- 'onBackPressed()': si occupa di fa ritornare l'utente alla precendente Activity/Fragment.
+
+
 ___
 ## My Stalkers List 
 ![!MyStalkersListFragment](../Immagini/App/Classi/MyStalkerListFragment.png "Diagramma delle classi di My Stalker List")
 <figcaption align="center"> <em> Diagramma delle classi di My Stalkers List </em> </figcaption>
 
-In questa classe compariranno tutte le organizzazioni abilitate nel tracciamento dell'utente in precedenza aggiunte sia localmente che sul server. È possibile la rimozione dell'organizzazione dalla lista MyStalkers non consentendone più il tracciamento. Queste funzioni possono essere eseguite direttamente nell'applicazione. In questa classe sono presenti i metodi di tracciamento i quali utilizzano tale lista per avviare tutte le svariate funzionalità di geolocalizzazione.
+In questa classe compariranno tutte le organizzazioni abilitate nel tracciamento dell'utente in precedenza aggiunte sia localmente che sul server. È possibile la rimozione dell'organizzazione dalla lista MyStalkers non consentendone più il tracciamento. Queste funzioni possono essere eseguite direttamente nell'applicazione. 
 
+La classe My Stalker List offre i seguenti metodi:
+
+- 'onServiceConnected(ComponentName name, IBinder service)': metodo della classe interna ServiceConnection che permette di stabile una connesione con il Bind Service.
+- 'onServiceDisconnected(ComponentName name)': metodo della classe interna ServiceConnection che permette di disconnettere la connesione con il Bind Service.
+- 'onCreate(@Nullable Bundle savedInstanceState)': si occupa della creazione del fragment in quanto componente.
+- onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)': si occupa di creare il layout del fragment.
+- 'organizationClick(int position)': si occupa di inializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click.
+- 'organizationLongClick(int position)': notifica all'utente un dialog contenente la possibilità di eliminare l'organizzazione selezionata dall'utente in seguito ad un click prolungato.
+- 'onPrepareOptionsMenu(@NonNull Menu menu)': si occupa di gestire la creazione del menu a tendina presente nella view HomeFragment.
+- 'onQueryTextChange(String newText)': si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca.
+- 'addOrganization(Organization organization)': si occupa di aggiungere l'organizzazione ricevuta in input sia sul FileSystem sia sul Server
+- 'onSuccessAddOrganization(ArrayList<Organization> list, String message)': notifica all'utente il successo dell'operazione di aggiunta dell'organizzazione.
+- 'onFailureAddOrganization(String message)': notifica all'utente l'insuccesso dell'operazione di aggiunta dell'organizzazione.
+- 'removeOrganization(int position)': si occupa di rimuovere un'organizzaione sia dal FileSystem sia dal Server.
+- 'onSuccessRemoveOrganization(ArrayList<Organization> list)': notifica all'utente il successo dell'operazione di rimozione di una organizzazione.
+- 'loadMyStalkerList(String UID, String userToken)': si occupa di scaricare dal Serve la lista delle organizzazioni aggiunte dall'utente in precedenza. 
+- 'checkForUpdate()': si occupa di tenere traccia delle ventuali modifiche apportate dall'utente della sua lista delle organizzazioni presenti nella view MyStalkerListFragment.
+- 'onSuccessLoadMyStalkerList(List<Organization> list)': notifica all'utente il successo dello scaricamneto della lua lista delle organizzazioni iserite in MyStalkerList e le mostra a schermo.
+- 'onPause()': metodo che viene invocato quando l'Activity principale viene è in pausa e ci si aspetta un suo ritorno in breve tempo.
+- 'onStop()': metodo che viene invocato quando l'Activity principale non è più visibile all'utente, ovvero quando quest'ultimo ha deciso di chiudere l'applicazione.
+- 'onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s)': metodo che viene chiamato quando una risorsa condivisa (tra due view) viene modificata, aggiunta o rimossa.
+- 'startTracking()': metodo per gestire l'inizio del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view MyStalkerList.
+- 'stopTracking() : metodo per gestire la terminazione del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view MyStalkerList. 
+- 'onBackPressed()': si occupa di fa ritornare l'utente alla precendente Activity/Fragment.
 ___
 ## Standard Organization
 ![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del Standard Organization")
