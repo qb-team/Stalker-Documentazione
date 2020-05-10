@@ -57,6 +57,55 @@
         \item \textbf{Formula:}$$LCLC = \frac{|linee \; di \; commento|}{|linee \; di \; codice|}$$
         \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
     \end{itemize}
+    
+\paragraph{Documentazione - Indice di Gulpease}
+\begin{itemize}
+    \item \textbf{Codice:} MPC6
+    \item \textbf{Descrizione:} ;
+    \item \textbf{Processo di riferimento:} Documentazione;
+    \item \textbf{Sigla:} $IG$
+    \item \textbf{Formula:}$$IG = {}$$
+    \item \textbf{Strumenti utilizzati:} .
+\end{itemize}
+
+\paragraph{Documentazione - Lunghezza dei video tutorial}
+\begin{itemize}
+    \item \textbf{Codice:} MPC13
+    \item \textbf{Descrizione:} Lunghezza, in minuti, dei video tutorial nel manuale utente;
+    \item \textbf{Processo di riferimento:} Documentazione;
+    \item \textbf{Sigla:} $LVT$
+    \item \textbf{Strumenti utilizzati:} Nessuno.
+\end{itemize}
+
+\paragraph{Documentazione - Code Coverage}
+\begin{itemize}
+    \item \textbf{Codice:} MPC7
+    \item \textbf{Descrizione:} Percentuale di codice coperto da test;
+    \item \textbf{Processo di riferimento:} Verifica;
+    \item \textbf{Sigla:} $CC$
+    \item \textbf{Formula:} $$CC = \frac{|codice \; coperto \; da \; test|}{|codice \; totale|} $$;
+    \item \textbf{Strumenti utilizzati:} Coveralls.
+\end{itemize}
+
+\paragraph{Documentazione - Branch Coverage}
+\begin{itemize}
+    \item \textbf{Codice:} MPC14
+    \item \textbf{Descrizione:} Percentuale di rami condizionali coperti da test;
+    \item \textbf{Processo di riferimento:} Verifica;
+    \item \textbf{Sigla:} $BC$
+    \item \textbf{Formula:} $$BC = \frac{|rami \; condizionali \; coperti \; da \; test|}{|rami \; condizionali \; totali|} $$;
+    \item \textbf{Strumenti utilizzati:} Coveralls.
+\end{itemize}
+
+\paragraph{Documentazione - Statement Coverage}
+\begin{itemize}
+    \item \textbf{Codice:} MPC15
+    \item \textbf{Descrizione:} Percentuale di istruzioni coperte da test;
+    \item \textbf{Processo di riferimento:} Verifica;
+    \item \textbf{Sigla:} $SC$
+    \item \textbf{Formula:} $$SC = \frac{|istruzioni \; coperte \; da \; test|}{|istruzioni \; totali|} $$;
+    \item \textbf{Strumenti utilizzati:} Coveralls.
+\end{itemize}
 
 \paragraph{Codifica - Complessità Ciclomatica del Software} 
     \begin{itemize}
@@ -75,6 +124,33 @@
     \item \textbf{Strumenti utilizzati:} Non ancora definito.
 \end{itemize}
 
+\paragraph{Manutenibilità - Presenza di Code Smell} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD4
+    \item \textbf{Descrizione:} Il numero di Code Smell presenti nel codice del prodotto che ne inficiano la manutenibilità;
+    \item \textbf{Attributo di riferimento:} \glo{Manutenibilità};
+    \item \textbf{Sigla:} $CS$
+    \item \textbf{Strumenti utilizzati:} SonarQube.
+\end{itemize}
+
+\paragraph{Manutenibilità - Presenza di Vulnerabilità} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD5
+    \item \textbf{Descrizione:} Il numero di Vulnerabilità presenti nel codice del prodotto che ne inficiano la sicurezza;
+    \item \textbf{Attributo di riferimento:} \glo{Sicurezza};
+    \item \textbf{Sigla:} $VLN$
+    \item \textbf{Strumenti utilizzati:} SonarQube.
+\end{itemize}
+
+\paragraph{Manutenibilità - Presenza di Bug} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD6
+    \item \textbf{Descrizione:} Il numero di Bug presenti nel codice del prodotto che ne inficiano l'efficacia;
+    \item \textbf{Attributo di riferimento:} \glo{Operabilità};
+    \item \textbf{Sigla:} $BUG$
+    \item \textbf{Strumenti utilizzati:} SonarQube.
+\end{itemize}
+
 \paragraph{Usabilità - Profondità Strutturale dell'Interfaccia}
 \begin{itemize}
     \item \textbf{Codice:} MPD8
@@ -82,22 +158,4 @@
     \item \textbf{Attributo di riferimento:} \glo{Operabilità};
     \item \textbf{Sigla:} $PSI$
     \item \textbf{Strumenti utilizzati:} Controllo manuale.
-\end{itemize}
-
-\paragraph{Usabilità - Attrattività della User Interface (UI)} 
-\begin{itemize}
-    \item \textbf{Codice:} MPD1
-    \item \textbf{Descrizione:} Misurare quanto attrattive risultino le interfacce agli utenti dal punto di vista grafico.
-    Gli utenti dovranno poi compilare un questionario in base all'esperienza che hanno fatto;
-    Il valore medio di tale valutazione è ritenuto valido se almeno tre utenti hanno compilato il questionario. 
-    Viene utilizzata una scala a quattro valori: Molto attrattivo, Attrattivo, Poco attrattivo, Non Attrattivo;
-    \item \textbf{Attributo di riferimento:} \glo{Attrattività};
-    \item \textbf{Sigla:} $AUI$
-    \item \textbf{Formula:}$$AUI = V(q) $$
-    con:
-        \begin{itemize}
-        \item $V$ = Valore medio dei risultati;
-        \item $q$ = Questionario compilato;
-        \end{itemize}
-    \item \textbf{Strumenti utilizzati:} Moduli Google.
 \end{itemize}
