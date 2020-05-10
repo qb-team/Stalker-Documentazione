@@ -57,7 +57,10 @@ L'utente può eseguire l'ordinamento alfabetico della lista delle organizzazioni
 
 ## Ricerca
 
-In alto vi è la barra principale dell'applicazione in vi è una sezione di ricerca. Con essa è possibile eseguire delle ricerche testuali per filtrare e visualizzare la lista delle organizzazioni.
+![!RicercaOrganizzazione](/Immagini/app/RicercaOrg.png "RicercaOrganizzazione")
+<figcaption align="center"> <em> Ricerca organizzazione "Torre Archimede"</em> </figcaption>
+
+In alto c'è la barra principale dell'applicazione e vi è una sezione di ricerca. Con essa è possibile eseguire delle ricerche testuali per filtrare e visualizzare la lista delle organizzazioni.
 
 ## Visualizzazione pagina organizzazione
 
