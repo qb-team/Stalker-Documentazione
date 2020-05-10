@@ -1,0 +1,86 @@
+\documentclass[12pt]{letter}
+\usepackage{eurosym}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{../Utilita/Stilelettera}
+\usepackage[italian]{babel}
+\input{../Utilita/Comandi.tex}
+
+
+\signature{}
+\address{\VT{} \\ \CR{} \\ Università degli Studi di Padova \\ Dipartimento di Matematica \\ Via Trieste, 63\\ 35121 Padova }
+
+
+\begin{document}
+    \begin{letter}
+        { Egregio \VT{},\\Egregio \CR{},}
+        \begin{minipage}{.4\textwidth}
+            \begin{flushleft}
+                \includegraphics[width=.4\linewidth]{../Utilita/Immagini/qbteam.png}
+            \end{flushleft}
+        \end{minipage}
+        \begin{minipage}{.5\textwidth}
+            \begin{flushright}
+                \includegraphics[width=.4\linewidth]{../Utilita/Immagini/LogoUniPD.png}
+            \end{flushright}
+        \end{minipage}
+        {    
+        \begin{flushleft}
+            Corso di Ingegneria del Software\\ Gruppo \Gruppo{}\\ 
+        \end{flushleft}
+        }
+        \opening{ Con la presente il gruppo \Gruppo{} intende comunicarVi la partecipazione alla Revisione di Progettazione del 2020-03-16 e l'impegno alla realizzazione del progetto da Voi commissionato, denominato:}
+        \begin{center}
+           \textbf{\NomeProgetto{}} 
+        \end{center}
+        proposto dall'azienda \textbf{\Proponente{}}.\\
+        In allegato sono inclusi i seguenti documenti:
+        \begin{itemize}
+            \item Esterni:
+            \begin{itemize}
+                \item \AdRv{2.0.0};
+                \item \Glossariov{2.0.0};
+                \item \PdPv{2.0.0};
+                \item \PdQv{2.0.0}.
+            \end{itemize}
+            \item Interni:
+            \begin{itemize}
+                \item \NdPv{2.0.0}.
+            \end{itemize}
+        \end{itemize}
+        Inoltre sono presenti i verbali esterni ed interni:
+        \begin{itemize}
+            \item VE\_2020\_02\_18;
+            \item VE\_2020\_02\_27;
+            \item VI\_2020\_01\_29;
+            \item VI\_2020\_02\_15;
+            \item VI\_2020\_02\_21;
+            \item VI\_2020\_02\_24;
+            \item VI\_2020\_02\_26.
+        \end{itemize}
+        Il gruppo stima di consegnare il prodotto entro il 2020-05-10 con un preventivo di \euro{} 15.072,00, come specificato nel documento \PdP{}.\\
+        Per completezza, inseriamo di seguito la lista dei membri del gruppo, con nome, cognome, matricola e ruolo principale fino a questo momento.
+        {
+            \rowcolors{2}{grigetto}{white}
+            \renewcommand{\arraystretch}{1.5}
+            \begin{longtable}{ C{4cm} C{3cm} C{6cm} }
+                \rowcolor{darkblue}
+                \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Matricola}} & \textcolor{white}{\textbf{Ruolo di progetto}}\\
+                \endhead 
+                \MC{} & 1121305 & Progettista \\
+                \LD{} & 1162190 & Responsabile di Progetto \\
+                \CE{} & 1161514 & Progettista \\
+                \SE{} & 1166175 & Amministratore di Progetto \\
+                \PF{} & 1170747 & Programmatore \\
+                \DF{} & 1146928 & Analista \\
+                \BR{} & 1148142 & Programmatore \\
+                \AT{} & 1169740 & Verificatore \\  
+            \end{longtable}
+        }
+        Cordiali saluti,
+        \closing{\LD{}, \\ \textit{\Responsabile{}}\\ \includegraphics[width=.6\linewidth]{../DocumentazioneEsterna/PianoDiProgetto/sezioni/Firme/Davide.png}}
+        \vspace{10mm}
+    \end{letter}
+\end{document}
