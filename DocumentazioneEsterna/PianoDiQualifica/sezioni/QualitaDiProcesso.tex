@@ -1,7 +1,7 @@
 \section{Qualità di processo}
 Per garantire la qualità dei \glo{processi} si utilizza come riferimento lo standard ISO/IEC 12207:1995. Dopo uno studio dettagliato di tale documento sono stati scelti i \glo{processi}
-e le attività da utilizzare. Il tutto è stato semplificato ed adattato in base alle esigenze del progetto. Come è previsto nello standard, tutti i \glo{processi} e le attività sono raccolti 
-nei \glo{processi}: primari, di supporto ed organizzativi. Le attività fanno parte a dei sotto \glo{processi} rispetto a quelli appena elencati e per questo motivo la loro 
+e le attività da utilizzare. Il tutto è stato semplificato ed adattato in base alle esigenze del progetto. Come è previsto nello standard, tutti i \glo{processi} e le attività sono raccolti
+nei \glo{processi}: primari, di supporto ed organizzativi. Le attività fanno parte a dei sotto \glo{processi} rispetto a quelli appena elencati e per questo motivo la loro
 appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
 
 \subsection{Processi primari}
@@ -26,8 +26,8 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
     MPC2 & Coupling Between Objects & $CBO$ & $0 \leq CBO \leq 10$ & $0 \leq CBO \leq 4$ \\
     MPC3 & Livello Profondità Gerarchia & $LPG$ &  $1 \leq LPG \leq 3$ &  $1 \leq LPG \leq 2$ \\
 \end{longtable}
-\newpage
-\subsubsection{Codifica}  
+
+\subsubsection{Codifica}
      \rowcolors{2}{grigetto}{white}
      \renewcommand{\arraystretch}{1.5}
      \begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
@@ -37,7 +37,8 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
 		MPC4 & Numero di Parametri per Metodo & $NPM$ & $0 <= NPM < 8$ & $ 0 <= NPM < 4$ \\
 		MPC5 & Linee di Codice per Linee di Commento & $LCLC$ & $LCLC \geq 0.25$ & $LCLC \geq 0.30$ \\
 	\end{longtable}
-\vspace{0.3cm}
+
+\newpage
 \subsection{Processi supporto}
 
 \subsubsection{Documentazione}
@@ -72,9 +73,9 @@ appartenenza è resa chiara nella sezione: \glo{Processo} di riferimento.
 	\caption{Tabella metriche per la pianificazione}\\
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
-		MPC8 & Actual Cost of Work Performed & $ACWP$ & $0 \leq ACWP \leq BCWS$ & $0 \leq ACWP \leq B_{tot}$ \\
-		MPC9 & Budgeted Cost of Work Scheduled & $BCWS$ & $BCWS \geq 0$ &  $BCWS \geq 0$ \\
-		MPC10 & Budgeted Cost of Work Performed & $BCWP$ & $BCWP \geq 0$ & $BCWP \geq 0$ \\
-		MPC11 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\	
-		MPC12 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\
+		MPC9 & Actual Cost of Work Performed & $ACWP$ & $0 \leq ACWP \leq BCWS$ & $0 \leq ACWP \leq B_{tot}$ \\
+		MPC10 & Budgeted Cost of Work Scheduled & $BCWS$ & $BCWS \geq 0$ &  $BCWS \geq 0$ \\
+		MPC11 & Budgeted Cost of Work Performed & $BCWP$ & $BCWP \geq 0$ & $BCWP \geq 0$ \\
+		MPC12 & Schedule Variance & $SV$ & $SV = 0$ & $SV > 0$  \\
+		MPC13 & Budget Variance & $BV$ & $0 \leq BV < ACWP$ & $0 \leq BV \leq B_{tot}$  \\
 	\end{longtable}

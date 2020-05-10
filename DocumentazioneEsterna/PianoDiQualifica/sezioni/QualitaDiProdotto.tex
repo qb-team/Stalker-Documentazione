@@ -2,30 +2,33 @@
 La qualità di un prodotto software è valutata secondo criteri semplici e comprensibili a tutti, utenti e sviluppatori, operatori e addetti alla manutenzione.
 Per valutare tale qualità il gruppo \Gruppo{} ha deciso di far riferimento allo standard ISO/IEC 9126, per soddisfare alcuni degli standard di qualità tra quelli proposti dal medesimo, ovvero quelli che il gruppo ha ritenuto necessari per il progetto; La selezione è riportata nelle \NdP{}. In particolare, lo standard ISO/IEC 9126 descrive le seguenti norme:
 \begin{itemize}
-    \item Un modello di qualità del software; 
+    \item Un modello di qualità del software;
     \item Le caratteristiche che determinano la qualità del software;
     \item Le metriche per la misurazione della qualità del software.
 \end{itemize}
 
 \subsection{Metriche interne}
-%Le metriche della qualità "interne" del software sono utilizzate durante la fase di sviluppo e permettono di valutare il comportamento del software dal punto di vista degli sviluppatori e di predire quello che sarà il punto di vista esterno degli utenti.  
-\subsubsection{Usabilità} 
+%Le metriche della qualità "interne" del software sono utilizzate durante la fase di sviluppo e permettono di valutare il comportamento del software dal punto di vista degli sviluppatori e di predire quello che sarà il punto di vista esterno degli utenti.
+\subsubsection{Usabilità}
 Capacità del prodotto software di essere comprensibile, di poter essere usato e compreso facilmente, in ogni sua parte, da qualsiasi utente che lo voglia usare.\\
 \vspace{0.3cm}
-\subsubsection{Manutenibilità} 
-Capacità di predire il livello di impegno richiesto per modificare il prodotto software dal punto di vista degli sviluppatori.           
+\subsubsection{Manutenibilità}
+Capacità di predire il livello di impegno richiesto per modificare il prodotto software dal punto di vista degli sviluppatori.
+  \rowcolors{2}{grigetto}{white}
+  \renewcommand{\arraystretch}{1.5}
 \begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
 	\caption{Tabella metriche per la manutenibilità}\\
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
 	MPD2 & Complessità Ciclomatica del Software & $CCS $ & $1 \leq CCS \leq 7 $ & $1 \leq CCS \leq 4$\\
-\end{longtable} 
+\end{longtable}
 \subsection{Metriche esterne}
 %Le metriche relative alla qualità "esterna" indirizzano le caratteristiche esteriori del software, cioè quelle rilevabili direttamente dagli utenti e dagli operatori.
 
 \subsubsection{Affidabilità}
 Capacità del prodotto software di dimostrare un adeguato livello di affidabilità quando opererà nel sistema in cui è previsto debba operare.
-
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{1.5}
 \begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
 	\caption{Tabella metriche per la affidabilità}\\
 	\rowcolor{darkblue}
@@ -36,13 +39,13 @@ Capacità del prodotto software di dimostrare un adeguato livello di affidabilit
 	MPD7 & Maturità dei Test & $MT$ & $MT = 100\%$ & $MT = 100\%$\\
 \end{longtable}
 
-\vspace{0.3cm}  
 \subsubsection{Usabilità}
 Capacità del prodotto software di essere facilmente comprensibile, apprendibile ed utilizzabile per ogni utente intenzionato a usarlo.
-
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{1.5}
 \begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
 	\caption{Tabella metriche per l'usabilità}\\
 	\rowcolor{darkblue}
 	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
-	 MPD8 & Profondità Strutturale dell'Interfaccia & $PSI$ & $1 \leq PSI \leq 5$ &$1 \leq PSI \leq 3$\\
+	 MPD6 & Profondità Strutturale dell'Interfaccia & $PSI$ & $1 \leq PSI \leq 5$ &$1 \leq PSI \leq 3$\\
 \end{longtable}
