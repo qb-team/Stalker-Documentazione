@@ -8,9 +8,11 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'appl
 
 La classe AuthenticationFragment fa parte della vista e mostra all'utente la pagina dove può scegliere se effettuare la registrazione oppure il login.
 
-La classe offre i seguenti metodi:
+La classe AuthenticationFragment offre i seguenti metodi:
 
--   `onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente e sta in attesa di un click da parte dell'utente in caso selezioni il pulsante "Login" o "Registrati" per aprire i rispettivi fragment.
+-   `onCreate(Bundle savedInstanceState)`:  Si occupa della creazione del fragment in quanto componente;
+
+-   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente e sta in attesa di un click da parte dell'utente in caso selezioni il pulsante "Login" o "Registrati" per aprire i rispettivi fragment.
 
 
 ___
@@ -23,19 +25,21 @@ L'utente per fare il Login deve inserire l'email e la password e successivamente
 In caso di successo l'utente sarà spostato nel HomePageActivity.class e visualizza un messaggio che indica il buon esito dell'autenticazione.
 In caso di fallimento l'utente visualizza un messaggio di errore.
 
-La classe offre i seguenti metodi:
+La classe LoginFragment offre i seguenti metodi:
 
--   `onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente.
+-   `onCreate(Bundle savedInstanceState)`:  Si occupa della creazione del fragment in quanto componente;
 
--   `onClick(View v)`: Attende un click dell'utente al pulsante "Login" per invocare il metodo `checkLoginDetails()`
+-   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+
+-   `onClick(View v)`: Attende un click dell'utente al pulsante "Login" per invocare il metodo `checkLoginDetails()`;
 
 -   `checkLoginDetails()`: Controlla se l'utente ha scritto le proprie credenziali e le invia al metodo `initLogin(String email, String password)`, altrimenti segnala l'utente dell'assenza di esse;
 
--   `initLogin(String email, String password)`: tramite l' MVP invoca i meotodi di Firebase per verificare l'email e la password, in caso positivo invoca il metodo `onLoginSuccess(String message)`, in caso negativo `onLoginFailure(FirebaseException e)`;
+-   `initLogin(String email, String password)`: Tramite l' MVP invoca i meotodi di Firebase per verificare l'email e la password, in caso positivo invoca il metodo `onLoginSuccess(String message)`, in caso negativo `onLoginFailure(FirebaseException e)`;
 
 -   `onLoginSuccess(String message)`: L'autenticazione è andata a buon fine, l'utente sarà spostato nella HomePageActivity.class e visualizza un messaggio che indica che si è autenticato correttamente;
 
--   `onLoginFailure(FirebaseException e)`: L'autenticazione è fallita e l'utente visualizza un messaggio che indica l'errore;
+-   `onLoginFailure(FirebaseException e)`: L'autenticazione è fallita e l'utente visualizza un messaggio che indica l'errorel.
 
 
 ___
@@ -47,17 +51,19 @@ La classe SignUpFragment, così come SignUpPresenter e SignUpModel ad essa colle
 L'utente per registrarsi deve; inserire l'email, inserire la password, confermare la password, accettare le condizioni d'uso e infine cliccare il pulsante Registrati.
 Una volta cliccato il pulsante vengono invocati i metodi della libreria Firebase che ti registrano nel sistema ed eseguono automaticamente il Login.
 
-La classe offre i seguenti metodi:
+La classe SignUpFragment offre i seguenti metodi:
 
--   `onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente.
+-   `onCreate(Bundle savedInstanceState)`:  Si occupa della creazione del fragment in quanto componente;
 
--   `onClick(View v)`: Attende un click dell'utente al pulsante "Sign Up" ("Registrati") per invocare il metodo `checkSignUpDetails()`, oppure un click a "Leggi le condizioni d'uso" per invocare il metodo `showTermsofUse()`.
+-   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+
+-   `onClick(View v)`: Attende un click dell'utente al pulsante "Sign Up" ("Registrati") per invocare il metodo `checkSignUpDetails()`, oppure un click a "Leggi le condizioni d'uso" per invocare il metodo `showTermsofUse()`;
 
 -   `showTermsofUse()`: Apre un pop-up che mostra le condizioni d'uso che l'utente dovrà accettare;
 
 -   `checkSignUpDetails()`: Controlla se l'utente ha scritto le proprie credenziali, confermato la password e accettato le condizioni d'uso, in caso positivo le invia al metodo `checkSignUp(String email, String password)`, altrimenti segnala l'utente dell'assenza di esse;
 
--   `checkSignUp(String email, String password)`: tramite l' MVP invoca i meotodi di Firebase per registrare l'email e la password, in caso di riuscita invoca il metodo `onSignUpSuccess(String message)`, in caso di fallimento `onSignUpFailure(FirebaseException e)`;
+-   `checkSignUp(String email, String password)`: Tramite l' MVP invoca i meotodi di Firebase per registrare l'email e la password, in caso di riuscita invoca il metodo `onSignUpSuccess(String message)`, in caso di fallimento `onSignUpFailure(FirebaseException e)`;
 
 -   `onSignUpSuccess(String message)`: La registrazione è andata a buon fine, l'utente sarà spostato nella HomePageActivity.class e visualizza un messaggio che indica che si è autenticato correttamente;
 
@@ -73,12 +79,15 @@ ___
 La classe ActionTabFragment gestisce la view page principale dell'applicazione la quale contiene le due view pricipali ovvero: HomeFragment e MyStalkerFragment.
 Si occupa inoltre di gestire il menu bar principale che permette all'utente di navigare tra le pagine dell'applicazione.
 
-La classe Action Tab offre i seguenti metodi:
+La classe ActionTabFragment offre i seguenti metodi:
 
-- 'onCreate(@Nullable Bundle savedInstanceState)':  si occupa della creazione del fragment in quanto componente.
-- 'onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)': si occupa di creare il layout del fragment.
-- 'public void onActivityCreated(Bundle savedInstanceState)': segnala che la creazione dell’Activity è stata completata.
-- 'onBackPressed()': si occupa di recuperare il fragment appartenente all'Action Tab attualmete visibile per poi propagare la sua callBack agli altri fragment.
+-   `onCreate(Bundle savedInstanceState)`:  Si occupa della creazione del fragment in quanto componente;
+
+-   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+
+-   `public void onActivityCreated(Bundle savedInstanceState)`: Segnala che la creazione dell’Activity è stata completata;
+
+-   `onBackPressed()`: Si occupa di recuperare il fragment appartenente all'Action Tab attualmete visibile per poi propagare la sua callBack agli altri fragment.
 
 ___
 ## Home 
@@ -87,21 +96,33 @@ ___
 
 Se l'utente risulta già autenticato e avvia l'applicazione oppure ha appena effettuato l'autenticazione allora gli viene mostrato automaticamente la classe view del HomeFragment. In questa classe compariranno tutte le organizzazioni presenti nel server. L'utente ha la possibilità di aggiornare la lista oppure di scaricarla se dovessero incombere dei problemi.
 
-La classe Home offre i seguenti metodi:
+La classe HomeFragment offre i seguenti metodi:
 
-- 'onCreate(@Nullable Bundle savedInstanceState)':  si occupa della creazione del fragment in quanto componente.
-- 'onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)': si occupa di creare il layout del fragment.
-- 'checkFile()': si occupa di andare a caricare la lista delle organizzazioni andandole a caricare direttamente da FileSystem.
-- 'onFailureCheckFile(String message)': si occupa di gestire un eventuale errore durante la lettura da FileSystem, fa visualizzare all'utente l'errore durante il caricamento.
-- 'downloadList()': si occupa di scaricare la lista dal Server e in caso affermativo la salva su FileSystem.
-- 'onSuccessDownloadList(String message)': si occupa di notificare all'utente il corretto scarimento della lista dal Server.
-- 'onFailureDownloadList(String message)': si occupa di notificare all'utente il fallimento dello scaricamento della lista dal Server.
--'organizationClick(int position)': si occupa di inializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click.
-- 'organizationLongClick(int position)':notifica all'utente un dialog contenente informazioni aggiuntive dell'organizzazione selezionata dall'utente in seguito ad un click prolungato.
-- 'alphabeticalOrder()': si occupa di ordinare la lista presente nella view Home Fragment in ordine alfabetico.
-- 'onPrepareOptionsMenu(@NonNull Menu menu)': si occupa di gestire la creazione del menu a tendina presente nella view HomeFragment.
-- 'onQueryTextChange(String newText)': si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca.
-- 'onBackPressed()': si occupa di fa ritornare l'utente alla precendente Activity/Fragment.
+-   `onCreate( Bundle savedInstanceState)`:  Si occupa della creazione del fragment in quanto componente;
+
+-   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+
+-   `checkFile()`: Si occupa di andare a caricare la lista delle organizzazioni andandole a caricare direttamente da FileSyste;
+
+-   `onFailureCheckFile(String message)`: Si occupa di gestire un eventuale errore durante la lettura da FileSystem, fa visualizzare all'utente l`errore durante il caricamento;
+
+-   `downloadList()`: Si occupa di scaricare la lista dal Server e in caso affermativo la salva su FileSystem;
+
+-   `onSuccessDownloadList(String message)`: Si occupa di notificare all'utente il corretto scarimento della lista dal Server;
+
+-   `onFailureDownloadList(String message)`: Si occupa di notificare all'utente il fallimento dello scaricamento della lista dal Server;
+
+-   `organizationClick(int position)`: Si occupa di inializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click;
+
+-   `organizationLongClick(int position)`: Notifica all'utente un dialog contenente informazioni aggiuntive dell'organizzazione selezionata dall'utente in seguito ad un click prolungato;
+
+-   `alphabeticalOrder()`: Si occupa di ordinare la lista presente nella view Home Fragment in ordine alfabetico;
+
+-   `onPrepareOptionsMenu( Menu menu)`: Nasconde al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e rende visibile il comando di ricerca; 
+
+-   `onQueryTextChange(String newText)`: Si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca;
+
+-   `onBackPressed()`: Si occupa di fa ritornare l'utente alla precendente Activity/Fragment.
 
 
 ___
@@ -111,30 +132,51 @@ ___
 
 In questa classe compariranno tutte le organizzazioni abilitate nel tracciamento dell'utente in precedenza aggiunte sia localmente che sul server. È possibile la rimozione dell'organizzazione dalla lista MyStalkers non consentendone più il tracciamento. Queste funzioni possono essere eseguite direttamente nell'applicazione. 
 
-La classe My Stalker List offre i seguenti metodi:
+La classe MyStalkerListFragment offre i seguenti metodi:
 
-- 'onServiceConnected(ComponentName name, IBinder service)': metodo della classe interna ServiceConnection che permette di stabile una connesione con il Bind Service.
-- 'onServiceDisconnected(ComponentName name)': metodo della classe interna ServiceConnection che permette di disconnettere la connesione con il Bind Service.
-- 'onCreate(@Nullable Bundle savedInstanceState)': si occupa della creazione del fragment in quanto componente.
-- onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)': si occupa di creare il layout del fragment.
-- 'organizationClick(int position)': si occupa di inializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click.
-- 'organizationLongClick(int position)': notifica all'utente un dialog contenente la possibilità di eliminare l'organizzazione selezionata dall'utente in seguito ad un click prolungato.
-- 'onPrepareOptionsMenu(@NonNull Menu menu)': si occupa di gestire la creazione del menu a tendina presente nella view HomeFragment.
-- 'onQueryTextChange(String newText)': si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca.
-- 'addOrganization(Organization organization)': si occupa di aggiungere l'organizzazione ricevuta in input sia sul FileSystem sia sul Server
-- 'onSuccessAddOrganization(ArrayList<Organization> list, String message)': notifica all'utente il successo dell'operazione di aggiunta dell'organizzazione.
-- 'onFailureAddOrganization(String message)': notifica all'utente l'insuccesso dell'operazione di aggiunta dell'organizzazione.
-- 'removeOrganization(int position)': si occupa di rimuovere un'organizzaione sia dal FileSystem sia dal Server.
-- 'onSuccessRemoveOrganization(ArrayList<Organization> list)': notifica all'utente il successo dell'operazione di rimozione di una organizzazione.
-- 'loadMyStalkerList(String UID, String userToken)': si occupa di scaricare dal Serve la lista delle organizzazioni aggiunte dall'utente in precedenza. 
-- 'checkForUpdate()': si occupa di tenere traccia delle ventuali modifiche apportate dall'utente della sua lista delle organizzazioni presenti nella view MyStalkerListFragment.
-- 'onSuccessLoadMyStalkerList(List<Organization> list)': notifica all'utente il successo dello scaricamneto della lua lista delle organizzazioni iserite in MyStalkerList e le mostra a schermo.
-- 'onPause()': metodo che viene invocato quando l'Activity principale viene è in pausa e ci si aspetta un suo ritorno in breve tempo.
-- 'onStop()': metodo che viene invocato quando l'Activity principale non è più visibile all'utente, ovvero quando quest'ultimo ha deciso di chiudere l'applicazione.
-- 'onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s)': metodo che viene chiamato quando una risorsa condivisa (tra due view) viene modificata, aggiunta o rimossa.
-- 'startTracking()': metodo per gestire l'inizio del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view MyStalkerList.
-- 'stopTracking() : metodo per gestire la terminazione del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view MyStalkerList. 
-- 'onBackPressed()': si occupa di fa ritornare l'utente alla precendente Activity/Fragment.
+-   `onServiceConnected(ComponentName name, IBinder service)`: Metodo della classe interna ServiceConnection che permette di stabile una connesione con il Bind Service;
+
+-   `onServiceDisconnected(ComponentName name)`: Metodo della classe interna ServiceConnection che permette di disconnettere la connesione con il Bind Service;
+
+-   `onCreate( Bundle savedInstanceState)`: Si occupa della creazione del fragment in quanto componente;
+
+-   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa di creare il layout del fragment;
+
+-   `organizationClick(int position)`: Si occupa di inializzare e far visualizzare all'utente il fragment della organizzazione in seguito ad un rapido click;
+
+-   `organizationLongClick(int position)`: Notifica all'utente un dialog contenente la possibilità di eliminare l'organizzazione selezionata dall'utente in seguito ad un click prolungato;
+
+-   `onPrepareOptionsMenu(Menu menu)`: Nasconde al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e rende visibile il comando di ricerca; 
+
+-   `onQueryTextChange(String newText)`: Si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca;
+
+-   `addOrganization(Organization organization)`: Si occupa di aggiungere l'organizzazione ricevuta in input sia sul FileSystem sia sul Server;
+
+-   `onSuccessAddOrganization(ArrayList<Organization> list, String message)`: Notifica all'utente il successo dell'operazione di aggiunta dell'organizzazione;
+
+-   `onFailureAddOrganization(String message)`: Notifica all'utente l'insuccesso dell'operazione di aggiunta dell'organizzazione;
+
+-   `removeOrganization(int position)`: Si occupa di rimuovere un'organizzaione sia dal FileSystem sia dal Server;
+
+-   `onSuccessRemoveOrganization(ArrayList<Organization> list)`: Notifica all'utente il successo dell'operazione di rimozione di una organizzazione;
+
+-   `loadMyStalkerList(String UID, String userToken)`: Si occupa di scaricare dal Serve la lista delle organizzazioni aggiunte dall'utente in precedenza;
+
+-   `checkForUpdate()`: Si occupa di tenere traccia delle ventuali modifiche apportate dall'utente della sua lista delle organizzazioni presenti nella view MyStalkerListFragment;
+
+-   `onSuccessLoadMyStalkerList(List<Organization> list)`: Notifica all'utente il successo dello scaricamneto della lua lista delle organizzazioni iserite in MyStalkerList e le mostra a schermo;
+
+-   `onPause()`: Metodo che viene invocato quando l'Activity principale viene è in pausa e ci si aspetta un suo ritorno in breve tempo;
+
+-   `onStop()`: Metodo che viene invocato quando l'Activity principale non è più visibile all'utente, ovvero quando quest'ultimo ha deciso di chiudere l'applicazione;
+
+-   `onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s)`: Metodo che viene chiamato quando una risorsa condivisa (tra due view) viene modificata, aggiunta o rimossa;
+
+-   `startTracking()`: Metodo per gestire l'inizio del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall`utente nella view MyStalkerList;
+
+-   `stopTracking()`: Metodo per gestire la terminazione del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view MyStalkerList;
+
+-   `onBackPressed()`: Si occupa di fa ritornare l'utente alla precendente Activity/Fragment.
 ___
 ## Standard Organization
 ![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del Standard Organization")
@@ -143,15 +185,15 @@ ___
 La classe StandardOrganizationFragment rappresenta la pagina dedicata alle organizzazioni pubbliche, cioè quelle che non richiedono credenziali di autenticazione LDAP. La vista contiene le informazioni riferite all'organizzazione.
 Qualora l'organizzazione dovesse essere aggiunta nella lista MyStalkers allora comparirà al suo interno una sezione che mostra se l'utente è dentro o fuori l'organizzazione.
 
-La classe offre i seguenti metodi:
+La classe StandardOrganizationFragment offre i seguenti metodi:
 
--    `onCreate(saveInstanceState: Bundle)`:
+-   `onCreate(Bundle savedInstanceState)`: Si occupa della creazione del fragment in quanto componente;
 
--   `onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente.
+-   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
--    `onPrepareOptionsMenu(in menu:Menu)`: rende visibile al menù action tab dell'applicazione la sezione 'aggiungi ai preferiti' e nasconde il comando di ricerca; 
+-   `onPrepareOptionsMenu(menu:Menu)`: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca; 
 
--    `onOptionsItemSelected(in item:MenuItem)`: aggiunge l'organizzazione nella lista dei preferiti.
+-   `onOptionsItemSelected(item:MenuItem)`: Aggiunge l'organizzazione nella lista dei preferiti.
 
 ___
 ## LDAP Organization
@@ -163,12 +205,11 @@ Un utente, per poter essere tracciato dall'organizzazione privata, ha bisogno pr
 Le credenziali che ha digitato l'utente vengono spedite al modello che interrogherà il server dedicato al LDAP dell'organizzazione. L'esito di questa procedura verrà rimandata
 alla vista e apparirà una notifica visibile sulla schermata per avvisare l'utente.
 
-La classe offre i seguenti metodi:
+La classe LDAPorganizationFragment offre i seguenti metodi:
 
--    `onCreate(saveInstanceState: Bundle)`:
+-   `onCreate(saveInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
 
--   `onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente.
-
+-   `onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState)`: Si occupa della creazione della parte grafica visualizzata dall'utente.
 
 
 
