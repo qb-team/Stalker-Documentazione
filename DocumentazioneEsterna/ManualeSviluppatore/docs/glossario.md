@@ -20,9 +20,6 @@ Una applicazione distribuita web-based cioè fruibile via web per mezzo di un ne
 
 ## B
 
-### Backend as a service (BAAS)
-È un modello per fornire agli sviluppatori di applicazioni web o mobile un modo per collegare le loro applicazioni a un backend cloud storage e API, esposte da applicazioni backend, fornendo allo stesso tempo funzioni quali la gestione degli utenti, le notifiche push, e l'integrazione con servizi di rete sociale.
-
 ### Backend (server)
 Sono delle interfacce che hanno come destinatario un programma. Una applicazione back end è un programma con il quale l'utente interagisce indirettamente. In una struttura client/server il back end è il server.
 
@@ -71,9 +68,6 @@ Processo che permette l'individuazione geografica del luogo in cui si trova un d
 
 ### Git
 È un software di controllo versione distribuito utilizzabile da interfaccia a riga di comando.
-
-### Git Flow
-È un’estensione di git che si basa sul modello di branching di Vincent Driessen. Git Flow descrive un modello di diramazione ben preciso costruito che rispecchia le fasi di rilascio del progetto.
 
 ### GitHub
 È un servizio di hosting per progetti software. Il nome deriva dal fatto che è una implementazione dello strumento di controllo versione distribuito Git.
@@ -201,9 +195,6 @@ set ordinati con query di intervallo, bitmap, hyperloglogs, indici geospaziali c
 
 ### Refresh manuale
 L'utente di propria iniziativa invia una richiesta di aggiornamento della lista delle organizzazioni.
-
-### Regressione lineare (RL)
-La regressione formalizza e risolve il problema di una relazione funzionale tra variabili misurate sulla base di dati campionari estratti da un'ipotetica popolazione infinita.
 
 ### Repository
 È un archivio dove vengono raccolti dati ed informazioni in formato digitale sulla base di metadati che ne permettono la rapida individuazione.
