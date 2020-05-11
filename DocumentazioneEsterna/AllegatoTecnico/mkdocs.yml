@@ -1,0 +1,34 @@
+site_name: Allegato tecnico | Stalker
+repo_url: https://github.com/qb-team/Stalker-Documentazione/
+
+theme:
+  name: material
+  custom_dir: "docs_theme"
+
+markdown_extensions:
+  # https://github.com/g-provost/lightgallery-markdown
+  - lightgallery
+  # https://squidfunk.github.io/mkdocs-material/extensions/admonition/
+  - admonition
+  # https://squidfunk.github.io/mkdocs-material/extensions/codehilite/
+  - codehilite 
+
+nav:
+  - Home: "index.md"
+  - App utenti:
+      - Architettura: "app/architettura.md"
+      - Package: "app/package.md"
+      - Diagrammi delle classi: "app/classi.md"
+      - Diagrammi di sequenza: "app/sequenza.md"
+  - Web-app amministratori:
+      - Architettura: "webapp/architettura.md"
+      - Package: "webapp/package.md"
+      - Diagrammi delle classi: "webapp/classi.md"
+      - Diagrammi di sequenza: "webapp/sequenza.md"
+  - Backend:
+      - Architettura: "backend/architettura.md"
+      - Package: "backend/package.md"
+      - Diagrammi delle classi: "backend/classi.md"
+      - Diagrammi di sequenza: "backend/sequenza.md"
+  - Il gruppo qbteam: "qbteam.md"
+  

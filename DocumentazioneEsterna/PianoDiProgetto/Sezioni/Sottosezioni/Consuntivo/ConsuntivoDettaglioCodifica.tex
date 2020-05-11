@@ -1,0 +1,45 @@
+\subsection{Progettazione di Dettaglio e Codifica}
+\subsubsection{Bilancio}
+
+{
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{2}
+\begin{longtable}[h]{ C{2.5cm} C{2.5cm} C{2.5cm} C{2.5cm} C{1.5cm} C{2.5cm}}
+\caption{Tabella del costo complessivo per ruolo}\\
+\rowcolor{darkblue}
+
+\textcolor{white}{\textbf{Ruolo}} & 
+\textcolor{white}{\textbf{Ore preventivate}} & 
+\textcolor{white}{\textbf{Variazione oraria}} & 
+\textcolor{white}{\textbf{Costo preventivato (in \euro{})}} & 
+\textcolor{white}{\textbf{Costo effettivo (in \euro{})}} & 
+\textcolor{white}{\textbf{Variazione di costo (in \euro{})}}\\	
+	
+Responsabile    &  26 &  -3 &  780 &  690 &  -90 \\
+Amministratore  &  30 &  -1 &  600 &  580 &  -20 \\
+Analista        &   - &  +6 &    - &  150 & +150 \\
+Progettista     &  91 &  +5 & 2002 & 2112 & +110 \\
+Programmatore   & 144 &  +3 & 2160 & 2205 &  +45 \\
+Verificatore    & 109 &   0 & 1635 & 1635 &    0 \\
+\textbf{Totale} & 400 & +10 & 7177 & 7372 & +195 \\	
+
+\end{longtable}
+}
+
+\subsubsection{Conclusioni}
+Come riportato dalla tabella, il bilancio risulta essere abbastanza diverso da quello preventivato per tutti i ruoli eccetto il verificatore, mentre ci sono stati alcuni cambiamenti per gli altri. \\
+In particolar modo:
+\begin{itemize}
+    \item \textbf{Analista}: Alcuni membri del gruppo hanno dovuto sistemare alcune parti del documento di \AdR{} segnalate alla precedente revisione e notate da essi nel documento;
+	\item \textbf{Amministratore e Responsabile}: Come per la precedente fase, nonostante il lieve discostamento, possiamo notare che sono stati preventivati correttamente i numeri di ore richieste per il ruolo;
+    \item \textbf{Progettista}: Visto che nella precedente fase sono state impegnate molte meno ore di progettista, in questa fase c'è stato l'impegno a soddisfare a pieno il monte ore preventivato e sono state quindi impiegate 5 ore extra per evitare di dover, nella prossima fase (e quindi nei prossimi incrementi), ritoccare aspetti importanti dell'architettura;
+    \item \textbf{Programmatore}: La parte di programmazione ha richiesto anche in questo caso alcune ore in più, in particolare per sistemare alcuni difetti dovuti all'utilizzo improprio di alcune tecnologie;
+	\item \textbf{Verificatore}: Il lavoro necessario per il ruolo di verificatore è stato preventivato correttamente. 
+\end{itemize}
+\subsubsection{Ragionamento sugli scostamenti}
+Una cosa che può essere notata fin da subito è che il ruolo di analista poteva essere messo a preventivo fin da subito, considerando la possibilità di dover aggiustare alcune parti del documento di \AdR{}. L'altro scostamento più rilevante, quello del ruolo di progettista, più che preventivabile, è dovuto principalmente allo scarto importante di ore del ruolo avute nella precedente fase.\\
+Le ore di programmatore in più, dovute alle tecnologie impiegate, sarebbero state difficilmente preventivabili, ma una scelta di queste più accurata, magari puntando su altre tecnologie più diffuse, semplici da usare o meglio documentate sarebbe stato meglio. Per fare un esempio, uno strumento come Redis potrebbe essere stato sostituito da una tecnologia simile ma più semplice da usare (o meglio, configurare).
+
+\subsubsection{Preventivo a finire}
+Il preventivo a finire in fase di Progettazione Architetturale era inferiore di \euro{} 196. In questa fase, l'attuazione degli incrementi e ruoli come l'analista hanno portato ad un aumento del costo della fase di \euro{} 195. Per questa ragione, il consuntivo attuale è aumentato, tornando molto vicino alla soglia preventivata (\euro{} 15072).\\
+Il prezzo (attuale) totale per la realizzazione del prodotto è \euro{} 15071.
