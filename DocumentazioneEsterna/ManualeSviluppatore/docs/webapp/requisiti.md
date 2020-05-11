@@ -11,7 +11,7 @@ git clone https://github.com/qb-team/Stalker-Admin.git
 ```
 
 
-Di seguito vengono elencati i requisiti minimi per lo sviluppo e la manutenzione della Web app.
+Di seguito vengono elencati i requisiti minimi per lo sviluppo e la manutenzione della web-app.
 
 ## 3.2.2 Prerequisiti hardware e software
 
@@ -31,11 +31,11 @@ Le tecnologie utilizzate per sviluppare l'applicazione web richiedono poche riso
 
 Di seguito vengono illustrate quali linguaggi vengo utilizzati e come installarli.
 
-### 3.2.3.1 Typescript
+### 3.2.3.1 TypeScript
 
 L'applicazione web è stata sviluppata utilizzando il linguaggio di programmazione Typescript, in particolare la sua versione 3.7.5 .
 !!!info
-    per maggiori informazioni o per consultare la documentazione clicca [qui](https://www.typescriptlang.org/) .
+    Per maggiori informazioni o per consultare la documentazione clicca [qui](https://www.typescriptlang.org/).
 
 Per installare Typescript sia per Windows, MacOS e Ubuntu si utilizza il seguente comando:  
 ```bash
@@ -60,10 +60,6 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-Una volta installato Node.js, è possibile installare openapi-generator-cli, da terminale o prompt dei comandi, con il seguente comando:
-```bash
-npm install @openapitools/openapi-generator-cli -g
-```
 ### 3.2.4.2 npm
 
 È un gestore di pacchetti per il linguaggio di programmazione JavaScript. È il gestore di pacchetti predefinito per l'ambiente di runtime JavaScript Node.js. Perciò viene utilizzato per gestire le dipendenze di pacchetti che ha l'applicazione web.
@@ -73,7 +69,7 @@ Verificare che npm è già stato installato precede installato con il seguente c
 ```bash
 npm -v
 ```
-se non è già installato eseguire il seguente comando per farlo:
+Se non fosse già installato, eseguire il seguente comando per farlo:
 ```bash
 npm install npm@latest -g
 ```
@@ -82,7 +78,7 @@ npm install npm@latest -g
 Per sviluppare l'applicazione web è stato utilizzato il *framework* Angular 2+.
 
 !!!info
-    Per maggiori informazione consultare la documentazione di Angular 2+ [qui](https://angular.io/docs) .
+    Per maggiori informazione consultare la documentazione di Angular 2+ [qui](https://angular.io/docs).
 
 Ora che è stato installato Node.js e npm è possibile installare Angular 2+ attraverso il comando:
 ```bash
@@ -111,13 +107,13 @@ Il servizio Firebase viene utilizzato per gestire l'autenticazione dell'applicaz
 
 Per poterlo configurare innanzitutto bisogna creare un progetto in Firebase al seguente [link](https://console.firebase.google.com).
 
-![!firebaseNew](/Immagini/WebApp/Firebase1.png)
+![!Pagina di creazione del progetto Firebase](/Immagini/WebApp/Firebase1.png)
 
 Si verrà indirizzati nella pagina mostrata della immagine qui sopra. Per continua si clicchi sul bottone **Crea un progetto**, si aprirà un pagina dove verrà richiesto di inserire il nome del progetto, che si vuole creare, e di accettare alcune condizioni d'uso.
 
 Una volta concluso la creazione del progetto ci si troverà nella seguente schermata
 
-![!firebaseNew](/Immagini/WebApp/Firebase2.png)
+![!Registrazione dell'applicazione su Firebase](/Immagini/WebApp/Firebase2.png)
 
 Per continuare, occorre registrate l'applicazione **Stalker-Admin** al servizio Firebase, per farlo si clicchi sul bottone cerchiato di rosso nell'immagine precedente.
 
@@ -125,11 +121,9 @@ Si aprirà una nuova pagina dove chiederà di inserire un nickname. Successivame
 
 Copiare dunque l'SDK all'interno del file `environment.ts` come mostrato nella seguente immagine:
 
-![!firebaseNew](/Immagini/WebApp/Firebase3.png)
+![!Environment di Firebase su TypeScript](/Immagini/WebApp/Firebase3.png)
 
-
-
-## 3.2.5 reazione e configurazione dell'ambiente di sviluppo
+## 3.2.5 Reazione e configurazione dell'ambiente di sviluppo
 
 Di seguito viene illustrato come creare e configurare l'ambiente di sviluppo in Angular.
 
@@ -138,13 +132,13 @@ si esegua il comando:
 
     cd Stalker-Admin
 
-tale comando porterà all'interno della cartella del progetto, dopo di che per avviare un server locale dove poter vedere ciò che si è sviluppato, sarà necessario utilizzare il seguente comando:
+Tale comando porterà all'interno della cartella del progetto, dopo di che per avviare un server locale dove poter vedere ciò che si è sviluppato, sarà necessario utilizzare il seguente comando:
 
 ```bash
 ng serve 
 ```
 
-Scrivere poi nella barra di navigazione del proprio browser `http://localhost::4200`.
+Scrivere poi nella barra di navigazione del proprio browser `http://localhost:4200`.
 
 
 ## 3.2.6 Test

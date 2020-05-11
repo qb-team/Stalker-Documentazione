@@ -14,7 +14,6 @@ markdown_extensions:
   - codehilite 
 
 nav:
-  
   - Registro modifiche: "registromodifiche.md"
   - Il gruppo qbteam: "qbteam.md"
   - 1 Indroduzione: "index.md"
@@ -43,11 +42,11 @@ nav:
       - 4.6 Diagrammi delle classi: "backend/classi.md"
       - 4.7 Diagrammi di sequenza: "backend/sequenza.md"
   - 5 REST API:
-      - 5.1 Introduzione: "restapi/introduzione.md"
+      - 5.1 Introduction [EN]: "restapi/introduction.md"
       #- Specifica OpenAPI e Swagger: "restapi/openapi.md"
-      - 5.2 Utilizzo: "restapi/utilizzo.md"
-      - 5.3 Panoramica: "restapi/panoramica.md"
-      - 5.4 Modello:
+      # - 5.2 Utilizzo: "restapi/utilizzo.md"
+      - 5.3 Overview [EN]: "restapi/overview.md"
+      - 5.4 Model [EN]:
         - AdministratorBindingRequest: "restapi/model/AdministratorBindingRequest.md"
         - Favorite: "restapi/model/Favorite.md"
         - OrganizationAccess: "restapi/model/OrganizationAccess.md"
@@ -60,7 +59,7 @@ nav:
         - PlaceMovement: "restapi/model/PlaceMovement.md"
         - PlacePresenceCounter: "restapi/model/PlacePresenceCounter.md"
         - TimePerUserReport: "restapi/model/TimePerUserReport.md"
-      - 5.5 Api:
+      - 5.5 Api [EN]:
         - AccessApi: "restapi/api/AccessApi.md"
         - AdministratorApi: "restapi/api/AdministratorApi.md"
         - FavoriteApi: "restapi/api/FavoriteApi.md"

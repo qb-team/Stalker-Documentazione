@@ -1,7 +1,8 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
-0.18.0 | 2020-05-10 | Enrico Salmaso | Progettista | | Aggiunta e verifica appendice glossario.
+0.19.0 | 2020-05-10 | Enrico Salmaso | Progettista | | Aggiunta e verifica appendice glossario.
+0.18.0 | 2020-05-09 | Tommaso Azzalin | Progettista | Davide Lazzaro | Aggiunta e verifica della introduzione di §4 e §5.
 0.17.0 | 2020-05-09 | Federico Perin | Progettista | | Aggiunta e verifica appendice glossario.
 0.16.0 | 2020-05-09 | Federico Perin | Progettista | | Aggiunta e verifica §1.1.
 0.15.1 | 2020-05-09 | Tommaso Azzalin | Progettista | | Aggiornamento e verifica API e §4.6.
@@ -17,8 +18,8 @@ Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 0.10.3 | 2020-05-05 | Tommaso Azzalin | Progettista | Federico Perin | Correzione e verifica documentazione API.
 0.10.2 | 2020-05-05 | Emanuele Cisotto | Progettista | | Correzione e verifica §3.6 §3.7.
 0.10.1 | 2020-05-05| Davide Lazzaro | Programmatore | Emanuele Cisotto | modifica §4.6.
-0.10.0 | 2020-05-05 | Federico Perin   | Progettista | | Stesura e verifica §3.2.
-0.9.0 | 2020-05-05 | Christian Mattei | Progettista | | Aggiunto e verificato §2.5. 
+0.10.0 | 2020-05-05 | Federico Perin | Progettista | Tommaso Azzalin | Stesura e verifica §3.2.
+0.9.0 | 2020-05-05 | Christian Mattei | Progettista | Tommaso Azzalin | Aggiunto e verificato §2.5. 
 0.8.0 | 2020-05-05 | Federico Perin   | Progettista | Tommaso Azzalin | Stesura e verifica §3.6.
 0.7.0 | 2020-05-05 | Federico Perin   | Progettista | Tommaso Azzalin | Stesura e verifica §3.5.
 0.6.1 | 2020-05-05 | Emanuele Cisotto | Progettista | Tommaso Azzalin | Modificato e verificato §3.7.
