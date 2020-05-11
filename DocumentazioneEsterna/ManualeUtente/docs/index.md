@@ -104,6 +104,7 @@ Il prodotto garantirà le seguenti funzionalità:
     -   **Passare in tracciabilità anonima e non presso organizzazioni private**: 
 		Un utente riconosciuto potrà decidere di passare
         all’anonimato, cioè di diventare un utente anonimo, selezionando
+        l’apposita funzionalità.
     
 ## 1.4 Glossario
 
