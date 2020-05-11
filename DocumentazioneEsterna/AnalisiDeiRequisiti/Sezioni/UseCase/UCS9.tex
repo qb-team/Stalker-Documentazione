@@ -90,23 +90,25 @@
 
 \subsubsection{UCS 9.2 - Eliminazione di un amministratore}%sea level
 
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=1.0]{Sezioni/UseCase/Immagini/UCS9.2.png}
+  \caption{UCS 9.2 - Eliminazione di un amministratore}
+\end{figure}
+
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
 \item \textbf{Precondizione:} L'amministratore è autenticato presso il sistema e si trova nella funzionalità di gestione degli amministratori.
-\item \textbf{Postcondizione:} L'amministratore ha rimosso dal sistema l'account dell'amministratore identificato dall'e-mail inserita.
-\item \textbf{Scenario principale:} L'amministratore inserisce la mail dell'amministratore da eliminare e quindi conferma la scelta.
+\item \textbf{Postcondizione:} L'amministratore ha rimosso i permessi dell'amministratore identificato dall'e-mail inserita.
+\item \textbf{Scenario principale:} L'amministratore inserisce l' email dell'amministratore al quale vuole togliere i permessi e quindi conferma la scelta.
 \item \textbf{Scenario alternativo:} L'amministratore inserisce un e-mail che non è registrata presso il sistema, verrà pertanto mostrato un messaggio d'errore [UCS 10.9.4].
 \item \textbf{Flusso di eventi:} %elenco puntato
   \begin{enumerate}
         \item Inserimento e-mail del profilo dell'amministratore da rimuovere [UCS 9.2.1];
-        \item L'amministratore seleziona la funzionalità di conferma di eliminazione del profilo identificato dall'e-mail immessa al passaggio precedente;
+        \item L'amministratore gli rimuove i permessi di amministrazione dell'organizzazione;
         \item L'amministratore seleziona la funzionalità di conferma.
     \end{enumerate}
-    \item \textbf{Inclusioni:}
-	\begin{itemize}
-		\item UCS 9.2.1 - Inserimento e-mail dell'amministratore da eliminare;
-	\end{itemize}
 \item \textbf{Estensioni:}
 	\begin{itemize}
 		\item UCS 10.9.4 - Visualizzazione messaggio di errore in caso di e-mail non registrata nel sistema.
@@ -123,6 +125,13 @@
 \end{itemize}
 
 \subsubsection{UCS 9.3 - Modifica dei privilegi di un amministratore}%sea level
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=1.0]{Sezioni/UseCase/Immagini/UCS9.3.png}
+  \caption{UCS 9.3 - Modifica dei privilegi di un amministratore}
+\end{figure}
+
 \begin{itemize}
 \item \textbf{Attori primari:} Amministratore proprietario
 %\item \textbf{Attori secondari:}%opzionale
@@ -134,10 +143,6 @@
         \item Inserimento e-mail del profilo dell'amministratore da rimuovere [UCS 9.3.1];
         \item L'amministratore seleziona i nuovi privilegi da assegnare all'amministratore, potrà scegliere se assegnare "Gestore" oppure "Visualizzatore".
     \end{enumerate}
-\item \textbf{Inclusioni:}
-\begin{itemize}
-    \item UCS 9.3.1 - Inserimento e-mail dell'amministratore a cui si vuole modificare i privilegi.
-\end{itemize}
 \item \textbf{Estensioni:}
 	\begin{itemize}
 		\item UCS 10.9.4 - Visualizzazione messaggio di errore in caso di e-mail non registrata nel sistema.

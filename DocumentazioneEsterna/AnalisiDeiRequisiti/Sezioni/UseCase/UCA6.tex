@@ -11,17 +11,25 @@
 	\item \textbf{Attori secondari:} Servizi/o di localizzazione (\glo{GPS}, rete cellulare)
 	\item \textbf{Precondizione:} L'utente sta per effettuare un \glo{movimento} in un'\glo{organizzazione} o in un luogo all'interno di essa.
 	\item \textbf{Postcondizione:} L'utente ha effettuato un \glo{movimento} presso l'\glo{organizzazione} o in un luogo all'interno di essa, l'avvenimento viene notificato all'utente e memorizzato nel sistema. 
-	\item \textbf{Scenario principale:} L'utente si trova nei pressi o all'interno di un'\glo{organizzazione} o di un suo luogo e sta per effettuare un \glo{movimento}. L'utente riceve una notifica una volta effettuato il movimento. %Viene salvato l'orario di entrata ed uscita dall'\glo{organizzazione} e il tempo trascorso all'interno dell'\glo{organizzazione}. L'utente riceve inoltre una notifica per l'entrata e l'uscita dall'\glo{organizzazione}.
+	\item \textbf{Scenario principale:} L'utente si trova nei pressi o all'interno di un'\glo{organizzazione} o di un suo luogo e sta per effettuare un \glo{movimento}. L'utente riceve una notifica una volta effettuato il movimento. Viene salvato l'orario di entrata ed uscita dall'\glo{organizzazione} e il tempo trascorso all'interno di essa.
 \end{itemize}
 
 \subsubsection{UCA 6.1 - Tracciamento movimento presso un'organizzazione}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4, center]{Sezioni/UseCase/Immagini/UCA6.1.png}
+	\caption{Tracciamento movimento presso un'organizzazione}
+\end{figure}
+
+
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Attori secondari:} Servizi/o di localizzazione (\glo{GPS}, rete cellulare)
 	\item \textbf{Precondizione:} L'utente sta per effettuare un \glo{movimento} in un'\glo{organizzazione}.
 	\item \textbf{Postcondizione:} L'utente ha effettuato un \glo{movimento} presso l'\glo{organizzazione}, l'avvenimento viene notificato all'utente e memorizzato nel sistema. 
 	\item \textbf{Scenario principale:} L'utente si trova nei pressi o all'interno di un'\glo{organizzazione} e sta per effettuare un \glo{movimento}. L'utente riceve una notifica una volta effettuato il movimento.
-	%\item \textbf{Scenario alternativo:} .
+	\item \textbf{Scenario alternativo:} L'utente effettua un \glo{movimento} ma la sua memorizzazione nel sistema fallisce. Verrà visualizzato un messaggio d'errore [UCA 8.6.1].
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente effettua un movimento nei pressi di un'\glo{organizzazione};
@@ -30,7 +38,6 @@
 	\item \textbf{Estensioni:}
 	\begin{itemize}
 		\item UCA 8.6.1 - Notifica di errore se procedimento di memorizzazione del movimento al luogo è fallito.
-		\item UCA 6.1.1 - Notifica movimento effettuato presso l'organizzazione.
 	\end{itemize}
 \end{itemize}
 
@@ -43,13 +50,20 @@
 \end{itemize}
 
 \subsubsection{UCA 6.2 - Tracciamento movimento presso un luogo all'interno dell'organizzazione}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4, center]{Sezioni/UseCase/Immagini/UCA6.2.png}
+	\caption{Tracciamento movimento presso un luogo all'interno dell'organizzazione}
+\end{figure}
+
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente anonimo
 	\item \textbf{Attori secondari:} Servizi/o di localizzazione (\glo{GPS}, rete cellulare).
 	\item \textbf{Precondizione:} L'utente autenticato sta per effettuare un \glo{movimento} in un luogo all'interno di un'\glo{organizzazione}.
 	\item \textbf{Postcondizione:} L'utente ha effettuato un \glo{movimento} presso un luogo all'interno di un'\glo{organizzazione}, l'avvenimento viene notificato all'utente e memorizzato nel sistema. 
 	\item \textbf{Scenario principale:} L'utente sta per effettuare un movimento in un luogo all'interno di un'\glo{organizzazione}. L'utente riceve una notifica una volta effettuato il movimento.
-	%\item \textbf{Scenario alternativo:} .
+	\item \textbf{Scenario alternativo:} L'utente effettua un \glo{movimento} ma la sua memorizzazione nel sistema fallisce. Verrà visualizzato un messaggio d'errore [UCA 8.6.1].
 	\item \textbf{Flusso di eventi:}
 	\begin{enumerate}
 		\item L'utente effettua un movimento in un luogo all'interno di un'\glo{organizzazione};
@@ -58,7 +72,6 @@
 	\item \textbf{Estensioni:}
 	\begin{itemize}
 		\item UCA 8.6.1 - Notifica di errore se procedimento di memorizzazione del movimento al luogo è fallito.
-		\item UCA 6.2.1 - Notifica movimento effettuato presso un luogo all'interno dell'organizzazione.
 	\end{itemize}
 \end{itemize}
 
