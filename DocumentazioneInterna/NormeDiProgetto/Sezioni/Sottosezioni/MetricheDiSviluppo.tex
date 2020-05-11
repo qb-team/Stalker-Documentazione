@@ -1,0 +1,104 @@
+\subsubsection{Metriche}
+    \paragraph{Analisi dei requisiti - Percentuale requisiti obbligatori soddisfatti}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC1
+        \item \textbf{Descrizione:} È la percentuale dei requisiti che devono essere soddisfatti;
+        \item \textbf{Processo di riferimento:} Sviluppo;
+        \item \textbf{Attività di riferimento:} Analisi dei requisiti;
+        \item \textbf{Sigla:} $PRS$
+        \item \textbf{Formula:} $$PRS = {\frac{|requisiti \; soddisfatti|}{|requisiti \; totali|}}\; \cdot \; 100$$
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+    \end{itemize}
+\paragraph{Progettazione Architetturale - Incapsulamento CBO}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC2
+        \item \textbf{Descrizione:} Il "Coupling Between Objects" misura il numero delle classi correlate ad una classe in esame al di fuori dalla gerarchia di ereditarietà. Più è alto il grado di coupling della classe in esame e più il sistema è difficile da mantenere;
+        \item \textbf{Processo di riferimento:} Sviluppo;
+        \item \textbf{Sigla:} $CBO$
+        \item \textbf{Formula:} $$CBO = {\sum_{i=1}^{N} C_i}$$
+        con:
+        \begin{itemize}
+            \item $N$ = numero classi non appartenenti alla gerarchia di ereditarietà della classe in esame;
+            \item $C_i$ =
+            \begin{math} {
+                \begin{cases}
+                    1, & la \; $i$-esima \; classe \; \grave{e} \; correlata \; a \; quella \; in \; esame \\
+                    0, & la \; $i$-esima \; classe \; non \; \grave{e} \; correlata \; a \; quella \; in \; esame
+                \end{cases}
+            }
+            \end{math}
+        \end{itemize}
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+    \end{itemize}
+\paragraph{Progettazione di dettaglio - Livello profondità gerarchia}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC3
+        \item \textbf{Descrizione:} È il valore intero che indica la profondità della gerarchia formata tra classi. Se una gerarchia è formata da una classe allora il valore è uguale a 1;
+        \item \textbf{Processo di riferimento:} Sviluppo;
+        \item \textbf{Sigla:} $LPG$
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+    \end{itemize}
+
+\paragraph{Codifica - Numero di parametri per metodo}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC4
+        \item \textbf{Descrizione:} Un numero elevato di parametri per metodo può indicare il bisogno di ridurre funzionalità associate a tale metodo. Più è grande questo valore e più la possibilità aumenta nel commettere errori progettuali;
+        \item \textbf{Processo di riferimento:} Sviluppo;
+        \item \textbf{Sigla:} $NPM$
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+    \end{itemize}
+
+\paragraph{Codifica - Linee di commento per linee di codice}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC5
+        \item \textbf{Descrizione:} È il rapporto tra linee di commento e linee di codice. Per le linee di codice si intende Logical SLOC il numero di linee di codice effettive che corrispondono al numero di statement;
+        \item \textbf{Processo di riferimento:} Sviluppo;
+        \item \textbf{Sigla:} $LCLC$
+        \item \textbf{Formula:}$$LCLC = \frac{|linee \; di \; commento|}{|linee \; di \; codice|}$$
+        \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+    \end{itemize}
+    
+    \subsubparagraph{Documentazione - Indice di Gulpease}
+    \begin{itemize}
+        \item \textbf{Codice:} MPC6
+        \item \textbf{Descrizione:} È l'indice di leggibilità di un determinato testo. Calcola la lunghezza delle parole e delle frasi rispetto al numero totale delle lettere. Il valore è un intero da 0 a 100; se esso è inferiore a 80 sarà difficile da leggere per chi ha la licenza elementare, mentre se è inferiore a 40 sarà difficili da leggere per chi ha un diploma superiore;
+        \item \textbf{Processo di riferimento:} Documentazione;
+        \item \textbf{Sigla:} $IG$
+        \item \textbf{Formula:} $$IG = 89 + {\frac{300 \; \cdot \; |frasi| \; - \; 10 \; \cdot \; |lettere|}{|parole|}}$$
+        \item \textbf{Strumenti utilizzati:} \url{https://farfalla-project.org/readability_static/}
+    \end{itemize}
+
+\paragraph{Documentazione - Lunghezza dei video tutorial}
+\begin{itemize}
+    \item \textbf{Codice:} MPC7
+    \item \textbf{Descrizione:} Lunghezza, in minuti, dei video tutorial nel manuale utente;
+    \item \textbf{Processo di riferimento:} Documentazione;
+    \item \textbf{Sigla:} $LVT$
+    \item \textbf{Strumenti utilizzati:} Nessuno.
+\end{itemize}
+
+\paragraph{Codifica - Complessità Ciclomatica del Software} 
+    \begin{itemize}
+    \item \textbf{Codice:} MPD1
+    \item \textbf{Descrizione:} Misurare la complessità ciclomatica dei singoli moduli sviluppati;
+    \item \textbf{Attributo di riferimento:} \glo{Modificabilità};
+    \item \textbf{Sigla:} $CCS$
+    \item \textbf{Formula:} $$CCS = e - n + p$$
+    con:
+    \begin{itemize}
+        \item $G$ = grafo del modulo;
+        \item $e$ = numero di congiunzioni tra statement (corrispondenti agli archi di un grafo);
+        \item $n$ = numero di statement (nodi presenti nel grafo);
+        \item $p$ = numero delle componenti connesse da ogni nodo (per esecuzione sequenziale: p=2, essendovi un predecessore e un successore);
+    \end{itemize}
+    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+\end{itemize}
+
+\paragraph{Usabilità - Profondità Strutturale dell'Interfaccia}
+\begin{itemize}
+    \item \textbf{Codice:} MPD5
+    \item \textbf{Descrizione:} È sconsigliato per le interfacce utente l'utilizzo di una struttura troppo profonda per questioni di usabilità. L'utente non deve fare troppi passaggi per raggiungere la funzionalità desiderata;
+    \item \textbf{Attributo di riferimento:} \glo{Operabilità};
+    \item \textbf{Sigla:} $PSI$
+    \item \textbf{Strumenti utilizzati:} Controllo manuale.
+\end{itemize}

@@ -1,0 +1,153 @@
+\subsection{Gestione della configurazione}
+
+\subsubsection{Scopo}
+Si vuole garantire che tutto ciò che viene prodotto dal gruppo \Gruppo{}, dalla documentazione al codice sorgente, sia facilmente reperibile all’interno del \glo{repository}.
+Vengono qui riportate le pratiche che devono essere adottate nelle operazioni di modifica e versionamento.
+
+\subsubsection{Aspettative}
+Con questa sezione si intende chiarire gli strumenti e le prassi da utilizzare per controllare automaticamente tutti i prodotti delle attività che svolgeremo.
+Inoltre l'introduzione di strumenti di \glo{VCS} e \glo{ITS} semplifica lo svolgimento del lavoro e la coordinazione tra i membri del gruppo.
+
+\subsubsection{Descrizione}
+Il processo di gestione della configurazione consiste nell'applicare al ciclo di vita del software delle procedure atte al monitoraggio, registrazione e valutazione di tutte 
+le modifiche che subisce.
+
+\subsubsection{Attività}
+
+\paragraph{Versionamento}
+Allo scopo di tracciare gli incrementi del prodotto, tutte le modifiche effettuate sui documenti e sui file contenti codice sorgente vengono etichettate da un codice di versione comune che ne riflettere l'interezza del prodotto. Il codice di versione nel caso dei documenti viene indicato nel registro delle modifiche dove ogni riga ne descrive una versione e i cambiamenti avvenuti nel documento.
+
+\paragraph*{Codice di versione}
+Per identificare univocamente ogni versione del prodotto, si utilizza un particolare codice a tre numeri. Dati X, Y, Z $\in \mathbb{N}$, la forma del codice di versione è la seguente:
+
+\begin{center}
+	\textbf{X.Y.Z}
+\end{center}
+Le regole per aggiornare gli indici del codice sono le seguenti:
+\begin{itemize}
+	\item \textbf{X}: Questo indice viene incrementato quando avvengono un insieme di modifiche molto significative; nel caso in cui riguardi un documento si hanno modifiche significative ai contenuti e alla struttura, mentre se si tratta di codice sorgente, si avrà un incremento quando vengono implementati tutti i requisiti obbligatori (per la versione X=1) e per le altre versioni quando le modifiche non sono retro-compatibili;
+	L'indice parte da 0 e non viene mai riportato a 0. Viene incrementato ogni volta che l'insieme delle modifiche apportate, a partire dalla precedente approvazione del \Responsabile{}, rendono il documento o il prodotto non retro-compatibile con la versione precedente; premesso questo, il \Responsabile{} approva il documento o il codice sorgente solo successivamente allo svolgimento del processo di verifica da parte di un verificatore. Inoltre, per il prodotto, la presenza di questo indice valorizzato $\geq 1$ rappresenta una versione funzionante e potenzialmente rilasciabile; 
+	\item \textbf{Y}: Questo indice viene incrementato quando avviene una modifica al documento, nello specifico sono state aggiunte sezioni, sottosezioni o paragrafi, oppure una modifica al codice sorgente a cui è stata aggiunta una funzionalità, cioè sono stati soddisfatti uno o più requisiti.
+	L'indice parte da 0 viene azzerato ad ogni incremento dell'indice X;
+	\item \textbf{Z}: Questo indice viene incrementato quando avviene una modifica al documento in cui è stata effettuata un'aggiunta o una modifica che può essere una correzione a errori di ortografia o di digitazione, nel caso di modifica al codice sorgente rappresenta invece, un \glo{code refactoring} o un correzione di bug minori.
+	L'indice parte da 0 e viene incrementato ad ogni modifica e correzione, di qualsiasi dimensione, previa verifica.
+	Viene azzerato quando l'indice X o l'indice Y vengono incrementati.
+\end{itemize}
+Alcuni esempi di codice di versione:
+\begin{itemize}
+	\item \textbf{0.2.1}
+	\item \textbf{2.0.2}
+	\item \textbf{1.2.0}
+\end{itemize}
+\paragraph*{Rilascio}
+Il prodotto per poter essere rilasciato deve essere prima approvato dal \Responsabile{}.
+
+\subsubsection{Metriche}
+Non sono presenti metriche per questo processo.
+
+\subsubsection{Strumenti}
+
+\paragraph{Issue Tracking System}
+Per quanto riguarda la pianificazione del lavoro da svolgere, il gruppo \Gruppo{} ha scelto di utilizzare l'\glo{Issue Tracking System (ITS)} fornito da \glo{GitHub}.
+Le operazioni permesse dall'\glo{ITS} di \glo{GitHub} sono:
+\begin{itemize}
+	\item Creazione di \glo{bacheche} (chiamate "Projects") in cui avere un'istantanea delle attività, che possono ritrovarsi in uno e un solo dei seguenti stati: da fare, in corso e completate. Queste attività corrispondo alle "issue";
+	\item Creazione di attività da svolgere, dette \glo{issue}, dotate di:
+	\begin{itemize}
+		\item Titolo;
+		\item Descrizione dei compiti da svolgere;
+		\item Numero progressivo identificativo (fondamentale per il tracciamento delle attività);
+		\item I membri del gruppo assegnati per lo svolgimento;
+		\item Etichette (chiamate "label") per favorire il filtraggio per argomento;
+		\item Milestone di riferimento;
+		\item Bacheca di riferimento (ovvero in quale \glo{bacheca} viene visualizzata l'issue).
+	\end{itemize}
+	\item Creazione di una milestone, con titolo, descrizione e data di scadenza;
+	\item Creazione di etichette per le issue;
+	\item Creazione di pull request, in cui si richiede di effettuare il merge di un \glo{branch} all'interno di un altro, verificare l'assenza di conflitti di \glo{merge} e discutere con i membri del gruppo delle modifiche apportate da unire;
+	\item Modifica di issue, milestone, bacheche e label;
+	\item Visualizzazione delle attività svolte dai membri del gruppo relative ad un issue grazie al tracciamento e all'integrazione con il \glo{SCM} \glo{Git}.
+	\item Creazioni di template per le \glo{issue} aventi: Titolo, Descrizione, assegnazioni ed etichette.
+\end{itemize}
+Oltre a queste funzionalità, l'\glo{ITS} di \glo{GitHub} fornisce altro, ma il gruppo \Gruppo{} ritiene opportuno l'utilizzo solamente di queste elencate.
+È stato creato un canale apposito su \glo{Slack} per segnalare la creazione e la chiusura delle issue in modo da consapevolizzare tutti i membri del gruppo riguardo l'andamento del progetto.
+
+\paragraph{VCS e SCM} 
+Il gruppo ha deciso di adottare \glo{Git}, che è un software per la gestione del codice sorgente (\glo{SCM}) e controllo di versione (\glo{VCS}).
+Git è un VCS distribuito: ogni membro del gruppo \Gruppo{} ha quindi a disposizione una copia del repository e svolge il suo lavoro principalmente in locale.
+Per condividere il proprio lavoro con gli altri membri del gruppo, effettua un'operazione di \textbf{push} in remoto.
+Per ricevere il lavoro condiviso dagli altri membri del gruppo, effettua un'operazione di \textbf{pull} da remoto.
+Il repository remoto a cui tutto il gruppo fa riferimento è ospitato sulla piattaforma \glo{GitHub}.
+Il gruppo \Gruppo{} potrà interagire con il \glo{VCS} sia tramite riga di comando (git) che tramite software come \glo{GitKraken}.
+
+\paragraph{Repository creati}
+Sono stati creati più \glo{repository} per supportare il lavoro del gruppo, quali:
+\begin{itemize}
+	\item \textbf{Stalker-Admin}: Viene usato per versionare il codice sorgente prodotto dal gruppo per l'applicazione web per gli amministratori. Al momento tale repository è vuoto e verrà usato dopo la RP;
+	\item \textbf{Stalker-App}: Viene usato per versionare il codice sorgente prodotto dal gruppo per l'applicazione mobile per gli utenti. Al momento tale repository è vuoto e verrà usato dopo la RP;
+	\item \textbf{Stalker-Documentazione}: Viene usato per versionare tutta la documentazione prodotta dal gruppo;
+	\item \textbf{Stalker-App-PoC}: Viene usato per versionare il codice sorgente relativo dell'applicazione mobile per utenti per lo sviluppo del \glo{Proof of Concept}.
+	Il gruppo, intendendo seguire il modello di sviluppo incrementale integrerà, con le opportune modifiche, il suo contenuto all'interno del repository \textit{Stalker-App} per lavorare al prodotto finale;
+	\item \textbf{Stalker-Backend}: Viene usato per versionare il codice sorgente prodotto dal gruppo per l'applicativo lato server, il cosiddetto backend;
+	\item \textbf{Stalker-Admin-PoC}: Viene usato per lo sviluppo dell'interfaccia web dedicata all'amministratore per il \glo{Proof of Concept}.
+	Come per \textit{Stalker-App-PoC}, il codice prodotto verrà integrato nel repository \textit{Stalker-Admin} per lavorare al prodotto finale;
+	\item \textbf{Stalker-AllegatoTecnico}: Viene usato per il deploy dell'allegato tecnico consegnato per la presentazione agile della \glo{Product Baseline};
+	\item \textbf{Stalker-ManualeUtente}: Viene usato per il deploy del Manuale Utente;
+	\item \textbf{Stalker-ManualeManutentore}: Viene usato per il deploy del Manuale Manutentore.
+\end{itemize}
+
+\paragraph{Template per issue}
+Per le repository di \textit{Stalker-App}, \textit{Stalker-Admin} e \textit{Stalker-Backend} sono stati implementati diversi template per semplificare la creazione di issue simili fra di loro:
+\begin{itemize}
+\item \textbf{Nuovo requisito obbligatorio}: Viene usato per creare issue riguardanti i requisiti obbligatori.
+\item \textbf{Nuovo requisito desiderabile}: Viene usato per creare issue riguardanti i requisiti desiderabili.
+\item \textbf{Nuovo requisito opzionale}: Viene usato per creare issue riguardanti i requisiti opzionali.
+\end{itemize}
+
+\paragraph{Organizzazione del repository Stalker-Documentazione}
+Il \glo{repository} per la documentazione ha la seguente \glo{organizzazione} di cartelle:
+\begin{itemize}
+	\item \textbf{DocumentazioneEsterna/}: Dentro a questa cartella vi è la documentazione da fornire ai committenti e al proponente, oltre che i verbali redatti durante gli incontri con quest'ultimi;
+	\begin{itemize}
+		\item \textbf{VerbaliEsterni/}: All'interno di questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dei verbali degli \glo{incontri formali} fra i membri del gruppo e il proponente del progetto.
+		Per ogni incontro viene redatto un verbale che è presente in un'unica cartella;
+		\item \textbf{AnalisiDeiRequisiti/}: In questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\AdR{};
+		\item \textbf{PianoDiProgetto/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\PdP{};
+		\item \textbf{PianoDiQualifica/}: All'interno di questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\PdQ{};
+		\item \textbf{AllegatoTecnico/}: All'interno di questa cartella sono presenti i file sorgente in Markdown per la generazione dell'Allegato Tecnico;
+		\item \textbf{ManualeUtente/}: All'interno di questa cartella sono presenti i file sorgente in Markdown per la generazione del Manuale Utente;
+		\item \textbf{ManualeManutentore/}: All'interno di questa cartella sono presenti i file sorgente in Markdown per la generazione del Manuale Manutentore;
+	\end{itemize}
+	\item \textbf{DocumentazioneInterna/}: Dentro a questa cartella vi è la documentazione ad uso e consumo da parte dei membri del gruppo;
+	\begin{itemize}
+		\item \textbf{VerbaliInterni/}: In questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dei verbali degli \glo{incontri formali} fra i membri del gruppo.
+		Per ogni incontro viene redatto un verbale che è presente in un'unica cartella;
+		\item \textbf{StudioDiFattibilita/}: All'interno di questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\SdF{};
+		\item \textbf{NormeDiProgetto/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\NdP{}.
+	\end{itemize}	
+	\item \textbf{Glossario/}: In questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\Glossario{};
+	\item \textbf{Utilita/}: Dentro a questa cartella vi sono file che permettono una scrittura più rapida della documentazione.
+	Vi sono i file e le immagini comuni contente le componenti, gli stili e i comandi comuni a tutti i documenti da realizzare in \LaTeX{};
+	\item \textbf{.gitignore}: File utilizzato per garantire che non vengano versionati certi tipi di file non utili alla compilazione.
+\end{itemize}
+
+\paragraph{Git Flow}
+Viene scelto di utilizzare il modello \glo{Git Flow} per ogni repository gestito dal gruppo.
+Con Git Flow, lo sviluppo viene diviso in più rami, detti \glo{branch}:
+\begin{itemize}
+	\item \textbf{master}: Contenente il codice sorgente (indipendentemente dal fatto che sia per la documentazione che per il prodotto software) del prodotto rilasciato.
+	Ad ogni \glo{merge} in questo branch effettuato tramite il processo di \textbf{release} corrisponde un etichetta, che è il modo in cui \glo{Git} gestisce le versioni stabili di un prodotto;
+	\item \textbf{develop}: Contenente codice sorgente corretto ma non completo in tutte le parti, non pronto per essere rilasciato;
+	\item \textbf{feature/[FEATURE]}: Contenente codice sorgente altamente soggetto a modifiche perché riguardante una funzionalità in fase di sviluppo.
+	\textbf{[FEATURE]} corrisponde al nome della funzionalità in sviluppo, ed è decisa dal creatore del \glo{branch};
+	\item \textbf{release/[RELEASE]}: Contenente codice sorgente stabile e pronto per il rilascio;
+	\item \textbf{bugfix/[BUGFIX]} e \textbf{hotfix/[HOTFIX]}: Contenente codice sorgente in cui sono presenti funzionalità o sezioni contenenti bug, i quali vanno risolti dai membri del gruppo.
+	Un \glo{branch} di bugfix o hotfix viene creato a partire dal \glo{branch} master.
+\end{itemize}
+
+Oltre all'utilizzo di Git Flow, devono venire rispettate le seguenti regole:
+\begin{itemize}
+	\item Non è permesso effettuare \glo{commit} nel ramo master se non attraverso una \glo{pull request} che deve essere accettata dall’\Amministratore{};
+	\item Per ogni \glo{commit} è opportuno inserire nel messaggio una descrizione del lavoro svolto, anche riferendosi alle issue presenti nell'\glo{Issue Tracking System} di \glo{GitHub} indicando il numero di queste con "\#[NUM]", in cui [NUM] è un codice di issue.
+\end{itemize}
+

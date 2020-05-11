@@ -1,10 +1,20 @@
-\subsubsection{Progettazione}
-\paragraph{Scopo}
+\paragraph{Progettazione}
+\subparagraph*{Scopo}
 La progettazione, svolta dai Progettisti, ha lo scopo di soddisfare i requisiti stabiliti nel documento \AdR{} per trovare una soluzione accettabile per tutti gli stakeholder.
 Per fare ciò, si cerca di seguire un approccio sintetico dove si pensa prima all’architettura del prodotto e poi al codice. 
 Inoltre, per la \glo{Technology Baseline} è prevista la realizzazione di un \glo{Proof of Concept}.
 
-\paragraph{Descrizione}
+\subparagraph*{Aspettative}
+L'aspettativa di questa attività è di definire l’architettura logica del prodotto creando parti con specifiche chiare, coese e realizzabili con risorse sostenibili e mantenibili. L'architettura deve avere determinate caratteristiche per:
+\begin{itemize}
+	\item Soddisfare tutti i requisiti degli stakeholder;
+	\item Riuscire a gestire gli errori quando presenti;
+	\item Garantire che venga eseguito il suo compito nel modo corretto;
+	\item Cercare di ridurre i tempi di manutenzione;
+	\item Avere componenti semplici, coesi, incapsulati e di basso accoppiamento tra di loro.
+\end{itemize}
+
+\subparagraph*{Descrizione}
 La progettazione consiste nei seguenti compiti:
 \begin{itemize}
 	\item Controllare la complessità del prodotto suddividendo il sistema in parti di complessità trattabile;
@@ -14,45 +24,103 @@ La progettazione consiste nei seguenti compiti:
 	\item Per prendere confidenza con le tecnologie, sarà necessaria la realizzazione di un \glo{Proof of Concept} per poter affrontare la successiva fase di Codifica. Quest'ultimo sarà la nostra base dalla quale potremo attuare i successivi incrementi pianificati nel documento \PdP{}.
 \end{itemize}
 
-\paragraph{Architettura}
-I progettisti devono definire l’architettura logica del prodotto creando parti con specifiche chiare, coese e realizzabili con risorse sostenibili e mantenibili. L'architettura deve avere determinate caratteristiche per:
-\begin{itemize}
-	\item Soddisfare tutti requisiti degli stakeholder;
-	\item Riuscire a gestire gli errori quando presenti;
-	\item Garantire che venga eseguito il suo compito nel modo corretto;
-	\item Cercare di ridurre i tempi di manutenzione;
-	\item Avere componenti semplici, coesi, incapsulati e di basso accoppiamento tra di loro.
-\end{itemize}
-
+\subparagraph*{Architettura}
 La realizzazione dell’architettura del prodotto è divisa in due parti:
 \begin{itemize}
 	\item \glo{Technology Baseline};
 	\item \glo{Product Baseline}.
 \end{itemize}
 
-\subparagraph{Technology Baseline}
+\subparagraph*{Technology Baseline}
 La Technology Baseline deve dimostrare l’adeguatezza dell’architettura tramite un \glo{Proof of Concept} che rappresenta la baseline per lo sviluppo. 
 La Technology Baseline deve includere:
 \begin{itemize}
 	\item \textbf{Le tecnologie}: Dove vengono scelte le tecnologie che \Gruppo{} utilizzerà per la realizzazione del prodotto finale. Successivamente verranno ampliate le conoscenze di esse tramite una ricerca di documentazione e materiali utili per il loro apprendimento. Verranno date delle motivazioni per la scelta delle tecnologie adottate con i rispettivi pregi e difetti;
 	\item \textbf{\glo{Librerie} e \glo{Framework}}: Durante la scomposizione in sottosistemi verrà considerata la disponibilità di librerie e di framework per ottenete un maggiore facilità e affidabilità;
 	\item \textbf{Creazione del \glo{Proof of Concept}}: Realizzazione di un eseguibile che permette di rappresentare e validare la Technology Baseline;
-	\item \textbf{Diagrammi UML}: Viene utilizzato il linguaggio di modellazione UML per definire delle regole e dei vincoli con l'obiettivo di supportare la progettazione del sistema software. I diagramma UML utilizzati sono i seguenti:
+	\item \textbf{Diagrammi UML}: Viene utilizzato il linguaggio di modellazione UML per definire delle regole e dei vincoli con l'obiettivo di supportare la progettazione del sistema software. Il diagramma UML utilizzato nella Technology Baseline è il seguente:
 	\begin{itemize}
-		\item Diagrammi dei casi d'uso; 
-		\item Diagrammi delle classi; 
-		\item Diagrammi dei package;
-		\item Diagrammi di sequenza; 
-		\item Diagrammi di attività.
+	\item \textbf{Diagrammi dei casi d'uso}: Utilizzati per individuare i requisiti funzionali, descrivono le interazioni tra l'utente e il sistema.
 	\end{itemize}
+	\item \textbf{Test di integrazione}: Test che vengono utilizzati per verificare che le diverse componenti del
+	sistema interagiscano tra di loro in modo corretto e in modo tale che siano conformi con i requisiti associati;
+	\item \textbf{Tracciamento delle componenti}: Utilizzata per mettere in relazione requisiti e i componenti che li soddisfano.
 \end{itemize}
 
-\subparagraph{Product Baseline}
+\subparagraph*{Product Baseline}
 La Product Baseline illustrerà la baseline architetturale del prodotto, in coerenza con la Technology Baseline e la sua definizione è fondamentale per l'attività di progettazione.
 Essa deve includere un allegato che contenga:
 \begin{itemize}
 	\item \textbf{Diagrammi delle classi}: Utilizzati per descrivere i tipi di oggetti che vengono usati all'interno di un sistema;
 	\item \textbf{Diagrammi di sequenza}: Utilizzati per la collaborazione di un insieme di oggetti che devono implementare collettivamente un comportamento;
-	\item \textbf{Contestualizzazione dei design pattern adottati}: Per avere un'organizzazione architetturale che riesca a gestire dei problemi ricorrenti è necessario capire quali design pattern il gruppo dovrà utilizzare e le funzionalità di ciascuno di essi.	
+	\item \textbf{Diagrammi di attività}: Utilizzati per rappresentare gli aspetti dinamici dei casi d'uso, mostrando l'esecuzione di un'attività;
+	\item \textbf{Diagrammi di package}: Utilizzati per rappresentare un insieme di classi che condividono la stessa causa di cambiamento;
+	\item \textbf{Contestualizzazione dei design pattern adottati}: Per avere un'organizzazione architetturale che riesca a gestire dei problemi ricorrenti è necessario capire quali design pattern il gruppo dovrà utilizzare e le funzionalità di ciascuno di essi;	
 	\item \textbf{Requisiti del test di accettazione della produzione}: Bisogna effettuare dei test su tutto il SUT, che viene considerato black box, relativi agli use cases e ai requisiti concordati con il proponente.
 \end{itemize}
+
+Il gruppo \Gruppo{}, per i sopracitati diagrammi UML, utilizza le seguenti norme:
+ 
+\subsubparagraph*{Diagrammi delle classi}\mbox{}\\
+Per tutte le regole standard di UML riguardanti i diagrammi delle classi, consultare il seguente link:
+\\
+ \url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/E01b.pdf}
+\begin{itemize}
+	\item Il nome della classe deve essere scritto in grassetto;
+	\item Per indicare un'interfaccia si usa la keyword interface tra parentesi angolate, sopra al nome della classe;
+	\item Per indicare una classe astratta si usa la keyword abstract tra parentesi graffe, sopra al nome della classe;
+	\item Nella classe concreta non vengono riportate le operazioni ereditate dalle interfacce o classi astratte;
+	\item Si devono applicare tutte le convenzioni del linguaggio UML. 	
+\end{itemize}
+
+\subsubparagraph*{Diagrammi di sequenza} \mbox{}\\
+Per tutte le regole standard di UML riguardanti i diagrammi di sequenza, consultare il seguente link:
+\\
+\url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/E02a.pdf}
+
+
+\subsubparagraph*{Diagrammi di attività} \mbox{}\\
+Per tutte le regole standard di UML riguardanti i diagrammi di attività, consultare il seguente link:
+\\ \url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/E02b.pdf}
+
+\subsubparagraph*{Diagrammi di package}\mbox{}\\
+Per tutte le regole standard di UML riguardanti i diagrammi dei package, consultare il seguente link: 
+\\
+\url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/E01c.pdf}
+
+\begin{itemize}
+	\item Per indicare un'interfaccia all'interno di un package si usa la keyword interface tra parentesi angolate, sopra al nome della classe.
+	\item Per indicare una classe astratta all'interno di un package si usa la keyword abstract tra parentesi graffe, sopra al nome della classe.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

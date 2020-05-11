@@ -1,5 +1,5 @@
-\subsubsection{Analisi dei requisiti}
-\paragraph{Scopo}
+\paragraph{Analisi dei requisiti}
+\subparagraph*{Scopo}
 L'analisi dei requisiti è un'attività che avviene prima di quella di sviluppo.\\
 Il documento \AdR{}, redatto dagli analisti, ha come scopo i seguenti punti:
 \begin{itemize}
@@ -11,11 +11,11 @@ Il documento \AdR{}, redatto dagli analisti, ha come scopo i seguenti punti:
 \item Fornire una stima del quantitativo di lavoro da svolgere per tracciare una stima dei costi. 
 \end{itemize}
 
-\paragraph{Aspettative}
+\subparagraph*{Aspettative}
 L'obiettivo è quello di creare un documento formale contenente tutti i \glo{requisiti} richiesti e concordati col proponente.\\
 Deve essere possibile fare riferimento a quanto redatto nel documento \AdR{} qualora sorgessero incomprensioni e dubbi al momento del collaudo del prodotto.
 
-\paragraph{Casi d'uso}
+\subparagraph*{Casi d'uso}
 Definiscono uno scenario in cui uno o più attori interagiscono con il sistema.
 \subparagraph*{Codice identificativo dei casi d'uso}
 Il codice identificativo di ciascun caso d’uso, univoco nel suo complesso, segue la sintassi qui indicata:
@@ -72,7 +72,7 @@ I punti dell'elenco racchiusi fra parentesi quadre (non sono inclusi fra questi 
 \subparagraph*{Struttura di un caso d'uso sea-level}
 La seguente è una struttura ad elenco che un caso d'uso \glo{sea-level} necessariamente deve adottare.\\
 I punti dell'elenco racchiusi fra parentesi quadre (non sono inclusi fra questi [Destinazione] e [Codice]) indicano che tale punto è opzionale e va inserito solo se necessario.\\
-\textbf{UC[Destinazione] X.Y - Nome del caso d'uso sea-level. Stile tipografico: lettera maiuscola iniziale per ciascun attore, attori separati da virgola, nessun punto fermo alla fine.}%sea level
+\subparagraph*{UC[Destinazione] X.Y - Nome del caso d'uso sea-level. Stile tipografico: lettera maiuscola iniziale per ciascun attore, attori separati da virgola, nessun punto fermo alla fine.}%sea level
 \begin{itemize}
 	\item \textbf{Attori primari}: Come in UC[Destinazione] X.
 	\item \textbf{[Attori secondari}: Come in UC[Destinazione] X.]
@@ -95,7 +95,7 @@ I punti dell'elenco racchiusi fra parentesi quadre (non sono inclusi fra questi 
 \subparagraph*{Struttura di un caso d'uso fish-level}
 La seguente è una struttura ad elenco che un caso d'uso \glo{fish-level} necessariamente deve adottare.\\
 I punti dell'elenco racchiusi fra parentesi quadre (non sono inclusi fra questi [Destinazione] e [Codice]) indicano che tale punto è opzionale e va inserito solo se necessario.\\
-\textbf{UC[Destinazione] X.Y.Z - Nome del caso d'uso fish-level. Stile tipografico: lettera maiuscola iniziale per ciascun attore, attori separati da virgola, nessun punto fermo alla fine.}%sea level
+\subparagraph*{UC[Destinazione] X.Y.Z - Nome del caso d'uso fish-level. Stile tipografico: lettera maiuscola iniziale per ciascun attore, attori separati da virgola, nessun punto fermo alla fine.}%sea level
 \begin{itemize}
 	\item \textbf{Attori primari}: Come in UC[Destinazione] X.
 	\item \textbf{[Attori secondari}: Come in UC[Destinazione] X.]
@@ -108,7 +108,7 @@ I punti dell'elenco racchiusi fra parentesi quadre (non sono inclusi fra questi 
 	\item \textbf{[Estensioni}: Come in UC[Destinazione] X.]
 \end{itemize}
 
-\paragraph{Template di diagramma di caso d'uso}
+\subparagraph*{Template di diagramma di caso d'uso}
 Il seguente è un esempio di diagramma di caso d'uso con tutte le possibili componenti \glo{UML} da usare per realizzare i diagrammi dei casi d'uso.
 \begin{figure}[h]
 	\centering	
@@ -116,11 +116,11 @@ Il seguente è un esempio di diagramma di caso d'uso con tutte le possibili comp
 	\caption{UC[Destinazione] X.Y - Template di diagramma di caso d'uso}
 \end{figure}
 
-\paragraph{Casi d'uso d'errore e dei messaggi informativi}
+\subparagraph*{Casi d'uso d'errore e dei messaggi informativi}
 L'ultimo caso d'uso \glo{kite-level}, sia lato applicazione (\textbf{UCA}) che lato server (\textbf{UCS}), contiene tutti i casi d'uso che descrivono situazioni d'errore e situazioni in cui l'attore del caso d'uso deve essere informato con un messaggio per tutti i casi d'uso lato applicazione e lato server rispettivamente.\\
 \'E stato scelto di raggruppare i casi d'uso degli errori in questa maniera per favorirne il riuso.
 % Questa decisione viene presa per avere un unico punto in cui concentrare tutte queste situazioni.
-\paragraph{Requisiti}
+\subparagraph*{Requisiti}
 Un requisito è un obiettivo da raggiungere per risolvere un problema, necessario per almeno uno stakeholder o una caratteristica che deve essere soddisfatta per esaudire una richiesta di uno stakeholder. \\
 I requisiti vengono organizzati in forma tabellare, che deve contenere le seguenti colonne:
 \begin{itemize}
