@@ -1,6 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+0.18.0 | 2020-05-10 | Enrico Salmaso | Progettista | | Aggiunta e verifica appendice glossario.
 0.17.0 | 2020-05-09 | Federico Perin | Progettista | | Aggiunta e verifica appendice glossario.
 0.16.0 | 2020-05-09 | Federico Perin | Progettista | | Aggiunta e verifica §1.1.
 0.15.1 | 2020-05-09 | Tommaso Azzalin | Progettista | | Aggiornamento e verifica API e §4.6.
