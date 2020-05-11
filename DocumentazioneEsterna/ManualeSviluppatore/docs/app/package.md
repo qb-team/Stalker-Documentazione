@@ -12,7 +12,7 @@ Nel seguente package vengono raggruppati altri package contenenti tutte le class
 <figcaption align="center"> <em> Diagramma del package - Package del Model </em> </figcaption>
 
 ## 2.5.3 View
-Nel seguente package vengono raggruppate tutte le classi dedicate alle funzionalità di user interface. Le classi fragment rappresentano le pagine dell'applicazione e sono collegate con i loro rispettivi file xml che modificano la loro interpretazione grafica.
+Nel seguente package vengono raggruppate tutte le classi dedicate alle funzionalità di user interface. Le classi Fragment rappresentano le pagine dell'applicazione e sono collegate con i loro rispettivi file XML che modificano la loro interpretazione grafica.
 ![!View](/Immagini/App/ViewPackageDiagramm.PNG "Package del View")
 <figcaption align="center"> <em> Diagramma del package - Package del View </em> </figcaption>
 
@@ -22,7 +22,7 @@ Nel seguente package vengono raggruppate tutte le classi dedicate alla comunicaz
 <figcaption align="center"> <em> Diagramma del package - Package del Presenter </em> </figcaption>
 
 ## 2.5.5 Contract
-Nel seguente package vengono raggruppate tutte le interfacce contract che servono per facilitare la comunicazione tra le varie componenti in maniera asincrona. Visto che a loro volta contengono altre interfacce possono essere rappresentate come dei "package".
+Nel seguente package vengono raggruppate tutte le interfacce Contract che servono per facilitare la comunicazione tra le varie componenti di MVP. Visto che a loro volta contengono altre interfacce possono essere rappresentate come dei "package".
 ![!Contract](/Immagini/App/ContractPackageDiagramm.PNG "Package del contract")
 <figcaption align="center"> <em> Diagramma del package - Package del Contract </em> </figcaption>
 
