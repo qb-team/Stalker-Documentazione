@@ -12,7 +12,7 @@ Nel seguente diagramma vengono rappresentate le classi che compongono il package
 <figcaption align=center> <em> Diagramma dei package - Package del modello </em> </figcaption>
 
 ## 4.5.3 API
-Nel seguente diagramma vengono rappresentate le interfacce che compongono il package delle api, che corrispondo alle interfacce per i Controller (del pattern MVC implementato da Spring).  
+Nel seguente diagramma vengono rappresentate le interfacce che compongono il package delle api, che corrispondo alle interfacce per i Controller.  
 ![!api](../Immagini/Backend/package/package-api.png)
 <figcaption align=center> <em> Diagramma dei package - Package delle API</em> </figcaption>
 
