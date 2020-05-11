@@ -22,6 +22,7 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi alla app
 
 Nel precedente diagramma viene illustrato come sono state progettate le funzionalità per la gestione degli amministratori.
 Il component `AdministratorManagementContentComponent`  contiene come attributi:
+
 -   `permissionModifications`: contiene le modifiche da applicare ai permessi;
 -   `permissions`: contiene gli attuali permessi degli amministratori dell'organizzazione contenuta nel attributo `currentOrganization`. I permessi si ottengono con il metodo `getAdministratorListOfOrganization` di `AdministratorService`.
 
@@ -66,7 +67,7 @@ Nel precedente diagramma viene illustrato come sono state progettate le funziona
 Il component `OrganizationPresenceNumberContentComponent` permette di mostrare il numero di utenti anonimi presenti nell'organizzazione attraverso l'attributo `usersNumber`.
 Esistono i seguenti metodi:
 
- -  `setCounterRefreshInterval(ms:number)`:Imposta l'intervallo di tempo per aggiornare automaticamente il contatore asseconda del parametro in input;
+ -  `setCounterRefreshInterval(ms: number)`: Imposta l'intervallo di tempo per aggiornare automaticamente il contatore a seconda del parametro in input;
 
  -  `subscribeToCounter()`: Permette di mantenere aggiornato il contatore delle presenze.
 
@@ -78,9 +79,9 @@ Essi hanno una dipendenza di tipo `associazione` verso `AdministratorOrganizatio
 
 `PresenceService` offre i seguenti metodi:
 
--   `getOrganizationPresenceCounter(orgId:number)`: Ritorna il numero di utenti anonimi presenti all'interno dell'organizzazione;
+-   `getOrganizationPresenceCounter(orgId: number)`: Ritorna il numero di utenti anonimi presenti all'interno dell'organizzazione;
 
--   `getPlacePresenceCounter(placeId:number)`: Ritorna il numero di utenti anonimi presenti all'interno di un luogo dell'organizzazione.
+-   `getPlacePresenceCounter(placeId: number)`: Ritorna il numero di utenti anonimi presenti all'interno di un luogo dell'organizzazione.
 
 Analogamente `PlacePresenceNumberContentComponent` ha un'associazione con `PlaceTrackingDataService` il quale offre il numero di utenti anonimi presenti all'interno di un luogo di un'organizzazione.
 
@@ -100,9 +101,9 @@ Il component ha i seguenti campi dati:
 -   `userPlaceAccesses`: Memorizza una collezione degli accessi dell'utente nei vari luoghi dell'organizzazione;
 -   `user`: Istanza di tipo `LdapUser` che nome e cognome al rispettivo uID dell'utente;
 
-`SingleUserAuthenticatedAccessesContentComponent` ha un'associazione verso `LdapService`, poiché chiamerà il metodo `getUserByName(name: string, lastName: string)` per reperire l'uID dell'utente autenticato identificato da nome e cognome passati come parametri al metodo. `LdapUser` ha una relazione di dipendenza verso `LdapUser` poiché lo creerà dopo aver interrogato il server LDAP aziendale.
+`SingleUserAuthenticatedAccessesContentComponent` ha un'associazione verso `LdapService`, poiché chiamerà il metodo `getUserByName(name: string, lastName: string)` per reperire l'uID dell'utente autenticato identificato da nome e cognome passati come parametri al metodo. `LdapUser` ha una relazione di dipendenza verso `LdapUser` poiché lo creerà dopo aver interrogato il server LDAP dell'organizzazione.
 
-Infine `SingleUserAuthenticatedAccessesContentComponent` ha una relazione di associazione verso `AccessDataService`. Infatti, una volta che si ha ottenuto l'uID aziendale dell'utente ricercato per nome e cognome, sarà possibile inoltrare una richiesta Http GET al backend attraverso `AccessDataService`. Quest'ultimo, usufruendo delle rest API esposte da `AccessService`, inoltrerà la richiesta al server.
+Infine `SingleUserAuthenticatedAccessesContentComponent` ha una relazione di associazione verso `AccessDataService`. Infatti, una volta che si ha ottenuto l'uID aziendale dell'utente ricercato per nome e cognome, sarà possibile inoltrare una richiesta HTTP GET al backend attraverso `AccessDataService`. Quest'ultimo, usufruendo delle REST API esposte da `AccessService`, inoltrerà la richiesta al server.
 
 `AccessDataService` espone due metodi. Il primo permette di ottenere gli accessi effettuati da un utente autenticato presso un dato luogo dell'organizzazione.  Il secondo invece richiede gli accessi di uno specifico utente autenticato presso l'organizzazione desiderata.
 
@@ -112,7 +113,7 @@ Infine `SingleUserAuthenticatedAccessesContentComponent` ha una relazione di ass
 
 Nel precedente diagramma viene illustrato come è stata progettata la funzionalità di autenticazione nella applicazione web.
 
-`LoginComponent` contiene gli attributi, `submitted` per indicare se è stato cliccato il bottone *invio*, `email` che contiene l'email inserita e `password` che contiene la password inserita. La classe espone i seguenti metodi:
+`LoginComponent` contiene gli attributi, `submitted` per indicare se è stato cliccato il pulsante *Invio*, `email` che contiene l'email inserita e `password` che contiene la password inserita. La classe espone i seguenti metodi:
 
 -   `setupLoginForm()`: Offre la possibilità di inserire email e password per l'autenticazione e di controllare se sono in una forma valida.
 
@@ -120,13 +121,13 @@ Nel precedente diagramma viene illustrato come è stata progettata la funzionali
 
 -   `sign()`: Richiamare i metodi per il login;
 
--   `callResetPassword()`: Metodo che viene chiamato quando l'utente clicca sul pulsante *password dimenticata* per chiamare il controller `ResetPasswordComponent`.
+-   `callResetPassword()`: Metodo che viene chiamato quando l'utente clicca sul pulsante *Password dimenticata* per chiamare il controller `ResetPasswordComponent`.
 
 `ResetPasswordComponent` ha gli stessi attributi del controller precedentemente descritto. Si segnala il metodo `resetPassword()` per richiamare i metodi per il reset della password.
 
 `LoginComponent` e `ResetPasswordComponent` hanno un'associazione con `AuthenticationService`, nel quale si segnalano gli attributi `userData`, che rappresenta l'entità dell'utente autenticato. Il component espone i seguenti metodi:
 
--   `signIn(email: string, in password: string)`: Permette l'autenticazione attraverso i servizi di FireBase;
+-   `signIn(email: string, password: string)`: Permette l'autenticazione attraverso i servizi di Firebase;
 
 -   `signOut()`: Permette il logout;
 
@@ -136,9 +137,9 @@ Nel precedente diagramma viene illustrato come è stata progettata la funzionali
 
 La classe ha due associazioni:
 
-- con `AdministratorPermissionDataService` che permette di ottenere i permessi di un amministratore attraverso il metodo `requireAdministratorPermissions(adminId:string)`, che verranno successivamente memorizzati nell'attributo `adminPermissions`, offrendoli a chi ne fa richiesta.
+- con `AdministratorPermissionDataService` che permette di ottenere i permessi di un amministratore attraverso il metodo `requireAdministratorPermissions(adminId: string)`, che verranno successivamente memorizzati nell'attributo `adminPermissions`, offrendoli a chi ne fa richiesta.
 
-    - `AdministratorPermissionDataService` ha a sua volta un'associazione con `AdministratorService`, il quale comunicando con il backend, permette di ottenere i permessi di un amministratore attraverso il metodo `getPermissionList(administratorId:string)`, passando l'id dell'amministratore come parametro.
+    - `AdministratorPermissionDataService` ha a sua volta un'associazione con `AdministratorService`, il quale comunicando con il backend, permette di ottenere i permessi di un amministratore attraverso il metodo `getPermissionList(administratorId: string)`, passando l'id dell'amministratore come parametro.
 
 - L' altra associazione che ha `AuthenticationService` è `AdministratorOrganizationDataService`, che permette di ottenere la lista delle organizzazioni a cui l'amministratore è registrato attraverso il metodo `requireAdministratorOrganizations(adminId: string)`. Successivamente memorizza le organizzazioni ottenute nell'attributo `adminOrganization`, offrendole a chi ne fa richiesta. Inoltre esiste il metodo `sortOrganizationsById()` che ordina la lista delle organizzazioni per id crescente.
 
@@ -154,7 +155,7 @@ Contiene i seguenti attributi:
 - `organization`: Contiene l'organizzazione selezionata dall'utente;
 - `orgArr`: Contiene la lista delle organizzazioni da mostrare all'utente;
 - `hasLDAP`: Stabilisce se l'organizzazione selezionata richiede autenticazione LDAP;
-- `isSubmitted`: Indica se è stato cliccato il bottone *invio*;
+- `isSubmitted`: Indica se è stato cliccato il pulsante *Invio*;
 - `email`: Contiene l'email inserita;
 - `password`: Contiene la password inserita.
 
@@ -172,7 +173,7 @@ La classe espone inoltre i seguenti metodi:
 
 -   `signOut()`: Richiama il metodo per il logout();
 
--   `setOrganization(click:any)`: Sostituisce `organization` con l'organizzazione selezionata dall'utente.
+-   `setOrganization(click: any)`: Sostituisce `organization` con l'organizzazione selezionata dall'utente.
 
 Esiste quindi un'associazione con `AuthenticationService` per gestire il logout.
 
@@ -202,13 +203,13 @@ Analogo funzionamento per `ViewPlaceTrackingAreaContentComponent` che è dedicat
 
 `PlaceService` ha i seguenti metodi:
 
--   `createNewPlace(place:Place)`: Permette di creare un nuovo luogo;
+-   `createNewPlace(place: Place)`: Permette di creare un nuovo luogo;
 
--   `deletePlace(placeId:number)`: Permette di cancellare un luogo, indicando il suo id;
+-   `deletePlace(placeId: number)`: Permette di cancellare un luogo, indicando il suo id;
 
--   `getPlaceListOfOrganization(orgId:number)`: Permette di ottenere la lista di luoghi di una specifica organizzazione;
+-   `getPlaceListOfOrganization(orgId: number)`: Permette di ottenere la lista di luoghi di una specifica organizzazione;
 
--   `updatePlace(placeId:number, place:Place)`: Permette di modificare uno specifico luogo inserendo il suo id e un nuovo oggetto place con le modifiche.
+-   `updatePlace(placeId: number, place: Place)`: Permette di modificare uno specifico luogo inserendo il suo id e un nuovo oggetto place con le modifiche.
 
 `ModifyPlaceTrackingAreaContentComponent` Permette di modificare i parametri di un luogo specifico. Ha gli stessi attributi di `ViewPlaceTrackingAreaContentComponent`.
 
@@ -218,11 +219,11 @@ Offre i seguenti metodi:
 
 -   `subscribeToOrganization()`: Permette di ottenere l'organizzazione attuale;
 
--   `createPlace(name:string, nameOrg:string, area:string)`: Permette di creare un nuovo luogo dell'organizzazione inserendo come parametri il nome del luogo, il nome dell'organizzazione di cui fa parte e infine le coordinate;
+-   `createPlace(name: string, nameOrg: string, area: string)`: Permette di creare un nuovo luogo dell'organizzazione inserendo come parametri il nome del luogo, il nome dell'organizzazione di cui fa parte e infine le coordinate;
 
--   `modifyPlace(name:string, coord:string)`: Permette di modificare le coordinate di un luogo inserendo il suo nome e le modifiche alle coordinate;
+-   `modifyPlace(name: string, coord: string)`: Permette di modificare le coordinate di un luogo inserendo il suo nome e le modifiche alle coordinate;
 
--   `deletePlace(name:string)`: Permette di eliminare un luogo da un'organizzazione inserendo come parametro il nome del luogo.
+-   `deletePlace(name: string)`: Permette di eliminare un luogo da un'organizzazione inserendo come parametro il nome del luogo.
 
 `ModifyPlaceTrackingAreaContentComponent` ha una associazione con `PlaceService`.
 
@@ -234,18 +235,18 @@ Ha i seguenti metodi:
 
 -   `subscribeToOrganization()`: Permette di ottenere l'organizzazione attuale;
 
--   `modifyTAOrg(coord:string)`: Permette di modificare le coordinate di una organizzazione inserendo come parametro le nuove coordinate.
+-   `modifyTAOrg(coord: string)`: Permette di modificare le coordinate di una organizzazione inserendo come parametro le nuove coordinate.
 
-Ha una associazione con `OrganizationService`
+Ha una associazione con `OrganizationService`.
 
 `OrganizationService` permette di comunicare con il backend per gestire le organizzazioni.
 Ha i seguenti metodi:
 
--   `requestDeletionOfOrganization(orgId:number, requestReason:string)`: Permette di mandare la richiesta di eliminazione di una organizzazione inserendo il suo id e la motivazione per cui si è richiesto l'eliminazione;
+-   `requestDeletionOfOrganization(orgId: number, requestReason: string)`: Permette di mandare la richiesta di eliminazione di una organizzazione inserendo il suo id e la motivazione per cui si è richiesto l'eliminazione;
 
--   `updateOrganization(orgId:number, updatedOrg:Organization)`: Permette di inviare le modifiche fatte a una organizzazione inserendo come parametri il suo id e un nuovo oggetto organization con le modifiche;
+-   `updateOrganization(orgId: number, updatedOrg: Organization)`: Permette di inviare le modifiche fatte a una organizzazione inserendo come parametri il suo id e un nuovo oggetto organization con le modifiche;
 
--   `updateOrganizationTrackingArea(orgId:number, trackingArea:string)`: Permette di modificare le coordinate di una organizzazione inserendo come parametri l'id dell'organizzazione e le nuove coordinate.
+-   `updateOrganizationTrackingArea(orgId: number, trackingArea: string)`: Permette di modificare le coordinate di una organizzazione inserendo come parametri l'id dell'organizzazione e le nuove coordinate.
 
 `OrganizationManagementContentComponent` permette di gestire le modifiche a una organizzazione.
 Ha i seguenti attributi:
@@ -264,6 +265,6 @@ Ha i seguenti metodi:
 
 -   `subscribeToOrganization()`: Permette di ottenere l'organizzazione attuale;
 
--   `modifyOrg(nome:string, ind:string, indIP:string)`: Permette di modificare il nome, la via e l'indirizzo IP dell'organizzazione;
+-   `modifyOrg(nome: string, ind: string, indIP: string)`: Permette di modificare il nome, la via e l'indirizzo IP dell'organizzazione;
 
--   `deleteOrg(nome:string, reason:string)`: Permette di inviare la richiesta di eliminazione dell'organizzazione inserendo il nome dell'organizzazione e la motivazione per cui si è richiesto l'eliminazione.
+-   `deleteOrg(nome: string, reason: string)`: Permette di inviare la richiesta di eliminazione dell'organizzazione inserendo il nome dell'organizzazione e la motivazione per cui si è richiesto l'eliminazione.

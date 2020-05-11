@@ -15,7 +15,7 @@ Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 0.12.0 | 2020-05-05 | Christian Mattei | Progettista | | Stesura e verifica §2.4. 
 0.11.0 | 2020-05-05 | Davide Lazzaro | Programmatore | | Aggiunta e verificata §4.5.
 0.10.3 | 2020-05-05 | Tommaso Azzalin | Progettista | Federico Perin | Correzione e verifica documentazione API.
-0.10.2 | 2020-05-05 | Emanuele Cisotto | Progettista | | Correzione e verifica §3.6 §3.7.
+0.10.2 | 2020-05-05 | Emanuele Cisotto | Progettista | Tommaso Azzalin | Correzione e verifica §3.6 §3.7.
 0.10.1 | 2020-05-05| Davide Lazzaro | Programmatore | Emanuele Cisotto | modifica §4.6.
 0.10.0 | 2020-05-05 | Federico Perin | Progettista | Tommaso Azzalin | Stesura e verifica §3.2.
 0.9.0 | 2020-05-05 | Christian Mattei | Progettista | Tommaso Azzalin | Aggiunto e verificato §2.5. 
