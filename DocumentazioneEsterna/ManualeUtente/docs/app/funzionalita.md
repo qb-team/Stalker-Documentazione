@@ -4,20 +4,20 @@ L'applicazione Android viene utilizzata dagli utenti che devono o vogliono fare 
 
 All'utente dell'applicazione vengono offerte le funzionalità indicate in questa pagina.
 
-## 2.1.2 Registrazione
+## 2.1.1 Registrazione
 
 <iframe width="720" src="https://www.youtube.com/embed/t_jtcHEzhFw" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 L'utente ha la possibilità di registrarsi inserendo la propria e-mail personale, password e accettando le condizioni d'uso di Stalker.
 
-## 2.1.3 Login e scaricamento della lista delle organizzazioni
+## 2.1.2 Login e scaricamento della lista delle organizzazioni
 
 <iframe width="720" src="https://www.youtube.com/embed/YPHun6qWReo" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 L'utente può autenticarsi inserendo il proprio indirizzo e-mail e la propria password.
 Se è il suo primo accesso all'applicazione Stalker dopo la registrazione, un pop-up appare per richiedere all'utente la possibilità di scaricare la lista delle organizzazioni dal server di Stalker. Gli utenti hanno la possibilità di accettare o rifiutare la proposta.
 
-## 2.1.4 Menù drawer
+## 2.1.3 Menù drawer
 
 L'utente può accedere ad una serie di funzionalità utilizzando l'*Hamburger button* riportato in alto a sinistra della schermata dell'applicazione.
 

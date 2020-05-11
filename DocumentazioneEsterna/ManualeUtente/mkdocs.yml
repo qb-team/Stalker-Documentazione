@@ -14,16 +14,16 @@ markdown_extensions:
   - codehilite 
 
 nav:
+  - Il gruppo qbteam: "qbteam.md"
   - Registro modifiche: "registromodifiche.md"
-  - Introduzione: "index.md"
-  - App utenti:
+  - 1 Introduzione: "index.md"
+  - 2 App utenti:
      # - Installazione: "app/installazione.md"
-      - Funzionalità: "app/funzionalita.md"
-  - Web-app amministratori:
+      - 2.1 Funzionalità: "app/funzionalita.md"
+  - 3 Web-app amministratori:
     #  - Installazione: "webapp/installazione.md"
-      - Funzionalità: "webapp/funzionalita.md"
+      - 3.1 Funzionalità: "webapp/funzionalita.md"
   #- REST API:
    #   - Utilizzo: "restapi/utilizzo.md"
-  - Il gruppo qbteam: "qbteam.md"
-  - Glossario: "glossario.md"
+  - A Glossario: "glossario.md"
   

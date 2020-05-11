@@ -105,7 +105,3 @@ Il prodotto garantirà le seguenti funzionalità:
 		Un utente riconosciuto potrà decidere di passare
         all’anonimato, cioè di diventare un utente anonimo, selezionando
         l’apposita funzionalità.
-    
-## 1.4 Glossario
-
-Il glossario è disponibile alla fine del documento, sotto l'omonima sezione.

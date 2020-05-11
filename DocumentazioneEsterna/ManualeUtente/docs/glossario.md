@@ -17,7 +17,7 @@ Una applicazione distribuita web-based cioè fruibile via web per mezzo di un ne
 ### Backend (server)
 Sono delle interfacce che hanno come destinatario un programma. Una applicazione back end è un programma con il quale l'utente interagisce indirettamente. In una struttura client/server il back end è il server.
 
-## C
+<!-- ## C -->
 
 ## D
 
@@ -27,9 +27,9 @@ Sono delle interfacce che hanno come destinatario un programma. Una applicazione
 ### Dati dell'organizzazione
 È un sottoinsieme dei parametri dell'organizzazione, nel quale vengono esclusi il perimetro di tracciamento dell'organizzazione e l'insieme di luoghi di tracciamento.
 
-## E
+<!-- ## E -->
 
-## F
+<!-- ## F -->
 
 ## G
 
@@ -53,7 +53,9 @@ Per ingresso presso un luogo di un'organizzazione si intende l'attività di spos
 ### Interfaccia web
 È un'interfaccia che permette la visualizzazione di siti internet adeguando il computer alle necessità di interazione dell'utente, codificando e decodificando il linguaggio di programmazione e di demarcazione utilizzato nel web.
 
-## J
+<!-- ## J -->
+
+<!-- ## K -->
 
 ## L
 
@@ -124,7 +126,7 @@ I privilegi sono fondamentalmente i vari tipi di amministratore. Il privilegio p
 ### Refresh manuale
 L'utente di propria iniziativa invia una richiesta di aggiornamento della lista delle organizzazioni.
 
-## S
+<!-- ## S -->
 
 ## T
 

@@ -6,8 +6,8 @@ All'amministratore, attraverso l'applicazione web, vengono offerte le funzionali
 
 ## 3.1.1 Login
 
-![!alt](../Immagini/web-app/login.png)
-<figcaption align="center"> <em> schermata di login </em> </figcaption>
+![!Login](../Immagini/web-app/login.png)
+<figcaption align="center"> <em> Schermata di login </em> </figcaption>
 
 L'amministratore può autenticarsi inserendo la propria e-mail e password. Per farlo deve inserire, nel primo campo di testo, la propria email e nel secondo campo di testo la corrispettiva password. Dopo di che, cliccare sul bottone *Login* per effettuare l'autenticazione. La procedura viene illustrata nel seguente video:
 
@@ -15,8 +15,8 @@ L'amministratore può autenticarsi inserendo la propria e-mail e password. Per f
 
 ## 3.1.2 Logout
 
-![!alt](../Immagini/web-app/logout.png)
-<figcaption align="center"> <em> schermata di logout </em> </figcaption>
+![!Logout](../Immagini/web-app/logout.png)
+<figcaption align="center"> <em> Schermata di logout </em> </figcaption>
 
 L'amministratore, una volta effettuata l'autenticazione, può eseguire il logout da qualsiasi pagina della web-app. Sarà sufficiente cliccare sul pulsante in alto a destra denominato *Logout*. I passaggi vengono mostrati nel seguente video:
 
@@ -24,11 +24,11 @@ L'amministratore, una volta effettuata l'autenticazione, può eseguire il logout
 
 ## 3.1.3 Reset password
 
-![!alt](../Immagini/web-app/Reset1.png)
-<figcaption align="center"> <em> schermata di reset password </em> </figcaption>
+![!Reset password 1](../Immagini/web-app/Reset1.png)
+<figcaption align="center"> <em> Schermata di reset password </em> </figcaption>
 
-![!alt](../Immagini/web-app/Reset2.png)
-<figcaption align="center"> <em> schermata di reset password </em> </figcaption>
+![!Reset password 2](../Immagini/web-app/Reset2.png)
+<figcaption align="center"> <em> Schermata di reset password </em> </figcaption>
 
 L'amministratore può effettuare il reset della password qualora non se la ricordasse. Per eseguire tale operazione deve cliccare su *Password dimenticata* presente nella pagina di login. Successivamente deve inserire l'email dell'account di cui vuole effettuare il reset della password. Gli verrà dunque inviata una e-mail con un link che porterà a una pagina dove sarà possibile inserire la nuova password, di almeno 8 caratteri. Per annullare la procedura basta cliccare sul pulsante *Back*. I passaggi appena descritti sono mostrati nel seguente video:
 
@@ -37,8 +37,8 @@ L'amministratore può effettuare il reset della password qualora non se la ricor
 
 ## 3.1.4 Selezione dell'organizzazione
 
-![!alt](../Immagini/web-app/selezione.png)
-<figcaption align="center"> <em> schermata di selezione </em> </figcaption>
+![!Selezione dell'organizzazione](../Immagini/web-app/selezione.png)
+<figcaption align="center"> <em> Schermata di selezione </em> </figcaption>
 
 L'amministratore, nell'home page, può selezionare l'organizzazione che desidera dal menù in alto a sinistra, accedendo alle svariate funzionalità che la web-app offre.
 
@@ -49,8 +49,8 @@ L'amministratore, nell'home page, può selezionare l'organizzazione che desidera
 
 ## 3.1.5 Informazioni sull'organizzazione
 
-![!alt](../Immagini/web-app/infGen.png)
-<figcaption align="center"> <em> schermata delle informazioni sull'organizzazione </em> </figcaption> 
+![!Informazioni sull'organizzazione](../Immagini/web-app/infGen.png)
+<figcaption align="center"> <em> Schermata delle informazioni sull'organizzazione </em> </figcaption> 
 
 L'amministratore ha la possibilità di visionare le seguenti informazioni di una specifica organizzazione:
 
@@ -70,8 +70,8 @@ Per poterlo fare, si deve cliccare nel menu laterale a sinistra la voce *Organiz
 
 ## 3.1.6 Ritorno alla home page
 
-![!alt](../Immagini/web-app/Home.png)
-<figcaption align="center"> <em> schermata della homepage </em> </figcaption> 
+![!Ritorno alla home page](../Immagini/web-app/Home.png)
+<figcaption align="center"> <em> Schermata della homepage </em> </figcaption> 
 
 Se l'amministratore si dovesse trovare nella pagina di un'organizzazione e volesse ritornare all'home page deve cliccare sul nome dell'organizzazione nella barra principale in alto nella schermata. Il seguente video ne illustra la procedura:
 
@@ -79,8 +79,8 @@ Se l'amministratore si dovesse trovare nella pagina di un'organizzazione e voles
 
 ## 3.1.7 Presenze utenti nell'organizzazione
 
-![!alt](../Immagini/web-app/Tracciamento.png)
-<figcaption align="center"> <em> schermata del tracciamento</em> </figcaption> 
+![!Presenze utenti nell'organizzazione](../Immagini/web-app/Tracciamento.png)
+<figcaption align="center"> <em> Schermata del tracciamento</em> </figcaption> 
 
 
 L'amministratore ha la possibilità di monitorare le presenze degli utenti, in tempo reale, all'interno dell'organizzazione. Per farlo si dovrà cliccare nel menu laterale a sinistra sulla voce *Tracciamento* e dopo di che cliccare sulla voce *presenze attuali nell'organizzazione*. Verrà perciò aperta una finestra con un contatore di presenze. I passi sono mostrati nel seguente video.
@@ -89,8 +89,8 @@ L'amministratore ha la possibilità di monitorare le presenze degli utenti, in t
 
 ## 3.1.8 Perimetro di tracciamento
 
-![!alt](../Immagini/web-app/mappa.png)
-<figcaption align="center"> <em> schermata del perimetro di tracciamento </em> </figcaption> 
+![!Perimetro di tracciamento](../Immagini/web-app/mappa.png)
+<figcaption align="center"> <em> Schermata del perimetro di tracciamento </em> </figcaption> 
 
 L'amministratore ha la possibilità di visionare il perimetro dell'organizzazione tramite una mappa. 
 
