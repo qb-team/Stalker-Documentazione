@@ -1,0 +1,296 @@
+{
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{1.5}
+\centering
+\begin{longtable}{ c  C{2.5cm}  C{10cm} C{1cm}}
+\caption{Elenco dei test di accettazione}\\
+\rowcolor{darkblue}
+\textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Titolo}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Stato}}\\
+\endfirsthead
+\rowcolor{darkblue}
+\textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Titolo}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Stato}}\\
+\endhead
+
+%da R1FI1 a R1FA8.4 (con parti splittate) % Christian
+TAA1 & Accesso all'applicazione di un utente non autenticato con credenziali Stalker &
+Verificare che l'utente non autenticato:
+\begin{enumerate}
+    \item Possa inserire l'indirizzo e-mail;
+    \item Possa inserire la password;
+    \item Riceva un messaggio di errore se l'\glo{autenticazione} viene negata per inserimento di credenziali errate.
+\end{enumerate}
+Se l'utente non autenticato si è dimenticato la sua password:
+\begin{enumerate}[resume]
+    \item Verifica che l'utente non autenticato possa effettuare il reset della password qualora se la fosse dimenticata.
+\end{enumerate} & NI \\
+
+%da R1FI1 a R1FA8.4 (con parti splittate) % Christian
+TAA2 & Registrazione nell'applicazione di un utente non autenticato con credenziali Stalker &
+Verificare che l'utente non autenticato:
+\begin{enumerate}
+    \item Possa inserire l'indirizzo e-mail;
+    \item Riceva un messaggio di errore se tentasse di registrarsi con un'e-mail già usata nel sistema;
+    \item Possa inserire una password;
+    \item Possa inserire nuovamente la password come conferma;
+    \item Riceva un messaggio di errore qualora abbia inserito una password non ritenuta sicura. Il processo di \glo{autenticazione} deve fallire;
+    \item Riceva un messaggio di errore qualora abbia inserito una conferma password diversa dalla password. Il processo di \glo{autenticazione} deve fallire;
+    \item Possa accettare le condizioni generali d'uso;
+    \item La registrazione si interrompa e che l'applicazione si chiuda nel caso che l'utente non autenticato non abbia accettato le condizioni generali d'uso.
+\end{enumerate} & NI \\
+
+% R1FA2.1
+TAA3  & \glo{Logout} dell'utente anonimo & \begin{enumerate}
+    \item Verifica che l'utente anonimo possa effettuare il \glo{logout} dall'applicazione.
+\end{enumerate} & NI \\
+
+% da R1FA3.1, R1FA3.2, R1FA8.5, R1FA3.7, R1FA3.8, R1FA3.9 % Riccardo
+TAA4 & Gestione lista delle \glo{organizzazioni} &
+Verificare che l'utente anonimo:
+\begin{enumerate}
+    \item Possa scaricare la lista di tutte le organizzazioni;
+    \item Riceva un messaggio di errore qualora lo scaricamento della lista di tutte le organizzazioni non vada a buon fine;
+    \item Possa aggiornare la lista delle organizzazioni tramite \glo{refresh manuale};
+    \item Possa aggiornare la lista delle organizzazioni tramite \glo{temporizzazione}.
+\end{enumerate} & NI \\
+
+% R1FA3.10, R1FA3.11, R1FA3.12, R1FA3.13, R1FA3.14, R1FA3.15, R1FA3.16, R1FA3.17, R1FA3.18 % Riccardo
+TAA5 & Visualizzazione lista delle organizzazioni & 
+Verificare che l'utente anonimo:
+\begin{enumerate}
+% \item Possa autenticarsi con credenziali LDAP, qualora scaricasse una organizzazione che richieda l'autenticazione con credenziali LDAP;
+    \item Possa visionare la lista delle organizzazioni ordinate alfabeticamente;
+    \item Possa visionare la lista delle organizzazioni ordinate secondo la politica \glo{FIFO};
+    \item Possa visionare la lista delle organizzazioni che permettono il tracciamento anonimo;
+    \item Possa visionare la lista delle organizzazioni che permettono il \glo{tracciamento autenticato};
+    \item Possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alle nazioni indicate dall'utente;
+    \item Possa ricercare organizzazioni presenti nella lista delle organizzazioni che hanno nel nome una sotto-stringa scelta dall'utente;
+    \item Possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alla città indicata dall'utente.
+\end{enumerate} & NI \\
+
+% da R1FA3.3, R1FA3.4, R1FA3.5, R1FA3.6, R1FA8.6 % Riccardo
+TAA6 & Gestione lista delle organizzazioni preferite dell'utente anonimo &
+Verificare che l'utente anonimo:
+\begin{enumerate}
+    \item Possa inserire un'organizzazione, presente nella lista di tutte le organizzazioni, nella propria lista delle organizzazioni preferite;
+    \item Possa rimuovere un'organizzazione dalla propria lista delle organizzazioni preferite;
+    \item Venga informato nel caso in cui non sia memorizzata nessuna lista delle organizzazioni del proprio dispositivo.
+\end{enumerate} & NI \\
+
+% da R1FA4.1 a R1FA4.3 % Tommaso
+TAA7 & Selezione della modalità di \glo{tracciamento} & 
+\glo{Verificare} che l'utente riconosciuto:
+\begin{enumerate}
+    \item Possa inserire la modalità di \glo{tracciamento anonimo};
+    \item Possa inserire la modalità di \glo{tracciamento autenticato}.
+\end{enumerate}
+Se l'utente riconosciuto si trova presso un luogo di un'\glo{organizzazione}, \glo{verificare} che:
+\begin{enumerate}[resume]
+    \item Nel passaggio dalla modalità di \glo{tracciamento autenticato} a quella anonima venga inviata al sistema la richiesta di uscita dell'utente riconosciuto dal luogo e la successiva richiesta di ingresso di utente anonimo;
+    \item Nel passaggio dalla modalità di \glo{tracciamento anonimo} a quella autenticata venga inviata al sistema la richiesta di uscita dell'utente anonimo dal luogo e la successiva richiesta di ingresso di utente riconosciuto.
+\end{enumerate} & NI \\
+
+% da R2FA5.1 a R2FA5.5, da R2FA5.10 a R2FA5.12, R2FA5.16, R2FA8.5 % Tommaso
+TAA8 & \glo{storico degli accessi} dell'utente anonimo presso un'\glo{organizzazione} & 
+\glo{Verificare} che l'utente anonimo:
+\begin{enumerate}
+    \item Possa vedere il proprio storico accessi presso un'\glo{organizzazione}. Ogni accesso deve mostrare la data in cui è stato compiuto, il luogo corrispondente, il tempo totale trascorso all'interno nel luogo;
+    \item come al punto 1, ma la \glo{lista degli accessi} deve risultare ordinata \glo{per data in ordine decrescente};
+    \item come al punto 1, ma la \glo{lista degli accessi} deve risultare ordinata \glo{per data in ordine crescente};
+    \item come al punto 1, ma della lista vengono mostrati solo gli accessi che rispettano i parametri di ricerca sul giorno cercato;
+    \item Riceva un messaggio informativo in assenza di accessi effettuati presso un'\glo{organizzazione}.
+\end{enumerate}
+Se l'utente anonimo si trova presso un luogo dell'\glo{organizzazione}, \glo{verificare} che:
+\begin{enumerate}[resume]
+    \item Possa visionare il nome dello specifico luogo in cui si trova e il tempo trascorso da quando ha fatto l'ultimo ingresso;
+\end{enumerate} & NI \\
+
+% da R2FA5.6 a R2FA5.9, da R2FA5.13 a R2FA5.15, R2FA5.17, R2FA8.6 % Tommaso
+TAA9 & \glo{storico degli accessi} dell'utente anonimo presso un luogo di un'\glo{organizzazione} & 
+\glo{Verificare} che:    
+\begin{enumerate}
+    \item L'utente anonimo possa vedere il proprio storico accessi presso il luogo di un'\glo{organizzazione}. Ogni accesso deve mostrare la data in cui è stato compiuto, il luogo corrispondente, il tempo totale trascorso all'interno nel luogo;
+    \item Come al punto 1, ma la \glo{lista degli accessi} deve risultare ordinata \glo{per data in ordine decrescente};
+    \item Come al punto 1, ma la \glo{lista degli accessi} deve risultare ordinata \glo{per data in ordine crescente};
+    \item Come al punto 1, ma della lista vengono mostrati solo gli accessi che rispettano i parametri di ricerca sul giorno cercato;
+    \item In assenza di accessi effettuati presso il luogo di un'\glo{organizzazione} selezionato l'utente anonimo visualizzi un messaggio informativo.
+\end{enumerate}
+Se l'utente anonimo si trova presso lo stesso luogo, \glo{verificare} che:
+\begin{enumerate}[resume]
+    \item L'utente anonimo possa visualizzare il tempo trascorso all'interno del luogo dall'ultimo ingresso effettuato.
+\end{enumerate} & NI \\
+
+%da R2FA6.1 a R2FA6.9 % Christian
+TAA10 & \glo{Tracciamento} dell'utente riconosciuto nei luoghi di un'\glo{organizzazione} &
+Verificare che l'utente riconosciuto:
+\begin{enumerate}
+    \item Riceva la notifica della corretta registrazione se il tracciamento del suo \glo{movimento} in/da un \glo{luogo} ha avuto successo;
+    \item Riceva un messaggio di errore qualora il tracciamento del \glo{movimento} non sia andato a buon fine.
+\end{enumerate}
+Durante la registrazione del \glo{tracciamento} del \glo{movimento} dell'utente riconosciuto:
+\begin{enumerate}[resume]
+    \item Venga memorizzato il \glo{timestamp} in cui è avvenuto il \glo{movimento}.
+\end{enumerate}
+Se l'utente riconosciuto è in modalità di \glo{tracciamento autenticato} verificare che:
+\begin{enumerate}[resume]
+    \item Venga verificata la correttezza delle credenziali \glo{LDAP};
+    \item Possa effettuare un ingresso in un luogo dell'\glo{organizzazione};
+    \item Possa effettuare un'uscita da un luogo dell'\glo{organizzazione}.
+\end{enumerate} & NI \\
+
+
+TAA11 & \glo{Tracciamento} dell'utente anonimo nei luoghi di un'\glo{organizzazione} &
+Verificare che l'utente anonimo:
+\begin{enumerate}
+    \item Riceva la notifica della corretta registrazione se il tracciamento del suo \glo{movimento} in/da un \glo{luogo} ha avuto successo;
+    \item Riceva un messaggio di errore qualora il tracciamento del \glo{movimento} non sia andato a buon fine.
+\end{enumerate}
+Durante la registrazione del \glo{tracciamento} del \glo{movimento} dell'utente anonimo:
+\begin{enumerate}[resume]
+    \item Venga memorizzato il \glo{timestamp} in cui è avvenuto il \glo{movimento}.
+\end{enumerate}
+Se l'utente riconosciuto passa in modalità di \glo{tracciamento anonimo} verificare che:
+\begin{enumerate}[resume]
+    \item Venga verificata la correttezza delle credenziali \glo{LDAP};
+    \item Possa effettuare un ingresso in un luogo dell'\glo{organizzazione} senza mostrare la propria identità;
+    \item Possa effettuare un'uscita da un luogo dell'\glo{organizzazione} senza mostrare la propria identità.
+\end{enumerate}
+Se l'utente anonimo è in \glo{modalità di tracciamento anonimo}:
+\begin{enumerate}[resume]
+    \item Possa effettuare un ingresso in un luogo dell'\glo{organizzazione};
+    \item Possa effettuare un'uscita da un luogo dell'\glo{organizzazione}.
+\end{enumerate} & NI \\
+
+
+%R1FA7.1 a R1FA7.3 % Riccardo
+TAA12 & Autenticazione con credenziali \glo{LDAP} &
+Verificare che l'utente anonimo:
+\begin{enumerate}
+    \item Possa autenticarsi con credenziali aziendali in un'organizzazione che richiede il tracciamento riconosciuto;
+    \item Riceva un messaggio di errore qualora le credenziali \glo{LDAP} non fossero riconosciute dal server;
+    \item Possa inserire il proprio nome utente durante l'autenticazione con le credenziali \glo{LDAP} aziendali;
+    \item Possa inserire la propria password durante l'autenticazione con le credenziali \glo{LDAP} aziendali.
+\end{enumerate} & NI \\
+
+% da R1FI2 a R1FS1.3 % Tommaso
+TAS1 & Accesso al server di un amministratore non autenticato & 
+\glo{Verificare} che l'amministratore non \glo{autenticato}:
+\begin{enumerate}
+    \item Possa inserire l'e-mail correttamente;
+    \item Possa inserire correttamente la password;
+    \item Riceva un messaggio d'errore se l'\glo{autenticazione} viene negata per inserimento di credenziali errate.
+\end{enumerate}
+Se l'amministratore non \glo{autenticato} si è dimenticato della password, \glo{verificare} che:
+\begin{enumerate}[resume]
+    \item L'amministratore non \glo{autenticato} possa effettuare il reset della password qualora se la fosse dimenticata.
+\end{enumerate} & NI \\
+
+%R1FS2.1 % Tommaso
+TAS2 & \glo{Logout} dell'amministratore \glo{autenticato} & \begin{enumerate}
+    \item \glo{Verificare} che l'amministratore \glo{autenticato} possa effettuare il \glo{logout} dal server.
+\end{enumerate} & NI \\
+
+%da R1FC3 a R1FI8 % Christian
+TAS3 & Disponibilità \glo{organizzazioni} visualizzabili dall'amministratore &
+Verificare che l'amministratore possa:
+\begin{enumerate}
+    \item Vedere il suo nome dell'organizzazione;
+    \item Vedere l'immagine dell'organizzazione;
+    \item Possa selezionare l'organizzazione;
+    \item Possa selezionare l'organizzazione e vederne il nome;
+    \item Possa selezionare l'organizzazione e vederne l'immagine;
+    \item Possa selezionare l'organizzazione e vederne la descrizione;
+    \item Possa selezionare l'organizzazione e vederne l'indirizzo.
+\end{enumerate} & NI \\
+
+% R1FS4.1 a R1FS4.11 % Riccardo
+TAS4 & Modifica dei dati dell'organizzazione &
+Verificare che l'amministratore gestore:
+\begin{enumerate}
+    \item Possa modificare il nome dell'organizzazione;
+    \item Possa modificare l'immagine della organizzazione;
+    \item Possa modificare la descrizione dell’organizzazione;
+    \item Possa modificare l'indirizzo dell’organizzazione;
+    \item Possa modificare l'indirizzo IP dell'organizzazione;
+    \item Riceva un messaggio di errore qualora il nome dell'organizzazione inserito non rispetti i vincoli imposti;
+    \item Riceva un messaggio di errore qualora il nome dell'organizzazione inserito sia già presente nel sistema e associato ad un'altra organizzazione;
+    \item Riceva un messaggio di errore qualora l'immagine dell'organizzazione inserita non rispetti i vincoli imposti;
+    \item Riceva un messaggio di errore qualora la descrizione dell'organizzazione inserita non rispetti i vincoli imposti;
+    \item Riceva un messaggio di errore qualora l'indirizzo dell'organizzazione inserito non rispetti i vincoli imposti;
+    \item Riceva un messaggio di errore qualora l'indirizzo IP dell'organizzazione inserito non rappresenti un server \glo{LDAP};
+    \item Possa inviare la richiesta di eliminazione per un'organizzazione;
+    \item Possa inserire una motivazione per la richiesta di eliminazione di un'organizzazione;
+    \item Possa annullare le modifiche che sta apportando ad una organizzazione.
+\end{enumerate} & NI \\
+
+% da R1FS5.1 a R1FS5.5 % Tommaso
+TAS5 & Modifica della lista dei luoghi di \glo{tracciamento} di un'\glo{organizzazione} & 
+Verificare che l'amministratore gestore:
+\begin{enumerate}
+    \item Possa essere in grado di aggiungere un nuovo luogo in cui effettuare il \glo{tracciamento};
+    \item Possa essere in grado di modificare un luogo dell'\glo{organizzazione};
+    \item Possa essere in grado di eliminare un luogo dell'\glo{organizzazione};
+    \item Non possa selezionare un'area che non rispetta i vincoli imposti per l'\glo{organizzazione}, visionando un messaggio d'errore;
+    \item Non possa inserire un luogo se viene selezionata un'area che fuoriesce dal perimetro imposto per l'\glo{organizzazione}, visionando un messaggio d'errore.
+\end{enumerate} & NI \\
+
+% da R1FS5.5 a R1FS5.8 % Tommaso
+TAS6 & Modifica di un luogo di un'\glo{organizzazione} & 
+Verificare che l'amministratore gestore:
+\begin{enumerate}[resume]
+    \item Possa selezionare l'area geografica in cui effettuare il \glo{tracciamento} mediante l'inserimento di coordinate geografiche;
+    \item Possa selezionare l'area geografica in cui effettuare il \glo{tracciamento} mediante l'inserimento di marcatori su una mappa interattiva;
+    \item Possa annullare l'operazione di modifica del luogo dell'\glo{organizzazione}.
+\end{enumerate} & NI \\
+
+%da R1FS6.1 a R1FS7.6 % Christian
+TAS7 & Monitoraggio degli utenti presenti nei luoghi di un'\glo{organizzazione} &
+Verificare che l'amministratore visualizzatore:
+\begin{enumerate}[resume]
+    \item Possa monitorare il numero degli utenti anonimi;
+    \item Possa monitorare il numero degli utenti anonimi in un luogo specifico;
+    \item Possa monitorare gli accessi degli utenti riconosciuti;
+    \item Possa monitorare gli accessi effettuati da uno specifico utente riconosciuto visualizzandone il nome, cognome e l'orario di accesso;
+    \item Possa filtrare la \glo{lista degli accessi} di uno specifico utente riconosciuto per data decrescente;
+    \item Possa filtrare la \glo{lista degli accessi} di uno specifico utente riconosciuto per data crescente;
+    \item Possa filtrare la \glo{lista degli accessi} di uno specifico utente riconosciuto per una data precisa;
+    \item Possa monitorare gli accessi effettuati presso un luogo da un specifico utente riconosciuto visualizzandone il nome, il cognome e l’orario di accesso.
+\end{enumerate} & NI \\
+
+%R1FS8.1 a R1FS8.4 % Riccardo
+TAS8 & Report tabellare degli accessi ai luoghi dell'organizzazione &
+Verificare che l'amministratore autenticato:
+\begin{enumerate}
+    \item Possa ottenere un report tabellare degli accesi ai luoghi dell'organizzazione;
+    \item Possa generare una tabella tabella contenente il numero degli utenti e il totale delle ore passate da essi nei luoghi dell’organizzazione.
+\end{enumerate}
+Se l'organizzazione richiede il \glo{tracciamento autenticato}, verificare che l'amministratore autenticato:
+\begin{enumerate}[resume]
+    \item Possa generare una tabella delle entrate e uscite degli utenti nei luoghi dell'organizzazione;
+    \item Possa generare una tabella delle ore spese dagli utenti nei luoghi dell'organizzazione.
+\end{enumerate} & NI \\
+
+% da R1FS9.1 a R1FI11 % Tommaso
+TAS9 & Gestione degli amministratori nominati da un amministratore proprietario & 
+Verificare che l'amministratore proprietario:
+\begin{enumerate}
+    \item Possa visionare gli amministratori che ha precedentemente nominato, di cui si devono visionare la e-mail e i privilegi;
+    \item Possa modificare i privilegi di un altro amministratore, inserendo il suo indirizzo e-mail;
+    \item Possa eliminare un amministratore, inserendo il suo indirizzo e-mail; 
+    \item Riceva un messaggio d'errore se non è presente un amministratore con l'indirizzo e-mail inserito dall'amministratore proprietario;
+    \item Possa annullare l'operazione di modifica dei privilegi di un amministratore.
+\end{enumerate} & NI \\
+
+% da R1FS9.2 a R1FS9.6 % Tommaso
+TAS10 & Nomina di un nuovo amministratore da parte di un altro amministratore proprietario per la stessa \glo{organizzazione} & 
+Verificare che l'amministratore proprietario:
+\begin{enumerate}
+    \item Possa inserire l'indirizzo e-mail per il nuovo amministratore;
+    \item Possa inserire la password per il nuovo amministratore;
+    \item Possa inserire la conferma della password (che dev'essere uguale alla password);
+    \item Possa selezionare i privilegi per il nuovo amministratore;
+    \item Riceva un messaggio d'errore se l'indirizzo e-mail del nuovo amministratore è già presente nel sistema;
+    \item Riceva un messaggio d'errore se la password risulta troppo debole;
+    \item Riceva un messaggio d'errore se la conferma della password non combacia con la password.
+\end{enumerate} & NI \\
+\end{longtable}
+}

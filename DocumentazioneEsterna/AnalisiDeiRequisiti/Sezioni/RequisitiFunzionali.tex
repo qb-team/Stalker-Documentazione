@@ -83,7 +83,7 @@ R1FA1.5 & La registrazione da parte di un utente non autenticato necessita di co
 
 R1FA1.6 & Durante la registrazione viene chiesto all'utente non autenticato di accettare le condizioni generali d'uso. & \o & UCA 1.2.4 Interno\\
 
-R1FA1.7 & Qualora l'utente non autenticato dovesse rifiutare le condizioni generali d'uso deve venir interrotta la registrazione e chiusa l'applicazione. & \o & UCA 1.2.4 Interno\\
+R1FA1.7 & Qualora l'utente non autenticato dovesse rifiutare le condizioni generali d'uso allora la registrazione non può essere terminata correttamente.  & \o & UCA 1.2.4 Interno\\
 
 R2FA1.8 & L'utente non autenticato deve essere in grado di effettuare il reset della password qualora se la fosse dimenticata. & \d & UCA 1.3 Interno\\
 
@@ -196,7 +196,7 @@ R1FA6.3 & L’utente che effettua un movimento in un luogo all'interno di una or
 
 R1FA6.4 & L’utente che effettua un movimento in un luogo di un'organizzazione deve essere notificato della sua azione e il movimento deve essere memorizzato nel sistema. & \o & UCA 6.2 Capitolato \\
 
-R2FA8.7 & Qualora non vengano memorizzate le informazioni necessarie per la registrazione del movimento effettuato dall’utente, deve essere notificato tale evento all’utente. & \o & UCA 8.6.1 \\
+R1FA8.7 & Qualora non vengano memorizzate le informazioni necessarie per la registrazione del movimento effettuato dall’utente, deve essere notificato tale evento all’utente. & \o & UCA 8.6.1 \\
 
 %Cisotto
 
@@ -208,7 +208,7 @@ R1FA7.2 & L'utente anonimo deve avere la possibilità di inserire il nome utente
 
 R1FA7.3 & L'utente anonimo deve avere la possibilità di inserire la password durante l'autenticazione con le credenziali LDAP aziendali. & \o & UCA 7.1.2 Interno \\
 
-R1FI2 & Un amministratore non autenticato non può effettuare alcuna azione a meno di autenticazione. & \o & Interno \\
+R1FI2 & Un utente non autenticato non può effettuare alcuna azione a meno di autenticazione. & \o & Interno \\
 
 R1FS1.1 & L’autenticazione da parte di un amministratore necessita di e-mail. & \o & UCS 1.1.1 Interno\\
 
@@ -218,15 +218,15 @@ R1FS10.2 & Qualora l'amministratore tenti di autenticarsi con le credenziali err
 
 R1FS1.2 & L’autenticazione da parte di un amministratore necessita di password. & \o & UCS 1.1.2 Interno\\
 
-R2FS1.3 & L'amministratore non autenticato deve essere in grado di effettuare il reset della password qualora se la fosse dimenticata. & \d & UCS 1.3 Interno\\
+R2FS1.3 & L'utente non autenticato deve essere in grado di effettuare il reset della password qualora se la fosse dimenticata. & \d & UCS 1.3 Interno\\
 
-R2FS1.4 & Il reset della password dell'amministratore non autenticato richiede l'e-mail. & \d & UCS 1.3.1 Interno \\
+R2FS1.4 & Il reset della password dell'utente non autenticato richiede l'e-mail. & \d & UCS 1.3.1 Interno \\
 
-R2FS1.5 & Il reset della password dell'amministratore non autenticato richiede l'e-mail di recupero per il reset della password. & \d & UCS 1.3.2 Interno \\
+R2FS1.5 & Il reset della password dell'utente non autenticato richiede l'e-mail di recupero per il reset della password. & \d & UCS 1.3.2 Interno \\
 
-R2FS1.6 & Il reset della password dell'amministratore non autenticato richiede la nuova password. & \d & UCS 1.3.3 Interno \\
+R2FS1.6 & Il reset della password dell'utente non autenticato richiede la nuova password. & \d & UCS 1.3.3 Interno \\
 
-R2FS1.7 & Il reset della password dell'amministratore non autenticato richiede la conferma della password. & \d & UCS 1.3.4 Interno \\
+R2FS1.7 & Il reset della password dell'utente non autenticato richiede la conferma della password. & \d & UCS 1.3.4 Interno \\
 
 R1FS2.1 & L'amministratore deve essere in grado di effettuare il logout. & \o & UCS 2 Interno\\
 
@@ -267,7 +267,7 @@ R2FS10.6 & Se la descrizione dell'organizzazione inserita dall'amministratore no
 
 R1FS10.7 & Se l'indirizzo dell'organizzazione inserito dall'amministratore non rispetta i vincoli imposti viene mostrato un messaggio d'errore. & \o & UCS 10.4.6\\
 
-R1FS10.8 & Se l'indirizzo IP inserito dall'amministratore non rappresenta un server LDAP viene mostrato un messaggio d'errore. & \o & UCS 10.4.7\\
+R1FS10.8 & Se l'indirizzo URL non è valido viene mostrato un messaggio d'errore. & \o & UCS 10.4.7\\
 
 R1FS4.6 & L'amministratore proprietario deve avere la possibilità di inviare la richiesta di eliminazione per un'organizzazione. & \o & UCS 4.2 Capitolato\\
 
@@ -297,8 +297,6 @@ R1FS5.6 & L'amministratore gestore può scegliere l'area di tracciamento tramite
 
 R2FS5.7 & L'amministratore gestore può scegliere l'area di tracciamento tramite Google Maps API. & \d & UCS 5.5.2 Interno\\
 
-R1FS5.8 & L'amministratore gestore deve poter annullare la selezione dell'area geografica per il tracciamento. & \o & UCS 5.5.3 Interno\\
-
 R1FS5.9 & L'amministratore deve poter inserire un nome per il nuovo luogo di tracciamento. & \o & UCS 5.2.1 Interno\\
 
 R1FS6.1 & L'amministratore può monitorare l'organizzazione visualizzando il numero di utenti anonimi presenti nell'organizzazione. & \o & UCS 6 Capitolato\\
@@ -307,7 +305,7 @@ R1FS6.2 & L'amministratore visualizzatore può monitorare l'organizzazione visua
 
 R1FS6.3 & L'amministratore visualizzatore ha la possibilità di ritornare al monitoraggio dell'organizzazione in generale dal monitoraggio di un luogo specifico. & \o & UCS 6.1.1 Interno\\
 
-R1FS7.1 & L'amministratore visualizzatore può monitorato gli accessi effettuati dagli utenti riconosciuti. & \o & UCS 7 Capitolato\\
+R1FS7.1 & L'amministratore visualizzatore può monitorare gli accessi effettuati dagli utenti riconosciuti. & \o & UCS 7 Capitolato\\
 
 R1FS7.2 & L'amministratore visualizzatore può monitorare gli accessi effettuati presso una organizzazione da un specifico utente riconosciuto visualizzandone il nome, il cognome, l'orario di accesso, di uscita e il tempo di permanenza. & \o & UCS 7.1.4 Capitolato\\
 
@@ -332,10 +330,6 @@ R2FS8.2 &  Tabella delle entrate e uscite degli utenti nei luoghi dell'organizza
 R2FS8.3 & Tabella delle ore spese dagli utenti nei luoghi dell'organizzazione generabile dall'amministratore visualizzatore di un organizzazione a \glo{tracciamento autenticato}. & \o & UCS 8.1.2 Capitolato\\
 
 R2FS8.4 & Tabella contenente il numero degli utenti e il totale delle ore passate da essi nei luoghi dell'organizzazione generabile dall'amministratore visualizzatore di un organizzazione a \glo{tracciamento autenticato} o anonimo. & \o & UCS 8.1.3 Capitolato\\
-
-%aggiungere tabelle più particolareggiate
-
-%R3FS8.1 & Le tabelle generabili dall'amministratore possono . & \op & UCS 8.1 Interno\\
 
 %Cisotto
 
@@ -363,7 +357,7 @@ R1FS9.5 & L'amministratore proprietario deve poter inserire la conferma della nu
 
 R1FS9.6 & L'amministratore proprietario deve poter selezionare i privilegi per il nuovo amministratore da nominare. & \o & UCS 9.1.4 Interno\\
 
-R1FS9.7 & L'amministratore proprietario ha la possibilità di eliminare un amministratore. & \o & UCS 9.2 Capitolato\\
+R1FS9.7 & L'amministratore proprietario ha la possibilità di eliminare un amministratore togliendogli i permessi di amministrazione dell'organizzazione. & \o & UCS 9.2 Capitolato\\
 
 R1FS9.8 & L'amministratore proprietario ha la possibilità di inserire la e-mail dell'account amministratore da eliminare. & \o & UCS 9.2.1 Interno\\
 
