@@ -5,7 +5,7 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'appl
 
 ## 2.6.1 Main Activity
 ![!MainActivity](../Immagini/App/Classi/MainActivity.png "Diagramma della classe MainActivity")
-<figcaption align="center"> <em> Diagramma delle classi di Authentication </em> </figcaption>
+<figcaption align="center"> <em> Diagramma delle classi di Main Activity </em> </figcaption>
 
 La classe MainActivity è l'Activity che appare all'utente se non è autenticato e contiene il fragment "AuthenticationFragment".
 
@@ -15,7 +15,7 @@ La classe MainActivity offre i seguenti metodi:
 
 -   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione dell'Activity e di mostrare a schermo l'AuthenticationFragment;
 
--   `goToHomePage()`:  Si occupa di spostare l'utente nell'HomePageActivity;
+-   `goToHomePage()`:  Si occupa di spostare l'utente nell'HomePageActivity.
 
 
 ## 2.6.2 Authentication 
@@ -90,7 +90,7 @@ La classe SignUpFragment offre i seguenti metodi:
 
 ## 2.6.5 Home Page Activity
 ![!HomePageActivity](../Immagini/App/Classi/HomePageActivity.png "Diagramma della classe HomePageActivity")
-<figcaption align="center"> <em> Diagramma delle classi di Authentication </em> </figcaption>
+<figcaption align="center"> <em> Diagramma delle classi di Home Page Activity </em> </figcaption>
 
 La classe HomePageActivity è l'Activity principale da cui vengono istanziati i fragment riguardanti l'action tab "ActionTabFragment", la lista delle organizzazioni "HomeFragment" e la lista dei preferiti/MyStalker "MyStalkersListFragment".
 
