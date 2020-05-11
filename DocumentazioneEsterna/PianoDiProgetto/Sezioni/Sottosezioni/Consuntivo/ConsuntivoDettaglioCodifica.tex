@@ -15,33 +15,31 @@
 \textcolor{white}{\textbf{Costo effettivo (in \euro{})}} & 
 \textcolor{white}{\textbf{Variazione di costo (in \euro{})}}\\	
 	
-Responsabile    &  26 &  0 & 780 &   &   \\
-Amministratore  &  30 &  0 & 600 &   &    \\
-Analista        &  -  &  - &  -  & - &  - \\
-Progettista     &  91 &  0 & 2002 &   &  \\
-Programmatore   & 144 &  0 & 2160 &  &  \\
-Verificatore    & 106 &  0 & 1635 &  &   \\
-\textbf{Totale} & 400 &  0 & 7177 &  &  \\	
+Responsabile    &  26 &  -3 &  780 &  690 &  -90 \\
+Amministratore  &  30 &  -1 &  600 &  580 &  -20 \\
+Analista        &   - &  +6 &    - &  150 & +150 \\
+Progettista     &  91 &  +5 & 2002 & 2112 & +110 \\
+Programmatore   & 144 &  +3 & 2160 & 2205 &  +45 \\
+Verificatore    & 109 &   0 & 1635 & 1635 &    0 \\
+\textbf{Totale} & 400 & +10 & 7177 & 7372 & +195 \\	
 
 \end{longtable}
 }
 
 \subsubsection{Conclusioni}
-Come riportato dalla tabella, il bilancio risulta essere particolarmente diverso da quello preventivato per i due ruoli di progettista e programmatore, mentre ci sono stati alcuni cambiamenti per gli altri.\\
+Come riportato dalla tabella, il bilancio risulta essere abbastanza diverso da quello preventivato per tutti i ruoli eccetto il verificatore, mentre ci sono stati alcuni cambiamenti per gli altri. \\
 In particolar modo:
 \begin{itemize}
-	\item \textbf{Amministratore}: Questo ruolo non si è discostato, dovute al fatto che le attività di suo interesse erano già state portate avanti correttamente a sufficienza nella precedente \glo{fase} e non sono state necessarie ore extra;
-    \item \textbf{Progettista}: A differenza della pianificazione svolta, la parte progettuale si è attuata in tempi maggiori. Questo è dovuto dal fatto che la progettazione e la 
-    realizzazione dei diagrammi delle classi, package e di sequenza hanno richiesto più tempo del dovuto aumentandone i controlli per assicurarne la loro corretta validità.
-	Per questo motivo ci si è concentrati maggiormente sui dettagli di grana più fine;
-    \item \textbf{Programmatore}: La parte di programmazione si è attutata nei tempi previsti. Ciò è dovuto da un aumento dell'esperienza nella scrittura del codice da parte dei 
-    membri del gruppo \Gruppo{} e anche dalle numerose ore di studio delle tecnologie all'inizio di questa fase, sul come integrare in maniera corretta le unità software tenendo sempre conto di tutti i diagrammi progettati precedentemente e mantenendo
-    un aggiornamento continuo su come realizzare le comunicazioni tra le varie componenti del prodotto software: app, \glo{backend} e web-app;
+    \item \textbf{Analista}: Alcuni membri del gruppo hanno dovuto sistemare alcune parti del documento di \AdR{} segnalate alla precedente revisione e notate da essi nel documento;
+	\item \textbf{Amministratore e Responsabile}: Come per la precedente fase, nonostante il lieve discostamento, possiamo notare che sono stati preventivati correttamente i numeri di ore richieste per il ruolo;
+    \item \textbf{Progettista}: Visto che nella precedente fase sono state impegnate molte meno ore di progettista, in questa fase c'è stato l'impegno a soddisfare a pieno il monte ore preventivato e sono state impiegate 5 ore extra per evitare di dovere nella prossima fase (e quindi nei prossimi incrementi) ritoccare aspetti importanti dell'architettura;
+    \item \textbf{Programmatore}: La parte di programmazione ha richiesto anche in questo caso alcune ore in più, in particolare per sistemare alcuni difetti dovuti all'utilizzo improprio di alcune tecnologie;
 	\item \textbf{Verificatore}: Il lavoro necessario per il ruolo di verificatore è stato preventivato correttamente. 
 \end{itemize}
 \subsubsection{Ragionamento sugli scostamenti}
-Dalle conclusioni si può notare ...
-
+Una cosa che può essere notata fin da subito è che il ruolo di analista poteva essere messo a preventivo fin da subito, considerando la possibilità di dover aggiustare alcune parti del documento di \AdR{}. L'altro scostamento più rilevante, quello del ruolo di progettista, più che preventivabile, è dovuto principalmente allo scarto importante di ore del ruolo avute nella precedente fase.\\
+Le ore di programmatore in più, dovute alle tecnologie impiegate, sarebbero state difficilmente preventivabili, ma una scelta di queste più accurata, magari puntando su altre tecnologie più diffuse, semplici da usare o meglio documentate sarebbe stato meglio. Per fare un esempio, uno strumento come Redis potrebbe essere stato sostituito da una tecnologia simile ma più semplice da usare (o meglio, configurare).
 
 \subsubsection{Preventivo a finire}
-Il preventivo a finire è attualmente ...
+Il preventivo a finire in fase di Progettazione Architetturale era inferiore di \euro{} 196. In questa fase, l'attuazione degli incrementi e ruoli come l'analista hanno portato ad un aumento del costo della fase di \euro{} 195. Per questa ragione, il consuntivo attuale è aumentato, tornando molto vicino alla soglia preventivata (\euro{} 15072).\\
+Il prezzo (attuale) totale per la realizzazione del prodotto è \euro{} 15071.
