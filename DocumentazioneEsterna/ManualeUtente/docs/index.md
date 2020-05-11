@@ -13,7 +13,7 @@ Lo scopo di questo documento è quello spiegare attraverso una raccolta di video
 
 Il prodotto **Stalker** è formato dalle parti:
 
--   [App utenti](/app/architettura/)
+-   [App utenti](/app/architettura/);
 -   [Web-app amministratori](/webapp/architettura/);
 -   [Backend](/backend/architettura/).
 
