@@ -1,5 +1,5 @@
 # 4.4 Architettura 
-Per sviluppare il Backend abbiamo utilizzato la **layered architecture**, in cui le varie funzionalità del software sono logicamente separate, ovvero suddivise su più strati o livelli software differenti in comunicazione tra loro.  
+Per sviluppare il backend abbiamo utilizzato la **layered architecture**, in cui le varie funzionalità del software sono logicamente separate, ovvero suddivise su più strati o livelli software differenti in comunicazione tra loro.  
 Ogni strato è caratterizzato  dallo svolgimento di un singolo e specifico ruolo, separato dagli altri strati, ma che ha dipendenze solo verso gli strati più bassi e offre servizi solo agli strati superiori rispetto a lui.
 
 ![!Layered Architecture](../Immagini/Backend/layeredarchitecture.png)
