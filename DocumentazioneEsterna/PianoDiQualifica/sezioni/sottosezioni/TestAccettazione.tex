@@ -12,7 +12,7 @@
 \endhead
 
 %da R1FI1 a R1FA8.4 (con parti splittate) % Christian
-TSA1 & Accesso all'applicazione di un utente non autenticato con credenziali Stalker &
+TAA1 & Accesso all'applicazione di un utente non autenticato con credenziali Stalker &
 Verificare che l'utente non autenticato:
 \begin{enumerate}
     \item Possa inserire l'indirizzo e-mail;
@@ -25,7 +25,7 @@ Se l'utente non autenticato si è dimenticato la sua password:
 \end{enumerate} & NI \\
 
 %da R1FI1 a R1FA8.4 (con parti splittate) % Christian
-TSA2 & Registrazione nell'applicazione di un utente non autenticato con credenziali Stalker &
+TAA2 & Registrazione nell'applicazione di un utente non autenticato con credenziali Stalker &
 Verificare che l'utente non autenticato:
 \begin{enumerate}
     \item Possa inserire l'indirizzo e-mail;
@@ -39,12 +39,12 @@ Verificare che l'utente non autenticato:
 \end{enumerate} & NI \\
 
 % R1FA2.1
-TSA3  & \glo{Logout} dell'utente anonimo & \begin{enumerate}
+TAA3  & \glo{Logout} dell'utente anonimo & \begin{enumerate}
     \item Verifica che l'utente anonimo possa effettuare il \glo{logout} dall'applicazione.
 \end{enumerate} & NI \\
 
 % da R1FA3.1, R1FA3.2, R1FA8.5, R1FA3.7, R1FA3.8, R1FA3.9 % Riccardo
-TSA4 & Gestione lista delle \glo{organizzazioni} &
+TAA4 & Gestione lista delle \glo{organizzazioni} &
 Verificare che l'utente anonimo:
 \begin{enumerate}
     \item Possa scaricare la lista di tutte le organizzazioni;
@@ -54,7 +54,7 @@ Verificare che l'utente anonimo:
 \end{enumerate} & NI \\
 
 % R1FA3.10, R1FA3.11, R1FA3.12, R1FA3.13, R1FA3.14, R1FA3.15, R1FA3.16, R1FA3.17, R1FA3.18 % Riccardo
-TSA5 & Visualizzazione lista delle organizzazioni & 
+TAA5 & Visualizzazione lista delle organizzazioni & 
 Verificare che l'utente anonimo:
 \begin{enumerate}
 % \item Possa autenticarsi con credenziali LDAP, qualora scaricasse una organizzazione che richieda l'autenticazione con credenziali LDAP;
@@ -68,7 +68,7 @@ Verificare che l'utente anonimo:
 \end{enumerate} & NI \\
 
 % da R1FA3.3, R1FA3.4, R1FA3.5, R1FA3.6, R1FA8.6 % Riccardo
-TSA6 & Gestione lista delle organizzazioni preferite dell'utente anonimo &
+TAA6 & Gestione lista delle organizzazioni preferite dell'utente anonimo &
 Verificare che l'utente anonimo:
 \begin{enumerate}
     \item Possa inserire un'organizzazione, presente nella lista di tutte le organizzazioni, nella propria lista delle organizzazioni preferite;
@@ -77,7 +77,7 @@ Verificare che l'utente anonimo:
 \end{enumerate} & NI \\
 
 % da R1FA4.1 a R1FA4.3 % Tommaso
-TSA7 & Selezione della modalità di \glo{tracciamento} & 
+TAA7 & Selezione della modalità di \glo{tracciamento} & 
 \glo{Verificare} che l'utente riconosciuto:
 \begin{enumerate}
     \item Possa inserire la modalità di \glo{tracciamento anonimo};
@@ -90,7 +90,7 @@ Se l'utente riconosciuto si trova presso un luogo di un'\glo{organizzazione}, \g
 \end{enumerate} & NI \\
 
 % da R2FA5.1 a R2FA5.5, da R2FA5.10 a R2FA5.12, R2FA5.16, R2FA8.5 % Tommaso
-TSA8 & \glo{storico degli accessi} dell'utente anonimo presso un'\glo{organizzazione} & 
+TAA8 & \glo{storico degli accessi} dell'utente anonimo presso un'\glo{organizzazione} & 
 \glo{Verificare} che l'utente anonimo:
 \begin{enumerate}
     \item Possa vedere il proprio storico accessi presso un'\glo{organizzazione}. Ogni accesso deve mostrare la data in cui è stato compiuto, il luogo corrispondente, il tempo totale trascorso all'interno nel luogo;
@@ -105,7 +105,7 @@ Se l'utente anonimo si trova presso un luogo dell'\glo{organizzazione}, \glo{ver
 \end{enumerate} & NI \\
 
 % da R2FA5.6 a R2FA5.9, da R2FA5.13 a R2FA5.15, R2FA5.17, R2FA8.6 % Tommaso
-TSA9 & \glo{storico degli accessi} dell'utente anonimo presso un luogo di un'\glo{organizzazione} & 
+TAA9 & \glo{storico degli accessi} dell'utente anonimo presso un luogo di un'\glo{organizzazione} & 
 \glo{Verificare} che:    
 \begin{enumerate}
     \item L'utente anonimo possa vedere il proprio storico accessi presso il luogo di un'\glo{organizzazione}. Ogni accesso deve mostrare la data in cui è stato compiuto, il luogo corrispondente, il tempo totale trascorso all'interno nel luogo;
@@ -120,7 +120,7 @@ Se l'utente anonimo si trova presso lo stesso luogo, \glo{verificare} che:
 \end{enumerate} & NI \\
 
 %da R2FA6.1 a R2FA6.9 % Christian
-TSA10 & \glo{Tracciamento} dell'utente riconosciuto nei luoghi di un'\glo{organizzazione} &
+TAA10 & \glo{Tracciamento} dell'utente riconosciuto nei luoghi di un'\glo{organizzazione} &
 Verificare che l'utente riconosciuto:
 \begin{enumerate}
     \item Riceva la notifica della corretta registrazione se il tracciamento del suo \glo{movimento} in/da un \glo{luogo} ha avuto successo;
@@ -138,7 +138,7 @@ Se l'utente riconosciuto è in modalità di \glo{tracciamento autenticato} verif
 \end{enumerate} & NI \\
 
 
-TSA11 & \glo{Tracciamento} dell'utente anonimo nei luoghi di un'\glo{organizzazione} &
+TAA11 & \glo{Tracciamento} dell'utente anonimo nei luoghi di un'\glo{organizzazione} &
 Verificare che l'utente anonimo:
 \begin{enumerate}
     \item Riceva la notifica della corretta registrazione se il tracciamento del suo \glo{movimento} in/da un \glo{luogo} ha avuto successo;
@@ -162,7 +162,7 @@ Se l'utente anonimo è in \glo{modalità di tracciamento anonimo}:
 
 
 %R1FA7.1 a R1FA7.3 % Riccardo
-TSA12 & Autenticazione con credenziali \glo{LDAP} &
+TAA12 & Autenticazione con credenziali \glo{LDAP} &
 Verificare che l'utente anonimo:
 \begin{enumerate}
     \item Possa autenticarsi con credenziali aziendali in un'organizzazione che richiede il tracciamento riconosciuto;
@@ -172,7 +172,7 @@ Verificare che l'utente anonimo:
 \end{enumerate} & NI \\
 
 % da R1FI2 a R1FS1.3 % Tommaso
-TSS1 & Accesso al server di un amministratore non autenticato & 
+TAS1 & Accesso al server di un amministratore non autenticato & 
 \glo{Verificare} che l'amministratore non \glo{autenticato}:
 \begin{enumerate}
     \item Possa inserire l'e-mail correttamente;
@@ -185,12 +185,12 @@ Se l'amministratore non \glo{autenticato} si è dimenticato della password, \glo
 \end{enumerate} & NI \\
 
 %R1FS2.1 % Tommaso
-TSS2 & \glo{Logout} dell'amministratore \glo{autenticato} & \begin{enumerate}
+TAS2 & \glo{Logout} dell'amministratore \glo{autenticato} & \begin{enumerate}
     \item \glo{Verificare} che l'amministratore \glo{autenticato} possa effettuare il \glo{logout} dal server.
 \end{enumerate} & NI \\
 
 %da R1FC3 a R1FI8 % Christian
-TSS3 & Disponibilità \glo{organizzazioni} visualizzabili dall'amministratore &
+TAS3 & Disponibilità \glo{organizzazioni} visualizzabili dall'amministratore &
 Verificare che l'amministratore possa:
 \begin{enumerate}
     \item Vedere il suo nome dell'organizzazione;
@@ -203,7 +203,7 @@ Verificare che l'amministratore possa:
 \end{enumerate} & NI \\
 
 % R1FS4.1 a R1FS4.11 % Riccardo
-TSS4 & Modifica dei dati dell'organizzazione &
+TAS4 & Modifica dei dati dell'organizzazione &
 Verificare che l'amministratore gestore:
 \begin{enumerate}
     \item Possa modificare il nome dell'organizzazione;
@@ -223,7 +223,7 @@ Verificare che l'amministratore gestore:
 \end{enumerate} & NI \\
 
 % da R1FS5.1 a R1FS5.5 % Tommaso
-TSS5 & Modifica della lista dei luoghi di \glo{tracciamento} di un'\glo{organizzazione} & 
+TAS5 & Modifica della lista dei luoghi di \glo{tracciamento} di un'\glo{organizzazione} & 
 Verificare che l'amministratore gestore:
 \begin{enumerate}
     \item Possa essere in grado di aggiungere un nuovo luogo in cui effettuare il \glo{tracciamento};
@@ -234,7 +234,7 @@ Verificare che l'amministratore gestore:
 \end{enumerate} & NI \\
 
 % da R1FS5.5 a R1FS5.8 % Tommaso
-TSS6 & Modifica di un luogo di un'\glo{organizzazione} & 
+TAS6 & Modifica di un luogo di un'\glo{organizzazione} & 
 Verificare che l'amministratore gestore:
 \begin{enumerate}[resume]
     \item Possa selezionare l'area geografica in cui effettuare il \glo{tracciamento} mediante l'inserimento di coordinate geografiche;
@@ -243,7 +243,7 @@ Verificare che l'amministratore gestore:
 \end{enumerate} & NI \\
 
 %da R1FS6.1 a R1FS7.6 % Christian
-TSS7 & Monitoraggio degli utenti presenti nei luoghi di un'\glo{organizzazione} &
+TAS7 & Monitoraggio degli utenti presenti nei luoghi di un'\glo{organizzazione} &
 Verificare che l'amministratore visualizzatore:
 \begin{enumerate}[resume]
     \item Possa monitorare il numero degli utenti anonimi;
@@ -257,7 +257,7 @@ Verificare che l'amministratore visualizzatore:
 \end{enumerate} & NI \\
 
 %R1FS8.1 a R1FS8.4 % Riccardo
-TSS8 & Report tabellare degli accessi ai luoghi dell'organizzazione &
+TAS8 & Report tabellare degli accessi ai luoghi dell'organizzazione &
 Verificare che l'amministratore autenticato:
 \begin{enumerate}
     \item Possa ottenere un report tabellare degli accesi ai luoghi dell'organizzazione;
@@ -270,7 +270,7 @@ Se l'organizzazione richiede il \glo{tracciamento autenticato}, verificare che l
 \end{enumerate} & NI \\
 
 % da R1FS9.1 a R1FI11 % Tommaso
-TSS9 & Gestione degli amministratori nominati da un amministratore proprietario & 
+TAS9 & Gestione degli amministratori nominati da un amministratore proprietario & 
 Verificare che l'amministratore proprietario:
 \begin{enumerate}
     \item Possa visionare gli amministratori che ha precedentemente nominato, di cui si devono visionare la e-mail e i privilegi;
@@ -281,7 +281,7 @@ Verificare che l'amministratore proprietario:
 \end{enumerate} & NI \\
 
 % da R1FS9.2 a R1FS9.6 % Tommaso
-TSS10 & Nomina di un nuovo amministratore da parte di un altro amministratore proprietario per la stessa \glo{organizzazione} & 
+TAS10 & Nomina di un nuovo amministratore da parte di un altro amministratore proprietario per la stessa \glo{organizzazione} & 
 Verificare che l'amministratore proprietario:
 \begin{enumerate}
     \item Possa inserire l'indirizzo e-mail per il nuovo amministratore;
