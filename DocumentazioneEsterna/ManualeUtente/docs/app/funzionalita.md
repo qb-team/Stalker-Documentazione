@@ -17,27 +17,27 @@ L'utente ha la possibilità di registrarsi inserendo la propria e-mail personale
 L'utente può autenticarsi inserendo il proprio indirizzo e-mail e la propria password.
 Se è il suo primo accesso all'applicazione Stalker dopo la registrazione, un pop-up appare per richiedere all'utente la possibilità di scaricare la lista delle organizzazioni dal server di Stalker. Gli utenti hanno la possibilità di accettare o rifiutare la proposta.
 
-## 2.1.4 Menu drawer
+## 2.1.4 Menù drawer
 
 L'utente può accedere ad una serie di funzionalità utilizzando l'*Hamburger button* riportato in alto a sinistra della schermata dell'applicazione.
 
 ![!Hamburger button](../Immagini/app/HamburgerButton.png)
 <figcaption align="center"> <em> Hamburger button </em> </figcaption>
 
-Una volta cliccato su questo bottone apparirà il menu drawer, da cui è possibile accedere alle seguenti funzionalità:
+Una volta cliccato su questo bottone apparirà il menù drawer, da cui è possibile accedere alle seguenti funzionalità:
 
 - Attivare o disattivare il tracciamento tramite uno pulsante switch;
 - Eseguire il logout;
 - Ordinare alfabeticamente la lista delle organizzazioni.
 
-![!Menu drawer](../Immagini/app/DrawerMenu.png)
-<figcaption align="center"> <em> Menu drawer </em> </figcaption>
+![!Menù drawer](../Immagini/app/DrawerMenu.png)
+<figcaption align="center"> <em> Menù drawer </em> </figcaption>
 
 ## 2.1.4 Logout
 
 <iframe width="720" src="https://www.youtube.com/embed/Rw4QFxDUisU" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'utente può eseguire il logout aprendo il menu drawer e poi cliccando su "Logout".
+L'utente può eseguire il logout aprendo il menù drawer e poi cliccando su "Logout".
 
 ## 2.1.5 Scaricamento della lista delle organizzazioni
 
@@ -70,7 +70,7 @@ In questa sezione vi sono tutte le organizzazioni da cui l'utente ha scelto di e
 
 <iframe width="720" src="https://www.youtube.com/embed/4z8e3ciX33g" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'utente può eseguire l'ordinamento alfabetico della lista delle organizzazioni aprendo il menu drawer e poi cliccando su "Ordinamento Alfabetico".
+L'utente può eseguire l'ordinamento alfabetico della lista delle organizzazioni aprendo il menù drawer e poi cliccando su "Ordinamento Alfabetico".
 
 ## 2.1.10 Ricerca
 
@@ -108,7 +108,7 @@ L'utente, tenendo premuto sull'elemento di MyStalkersList, fa comparire un pop-u
 
 <iframe width="720" src="https://www.youtube.com/embed/Lvfcnkc-trg" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Il tracciamento è possibile attivarlo attraverso lo switch collocato nel menu drawer apribile con la pressione dell'*Hamburger button*. Di default è disattivato e, una volta attivato, l'utente passa in modalità di tracciamento anonimo (per cui il tracciamento presso le organizzazioni in MyStalkersList viene fatto solo anonimo anche se possono richiedere tracciamento autenticato).
+Il tracciamento è possibile attivarlo attraverso lo switch collocato nel menù drawer apribile con la pressione dell'*Hamburger button*. Di default è disattivato e, una volta attivato, l'utente passa in modalità di tracciamento anonimo (per cui il tracciamento presso le organizzazioni in MyStalkersList viene fatto solo anonimo anche se possono richiedere tracciamento autenticato).
 
 La prima volta che si utilizza questa funzionalità sul dispositivo viene visualizzato un pop-up in cui l'utente dovrà accettare la richiesta del sistema per poter accedere alle funzionalità di geolocalizzazione del dispositivo.
 
