@@ -22,7 +22,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../panoramica.md#bearerAuth)
+[bearerAuth](../overview.md#bearerAuth)
 
 ### HTTP request headers
 

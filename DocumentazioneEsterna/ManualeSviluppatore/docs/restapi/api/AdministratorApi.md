@@ -27,7 +27,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../panoramica.md#bearerAuth)
+[bearerAuth](../overview.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -51,7 +51,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../panoramica.md#bearerAuth)
+[bearerAuth](../overview.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -75,7 +75,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../panoramica.md#bearerAuth)
+[bearerAuth](../overview.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -99,7 +99,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../panoramica.md#bearerAuth)
+[bearerAuth](../overview.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -123,7 +123,7 @@ null (empty response body)
 
 ### Authorization
 
-[bearerAuth](../panoramica.md#bearerAuth)
+[bearerAuth](../overview.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -147,7 +147,7 @@ Name | Type | Description
 
 ### Authorization
 
-[bearerAuth](../panoramica.md#bearerAuth)
+[bearerAuth](../overview.md#bearerAuth)
 
 ### HTTP request headers
 
