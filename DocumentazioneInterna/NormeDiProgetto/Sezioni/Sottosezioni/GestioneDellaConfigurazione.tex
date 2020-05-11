@@ -25,8 +25,8 @@ Per identificare univocamente ogni versione del prodotto, si utilizza un partico
 \end{center}
 Le regole per aggiornare gli indici del codice sono le seguenti:
 \begin{itemize}
-	\item \textbf{X}: Questo indice viene incrementato quando avvengono un insieme di modifiche molto significative, nel caso in cui riguardi un documento si hanno modifiche significative ai contenuti e alla struttura, mentre se si tratta di codice sorgente, si avrà un incremento quando vengono implementati tutti i requisiti di un incremento.
-	L'indice parte da 0 e non viene mai riportato a 0. Viene incrementato ogni volta che l'insieme delle modifiche apportarte, a partire dalla precedente approvazione del \Responsabile{}, rendono il documento o il prodotto non retro-compatibile con la versione precedente; premesso questo, il \Responsabile{} approva il documento o il codice sorgente solo successivamente allo svolgimento del processo di verifica da parte di un verificatore. Inoltre, per il prodotto, la presenza di questo indice rappresenta una versione funzionante e potenzialmente rilasciabile; 
+	\item \textbf{X}: Questo indice viene incrementato quando avvengono un insieme di modifiche molto significative; nel caso in cui riguardi un documento si hanno modifiche significative ai contenuti e alla struttura, mentre se si tratta di codice sorgente, si avrà un incremento quando vengono implementati tutti i requisiti obbligatori (per la versione X=1) e per le altre versioni quando le modifiche non sono retro-compatibili;
+	L'indice parte da 0 e non viene mai riportato a 0. Viene incrementato ogni volta che l'insieme delle modifiche apportate, a partire dalla precedente approvazione del \Responsabile{}, rendono il documento o il prodotto non retro-compatibile con la versione precedente; premesso questo, il \Responsabile{} approva il documento o il codice sorgente solo successivamente allo svolgimento del processo di verifica da parte di un verificatore. Inoltre, per il prodotto, la presenza di questo indice valorizzato $\geq 1$ rappresenta una versione funzionante e potenzialmente rilasciabile; 
 	\item \textbf{Y}: Questo indice viene incrementato quando avviene una modifica al documento, nello specifico sono state aggiunte sezioni, sottosezioni o paragrafi, oppure una modifica al codice sorgente a cui è stata aggiunta una funzionalità, cioè sono stati soddisfatti uno o più requisiti.
 	L'indice parte da 0 viene azzerato ad ogni incremento dell'indice X;
 	\item \textbf{Z}: Questo indice viene incrementato quando avviene una modifica al documento in cui è stata effettuata un'aggiunta o una modifica che può essere una correzione a errori di ortografia o di digitazione, nel caso di modifica al codice sorgente rappresenta invece, un \glo{code refactoring} o un correzione di bug minori.
@@ -35,9 +35,9 @@ Le regole per aggiornare gli indici del codice sono le seguenti:
 \end{itemize}
 Alcuni esempi di codice di versione:
 \begin{itemize}
-	\item \textbf{V.0.2.1}
-	\item \textbf{V.2.0.2}
-	\item \textbf{V.1.2.0}
+	\item \textbf{0.2.1}
+	\item \textbf{2.0.2}
+	\item \textbf{1.2.0}
 \end{itemize}
 \paragraph*{Rilascio}
 Il prodotto per poter essere rilasciato deve essere prima approvato dal \Responsabile{}.
@@ -90,7 +90,10 @@ Sono stati creati più \glo{repository} per supportare il lavoro del gruppo, qua
 	Il gruppo, intendendo seguire il modello di sviluppo incrementale integrerà, con le opportune modifiche, il suo contenuto all'interno del repository \textit{Stalker-App} per lavorare al prodotto finale;
 	\item \textbf{Stalker-Backend}: Viene usato per versionare il codice sorgente prodotto dal gruppo per l'applicativo lato server, il cosiddetto backend;
 	\item \textbf{Stalker-Admin-PoC}: Viene usato per lo sviluppo dell'interfaccia web dedicata all'amministratore per il \glo{Proof of Concept}.
-	Come per \textit{Stalker-App-PoC}, il codice prodotto verrà integrato nel repository \textit{Stalker-Admin} per lavorare al prodotto finale.
+	Come per \textit{Stalker-App-PoC}, il codice prodotto verrà integrato nel repository \textit{Stalker-Admin} per lavorare al prodotto finale;
+	\item \textbf{Stalker-AllegatoTecnico}: Viene usato per il deploy dell'allegato tecnico consegnato per la presentazione agile della \glo{Product Baseline};
+	\item \textbf{Stalker-ManualeUtente}: Viene usato per il deploy del Manuale Utente;
+	\item \textbf{Stalker-ManualeManutentore}: Viene usato per il deploy del Manuale Manutentore.
 \end{itemize}
 
 \paragraph{Template per issue}
@@ -110,7 +113,10 @@ Il \glo{repository} per la documentazione ha la seguente \glo{organizzazione} di
 		Per ogni incontro viene redatto un verbale che è presente in un'unica cartella;
 		\item \textbf{AnalisiDeiRequisiti/}: In questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\AdR{};
 		\item \textbf{PianoDiProgetto/}: Dentro a questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\PdP{};
-		\item \textbf{PianoDiQualifica/}: All'interno di questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\PdQ{}.
+		\item \textbf{PianoDiQualifica/}: All'interno di questa cartella sono presenti i file sorgente in \LaTeX{} per la generazione dell'\PdQ{};
+		\item \textbf{AllegatoTecnico/}: All'interno di questa cartella sono presenti i file sorgente in Markdown per la generazione dell'Allegato Tecnico;
+		\item \textbf{ManualeUtente/}: All'interno di questa cartella sono presenti i file sorgente in Markdown per la generazione del Manuale Utente;
+		\item \textbf{ManualeManutentore/}: All'interno di questa cartella sono presenti i file sorgente in Markdown per la generazione del Manuale Manutentore;
 	\end{itemize}
 	\item \textbf{DocumentazioneInterna/}: Dentro a questa cartella vi è la documentazione ad uso e consumo da parte dei membri del gruppo;
 	\begin{itemize}
