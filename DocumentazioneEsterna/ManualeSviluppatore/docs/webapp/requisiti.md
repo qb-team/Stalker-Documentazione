@@ -99,7 +99,7 @@ npm install bootstrap
 <br/>
 
 !!!info 
-    Viene utilizzato JSON come formato per lo scambio di dati tra web-app e Backend.
+    Viene utilizzato JSON come formato per lo scambio di dati tra web-app e backend.
 
 ### 3.2.4.5 Firebase
 

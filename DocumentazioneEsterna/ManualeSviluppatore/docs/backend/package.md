@@ -12,7 +12,7 @@ Nel seguente diagramma vengono rappresentate le classi che compongono il package
 <figcaption align=center> <em> Diagramma dei package - Package del modello </em> </figcaption>
 
 ## 4.5.3 API
-Nel seguente diagramma vengono rappresentate le interfacce che compongono il package delle api, che corrispondo alle interfacce per i Controller.  
+Nel seguente diagramma vengono rappresentate le interfacce che compongono il package delle api, che corrispondo alle interfacce per i Controller.
 ![!api](../Immagini/Backend/package/package-api.png)
 <figcaption align=center> <em> Diagramma dei package - Package delle API</em> </figcaption>
 
@@ -22,7 +22,7 @@ Nel seguente diagramma vengono rappresentate le classi che compongono il package
 <figcaption align=center> <em> Diagramma dei package - Package del controller</em> </figcaption>
 
 ## 4.5.5 Service
-Nel seguente diagramma vengono rappresentate le interfacce che compongono il package dei service, che rappresentano le interfacce per le classi che compongono il service layer.  
+Nel seguente diagramma vengono rappresentate le interfacce che compongono il package dei service, che rappresentano le interfacce per le classi del package serviceimpl.
 ![!service](../Immagini/Backend/package/package-service.png)
 <figcaption align=center> <em> Diagramma dei package - Package dei service </em> </figcaption>
 

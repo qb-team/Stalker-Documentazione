@@ -11,7 +11,7 @@ Ne deriva quindi l'applicazione del paradigma *separation of concerns*, che sepa
 ### 2.4.1.1 Model
 
 Il **Model** è la parte che ha la responsabilità di gestione dei dati e rappresenta il layer di persistenza dell'applicazione. La maggior parte delle operazioni e dei controlli vengono svolti al suo interno. Contiene anche i metodi che avviano le connessioni alle API ed interagiscono con esse eseguendo numerose funzionalità. Vi sono, ad esempio, i metodi che
-consentono la comunicazione con il Backend; parte del modello è costituito dalla lista delle organizzazioni che si ottiene avviando una connessione al server, scaricando i dati in
+consentono la comunicazione con il backend; parte del modello è costituito dalla lista delle organizzazioni che si ottiene avviando una connessione al server, scaricando i dati in
 formato JSON e salvandoli in seguito localmente.
 
 ### 2.4.1.2 View
