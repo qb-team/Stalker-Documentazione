@@ -1,6 +1,6 @@
 # 3.5 Diagrammi dei package
 Vengono presentati qui di seguito i diagrammi UML dei package relativi alla applicazione web.
-## 3.5.1 Visione generale delle dipendenze tra package ##
+## 3.5.1 Visione generale delle dipendenze tra package
 Nel seguente diagramma UML dei package vengono mostrate tutte le dipendenze che esistono tra i vari package.
 <div align="center">
   ![!Dipendenze](../Immagini/WebApp/PDiagram.png "Diagramma dei package - Visione delle dipendenze")
