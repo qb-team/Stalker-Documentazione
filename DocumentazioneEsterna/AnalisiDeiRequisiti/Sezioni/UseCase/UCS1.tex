@@ -1,10 +1,10 @@
 \subsubsection{UCS 1 - Accesso al server}%kite level
 
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
-\item \textbf{Precondizione:} L'amministratore non è autenticato.
-\item \textbf{Postcondizione:} L'amministratore viene autenticato all'interno del sistema tramite \glo{autenticazione}.
-\item \textbf{Scenario principale:} L'amministratore non autenticato può accedere, tramite l'\glo{autenticazione} [UCS 1.1], al server. 
+\item \textbf{Attori primari:} Utente non autenticato
+\item \textbf{Precondizione:} L'utente non è autenticato.
+\item \textbf{Postcondizione:} L'utente viene autenticato all'interno del sistema tramite \glo{autenticazione}.
+\item \textbf{Scenario principale:} L'utente non autenticato può accedere, tramite l'\glo{autenticazione} [UCS 1.1], al server. 
 %\item \textbf{Estensioni:}
 \end{itemize}
 
@@ -17,17 +17,17 @@
 \end{figure}
 
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
-\item \textbf{Precondizione:} L'amministratore non è autenticato.
-\item \textbf{Postcondizione:} L'amministratore è stato autenticato e può avere accesso alle funzionalità offerte dal sistema.
-\item \textbf{Scenario principale:} Amministratore non identificato inserisce e-mail e la password per autenticarsi al server.
-\item \textbf{Scenario alternativo 1:} L'amministratore tenta di accede con delle credenziali errate [UCS 10.1.1].
-\item \textbf{Scenario alternativo 2:} Qualora l'amministratore non dovesse ricordarsi la password può selezionare la funzionalità "password dimenticata" per reimpostarla [UCS 1.3].
+\item \textbf{Attori primari:} Utente non autenticato
+\item \textbf{Precondizione:} L'utente non è autenticato.
+\item \textbf{Postcondizione:} L'utente è stato autenticato e può avere accesso alle funzionalità offerte dal sistema.
+\item \textbf{Scenario principale:} Utente non autenticato inserisce e-mail e la password per autenticarsi al server.
+\item \textbf{Scenario alternativo 1:} L'utente tenta di accede con delle credenziali errate [UCS 10.1.1].
+\item \textbf{Scenario alternativo 2:} Qualora l'utente non dovesse ricordarsi la password può selezionare la funzionalità "password dimenticata" per reimpostarla [UCS 1.3].
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
         \item Inserimento e-mail [UCS 1.1.1];
         \item Inserimento password [UCS 1.1.2];
-        \item L'amministratore seleziona la funzionalità di accesso.
+        \item L'utente seleziona la funzionalità di accesso.
     \end{enumerate}
     \item \textbf{Inclusioni:}
 	\begin{itemize}		
@@ -43,19 +43,19 @@
 
 \subsubsection{UCS 1.1.1 - Inserimento e-mail}%sea level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
+\item \textbf{Attori primari:} Utente non autenticato
 %\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'amministratore non è autenticato.
-\item \textbf{Postcondizione:} L'amministratore ha inserito la propria e-mail.
+\item \textbf{Precondizione:} L'utente non è autenticato.
+\item \textbf{Postcondizione:} L'utente ha inserito la propria e-mail.
 \item \textbf{Scenario principale:} Inserimento dell'e-mail per l'autenticazione al Server.
 \end{itemize}
 
 \subsubsection{UCS 1.1.2 - Inserimento password}%sea level
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
+\item \textbf{Attori primari:} Utente non autenticato
 %\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:} L'amministratore non è autenticato.
-\item \textbf{Postcondizione:} L'amministratore ha inserito la propria password.
+\item \textbf{Precondizione:} L'utente non è autenticato.
+\item \textbf{Postcondizione:} L'utente ha inserito la propria password.
 \item \textbf{Scenario principale:} Inserimento della password per l'autenticazione al Server.
 \end{itemize}
 
@@ -70,11 +70,11 @@
 \end{figure}
 
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
+\item \textbf{Attori primari:} Utente non autenticato
 %\item \textbf{Attori secondari:}%opzionale
-\item \textbf{Precondizione:}  L'amministratore non è autenticato.
-\item \textbf{Postcondizione:} L'amministratore ha cambiato password con successo, la quale è stata salvata presso il sistema.
-\item \textbf{Scenario principale:} L'amministratore non autenticato inserisce i dati necessari per cambiare la propria password.
+\item \textbf{Precondizione:}  L'utente non è autenticato.
+\item \textbf{Postcondizione:} L'utente ha cambiato password con successo, la quale è stata salvata presso il sistema.
+\item \textbf{Scenario principale:} L'utente non autenticato inserisce i dati necessari per cambiare la propria password.
 \item \textbf{Flusso di eventi:}
     \begin{enumerate}
         \item Inserimento e-mail [UCS 1.3.1];
@@ -86,32 +86,32 @@
 
 \subsubsection{UCS 1.3.1 - Inserimento e-mail}
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
-\item \textbf{Precondizione:} L'amministratore non è autenticato. %è nella schermata di password dimenticata
-\item \textbf{Postcondizione:} L'amministratore ha inserito l'e-mail.
+\item \textbf{Attori primari:} Utente non autenticato
+\item \textbf{Precondizione:} L'utente non è autenticato. %è nella schermata di password dimenticata
+\item \textbf{Postcondizione:} L'utente ha inserito l'e-mail.
 \item \textbf{Scenario principale:} Inserimento dell'e-mail per cambiare la password.
 \end{itemize}
 
 \subsubsection{UCS 1.3.2 - E-mail cambio password}
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
-\item \textbf{Precondizione:} L'amministratore non è autenticato.
-\item \textbf{Postcondizione:} L'amministratore riceve l'email per il cambio password, ne consegue la necessità di reimpostare la password.
+\item \textbf{Attori primari:} Utente non autenticato
+\item \textbf{Precondizione:} L'utente non è autenticato.
+\item \textbf{Postcondizione:} L'utente riceve l'email per il cambio password, ne consegue la necessità di reimpostare la password.
 \item \textbf{Scenario principale:} Ricevimento dell'e-mail per il cambio password.
 \end{itemize}
 
 \subsubsection{UCS 1.3.3 - Nuova password}
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
-\item \textbf{Precondizione:}  L'amministratore non è autenticato.
-\item \textbf{Postcondizione:} L'amministratore inserisce la nuova password.
+\item \textbf{Attori primari:} Utente non autenticato
+\item \textbf{Precondizione:}  L'utente non è autenticato.
+\item \textbf{Postcondizione:} L'utente inserisce la nuova password.
 \item \textbf{Scenario principale:} Inserimento della nuova password.
 \end{itemize}
 
 \subsubsection{UCS 1.3.4 - Conferma nuova password}
 \begin{itemize}
-\item \textbf{Attori primari:} Amministratore non autenticato
-\item \textbf{Precondizione:} L'amministratore non è autenticato.
-\item \textbf{Postcondizione:} L'amministratore reinserisce la nuova password per confermarla.
+\item \textbf{Attori primari:} Utente non autenticato
+\item \textbf{Precondizione:} L'utente non è autenticato.
+\item \textbf{Postcondizione:} L'utente reinserisce la nuova password per confermarla.
 \item \textbf{Scenario principale:} Inserimento della conferma della nuova password.
 \end{itemize}

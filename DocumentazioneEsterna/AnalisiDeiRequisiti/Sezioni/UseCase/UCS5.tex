@@ -1,14 +1,14 @@
 \newpage
-\subsubsection{UCS 5 - Modifica delle funzionalità di tracciamento dell'organizzazione}%kite level
+\subsubsection{UCS 5 - Gestione delle funzionalità di tracciamento dell'organizzazione}%kite level
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.40]{Sezioni/UseCase/Immagini/UCS5.png}
-    \caption{UCS 5 - Modifica delle funzionalità di \glo{tracciamento} dell'\glo{organizzazione}}
+    \caption{UCS 5 - Gestione delle funzionalità di \glo{tracciamento} dell'\glo{organizzazione}}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attori primari:} Amministratore gestore
-    \item \textbf{Precondizione:} L'amministratore si trova nella sezione di modifica dei parametri dell'\glo{organizzazione}.
-    \item \textbf{Postcondizione:} L'amministratore ha modificato il \glo{perimetro} e i \glo{luoghi} per il \glo{tracciamento} e ha salvato le modifiche, le quali sono state salvate nel sistema.
+    \item \textbf{Precondizione:} L'amministratore si trova nella sezione di gestione dei parametri dell'\glo{organizzazione}.
+    \item \textbf{Postcondizione:} L'amministratore ha gestito l'organizzazione riguardo al \glo{tracciamento} e ha salvato le modifiche, le quali sono state salvate nel sistema.
     \item \textbf{Scenario principale:} L'amministratore può:
     \begin{itemize}    
         \item Selezionare un nuovo \glo{perimetro} di \glo{tracciamento} dell'\glo{organizzazione} [UCS 5.1];
@@ -37,6 +37,13 @@
 \end{itemize}
 
 \subsubsection{UCS 5.2 - Aggiunta di un luogo di tracciamento}%sea level
+
+\begin{figure}[h]
+	\centering
+    \includegraphics[scale=0.50]{Sezioni/UseCase/Immagini/UCS5.2.png}
+    \caption{UCS 5.2 - Aggiunta di un luogo di tracciamento}
+\end{figure}
+
 \begin{itemize}
     \item \textbf{Attori primari:} Amministratore gestore
     \item \textbf{Precondizione:} L'amministratore ha selezionato l’area geografica per il tracciamento dell'\glo{organizzazione}.
@@ -100,10 +107,10 @@
 
 \subsubsection{UCS 5.5 - Selezione dell'area geografica per il tracciamento}%sea level
 
-\begin{figure}[h!]
+\begin{figure}[h]
 	\centering
-    \includegraphics[scale=0.53]{Sezioni/UseCase/Immagini/UCS5.5.png}
-    \caption{UCS 5.5 - Selezione dell'area geografica di tracciamento}
+    \includegraphics[scale=0.50]{Sezioni/UseCase/Immagini/UCS5.5.png}
+    \caption{UCS 5.5 - Selezione dell'area geografica per il tracciamento}
 \end{figure}
 
 \begin{itemize}
@@ -118,15 +125,10 @@
     \item Sceglie dunque se il fine dell'area da tracciare è per un \glo{luogo} dell'\glo{organizzazione} oppure è per il \glo{perimetro} di tracciamento;
     \item L'amministratore può scegliere se selezionare l'area inserendo le coordinate geografiche [UCS 5.5.1] oppure tramite Google Maps API [UCS 5.5.2].
 \end{enumerate}
-%\item \textbf{Inclusioni:}
- %   \begin{enumerate}
-  %      \item UCS 5.5.1 - Selezione dell'area di \glo{tracciamento}tramite inserimento delle coordinate geografiche;
-   %     \item UCS 5.5.2 - Selezione dell'area di \glo{tracciamento}tramite Google Maps API.
-    %\end{enumerate}
 \item \textbf{Estensioni:}
-\begin{enumerate}
-    \item UCS 5.5.3 - Annullamento della selezione dell'area geografica per il tracciamento.
-\end{enumerate}
+    \begin{enumerate}
+        \item UCS 10.5.3 - Annullamento della selezione dell'area geografica per il tracciamento.
+    \end{enumerate}
 \end{itemize}
 
 \subsubsection{UCS 5.5.1 - Selezione dell'area di tracciamento tramite inserimento delle coordinate geografiche}%fish level
@@ -139,6 +141,10 @@
 \begin{enumerate}
     \item L'amministratore inserisce un certo numero di coordinate per i rispettivi vertici dell'area di \glo{tracciamento};
 \end{enumerate}
+\item \textbf{Generalizzazione:}
+	\begin{enumerate}
+        \item UCS 5.5 - Selezione dell'area geografica per il tracciamento;
+    \end{enumerate}
 \end{itemize}
 
 \subsubsection{UCS 5.5.2 - Selezione dell'area di tracciamento tramite Google Maps API}%fish level
@@ -152,17 +158,9 @@
 \begin{enumerate}
     \item L'amministratore interagisce con Google Maps API per selezionare l'area di \glo{tracciamento}.
 \end{enumerate}
+\item \textbf{Generalizzazione:}
+	\begin{enumerate}
+        \item UCS 5.5 - Selezione dell'area geografica per il tracciamento;
+    \end{enumerate}
 \end{itemize}
 
-\subsubsection{UCS 5.5.3 - Annullamento della selezione dell'area geografica per il tracciamento}%fish level
-\begin{itemize}
-\item \textbf{Attori primari:} Amministratore gestore
-\item \textbf{Precondizione:} L'amministratore si trova nella funzionalità per la selezione dell'area geografica.
-\item \textbf{Postcondizione:} L'amministratore è uscito dalla funzionalità per la selezione dell'area geografica per il tracciamento.
-\item \textbf{Scenario principale:} Annullamento della selezione dell'area geografica per il tracciamento.
-\item \textbf{Flusso di eventi:}
-    \begin{enumerate}
-    \item L'amministratore seleziona la funzionalità per l'annullamento della selezione dell'area geografica;
-    \item L'amministratore conferma di voler uscire dalla funzionalità di selezione dell'area geografica.
-    \end{enumerate} 
-\end{itemize}
