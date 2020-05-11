@@ -1,7 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
-0.5.0 | 2020-05-07 | Francesco Drago | Progettista | Federico Perin  | Approvazione documento.
+0.5.0 | 2020-05-07 | Francesco Drago | Responsabile | Federico Perin  | Approvazione documento.
 0.5.0 | 2020-05-07 | Emanuele Cisotto | Progettista | Federico Perin  | Aggiunto e verificato appendice glossario.
 0.4.0 | 2020-05-07 | Emanuele Cisotto | Progettista | Federico Perin  | Aggiunto e verificato immagini e contenuto descrittivo in §3.1 .
 0.3.0 | 2020-05-05 | Christian Mattei | Progettista | Tommaso Azzalin | Creazione e verifica §2.1 e §3.1, realizzazione dei video e caricati in seguito su YouTube.
