@@ -7,7 +7,7 @@
 </p>
 
 ## 1.1 Scopo documento
-Lo scopo di questo documento è quello spiegare attraverso una raccolta di video, supportati da una corrispondente parte testuale, come utilizza il sistema *Stalker*. 
+Lo scopo di questo documento è quello spiegare attraverso una raccolta di video, supportati da una corrispondente parte testuale, l'utilizzo corretto del sistema *Stalker*. 
 
 ## 1.2 Composizione prodotto
 
@@ -27,13 +27,13 @@ Il prodotto garantirà le seguenti funzionalità:
     amministratori per assisterli nella gestione e monitoraggio.
     L’amministratore avrà accesso alle seguenti funzionalità:
 
-    -   **Modifica ai parametri dell’organizzazione**: L’amministratore
+    -   **Modifica dei parametri dell’organizzazione**: L’amministratore
         può ridefinire il nome, la descrizione, l’immagine e l’indirizzo
         dell’organizzazione selezionata;
 
     -   **Modifica delle superfici geografiche di tracciamento dell’organizzazione**: 
 		Può modificare il perimetro di
-        tracciamento dell’organizzazione e quello degli specifici
+        tracciamento dell’organizzazione e quello di specifici
         luoghi, inserendo un numero a piacere di coordinate per
         delimitarne la superficie di tracciamento (manualmente o tramite
         Google Maps API);
@@ -43,24 +43,24 @@ Il prodotto garantirà le seguenti funzionalità:
 
     -   **Monitoraggio degli utenti tracciati**: L’amministratore può
         sapere, in tempo reale, quanti utenti si trovano all’interno dei
-        vari luoghi dell’organizzazione, o dell’organizzazione in
+        vari luoghi dell’organizzazione o dell’organizzazione in
         generale. Qualora l’organizzazione monitorata fosse gestita con
         tracciamento riconosciuto, l’amministratore è anche in grado di
         sapere l’identità dei vari utenti tracciati;
 
     -   **Visualizzazione degli accessi effettuati**: L’amministratore
         ha la possibilità di visualizzare lo storico degli accessi degli
-        utenti che hanno effettuato l’accesso all’organizzazione,
+        utenti che hanno effettuato l’accesso nell’organizzazione,
         qualora quest’ultima fosse monitorata con tracciamento
         riconosciuto. Per ogni accesso di uno specifico utente viene
-        mostrato: il timestamp di ingresso, quello di uscita e il suo
+        mostrato: il timestamp di ingresso, quello di uscita e il 
         tempo di permanenza presso l’organizzazione.
 
     -   **Estrapolazione di report tabellari riguardanti gli accessi dei dipendenti e gli accesi ai vari luoghi dell’organizzazione**:
 	
         L’amministratore può ricavare tabelle dei seguenti tipi:
 
-        -   Ore di entrata e uscita da un luogo per uno specifico
+        -   Ore di entrata e di uscita da un luogo di uno specifico
             utente;
 
         -   Totale di ore spese in ogni luogo per uno specifico utente;
@@ -68,10 +68,10 @@ Il prodotto garantirà le seguenti funzionalità:
         -   Il numero di dipendenti e il totale delle ore da loro
             trascorse in ogni luogo dell’organizzazione.
 
--   **Utenti:** gli utenti necessiteranno della possibilità, con
+-   **Utenti:** gli utenti avranno la possibilità, con
     l’applicazione, di registrarsi e autenticarsi nell'app, di venire
-    tracciati nelle organizzazioni e autenticarsi presso le
-    organizzazioni che lo richiedono. Agli utenti saranno fornite le
+    tracciati nelle organizzazioni e autenticarsi presso quelle 
+    che lo richiedono. Agli utenti saranno fornite le
     seguenti funzionalità:
 
     -   **Funzionalità di registrazione e autenticazione**: L’utente può
@@ -85,23 +85,21 @@ Il prodotto garantirà le seguenti funzionalità:
         lista delle organizzazioni, sia quelle con tracciamento
         autenticato che quelle senza. Può inoltre effettuare
         l’aggiornamento della lista in maniera manuale, tramite un
-        pulsante o temporizzata;
+        pulsante o temporizzazione;
 
     -   **Venire tracciati nelle organizzazioni desiderate**: L’utente
         verrà tracciato qualora effettuasse un movimento all’interno
         dell’organizzazione;
 
     -   **Gestione delle organizzazioni preferite**: L’utente può
-        selezionare un’organizzazione e renderla preferita, così facendo
-        essa sarà visualizzata nelle prime righe della lista delle
-        organizzazioni;
+    selezionare un’organizzazione e aggiungerla ai preferiti.
 
     -   **Visualizzare gli accessi effettuati presso le varie organizzazioni e i relativi luoghi**: 
 		L’utente ha a disposizione un registro degli accessi in cui sarà visualizzato l’orario di
         entrata e uscita da una determinata organizzazione, o luogo, e
         il tempo trascorso al suo interno;
 
-    -   **Passare in tracciabilità anonima e non presso organizzazioni private**: 
+    -   **Passare in tracciabilità anonima**: 
 		Un utente riconosciuto potrà decidere di passare
         all’anonimato, cioè di diventare un utente anonimo, selezionando
         l’apposita funzionalità.
