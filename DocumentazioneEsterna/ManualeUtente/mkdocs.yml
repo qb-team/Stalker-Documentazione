@@ -14,8 +14,8 @@ markdown_extensions:
   - codehilite 
 
 nav:
-  - Introduzione: "index.md"
   - Registro modifiche: "registromodifiche.md"
+  - Introduzione: "index.md"
   - App utenti:
      # - Installazione: "app/installazione.md"
       - Funzionalità: "app/funzionalita.md"
