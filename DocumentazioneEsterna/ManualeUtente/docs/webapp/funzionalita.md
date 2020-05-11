@@ -64,7 +64,7 @@ L'amministratore ha la possibilità di visionare le seguenti informazioni di una
 - Data di inserimento dell'organizzazione in Stalker;
 - Data dell'ultima modifica.
 
-Per poterlo fare, si deve cliccare nel menu laterale a sinistra la voce *Organizzazione* e poi sulla voce *Informazioni sull'organizzazione*. Verrà quindi aperta una finestra con una tabella avente le informazioni descritte in precedenza. Procedura illustrata nel seguente video:
+Per poterlo fare, si deve cliccare nel menù laterale a sinistra la voce *Organizzazione* e poi sulla voce *Informazioni sull'organizzazione*. Verrà quindi aperta una finestra con una tabella avente le informazioni descritte in precedenza. Procedura illustrata nel seguente video:
 
 <iframe width="720" src="https://www.youtube.com/embed/RAMu1o1U50o" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -83,7 +83,7 @@ Se l'amministratore si dovesse trovare nella pagina di un'organizzazione e voles
 <figcaption align="center"> <em> Schermata del tracciamento</em> </figcaption> 
 
 
-L'amministratore ha la possibilità di monitorare le presenze degli utenti, in tempo reale, all'interno dell'organizzazione. Per farlo si dovrà cliccare nel menu laterale a sinistra sulla voce *Tracciamento* e dopo di che cliccare sulla voce *presenze attuali nell'organizzazione*. Verrà perciò aperta una finestra con un contatore di presenze. I passi sono mostrati nel seguente video.
+L'amministratore ha la possibilità di monitorare le presenze degli utenti, in tempo reale, all'interno dell'organizzazione. Per farlo si dovrà cliccare nel menù laterale a sinistra sulla voce *Tracciamento* e dopo di che cliccare sulla voce *presenze attuali nell'organizzazione*. Verrà perciò aperta una finestra con un contatore di presenze. I passi sono mostrati nel seguente video.
 
 <iframe width="720" src="https://www.youtube.com/embed/VuoW2Hc162I" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -94,7 +94,7 @@ L'amministratore ha la possibilità di monitorare le presenze degli utenti, in t
 
 L'amministratore ha la possibilità di visionare il perimetro dell'organizzazione tramite una mappa. 
 
-Per farlo si dovrà cliccare nel menu laterale a sinistra sulla voce *Organizzazione* e quindi cliccare sulla voce *Perimetro di tracciamento dell'organizzazione*. Verrà perciò aperta una finestra con una mappa geografica dove verrà mostrata la posizione dell'organizzazione e il suo perimetro di tracciamento. Il seguente video ne mostra la procedure:
+Per farlo si dovrà cliccare nel menù laterale a sinistra sulla voce *Organizzazione* e quindi cliccare sulla voce *Perimetro di tracciamento dell'organizzazione*. Verrà perciò aperta una finestra con una mappa geografica dove verrà mostrata la posizione dell'organizzazione e il suo perimetro di tracciamento. Il seguente video ne mostra la procedure:
 
 <iframe width="720" src="https://www.youtube.com/embed/Q_nwWf6GkxI" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
