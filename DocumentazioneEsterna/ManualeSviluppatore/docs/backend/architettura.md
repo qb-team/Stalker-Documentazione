@@ -1,13 +1,10 @@
 # 4.4 Architettura 
-Il framework Spring utilizza il pattern architetturale *MVC*, ovvero:
-
-- *Model*: sono le classi che si occupano di accedere e rappresentare i dati utili per implementare la logica di business;
-- *View*: si occupa di creare l’interfaccia con cui l’utente interagirà con il sistema;
-- *Controller*: sono le classi che si occupano di implementare la logica di business, ricevono input ed elaborano dati.  
-
-In questo caso, avendo sviluppato solamente un backend e non un applicazione comprendente anche una "View", del pattern quest’ultima non è stata implementata, poiché il solo compito del backend è fornire end-point a cui permettere l’applicazione utenti e la applicazione web amministratori di interfacciarsi per inviare o ricevere dati.  
-![!MVC](../Immagini/Backend/mvc.png)  
-L’implementazione di Spring del pattern MVC è inoltre fusa con il pattern Front Controller, che implementa una componente chiamata `DispatcherServlet`. Essa si occupa di gestire tutte le richieste provenienti dalla rete e inviate (*to dispatch*) alle classi Controller in grado di soddisfarle, ovvero quelle che sono mappate a un certo URI ricercato tramite un mapping effettuato da un’altra componente definita *Handler Mapping*.
+Per sviluppare il Backend abbiamo utilizzato la **layered architecture**, in cui le varie funzionalità del software sono logicamente separate, ovvero suddivise su più strati o livelli software differenti in comunicazione tra loro.  
+Ogni strato è caratterizzato  dallo svolgimento di un singolo e specifico ruolo, separato dagli altri strati, ma che ha dipendenze solo verso gli strati più bassi e offre servizi solo agli strati superiori rispetto a lui.
+![!Spring Boot](../Immagini/Backend/mvc.png)   
+Il presentation layer, nella nostra architettura, è composto dalle API che ricevono richieste dai clients e comunicano con il business layer.  
+Questa architettura ci garantisce facilità di testing e mantenimento dato il disaccomppiamentro tra i diversi layer.  
+Per gestire tutte le richieste provenienti dal presentation layer Spring utilizza il pattern Front Controller, che implementa una componente chiamata `DispatcherServlet`. Essa si occupa di gestire tutte le richieste provenienti dalla rete e inviate (*to dispatch*) alle classi Controller in grado di soddisfarle, ovvero quelle che sono mappate a un certo URI ricercato tramite un mapping effettuato da un’altra componente definita *Handler Mapping*.
 Questo Handler sfrutta la annotation `@RequestMapping` per creare un’associazione tra URL e metodo Java da invocare che è stato scritto in una classe annotata `@Controller`.  
 Non richiedendo particolari configurazioni, si è deciso di utilizzare il modulo Spring Boot, che evita allo sviluppatore di occuparsi di tutta la configurazione fin qui accennata. Di ciò che è stato trattato fino ad ora si trova progettato e implementato all’interno del backend solamente i controller ed il modello.  
 ![!Spring Boot](../Immagini/Backend/springboot.png)   
