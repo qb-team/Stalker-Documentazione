@@ -49,6 +49,9 @@ In ingegneria del software è una pratica che si applica in contesti in cui lo s
 ### Docker
 È un progetto open source che automatizza il deployment di applicazioni all'interno di contenitori software, fornendo un'astrazione aggiuntiva grazie alla virtualizzazione a livello di sistema operativo di Linux.
 
+### Drawer
+E' un sidebar che fornisce l'accesso a destinazioni e funzionalità dell'app, come il cambio di account. Il menu drawer si sovrappone al resto del contenuto, senza spostarlo. 
+
 ## E
 
 ### End to end (test)

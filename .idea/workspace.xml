@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="98fcebdb-e39c-4720-8e89-d495b1f85354" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/app/architettura.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/app/architettura.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/app/requisiti.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/app/requisiti.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/Backend/mvc.png" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/Immagini/Backend/mvc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/backend/architettura.md" beforeDir="false" afterPath="$PROJECT_DIR$/DocumentazioneEsterna/ManualeSviluppatore/docs/backend/architettura.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +12,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/manuale_sviluppatore" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bRq5euoe39gNxlamFeTNHdSUYe" />
@@ -41,7 +46,11 @@
       <workItem from="1588686213788" duration="6890000" />
       <workItem from="1588765806619" duration="608000" />
       <workItem from="1588797614750" duration="1035000" />
-      <workItem from="1588841428482" duration="1106000" />
+      <workItem from="1588841428482" duration="1413000" />
+      <workItem from="1588844108163" duration="2523000" />
+      <workItem from="1589119566875" duration="13000" />
+      <workItem from="1589188382417" duration="3413000" />
+      <workItem from="1589191821370" duration="29000" />
     </task>
     <servers />
   </component>
@@ -49,10 +58,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="976" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1588841432562">
+    <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1589119575682">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="976" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1588841432562" />
+    <state x="1060" y="455" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1589119575682" />
+    <state x="976" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1589192015901">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="976" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1589192015901" />
     <state x="939" y="349" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588798071532">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
