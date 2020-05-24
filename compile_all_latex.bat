@@ -22,6 +22,12 @@ latexmk -c > NUL
 cd ..\VE_2020_02_27
 latexmk -pdf VE_2020_02_27.tex > NUL
 latexmk -c > NUL
+cd ..\VE_2020_03_24
+latexmk -pdf VE_2020_03_24.tex > NUL
+latexmk -c > NUL
+cd ..\VE_2020_03_31
+latexmk -pdf VE_2020_03_31.tex > NUL
+latexmk -c > NUL
 
 echo Compilazione Documentazione Interna
 cd ..\..\..\DocumentazioneInterna
@@ -71,12 +77,35 @@ latexmk -c > NUL
 cd ..\VI_2020_02_26
 latexmk -pdf VI_2020_02_26.tex > NUL
 latexmk -c > NUL
+cd ..\VI_2020_03_16
+latexmk -pdf VI_2020_03_16.tex > NUL
+latexmk -c > NUL
+cd ..\VI_2020_04_05
+latexmk -pdf VI_2020_04_05.tex > NUL
+latexmk -c > NUL
+cd ..\VI_2020_04_09
+latexmk -pdf VI_2020_04_09.tex > NUL
+latexmk -c > NUL
 
 echo Compilazione Glossario
 cd ..\..\..
 
 cd Glossario
 latexmk -pdf Glossario.tex > NUL
+latexmk -c > NUL
+
+cd ..
+
+echo Compilazione Lettere di presentazione
+
+cd LetteraPresentazioneRR
+latexmk -pdf LetteraDiPresentazioneRR.tex > NUL
+latexmk -c > NUL
+cd ..\LetteraPresentazioneRP
+latexmk -pdf LetteraDiPresentazioneRP.tex > NUL
+latexmk -c > NUL
+cd ..\LetteraPresentazioneRQ
+latexmk -pdf LetteraDiPresentazioneRQ.tex > NUL
 latexmk -c > NUL
 
 cd ..
@@ -99,6 +128,10 @@ cd ..\VE_2020_02_18
 copy VE_2020_02_18.pdf ..\..\..\FileCompilati\.
 cd ..\VE_2020_02_27
 copy VE_2020_02_27.pdf ..\..\..\FileCompilati\.
+cd ..\VE_2020_03_24
+copy VE_2020_03_24.pdf ..\..\..\FileCompilati\.
+cd ..\VE_2020_03_31
+copy VE_2020_03_31.pdf ..\..\..\FileCompilati\.
 
 echo Copia dei file Documentazione Interna
 cd ..\..\..\DocumentazioneInterna
@@ -134,6 +167,12 @@ cd ..\VI_2020_02_24
 copy VI_2020_02_24.pdf ..\..\..\FileCompilati\.
 cd ..\VI_2020_02_26
 copy VI_2020_02_26.pdf ..\..\..\FileCompilati\.
+cd ..\VI_2020_03_16
+copy VI_2020_03_16.pdf ..\..\..\FileCompilati\.
+cd ..\VI_2020_04_05
+copy VI_2020_04_05.pdf ..\..\..\FileCompilati\.
+cd ..\VI_2020_04_09
+copy VI_2020_04_09.pdf ..\..\..\FileCompilati\.
 
 echo Copia dei file Glossario
 cd ..\..\..
@@ -141,4 +180,12 @@ cd ..\..\..
 cd Glossario
 copy Glossario.pdf ..\FileCompilati\.
 
+echo Copia dei file Lettera Presentazione
 cd ..
+
+cd LetteraPresentazioneRR
+copy LetteraDiPresentazioneRR.pdf ..\FileCompilati\.
+cd ..\LetteraPresentazioneRP
+copy LetteraDiPresentazioneRP.pdf ..\FileCompilati\.
+cd ..\LetteraPresentazioneRQ
+copy LetteraDiPresentazioneRQ.pdf ..\FileCompilati\.

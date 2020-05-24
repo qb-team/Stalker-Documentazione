@@ -2,156 +2,49 @@
 La qualità di un prodotto software è valutata secondo criteri semplici e comprensibili a tutti, utenti e sviluppatori, operatori e addetti alla manutenzione.
 Per valutare tale qualità il gruppo \Gruppo{} ha deciso di far riferimento allo standard ISO/IEC 9126, per soddisfare alcuni degli standard di qualità tra quelli proposti dal medesimo, ovvero quelli che il gruppo ha ritenuto necessari per il progetto; La selezione è riportata nelle \NdP{}. In particolare, lo standard ISO/IEC 9126 descrive le seguenti norme:
 \begin{itemize}
-    \item Un modello di qualità del software; 
+    \item Un modello di qualità del software;
     \item Le caratteristiche che determinano la qualità del software;
     \item Le metriche per la misurazione della qualità del software.
 \end{itemize}
 
 \subsection{Metriche interne}
 %Le metriche della qualità "interne" del software sono utilizzate durante la fase di sviluppo e permettono di valutare il comportamento del software dal punto di vista degli sviluppatori e di predire quello che sarà il punto di vista esterno degli utenti.
-
-\subsubsection{Usabilità} 
+\subsubsection{Usabilità}
 Capacità del prodotto software di essere comprensibile, di poter essere usato e compreso facilmente, in ogni sua parte, da qualsiasi utente che lo voglia usare.\\
-
-\paragraph{Metrica MPD1 - Attrattività della User Interface (UI)} 
-\begin{itemize}
-    \item \textbf{Descrizione:} Misurare quanto attrattive risultino le interfacce agli utenti dal punto di vista grafico.
-    Gli utenti dovranno poi compilare un questionario in base all'esperienza che hanno fatto;
-    Il valore medio di tale valutazione è ritenuto valido se almeno tre utenti hanno compilato il questionario. 
-    Viene utilizzata una scala a quattro valori: Molto attrattivo, Attrattivo, Poco attrattivo, Non Attrattivo;
-\item \textbf{Formula:}$$AUI = V(q) $$
-    con:
-        \begin{itemize}
-        \item $V$ = Valore medio dei risultati;
-        \item $q$ = Questionario compilato;
-        \end{itemize}
-    \item \textbf{Range di valori che può assumere:}
-        \begin{itemize}
-            \item \textbf{Accettabile:} $AUI = Attrattivo$ 
-            \item \textbf{Ottimale:} $AUI = Molto \; attrattivo$
-        \end{itemize}
-\end{itemize}
-
-\subsubsection{Manutenibilità} 
-Capacità di predire il livello di impegno richiesto per modificare il prodotto software dal punto di vista degli sviluppatori.           
-\paragraph{Metrica MPD2 - Complessità Ciclomatica del Software} 
-    \begin{itemize}
-    \item \textbf{Descrizione:} Misurare la complessità ciclomatica dei singoli moduli sviluppati;
- \item \textbf{Formula:} $$CCS = e - n + p$$
-    con:
-    \begin{itemize}
-        \item $G$ = grafo del modulo;
-        \item $e$ = numero di congiunzioni tra statement (corrispondenti agli archi di un grafo);
-        \item $n$ = numero di statement (nodi presenti nel grafo);
-        \item $p$ = numero delle componenti connesse da ogni nodo (per esecuzione sequenziale: p=2, essendovi un predecessore e un successore);
-    \end{itemize}
-    \item \textbf{Range di valori che può assumere:}
-    \begin{itemize}
-        \item \textbf{Accettabile:} $1 \leq CS \leq 7 $
-        \item \textbf{Ottimale:} $ 1 \leq CS \leq 4 $
-    \end{itemize}
-\end{itemize}
-
-\paragraph{Metrica MPD3 - Unità Documentate} 
-\begin{itemize}
-    \item \textbf{Descrizione:} Misurare in percentuale il numero di unità di codice con documentazione tecnica;
-  \item \textbf{Formula:} $$UD = {|unit\grave{a} \; di \; codice \; con \; documentazione \; tecnica| \over |unit\grave{a} \; di \; codice|} \cdot 100$$
-    \item \textbf{Range di valori che può assumere:}
-    \begin{itemize}
-        \item \textbf{Accettabile:} $UD \geq 80\%  $
-        \item \textbf{Ottimale:} $UD = 100\%$
-    \end{itemize}
-\end{itemize}
-              
-       
+\vspace{0.3cm}
+\subsubsection{Manutenibilità}
+Capacità di predire il livello di impegno richiesto per modificare il prodotto software dal punto di vista degli sviluppatori.
+  \rowcolors{2}{grigetto}{white}
+  \renewcommand{\arraystretch}{1.5}
+\begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
+	\caption{Tabella metriche per la manutenibilità}\\
+	\rowcolor{darkblue}
+	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
+	MPD1 & Complessità Ciclomatica del Software & $CCS $ & $1 \leq CCS \leq 7 $ & $1 \leq CCS \leq 4$\\
+\end{longtable}
 \subsection{Metriche esterne}
 %Le metriche relative alla qualità "esterna" indirizzano le caratteristiche esteriori del software, cioè quelle rilevabili direttamente dagli utenti e dagli operatori.
 
 \subsubsection{Affidabilità}
 Capacità del prodotto software di dimostrare un adeguato livello di affidabilità quando opererà nel sistema in cui è previsto debba operare.
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
+	\caption{Tabella metriche per la affidabilità}\\
+	\rowcolor{darkblue}
+	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
+	MPD2 & Presenza di Code Smell & $CS$ & $CS \leq 50 $ & $CS = 10 $\\
+	MPD3 & Presenza di Vulnerabilità & $VLN$ & $VLN = 2$ & $VLN = 0 $\\
+	MPD4 & Presenza di Bug & $BUG$ & $BUG = 20 $ & $BUG = 0 $\\
+\end{longtable}
 
-\paragraph{Metrica MPD4 - Presenza di Code Smell} %CS
-\begin{itemize}
-	\item \textbf{Descrizione:} Misurare il numero di \glo{code smell} presenti all'interno del codice del prodotto;
-	\item \textbf{Formula:} $$CS = {|numero \; di \; code \; smell \; rilevati|}$$
-		\item \textbf{Range di valori che può assumere:}
-	\begin{itemize}
-		\item \textbf{Accettabile:} $CS = 50 $
-		\item \textbf{Ottimale:} $CS = 0 $
-	\end{itemize}
-\end{itemize}
-
-\paragraph{Metrica MPD5 - Presenza di Vulnerabilità} %VLN
-\begin{itemize}
-	\item \textbf{Descrizione:} Misurare il numero di \glo{vulnerabilità} presenti all'interno del codice del prodotto;
-	\item \textbf{Formula:} $$VLN = {|numero \; di \; vulnerabilita' \; rilevate|}$$
-		\begin{itemize}
-		\item \textbf{Accettabile:} $CS = 0 $
-		\item \textbf{Ottimale:} $CS = 0 $
-	\end{itemize}
-\end{itemize}
-
-\paragraph{Metrica MPD6 - Presenza di Bug} %BUG
-\begin{itemize}
-	\item \textbf{Descrizione:} Misurare il numero di \glo{bug} presenti all'interno del codice del prodotto;
-	\item \textbf{Formula:} $$BUG = {|numero \; di \; bug \; rilevati|}$$
-		\begin{itemize}
-		\item \textbf{Accettabile:} $CS = 0 $
-		\item \textbf{Ottimale:} $CS = 0 $
-	\end{itemize}
-\end{itemize}
-
-\paragraph{Metrica MPD7 - Maturità dei Test} 
-\begin{itemize}
-	\item \textbf{Descrizione:} Misurare la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire piena copertura dei requisiti sia funzionali che qualitativi(usabilità, affidabilità, efficienza);
-	\item \textbf{Formula:} $$MT = {|casi \; di \; test \; eseguiti \; con \; successo| \over |casi \; di \; test \; previsti|} \cdot 100$$
-	\item \textbf{Range di valori che può assumere:}
-	\begin{itemize}
-		\item \textbf{Accettabile:} $MT = 100\% $
-		\item \textbf{Ottimale:} $MT = 100\% $
-	\end{itemize}
-\end{itemize}
-
-       
 \subsubsection{Usabilità}
 Capacità del prodotto software di essere facilmente comprensibile, apprendibile ed utilizzabile per ogni utente intenzionato a usarlo.
-
-\paragraph{Metrica MPD8 - Profondità Strutturale dell'Interfaccia}
-\begin{itemize}
-    \item \textbf{Descrizione:} È sconsigliato per le interfacce utente l'utilizzo di una struttura troppo profonda per questioni di usabilità. L'utente non deve fare troppi passaggi per raggiungere la funzionalità desiderata;
-    \item \textbf{Range di valori che può assumere:}
-    \begin{itemize}
-        \item \textbf{Accettabile:} $1 \leq PSI \leq 5$
-        \item \textbf{Ottimale:} $1 \leq PSI \leq 3$
-    \end{itemize}
-\end{itemize}
-
-\subsection{Tabella riassuntiva metriche del prodotto}
-
 \rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}
 \begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
-\caption{Tabella metriche interne del prodotto}\\
-\rowcolor{darkblue}
-\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
-\endfirsthead
-\rowcolor{darkblue}
-\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
-\endhead
-    MPD1 & Attrattività della User Interface (UI) & $AUI$ & $AUI = Attrattivo$ &  $AUI = Molto \; attrattivo$\\
-    MPD2 & Complessità Ciclomatica del Software & $CCS $ & $1 \leq CCS \leq 7 $ & $1 \leq CCS \leq 4$\\
-    MPD3 & Unità Documentate & $UD$ & $UD \geq 80\%$ & $UD = 100\%$\\
-\end{longtable} 
-\newpage
-\rowcolors{2}{grigetto}{white}
-\renewcommand{\arraystretch}{1.5}
-\begin{longtable}{ c C{4cm} c C{3.5cm} C{3.5cm}}
-\caption{Tabella metriche esterne del prodotto}\\
-\rowcolor{darkblue}
-\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
-    MPD4 & Presenza di Code Smell & $CS$ & $CS \leq 50 $ & $CS = 0 $\\
-    MPD5 & Presenza di Vulnerabilità & $VLN$ & $VLN = 0$ & $VLN = 0 $\\
-    MPD6 & Presenza di Bug & $BUG$ & $BUG = 0 $ & $BUG = 0 $\\
-    MPD7 & Maturità dei Test & $MT$ & $MT = 100\%$ & $MT = 100\%$\\
-    MPD8 & Profondità Strutturale dell'Interfaccia & $PSI$ & $1 \leq PSI \leq 5$ &$1 \leq PSI \leq 3$\\
+	\caption{Tabella metriche per l'usabilità}\\
+	\rowcolor{darkblue}
+	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Sigla}} & \textcolor{white}{\textbf{Range Accettabile}} & \textcolor{white}{\textbf{Range Ottimale}}\\
+	 MPD5 & Profondità Strutturale dell'Interfaccia & $PSI$ & $1 \leq PSI \leq 5$ &$1 \leq PSI \leq 3$\\
 \end{longtable}

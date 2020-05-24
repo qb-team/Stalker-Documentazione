@@ -1,17 +1,26 @@
 %scritto da \PF{} e\AT{}
 \subsection{Verifica}
-\subsubsection{Obiettivo}
+\subsubsection{Scopo}
 Il processo di verifica si pone l’obiettivo di perseguire la realizzazione di un prodotto corretto e conforme alle aspettative degli \glo{stakeholder}, in particolar modo assicurandosi che l'esecuzione delle attività dei processi non introduca errori.
 Deve essere svolto durante ogni \glo{fase} del ciclo di vita del software.
-
+\subsubsection{Aspettative}
+Per un corretto svolgimento del processo di verifica si devo rispettare i seguenti punti:
+\begin{itemize} 
+    \item individuare le tecniche di verifica;
+    \item individuare gli strumenti di verifica;
+    \item individuare e correggere i difetti applicando gli strumenti;
+    \item provare che il sistema soddisfi i requisiti.
+\end{itemize}
+\subsubsection{Descrizione}
+Il processo di verifica prende in input ciò che è stato prodotto sia nella documentazione sia nel codice e lo restituisce in uno stato conforme alle aspettative tramite a processi di test. Ad termine del corretto svolgimento del processo di verifica sussegue il processo di validazione.
 \subsubsection{Attività}
 Per eseguire il processo di verifica vengono svolte le seguenti attività:
 \begin{itemize} 
     \item \textbf{Analisi statica};
     \item \textbf{Analisi dinamica}.
 \end{itemize}
-
-\paragraph{Analisi statica} 
+\paragraph{Implementazione del processo}
+\subparagraph*{Analisi statica} 
 L'analisi statica è un'attività di verifica da effettuare fin da subito sulla documentazione prodotta e, non appena disponibile, sul codice sorgente, poiché non richiede alcuna esecuzione.
 Essa si accerta che ciò che il gruppo ha prodotto sia conforme alle regole indicate nel \PdQ{}, che non ci siano errori e difetti, e che siano invece presenti le proprietà desiderate.
 Per effettuare l’attività di analisi statica vengono impiegati due possibili metodi: \textbf{walkthrough} e \textbf{inspection}.
@@ -25,11 +34,11 @@ Inoltre, non tutti membri del gruppo hanno ampie conoscenze in tema di verifica,
 L'inspection è un metodo di verifica effettuato dai verificatori, il cui obiettivo è effettuare verifiche mirate sugli aspetti critici del prodotto al fine di rilevare la presenza di difetti e/o anomalie.
 I verificatori, una volta acquisita una più ampia conoscenza sul prodotto da verificare, costruiscono e utilizzano una lista all’interno della quale vi sono gli aspetti critici da andare a verificare e dove verificarli.
 
-\paragraph{Analisi dinamica} 
+\subparagraph*{Analisi dinamica} 
 L'analisi dinamica è un'attività di verifica che viene eseguita esclusivamente sul prodotto software (e non sulla documentazione), in quanto ne richiede l'esecuzione per essere effettuata.
 Viene applicata sul prodotto software attraverso i test, con l’obiettivo di individuarne difetti e/o anomalie.
 
-\subparagraph{Test} 
+\subparagraph*{Test} 
 I test sono necessari per poter svolgere l'analisi dinamica del prodotto software.
 I test devono essere automatici e ripetibili:
 \begin{itemize}
@@ -43,9 +52,17 @@ Per garantire questa caratteristica serve che ci sia determinismo, che è garant
     \item Non cambia lo stato iniziale del sistema.
 \end{itemize}
 \end{itemize}
+Per ogni test, verrà costruita una tabella dove verranno riportato il loro stato di esecuzione:
+\begin{itemize}
+	\item \textbf{NS}: Il test non è stato superato;
+	\item \textbf{S}: Il test è stato superato;
+	\item \textbf{NI}: Il test non è stato implementato;
+	\item \textbf{I}: Il test è stato implementato.
+\end{itemize}
+
 Ci sono diverse tipologie di test del software, ognuna delle quali ha un diverso oggetto di verifica e scopo.
 
-\subparagraph{Test di unità} 
+\subparagraph*{Test di unità} 
 I test di unità sono del codice, prodotti dal programmatore, che verificano il corretto comportamento di una singola unità del programma.
 Per unità si intende una funzionalità atomica che può essere verificata in modo isolato, in modo da assicurare che il risultato del test non sia influenzato dal comportamento di altre unità. In questo senso un'unità può essere un metodo, una classe o addirittura un package.
 È definito modulo una frazione dell'unità.
@@ -57,31 +74,134 @@ Per i test di unità vengono introdotti i seguenti concetti:
     \item \textbf{stub}: Componente passiva che simula il comportamento di un modulo dell'unità (si vuole verificare l'unità e non l'integrazione fra questa e il modulo);
     \item \textbf{logger}: Componente non intrusivo che registra gli esiti dell'esecuzione dei test.
 \end{itemize}
+Ogni test di unità è identificato da un codice univoco, così formato:
+\begin{center}
+	\item \textbf{TU[Destinazione][Numero progressivo]}
+\end{center}
+con:
+\begin{itemize}
+	\item \textbf{[Destinazione]}:
+	\begin{itemize}
+		\item \textbf{A}: Test di sistema che fa riferimento all'applicazione;
+		\item \textbf{W}: Test di sistema che fa riferimento alla web-app;
+		\item \textbf{B}: Test di sistema che fa riferimento al server.
+	\end{itemize}
+	\item \textbf{[Numero progressivo]}: Il numero del test di unità in relazione alla sua destinazione, progressivo perché diverso per ogni test e in serie. Il conteggio parte da 1.
+\end{itemize}
 
-\subparagraph{Test d’integrazione} 
+\subparagraph*{Test di integrazione} 
 Servono per verificare incrementalmente il corretto funzionamento delle componenti del sistema.
 Una volta che le unità sono verificate e passano con successo i relativi test, è possibile verificare il loro comportamento quando eseguite assieme.
+Ogni test di integrazione è identificato da un codice univoco, così formato:
+\begin{center}
+	\item \textbf{TI[Destinazione][Numero progressivo]}
+\end{center}
+con:
+\begin{itemize}
+	\item \textbf{[Destinazione]}:
+	\begin{itemize}
+		\item \textbf{A}: Test di sistema che fa riferimento all'applicazione;
+		\item \textbf{W}: Test di sistema che fa riferimento alla web-app;
+		\item \textbf{B}: Test di sistema che fa riferimento al server.
+	\end{itemize}
+	\item \textbf{[Numero progressivo]}: Il numero del test di integrazione in relazione alla sua destinazione, progressivo perché diverso per ogni test e in serie. Il conteggio parte da 1.
+\end{itemize}
 
-\subparagraph{Test di sistema} 
+\subparagraph*{Test di sistema} 
 I test di sistema verificano il comportamento dell’intero sistema.
 Si è quindi nella fase in cui tutte le componenti del sistema sono state integrate (i test di integrazione e di unità passano con successo) e si può verificare il loro comportamento all’interno del sistema in cui il prodotto dovrà essere installato o reso disponibile.
 L'obiettivo è verificare che siano rispettati i requisiti definiti con il committente.
 Quando questi test vengono svolti con la presenza del committente vengono definiti \textbf{test di accettazione} o \textbf{collaudo}. Se superati, permettono di procedere con il rilascio del prodotto software.
 Ogni test di sistema è identificato da un codice univoco, così formato:
 \begin{center}
-    TS[Destinazione][Numero progressivo]
+    	\item \textbf{TS[Destinazione][Numero progressivo]}
 \end{center}
 con:
 \begin{itemize}
     \item \textbf{[Destinazione]}:
     \begin{itemize}
         \item \textbf{A}: Test di sistema che fa riferimento all'applicazione;
-        \item \textbf{S}: Test di sistema che fa riferimento al server.
+        \item \textbf{S}: Test di sistema che fa riferimento alla web-app.
     \end{itemize}
     \item \textbf{[Numero progressivo]}: Il numero del test di sistema in relazione alla sua destinazione, progressivo perché diverso per ogni test e in serie. Il conteggio parte da 1.
 \end{itemize}
 
-\subparagraph{Test di regressione}
-I test di regressione hanno come obiettivo di verificare l'assenza di regressioni (ovvero malfunzionamenti o comportamenti imprevisti) nel caso in cui si introduca una modifica su una componente dalla quale ne dipendono altre.
-L'obiettivo di questi test è verificare che le componenti continuino a funzionare correttamente senza anomalie, ossia verificare che una modifica non pregiudichi le funzionalità già verificate con i test effettuati in precedenza.
-Non è necessario identificare nuovi test, è sufficiente accertarsi che quelli presenti restituiscano i valori attesi.
+\subsubsection{Metriche}
+
+\paragraph{Code coverage}
+\begin{itemize}
+	\item \textbf{Codice:} MPC8
+	\item \textbf{Descrizione:} È la percentuale di copertura del codice attraversato dai test rispetto al totale del codice di base. Per dare una misurazione in termini di grandezza si adoperano le linee di codice come riferimento;
+	\item \textbf{Processo di riferimento:} \glo{Processi} di verifica;
+	\item \textbf{Sigla:} $CC$
+	\item \textbf{Formula:} $$CC = \frac{|linee \; di \; codice \; percorse \; dai  \; test|}{|linee \; di \; codice \; totali|} \; \cdot \; 100$$
+	\item \textbf{Strumenti utilizzati:} Coveralls.
+\end{itemize}
+
+\paragraph{Documentazione - Branch Coverage}
+\begin{itemize}
+    \item \textbf{Codice:} MPC9
+    \item \textbf{Descrizione:} Percentuale di rami condizionali coperti da test;
+    \item \textbf{Processo di riferimento:} Verifica;
+    \item \textbf{Sigla:} $BC$
+    \item \textbf{Formula:} $$BC = \frac{|rami \; condizionali \; coperti \; da \; test|}{|rami \; condizionali \; totali|} \; \cdot \; 100$$
+    \item \textbf{Strumenti utilizzati:} Coveralls.
+\end{itemize}
+
+\paragraph{Documentazione - Statement Coverage}
+\begin{itemize}
+    \item \textbf{Codice:} MPC10
+    \item \textbf{Descrizione:} Percentuale di istruzioni coperte da test;
+    \item \textbf{Processo di riferimento:} Verifica;
+    \item \textbf{Sigla:} $SC$
+    \item \textbf{Formula:} $$SC = \frac{|istruzioni \; coperte \; da \; test|}{|istruzioni \; totali|} \; \cdot \; 100$$
+    \item \textbf{Strumenti utilizzati:} Coveralls.
+\end{itemize}
+
+\paragraph{Presenza di Code Smell} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD2
+    \item \textbf{Descrizione:} Misurare il numero di \glo{code smell} presenti all'interno del codice del prodotto;
+    \item \textbf{Attributo di riferimento:} \glo{Manutenibilità};
+    \item \textbf{Sigla:} $CS$
+    \item \textbf{Formula:} $$CS = {numero \; di \; code \; smell \; rilevati}$$
+    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+\end{itemize}
+
+\paragraph{Presenza di Vulnerabilità} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD3
+    \item \textbf{Descrizione:} Misurare il numero di \glo{vulnerabilità} presenti all'interno del codice del prodotto;
+    \item \textbf{Attributo di riferimento:} \glo{Sicurezza};
+    \item \textbf{Sigla:} $VLN$
+    \item \textbf{Formula:} $$VLN = {numero \; di \; vulnerabilit\grave{a} \; rilevate}$$
+    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+\end{itemize}
+
+\paragraph{Presenza di Bug} 
+\begin{itemize}
+    \item \textbf{Codice:} MPD4
+    \item \textbf{Descrizione:} Misurare il numero di \glo{bug} presenti all'interno del codice del prodotto;
+    \item \textbf{Attributo di riferimento:} \glo{Operabilità};
+    \item \textbf{Sigla:} $BUG$
+    \item \textbf{Formula:} $$BUG = {numero \; di \; bug \; rilevati}$$
+    \item \textbf{Strumenti utilizzati:} \glo{SonarQube}.
+\end{itemize}
+
+\subsubsection{Strumenti}
+
+\paragraph{Verifica ortografica}
+Il gruppo \Gruppo{} per quanto riguarda la verifica ortografica dei documenti si è affidato a TEXstudio, il quale integra uno strumento di correzione dell'ortografia. Esso permette di visualizzare in tempo reale una sottolineatura rossa al di sotto di una parola errata e una verde al di sotto di una parola ripetuta a breve distanza secondo la lingua italiana.  
+\paragraph{SonarQube}
+Piattaforma open source utilizzata dal gruppo per il controllo continuo della qualità del codice. SonarQube permette di eseguire revisioni automatiche con analisi statica del codice per rilevare bug, complessità ciclomatica e vulnerabilità.
+\paragraph{JUnit}
+Framework di unit testing per il linguaggio di programmazione Java utilizzato dal gruppo per effettuare gli unit test riguardanti il codice dell'applicazione mobile e del back-end.
+\paragraph{Jasmine}
+Per il testing della web-app si è scelto Jasmine come framework per lo sviluppo dei test.
+\paragraph{Karma}
+Framework per eseguire e ottenere i risultati dei test di Jasmine.
+\paragraph{Coveralls}
+Tool utilizzato dal gruppo per verificare la code coverage di tutte le componenti del prodotto software: applicazione mobile, back-end, web-app. Coveralls ha permesso di descrivere il grado in cui viene eseguito il codice sorgente di un programma quando viene eseguita una particolare suite di test.
+\paragraph{Mockito}
+Framework di test open source per Java rilasciato sotto licenza MIT. Il gruppo ha utilizzato Mockito per testare le funzionalità del prodotto software(unit test) in modo isolato, permettendo la creazione di 
+mock. Quest'ultimi vengono utilizzati per simulare un determinato comportamento di una classe o di una interfaccia durante un test, permettendo di definire l'output di determinate chiamate di metodi.
