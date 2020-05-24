@@ -267,6 +267,3 @@ La classe `LDAPorganizationFragment` offre i seguenti metodi:
 -   `onCreate(saveInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
 
 -   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente.
-
-
-
