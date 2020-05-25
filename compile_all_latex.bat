@@ -28,6 +28,9 @@ latexmk -c > NUL
 cd ..\VE_2020_03_31
 latexmk -pdf VE_2020_03_31.tex > NUL
 latexmk -c > NUL
+cd ..\VE_2020_04_09
+latexmk -pdf VE_2020_04_09.tex > NUL
+latexmk -c > NUL
 
 echo Compilazione Documentazione Interna
 cd ..\..\..\DocumentazioneInterna
@@ -83,9 +86,6 @@ latexmk -c > NUL
 cd ..\VI_2020_04_05
 latexmk -pdf VI_2020_04_05.tex > NUL
 latexmk -c > NUL
-cd ..\VI_2020_04_09
-latexmk -pdf VI_2020_04_09.tex > NUL
-latexmk -c > NUL
 
 echo Compilazione Glossario
 cd ..\..\..
@@ -132,6 +132,8 @@ cd ..\VE_2020_03_24
 copy VE_2020_03_24.pdf ..\..\..\FileCompilati\.
 cd ..\VE_2020_03_31
 copy VE_2020_03_31.pdf ..\..\..\FileCompilati\.
+cd ..\VE_2020_04_09
+copy VE_2020_04_09.pdf ..\..\..\FileCompilati\.
 
 echo Copia dei file Documentazione Interna
 cd ..\..\..\DocumentazioneInterna
@@ -171,8 +173,6 @@ cd ..\VI_2020_03_16
 copy VI_2020_03_16.pdf ..\..\..\FileCompilati\.
 cd ..\VI_2020_04_05
 copy VI_2020_04_05.pdf ..\..\..\FileCompilati\.
-cd ..\VI_2020_04_09
-copy VI_2020_04_09.pdf ..\..\..\FileCompilati\.
 
 echo Copia dei file Glossario
 cd ..\..\..
