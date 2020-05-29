@@ -86,6 +86,9 @@ latexmk -c > NUL
 cd ..\VI_2020_04_05
 latexmk -pdf VI_2020_04_05.tex > NUL
 latexmk -c > NUL
+cd ..\VI_2020_05_25
+latexmk -pdf VI_2020_05_25.tex > NUL
+latexmk -c > NUL
 
 echo Compilazione Glossario
 cd ..\..\..
@@ -156,9 +159,9 @@ copy VI_2019_12_06.pdf ..\..\..\FileCompilati\.
 cd ..\VI_2019_12_10
 copy VI_2019_12_10.pdf ..\..\..\FileCompilati\.
 cd ..\VI_2019_12_13
-copy VI_2019_12_10.pdf ..\..\..\FileCompilati\.
-cd ..\VI_2019_12_13
 copy VI_2019_12_13.pdf ..\..\..\FileCompilati\.
+cd ..\VI_2019_12_18
+copy VI_2019_12_18.pdf ..\..\..\FileCompilati\.
 cd ..\VI_2020_01_29
 copy VI_2020_01_29.pdf ..\..\..\FileCompilati\.
 cd ..\VI_2020_02_15
@@ -173,6 +176,8 @@ cd ..\VI_2020_03_16
 copy VI_2020_03_16.pdf ..\..\..\FileCompilati\.
 cd ..\VI_2020_04_05
 copy VI_2020_04_05.pdf ..\..\..\FileCompilati\.
+cd ..\VI_2020_05_25
+copy VI_2020_05_25.pdf ..\..\..\FileCompilati\.
 
 echo Copia dei file Glossario
 cd ..\..\..
