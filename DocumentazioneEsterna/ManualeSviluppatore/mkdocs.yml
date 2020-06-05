@@ -1,4 +1,4 @@
-site_name: Manuale Manutentore 0.19.0 | Stalker
+site_name: Manuale Manutentore 0.20.0 | Stalker
 repo_url: https://github.com/qb-team/Stalker-Documentazione/
 
 theme:
@@ -22,7 +22,7 @@ nav:
       - 2.2 Requisiti e installazione: "app/requisiti.md"
       - 2.3 Estendibilità: "app/estendibilita.md"
       - 2.4 Architettura: "app/architettura.md"
-      - 2.5 Package: "app/package.md"
+      - 2.5 Diagrammi dei package: "app/package.md"
       - 2.6 Diagrammi delle classi: "app/classi.md"
       - 2.7 Diagrammi di sequenza: "app/sequenza.md"
   - 3 Web-app amministratori:
@@ -30,7 +30,7 @@ nav:
       - 3.2 Requisiti e installazione: "webapp/requisiti.md"
       - 3.3 Estendibilità: "webapp/estendibilita.md"
       - 3.4 Architettura: "webapp/architettura.md"
-      - 3.5 Package: "webapp/package.md"
+      - 3.5 Diagrammi dei package: "webapp/package.md"
       - 3.6 Diagrammi delle classi: "webapp/classi.md"
       - 3.7 Diagrammi di sequenza: "webapp/sequenza.md"
   - 4 Backend:
@@ -38,7 +38,7 @@ nav:
       - 4.2 Requisiti e installazione: "backend/requisiti.md"
       - 4.3 Estendibilità: "backend/estendibilita.md"
       - 4.4 Architettura: "backend/architettura.md"
-      - 4.5 Package: "backend/package.md"
+      - 4.5 Diagrammi dei package: "backend/package.md"
       - 4.6 Diagrammi delle classi: "backend/classi.md"
       - 4.7 Diagrammi di sequenza: "backend/sequenza.md"
   - 5 REST API:

@@ -33,12 +33,12 @@ Nel seguente diagramma vengono rappresentate le classi che implementano le inter
 
 ## 4.5.7 Repository
 Nel seguente diagramma vengono rappresentate le classi che compongono il package Repository, che rappresenta il persistence layer. Queste interfacce estendono tutte CrudRepository.  
-![!repository](../Immagini/Backend/package/package-repository.png)
+![!repository](../Immagini/Backend/package/package-persistence.repository.png)
 <figcaption align=center> <em> Diagramma dei package - Package delle repository </em> </figcaption>
 
 ## 4.5.8 Movementtracker
 Nel seguente diagramma vengono rappresentati i due package che compongono il Movement Tracker. Questo package si occupa di implementare il design pattern Publisher-Subscriber, consigliato nel capitolato. Disaccoppia l'atto di tracciamento dalla memorizzazione dei dati tracciati. I due package interni contengono le classi che si occupano della implementazione nel sistema di **Redis** come *Message Broker*.  
-![!movementtracker](../Immagini/Backend/package/package-movementtracker.png)
+![!movementtracker](../Immagini/Backend/package/package-persistence.movementtracker.png)
 <figcaption align=center> <em> Diagramma dei package - Package del sistema di tracciamento </em> </figcaption>
 
 ## 4.5.9 Exception

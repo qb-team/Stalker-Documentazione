@@ -198,17 +198,17 @@ Su Windows è conveniente utilizzare il WSL per caricare le variabili d'ambiente
 
 Una volta eseguito il precedente comando, eseguire anche il seguente, che si occupa di avviare le istanze di MySQL e Redis necessarie per la persistenza dei dati del backend:
 ```bash
-export docker-compose up
+docker-compose up
 ```
 
 Il comando avvia il backend ma rende il terminale indisponibile (ridirige l'output dei programmi). L'alternativa è avviare i programmi senza che l'output venga mostrato, con quest'altro comando:
 ```bash
-export docker-compose up -d
+docker-compose up -d
 ```
 
 Una volta che non è più necessario avere MySQL e Redis attivi, è possibile spegnerli con il comando:
 ```bash
-export docker-compose down
+docker-compose down
 ```
 
 ### 4.2.12.2 Esecuzione tramite pacchetto .jar
