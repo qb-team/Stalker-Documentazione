@@ -10,6 +10,10 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi al backe
 ![!Access Service](../Immagini/Backend/Classi/AccessService.png)
 
 L'`Access Service` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sugli accessi di un utente presso un luogo o un'organizzazione.
+- `getAnonymousAccessListInOrganization`: ritorna una lista di *OrganizationAccess* che rappresenta tutti gli accessi di un insieme di utenti anonimi (tracciati nel sistema tramite un *exitToken* per ognuno che non fornisce informazioni sulla sua identità) all'interno di una specifica organizzazione identificata dal suo *organizationId*.  
+- `getAnonymousAccessListInPlace`: ritorna una lista di *PlaceAccess* che rappresenta tutti gli accessi effettuati da un insieme di utenti anonimi identificati ognuno da un *exitToken* all'interno di un luogo identificato tramite il suo  *placeId*.  
+- `getAuthenticatedAccessListInOrganization`: ritorna una lista di *OrganizationAccess* che rappresenta tutti gli accessi di un insieme di utenti identificati tramite LDAP all'interno di un'organizzazione che permette il tracciamento autentiicato, identificata dal suo *organizationId*.  
+- `getAuthenticatedAccessListInPlace`: ritorna una lista di *PlaceAccess* che rappresenta tutti gli accessi di un insieme di utenti identificati tramite credenziali LDAP all'interno di un luogo identificato dal suo *placeId*.  
 ___
 
 ### 4.6.1.2 Administrator Service
