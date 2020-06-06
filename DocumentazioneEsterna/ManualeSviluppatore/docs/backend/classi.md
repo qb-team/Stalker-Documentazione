@@ -10,30 +10,48 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi al backe
 ![!AccessService](../Immagini/Backend/Classi/AccessService.png)
 
 L'`AccessService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sugli accessi di un utente presso un luogo o un'organizzazione.
+- `getAnonymousAccessListInOrganization`: ritorna una lista di **OrganizationAccess** che rappresenta tutti gli accessi di un insieme di utenti anonimi (tracciati nel sistema tramite un **exitToken** per ognuno che non fornisce informazioni sulla sua identità) all'interno di una specifica organizzazione identificata dal suo **organizationId**; utilizza il metodo `findByExitTokenAndOrganizationId` della classe **OrganizationAccessRepository** che opera la query su DB per ottenre gli acessi di un singolo utente, quindi questa chiamata viene ripetuta per tutti gli *exitToken* passati al metodo e si compone così la lista finale.  
+- `getAnonymousAccessListInPlace`: ritorna una lista di **PlaceAccess** che rappresenta tutti gli accessi effettuati da un insieme di utenti anonimi identificati ognuno da un **exitToken** all'interno di un luogo identificato tramite il suo  **placeId**; utilizza il metodo `findByExitTokenAndPlaceId` della classe **PlaceAccessRepository** per ottenre dal DB la lista di tutti gli accessi, per ogni **exitToken** fornito, nel luogo specificato, dall'insieme di quest'ultimi si forma la lista di tutti gli accessi al luogo.
+- `getAuthenticatedAccessListInOrganization`: ritorna una lista di *OrganizationAccess* che rappresenta tutti gli accessi di un insieme di utenti identificati tramite LDAP all'interno di un'organizzazione che permette il tracciamento autentiicato, identificata dal suo **organizationId**; utilizza il metodo `findByOrgAuthServerIdAndOrganizationId` della classe **OrganizationAccessRepository** per ottenre tutti gli accessi di un utente dato il suo identificativo e l'id dell'organizzazione, viene chiamato per ogni *orgAuthServerId* passato ottenendo la lista completa di tutti gli accessi di tutti gli utenti richiesti.
+- `getAuthenticatedAccessListInPlace`: ritorna una lista di **PlaceAccess** che rappresenta tutti gli accessi di un insieme di utenti identificati tramite credenziali LDAP all'interno di un luogo identificato dal suo **placeId**; utilizza il metodo `findByOrgAuthServerIdAndPlaceId` della classe **PlaceAccessRepository** per ottenere tutti gli accessi di un singolo utente autenticato, chiamato per ogni utente desiderato compone la lista di tutti gli accessi a luogo.
 ___
 
 ### 4.6.1.2 AdministratorService
 ![!AdministratorService](../Immagini/Backend/Classi/AdministratorService.png)
 
 L'`AdministratorService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sugli amministratori di un'organizzazione e per la gestione dei loro permessi.
+- `bindAdministratorToOrganization`: assegna un amministratore già esistente ad una organizzazione esistente, il parametro **Permission** contiene tutte le informazioni necessarie al metodo; `bindAdministratorToOrganization` utilizza il metodo `save` della classe **PermissionRepository** per salvare nel DB l'oggetto **Permission** che rappresenta il potere dell'amministratore all'interno di una organizzazione.  
+- `createNewAdministratorInOrganization`: crea un nuovo amministratore all'interno di una specifica organizzazione e ne assegna i permessi tramite l'oggetto **Permission**; utilizza il metodo `save` della classe **PermissionRepository** per salvare nel DB il nuovo amministratore.  
+- `getAdministratorListOfOrganization`: ritorna una lista di **Permission** che rappresenta l'insieme di amministratori che operano in una data organizzazione identificata dal suo **organizationId**, utilizza il metodo `findByOrganizationId` della classe **PermissionRepository** per ottenere tutti gli amministratori in una organizzazione.  
+- `getPermissionList`: ritorna una lista di **Permission** che rappresenta tutte le organizzazioni in cui un dato amministratore ( identificato tramite **administratorId** ) opera; utilizza il metodo `findByAdministratorId` della classe **PermissionRepository**.  
+- `updateAdministratorPermission`: ritorna un Optional di **Permission** che contiene le modifiche appena apportate ai permessi di uno specifico amministratore all'interno di un'organizzazione passando a questo metodo il parametro **Permission**; utilizza il metodo `save` della classe **PermissionRepository**.  
+- `unbindAdministratorFromOrganization`: cancella i permessi di un amministratore da un'organzizazione passando al metodo un oggetto **Permission**; utilizza il metodo `deleteById` della classe **PermissionRepository**.  
 ___
 
 ### 4.6.1.3 AuthenticationServerService
 ![!AuthenticationServerService](../Immagini/Backend/Classi/AuthenticationServerService.png)
 
 L'`AuthenticationServerService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle utenze presenti nel server che autentica gli utenti dell'organizzazione. Il server a cui inoltrare le richieste è indicato nell'organizzazione.
+
+- `getUserInfoFromAuthServer`: ritorna una lista di **OrganizationAuthenticationServerInformation** che rappresenta tutte le informazioni degli utenti passati al metodo tramite l'oggetto **OrganizationAuthenticationServerRequest** che nel campo OrgAuthServerIds contiene una lista di stringhe contenenti gli identificativi degli utenti per i quali ritornare le informazioni oppure può contenre un singolo elemento ( ***** ) per significare che si vogliono le informazioni di tutti gli utenti dell'organizzazione, l'organizzazione della quale si vogliono ricevere informazioni sugli utenti deve essere a tracciamento autenticato. 
+
 ___
 
 ### 4.6.1.4 AuthenticationService
 ![!AuthenticationService](../Immagini/Backend/Classi/AuthenticationService.png)
 
 L'`AuthenticationService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sullo stato di autenticazione e i permessi (in questo caso intesi come "essere un utente dell'app" oppure "essere un amministratore della web-app") di un utente.
+
 ___
 
 ### 4.6.1.5 FavoriteService
 ![!FavoriteService](../Immagini/Backend/Classi/FavoriteService.png)
 
-Il `FavoriteService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle organizzazioni preferite di un utente dell'app e la gestione della loro lista dei preferiti.
+Il `FavoriteService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle organizzazioni preferite di un utente dell'app e la gestione della loro lista dei preferiti.  
+-`addFavoriteOrganization`: fornisce la possibilità per un utente di salvare un'organizzazione nei preferiti associando il suo identificativo all'identificativo dell'organizzazione nell'oggetto **Favorite** che riceve il metodo e, quest'ultimo, utilizzando il metodo `save` della classe **FavoriteRepository** lo salva sul DB e ritorna il risultato di tale operazione.  
+-`getFavoriteOrganizationList`: ritorna una lista di **Organization** che rappresenta tutte le organizzazioni inserite tra i preferiti da parte di uno specifico utente identificato dal suo **userId**; utilizza il metodo `findAllFavoriteOfOneUserId` della classe **FavoriteRepository** per ottenre tutti gli oggetti **Favorite** associati a un utente e in seguito utilizza il metodo `findAllById` della classe **OrganizationRepository** per ottenere tutte le organizzazioni contenute nella lista di **Favorite**.  
+-`removeFavoriteOrganization`: rimuove un oggetto **Favorite** dal DB grazie al metodo `deleteById` della classe **FavoriteRepository**.  
+-`getFavorite`: determina la presenza o meno di un oggetto **Favorite** nel DB grazie al metodo `existsById` della classe **FavoriteRepository** che accetta un parametro **FavoriteId** e ritorna true in caso sia già salvato e false in caso contrario.  
 ___
 
 ### 4.6.1.6 MovementService
