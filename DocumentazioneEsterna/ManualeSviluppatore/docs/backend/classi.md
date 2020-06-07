@@ -40,7 +40,15 @@ ___
 ### 4.6.1.4 AuthenticationService
 ![!AuthenticationService](../Immagini/Backend/Classi/AuthenticationService.png)
 
-L'`AuthenticationService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sullo stato di autenticazione e i permessi (in questo caso intesi come "essere un utente dell'app" oppure "essere un amministratore della web-app") di un utente.
+L'`AuthenticationService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sullo stato di autenticazione e i permessi (in questo caso intesi come "essere un utente dell'app" oppure "essere un amministratore della web-app") di un utente.    
+-`checkToken`: metodo privato che data una stringa utilizza il metodo `verifyIdToken` della classe **FirebaseAuth** per determinare se l'utente è autenticato tramite Firebase.  
+-`isWebAppAdministrator`: data una stringa **accessToken** determina utilizzando i metodi `getFirebaseUser` e `findByAdministratorId` se l'utente identificato dall'**accessToken** sia un amministratore; in caso il token non sia valido lancia una **AuthenticationException**.  
+-`isAppUser`: data una stringa **accessToken** determina utilizzando i metodi `getFirebaseUser` e `findByAdministratorId` se l'utente identificato dall'**accessToken** non sia un amministratore; in caso il token non sia valido lancia una **AuthenticationException**.   
+-`createUser`: date 3 stringhe (accessToken, email, password) utilizza il metodo `createUser` della classe **FirebaseAuth** per creare un utente su Firebase, se l'operazione non ha successo ritorna **false** mentre se avviene con successo ritorna **true**; in caso il token non sia valido lancia una **AuthenticationException**.  
+-`getUserIdByEmail`: date 2 stringhe (accessToken, email) ritorna un **Optional<String>** che rappresenta l'identificativo dell'utente, utilizza il metodo `getUserByEmail` della classe **FirebaseAuth**, in caso l'**accessToken** non fosse valido lancia una **AuthenticationException** e se invece non viene trovato l'identificativo dell'utente ritorna **Optional.empty()**.
+-`getUserId`: ritorna l'identificativo dell'utente dato il suo **accessToken**, utilizza il metodo `getFirebaseUser`; in caso il token non sia valido lancia una **AuthenticationException**.  
+-`getFirebaseUser`: ritorna un **Optional<FirebaseToken>** dato un **accessToken** utilizzando il metodo `verifyIdToken` della classe **FirebaseAuth**, se quest'ultimo metodo lancia una **FirebaseAuthException** `getFirebaseUser` ritorna **Optional.empty()**.  
+-`getEmailByUserId`: ritorna **Optional<String>** contenente l'email dellìutente identificato da **userId**, utilizza il metodo `getUser` della classe **FirebaseAuth**, ritorna **Optional.empty()** nel caso in cui userId fornito sia vuoto o nullo, oppure se la chiamata di `getUser` lanci FirebaseAuthException o IllegalArgumentException; invece `getEmailByUserId` nel caso l'**accessToken** passato non sia valido lancia **AuthenticationException**.  
 
 ___
 
@@ -57,7 +65,10 @@ ___
 ### 4.6.1.6 MovementService
 ![!MovementService](../Immagini/Backend/Classi/MovementService.png)
 
-Il `MovementService` si occupa di soddisfare le richieste provenienti dai controller per tracciare i movimenti (ingressi o uscite) di un utente presso un luogo o un'organizzazione. In questo diagramma si può notare come `OrganizationMovementPublisher` e `PlaceMovementPublisher` implementino l'interfaccia `MovementPublisher`, a loro volta estese rispettivamente da `OrganizationMovementRedisPublisher` e `PlaceMovementRedisPublisher`. L'implementazione delle due tipologie di tracciamento è stata separata per permettere una maggiore flessibilità ed estendibilità delle loro implementazioni, oltre a poter cambiare del tutto lo strumento utilizzato per memorizzare i tracciamenti (Redis) e sostituirlo, senza richiedere che le classi che hanno dipendenze verso i due publisher debbano essere modificate.
+Il `MovementService` si occupa di soddisfare le richieste provenienti dai controller per tracciare i movimenti (ingressi o uscite) di un utente presso un luogo o un'organizzazione. In questo diagramma si può notare come `OrganizationMovementPublisher` e `PlaceMovementPublisher` implementino l'interfaccia `MovementPublisher`, a loro volta estese rispettivamente da `OrganizationMovementRedisPublisher` e `PlaceMovementRedisPublisher`. L'implementazione delle due tipologie di tracciamento è stata separata per permettere una maggiore flessibilità ed estendibilità delle loro implementazioni, oltre a poter cambiare del tutto lo strumento utilizzato per memorizzare i tracciamenti (Redis) e sostituirlo, senza richiedere che le classi che hanno dipendenze verso i due publisher debbano essere modificate.  
+-`trackMovementInOrganization`: si occupa di verificare l'integrità dell'oggetto **OrganizationMovement**, inoltre in caso il movimento sia d'entrata viene chiamato il metodo `setExitToken` della classe **OrganizationMovement** per salvare nell'oggetto **OrganizationMovement** un exitToken; in seguito l'oggetto viene passato al metodo `publish` della classe **OrganizationMovementPublisher** per essere pubblicato su Redis.  
+-`trackMovementInPlace`: si occupa di verificare l'integrità dell'oggetto **PlaceMovement**, inoltre in caso il movimento sia d'entrata viene chiamato il metodo `setExitToken` della classe **PlaceMovement** per salvare nell'oggetto **PlaceMovement** un exitToken; in seguito l'oggetto viene passato al metodo `publish` della classe **PlaceMovementPublisher** per essere pubblicato su Redis.  
+-`generateExitToken`: ritorna una stringa contenente caratteri da 0-9a-z randomizzati che rappresentano un **exitToken**.  
 ___
 
 ### 4.6.1.7 OrganizationService
@@ -75,7 +86,9 @@ ___
 ### 4.6.1.9 PresenceService
 ![!PresenceService](../Immagini/Backend/Classi/PresenceService.png)
 
-Il `PresenceService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle presenze correnti presso un luogo o un'organizzazione.
+Il `PresenceService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle presenze correnti presso un luogo o un'organizzazione.  
+-`getOrganizationPresenceCounter`: si occupa di interrogare Redis per ottenre in numero di presenze all'interno di una organizzazione specificata passando un **organizationId** al metodo; il contatore viene ottenuto chiamando il metodo `opsForValue` della classe **RedisTemplate<String, Integer>** e sul risultato chiamare  `get` con parametro la stringa contente **"organization:"+organizationId**; infine viene ritornato Optional dell'oggetto dopo aver verificato non sia nullo, e in caso sia nullo viene settato a zero.
+-`getPlacePresenceCounter`:si occupa di interrogare Redis per ottenre in numero di presenze all'interno di un luogo specificato passando un **placeId** al metodo; il contatore viene ottenuto chiamando il metodo `opsForValue` della classe **RedisTemplate<String, Integer>** e sul risultato chiamare  `get` con parametro la stringa contente **"place:"+placeId**; infine viene ritornato Optional dell'oggetto dopo aver verificato non sia nullo, e in caso sia nullo viene settato a zero.
 ___
 
 ### 4.6.1.10 ReportService
