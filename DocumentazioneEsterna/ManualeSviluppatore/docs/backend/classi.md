@@ -17,7 +17,6 @@ Sono disponibili i seguenti metodi:
 - `getAnonymousAccessListInPlace`: ritorna una lista di **PlaceAccess** che rappresenta tutti gli accessi di un utente anonimo (tracciati nel sistema tramite degli **exitToken** che permettono di reperire gli accessi a posteriori dall'utente che li ha effettuati) all'interno di uno specifico luogo di un'organizzazione, identificato dal suo **placeId**. Viene utilizzato il metodo `findByExitTokenAndPlaceId` dell'interfaccia **PlaceAccessRepository** che opera la query sul database per ottenere gli accessi dell'utente. Questa chiamata viene ripetuta per tutti gli *exitToken* passati al metodo e viene composta così la lista finale;
 - `getAuthenticatedAccessListInOrganization`: ritorna una lista di *OrganizationAccess* che rappresenta tutti gli accessi di un insieme di utenti riconosciuti, tramite il loro codice identificativo nel server di autenticazione dell'organizzazione (**orgAuthServerId**), all'interno di un'organizzazione che permette il tracciamento autenticato, identificata dal suo **organizationId**. Viene utilizzato il metodo `findByOrgAuthServerIdAndOrganizationId` dell'interfaccia **OrganizationAccessRepository** per ottenere tutti gli accessi di un utente dato il suo identificativo e l'id dell'organizzazione. Viene chiamato per ogni *orgAuthServerId* passato ottenendo la lista completa di tutti gli accessi di tutti gli utenti richiesti;
 - `getAuthenticatedAccessListInPlace`: ritorna una lista di *PlaceAccess* che rappresenta tutti gli accessi di un insieme di utenti riconosciuti, tramite il loro codice identificativo nel server di autenticazione dell'organizzazione (**orgAuthServerId**), all'interno di un luogo di un'organizzazione che permette il tracciamento autenticato, identificato dal suo **placeId**. Viene utilizzato il metodo `findByOrgAuthServerIdAndPlaceId` dell'interfaccia **OrganizationAccessRepository** per ottenere tutti gli accessi di un utente dato il suo identificativo e l'id del luogo. Viene chiamato per ogni *orgAuthServerId* passato ottenendo la lista completa di tutti gli accessi di tutti gli utenti richiesti.
-___
 
 ### 4.6.1.2 AdministratorService
 ![!AdministratorService](../Immagini/Backend/Classi/AdministratorService.png)
@@ -32,16 +31,13 @@ Sono disponibili i seguenti metodi:
 - `getPermissionList`: ritorna una lista di **Permission** che rappresenta tutte le organizzazioni in cui un dato amministratore (identificato tramite **administratorId**) ha permessi di gestione (intesi in senso generico). Viene utilizzato il metodo `findByAdministratorId` dell'interfaccia **PermissionRepository**.  
 - `updateAdministratorPermission`: ritorna un oggetto di tipo **Permission** all'interno di un Optional (wrapper per oggetti introdotto in Java 8 e disponibile nel package **java.util**) che contiene le modifiche appena apportate ai permessi di uno specifico amministratore all'interno di un'organizzazione richieste passando a questo metodo un parametro di tipo **Permission**. Viene utilizzato il metodo `save` dell'interfaccia **PermissionRepository**.  
 - `unbindAdministratorFromOrganization`: cancella i permessi di un amministratore da un'organizzazione passando al metodo un oggetto di tipo **Permission**. Viene utilizzato il metodo `deleteById` dell'interfaccia **PermissionRepository** (che lo eredita).  
-___
 
 ### 4.6.1.3 AuthenticationServerService
 ![!AuthenticationServerService](../Immagini/Backend/Classi/AuthenticationServerService.png)
 
 L'`AuthenticationServerService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle utenze presenti nel server che autentica gli utenti dell'organizzazione. L'indirizzo del server a cui inoltrare le richieste è indicato nell'organizzazione, attraverso il campo **authenticationServerURL**.
 
-- `getUserInfoFromAuthServer`: ritorna una lista di **OrganizationAuthenticationServerInformation** che rappresenta tutte le informazioni degli utenti richiesti, e di cui sono stati passati gli identificativi (**orgAuthServerId**) al metodo tramite l'oggetto **OrganizationAuthenticationServerRequest**, che nel campo orgAuthServerIds contiene una lista di stringhe con gli identificativi degli utenti per i quali ritornare le informazioni. Nell'implementazione per LDAP, in **LDAPServerConnectorAdapter**, orgAuthServerIds può contenere un singolo elemento ( **\***, un asterisco ) e sta a significare che si intendono ottenere tutte le informazioni di tutti gli utenti dell'organizzazione. Condizione necessaria: l'organizzazione della quale si vogliono ricevere informazioni sugli utenti deve permettere il tracciamento autenticato.
-
-___
+- `getUserInfoFromAuthServer`: ritorna una lista di **OrganizationAuthenticationServerInformation** che rappresenta tutte le informazioni degli utenti richiesti, e di cui sono stati passati gli identificativi (**orgAuthServerId**) al metodo tramite l'oggetto **OrganizationAuthenticationServerRequest**, che nel campo orgAuthServerIds contiene una lista di stringhe con gli identificativi degli utenti per i quali ritornare le informazioni. Nell'implementazione per LDAP, in **LDAPServerConnectorAdapter**, orgAuthServerIds può contenere un singolo elemento ( **\***, un asterisco) e sta a significare che si intendono ottenere tutte le informazioni di tutti gli utenti dell'organizzazione. Condizione necessaria: l'organizzazione della quale si vogliono ricevere informazioni sugli utenti deve permettere il tracciamento autenticato.
 
 ### 4.6.1.4 AuthenticationService
 ![!AuthenticationService](../Immagini/Backend/Classi/AuthenticationService.png)
@@ -57,8 +53,6 @@ L'`AuthenticationService` si occupa di soddisfare le richieste provenienti dai c
 -`getFirebaseUser`: ritorna un **Optional<FirebaseToken>** dato un **accessToken** utilizzando il metodo `verifyIdToken` della classe **FirebaseAuth**, se quest'ultimo metodo lancia una **FirebaseAuthException** `getFirebaseUser` ritorna **Optional.empty()**.  
 -`getEmailByUserId`: ritorna **Optional<String>** contenente l'email dell'utente identificato da **userId**, utilizza il metodo `getUser` della classe **FirebaseAuth**, ritorna **Optional.empty()** nel caso in cui userId fornito sia vuoto o nullo, oppure se la chiamata di `getUser` lanci FirebaseAuthException o IllegalArgumentException; invece `getEmailByUserId` nel caso l'**accessToken** passato non sia valido lancia **AuthenticationException**.  
 
-___
-
 ### 4.6.1.5 FavoriteService
 ![!FavoriteService](../Immagini/Backend/Classi/FavoriteService.png)
 
@@ -68,7 +62,6 @@ Il `FavoriteService` si occupa di soddisfare le richieste provenienti dai contro
 -`getFavoriteOrganizationList`: ritorna una lista di **Organization** che rappresenta tutte le organizzazioni inserite tra i preferiti da parte di uno specifico utente identificato dal suo **userId**; utilizza il metodo `findAllFavoriteOfOneUserId` della classe **FavoriteRepository** per ottenere tutti gli oggetti **Favorite** associati a un utente e in seguito utilizza il metodo `findAllById` della classe **OrganizationRepository** per ottenere tutte le organizzazioni contenute nella lista di **Favorite**.  
 -`removeFavoriteOrganization`: rimuove un oggetto **Favorite** dal DB grazie al metodo `deleteById` della classe **FavoriteRepository**.  
 -`getFavorite`: determina la presenza o meno di un oggetto **Favorite** nel DB grazie al metodo `existsById` della classe **FavoriteRepository** che accetta un parametro **FavoriteId** e ritorna true in caso sia già salvato e false in caso contrario.  
-___
 
 ### 4.6.1.6 MovementService
 ![!MovementService](../Immagini/Backend/Classi/MovementService.png)
@@ -78,19 +71,16 @@ Il `MovementService` si occupa di soddisfare le richieste provenienti dai contro
 -`trackMovementInOrganization`: si occupa di verificare l'integrità dell'oggetto **OrganizationMovement**, inoltre in caso il movimento sia d'entrata viene chiamato il metodo `setExitToken` della classe **OrganizationMovement** per salvare nell'oggetto **OrganizationMovement** un exitToken; in seguito l'oggetto viene passato al metodo `publish` della classe **OrganizationMovementPublisher** per essere pubblicato su Redis.  
 -`trackMovementInPlace`: si occupa di verificare l'integrità dell'oggetto **PlaceMovement**, inoltre in caso il movimento sia d'entrata viene chiamato il metodo `setExitToken` della classe **PlaceMovement** per salvare nell'oggetto **PlaceMovement** un exitToken; in seguito l'oggetto viene passato al metodo `publish` della classe **PlaceMovementPublisher** per essere pubblicato su Redis.  
 -`generateExitToken`: ritorna una stringa contenente caratteri da 0-9a-z randomizzati che rappresentano un **exitToken**.  
-___
 
 ### 4.6.1.7 OrganizationService
 ![!OrganizationService](../Immagini/Backend/Classi/OrganizationService.png)
 
 L'`OrganizationService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle organizzazioni e altre funzionalità disponibili agli amministratori, come ad esempio la richiesta di eliminazione dell'organizzazione amministrata.
-___
 
 ### 4.6.1.8 PlaceService
 ![!PlaceService](../Immagini/Backend/Classi/PlaceService.png)
 
 Il `PlaceService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sui luoghi di un'organizzazione e per gestirli.
-___
 
 ### 4.6.1.9 PresenceService
 ![!PresenceService](../Immagini/Backend/Classi/PresenceService.png)
@@ -99,7 +89,6 @@ Il `PresenceService` si occupa di soddisfare le richieste provenienti dai contro
 
 -`getOrganizationPresenceCounter`: si occupa di interrogare Redis per ottenere in numero di presenze all'interno di una organizzazione specificata passando un **organizationId** al metodo; il contatore viene ottenuto chiamando il metodo `opsForValue` della classe **RedisTemplate<String, Integer>** e sul risultato chiamare  `get` con parametro la stringa contente **"organization:"+organizationId**; infine viene ritornato Optional dell'oggetto dopo aver verificato non sia nullo, e in caso sia nullo viene settato a zero.
 -`getPlacePresenceCounter`:si occupa di interrogare Redis per ottenere in numero di presenze all'interno di un luogo specificato passando un **placeId** al metodo; il contatore viene ottenuto chiamando il metodo `opsForValue` della classe **RedisTemplate<String, Integer>** e sul risultato chiamare  `get` con parametro la stringa contente **"place:"+placeId**; infine viene ritornato Optional dell'oggetto dopo aver verificato non sia nullo, e in caso sia nullo viene settato a zero.
-___
 
 ### 4.6.1.10 ReportService
 ![!ReportService](../Immagini/Backend/Classi/ReportService.png)
@@ -108,7 +97,6 @@ Il `ReportService` si occupa di soddisfare le richieste provenienti dai controll
 
 -`getDuration`: dati due **OffsetDateTime** il metodo calcola la differenza tra la seconda data e la prima trasformandole in secondi e dunque ritorna il numero di secondi trascorsi tra la prima data e la seconda.  
 -`getTimePerUserReport`: ritorna una lista di **TimePerUserReport** che rappresenta tutti gli accessi a uno specifico luogo degli utenti autenticati di un'organizzazione, il luogo viene indicato passando al metodo un **placeId**; utilizza il metodo `findByPlaceId` della classe **placeAccessRepo** per ottenere tutti gli accessi a un determinato luogo, questi accessi vengono controllati, raggruppati assieme per identificativo unico LDAP e viene calcolato il tempo trascorso tra l'entrata e l'uscita usando il metodo `getDuration`; infine da una lista di **PlaceAccess** si costruisce la lista di ritorno di **TimePerUserReport**.
-___
 
 ## 4.6.2 Diagrammi dei Controller
 
@@ -121,7 +109,6 @@ L'`AccessController` si occupa di soddisfare le richieste ricevute dai client pe
 -`getAnonymousAccessListInPlace`:il metodo ritorna **List<PlaceAccess>** ovvero tutti gli accessi ad un luogo appartenente ad un'organizzazione a tracciamento anonimo fatti dallo stesso utente che effettua la richiesta, deve essere passato al metodo un **exitToken** che identificherà l'utente e un **placeId** che identifica il luogo del quale ritornare gli accessi.
 -`getAuthenticatedAccessListInOrganization`:ritorna una **List<OrganizationAccess>** che rappresenta tutti gli accessi di uno o più utenti autenticati ad una organizzazione a tracciamento autenticato; il metodo richiede come parametri una lista di **orgAuthServerIds** che in caso la richiesta sia fatta da un'amministratore contiene uno o più identificativi degli utenti, mentre se la richiesta viene fatta dal singolo utente sarà presente solo il proprio identificativo; il secondo parametro è invece l'identificativo dell'organizzazione.   
 -`getAuthenticatedAccessListInPlace`: ritorna una **List<PlaceAccess>** che rappresenta tutti gli accessi di uno o più utenti autenticati all'interno di un luogo di un'organizzazione a tracciamento autenticato; il metodo richiede come parametri una lista di **orgAuthServerIds** che in caso la richiesta sia fatta da un'amministratore contiene uno o più identificativi degli utenti, mentre se la richiesta viene fatta dal singolo utente sarà presente solo il proprio identificativo; il secondo parametro è invece l'identificativo del luogo.  
-___
 
 ### 4.6.2.2 AdministratorController
 ![!AdministratorController](../Immagini/Backend/Classi/AdministratorApi.png)
@@ -134,49 +121,41 @@ L'`AdministratorController` si occupa di soddisfare le richieste ricevute dai cl
 -`getPermissionList`: ritorna una **List<Permission>** che rappresenta le organizzazioni in cui è stato nominato; il metodo richiede un **administratorId**; l'amministratore che effettua la richiesta deve essere autenticato nel sistema e l'identificativo che viene inserito come parametro al metodo deve corrispondere all'identificativo dell'amministratore che effettua la richiesta, altrimenti viene ritornato forbidden; per ottenere la lista di permessi viene chiamato il metodo `getPermissionList` della classe **AdministratorService**.  
 -`unbindAdministratorFromOrganization`: il metodo toglie i permessi di un amministratore in una organizzazione, richiede come parametro un oggetto **Permission** che contiene tutte le informazioni necessarie; l'amministratore che effettua la richiesta deve essere autenticato nel sistema e deve essere owner dell'organizzazione alla quale fa parte l'amministratore che deve essere rimosso; per compiere l'operazione viene chiamato il metodo `unbindAdministratorFromOrganization` della classe **AdministratorService**.  
 -`updateAdministratorPermission`:il metodo aggiorna il livello di permessi di un amministratore all'interno di una specifica organizzazione; richiede un oggetto **Permission** come parametro, la richiesta deve essere effettuata da un'amministratore autenticato nel sistema e che sia owner dell'organizzazione nella quale cambiare i permessi dell'amministratore; per effettuare tale operazione si serve del metodo `updateAdministratorPermission` della classe **AdministratorService**. 
-___
 
 ### 4.6.2.3 AuthenticationServerController
 ![!AuthenticationServerController](../Immagini/Backend/Classi/AuthenticationServerApiController.png)
 
 L'`AuthenticationServerController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle utenze presenti nel server che autentica gli utenti dell'organizzazione, servendosi dell'`AuthenticationServerService`.
-___
 
 ### 4.6.2.4 FavoriteController
 ![!FavoriteController](../Immagini/Backend/Classi/FavoriteAPI.png)
 
 Il `FavoriteController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle organizzazioni preferite di un utente dell'app e la gestione della loro lista dei preferiti, servendosi del `FavoriteService`.
-___
 
 ### 4.6.2.5 MovementController
 ![!MovementController](../Immagini/Backend/Classi/MovementAPI.png)
 
 Il `MovementController` si occupa di soddisfare le richieste ricevute dai client per tracciare i movimenti (ingressi o uscite) di un utente presso un luogo o un'organizzazione, servendosi del `MovementService`.
-___
 
 ### 4.6.2.6 OrganizationController
 ![!OrganizationController](../Immagini/Backend/Classi/OrganizationAPI.png)
 
 L'`OrganizationController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle organizzazioni e altre funzionalità disponibili agli amministratori, come ad esempio la richiesta di eliminazione dell'organizzazione amministrata, servendosi dell'`OrganizationService`.
-___
 
 ### 4.6.2.7 PlaceController
 ![!PlaceController](../Immagini/Backend/Classi/PlaceAPI.png)
 
 Il `PlaceController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sui luoghi di un'organizzazione e per gestirli, servendosi del `PlaceService`.
-___
 
 ### 4.6.2.8 PresenceController
 ![!PresenceController](../Immagini/Backend/Classi/PresenceAPI.png)
 
 Il `PresenceController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle presenze correnti presso un luogo o un'organizzazione, servendosi del `PresenceService`.
-___
 
 ### 4.6.2.9 ReportController
 ![!ReportController](../Immagini/Backend/Classi/ReportAPI.png)
 
 Il `ReportController` si occupa di soddisfare le richieste ricevute dai client per ottenere report tabellari sugli accessi passati presso i luoghi di un'organizzazione da parte di utenti autenticati, servendosi del `ReportService`.
-___
 
 ## 4.6.3 Diagrammi di altre classi
 
@@ -184,16 +163,13 @@ ___
 ![!AuthenticationFacade](../Immagini/Backend/Classi/AuthenticationFacade.png)
 
 L'`Authentication Facade` è una classe che implementa il design pattern Facade. Si occupa di raggruppare tutte le funzionalità comuni ai vari controller fornendole da un unico punto di accesso. Queste funzionalità sono quelle offerte dall'`AuthenticationService`, per verificare lo stato di autenticazione di un utente o amministratore, e quelle del PermissionService, per verificare se un utente è amministratore o meno e se ha i permessi presso una determinata organizzazione.
-___
 
 ### 4.6.3.2 GpsAreaFacade
 ![!GpsAreaFacade](../Immagini/Backend/Classi/GpsAreaFacade.png)
 
 Le funzionalità che controllano la dimensione di un'area geografica espressa dall'area di tracciamento (trackingArea) di un'organizzazione o di un luogo vengono realizzate dalle classi che permettono a `GpsArea Facade` di funzionare. Nuovamente, come dice il nome, viene utilizzato il design pattern Facade per avere un unico punto di accesso alle tre funzionalità di calcolo dell'area data una lista di coordinate geografiche, verifica di appartenenza di un punto all'interno di un certo perimetro e costruzione di oggetti di tipo `Coordinate`, che corrisponde all'interfaccia che permette di elaborare i dati ricevuti dalle trackingArea. Inoltre, le tre interfacce `AreaCalculator`, `CoordinateFactory` e `PointInsidePolygon` sono implementate attualmente in un modo abbastanza semplice, ma potrebbero essere aggiornate o sostituite da altre implementazioni più precise, indicandone l'uso nella configurazione del software.
-___
 
 ### 4.6.3.3 MovementSubscriber
 ![!MovementSubscriber](../Immagini/Backend/Classi/MovementSubscriber.png)
 
 Avendo deciso di implementare il pattern Publisher-Subscriber, se il MovementService dispone del publisher, deve esserci anche un subscriber. In questo caso, il subscriber si occupa di ottenere i messaggi dal Message Broker, di analizzarli per convertirli da semplici movimenti (di ingresso o di uscita) in istanze (parziali) di accessi che vengono memorizzate tramite i supporti di persistenza per poterli ottenere successivamente tramite le API fornite per gli Access.
-___

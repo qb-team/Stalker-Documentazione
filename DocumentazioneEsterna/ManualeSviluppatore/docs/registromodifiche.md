@@ -1,6 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+0.25.0 | 2020-06-08 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunta e verificata descrizione dei metodi in §4.6.1.
 0.24.0 | 2020-06-08 | Tommaso Azzalin | Progettista | - | Aggiunta e verificata sezione §5.3.
 0.23.0 | 2020-06-08 | Tommaso Azzalin | Progettista | - | Aggiunta e verificata sezione §5.2.
 0.22.0 | 2020-06-08 | Tommaso Azzalin | Progettista | - | Aggiunte e verificate sezioni Responses in §5.4.
