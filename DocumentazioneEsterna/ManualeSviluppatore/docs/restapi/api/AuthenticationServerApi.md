@@ -34,7 +34,7 @@ The organization could not be found. Nothing gets returned.
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[bearerAuth](../overview.md#bearerAuth)
 
 ### HTTP request headers
 

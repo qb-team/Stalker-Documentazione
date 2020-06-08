@@ -13,6 +13,7 @@ HTTP request | Description
 **GET** [**/administrator/permission/{administratorId}**](api/AdministratorApi.md#getPermissionList) | Gets the list of permission that an administrator has permissions to view/manage/own.
 **POST** [**/administrator/unbindadministrator**](api/AdministratorApi.md#unbindAdministratorFromOrganization) | Unbind an administrator to the organization.
 **PATCH** [**/administrator/updatepermission**](api/AdministratorApi.md#updateAdministratorPermission) | Update the permission for an already existent administrator in the organization.
+**POST** [**/authenticationserver/userinformation**](api/AuthenticationServerApi.md#getUserInfoFromAuthServer) | Gets the information on users given their identifier on the organization's authentication server.
 **POST** [**/favorite/addfavorite**](api/FavoriteApi.md#addFavoriteOrganization) | Adds a new organization to the user's favorite organization list.
 **GET** [**/favorite/{userId}**](api/FavoriteApi.md#getFavoriteOrganizationList) | Gets the list of favorite organizations of a user.
 **POST** [**/favorite/removefavorite**](api/FavoriteApi.md#removeFavoriteOrganization) | Removes the organization from the user's favorite organization list.
@@ -20,7 +21,7 @@ HTTP request | Description
 **POST** [**/movement/track/place**](api/MovementApi.md#trackMovementInPlace) | Tracks the user movement inside the trackingArea of a place of an organization.
 **GET** [**/organization/{organizationId}**](api/OrganizationApi.md#getOrganization) | Gets the available data for a single organization.
 **GET** [**/organization**](api/OrganizationApi.md#getOrganizationList) | Returns the list of all organizations.
-**POST** [**/organization/requestdeletion**](OrganizationApi.md#requestDeletionOfOrganization) | Sends a deletion request to the system. The request will be examined by Stalker administrators.
+**POST** [**/organization/requestdeletion**](api/OrganizationApi.md#requestDeletionOfOrganization) | Sends a deletion request to the system. The request will be examined by Stalker administrators.
 **PUT** [**/organization**](api/OrganizationApi.md#updateOrganization) | Updates one or more properties of an organization.
 **PATCH** [**/organization/{organizationId}/trackingArea**](api/OrganizationApi.md#updateOrganizationTrackingArea) | Updates the coordinates of the tracking area of an organization.
 **POST** [**/place**](api/PlaceApi.md#createNewPlace) | Creates a new place for an organization.
@@ -39,6 +40,10 @@ HTTP request | Description
  - [Favorite](model/Favorite.md)
  - [Organization](model/Organization.md)
  - [OrganizationAccess](model/OrganizationAccess.md)
+ - [OrganizationAuthenticationServerCredentials](model/OrganizationAuthenticationServerCredentials.md)
+ - [OrganizationAuthenticationServerInformation](model/OrganizationAuthenticationServerInformation.md)
+ - [OrganizationAuthenticationServerRequest](model/OrganizationAuthenticationServerRequest.md)
+ - [OrganizationDeletionRequest](model/OrganizationDeletionRequest.md)
  - [OrganizationMovement](model/OrganizationMovement.md)
  - [OrganizationPresenceCounter](model/OrganizationPresenceCounter.md)
  - [Permission](model/Permission.md)
