@@ -17,9 +17,24 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **organizationMovement** | [**OrganizationMovement**](../model/OrganizationMovement.md)|  |
 
-### Return type
+### Responses
+**201**  
+Entrance movement successfully tracked. The movement with the exitToken gets returned. [**OrganizationMovement**](../model/OrganizationMovement.md)
 
-[**OrganizationMovement**](../model/OrganizationMovement.md)
+**202**  
+Exit movement successfully tracked. The movement gets returned. [**OrganizationMovement**](../model/OrganizationMovement.md)
+
+**400**  
+Exit movement was requested without the exitToken. It will not be tracked. Nothing gets returned.
+
+**401**  
+The user is not authenticated. Nothing gets returned.
+
+**403**  
+Administrators cannot have access. Nothing gets returned.
+
+**404**  
+The organization could not be found. Nothing gets returned.
 
 ### Authorization
 
@@ -41,9 +56,24 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **placeMovement** | [**PlaceMovement**](../model/PlaceMovement.md)|  |
 
-### Return type
+### Responses
+**201**  
+Entrance movement successfully tracked. The movement with the exitToken gets returned. [**PlaceMovement**](../model/PlaceMovement.md)
 
-[**PlaceMovement**](../model/PlaceMovement.md)
+**202**  
+Exit movement successfully tracked. The movement gets returned. [**PlaceMovement**](../model/PlaceMovement.md)
+
+**400**  
+Exit movement was requested without the exitToken. It will not be tracked. Nothing gets returned.
+
+**401**  
+The user is not authenticated. Nothing gets returned.
+
+**403**  
+Administrators cannot have access. Nothing gets returned.
+
+**404**  
+The place could not be found. Nothing gets returned.
 
 ### Authorization
 

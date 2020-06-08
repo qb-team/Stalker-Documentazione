@@ -16,9 +16,21 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **organizationAuthenticationServerRequest** | [**OrganizationAuthenticationServerRequest**](../model/OrganizationAuthenticationServerRequest.md)|
 
-### Return type
+### Responses
+**200**  
+Users' information returned successfully. [**List**](../model/OrganizationAuthenticationServerInformation.md)
 
-[**List**](../model/OrganizationAuthenticationServerInformation.md)
+**204**  
+No information was found. Nothing gets returned.
+
+**401**  
+The administrator is not authenticated. Nothing gets returned.
+
+**403**  
+Users cannot have access. Nothing gets returned.
+
+**404**  
+The organization could not be found. Nothing gets returned.
 
 ### Authorization
 

@@ -16,9 +16,21 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **placeId** | **Long**| ID of the organization. The viewer administrator must have permissions for this organization.
 
-### Return type
+### Responses
+**200**  
+Report of time spent in the place per user returned successfully. [**List**](../model/TimePerUserReport.md)
 
-[**List**](../model/TimePerUserReport.md)
+**204**  
+Report is empty. Nothing gets returned.
+
+**401**  
+The administrator is not authenticated. Nothing gets returned.
+
+**403**  
+Users cannot have access. Nothing gets returned.
+
+**404**  
+The organization could not be found. Nothing gets returned.
 
 ### Authorization
 

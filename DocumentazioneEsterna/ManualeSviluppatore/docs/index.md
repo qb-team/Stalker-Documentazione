@@ -12,7 +12,7 @@ Il sistema **Stalker** è formato dalle parti:
 
 -   [App utenti](/app/introduzione/);
 -   [Web-app amministratori](/webapp/introduzione/);
--   [Backend](/backend/introduzione/).
+-   [Backend](/backend/introduzione/) che espone le [REST API](/restapi/introduction/).
 
 ## 1.4 Riferimenti 
 -   **Android**: <a href="https://www.android.com/">https://www.android.com/</a>

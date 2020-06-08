@@ -20,9 +20,21 @@ Name | Type | Description
  **exitTokens** | **String array**| One or more exitTokens.
  **organizationId** | **Long**| ID of an organization.
 
-### Return type
+### Responses
+**200**  
+List of anonymous accesses in an organization gets returned successfully. [**List**](../model/OrganizationAccess.md)
 
-[**List**](../model/OrganizationAccess.md)
+**204**  
+List of anonymous accesses in an organization were not found. Nothing gets returned.
+
+**401**  
+The user is not authenticated. Nothing gets returned.
+
+**403**  
+Administrators cannot have accesses. Nothing gets returned.
+
+**404**  
+The organization could not be found. Nothing gets returned.
 
 ### Authorization
 
@@ -45,9 +57,22 @@ Name | Type | Description
  **exitTokens** | **String array**| One or more exitTokens.
  **placeId** | **Long**| ID of a place.
 
-### Return type
+### Responses
+**200**  
+List of anonymous accesses in a place gets returned successfully. [**List**](../model/PlaceAccess.md)
 
-[**List**](../model/PlaceAccess.md)
+**204**  
+List of anonymous accesses in a place were not found. Nothing gets returned.
+
+**401**
+The user is not authenticated. Nothing gets returned.
+
+**403**  
+Administrators cannot have accesses. Nothing gets returned.
+
+**404**  
+The place could not be found. Nothing gets returned.
+
 
 ### Authorization
 
@@ -70,9 +95,21 @@ Name | Type | Description
  **orgAuthServerIds** | **String array**| One or more orgAuthServerIds. If it is called by the app user, the orgAuthServerIds parameter can only consist in one identifier. Otherwise it can be more than one identifier.
  **organizationId** | **Long**| ID of an organization
 
-### Return type
+### Responses
+**200**  
+List of authenticated accesses in an organization gets returned successfully. [**List**](../model/OrganizationAccess.md)
 
-[**List**](../model/OrganizationAccess.md)
+**204**  
+List of authenticated accesses in an organization were not found. Nothing gets returned.
+
+**401**  
+The administrator or the user is not authenticated. Nothing gets returned.
+
+**403**  
+Users can only retrieve their accesses. Nothing gets returned.
+
+**404**  
+The organization could not be found. Nothing gets returned.
 
 ### Authorization
 
@@ -95,9 +132,21 @@ Name | Type | Description
  **orgAuthServerIds** | **String array**| One or more orgAuthServerIds. If it is called by the app user, the orgAuthServerIds parameter can only consist in one identifier. Otherwise it can be more than one identifier.
  **placeId** | **Long**| ID of a place.
 
-### Return type
+### Responses
+**200**  
+List of authenticated accesses in a place gets returned successfully. [**List**](../model/PlaceAccess.md)
 
-[**List**](../model/PlaceAccess.md)
+**204**  
+List of authenticated accesses in a place were not found. Nothing gets returned.
+
+**401**  
+The administrator or the user is not authenticated. Nothing gets returned.
+
+**403**  
+Users can only retrieve their accesses. Nothing gets returned.
+
+**404**  
+The place could not be found. Nothing gets returned.
 
 ### Authorization
 

@@ -19,9 +19,21 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **place** | [**Place**](../model/Place.md)|  |
 
-### Return type
+### Responses
+**201**  
+The new place of the organization was created. The place gets returned. [**Place**](../model/Place.md)
 
-[**Place**](../model/Place.md)
+**400**  
+The new tracking area does not respect the area constraints for the organization. Nothing gets returned.
+
+**401**  
+The administrator is not authenticated. Nothing gets returned.
+
+**403**  
+Users or administrator with viewer permission cannot have access. Nothing gets returned.
+
+**404**  
+The organization could not be found. The place cannot be added. Nothing gets returned.
 
 ### Authorization
 
@@ -43,9 +55,18 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **placeId** | **Long**| ID of a place.
 
-### Return type
+### Responses
+**205**  
+Place successfully removed from the list of places of the organization. Nothing gets returned.
 
-null (empty response body)
+**401**  
+The administrator is not authenticated. Nothing gets returned.
+
+**403**  
+Users and administrators with viewer permissions cannot have access. Nothing gets returned.
+
+**404**  
+The place could not be found. Nothing gets returned.
 
 ### Authorization
 
@@ -67,9 +88,21 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **organizationId** | **Long**| ID of an organization.
 
-### Return type
+### Responses
+**200**  
+Place list of organization returned successfully. [**List**](../model/Place.md)
 
-[**List**](../model/Place.md)
+**204**  
+Place list of organization is empty. Nothing gets returned.
+
+**401**  
+The administrator or the user is not authenticated. Nothing gets returned.
+
+**403**  
+Administrators who are not bound to the organization cannot access this end-point. Nothing gets returned.
+
+**404**  
+The organization could not be found. Nothing gets returned.
 
 ### Authorization
 
@@ -91,9 +124,21 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **place** | [**Place**](../model/Place.md)|  |
 
-### Return type
+### Responses
+**200**  
+Place updated successfully. The updated place gets returned. [**Place**](../model/Place.md)
 
-[**Place**](../model/Place.md)
+**400**  
+The inserted data has some issues. Nothing gets returned.
+
+**401**  
+The administrator is not authenticated. Nothing gets returned.
+
+**403**  
+Users or administrator with viewer permission cannot have access. Nothing gets returned.
+
+**404**  
+Invalid place ID supplied. Nothing gets returned.
 
 ### Authorization
 
