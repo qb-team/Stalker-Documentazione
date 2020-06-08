@@ -30,7 +30,7 @@ Name | Type | Description
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 <a name="getOrganizationList"></a>
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 <a name="requestDeletionOfOrganization"></a>
@@ -75,8 +75,8 @@ null (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/x-www-form-urlencoded
-- **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 <a name="updateOrganization"></a>
 ## **PUT** /organization
