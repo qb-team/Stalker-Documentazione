@@ -37,9 +37,9 @@ ___
 ### 4.6.1.3 AuthenticationServerService
 ![!AuthenticationServerService](../Immagini/Backend/Classi/AuthenticationServerService.png)
 
-L'`AuthenticationServerService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle utenze presenti nel server che autentica gli utenti dell'organizzazione. Il server a cui inoltrare le richieste è indicato nell'organizzazione.
+L'`AuthenticationServerService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle utenze presenti nel server che autentica gli utenti dell'organizzazione. L'indirizzo del server a cui inoltrare le richieste è indicato nell'organizzazione, attraverso il campo **authenticationServerURL**.
 
-- `getUserInfoFromAuthServer`: ritorna una lista di **OrganizationAuthenticationServerInformation** che rappresenta tutte le informazioni degli utenti passati al metodo tramite l'oggetto **OrganizationAuthenticationServerRequest** che nel campo OrgAuthServerIds contiene una lista di stringhe contenenti gli identificativi degli utenti per i quali ritornare le informazioni oppure può contenere un singolo elemento ( ***** ) per significare che si vogliono le informazioni di tutti gli utenti dell'organizzazione, l'organizzazione della quale si vogliono ricevere informazioni sugli utenti deve essere a tracciamento autenticato. 
+- `getUserInfoFromAuthServer`: ritorna una lista di **OrganizationAuthenticationServerInformation** che rappresenta tutte le informazioni degli utenti richiesti, e di cui sono stati passati gli identificativi (**orgAuthServerId**) al metodo tramite l'oggetto **OrganizationAuthenticationServerRequest**, che nel campo orgAuthServerIds contiene una lista di stringhe con gli identificativi degli utenti per i quali ritornare le informazioni. Nell'implementazione per LDAP, in **LDAPServerConnectorAdapter**, orgAuthServerIds può contenere un singolo elemento ( **\***, un asterisco ) e sta a significare che si intendono ottenere tutte le informazioni di tutti gli utenti dell'organizzazione. Condizione necessaria: l'organizzazione della quale si vogliono ricevere informazioni sugli utenti deve permettere il tracciamento autenticato.
 
 ___
 
