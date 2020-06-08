@@ -16,11 +16,11 @@ Adds a new organization to the user's favorite organization list. If the organiz
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **favorite** | [**Favorite**](/restapi/model/Favorite.md)|  |
+ **favorite** | [**Favorite**](../model/Favorite.md)|  |
 
 ### Return type
 
-[**Favorite**](/restapi/model/Favorite.md)
+[**Favorite**](../model/Favorite.md)
 
 ### Authorization
 
@@ -44,7 +44,7 @@ Name | Type | Description
 
 ### Return type
 
-[**List**](/restapi/model/Organization.md)
+[**List**](../model/Organization.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Removes the organization from the user's favorite organization list. Only app us
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **favorite** | [**Favorite**](/restapi/model/Favorite.md)|  |
+ **favorite** | [**Favorite**](../model/Favorite.md)|  |
 
 ### Return type
 

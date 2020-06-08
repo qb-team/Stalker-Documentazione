@@ -4,7 +4,7 @@ HTTP request | Description
 ------------- | -------------
 **GET** [**/organization/{organizationId}**](OrganizationApi.md#getOrganization) | Gets the available data for a single organization.
 **GET** [**/organization**](OrganizationApi.md#getOrganizationList) | Returns the list of all organizations.
-**POST** [**/organization/{organizationId}/requestdeletion**](OrganizationApi.md#requestDeletionOfOrganization) | Sends a deletion request to the system. The request will be examined by Stalker administrators.
+**POST** [**/organization/requestdeletion**](OrganizationApi.md#requestDeletionOfOrganization) | Sends a deletion request to the system. The request will be examined by Stalker administrators.
 **PUT** [**/organization**](OrganizationApi.md#updateOrganization) | Updates one or more properties of an organization.
 **PATCH** [**/organization/{organizationId}/trackingArea**](OrganizationApi.md#updateOrganizationTrackingArea) | Updates the coordinates of the tracking area of an organization.
 
@@ -22,7 +22,7 @@ Name | Type | Description
 
 ### Return type
 
-[**Organization**](/restapi/model/Organization.md)
+[**Organization**](../model/Organization.md)
 
 ### Authorization
 
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List**](/restapi/model/Organization.md)
+[**List**](../model/Organization.md)
 
 ### Authorization
 
@@ -55,16 +55,15 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 <a name="requestDeletionOfOrganization"></a>
-## **POST** /organization/{organizationId}/requestdeletion
+## **POST** /organization/requestdeletion
 
 Sends a deletion request to the system.  The request will be examined by Stalker administrators. Only web-app administrators can access this end-point.
 
 ### Parameters
 
-Name | Type | Description 
+Name | Type | Description
 ------------- | ------------- | -------------
- **organizationId** | **Long**| ID of an organization. The administrator must have at least owner permission to the organization.
- **requestReason** | **String**| Request reason for the deletion request.
+ **organizationDeletionRequest** | [**OrganizationDeletionRequest**](../model/OrganizationDeletionRequest.md)|
 
 ### Return type
 
@@ -88,11 +87,11 @@ Updates one or more properties of an organization.  Only web-app administrators 
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **organization** | [**Organization**](/restapi/model/Organization.md)|  |
+ **organization** | [**Organization**](../model/Organization.md)|  |
 
 ### Return type
 
-[**Organization**](/restapi/model/Organization.md)
+[**Organization**](../model/Organization.md)
 
 ### Authorization
 
@@ -117,7 +116,7 @@ Name | Type | Description
 
 ### Return type
 
-[**Organization**](/restapi/model/Organization.md)
+[**Organization**](../model/Organization.md)
 
 ### Authorization
 

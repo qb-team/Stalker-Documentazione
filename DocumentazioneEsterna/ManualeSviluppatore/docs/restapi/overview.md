@@ -20,7 +20,7 @@ HTTP request | Description
 **POST** [**/movement/track/place**](api/MovementApi.md#trackMovementInPlace) | Tracks the user movement inside the trackingArea of a place of an organization.
 **GET** [**/organization/{organizationId}**](api/OrganizationApi.md#getOrganization) | Gets the available data for a single organization.
 **GET** [**/organization**](api/OrganizationApi.md#getOrganizationList) | Returns the list of all organizations.
-**POST** [**/organization/{organizationId}/requestdeletion**](api/OrganizationApi.md#requestDeletionOfOrganization) | Sends a deletion request to the system. The request will be examined by Stalker administrators.
+**POST** [**/organization/requestdeletion**](OrganizationApi.md#requestDeletionOfOrganization) | Sends a deletion request to the system. The request will be examined by Stalker administrators.
 **PUT** [**/organization**](api/OrganizationApi.md#updateOrganization) | Updates one or more properties of an organization.
 **PATCH** [**/organization/{organizationId}/trackingArea**](api/OrganizationApi.md#updateOrganizationTrackingArea) | Updates the coordinates of the tracking area of an organization.
 **POST** [**/place**](api/PlaceApi.md#createNewPlace) | Creates a new place for an organization.

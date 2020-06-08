@@ -17,11 +17,11 @@ Creates a new place for an organization. Only web-app administrators can access 
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **place** | [**Place**](/restapi/model/Place.md)|  |
+ **place** | [**Place**](../model/Place.md)|  |
 
 ### Return type
 
-[**Place**](/restapi/model/Place.md)
+[**Place**](../model/Place.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description
 
 ### Return type
 
-[**List**](/restapi/model/Place.md)
+[**List**](../model/Place.md)
 
 ### Authorization
 
@@ -89,11 +89,11 @@ Updates one or more properties of a place of an organization. Only web-app admin
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **place** | [**Place**](/restapi/model/Place.md)|  |
+ **place** | [**Place**](../model/Place.md)|  |
 
 ### Return type
 
-[**Place**](/restapi/model/Place.md)
+[**Place**](../model/Place.md)
 
 ### Authorization
 

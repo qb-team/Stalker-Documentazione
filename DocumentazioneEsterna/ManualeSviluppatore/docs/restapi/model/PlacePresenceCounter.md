@@ -1,4 +1,8 @@
 # PlacePresenceCounter
+
+## Description
+Number of people currently inside a place of an organization.
+
 ## Properties
 
 Name | Type | Description
