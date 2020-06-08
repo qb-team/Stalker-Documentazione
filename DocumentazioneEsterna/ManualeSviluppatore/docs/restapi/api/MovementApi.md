@@ -15,11 +15,11 @@ Tracks the user movement inside the trackingArea of an organization.
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **organizationMovement** | [**OrganizationMovement**](/restapi/model/OrganizationMovement.md)|  |
+ **organizationMovement** | [**OrganizationMovement**](../model/OrganizationMovement.md)|  |
 
 ### Return type
 
-[**OrganizationMovement**](/restapi/model/OrganizationMovement.md)
+[**OrganizationMovement**](../model/OrganizationMovement.md)
 
 ### Authorization
 
@@ -39,11 +39,11 @@ Tracks the user movement inside the trackingArea of a place of an organization.
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **placeMovement** | [**PlaceMovement**](/restapi/model/PlaceMovement.md)|  |
+ **placeMovement** | [**PlaceMovement**](../model/PlaceMovement.md)|  |
 
 ### Return type
 
-[**PlaceMovement**](/restapi/model/PlaceMovement.md)
+[**PlaceMovement**](../model/PlaceMovement.md)
 
 ### Authorization
 

@@ -19,7 +19,7 @@ Name | Type | Description
 
 ### Return type
 
-[**OrganizationPresenceCounter**](/restapi/model/OrganizationPresenceCounter.md)
+[**OrganizationPresenceCounter**](../model/OrganizationPresenceCounter.md)
 
 ### Authorization
 
@@ -43,7 +43,7 @@ Name | Type | Description
 
 ### Return type
 
-[**PlacePresenceCounter**](/restapi/model/PlacePresenceCounter.md)
+[**PlacePresenceCounter**](../model/PlacePresenceCounter.md)
 
 ### Authorization
 

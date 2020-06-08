@@ -1,6 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+0.21.0 | 2020-06-08 | Tommaso Azzalin | Progettista | - | Aggiunte descrizioni modello in §5.3.
 0.20.1 | 2020-06-05 | Tommaso Azzalin | Progettista | - | Aggiornati e verificati i diagrammi in §4.5.
 0.20.0 | 2020-06-02 | Tommaso Azzalin | Progettista | - | Aggiunte e verificate §4.6.1.3, §4.6.2.3, §4.6.3.2.
 0.19.0 | 2020-05-11 | Francesco Drago | Responsabile | Perin Federico | Approvazione del documento.

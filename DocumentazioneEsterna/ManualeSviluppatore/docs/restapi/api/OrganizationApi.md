@@ -22,7 +22,7 @@ Name | Type | Description
 
 ### Return type
 
-[**Organization**](/restapi/model/Organization.md)
+[**Organization**](../model/Organization.md)
 
 ### Authorization
 
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List**](/restapi/model/Organization.md)
+[**List**](../model/Organization.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Sends a deletion request to the system.  The request will be examined by Stalker
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **organizationDeletionRequest** | [**OrganizationDeletionRequest**](..//Models/OrganizationDeletionRequest.md)|
+ **organizationDeletionRequest** | [**OrganizationDeletionRequest**](../model/OrganizationDeletionRequest.md)|
 
 ### Return type
 
@@ -87,11 +87,11 @@ Updates one or more properties of an organization.  Only web-app administrators 
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **organization** | [**Organization**](/restapi/model/Organization.md)|  |
+ **organization** | [**Organization**](../model/Organization.md)|  |
 
 ### Return type
 
-[**Organization**](/restapi/model/Organization.md)
+[**Organization**](../model/Organization.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description
 
 ### Return type
 
-[**Organization**](/restapi/model/Organization.md)
+[**Organization**](../model/Organization.md)
 
 ### Authorization
 

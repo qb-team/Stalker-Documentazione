@@ -2,12 +2,11 @@
 
 HTTP request | Description
 ------------- | -------------
-**POST** [**/authenticationserver/userinformation**](AuthentinticationServerApi.md#getUserInfoFromAuthServer) | Gets the information on users given their identifier on the organization's authentication server.
+**POST** [**/authenticationserver/userinformation**](AuthenticationServerApi.md#getUserInfoFromAuthServer) | Gets the information on users given their identifier on the organization's authentication server.
 
 
 <a name="getUserInfoFromAuthServer"></a>
-# **POST** /authenticationserver/userinformation
-> List getUserInfoFromAuthServer(organizationAuthenticationServerRequest)
+## **POST** /authenticationserver/userinformation
 
 Gets the information on users given their identifier on the organization's authentication server. Only web-app administrators can access this end-point.
 
@@ -15,11 +14,11 @@ Gets the information on users given their identifier on the organization's authe
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **organizationAuthenticationServerRequest** | [**OrganizationAuthenticationServerRequest**](/restapi/model/OrganizationAuthenticationServerRequest.md)|
+ **organizationAuthenticationServerRequest** | [**OrganizationAuthenticationServerRequest**](../model/OrganizationAuthenticationServerRequest.md)|
 
 ### Return type
 
-[**List**](/restapi/model/OrganizationAuthenticationServerInformation.md)
+[**List**](../model/OrganizationAuthenticationServerInformation.md)
 
 ### Authorization
 

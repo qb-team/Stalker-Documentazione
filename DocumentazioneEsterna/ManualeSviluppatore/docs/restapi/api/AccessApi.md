@@ -22,7 +22,7 @@ Name | Type | Description
 
 ### Return type
 
-[**List**](/restapi/model/OrganizationAccess.md)
+[**List**](../model/OrganizationAccess.md)
 
 ### Authorization
 
@@ -47,7 +47,7 @@ Name | Type | Description
 
 ### Return type
 
-[**List**](/restapi/model/PlaceAccess.md)
+[**List**](../model/PlaceAccess.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description
 
 ### Return type
 
-[**List**](/restapi/model/OrganizationAccess.md)
+[**List**](../model/OrganizationAccess.md)
 
 ### Authorization
 
@@ -97,7 +97,7 @@ Name | Type | Description
 
 ### Return type
 
-[**List**](/restapi/model/PlaceAccess.md)
+[**List**](../model/PlaceAccess.md)
 
 ### Authorization
 

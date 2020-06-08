@@ -18,7 +18,7 @@ Name | Type | Description
 
 ### Return type
 
-[**List**](/restapi/model/TimePerUserReport.md)
+[**List**](../model/TimePerUserReport.md)
 
 ### Authorization
 

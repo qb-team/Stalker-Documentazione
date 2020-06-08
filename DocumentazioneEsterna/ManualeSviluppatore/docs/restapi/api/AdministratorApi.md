@@ -19,11 +19,11 @@ Bind an already existent administrator to the organization. Only web-app adminis
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **administratorBindingRequest** | [**AdministratorBindingRequest**](/restapi/model/AdministratorBindingRequest.md)|  |
+ **administratorBindingRequest** | [**AdministratorBindingRequest**](../model/AdministratorBindingRequest.md)|  |
 
 ### Return type
 
-[**Permission**](/restapi/model/Permission.md)
+[**Permission**](../model/Permission.md)
 
 ### Authorization
 
@@ -43,11 +43,11 @@ Creates and binds a new administrator to the current organization.  Only web-app
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **administratorBindingRequest** | [**AdministratorBindingRequest**](/restapi/model/AdministratorBindingRequest.md)|  |
+ **administratorBindingRequest** | [**AdministratorBindingRequest**](../model/AdministratorBindingRequest.md)|  |
 
 ### Return type
 
-[**Permission**](/restapi/model/Permission.md)
+[**Permission**](../model/Permission.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description
 
 ### Return type
 
-[**List**](/restapi/model/Permission.md)
+[**List**](../model/Permission.md)
 
 ### Authorization
 
@@ -95,7 +95,7 @@ Name | Type | Description
 
 ### Return type
 
-[**List**](/restapi/model/Permission.md)
+[**List**](../model/Permission.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Unbind an administrator to the organization. Only web-app administrators can acc
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **permission** | [**Permission**](/restapi/model/Permission.md)|  |
+ **permission** | [**Permission**](../model/Permission.md)|  |
 
 ### Return type
 
@@ -139,11 +139,11 @@ Update the permission for an already existent administrator in the organization.
 
 Name | Type | Description 
 ------------- | ------------- | -------------
- **permission** | [**Permission**](/restapi/model/Permission.md)|  |
+ **permission** | [**Permission**](../model/Permission.md)|  |
 
 ### Return type
 
-[**Permission**](/restapi/model/Permission.md)
+[**Permission**](../model/Permission.md)
 
 ### Authorization
 
