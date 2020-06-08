@@ -1,4 +1,4 @@
-# 5.2 Overview of Stalker API
+# 5.4 Overview of Stalker API
 
 ## API endpoints
 HTTP request | Description
