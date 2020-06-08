@@ -1,6 +1,6 @@
-# 5.4 Overview of Stalker API
+# 5.4 Overview
 
-## API endpoints
+## 5.4.1 API endpoints
 HTTP request | Description
 ------------- | -------------
 **GET** [**/access/organization/{organizationId}/anonymous/{exitTokens}**](api/AccessApi.md#getAnonymousAccessListInOrganization) | Returns all the anonymous accesses in an organization registered of the user owning the exitTokens (exitTokens are separated by commas).
@@ -34,7 +34,7 @@ HTTP request | Description
 
 
 <a name="documentation-for-models"></a>
-## Model documentation
+## 5.4.2 Model
 
  - [AdministratorBindingRequest](model/AdministratorBindingRequest.md)
  - [Favorite](model/Favorite.md)
@@ -55,10 +55,10 @@ HTTP request | Description
 
 
 <a name="documentation-for-authorization"></a>
-## Authorization documentation
+## 5.4.3 Authorization
 
 <a name="bearerAuth"></a>
-### bearerAuth
+### 5.4.3.1 bearerAuth
 
 - **Type**: HTTP basic authentication
 
