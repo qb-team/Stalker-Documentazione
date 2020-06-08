@@ -1,4 +1,8 @@
 # Permission
+
+## Description
+What can or cannot do an organization's administrator.
+
 ## Properties
 
 Name | Type | Description

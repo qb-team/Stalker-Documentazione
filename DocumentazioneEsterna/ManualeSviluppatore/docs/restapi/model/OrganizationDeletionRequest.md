@@ -1,4 +1,8 @@
 # OrganizationDeletionRequest
+
+## Description
+Request object for creating a new deletion request for the organization. The request will be analyzed by a Stalker administrator.
+
 ## Properties
 
 Name | Type | Description

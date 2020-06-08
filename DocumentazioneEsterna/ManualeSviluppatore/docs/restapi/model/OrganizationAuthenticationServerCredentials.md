@@ -1,4 +1,8 @@
 # OrganizationAuthenticationServerCredentials
+
+## Description
+Credentials for authenticating to the organizations's authentication server.
+
 ## Properties
 
 Name | Type | Description

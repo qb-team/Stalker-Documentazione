@@ -1,4 +1,8 @@
 # PlaceAccess
+
+## Description
+Access to a place of an organization.
+
 ## Properties
 
 Name | Type | Description

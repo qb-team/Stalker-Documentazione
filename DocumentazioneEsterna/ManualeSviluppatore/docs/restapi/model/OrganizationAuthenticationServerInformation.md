@@ -1,4 +1,8 @@
 # OrganizationAuthenticationServerInformation
+
+## Description
+Information of a user of an organization.
+
 ## Properties
 
 Name | Type | Description

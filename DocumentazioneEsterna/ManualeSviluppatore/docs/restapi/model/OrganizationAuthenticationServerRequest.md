@@ -1,4 +1,8 @@
 # OrganizationAuthenticationServerRequest
+
+## Description
+Data for requesting information about users of an organization.
+
 ## Properties
 
 Name | Type | Description
