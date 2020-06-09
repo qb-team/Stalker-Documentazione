@@ -1,7 +1,7 @@
 # PlaceAccess
 
 ## Description
-Access to a place of an organization.
+Represent an access to a place of an organization made by an application user.
 
 ## Properties
 

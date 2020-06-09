@@ -1,7 +1,7 @@
 # PlacePresenceCounter
 
 ## Description
-Number of people currently inside a place of an organization.
+Contains the number of people currently inside a place of an organization.
 
 ## Properties
 
