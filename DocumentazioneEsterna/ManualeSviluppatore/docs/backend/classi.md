@@ -138,15 +138,21 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 ![!AuthenticationServerApiController](../Immagini/Backend/Classi/AuthenticationServerApiController.png)
 
 L'`AuthenticationServerApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle utenze presenti nel server che autentica gli utenti dell'organizzazione, servendosi dell'`AuthenticationServerService`.
-- `getUserInfoFromAuthServer`: il metodo in caso di successo ritorna un'istanza di **List&lt;OrganizationAuthenticationServerInformation&gt;** che rappresenta tutte le informazioni richieste da un'amministratore autenticato nel sistema tramite un oggetto **OrganizationAuthenticationServerCredentials**; la lista di ritorno contiene tanti elementi quanti identificativi degli utenti sono stati inseriti nell'oggetto passato come parametro al metodo; 
+
+I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
+
+- `getUserInfoFromAuthServer`: il metodo, in caso di successo (poiché in caso di insuccesso ritorna semplicemente un codice di stato), ritorna un'istanza di **List&lt;OrganizationAuthenticationServerInformation&gt;** che rappresenta tutte le informazioni richieste da un'amministratore autenticato nel sistema tramite un oggetto **OrganizationAuthenticationServerRequest**. La lista di ritorno contiene tanti elementi quanti gli identificativi degli utenti inseriti nella lista interna all'oggetto passato come parametro al metodo.
 
 ### 4.6.2.4 FavoriteController
 ![!FavoriteApiController](../Immagini/Backend/Classi/FavoriteAPI.png)
 
 Il `FavoriteApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle organizzazioni preferite di un utente dell'applicazione e la gestione della loro lista dei preferiti, servendosi del `FavoriteService`.
-- `addFavoriteOrganization`: il metodo riceve come parametro un oggetto **Favorite** e utilizzando il metodo `addFavoriteOrganization` della classe **FavoriteService**salva nel DB l'oggetto; il metodo controlla anche che l'autore della richiesta sia un utente dell'applicazione e non un amministratore;  
-- `getFavoriteOrganizationList`: il metodo ritorna un'istanza di una lista di **Organization** che rappresenta tutte le organizzazioni presenti nella lista dei favoriti di un utente identificato tramite il codice **userId** fornito come parametro al metodo; per ottenere la lista utilizza il metodo `getFavoriteOrganizationList` della classe **FavoriteService**; il metodo controlla che l'autore della richiesta sia un utente dell'applicazione;  
-- `removeFavoriteOrganization`: il metodo rimuove un oggetto **Favorite** passato come parametro dalla lista dei preferiti dell'utente che effettua la richiesta, che deve essere necessariamente un utente dell'applicazione con l'oggetto favorite presente nella lista, altrimenti restituisce un codice di errore.  
+
+I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
+
+- `addFavoriteOrganization`: il metodo, in caso di successo (poiché in caso di insuccesso ritorna semplicemente un codice di stato), riceve come parametro un oggetto **Favorite** e, utilizzando il metodo `addFavoriteOrganization` di **FavoriteService**, salva nel database l'oggetto;
+- `getFavoriteOrganizationList`: il metodo, in caso di successo (poiché in caso di insuccesso ritorna semplicemente un codice di stato), ritorna un'istanza di una lista di **Organization** che rappresenta tutte le organizzazioni presenti nella lista dei favoriti di un utente identificato tramite il codice **userId** fornito come parametro al metodo. Per ottenere la lista utilizza il metodo `getFavoriteOrganizationList` della classe **FavoriteService**; 
+- `removeFavoriteOrganization`: il metodo, in caso di successo, rimuove un oggetto **Favorite** passato come parametro dalla lista dei preferiti dell'utente che effettua la richiesta, che deve essere necessariamente un utente dell'applicazione in possesso dell'organizzazione nella propria lista di preferiti, altrimenti viene restituito un codice di errore.  
 
 ### 4.6.2.5 MovementController
 ![!MovementApiController](../Immagini/Backend/Classi/MovementAPI.png)
