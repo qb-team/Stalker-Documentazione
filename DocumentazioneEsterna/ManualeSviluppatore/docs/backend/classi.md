@@ -131,9 +131,10 @@ L'`AdministratorController` si occupa di soddisfare le richieste ricevute dai cl
 - `updateAdministratorPermission`:il metodo aggiorna il livello di permessi di un amministratore all'interno di una specifica organizzazione; richiede un oggetto **Permission** come parametro, la richiesta deve essere effettuata da un'amministratore autenticato nel sistema e che sia owner dell'organizzazione nella quale cambiare i permessi dell'amministratore; per effettuare tale operazione si serve del metodo `updateAdministratorPermission` della classe **AdministratorService**. 
 
 ### 4.6.2.3 AuthenticationServerController
-![!AuthenticationServerController](../Immagini/Backend/Classi/AuthenticationServerApiController.png)
+![!AuthenticationServerApiController](../Immagini/Backend/Classi/AuthenticationServerApiController.png)
 
 L'`AuthenticationServerController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle utenze presenti nel server che autentica gli utenti dell'organizzazione, servendosi dell'`AuthenticationServerService`.
+- `getUserInfoFromAuthServer`: il metodo in caso di successo ritorna 
 
 ### 4.6.2.4 FavoriteController
 ![!FavoriteController](../Immagini/Backend/Classi/FavoriteAPI.png)
