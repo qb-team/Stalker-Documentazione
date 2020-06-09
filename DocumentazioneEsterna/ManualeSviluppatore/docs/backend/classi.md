@@ -91,16 +91,20 @@ Il `PlaceService` si occupa di soddisfare le richieste provenienti dai controlle
 
 Il `PresenceService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle presenze correnti presso un luogo o un'organizzazione.
 
--`getOrganizationPresenceCounter`: si occupa di interrogare Redis per ottenere in numero di presenze all'interno di una organizzazione specificata passando un **organizationId** al metodo; il contatore viene ottenuto chiamando il metodo `opsForValue` della classe **RedisTemplate<String, Integer>** e sul risultato chiamare  `get` con parametro la stringa contente **"organization:"+organizationId**; infine viene ritornato Optional dell'oggetto dopo aver verificato non sia nullo, e in caso sia nullo viene settato a zero.
--`getPlacePresenceCounter`:si occupa di interrogare Redis per ottenere in numero di presenze all'interno di un luogo specificato passando un **placeId** al metodo; il contatore viene ottenuto chiamando il metodo `opsForValue` della classe **RedisTemplate<String, Integer>** e sul risultato chiamare  `get` con parametro la stringa contente **"place:"+placeId**; infine viene ritornato Optional dell'oggetto dopo aver verificato non sia nullo, e in caso sia nullo viene settato a zero.
+Sono implementati i seguenti metodi:
+
+- `getOrganizationPresenceCounter`: si occupa di interrogare Redis per ottenere il numero di persone attualmente all'interno di una organizzazione specificata passando un **organizationId** al metodo. Il contatore viene ottenuto chiamando il metodo `opsForValue` della classe **RedisTemplate** che fornisce il metodo `get` di Redis, con parametro una stringa formata come segue: **"organization:" + organizationId**. La stringa corrisponde alla chiave per ricercare nella memoria delle coppie chiave-valore di Redis. Infine, viene ritornato **Optional** dell'oggetto, dopo aver verificato non sia nullo, e in caso sia nullo viene settato a zero.
+- `getPlacePresenceCounter` si occupa di interrogare Redis per ottenere il numero di persone attualmente all'interno di un luogo di un'organizzazione specificata passando un **placeId** al metodo. Il contatore viene ottenuto chiamando il metodo `opsForValue` della classe **RedisTemplate** che fornisce il metodo `get` di Redis, con parametro una stringa formata come segue: **"place:" + placeId**. La stringa corrisponde alla chiave per ricercare nella memoria delle coppie chiave-valore di Redis. Infine, viene ritornato **Optional** dell'oggetto, dopo aver verificato non sia nullo, e in caso sia nullo viene settato a zero.
 
 ### 4.6.1.10 ReportService
 ![!ReportService](../Immagini/Backend/Classi/ReportService.png)
 
-Il `ReportService` si occupa di soddisfare le richieste provenienti dai controller per ottenere report tabellari sugli accessi passati presso i luoghi di un'organizzazione da parte di utenti autenticati.  
+Il `ReportService` si occupa di soddisfare le richieste provenienti dai controller per ottenere record di report tabellari sugli accessi passati presso i luoghi di un'organizzazione da parte di utenti autenticati.  
 
--`getDuration`: dati due **OffsetDateTime** il metodo calcola la differenza tra la seconda data e la prima trasformandole in secondi e dunque ritorna il numero di secondi trascorsi tra la prima data e la seconda.  
--`getTimePerUserReport`: ritorna una lista di **TimePerUserReport** che rappresenta tutti gli accessi a uno specifico luogo degli utenti autenticati di un'organizzazione, il luogo viene indicato passando al metodo un **placeId**; utilizza il metodo `findByPlaceId` della classe **placeAccessRepo** per ottenere tutti gli accessi a un determinato luogo, questi accessi vengono controllati, raggruppati assieme per identificativo unico LDAP e viene calcolato il tempo trascorso tra l'entrata e l'uscita usando il metodo `getDuration`; infine da una lista di **PlaceAccess** si costruisce la lista di ritorno di **TimePerUserReport**.
+I metodi sono i seguenti:
+
+- `getDuration`: dati due istanze di **OffsetDateTime**, il metodo calcola la differenza tra la seconda data e la prima trasformandole in secondi e dunque ritorna il numero di secondi trascorsi tra la prima data e la seconda;
+- `getTimePerUserReport`: ritorna una lista di **TimePerUserReport** che rappresenta tutti gli accessi a uno specifico luogo degli utenti autenticati di un'organizzazione, il luogo viene indicato passando al metodo un **placeId**; utilizza il metodo `findByPlaceId` della classe **placeAccessRepo** per ottenere tutti gli accessi a un determinato luogo, questi accessi vengono controllati, raggruppati assieme per identificativo **orgAuthServerId** e viene calcolato il tempo trascorso tra l'entrata e l'uscita usando il metodo `getDuration`; infine da una lista di **PlaceAccess** si costruisce la lista di ritorno di **TimePerUserReport**.
 
 ## 4.6.2 Diagrammi dei Controller
 
