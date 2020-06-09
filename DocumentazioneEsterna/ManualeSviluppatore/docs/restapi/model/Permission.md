@@ -1,7 +1,7 @@
 # Permission
 
 ## Description
-What can or cannot do an organization's administrator.
+Represent what can or cannot do an administrator inside a specified organization.
 
 ## Properties
 
