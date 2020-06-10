@@ -15,7 +15,8 @@ L'applicazione Android offre all'utente le seguenti funzionalità:
 - **Drawer**: L'utente può accedere ad una serie di funzionalità utilizzando l'*Hamburger button* riportato in alto a sinistra.
 È possibile avviare il tracciamento tramite uno pulsante switch, disattivato di default. Alla prima attivazione del tracciamento compare sulla schermata dell'applicazione un pop-up che invita l'utente ad accettare i permessi necessari per permettere all'applicazione di utilizzare il GPS. Altre funzionalità in questo menu permettono attualmente il logout e l'ordinamento alfabetico della lista delle organizzazioni;
 
-- **Ricerca**: In alto vi è la barra principale dell'applicazione in vi è una sezione di ricerca. Con essa è possibile eseguire delle ricerche testuali per filtrare e visualizzare la lista delle organizzazioni;
+- **Ricerca**: In alto a destra sulla barra principale dell'applicazione vi è una lente di ingrandimento che funge da ricerca ed una volta selezionata mostrerà una barra dove è possibile scrivere del testo. Quindi è possibile eseguire delle ricerche testuali per filtrare e visualizzare la lista delle organizzazioni. 
+Di default la ricerca è impostata per eseguire delle ricerche sui nomi delle organizzazioni, ma si può anche cambiare tale funzione servendosi del menù di filtraggio in alto a destra nello schermo. I filtri di ricerca sono di muta esclusione ed è possibile scegliere questi campi: nome, città, nazione (selezionabile tramite pop-up scrollabile), organizzazioni anonime (stampa il risultato dopo la selezione) e organizzazioni autenticate (stampa il risultato dopo la selezione);
 
 - **Visualizzazione pagina organizzazione**: L'utente può entrare nella pagina dedicata di un'organizzazione in due diversi modi: 
     - cliccando l'elemento della lista ad essa appartenente; 
@@ -27,12 +28,17 @@ L'applicazione Android offre all'utente le seguenti funzionalità:
 
 - **Eliminazione organizzazione dalla lista MyStalker**: L'utente, tenendo premuto sull'elemento della lista delle organizzazioni MyStalker, fa comparire un pop-up che richiede se si intende rimuovere l'organizzazione da tale lista;
 
-- **Tracciamento**: La funzionalità di tracciamento consente all'utente di tracciare gli ingressi e le uscite presso le organizzazioni e presso i loro luoghi, solamente di quelli presenti nella lista MyStalker. Se l'organizzazione ha richiesto l'autenticazione con credenziali aziendali (LDAP) allora è possibile cambiare, tramite uno switch presente nella pagina dell'organizzazione, la tipologia di tracciamento da anonimo (default) ad autenticato (e viceversa). La modalità autenticato permette alle organizzazioni di visualizzare a posteriori gli accessi (insieme di un ingresso e un'uscita da un'organizzazione o luogo) di coloro che le hanno aggiunte alla lista MyStalker.
+- **Tracciamento**: La funzionalità di tracciamento consente all'utente di tracciare gli ingressi e le uscite presso le organizzazioni e presso i loro luoghi, solamente di quelli presenti nella lista MyStalker. Se l'organizzazione ha richiesto l'autenticazione con credenziali aziendali (LDAP) allora è possibile cambiare, tramite uno switch presente nella pagina dell'organizzazione, la tipologia di tracciamento da anonimo (default) ad autenticato (e viceversa). La modalità autenticato permette alle organizzazioni di visualizzare a posteriori gli accessi (insieme di un ingresso e un'uscita da un'organizzazione o luogo) di coloro che le hanno aggiunte alla lista MyStalker;
 
-- **Storico Accessi**: Nell'applicazione, oltre ad esserci una sezione dedicata alla lista di tutte le organizzazioni e una per le organizzazioni presenti nella lista MyStalker (lista preferiti), è presente una sezione (indicata nel tab da un orologio) per visualizzare lo storico degli accessi presso un'organizzazione o un luogo  da parte di un'utente.
-Se l'utente entrerà in un'organizzazione e farà pure l'uscita, verrà aggiunta un riga in cui verranno visualizzate le seguenti informazioni:
--nome dell'organizzazione;
--la data dell'accesso;
--l'ora in cui l'utente ha effettuato l'accesso;
--l'ora in cui l'utente ha effettutato l'uscita.
-E' presente anche un pulsante, contrassegnato dal simbolo di un cestino, che permette di eliminare tutte le informazioni sullo storico degli accessi (quindi verranno eliminate tutte le righe presenti in questa sezione).
+- **Storico Accessi**: Nell'applicazione, oltre ad esserci una sezione dedicata alla lista di tutte le organizzazioni e una per le organizzazioni presenti nella lista MyStalker (lista preferiti), vi è presente una terza sezione (indicata nel tab con un'icona a forma di orologio) che mostra un elenco di tutti gli storici accessi presso le organizzazioni da parte dell'utente.
+Se l'utente entra in un'organizzazione e poi esce, verrà aggiunto un elemento nella lista (riga) nella quale vengono mostrate le seguenti informazioni:
+    - nome dell'organizzazione;
+    - data di accesso;
+    - ora di accesso;
+    - ora di uscita.
+    
+    E' presente anche un pulsante, contrassegnato dal simbolo di un cestino, che permette di eliminare tutte le informazioni sullo storico degli accessi (quindi verranno eliminate tutte le righe presenti in questa sezione).
+
+    Gli elementi della lista dello storico accessi possono essere cliccati una volta oppure tenuti premuti a lungo. 
+    - Nella prima funzionalità l'utente verrà conseguentemente proiettato in una pagina dedicata che mostra lo storico degli accessi presso ai luoghi dell'organizzazione. Anche in questo caso ci sarà il pulsante a forma di cestino che permette l'eliminazione del contenuto;
+    - Nella seconda funzione apparirà un pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso all'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
