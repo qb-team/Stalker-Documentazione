@@ -134,13 +134,13 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 - `unbindAdministratorFromOrganization`: il metodo, in caso di successo (poiché in caso di insuccesso ritorna semplicemente un codice di stato), toglie i permessi di un amministratore in una organizzazione. Richiede come parametro un oggetto di tipo **Permission** che contiene tutte le informazioni necessarie. L'amministratore che effettua la richiesta deve essere autenticato nel sistema e deve essere owner dell'organizzazione alla quale fa parte l'amministratore che deve essere rimosso. Per compiere l'operazione viene chiamato il metodo `unbindAdministratorFromOrganization` della classe **AdministratorService**;  
 - `updateAdministratorPermission`: il metodo, in caso di successo (poiché in caso di insuccesso ritorna semplicemente un codice di stato), aggiorna il livello di permessi di un amministratore all'interno di una specifica organizzazione. Richiede un oggetto **Permission** come parametro, la richiesta deve essere effettuata da un'amministratore autenticato nel sistema e che sia owner dell'organizzazione nella quale cambiare i permessi dell'amministratore. Per effettuare tale operazione si serve del metodo `updateAdministratorPermission` della classe **AdministratorService**. 
 
-### 4.6.2.3 AuthenticationServerController
+### 4.6.2.3 AuthenticationServerApiController
 ![!AuthenticationServerApiController](../Immagini/Backend/Classi/AuthenticationServerApiController.png)
 
 L'`AuthenticationServerApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle utenze presenti nel server che autentica gli utenti dell'organizzazione, servendosi dell'`AuthenticationServerService`.
 - `getUserInfoFromAuthServer`: il metodo in caso di successo ritorna un'istanza di **List&lt;OrganizationAuthenticationServerInformation&gt;** che rappresenta tutte le informazioni richieste da un'amministratore autenticato nel sistema tramite un oggetto **OrganizationAuthenticationServerCredentials**; la lista di ritorno contiene tanti elementi quanti identificativi degli utenti sono stati inseriti nell'oggetto passato come parametro al metodo; 
 
-### 4.6.2.4 FavoriteController
+### 4.6.2.4 FavoriteApiController
 ![!FavoriteApiController](../Immagini/Backend/Classi/FavoriteAPI.png)
 
 Il `FavoriteApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle organizzazioni preferite di un utente dell'applicazione e la gestione della loro lista dei preferiti, servendosi del `FavoriteService`.
@@ -148,14 +148,14 @@ Il `FavoriteApiController` si occupa di soddisfare le richieste ricevute dai cli
 - `getFavoriteOrganizationList`: il metodo ritorna un'istanza di una lista di **Organization** che rappresenta tutte le organizzazioni presenti nella lista dei favoriti di un utente identificato tramite il codice **userId** fornito come parametro al metodo; per ottenere la lista utilizza il metodo `getFavoriteOrganizationList` della classe **FavoriteService**; il metodo controlla che l'autore della richiesta sia un utente dell'applicazione;  
 - `removeFavoriteOrganization`: il metodo rimuove un oggetto **Favorite** passato come parametro dalla lista dei preferiti dell'utente che effettua la richiesta, che deve essere necessariamente un utente dell'applicazione con l'oggetto favorite presente nella lista, altrimenti restituisce un codice di errore.  
 
-### 4.6.2.5 MovementController
+### 4.6.2.5 MovementApiController
 ![!MovementApiController](../Immagini/Backend/Classi/MovementAPI.png)
 
 Il `MovementApiController` si occupa di soddisfare le richieste ricevute dai client per tracciare i movimenti (ingressi o uscite) di un utente presso un luogo o un'organizzazione, servendosi del `MovementService`.
 - `trackMovementInOrganization`: il metodo riceve come parametro un oggetto  **OrganizationMovement** da parte di un utente dell'applicazione e utilizzando il metodo `trackMovementInOrganization` pubblica il movimento su Redis, per poter effettuare questa operazione il metodo controlla che l'utente sia autenticato tramite Firebase;  
 - `trackMovementInPlace`: il metodo riceve come parametro un oggetto **PlaceMovement**  da parte di un utente dell'applicazione e utilizzando il metodo `trackMovementInPlace` pubblica il movimento su Redis, per poter effettuare questa operazione il metodo controlla che l'utente sia autenticato tramite Firebase;  
 
-### 4.6.2.6 OrganizationController
+### 4.6.2.6 OrganizationApiController
 ![!OrganizationApiController](../Immagini/Backend/Classi/OrganizationAPI.png)
 
 L'`OrganizationApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle organizzazioni e altre funzionalità disponibili agli amministratori, come ad esempio la richiesta di eliminazione dell'organizzazione amministrata, servendosi dell'`OrganizationService`.  
@@ -165,20 +165,28 @@ L'`OrganizationApiController` si occupa di soddisfare le richieste ricevute dai 
 - `updateOrganization`: il metodo richiede come parametro un oggetto **Organization** che contiene le modifiche fatte ad un'organizzazione da parte di un amministratore owner della stessa, queste modifiche si devono riflettere su una organizzazione esistente altrimenti vengono scartate; l'amministratore deve essere autenticato tramite Firebase; viene utilizzato il metodo `updateOrganization` della class **OrganizationService**;  
 - `updateOrganizationTrackingArea`: il metodo richiede come parametri un identificativo dell'organizzazione e una stringa che rappresenta l'area di tracciamento in formato JSON, il compito del metodo è aggiornare l'area di tracciamento della specificata organizzazione con la nuova area di tracciamento passatagli; questa modifica può essere effettuata solo da un'amministratore autenticato tramite Firebase e almeno manager della stessa organizzazione; nel caso in cui l'organizzazione non esista o l'area di tracciamento ecceda il limite stabilito o non sia valida la modifica viene scartata.  
 
-### 4.6.2.7 PlaceController
-![!PlaceController](../Immagini/Backend/Classi/PlaceAPI.png)
+### 4.6.2.7 PlaceApiController
+![!PlaceApiController](../Immagini/Backend/Classi/PlaceAPI.png)
 
-Il `PlaceController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sui luoghi di un'organizzazione e per gestirli, servendosi del `PlaceService`.
+Il `PlaceApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sui luoghi di un'organizzazione e per gestirli, servendosi del `PlaceService`.
+- `createNewPlace`: questo metodo permette a ad un amministratore autenticato di creare un nuovo luogo all'interno di una organizzazione nella quale sia almeno manager; il metodo richiede come parametro un oggetto **Place** contenente tutti i dettagli del nuovo luogo da creare; per creare il luogo il metodo usa `createNewPlace` della classe **PlaceService**;  
+- `deletePlace`: il metodo permette ad un amministratore autenticato di eliminare un luogo da un'organizzazione in cui sia almeno manager, il metodo richiede come parametro un identificativo **placeId** di un luogo che verrà passato al metodo `getPlace` della classe **PlaceService** per recuperare l'oggetto Place da eliminare, nel caso si voglia eliminare un luogo inesistente la richiesta non sarà soddisfatta e verrà ritornato un codice di errore, in caso il luogo esista viene usato `deletePlace` della classe **PlaceService**;  
+- `updatePlace`: permette ad un amministratore autenticato di modificare l'area di un luogo passando al metodo un oggetto **Place** che sostituirà quello già esistente; l'amministratore deve almeno essere manager dell'organizzazione a cui fa parte il luogo; in caso il luogo inserito non abbia lo stesso codice identificativo di un luogo già esistente la modifica viene scartata;   
+- `getPlaceListOfOrganization`: il metodo richiede un identificativo **organizationId** di una organizzazione della quale restituirà tutti i luoghi al suo interno, sia gli utenti dell'applicazione che gli amministratori possono usare questa funzionalità previa autenticazione con Firebase.  
 
-### 4.6.2.8 PresenceController
-![!PresenceController](../Immagini/Backend/Classi/PresenceAPI.png)
+### 4.6.2.8 PresenceApiController
+![!PresenceApiController](../Immagini/Backend/Classi/PresenceAPI.png)
 
-Il `PresenceController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle presenze correnti presso un luogo o un'organizzazione, servendosi del `PresenceService`.
+Il `PresenceApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle presenze correnti presso un luogo o un'organizzazione, servendosi del `PresenceService`.  
 
-### 4.6.2.9 ReportController
-![!ReportController](../Immagini/Backend/Classi/ReportAPI.png)
+- `getOrganizationPresenceCounter`: il metodo ritorna un'istanza di **OrganizationPresenceCounter** che contiene il numero di utenti attualmente all'interno dell'organizzazione specificata dal **organizationId** passato al metodo, solo gli amministratori autenticati e appartenenti all'organizzazione specificata possono richiedere il numero delle presenze;  
+- `getPlacePresenceCounter`: il metodo ritorna un'istanza di **PlacePresenceCounter** che contiene il numero di utenti attualmente all'interno del luogo specificato dal **placeId** passato al metodo, solo gli amministratori autenticati e appartenenti all'organizzazione specificata possono richiedere il numero delle presenze;
 
-Il `ReportController` si occupa di soddisfare le richieste ricevute dai client per ottenere report tabellari sugli accessi passati presso i luoghi di un'organizzazione da parte di utenti autenticati, servendosi del `ReportService`.
+### 4.6.2.9 ReportApiController
+![!ReportApiController](../Immagini/Backend/Classi/ReportAPI.png)
+
+Il `ReportApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere report tabellari sugli accessi passati presso i luoghi di un'organizzazione da parte di utenti autenticati, servendosi del `ReportService`.
+- `getTimePerUserReport`: il metodo ritorna un'istanza di una lista di **TimePerUserReport** che rappresenta il tempo trascorso dagli utenti all'interno di uno specificato luogo passato al metodo tramite **placeId**; l'amministratore deve essere autenticato tramite Firebase; viene chiamato il metodo  `getTimePerUserReport` della classe **ReportService** per ottenere i dati da Redis che contiene i contatori delle presenze per i luoghi.  
 
 ## 4.6.3 Diagrammi di altre classi
 
