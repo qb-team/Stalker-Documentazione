@@ -258,12 +258,18 @@ ___
 <figcaption align="center"> <em> Diagramma delle classi del LDAP Organization </em> </figcaption>
 
 La classe `LDAPorganizationFragment` rappresenta la pagina dedicata alle organizzazioni che richiedono credenziali LDAP. La vista contiene le informazioni riferite all'organizzazione e un pulsante che fa aprire un pop-up dove è possibile inserire i dati di autenticazione.
-Un utente, per poter essere tracciato dall'organizzazione privata, ha bisogno prima di autenticarsi ed in seguito a ciò se l'esito fosse positivo allora l'organizzazione viene automaticamente inserita nella lista delle organizzazioni `MyStalker` (lista preferite). In seguito apparirà uno switch dove è possibile cambiare la tipologia di tracciamento. 
-Le credenziali che ha digitato l'utente vengono spedite al modello che interrogherà il server dedicato al LDAP dell'organizzazione. L'esito di questa procedura verrà rimandata
-alla vista e apparirà una notifica visibile sulla schermata per avvisare l'utente.
+Un utente, per poter essere tracciato dall'organizzazione privata, ha bisogno prima di autenticarsi ed in seguito a ciò se l'esito fosse positivo allora l'organizzazione viene automaticamente inserita nella lista delle organizzazioni `MyStalker` (lista preferite).
+Le credenziali che ha digitato l'utente vengono spedite al modello che interrogherà il server dedicato al LDAP dell'organizzazione. L'esito di questa procedura verrà rimandata alla vista e apparirà una notifica visibile sulla schermata per avvisare l'utente.
 
-La classe `LDAPorganizationFragment` offre i seguenti metodi:
+La classe `LDAPorganizationFragment` ha bisogno di utilizzare le librerie LDAP per poter effettuare la connessione al server e autenticare l'utente.
+Essa offre i seguenti metodi:
 
 -   `onCreate(saveInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
 
--   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente.
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+
+-   `LDAPAuthentication()`: Si occupa di avviare la connessione al server LDAP una volta che l'utente ha inserito le credenziali nel pop-up di autenticazione;
+
+-   `onSuccessLdap()`: L'autenticazione è avvenuta con successo, viene creata l'organizzazione che comparirà nella lista MyStalker e mostra all'utente l'esito tramite Toast;
+
+-   `onFailureLdap()`: L'autenticazione è fallita e viene comunicato l'esito all'utente tramite Toast.
