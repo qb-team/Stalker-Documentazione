@@ -139,7 +139,7 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 
 L'`AuthenticationServerApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle utenze presenti nel server che autentica gli utenti dell'organizzazione, servendosi dell'`AuthenticationServerService`.
 
-I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
+Il seguente metodo permette di rispondere all'end-point offerto dal backend:
 
 - `getUserInfoFromAuthServer`: il metodo, in caso di successo (poiché in caso di insuccesso ritorna semplicemente un codice di stato), ritorna un'istanza di **List&lt;OrganizationAuthenticationServerInformation&gt;** che rappresenta tutte le informazioni richieste da un'amministratore autenticato nel sistema tramite un oggetto **OrganizationAuthenticationServerRequest**. La lista di ritorno contiene tanti elementi quanti gli identificativi degli utenti inseriti nella lista interna all'oggetto passato come parametro al metodo.
 
@@ -181,24 +181,32 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 ![!PlaceApiController](../Immagini/Backend/Classi/PlaceAPI.png)
 
 Il `PlaceApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sui luoghi di un'organizzazione e per gestirli, servendosi del `PlaceService`.
-- `createNewPlace`: questo metodo permette a ad un amministratore autenticato di creare un nuovo luogo all'interno di una organizzazione nella quale sia almeno manager; il metodo richiede come parametro un oggetto **Place** contenente tutti i dettagli del nuovo luogo da creare; per creare il luogo il metodo usa `createNewPlace` della classe **PlaceService**;  
-- `deletePlace`: il metodo permette ad un amministratore autenticato di eliminare un luogo da un'organizzazione in cui sia almeno manager, il metodo richiede come parametro un identificativo **placeId** di un luogo che verrà passato al metodo `getPlace` della classe **PlaceService** per recuperare l'oggetto Place da eliminare, nel caso si voglia eliminare un luogo inesistente la richiesta non sarà soddisfatta e verrà ritornato un codice di errore, in caso il luogo esista viene usato `deletePlace` della classe **PlaceService**;  
-- `updatePlace`: permette ad un amministratore autenticato di modificare l'area di un luogo passando al metodo un oggetto **Place** che sostituirà quello già esistente; l'amministratore deve almeno essere manager dell'organizzazione a cui fa parte il luogo; in caso il luogo inserito non abbia lo stesso codice identificativo di un luogo già esistente la modifica viene scartata;   
-- `getPlaceListOfOrganization`: il metodo richiede un identificativo **organizationId** di una organizzazione della quale restituirà tutti i luoghi al suo interno, sia gli utenti dell'applicazione che gli amministratori possono usare questa funzionalità previa autenticazione con Firebase.  
+
+I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
+
+- `createNewPlace`: questo metodo permette a ad un amministratore autenticato di creare un nuovo luogo all'interno di una organizzazione nella quale sia almeno manager. Il metodo richiede come parametro un oggetto di tipo **Place** contenente tutti i dettagli del nuovo luogo da creare. Per creare il luogo il metodo usa `createNewPlace` di **PlaceService**;  
+- `deletePlace`: il metodo permette ad un amministratore autenticato di eliminare un luogo da un'organizzazione in cui sia almeno manager. Il metodo richiede come parametro un identificativo **placeId** di un luogo, che verrà passato al metodo `getPlace` della classe **PlaceService** per recuperare l'oggetto **Place** da eliminare. Nel caso si voglia eliminare un luogo inesistente la richiesta non potrà essere soddisfatta e verrà ritornato un codice di errore, in caso il luogo esista viene usato `deletePlace` di **PlaceService** per compiere la rimozione;  
+- `updatePlace`: permette ad un amministratore autenticato di modificare l'area di un luogo passando al metodo un oggetto **Place** che sostituirà quello già esistente. L'amministratore deve almeno essere manager dell'organizzazione a cui fa parte il luogo. In caso il luogo inserito non abbia lo stesso codice identificativo di un luogo già esistente la modifica viene scartata;   
+- `getPlaceListOfOrganization`: il metodo richiede un identificativo **organizationId** di una organizzazione della quale restituirà tutti i luoghi al suo interno, sia gli utenti dell'applicazione che gli amministratori possono usare questa funzionalità previa autenticazione attraverso il provider di autenticazione.  
 
 ### 4.6.2.8 PresenceApiController
 ![!PresenceApiController](../Immagini/Backend/Classi/PresenceAPI.png)
 
-Il `PresenceApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle presenze correnti presso un luogo o un'organizzazione, servendosi del `PresenceService`.  
+Il `PresenceApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle presenze correnti presso un luogo o un'organizzazione, servendosi del `PresenceService`.
 
-- `getOrganizationPresenceCounter`: il metodo ritorna un'istanza di **OrganizationPresenceCounter** che contiene il numero di utenti attualmente all'interno dell'organizzazione specificata dal **organizationId** passato al metodo, solo gli amministratori autenticati e appartenenti all'organizzazione specificata possono richiedere il numero delle presenze;  
-- `getPlacePresenceCounter`: il metodo ritorna un'istanza di **PlacePresenceCounter** che contiene il numero di utenti attualmente all'interno del luogo specificato dal **placeId** passato al metodo, solo gli amministratori autenticati e appartenenti all'organizzazione specificata possono richiedere il numero delle presenze;
+I seguenti metodi permettono di rispondere agli end-point offerti dal backend: 
+
+- `getOrganizationPresenceCounter`: il metodo ritorna un'istanza di **OrganizationPresenceCounter** che contiene il numero di utenti attualmente all'interno dell'organizzazione specificata dal **organizationId** passato al metodo. Solo gli amministratori autenticati e appartenenti all'organizzazione specificata possono richiedere il numero delle presenze;  
+- `getPlacePresenceCounter`: il metodo ritorna un'istanza di **PlacePresenceCounter** che contiene il numero di utenti attualmente all'interno del luogo specificato dal **placeId** passato al metodo. Solo gli amministratori autenticati e appartenenti all'organizzazione specificata possono richiedere il numero delle presenze.
 
 ### 4.6.2.9 ReportApiController
 ![!ReportApiController](../Immagini/Backend/Classi/ReportAPI.png)
 
 Il `ReportApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere report tabellari sugli accessi passati presso i luoghi di un'organizzazione da parte di utenti autenticati, servendosi del `ReportService`.
-- `getTimePerUserReport`: il metodo ritorna un'istanza di una lista di **TimePerUserReport** che rappresenta il tempo trascorso dagli utenti all'interno di uno specificato luogo passato al metodo tramite **placeId**; l'amministratore deve essere autenticato tramite Firebase; viene chiamato il metodo  `getTimePerUserReport` della classe **ReportService** per ottenere i dati da Redis che contiene i contatori delle presenze per i luoghi.  
+
+Il seguente metodo permette di rispondere all'end-point offerto dal backend:
+
+- `getTimePerUserReport`: il metodo ritorna un'istanza di una lista di **TimePerUserReport** che rappresenta il tempo trascorso dagli utenti all'interno di uno specificato luogo passato al metodo tramite **placeId**. L'amministratore deve essere autenticato tramite il provider di autenticazione; viene chiamato il metodo  `getTimePerUserReport` della classe **ReportService** per ottenere i dati da ritornare.
 
 ## 4.6.3 Diagrammi di altre classi
 
