@@ -264,9 +264,17 @@ Le credenziali che ha digitato l'utente vengono spedite al modello che interrogh
 La classe `LDAPorganizationFragment` ha bisogno di utilizzare le librerie LDAP per poter effettuare la connessione al server e autenticare l'utente.
 Essa offre i seguenti metodi:
 
--   `onCreate(saveInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
+-   `onAttach(context: Context)`: Assicura che l'attività abbia effettivamente implementato il nostro listener e che esso non sia nulla;
+
+-   `onCreate(saveInstanceState: Bundle)`: Si occupa della creazione del Fragment in quanto componente;
 
 -   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+
+-   `onPrepareOptionsMenu(menu: Menu)`: Nasconde gli elementi dei menu;
+
+-   `onBackPressed()`:  Si occupa di far ritornare l'utente alla precedente Activity/Fragment.
+
+-   `onClick(view: View)`:  Attende un click  da parte dell'utente sul pulsante "AUTENTICAZIONE" e verrà poi mostrato il pop-up di autenticazione;
 
 -   `LDAPAuthentication()`: Si occupa di avviare la connessione al server LDAP una volta che l'utente ha inserito le credenziali nel pop-up di autenticazione;
 
