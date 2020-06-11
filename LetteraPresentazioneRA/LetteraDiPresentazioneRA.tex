@@ -1,0 +1,85 @@
+\documentclass[12pt]{letter}
+\usepackage{eurosym}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{../Utilita/Stilelettera}
+\usepackage[italian]{babel}
+\input{../Utilita/Comandi.tex}
+
+
+\signature{}
+\address{\VT{} \\ \CR{} \\ Università degli Studi di Padova \\ Dipartimento di Matematica \\ Via Trieste, 63\\ 35121 Padova }
+
+
+\begin{document}
+    \begin{letter}
+        { Egregio \VT{},\\Egregio \CR{},}
+        \begin{minipage}{.4\textwidth}
+            \begin{flushleft}
+                \includegraphics[width=.4\linewidth]{../Utilita/Immagini/qbteam.png}
+            \end{flushleft}
+        \end{minipage}
+        \begin{minipage}{.5\textwidth}
+            \begin{flushright}
+                \includegraphics[width=.4\linewidth]{../Utilita/Immagini/LogoUniPD.png}
+            \end{flushright}
+        \end{minipage}
+        {    
+        \begin{flushleft}
+            Corso di Ingegneria del Software\\ Gruppo \Gruppo{}\\ 
+        \end{flushleft}
+        }
+        \opening{ Con la presente il gruppo \Gruppo{} intende comunicarVi la partecipazione alla Revisione di Accettazione del 2020-06-18 e l'impegno alla consegna finale del progetto da Voi commissionato, denominato:}
+        \begin{center}
+           \textbf{\NomeProgetto{}} 
+        \end{center}
+        proposto dall'azienda \textbf{\Proponente{}}.\\
+        In allegato sono inclusi i seguenti documenti:
+        \begin{itemize}
+            \item Esterni:
+            \begin{itemize}
+                \item \AdRv{boh};
+                \item \Glossariov{boh};
+                \item \PdPv{boh};
+                \item \PdQv{boh}.
+            \end{itemize}
+            \item Interni:
+            \begin{itemize}
+                \item \NdPv{boh}.
+            \end{itemize}
+        \end{itemize}
+        I due manuali, utente e manutentore, non sono in allegato poiché sono accessibili via internet attraverso i seguenti link:
+        \begin{itemize}
+            \item \MMv{1.0.0}: \href{https://stalker-manuale-manutentore.readthedocs.io/}{https://stalker-manuale-manutentore.readthedocs.io/};
+            \item \MUv{1.0.0}: \href{https://stalker-manuale-utente.readthedocs.io/}{https://stalker-manuale-utente.readthedocs.io/}.
+        \end{itemize}
+        Inoltre sono presenti i verbali esterni ed interni:
+        \begin{itemize}
+            \item mettere i verbali.
+        \end{itemize}
+        La spesa totale è di \euro{} 15.072,00, come specificato nel documento \PdP{}.\\
+        Per completezza, inseriamo di seguito la lista dei membri del gruppo, con nome, cognome, matricola e ruolo principale fino a questo momento.
+        {
+            \rowcolors{2}{grigetto}{white}
+            \renewcommand{\arraystretch}{1.5}
+            \begin{longtable}{ C{4cm} C{3cm} C{6cm} }
+                \rowcolor{darkblue}
+                \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Matricola}} & \textcolor{white}{\textbf{Ruolo di progetto}}\\
+                \endhead 
+                \MC{} & 1121305 & Verificatore \\
+                \LD{} & 1162190 & Verificatore \\
+                \CE{} & 1161514 & Amministratore di Progetto \\
+                \SE{} & 1166175 & Programmatore \\
+                \PF{} & 1170747 & Responsabile di Progetto \\
+                \DF{} & 1146928 & Programmatore \\
+                \BR{} & 1148142 & Programmatore \\
+                \AT{} & 1169740 & Verificatore \\  
+            \end{longtable}
+        }
+        Cordiali saluti,
+        \closing{\CE{}, \\ \textit{\Responsabile{}}\\ \includegraphics[width=.6\linewidth]{../DocumentazioneEsterna/PianoDiProgetto/Sezioni/Immagini/Firme/Emanuele.png}}
+        \vspace{10mm}
+    \end{letter}
+\end{document}
