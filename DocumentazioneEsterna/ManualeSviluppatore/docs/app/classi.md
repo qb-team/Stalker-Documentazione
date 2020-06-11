@@ -283,7 +283,7 @@ Essa offre i seguenti metodi:
 -   `onFailureLdap()`: L'autenticazione è fallita e viene comunicato l'esito all'utente tramite Toast.
 
 ___
-## 2.6.11 AccessHistoryFragment
+## 2.6.11 Access History
 ![!AccessHistoryFragment](../Immagini/App/Classi/..."Diagramma delle classi del Access History")
 <figcaption align="center"> <em> Diagramma delle classi del Access History </em> </figcaption>
 
