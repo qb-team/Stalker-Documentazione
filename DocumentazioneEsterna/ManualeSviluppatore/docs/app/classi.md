@@ -272,7 +272,7 @@ Essa offre i seguenti metodi:
 
 -   `onPrepareOptionsMenu(menu: Menu)`: Nasconde gli elementi dei menu;
 
--   `onBackPressed()`:  Si occupa di far ritornare l'utente alla precedente Activity/Fragment.
+-   `onBackPressed()`:  Si occupa di far ritornare l'utente alla precedente Activity/Fragment;
 
 -   `onClick(view: View)`:  Attende un click  da parte dell'utente sul pulsante "AUTENTICAZIONE" e verrà poi mostrato il pop-up di autenticazione;
 
@@ -281,3 +281,26 @@ Essa offre i seguenti metodi:
 -   `onSuccessLdap()`: L'autenticazione è avvenuta con successo, viene creata l'organizzazione che comparirà nella lista MyStalker e mostra all'utente l'esito tramite Toast;
 
 -   `onFailureLdap()`: L'autenticazione è fallita e viene comunicato l'esito all'utente tramite Toast.
+
+___
+## 2.6.11 AccessHistoryFragment
+![!AccessHistoryFragment](../Immagini/App/Classi/..."Diagramma delle classi del Access History")
+<figcaption align="center"> <em> Diagramma delle classi del Access History </em> </figcaption>
+
+La classe `AccessHistoryFragment` rappresenta la pagina dedicata allo storico degli accessi presso a tutte le organizzazioni scelte dall'utente per essere tracciato. Nel momento in cui un utente entra nell'organizzazione e conseguentemente esce da essa verrà stampato un elemento clickabile ed informativo che mostra le informazione legate ai quei movimenti. Se l'utente è anche entrato nei luoghi dell'organizzazione tale informazione verrà registrata e mostrata nel "PlaceAccessFragment".
+
+La classe `AccessHistoryFragment` offre i seguenti metodi:
+
+-   `onCreateViewHolder()`: Restituisce il layout dell'elenco delle organizzazioni;
+
+-   `onBindViewHolder(holder: ViewHolder, position: int)`: Imposta il nome dell'organizzazione, la data, l'accesso e l'uscita in formato riga;
+
+-   `getItemCount()`: Ritorna la dimensione della lista degli accessi nell'organizzazione;
+
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+
+-   `onPrepareOptionsMenu(menu: Menu)`: Nasconde gli elementi dei menu;
+
+-   `onClick(v: View)`:  L'utente dopo il click verrà proiettato in una pagina dedicata allo storico degli accessi presso ai luoghi dell'organizzazione;
+
+-   `onLongClick(v: View)`: L'utente dopo il click viene aperto pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso l'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
