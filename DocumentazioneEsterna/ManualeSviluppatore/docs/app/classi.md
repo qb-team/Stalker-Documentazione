@@ -142,9 +142,19 @@ La classe ActionTabFragment offre i seguenti metodi:
 
 -   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
--   `public void onActivityCreated(savedInstanceState: Bundle)`: Segnala che la creazione dell’Activity è stata completata;
+-   `onActivityCreated(savedInstanceState: Bundle)`: Segnala che la creazione dell’Activity è stata completata;
 
--   `onBackPressed()`: Si occupa di recuperare il fragment appartenente all'Action Tab attualmente visibile per poi propagare la sua callBack agli altri fragment.
+-   `onBackPressed()`: Si occupa di recuperare il fragment appartenente all'Action Tab attualmente visibile per poi propagare la sua callBack agli altri fragment;
+
+- `getMyStalkerFragment()` : Metodo che restituisce il Fragment in cui si trova l'utente;
+
+- `getHomeFragment()` : Metodo che restituisce l' HomeFragment;
+
+- `getAccessHistoryFragment()` : Metodo che restituisce l' AccessHistoryFragment;
+
+- `getTabLayout()` : Metodo che restituisce il TabLayout;
+
+- `disableScroll(enable: boolean)` : Metodo che impedisce all'utente di passare da un tab all'altro.
 
 ___
 ## 2.6.7 Home 
@@ -333,6 +343,29 @@ In questa pagina ci saranno le informazioni sul nome del luogo, data, ora di acc
 La classe PlaceAccessFragment offre i seguenti metodi:
 
 -   `onAttach(context: Context)`: Assicura che l'attività abbia effettivamente implementato il nostro listener e che esso non sia nulla;
+
+-   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
+
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+
+-   `onPrepareOptionsMenu(menu:Menu)`: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca; 
+
+-   `onOptionsItemSelected(item:MenuItem)`: Aggiunge l'organizzazione nella lista dei preferiti;
+
+-   `onSuccessGetPlaceAccessInLocal(placeAccessList List<PlaceAccess>)`: Aggiunge una riga alla pagina dello storico degli accessi di un luogo contenente le informazioni sul nome di quel luogo e la sua data, ora di accesso e ora di uscita in cui viene effettuato l'accesso;
+
+-   `onSuccessDeletePlaceAccess()`: Rimuove alla pagina tutti le righe degli accessi sui luoghi.
+
+
+## 2.6.13 ActionTab
+![!ActionTabFragment](../Immagini/App/Classi/ActionTabFragment.png "Diagramma della classe Place Access")
+<figcaption align="center"> <em> Diagramma della classe Place Access</em> </figcaption>
+
+La classe `ActionTabFragment` 
+rappresenta la pagina dedicata alla memorizzazione degli accessi ai luoghi effettuati dall'utente di una determinata organizzazione.
+In questa pagina ci saranno le informazioni sul nome del luogo, data, ora di accesso e ora di uscita in cui viene effettuato l'accesso.
+
+La classe PlaceAccessFragment offre i seguenti metodi:
 
 -   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
 
