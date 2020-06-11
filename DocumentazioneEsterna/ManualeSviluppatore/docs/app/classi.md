@@ -37,27 +37,25 @@ Qualora l'utente si fosse dimenticato la password è possibile eseguire il reset
 
 Nel caso in cui l'utente desidera registrarsi può farlo nella parte sottostante della pagina dove vi è scritto "Non hai un account?" e cliccando il testo "Clicca qui". Dopo tale azione verrà aperta la pagina dedicata alla registrazione (SignUpFragment).
 
-La classe `AuthenticationFragment` utilizza le librerie di Firebase per consentire all'utente di autenticarsi o registrarsi presso il server. 
- offre i seguenti metodi:
+La classe `AuthenticationFragment` utilizza le librerie di Firebase per consentire all'utente di autenticarsi e/o registrarsi presso il server. La classe offre i seguenti metodi:
 
-//////////////////////////////////IN PROGRESS//////////////////////////////////////////////
 -   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione del Fragment in quanto componente;
-
--   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della componente grafica visualizzata dall'utente e resta in attesa di un click da parte dell'utente in caso selezioni il pulsante "Login" o "Registrati" per aprire i rispettivi fragment.
-
--   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione del fragment in quanto componente;
 
 -   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
--   `onClick(View v)`: Attende un click dell'utente al pulsante "Login" per invocare il metodo `checkLoginDetails()`;
+-   `onClick(v: View)`: Attende un click dell'utente sul pulsante "Log in" per invocare il metodo `checkLoginDetails()` oppure sul pulsante "Password dimenticata?" invocando `forgotPassword()`;
 
--   `checkLoginDetails()`: Controlla se l'utente ha scritto le proprie credenziali e le invia al metodo `initLogin(email: String, password: String)`, altrimenti segnala l'utente dell'assenza di esse;
+-   `forgotPassword()`: Avvia il metodo che si occupa di gestire il reset della password aprendo un pop-up dove inserire l'email dell'account;
 
--   `initLogin(email: String, password: String)`: Tramite l' MVP invoca i metodi di Firebase per verificare l'email e la password, in caso positivo invoca il metodo `onLoginSuccess(message: String)` mentre, in caso negativo invoca `onLoginFailure(e: FirebaseException)`;
+-   `checkLoginDetails()`: Check sulla validità delle credenziali inserite dall'utente che verranno in seguito mandate al server;
 
--   `onLoginSuccess(message: String)`: L'autenticazione è andata a buon fine, l'utente sarà spostato nella `HomePageActivity.class` e visualizza un messaggio che indica che si è autenticato correttamente;
+-   `checkLogin()`: Metodo che consente la comunicazione con il presenter;
 
--   `onLoginFailure(e: FirebaseException)`: L'autenticazione è fallita e l'utente visualizza un messaggio che indica l'errore.
+-   `onLoginSuccess()`: L'autenticazione ha avuto esito positivo e si lo comunica all'utente tramite Toast e si avvia l'attività HomePageActivity;
+
+-   `onCredentialFailure(e: FirebaseException)`: L'autenticazione ha avuto esito negativo e lo si comunica all'utente tramite Toast;
+
+-   `onSendEmailSuccess() `: Metodo che avvisa l'utente tramite Toast che arriverà una mail per poter resettare la password.
 
 ___
 ## 2.6.4 SignUp
