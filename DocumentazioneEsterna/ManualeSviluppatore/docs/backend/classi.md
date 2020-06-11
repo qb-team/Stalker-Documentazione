@@ -81,10 +81,25 @@ Si dispone dei seguenti metodi:
 
 L'`OrganizationService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle organizzazioni e altre funzionalità disponibili agli amministratori, come ad esempio la richiesta di eliminazione dell'organizzazione amministrata.
 
+- `getOrganization`: il metodo ritorna un oggetto **Organization** se esiste nel DB, questo oggetto viene identificato tramite **organizationId** passato al metodo, e rappresenta un'organizzazione presente nel sistema con tutte le informazioni ad essa associate; utilizza il metodo `findById` della classe **OrganizationRepository** per eseguire l'operazione su DB;  
+- `getOrganizationList`: il metodo non richiede parametri e ritorna una lista di **Organization** che rappresenta tutte le organizzazioni presenti nel sistema; utilizza il metodo `findAll` della classe **OrganizationRepository** per ricevere tutte le organizzazioni dal DB;  
+- `requestDeletionOfOrganization`: il metodo serve a salvare la richiesta di eliminazione di una organizzazione nel DB per essere presa in carico da un'amministratore Stalker; ha come parametro un oggetto **OrganizationDeletionRequest** che contiene tutte le informazioni necessarie; chiama il metodo `save` della classe **OrganizationDeletionRequestRepository**;  
+- `updateOrganization`: il metodo aggiorna i dati di un'organizzazione esistente sostituendoli con i nuovi dati passati al metodo tramite l'oggetto **Organization**; il metodo controlla che l'organizzazione da aggiornare sia presente nel sistema grazie al metodo `findByName` e che l'area di tracciamento si possa aggiornare rispettando i vincoli di grandezza grazie al metodo `canTrackingAreaBeUpdated`;  
+- `updateOrganizationTrackingArea`: il metodo aggiorna solamente l'area di tracciamento di un'organizzazione identificata tramite un **organizationId**, la nuova area di tracciamento specificata nel parametro **trackingArea** deve rispettare i vincoli di grandezza e il metodo li verifica chiamando `canTrackingAreaBeUpdated`; se organizzazione a cui si vuole aggiornare l'area non viene trovata nel sistema l'operazione viene scartata.
+
 ### 4.6.1.8 PlaceService
 ![!PlaceService](../Immagini/Backend/Classi/PlaceService.png)
 
+
 Il `PlaceService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sui luoghi di un'organizzazione e per gestirli.
+
+- `createNewPlace`: crea un nuovo luogo all'interno di una organizzazione, tutte le informazioni sono contenute nell'oggetto **Place** passato come parametro;  
+
+- `deletePlace`: elimina un luogo da una organizzazione grazie al parametro **Place** passato al metodo, in caso il luogo specificato non esistesse all'interno dell'organizzazione specificata nell'oggetto **Place** l'operazione non va' a buon fine; utilizza il metodo `delete` della classe **placeRepository**;  
+
+- `updatePlace`: il metodo aggiorna un luogo con le informazioni passate al metodo dal parametro **Place**; l'organizzazione del luogo da aggiornare deve esistere e viene recuperata dal DB con il metodo `findById` della classe **OrganizationRepository**; poi il metodo controlla che il nuovo luogo sia all'interno dell'organizzazione con il metodo `isPlaceInsideOrganization` e solo allora salva le modifiche nel DB;  
+
+- `getPlace`: il metodo ritorna un'stanza dell'oggetto **Place** che rappresenta un luogo specificato dal paramentro **placeId** passato al metodo; utilizza il metodo `findById` della classe **PlaceRepository** per ottenere il luogo dal DB.  
 
 ### 4.6.1.9 PresenceService
 ![!PresenceService](../Immagini/Backend/Classi/PresenceService.png)
@@ -134,16 +149,16 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 - `unbindAdministratorFromOrganization`: il metodo, in caso di successo (poiché in caso di insuccesso ritorna semplicemente un codice di stato), toglie i permessi di un amministratore in una organizzazione. Richiede come parametro un oggetto di tipo **Permission** che contiene tutte le informazioni necessarie. L'amministratore che effettua la richiesta deve essere autenticato nel sistema e deve essere owner dell'organizzazione alla quale fa parte l'amministratore che deve essere rimosso. Per compiere l'operazione viene chiamato il metodo `unbindAdministratorFromOrganization` della classe **AdministratorService**;  
 - `updateAdministratorPermission`: il metodo, in caso di successo (poiché in caso di insuccesso ritorna semplicemente un codice di stato), aggiorna il livello di permessi di un amministratore all'interno di una specifica organizzazione. Richiede un oggetto **Permission** come parametro, la richiesta deve essere effettuata da un'amministratore autenticato nel sistema e che sia owner dell'organizzazione nella quale cambiare i permessi dell'amministratore. Per effettuare tale operazione si serve del metodo `updateAdministratorPermission` della classe **AdministratorService**. 
 
-### 4.6.2.3 AuthenticationServerController
+### 4.6.2.3 AuthenticationServerApiController
 ![!AuthenticationServerApiController](../Immagini/Backend/Classi/AuthenticationServerApiController.png)
 
 L'`AuthenticationServerApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle utenze presenti nel server che autentica gli utenti dell'organizzazione, servendosi dell'`AuthenticationServerService`.
 
-I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
+Il seguente metodo permette di rispondere all'end-point offerto dal backend:
 
 - `getUserInfoFromAuthServer`: il metodo, in caso di successo (poiché in caso di insuccesso ritorna semplicemente un codice di stato), ritorna un'istanza di **List&lt;OrganizationAuthenticationServerInformation&gt;** che rappresenta tutte le informazioni richieste da un'amministratore autenticato nel sistema tramite un oggetto **OrganizationAuthenticationServerRequest**. La lista di ritorno contiene tanti elementi quanti gli identificativi degli utenti inseriti nella lista interna all'oggetto passato come parametro al metodo.
 
-### 4.6.2.4 FavoriteController
+### 4.6.2.4 FavoriteApiController
 ![!FavoriteApiController](../Immagini/Backend/Classi/FavoriteAPI.png)
 
 Il `FavoriteApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle organizzazioni preferite di un utente dell'applicazione e la gestione della loro lista dei preferiti, servendosi del `FavoriteService`.
@@ -154,37 +169,59 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 - `getFavoriteOrganizationList`: il metodo, in caso di successo (poiché in caso di insuccesso ritorna semplicemente un codice di stato), ritorna un'istanza di una lista di **Organization** che rappresenta tutte le organizzazioni presenti nella lista dei favoriti di un utente identificato tramite il codice **userId** fornito come parametro al metodo. Per ottenere la lista utilizza il metodo `getFavoriteOrganizationList` della classe **FavoriteService**; 
 - `removeFavoriteOrganization`: il metodo, in caso di successo, rimuove un oggetto **Favorite** passato come parametro dalla lista dei preferiti dell'utente che effettua la richiesta, che deve essere necessariamente un utente dell'applicazione in possesso dell'organizzazione nella propria lista di preferiti, altrimenti viene restituito un codice di errore.  
 
-### 4.6.2.5 MovementController
+### 4.6.2.5 MovementApiController
 ![!MovementApiController](../Immagini/Backend/Classi/MovementAPI.png)
 
 Il `MovementApiController` si occupa di soddisfare le richieste ricevute dai client per tracciare i movimenti (ingressi o uscite) di un utente presso un luogo o un'organizzazione, servendosi del `MovementService`.
-- `trackMovementInOrganization`: il metodo riceve come parametro un oggetto  **OrganizationMovement** da parte di un utente dell'applicazione e utilizzando il metodo `trackMovementInOrganization` pubblica il movimento su Redis, per poter effettuare questa operazione il metodo controlla che l'utente sia autenticato tramite Firebase;  
-- `trackMovementInPlace`: il metodo riceve come parametro un oggetto **PlaceMovement**  da parte di un utente dell'applicazione e utilizzando il metodo `trackMovementInPlace` pubblica il movimento su Redis, per poter effettuare questa operazione il metodo controlla che l'utente sia autenticato tramite Firebase;  
 
-### 4.6.2.6 OrganizationController
+I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
+
+- `trackMovementInOrganization`: il metodo, in caso di successo (poiché in caso di insuccesso ritorna semplicemente un codice di stato), riceve come parametro un oggetto **OrganizationMovement** da parte di un utente dell'applicazione e, utilizzando il metodo `trackMovementInOrganization`, pubblica su un canale Publisher/Subscriber di Redis il movimento. Per poter effettuare questa operazione il metodo controlla che l'utente sia autenticato tramite il provider di autenticazione;  
+- `trackMovementInPlace`: il metodo, in caso di successo (poiché in caso di insuccesso ritorna semplicemente un codice di stato), riceve come parametro un oggetto **PlaceMovement** da parte di un utente dell'applicazione e, utilizzando il metodo `trackMovementInPlace`, pubblica su un canale Publisher/Subscriber di Redis il movimento. Per poter effettuare questa operazione il metodo controlla che l'utente sia autenticato tramite il provider di autenticazione;   
+
+### 4.6.2.6 OrganizationApiController
 ![!OrganizationApiController](../Immagini/Backend/Classi/OrganizationAPI.png)
 
-L'`OrganizationApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle organizzazioni e altre funzionalità disponibili agli amministratori, come ad esempio la richiesta di eliminazione dell'organizzazione amministrata, servendosi dell'`OrganizationService`.  
-- `getOrganization`:  il metodo ricevendo come parametro un identificativo **organizationId** di un'organizzazione ritorna un'istanza di un oggetto **Organization** che contiene tutte le informazioni sull'organizzazione; per effettuare questa operazione sia l'utente che amministratore devono essere autenticati tramite Firebase;  
-- `getOrganizationList`: il metodo ritorna un'istanza della lista di tutte le organizzazioni presenti nel sistema, solo gli utenti dell'applicazione possono inviare questa richiesta, inoltre devono anche essere autenticati presso Firebase; il metodo utilizza `getOrganizationList` della classe **OrganizationService** per leggere dal DB;  
-- `requestDeletionOfOrganization`: il metodo richiede come parametro un oggetto **OrganizationDeletionRequest** che permette solo ad un amministratore owner di eliminare l'organizzazione nella quale possiede questi permessi; l'amministratore deve essere autenticato tramite Firebase; viene utilizzato il metodo `requestDeletionOfOrganization` della classe **OrganizationService**;  
-- `updateOrganization`: il metodo richiede come parametro un oggetto **Organization** che contiene le modifiche fatte ad un'organizzazione da parte di un amministratore owner della stessa, queste modifiche si devono riflettere su una organizzazione esistente altrimenti vengono scartate; l'amministratore deve essere autenticato tramite Firebase; viene utilizzato il metodo `updateOrganization` della class **OrganizationService**;  
-- `updateOrganizationTrackingArea`: il metodo richiede come parametri un identificativo dell'organizzazione e una stringa che rappresenta l'area di tracciamento in formato JSON, il compito del metodo è aggiornare l'area di tracciamento della specificata organizzazione con la nuova area di tracciamento passatagli; questa modifica può essere effettuata solo da un'amministratore autenticato tramite Firebase e almeno manager della stessa organizzazione; nel caso in cui l'organizzazione non esista o l'area di tracciamento ecceda il limite stabilito o non sia valida la modifica viene scartata.  
+L'`OrganizationApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle organizzazioni e altre funzionalità disponibili agli amministratori, come ad esempio la richiesta di eliminazione dell'organizzazione amministrata, servendosi dell'`OrganizationService`.
 
-### 4.6.2.7 PlaceController
-![!PlaceController](../Immagini/Backend/Classi/PlaceAPI.png)
+I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 
-Il `PlaceController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sui luoghi di un'organizzazione e per gestirli, servendosi del `PlaceService`.
+- `getOrganization`: il metodo, ricevendo come parametro un identificativo **organizationId** di un'organizzazione, ritorna un'istanza di un oggetto **Organization** che contiene tutte le informazioni sull'organizzazione. Per effettuare questa operazione sia l'utente che amministratore devono essere autenticati tramite il provider di autenticazione;
+- `getOrganizationList`: il metodo ritorna un'istanza della lista di tutte le organizzazioni presenti nel sistema. Solo gli utenti dell'applicazione possono inviare questa richiesta. Inoltre, devono anche essere autenticati presso il provider di autenticazione. Il metodo utilizza `getOrganizationList` di **OrganizationService** per leggere all'interno del database;
+- `requestDeletionOfOrganization`: il metodo richiede come parametro un oggetto **OrganizationDeletionRequest** che permette solo ad un amministratore owner di eliminare l'organizzazione nella quale possiede questi permessi. L'amministratore deve essere autenticato tramite il provider di autenticazione. Viene utilizzato il metodo `requestDeletionOfOrganization` di **OrganizationService**;
+- `updateOrganization`: il metodo richiede come parametro un oggetto **Organization** che contiene le modifiche fatte ad un'organizzazione da parte di un amministratore gestore della stessa. Queste modifiche devono riflettersi su una organizzazione esistente, altrimenti vengono scartate. L'amministratore deve essere autenticato tramite il provider di autenticazione e viene utilizzato il metodo `updateOrganization` di **OrganizationService** per portare a termine la richiesta;  
+- `updateOrganizationTrackingArea`: il metodo richiede come parametri l'identificativo dell'organizzazione e una stringa che rappresenta l'area di tracciamento in formato JSON. Il compito del metodo è aggiornare l'area di tracciamento della specificata organizzazione con la nuova area di tracciamento passatagli. Questa modifica può essere effettuata solo da un'amministratore autenticato tramite il provider di autenticazione e almeno manager della stessa organizzazione. Nel caso in cui l'organizzazione non esista o l'area di tracciamento ecceda il limite stabilito o non sia valida, la modifica viene scartata.  
 
-### 4.6.2.8 PresenceController
-![!PresenceController](../Immagini/Backend/Classi/PresenceAPI.png)
+### 4.6.2.7 PlaceApiController
+![!PlaceApiController](../Immagini/Backend/Classi/PlaceAPI.png)
 
-Il `PresenceController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle presenze correnti presso un luogo o un'organizzazione, servendosi del `PresenceService`.
+Il `PlaceApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sui luoghi di un'organizzazione e per gestirli, servendosi del `PlaceService`.
 
-### 4.6.2.9 ReportController
-![!ReportController](../Immagini/Backend/Classi/ReportAPI.png)
+I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 
-Il `ReportController` si occupa di soddisfare le richieste ricevute dai client per ottenere report tabellari sugli accessi passati presso i luoghi di un'organizzazione da parte di utenti autenticati, servendosi del `ReportService`.
+- `createNewPlace`: questo metodo permette a ad un amministratore autenticato di creare un nuovo luogo all'interno di una organizzazione nella quale sia almeno manager. Il metodo richiede come parametro un oggetto di tipo **Place** contenente tutti i dettagli del nuovo luogo da creare. Per creare il luogo il metodo usa `createNewPlace` di **PlaceService**;  
+- `deletePlace`: il metodo permette ad un amministratore autenticato di eliminare un luogo da un'organizzazione in cui sia almeno manager. Il metodo richiede come parametro un identificativo **placeId** di un luogo, che verrà passato al metodo `getPlace` della classe **PlaceService** per recuperare l'oggetto **Place** da eliminare. Nel caso si voglia eliminare un luogo inesistente la richiesta non potrà essere soddisfatta e verrà ritornato un codice di errore, in caso il luogo esista viene usato `deletePlace` di **PlaceService** per compiere la rimozione;  
+- `updatePlace`: permette ad un amministratore autenticato di modificare l'area di un luogo passando al metodo un oggetto **Place** che sostituirà quello già esistente. L'amministratore deve almeno essere manager dell'organizzazione a cui fa parte il luogo. In caso il luogo inserito non abbia lo stesso codice identificativo di un luogo già esistente la modifica viene scartata;   
+- `getPlaceListOfOrganization`: il metodo richiede un identificativo **organizationId** di una organizzazione della quale restituirà tutti i luoghi al suo interno, sia gli utenti dell'applicazione che gli amministratori possono usare questa funzionalità previa autenticazione attraverso il provider di autenticazione.  
+
+### 4.6.2.8 PresenceApiController
+![!PresenceApiController](../Immagini/Backend/Classi/PresenceAPI.png)
+
+Il `PresenceApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle presenze correnti presso un luogo o un'organizzazione, servendosi del `PresenceService`.
+
+I seguenti metodi permettono di rispondere agli end-point offerti dal backend: 
+
+- `getOrganizationPresenceCounter`: il metodo ritorna un'istanza di **OrganizationPresenceCounter** che contiene il numero di utenti attualmente all'interno dell'organizzazione specificata dal **organizationId** passato al metodo. Solo gli amministratori autenticati e appartenenti all'organizzazione specificata possono richiedere il numero delle presenze;  
+- `getPlacePresenceCounter`: il metodo ritorna un'istanza di **PlacePresenceCounter** che contiene il numero di utenti attualmente all'interno del luogo specificato dal **placeId** passato al metodo. Solo gli amministratori autenticati e appartenenti all'organizzazione specificata possono richiedere il numero delle presenze.
+
+### 4.6.2.9 ReportApiController
+![!ReportApiController](../Immagini/Backend/Classi/ReportAPI.png)
+
+Il `ReportApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere report tabellari sugli accessi passati presso i luoghi di un'organizzazione da parte di utenti autenticati, servendosi del `ReportService`.
+
+Il seguente metodo permette di rispondere all'end-point offerto dal backend:
+
+- `getTimePerUserReport`: il metodo ritorna un'istanza di una lista di **TimePerUserReport** che rappresenta il tempo trascorso dagli utenti all'interno di uno specificato luogo passato al metodo tramite **placeId**. L'amministratore deve essere autenticato tramite il provider di autenticazione; viene chiamato il metodo  `getTimePerUserReport` della classe **ReportService** per ottenere i dati da ritornare.
 
 ## 4.6.3 Diagrammi di altre classi
 

@@ -1,7 +1,7 @@
 # PlaceMovement
 
 ## Description
-Represent a movement in a place of an organization.
+Represents a movement in a place of an organization.
 
 ## Properties
 
