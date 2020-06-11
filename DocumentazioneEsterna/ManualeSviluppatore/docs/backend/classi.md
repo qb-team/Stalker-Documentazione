@@ -81,10 +81,25 @@ Si dispone dei seguenti metodi:
 
 L'`OrganizationService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle organizzazioni e altre funzionalità disponibili agli amministratori, come ad esempio la richiesta di eliminazione dell'organizzazione amministrata.
 
+- `getOrganization`: il metodo ritorna un oggetto **Organization** se esiste nel DB, questo oggetto viene identificato tramite **organizationId** passato al metodo, e rappresenta un'organizzazione presente nel sistema con tutte le informazioni ad essa associate; utilizza il metodo `findById` della classe **OrganizationRepository** per eseguire l'operazione su DB;  
+- `getOrganizationList`: il metodo non richiede parametri e ritorna una lista di **Organization** che rappresenta tutte le organizzazioni presenti nel sistema; utilizza il metodo `findAll` della classe **OrganizationRepository** per ricevere tutte le organizzazioni dal DB;  
+- `requestDeletionOfOrganization`: il metodo serve a salvare la richiesta di eliminazione di una organizzazione nel DB per essere presa in carico da un'amministratore Stalker; ha come parametro un oggetto **OrganizationDeletionRequest** che contiene tutte le informazioni necessarie; chiama il metodo `save` della classe **OrganizationDeletionRequestRepository**;  
+- `updateOrganization`: il metodo aggiorna i dati di un'organizzazione esistente sostituendoli con i nuovi dati passati al metodo tramite l'oggetto **Organization**; il metodo controlla che l'organizzazione da aggiornare sia presente nel sistema grazie al metodo `findByName` e che l'area di tracciamento si possa aggiornare rispettando i vincoli di grandezza grazie al metodo `canTrackingAreaBeUpdated`;  
+- `updateOrganizationTrackingArea`: il metodo aggiorna solamente l'area di tracciamento di un'organizzazione identificata tramite un **organizationId**, la nuova area di tracciamento specificata nel parametro **trackingArea** deve rispettare i vincoli di grandezza e il metodo li verifica chiamando `canTrackingAreaBeUpdated`; se organizzazione a cui si vuole aggiornare l'area non viene trovata nel sistema l'operazione viene scartata.
+
 ### 4.6.1.8 PlaceService
 ![!PlaceService](../Immagini/Backend/Classi/PlaceService.png)
 
+
 Il `PlaceService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sui luoghi di un'organizzazione e per gestirli.
+
+- `createNewPlace`: crea un nuovo luogo all'interno di una organizzazione, tutte le informazioni sono contenute nell'oggetto **Place** passato come parametro;  
+
+- `deletePlace`: elimina un luogo da una organizzazione grazie al parametro **Place** passato al metodo, in caso il luogo specificato non esistesse all'interno dell'organizzazione specificata nell'oggetto **Place** l'operazione non va' a buon fine; utilizza il metodo `delete` della classe **placeRepository**;  
+
+- `updatePlace`: il metodo aggiorna un luogo con le informazioni passate al metodo dal parametro **Place**; l'organizzazione del luogo da aggiornare deve esistere e viene recuperata dal DB con il metodo `findById` della classe **OrganizationRepository**; poi il metodo controlla che il nuovo luogo sia all'interno dell'organizzazione con il metodo `isPlaceInsideOrganization` e solo allora salva le modifiche nel DB;  
+
+- `getPlace`: il metodo ritorna un'stanza dell'oggetto **Place** che rappresenta un luogo specificato dal paramentro **placeId** passato al metodo; utilizza il metodo `findById` della classe **PlaceRepository** per ottenere il luogo dal DB.  
 
 ### 4.6.1.9 PresenceService
 ![!PresenceService](../Immagini/Backend/Classi/PresenceService.png)
