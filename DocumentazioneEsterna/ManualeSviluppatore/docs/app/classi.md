@@ -22,26 +22,28 @@ La classe `MainActivity` offre i seguenti metodi:
 ![!AuthenticationFragment](../Immagini/App/Classi/Authentication.png "Diagramma della classe Authentication")
 <figcaption align="center"> <em> Diagramma della classe Authentication </em> </figcaption>
 
-La classe `AuthenticationFragment` fa parte della vista e mostra all'utente la pagina dove può scegliere se effettuare la registrazione oppure il login.
-
-La classe `AuthenticationFragment` offre i seguenti metodi:
-
--   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione del fragment in quanto componente;
-
--   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della componente grafica visualizzata dall'utente e resta in attesa di un click da parte dell'utente in caso selezioni il pulsante "Login" o "Registrati" per aprire i rispettivi fragment.
-
-
-___
-## 2.6.3 Login
 ![!LoginFragment](../Immagini/App/Classi/LoginFragment.png "Diagramma della classe Login")
 <figcaption align="center"> <em> Diagramma della classe Login </em> </figcaption>
 
-La classe `LoginFragment`, così come `LoginPresenter` e `LoginModel` ad essa collegati, contengono tutti i metodi che permettono all'utente di autenticarsi.
-L'utente per fare il Login deve inserire l'email e la password e successivamente cliccare sul pulsante "Login" per invocare i metodi di Firebase che verificano le credenziali e creano il collegamento.
-In caso di successo l'utente sarà spostato nel `HomePageActivity.class` e visualizzerà un messaggio che indicherà il buon esito dell'autenticazione.
-In caso di fallimento l'utente visualizza un messaggio di errore.
+La classe `AuthenticationFragment` rappresenta la pagina dedicata alle autenticazioni degli utenti che desiderano, in seguito, utilizzare l'applicazione Android Stalker.
+L'utente per autenticarsi deve:
+-   inserire l'email;
+-   inserire la password;
+-   cliccare il pulsante "Log in".
 
-La classe LoginFragment offre i seguenti metodi:
+In caso di fallimento l'utente visualizza un messaggio di errore. Una volta eseguita l'autenticazione comparirà la pagina dedicata alla lista delle organizzazioni (HomeFragment) e l'utente rimarrà autenticato a meno che non desidera fare il logout.
+
+Qualora l'utente si fosse dimenticato la password è possibile eseguire il reset cliccando sul testo: "Password dimenticata?" e apparirà un pop-up dove l'utente dovrà inserire l'email. In conclusione l'utente riceverà una mail con un link per cambiare la password. 
+
+Nel caso in cui l'utente desidera registrarsi può farlo nella parte sottostante della pagina dove vi è scritto "Non hai un account?" e cliccando il testo "Clicca qui". Dopo tale azione verrà aperta la pagina dedicata alla registrazione (SignUpFragment).
+
+La classe `AuthenticationFragment` utilizza le librerie di Firebase per consentire all'utente di autenticarsi o registrarsi presso il server. 
+ offre i seguenti metodi:
+
+//////////////////////////////////IN PROGRESS//////////////////////////////////////////////
+-   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione del Fragment in quanto componente;
+
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della componente grafica visualizzata dall'utente e resta in attesa di un click da parte dell'utente in caso selezioni il pulsante "Login" o "Registrati" per aprire i rispettivi fragment.
 
 -   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione del fragment in quanto componente;
 
@@ -56,7 +58,6 @@ La classe LoginFragment offre i seguenti metodi:
 -   `onLoginSuccess(message: String)`: L'autenticazione è andata a buon fine, l'utente sarà spostato nella `HomePageActivity.class` e visualizza un messaggio che indica che si è autenticato correttamente;
 
 -   `onLoginFailure(e: FirebaseException)`: L'autenticazione è fallita e l'utente visualizza un messaggio che indica l'errore.
-
 
 ___
 ## 2.6.4 SignUp
