@@ -17,11 +17,12 @@ In cima al menù è scritta l'email dell'account dell'utente mentre nella sezion
 Nella sezione "Impostazioni tracciamento" del menù è possibile avviare il tracciamento tramite uno pulsante switch, disattivato di default, oppure sempre tramite uno switch è possibile passare da tracciamento autenticato a tracciamento anonimo. Alla prima attivazione del tracciamento compare sulla schermata dell'applicazione un pop-up che invita l'utente ad accettare i permessi necessari per permettere all'applicazione di utilizzare il GPS. Altre funzionalità in questo menu permettono di effettuare il logout e l'ordinamento alfabetico della lista delle organizzazioni;
 
 - **Ricerca**: In alto a destra sulla barra principale dell'applicazione vi è una lente di ingrandimento che funge da ricerca ed una volta selezionata mostrerà una barra dove è possibile scrivere del testo. Quindi è possibile eseguire delle ricerche testuali per filtrare e visualizzare la lista delle organizzazioni. 
-Di default la ricerca è impostata per eseguire delle ricerche sui nomi delle organizzazioni, ma si può anche cambiare tale funzione servendosi del menù di filtraggio in alto a destra nello schermo. I filtri di ricerca sono di muta esclusione ed è possibile scegliere questi campi: nome, città, nazione (selezionabile tramite pop-up scrollabile), organizzazioni anonime (stampa il risultato dopo la selezione) e organizzazioni autenticate (stampa il risultato dopo la selezione);
+Di default la ricerca è impostata per eseguire delle ricerche sui nomi delle organizzazioni, ma si può anche cambiare tale funzione servendosi del menù di filtraggio in alto a destra nello schermo. I filtri di ricerca funzionano tramite mutua esclusione ed è possibile scegliere questi campi: nome, città, nazione (selezionabile tramite pop-up scrollabile), organizzazioni anonime (stampa il risultato dopo la selezione) e organizzazioni autenticate (stampa il risultato dopo la selezione);
 
 - **Visualizzazione pagina organizzazione**: L'utente può entrare nella pagina dedicata di un'organizzazione in due diversi modi: 
-    - Cliccando l'elemento della lista ad essa appartenente; 
-    - Tenendo premuto su un elemento della lista apparirà un pop-up che permetterà di cliccare sul pulsante 'Maggiori informazioni' e accedere così alla visualizzazione dell'organizzazione selezionata. 
+    - cliccando l'elemento della lista ad essa appartenente; 
+    - tenendo premuto su un elemento della lista apparirà un pop-up che permetterà di cliccare sul pulsante 'Maggiori informazioni' e accedere così alla visualizzazione dell'organizzazione selezionata. 
+
     Al suo interno è possibile visualizzare il nome dell'organizzazione, una descrizione, l'immagine di anteprima e un pulsante che se premuto mostrerà l'ultimo accesso effettuato dall'utente all'interno dell'organizzazione. 
     Un'organizzazione che richiede un'autenticazione aziendale avrà in aggiunta il pulsante 'autenticazione' che, se cliccato, visualizzerà un pop-up per poter inserire le credenziali LDAP;
  
@@ -30,17 +31,17 @@ Di default la ricerca è impostata per eseguire delle ricerche sui nomi delle or
 - **Eliminazione organizzazione dalla lista MyStalker**: L'utente, tenendo premuto sull'elemento della lista delle organizzazioni MyStalker, fa comparire un pop-up che richiede se si intende rimuovere l'organizzazione da tale lista;
 
 - **Tracciamento**: La funzionalità di tracciamento consente all'utente di tracciare, in maniera autenticata o anonima, gli ingressi e le uscite presso le organizzazioni presenti nella lista MyStalker e i loro luoghi. 
-Più distante si trova l'utente dall'organizzazione più vicina meno frequenti saranno gli intervalli in cui verrà tracciato, in questo modo ci sarà un consumo minore della batteria.
+Più distante si trova l'utente dall'organizzazione più vicina meno frequenti saranno gli intervalli di tempo in cui verrà tracciato. In questo modo ci sarà un consumo minore della batteria.
 
-- **Storico Accessi**: Nell'applicazione, oltre ad esserci una sezione dedicata alla lista di tutte le organizzazioni e una per le organizzazioni presenti nella lista MyStalker (lista preferiti), vi è presente una terza sezione (indicata nel tab con un'icona a forma di orologio) che mostra un elenco di tutti gli storici accessi presso le organizzazioni da parte dell'utente.
+- **Storico Accessi**: Nell'applicazione, oltre ad esserci una sezione principale dedicata alla lista di tutte le organizzazioni e una per le organizzazioni presenti nella lista MyStalker (lista preferiti), è presente una terza sezione (indicata nel tab con un'icona a forma di orologio) che mostra un elenco di tutti gli accessi presso le organizzazioni da parte dell'utente.
 Se l'utente entra in un'organizzazione e poi esce, verrà aggiunto un elemento nella lista (riga) nella quale vengono mostrate le seguenti informazioni:
     - nome dell'organizzazione;
     - data di accesso;
     - ora di accesso;
     - ora di uscita.
-    
-    E' presente anche un pulsante, contrassegnato dal simbolo di un cestino, che permette di eliminare tutte le informazioni sullo storico degli accessi (quindi verranno eliminate tutte le righe presenti in questa sezione).
 
-    Gli elementi della lista dello storico accessi possono essere cliccati una volta oppure tenuti premuti a lungo. 
-    - Nella prima funzionalità l'utente verrà conseguentemente proiettato in una pagina dedicata che mostra lo storico degli accessi presso ai luoghi dell'organizzazione. Anche in questo caso ci sarà il pulsante a forma di cestino che permette l'eliminazione del contenuto;
-    - Nella seconda funzione apparirà un pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso all'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
+    E' presente anche un pulsante, contrassegnato dal simbolo di un cestino, che permette di eliminare tutte le informazioni sullo storico degli accessi (quindi verranno eliminate tutte le righe presenti in questa sezione).
+    Gli elementi della lista dello storico accessi possono essere cliccati una volta oppure tenuti premuti a lungo:
+        
+    - nella prima funzionalità l'utente verrà conseguentemente proiettato in una pagina dedicata che mostra lo storico degli accessi presso ai luoghi dell'organizzazione. Anche in questo caso ci sarà il pulsante a forma di cestino che permette l'eliminazione del contenuto;
+    - nella seconda funzione apparirà un pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso l'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
