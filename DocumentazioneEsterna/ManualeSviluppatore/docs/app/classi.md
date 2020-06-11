@@ -199,15 +199,13 @@ ___
 ![!MyStalkersListFragment](../Immagini/App/Classi/MyStalkerListFragment.png "Diagramma delle classi di My Stalker List")
 <figcaption align="center"> <em> Diagramma delle classi di My Stalkers List </em> </figcaption>
 
-In questa classe compariranno tutte le organizzazioni abilitate nel tracciamento dell'utente in precedenza aggiunte sia localmente che sul server. È possibile la rimozione dell'organizzazione dalla lista `MyStalkers` non consentendone più il tracciamento. Queste funzioni possono essere eseguite direttamente nell'applicazione. 
+In questa classe compariranno tutte le organizzazioni abilitate nel tracciamento dell'utente in precedenza aggiunte sia localmente che sul server. È possibile la rimozione di un'organizzazione dalla lista `MyStalkers` non consentendone più il tracciamento. Queste funzioni possono essere eseguite direttamente nell'applicazione. 
 
 La classe `MyStalkerListFragment` offre i seguenti metodi:
 
--   `onServiceConnected(name: ComponentName, service: IBinder)`: Metodo della classe interna `ServiceConnection` che permette di stabile una connessione con il `Bind Service`;
+- `onAttach(context: Context)`: Assicura che l'attività abbia effettivamente implementato il nostro listener e che esso non sia nulla;
 
--   `onServiceDisconnected(name: ComponentName)`: Metodo della classe interna `ServiceConnection` che permette di disconnettere la connessione con il `Bind Service`;
-
--   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
+-  `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
 
 -   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa di creare il layout del fragment;
 
@@ -216,9 +214,19 @@ La classe `MyStalkerListFragment` offre i seguenti metodi:
 -   `organizationLongClick(position: int)`: Notifica all'utente attraverso una finestra di dialogo, la possibilità di eliminare l'organizzazione selezionata dall'utente in seguito ad un click prolungato;
 
 -   `onPrepareOptionsMenu(menu: Menu)`: Nasconde al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e rende visibile il comando di ricerca; 
+ 
+- `resetAdapter()` : Si occupa di resettare il filtro di ricerca facendolo ritornare alla ricerca per nome;
+
+- `onOptionsItemSelected (item: MenuItem)` : Indica l'azione da svolgere ad ogni elemento del menù della barra di ricerca quando viene selezionato;
+
+- `onQueryTextSubmit(query: String)` : Metodo che viene chiamato quando l'utente conferma la ricerca; 
 
 -   `onQueryTextChange(newText: String)`: Si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca;
+ 
+-  `countryDialog(item: MenuItem)` : Si occupa di visualizzare a schermo una lista di tutte le nazioni, l'utente selenzionandone una effettuerà una ricerca per nome solo per la nazione scelta;
 
+- `printCountrySelected()` : Metodo invocato da countryDialog che modifica la lista delle organizzazioni per mostrare solo quelle appartenenti alla nazione scelta;
+        
 -   `addOrganization(organization: Organization)`: Si occupa di aggiungere l'organizzazione ricevuta in input sia sul FileSystem sia sul Server;
 
 -   `onSuccessAddOrganization(list: ArrayList<Organization>, message: String)`: Notifica all'utente il successo dell'operazione di aggiunta dell'organizzazione;
@@ -231,22 +239,13 @@ La classe `MyStalkerListFragment` offre i seguenti metodi:
 
 -   `loadMyStalkerList(UID: String, userToken: String)`: Si occupa di scaricare dal Server la lista delle organizzazioni aggiunte dall'utente in precedenza;
 
--   `checkForUpdate()`: Si occupa di tenere traccia delle eventuali modifiche apportate dall'utente della sua lista delle organizzazioni presenti nella view `MyStalkerListFragment`;
+-   `checkForUpdate()`: Si occupa di tenere traccia delle eventuali modifiche apportate dall'utente della sua lista delle organizzazioni presenti nella view `MyStalkerListFragment`;sdfsdffdsf
 
 -   `onSuccessLoadMyStalkerList(list: List<Organization>)`: Notifica all'utente il successo dello scaricamento della sua lista delle organizzazioni inserite in `MyStalkersList` e le mostra a schermo;
 
--   `onPause()`: Metodo che viene invocato quando l'Activity principale viene è in pausa e ci si aspetta un suo ritorno in breve tempo;
+- `organizationIsPresentInList(orgName: String)` : Controlla se esiste un'organizzazione data una stringa;
 
--   `onStop()`: Metodo che viene invocato quando l'Activity principale non è più visibile all'utente, ovvero quando quest'ultimo ha deciso di chiudere l'applicazione;
-
--   `onSharedPreferenceChanged(sharedPreferences: SharedPreferences, s: String)`: Metodo che viene chiamato quando una risorsa condivisa (tra due view) viene modificata, aggiunta o rimossa;
-
--   `startTracking()`: Metodo per gestire l'inizio del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view `MyStalkersList`;
-
--   `stopTracking()`: Metodo per gestire la terminazione del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view `MyStalkersList`;
-
--   `onBackPressed()`: Si occupa di fa ritornare l'utente alla precedente Activity/Fragment.
-
+- `onBackPressed()`: Si occupa di fa ritornare l'utente alla precedente Activity/Fragment.
 ___
 ## 2.6.9 Standard Organization
 ![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del Standard Organization")
@@ -282,9 +281,17 @@ Le credenziali che ha digitato l'utente vengono spedite al modello che interrogh
 La classe `LDAPorganizationFragment` ha bisogno di utilizzare le librerie LDAP per poter effettuare la connessione al server e autenticare l'utente.
 Essa offre i seguenti metodi:
 
--   `onCreate(saveInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
+-   `onAttach(context: Context)`: Assicura che l'attività abbia effettivamente implementato il nostro listener e che esso non sia nulla;
+
+-   `onCreate(saveInstanceState: Bundle)`: Si occupa della creazione del Fragment in quanto componente;
 
 -   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+
+-   `onPrepareOptionsMenu(menu: Menu)`: Nasconde gli elementi dei menu;
+
+-   `onBackPressed()`:  Si occupa di far ritornare l'utente alla precedente Activity/Fragment;
+
+-   `onClick(view: View)`:  Attende un click  da parte dell'utente sul pulsante "AUTENTICAZIONE" e verrà poi mostrato il pop-up di autenticazione;
 
 -   `LDAPAuthentication()`: Si occupa di avviare la connessione al server LDAP una volta che l'utente ha inserito le credenziali nel pop-up di autenticazione;
 
@@ -292,6 +299,28 @@ Essa offre i seguenti metodi:
 
 -   `onFailureLdap()`: L'autenticazione è fallita e viene comunicato l'esito all'utente tramite Toast.
 
+___
+## 2.6.11 Access History
+![!AccessHistoryFragment](../Immagini/App/Classi/..."Diagramma delle classi del Access History")
+<figcaption align="center"> <em> Diagramma delle classi del Access History </em> </figcaption>
+
+La classe `AccessHistoryFragment` rappresenta la pagina dedicata allo storico degli accessi presso a tutte le organizzazioni scelte dall'utente per essere tracciato. Nel momento in cui un utente entra nell'organizzazione e conseguentemente esce da essa verrà stampato un elemento clickabile ed informativo che mostra le informazione legate ai quei movimenti. Se l'utente è anche entrato nei luoghi dell'organizzazione tale informazione verrà registrata e mostrata nel "PlaceAccessFragment".
+
+La classe `AccessHistoryFragment` offre i seguenti metodi:
+
+-   `onCreateViewHolder()`: Restituisce il layout dell'elenco delle organizzazioni;
+
+-   `onBindViewHolder(holder: ViewHolder, position: int)`: Imposta il nome dell'organizzazione, la data, l'accesso e l'uscita in formato riga;
+
+-   `getItemCount()`: Ritorna la dimensione della lista degli accessi nell'organizzazione;
+
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+
+-   `onPrepareOptionsMenu(menu:Menu)`: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca;
+
+-   `onClick(v: View)`:  L'utente dopo il click verrà proiettato in una pagina dedicata allo storico degli accessi presso ai luoghi dell'organizzazione;
+
+-   `onLongClick(v: View)`: L'utente dopo il click viene aperto pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso l'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
 
 ___
 ## 2.6.12 Place Access
@@ -316,3 +345,4 @@ La classe PlaceAccessFragment offre i seguenti metodi:
 -   `onSuccessGetPlaceAccessInLocal(placeAccessList List<PlaceAccess>)`: Aggiunge una riga alla pagina dello storico degli accessi di un luogo contenente le informazioni sul nome di quel luogo e la sua data, ora di accesso e ora di uscita in cui viene effettuato l'accesso;
 
 -   `onSuccessDeletePlaceAccess()`: Rimuove alla pagina tutti le righe degli accessi sui luoghi.
+

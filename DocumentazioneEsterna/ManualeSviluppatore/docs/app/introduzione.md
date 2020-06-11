@@ -44,5 +44,4 @@ Se l'utente entra in un'organizzazione e poi esce, verrà aggiunto un elemento n
     Gli elementi della lista dello storico accessi possono essere cliccati una volta oppure tenuti premuti a lungo:
         
     - Nella prima funzionalità l'utente verrà conseguentemente proiettato in una pagina dedicata che mostra lo storico degli accessi presso ai luoghi dell'organizzazione. Anche in questo caso ci sarà il pulsante a forma di cestino che permette l'eliminazione del contenuto;
-        
-    - Nella seconda funzione apparirà un pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso all'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
+    - Nella seconda funzione apparirà un pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso l'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
