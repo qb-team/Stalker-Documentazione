@@ -33,8 +33,6 @@ The user is not authenticated. Nothing gets returned.
 **403**  
 Administrators cannot have access. Nothing gets returned.
 
-**404**  
-The organization could not be found. Nothing gets returned.
 
 ### Authorization
 
@@ -72,8 +70,6 @@ The user is not authenticated. Nothing gets returned.
 **403**  
 Administrators cannot have access. Nothing gets returned.
 
-**404**  
-The place could not be found. Nothing gets returned.
 
 ### Authorization
 
