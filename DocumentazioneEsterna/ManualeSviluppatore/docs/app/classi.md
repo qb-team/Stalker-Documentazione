@@ -80,17 +80,17 @@ La classe SignUpFragment offre i seguenti metodi:
 
 -   `onClick(v: View)`: Attende un click dell'utente al pulsante "Sign Up" ("Registrati") per invocare il metodo `checkSignUpDetails()`, oppure un click a "Leggi le condizioni d'uso" per invocare il metodo `showTermsofUse()`;
 
--   `showTermsofUse()`: Apre un pop-up che mostra le condizioni d'uso che l'utente dovrà accettare;
-
 -   `checkSignUpDetails()`: Controlla se l'utente ha scritto le proprie credenziali, confermato la password e accettato le condizioni d'uso, in caso positivo le invia al metodo `checkSignUp(email: String, password: String)`, altrimenti segnala l'utente dell'assenza di esse;
 
 -   `checkSignUp(email: String, password: String)`: Tramite l' MVP invoca i metodi di Firebase per registrare l'email e la password, in caso di riuscita verrà invocato il metodo `onSignUpSuccess(message: String)`mentre, in caso di fallimento verrà invocato `onSignUpFailure(e: FirebaseException)`;
+
+-   `showTermsofUse()`: Apre un pop-up che mostra le condizioni d'uso che l'utente dovrà accettare;
 
 -   `onSignUpSuccess(message: String)`: La registrazione è andata a buon fine, l'utente sarà spostato nella `HomePageActivity.class` e visualizza un messaggio che indica che si è autenticato correttamente;
 
 -   `onSignUpFailure(e: FirebaseException)`: La registrazione è fallita e l'utente visualizza un messaggio che indica l'errore;
 
--   `calculate(password: String)`: Calcola la complessità della password per verificarne la sicurezza.
+-   `onBackPressed()`: Si occupa di far ritornare l'utente alla precedente Activity/Fragment.
 
 
 ## 2.6.5 Home Page Activity
@@ -155,6 +155,8 @@ Se l'utente risulta essere già autenticato e avvia l'applicazione, oppure ha ap
 
 La classe `HomeFragment` offre i seguenti metodi:
 
+-   `onAttach(context: Context)`: Assicura che l'attività abbia effettivamente implementato il nostro listener e che esso non sia nulla;
+
 -   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione del fragment in quanto componente;
 
 -   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
@@ -177,7 +179,17 @@ La classe `HomeFragment` offre i seguenti metodi:
 
 -   `onPrepareOptionsMenu(menu: Menu)`: Nasconde al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e rende visibile il comando di ricerca; 
 
+-   `resetAdapter()`: Sostituisce l'attuale lista delle organizzazioni con una lista predefinita precedentemente utilizzata;
+
+-   `onOptionsItemSelected (item MenuItem)`: Si occupa di cambiare la tipologia di filtraggio per la ricerca scegliendo, in maniera mutualmente esclusiva, tra ricerca per nome, città, nazione, organizzazione aninima o autenticata;
+
+-   `onQueryTextSubmit(query string)`: metodo che viene chiamato quando l'utente invia una query;
+
 -   `onQueryTextChange(newText: String)`: Si occupa di visualizzare a schermo la lista delle organizzazioni in seguito agli input inseriti dall'utente nel menu di ricerca;
+
+-   `countryDialog(item MenuItem)`: Si occupa di gestire il filtraggio di ricerca per i country;
+
+-   `printCountrySelected()`: Si occupa di visualizzare nella lista principale e nella lista dei preferiti solo le organizzazioni che hanno il campo dati 'country' uguale a quello selezionato dall'utente;
 
 -   `onBackPressed()`: Si occupa di far ritornare l'utente alla precedente Activity/Fragment.
 
@@ -234,6 +246,7 @@ La classe `MyStalkerListFragment` offre i seguenti metodi:
 -   `stopTracking()`: Metodo per gestire la terminazione del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view `MyStalkersList`;
 
 -   `onBackPressed()`: Si occupa di fa ritornare l'utente alla precedente Activity/Fragment.
+
 ___
 ## 2.6.9 Standard Organization
 ![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi del Standard Organization")
@@ -244,13 +257,18 @@ Qualora l'organizzazione dovesse essere aggiunta nella lista `MyStalkers` allora
 
 La classe StandardOrganizationFragment offre i seguenti metodi:
 
+-   `onAttach(context: Context)`: Assicura che l'attività abbia effettivamente implementato il nostro listener e che esso non sia nulla;
+
 -   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
 
 -   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
 -   `onPrepareOptionsMenu(menu:Menu)`: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca; 
 
--   `onOptionsItemSelected(item:MenuItem)`: Aggiunge l'organizzazione nella lista dei preferiti.
+-   `onBackPressed()`: Si occupa di fa ritornare l'utente alla precedente Activity/Fragment.
+
+-   `onClick(View v)`: Attende un click dell'utente al pulsante indicato da un orologio per poter visualizzare l'ultimo accesso effettuato dall'utente nell'organizzazione standart selezionata.
+
 
 ___
 ## 2.6.10 LDAP Organization
@@ -273,3 +291,28 @@ Essa offre i seguenti metodi:
 -   `onSuccessLdap()`: L'autenticazione è avvenuta con successo, viene creata l'organizzazione che comparirà nella lista MyStalker e mostra all'utente l'esito tramite Toast;
 
 -   `onFailureLdap()`: L'autenticazione è fallita e viene comunicato l'esito all'utente tramite Toast.
+
+
+___
+## 2.6.12 Place Access
+![!PlaceAccessFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma delle classi di Place Access")
+<figcaption align="center"> <em> Diagramma delle classi di Place Access</em> </figcaption>
+
+La classe `PlaceAccessFragment` rappresenta la pagina dedicata alla memorizzazione degli accessi ai luoghi effettuati dall'utente di una determinata organizzazione.
+In questa pagina ci saranno le informazioni sul nome del luogo, data, ora di accesso e ora di uscita in cui viene effettuato l'accesso.
+
+La classe PlaceAccessFragment offre i seguenti metodi:
+
+-   `onAttach(context: Context)`: Assicura che l'attività abbia effettivamente implementato il nostro listener e che esso non sia nulla;
+
+-   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
+
+-   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+
+-   `onPrepareOptionsMenu(menu:Menu)`: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca; 
+
+-   `onOptionsItemSelected(item:MenuItem)`: Aggiunge l'organizzazione nella lista dei preferiti;
+
+-   `onSuccessGetPlaceAccessInLocal(placeAccessList List<PlaceAccess>)`: Aggiunge una riga alla pagina dello storico degli accessi di un luogo contenente le informazioni sul nome di quel luogo e la sua data, ora di accesso e ora di uscita in cui viene effettuato l'accesso;
+
+-   `onSuccessDeletePlaceAccess()`: Rimuove alla pagina tutti le righe degli accessi sui luoghi.
