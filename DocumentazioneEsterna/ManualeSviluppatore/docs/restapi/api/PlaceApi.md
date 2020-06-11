@@ -32,8 +32,6 @@ The administrator is not authenticated. Nothing gets returned.
 **403**  
 Users or administrator with viewer permission cannot have access. Nothing gets returned.
 
-**404**  
-The organization could not be found. The place cannot be added. Nothing gets returned.
 
 ### Authorization
 
