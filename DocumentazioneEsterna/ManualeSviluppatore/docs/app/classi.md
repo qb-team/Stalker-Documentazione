@@ -337,7 +337,7 @@ La classe `AccessHistoryFragment` offre i seguenti metodi:
 
 -  `onAttach(context: Context)`: Assicura che l'attività abbia effettivamente implementato il nostro listener e che esso non sia nulla;
 
--   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
+-   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del Fragment in quanto componente;
 
 -  `View onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
@@ -347,7 +347,7 @@ La classe `AccessHistoryFragment` offre i seguenti metodi:
 
 -  `onSuccessDeleteOrganizationAccess()`: Eliminazione lista degli accessi;
 
--  `onPrepareOptionsMenu(Menu: menu) `: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca;
+-  `onPrepareOptionsMenu(Menu: menu)`: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca;
 
 -  `onOptionsItemSelected(item: MenuItem)`: Funzionalità filtro di ricerca;
 
@@ -357,7 +357,7 @@ La classe `AccessHistoryFragment` offre i seguenti metodi:
 
 -  `organizationLongClick(position: int)`: L'utente dopo il click viene aperto pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso l'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
 
--  `onBackPressed`: Si occupa di far ritornare l'utente alla precedente Activity/Fragment;
+-  `onBackPressed()`: Si occupa di far ritornare l'utente alla precedente Activity/Fragment;
 
 -  `dateDecreasingOrder(list: List<OrganizationAccess>)`: Ordina per data decrescente gli elementi della lista degli accessi;
 
