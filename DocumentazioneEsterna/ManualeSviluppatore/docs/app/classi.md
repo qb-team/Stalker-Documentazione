@@ -337,7 +337,7 @@ La classe `AccessHistoryFragment` offre i seguenti metodi:
 
 -   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del Fragment in quanto componente;
 
--  `View onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+-  `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
 -  `printAccess()`: Metodo che comunica con il presenter;
 
