@@ -335,19 +335,33 @@ La classe `AccessHistoryFragment` rappresenta la pagina dedicata allo storico de
 
 La classe `AccessHistoryFragment` offre i seguenti metodi:
 
--   `onCreateViewHolder()`: Restituisce il layout dell'elenco delle organizzazioni;
+-  `onAttach(context: Context)`: Assicura che l'attività abbia effettivamente implementato il nostro listener e che esso non sia nulla;
 
--   `onBindViewHolder(holder: ViewHolder, position: int)`: Imposta il nome dell'organizzazione, la data, l'accesso e l'uscita in formato riga;
+-   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del fragment in quanto componente;
 
--   `getItemCount()`: Ritorna la dimensione della lista degli accessi nell'organizzazione;
+-  `View onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
--   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+-  `printAccess()`: Metodo che comunica con il presenter;
 
--   `onPrepareOptionsMenu(menu:Menu)`: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca;
+-  `onSuccessGetOrganizationAccessInLocal(organizationAccessList: List<OrganizationAccess>)`: Se c'è stato un corretto accesso ed uscita nell'organizzazione allora vengono salvate tali informazioni nella lista;
 
--   `onClick(v: View)`:  L'utente dopo il click verrà proiettato in una pagina dedicata allo storico degli accessi presso ai luoghi dell'organizzazione;
+-  `onSuccessDeleteOrganizationAccess()`: Eliminazione lista degli accessi;
 
--   `onLongClick(v: View)`: L'utente dopo il click viene aperto pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso l'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
+-  `onPrepareOptionsMenu(Menu: menu) `: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca;
+
+-  `onOptionsItemSelected(item: MenuItem)`: Funzionalità filtro di ricerca;
+
+-  `onQueryTextChange(newText: String)`: Funzionalità di ricerca in base alle ricerche testuali digitate dall'utente;
+
+-  `organizationClick(position: int)`:  L'utente dopo il click verrà proiettato in una pagina dedicata allo storico degli accessi presso ai luoghi dell'organizzazione;
+
+-  `organizationLongClick(position: int)`: L'utente dopo il click viene aperto pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso l'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
+
+-  `onBackPressed`: Si occupa di far ritornare l'utente alla precedente Activity/Fragment;
+
+-  `dateDecreasingOrder(list: List<OrganizationAccess>)`: Ordina per data decrescente gli elementi della lista degli accessi;
+
+-  `dateCreasingOrder(list: List<OrganizationAccess>)`: Ordina per data crescente gli elementi della lista degli accessi.
 
 ___
 ## 2.6.12 Place Access
