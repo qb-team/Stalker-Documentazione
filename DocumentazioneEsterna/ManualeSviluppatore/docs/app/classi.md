@@ -100,7 +100,17 @@ La classe `HomePageActivity` è l'Activity principale da cui vengono istanziati 
 
 La classe `HomePageActivity` offre i seguenti metodi:
 
--   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione dell'Activity e gestisce i fragment a esso collegati. In questo metodo è presente il controllo dell'autenticazione dell'utente, in caso l'utente non è più collegato viene invocato il metodo `goToMainActivity()`;
+-   `onCreate(savedInstanceState: Bundle)`:  Si occupa della creazione dell'Activity e gestisce i fragment a esso collegati.
+ 
+- `onStart()`:  Metodo che viene invocato all'apertura dell'applicazione;
+ 
+-   `onStop()`: Metodo che viene invocato quando l'Activity principale non è più visibile all'utente, ovvero quando quest'ultimo ha deciso di chiudere l'applicazione;
+
+- `onResume()`: Metodo che viene invocato quando l'applicazione è in pausa, in attesa di un input da parte dell'utente;
+
+-   `onPause()`: Metodo che viene invocato quando l'Activity principale viene messa in pausa e ci si aspetta un suo ritorno in breve tempo;
+
+-   `updateFirebaseToken`: Si occupa di aggiornare il Token di firebase;
 
 -   `onCreateOptionsMenu(menu: Menu)`: Si occupa della creazione del menu action tab;
 
@@ -118,13 +128,21 @@ La classe `HomePageActivity` offre i seguenti metodi:
 
 -   `onRequestPermissionsResult(requestCode: int, permissions: String[], grantResults: int[])`:  Metodo che viene invocato una volta accettati i permessi riguardanti il tracciamento, nel caso in cui siano accettati, il tracciamento viene attivato, altrimenti lo switcher presente nel drawer `Tracciamento` viene impostato a OFF;
 
+-   `startTracking()`: Metodo per gestire l'inizio del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view `MyStalkersList`;
+
+-   `stopTracking()`: Metodo per gestire la terminazione del tracciamento facendo riferimento alle organizzazioni scelte ed inserite dall'utente nella view `MyStalkersList`;
+ 
 -   `statusCheck()`:  Controlla se il GPS è attivo;
 
 -   `buildAlertMessageNoGps()`:  Si occupa di avvertire l'utente in caso il GPS non è attivo e di aiutarlo nella sua attivazione;
 
 -   `setSwitchState(requestingLocationUpdates: boolean)`:  Si occupa della gestione dello switcher `Tracciamento` presente nel drawer;
+ 
+- `getPath()`: Metodo che restituisce il percorso in cui sono memorizzati i file;
+ 
+- `getTabLayout()`: Metodo che restituisce il TabLayout;
 
--   `getuserToken()`:  Metodo che restituisce il token dell'utente.
+- `getuserToken()`:  Metodo che restituisce il token dell'utente.
 
 
 ___
