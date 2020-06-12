@@ -142,8 +142,6 @@ La classe `HomePageActivity` offre i seguenti metodi:
  
 - `getTabLayout()`: Metodo che restituisce il TabLayout;
 
-- `getuserToken()`:  Metodo che restituisce il token dell'utente.
-
 
 ___
 ## 2.6.6 Action Tab
