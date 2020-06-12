@@ -328,7 +328,7 @@ Essa offre i seguenti metodi:
 
 ___
 ## 2.6.11 Access History
-![!AccessHistoryFragment](../Immagini/App/Classi/..."Diagramma della classe Access History")
+![!AccessHistoryFragment](../Immagini/App/Classi/AccessHistoryFragment.PNG "Diagramma della classe Access History")
 <figcaption align="center"> <em> Diagramma della classe Access History </em> </figcaption>
 
 La classe `AccessHistoryFragment` rappresenta la pagina dedicata allo storico degli accessi presso a tutte le organizzazioni scelte dall'utente per essere tracciato. Nel momento in cui un utente entra nell'organizzazione e conseguentemente esce da essa verrà stampato un elemento clickabile ed informativo che mostra le informazione legate ai quei movimenti. Se l'utente è anche entrato nei luoghi dell'organizzazione tale informazione verrà registrata e mostrata nel "PlaceAccessFragment".
@@ -347,7 +347,7 @@ La classe `AccessHistoryFragment` offre i seguenti metodi:
 
 -  `onSuccessDeleteOrganizationAccess()`: Eliminazione lista degli accessi;
 
--  `onPrepareOptionsMenu(Menu: menu)`: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca;
+-  `onPrepareOptionsMenu(menu: Menu)`: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca;
 
 -  `onOptionsItemSelected(item: MenuItem)`: Funzionalità filtro di ricerca;
 
