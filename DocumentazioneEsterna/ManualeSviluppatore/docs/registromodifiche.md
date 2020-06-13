@@ -1,8 +1,10 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
-
-0.28.0 | 2020-06-10 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunta e verificata descrizione dei Service §4.6.1.7 e §4.6.1.8
+0.30.0 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunta e verificata §4.2.12.4.
+0.29.1 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiornate e verificate §4.2.11.1 e §4.2.12.
+0.29.0 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunte e verificate sezioni §4.3.2 e §4.3.3.
+0.28.0 | 2020-06-10 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunta e verificata descrizione dei Service §4.6.1.7 e §4.6.1.8.
 0.27.0 | 2020-06-10 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunta e verificata descrizione dei metodi da §4.6.2.7
 0.26.0 | 2020-06-09 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunta e verificata descrizione dei metodi in §4.6.2.
 0.25.0 | 2020-06-08 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunta e verificata descrizione dei metodi in §4.6.1.
