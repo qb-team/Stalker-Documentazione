@@ -310,18 +310,14 @@ Essa offre i seguenti metodi:
 
 ___
 ## 2.6.11 Access History
-<<<<<<< HEAD
 ![!AccessHistoryFragment](../Immagini/App/Classi/AccessHistoryFragment.jpg "Diagramma della classe Access History")
-=======
-![!AccessHistoryFragment](../Immagini/App/Classi/AccessHistoryFragment.PNG "Diagramma della classe Access History")
->>>>>>> 6e6ebcddf26c89e90948d45ebc7599a0b926a6a4
 <figcaption align="center"> <em> Diagramma della classe Access History </em> </figcaption>
 
 La classe `AccessHistoryFragment` rappresenta la pagina dedicata allo storico degli accessi presso a tutte le organizzazioni scelte dall'utente per essere tracciato. Nel momento in cui un utente entra nell'organizzazione e conseguentemente esce da essa verrà stampato un elemento clickabile ed informativo che mostra le informazione legate ai quei movimenti. Se l'utente è anche entrato nei luoghi dell'organizzazione tale informazione verrà registrata e mostrata nel "PlaceAccessFragment".
 
 La classe `AccessHistoryFragment` offre i seguenti metodi:
 
--  `onAttach(context: Context)`: Assicura che l'attività abbia effettivamente implementato il nostro listener e che esso non sia nulla;
+-   `onAttach(context: Context)`: Assicura che l'attività abbia effettivamente implementato il nostro listener e che esso non sia nulla;
 
 -   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del Fragment in quanto componente;
 
