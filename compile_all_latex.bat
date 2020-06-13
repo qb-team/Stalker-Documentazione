@@ -31,6 +31,9 @@ latexmk -c > NUL
 cd ..\VE_2020_04_09
 latexmk -pdf VE_2020_04_09.tex > NUL
 latexmk -c > NUL
+cd ..\VE_2020_06_12
+latexmk -pdf VE_2020_06_12.tex > NUL
+latexmk -c > NUL
 
 echo Compilazione Documentazione Interna
 cd ..\..\..\DocumentazioneInterna
@@ -110,6 +113,9 @@ latexmk -c > NUL
 cd ..\LetteraPresentazioneRQ
 latexmk -pdf LetteraDiPresentazioneRQ.tex > NUL
 latexmk -c > NUL
+cd ..\LetteraPresentazioneRA
+latexmk -pdf LetteraPresentazioneRA.tex > NUL
+latexmk -c > NUL
 
 cd ..
 
@@ -137,6 +143,8 @@ cd ..\VE_2020_03_31
 copy VE_2020_03_31.pdf ..\..\..\FileCompilati\.
 cd ..\VE_2020_04_09
 copy VE_2020_04_09.pdf ..\..\..\FileCompilati\.
+cd ..\VE_2020_06_12
+copy VE_2020_06_12.pdf ..\..\..\FileCompilati\.
 
 echo Copia dei file Documentazione Interna
 cd ..\..\..\DocumentazioneInterna
@@ -194,3 +202,5 @@ cd ..\LetteraPresentazioneRP
 copy LetteraDiPresentazioneRP.pdf ..\FileCompilati\.
 cd ..\LetteraPresentazioneRQ
 copy LetteraDiPresentazioneRQ.pdf ..\FileCompilati\.
+cd ..\LetteraPresentazioneRA
+copy LetteraPresentazioneRA.pdf ..\FileCompilati\.
