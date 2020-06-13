@@ -1,6 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+0.31.0 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunta e verificata §4.2.13.
 0.30.0 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunta e verificata §4.2.12.4.
 0.29.1 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiornate e verificate §4.2.11.1 e §4.2.12.
 0.29.0 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunte e verificate sezioni §4.3.2 e §4.3.3.

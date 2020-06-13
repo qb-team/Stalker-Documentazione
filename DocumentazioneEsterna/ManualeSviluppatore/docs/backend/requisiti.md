@@ -248,3 +248,24 @@ L'argomento `-d` è quello indicato fino ad ora per **docker-compose**, mentre `
 
 <a name="test-di-carico"></a>
 ### 4.2.13 Test di carico
+Una richiesta del capitolato era eseguire test di carico per vedere quanto il sistema fosse in grado di reagire alle richieste. È quindi disponibile, nella cartella `load-test`, un file chiamato `locustfile.py` che esegue attraverso un tool per **Python** una serie di test di carico (lotti di richieste HTTP al backend contemporanee crescenti fino a un limite predefinito e con una rapporto di crescita preimpostata).
+Per utilizzarlo è ovviamente necessario connettersi a un'istanza del database funzionante e che accetti le CORS (Cross-Origin Request Sharing) dall'indirizzo da cui provengono le richieste del tool di test. Il tool in questione si chiama [Locust](https://locust.io/), e di default è disponibile all'indirizzo `http://localhost:8089`. Inoltre, va configurato con degli access token validi, ottenuti dal provider di autenticazione (nel caso di *qbteam*, Firebase) e con dati come gli id dell'organizzazione e del luogo validi. Infatti, i dati presenti sul file sono o vuoti o di esempio.
+
+Prima di poter eseguire il file è necessario avere Python installato. Per installarlo è possibile scaricare l'eseguibile di installazione dal [sito ufficiale](https://www.python.org/downloads/).   
+Successivamente, eseguire i seguenti comandi:
+```bash
+pip install locust
+pip install pytz
+```
+
+Infine, per eseguire il file è sufficiente invocare da terminale:
+```bash
+locust
+```
+
+Se il backend non è disponibile in locale, ovvero nella macchina cui si stanno facendo i test, si può specificare a che indirizzo (`URL`) è disponibile il backend in questo modo:
+```bash
+locust --host=URL
+```
+
+Per ulteriori informazioni sull'uso del tool Locust, recarsi alla [guida ufficiale](https://docs.locust.io/en/stable/).
