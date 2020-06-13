@@ -42,6 +42,8 @@ In questa sezione viene descritto quanto i rischi indicati in §2.3 si sono effe
 
 \input{Sezioni/Sottosezioni/OccorrenzaRischi/OccorrenzaRischiProgettazioneDettaglio.tex}
 
+\input{Sezioni/Sottosezioni/OccorrenzaRischi/OccorrenzaRischiValidazioneCollaudo.tex}
+
 \subsubsection{Andamento dell'occorrenza dei rischi}
 
 \pgfplotsset{width=17cm, height=6cm}
@@ -81,10 +83,17 @@ xtick=data
 	(RO2, 2) (RO3, 1) (RO4, 1) (tmp, 3)
 };
 
+\addplot [fill=gray] coordinates {
+	(RT1, 1) (RP1, 1) (RP2, 1) 
+	(RR1, 1) (RS1, 1) (RO1, 1)
+	(RO2, 1) (RO3, 1) (RO4, 1) (tmp, 3)
+};
+
 \legend{
-	Fase di Analisi,
-	Fase di Progettazione Architetturale,
-	Fase di Progettazione di Dettaglio e Codifica,
+	Analisi,
+	Prog. Architetturale,
+	Prog. di Dettaglio e Codifica,
+	Validazione e Collaudo
 }
 \end{axis}
 \end{tikzpicture}
