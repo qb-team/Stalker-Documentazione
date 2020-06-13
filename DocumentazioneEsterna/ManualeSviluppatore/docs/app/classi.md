@@ -225,6 +225,7 @@ ___
 <figcaption align="center"> <em> Diagramma della classe My Stalkers List </em> </figcaption>
 
 In questa classe compariranno tutte le organizzazioni abilitate nel tracciamento dell'utente in precedenza aggiunte sia localmente che sul server. È possibile la rimozione di un'organizzazione dalla lista `MyStalkers` non consentendone più il tracciamento. Queste funzioni possono essere eseguite direttamente nell'applicazione. 
+`MyStalkersListFragment` utilizza le classi del modello `Storage` e `Server` per scaricare la lista delle organizzazioni preferite e avvertire il server quando ne viene aggiunta o rimossa una.
 
 La classe `MyStalkerListFragment` offre i seguenti metodi:
 
