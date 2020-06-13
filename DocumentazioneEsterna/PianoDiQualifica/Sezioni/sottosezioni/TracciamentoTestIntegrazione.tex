@@ -1,20 +1,120 @@
 \subsection{Tracciamento Requisiti - Test di Integrazione}
 {
-\rowcolors{2}{grigetto}{white}
-\renewcommand{\arraystretch}{1.5}
-\centering
-\begin{longtable}{C{2cm} C{8cm}}
-\caption{Tabella di tracciamento requisito-test di unità}\\
-\rowcolor{darkblue}
-\textcolor{white}{\textbf{Codice Test}} & \textcolor{white}{\textbf{Metodo}}\\	
-\endfirsthead
-\rowcolor{darkblue}
-\textcolor{white}{\textbf{Codice Test}} & \textcolor{white}{\textbf{Metodo}}\\	
-\endhead
+	\rowcolors{2}{grigetto}{white}
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{longtable}{C{2cm} C{12cm}}
+	\caption{Tabella di tracciamento requisito-test di unità}\\
+	\rowcolor{darkblue}
+	\textcolor{white}{\textbf{Codice Test}} & \textcolor{white}{\textbf{Metodo}}\\	
+	\endfirsthead
+	\rowcolor{darkblue}
+	\textcolor{white}{\textbf{Codice Test}} & \textcolor{white}{\textbf{Metodo}}\\	
+	\endhead
+	
+	TIA1 &  \\
+	TIA2 &  \\
+	TIA3 &  \\
+	TIA4 &  \\
+	TIA5 &  \\
+	TIA6 &  \\
+	TIA7 &  \\
+	TIA8 &  \\
+	TIA9 &  \\
+	TIA10 &  \\
+	TIA11 &  \\
+	TIA12 &  \\
+	TIA13 &  \\
+	TIA14 &  \\
+	TIA15 &  \\
+	TIA16 &  \\
+	TIA17 &  \\
+	TIA18 &  \\
+	TIA19 &  \\
+	TIA20 &  \\
+	TIB1 & Administrator::getAdministratorListOfOrganization(token) \\
+	TIB2 & Favorite::removeFavoriteOrganization(token)  \\
+	TIB3 & Administrator::getAdministratorListOfOrganization(token)  \\
+	TIB4 & Favorite::removeFavoriteOrganization(token) \\
+	TIB5 & Organization:getOrganization(organizationId) \\
+	TIB6 & Place::getPlaceListOfOrganization(organizationId) \\
+	TIB7 & Administrator::createAdministratorToOrganization(administrator) \\
+	TIB8 & Administrator::bindAdministratorToOrganization(administrator) \\
+	TIB9 & Administrator::unbindAdministratorToOrganization(administrator) \\
+	TIB10 & Administrator::getPermissionList(administrator)\\
+	TIB11 & Favorite::addFavorite(organization) \\
+	TIB12 & Favorite::removeFavorite(organization) \\
+	TIB13 & Movement::trackMovementInOrganization(movementOrganization)\\
+	TIB14 & Movement::trackMovementInPlace(movementPlace) \\
+	TIB15 & Organization:updateOrganization(organization) \\
+	TIB16 & Place::createNewPlace(place) \\
+	TIB17 & Place:updatePlace(place) \\
+	TIB18 & Administrator::updatePermission(permission) \\
+	TIB19 & Administrator::createNewAdministrator(administrator) \\
+	TIB20 & Administrator::updatePermission(permission)\\
+	TIB21 & Favorite::addFavorite(organization) \\
+	TIB22 & Favorite::getFavoriteList(token) \\
+	TIB23 & Movement::trackMovementInOrganization(movementOrganization) \\
+	TIB24 & Organization::updateTrackingAreaPerimetrer(TrackingArea) \\
+	TIB25 & Presence::getOrganizationPresenceCounter(organizationId) \\
+	TIB26 & Presence::getPlacePresenceCounter(placeId) \\
+	TIB27 & Access::getAuthenticatedAccessListInOrganization(organizationId) \\
+	TIB28 & Access::getAuthenticatedAccessListInPlace(placeId) \\
+	TIB29 & Administrator::getAdministratorListOfOrganization(organizationId) \\
+	TIB30 & Administrator::getPermissionList(organizationId) \\
+	TIB31 & Favorite::getFavoriteList(token) \\
+	TIB32 & Organization::getOrganization(organizationId) \\
+	TIB33 & Organization::getOrganization(organizationId) \\
+	TIB34 & Organization::updateOrganization(organization) \\
+	TIB35 & Organization::updateTrackingAreaPerimetrer(TrackingArea) \\
+	TIB36 & Place::getPlaceList(organizationId) \\
+	TIB37 & Place::updatePlace(placeId) \\
+	TIB38 & Presence::getOrganizationPresenceCounter(organizationId) \\
+	TIB39 & Presence::getPlacePresenceCounter(placeId) \\
+	TIB40 & Report::getTimePerUserReport(placeId)\\
+	TIB41 & Administrator::bindAdministrator(administrator) \\
+	TIB42 & Administrator::bindAdministrator(administrator) \\
+	TIB43 & Administrator::updatePermissionList(administrator) \\
+	TIB44 & Favorite::addFavorite(Favorite) \\
+	TIB45 & Movement::trackMovementInOrganization(movementOrganization) \\
+	TIB46 & Movement::trackMovementInPlace(movementPlace) \\
+	TIB47 & Place::createNewPlace(place)\\
+	TIB48 & Movement::trackMovementInOrganization(movementOrganization) \\
+	TIB49 & Movement::trackMovementInPlace(movementPlace) \\
+	TIB50 & Movement::trackMovementInOrganization(movementOrganization) \\
+	TIB51 & Movement::trackMovementInPlace(movementPlace) \\
+	TIB52 & Access::getAuthenticatedAccessListInOrganization(organizationId) \\
+	TIB53 & Access::getAuthenticatedAccessListInPlace(placeId) \\
+	TIB54 & Favorite::getFavoriteList(token) \\
+	TIB55 & Organization::getOrganizationList(token) \\
+	TIB56 & Place::getPlaceList(organizationId) \\
+	TIB57 & Place::updatePlace(place) \\
+	TIB58 & Report::getTimePerUserReport(placeId) \\
+	TIB59 & Organization::requesteDeletionOrganization(request) \\
+	TIB60 & Administrator::unbindAdministrator(administrator) \\
+	TIB61 & Favorite::removeFavorite(organization) \\
+	TIB62 & Place::removePlace(place) \\
+	TIW1 & Authentication::signInWithEmailAndPassword(email:string,psw:string) \\
+	TIW2 & Authentication::sendPasswordResetEmail(email:string) \\
+	TIW3 & Authentication::authState()\\
+	TIW4 & AuthenticationServerService::getUserInfoFromAuthServer(organizationAuthenticationServerRequest: OrganizationAuthenticationServerRequest) \\
+	TIW5 & GeneralService::constructor(protected httpClient: HttpClient, basePath: string, configuration: Configuration) \\
+	TIW6 & AdministratorService::getPermissionList(administratorId: string)\\
+	TIW7 & AdministratorService:: getListOrganization(administratorId: string)\\
+	TIW8 & PlaceService::getPlaceListOfOrganization(organizationId: number)\\
+	TIW9 & PresenceService::getOrganizationPresenceCounter(organizationId: number)\\
+	TIW10 & PresenceService::getPlacePresenceCounter(organizationId: number)\\
+	TIW11 & OrganizationService::getOrganization(organizationId: number)\\
+	TIW12 & PlaceService::getPlaceListOfOrganization(organizationId: number)\\
+	TIW13 & OrganizationService::updateOrganization(organization: Organization)\\
+	TIW14 & PlaceService::updatePlace(place: Place)\\
+	TIW15 & PlaceService::createNewPlace(place: Place)\\
+	TIW16 & AdministratorService::createNewAdministratorInOrganization(administratorBindingRequest: AdministratorBindingRequest)\\
+	TIW17 & OrganizationService::requestDeletionOfOrganization(organizationDeletionRequest: OrganizationDeletionRequest)\\
+	TIW18 & PlaceService::deletePlace(placeId: number)\\
+	TIW19 & AdministratorService::updateAdministratorPermission(permission: Permission)\\
+	TIW20 & AdministratorService::unbindAdministratorFromOrganization(permission: Permission)\\
 
-TIA & aa \\
-TIW & aa \\
-TIB & aa \\
 
 \end{longtable}
 }
