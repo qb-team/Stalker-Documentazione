@@ -61,7 +61,7 @@ L'utente può aggiornare la lista delle organizzazioni eseguendo uno *swipe down
 
 ## 2.1.8 MyStalkersList(organizzazioni preferite)
 
-![!MyStalkersList](../Immagini/app/MyStalkersList.png)
+![!MyStalkersList](../Immagini/app/MyStalkerList.png)
 <figcaption align="center"> <em> MyStalkersList </em> </figcaption>
 
 In questa sezione vi sono tutte le organizzazioni da cui l'utente ha scelto di essere tracciato.
@@ -74,8 +74,7 @@ L'utente può eseguire l'ordinamento alfabetico della lista delle organizzazioni
 
 ## 2.1.10 Ricerca
 
-![!Ricerca organizzazioni](../Immagini/app/RicercaOrg.PNG)
-<figcaption align="center"> <em> Ricerca organizzazione </em> </figcaption>
+<iframe width="720" src="" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 In alto è situata la barra principale dell'applicazione e vi è una sezione di ricerca. Con essa è possibile eseguire  ricerche testuali per filtrare e visualizzare la lista delle organizzazioni.
 
