@@ -135,8 +135,6 @@ La classe `HomePageActivity` offre i seguenti metodi:
  
 - `getTabLayout()`: Metodo che restituisce il TabLayout;
 
-- `getuserToken()`:  Metodo che restituisce il token dell'utente.
-
 
 ___
 ## 2.6.6 Action Tab
@@ -220,6 +218,7 @@ ___
 <figcaption align="center"> <em> Diagramma della classe My Stalkers List </em> </figcaption>
 
 In questa classe compariranno tutte le organizzazioni abilitate nel tracciamento dell'utente in precedenza aggiunte sia localmente che sul server. È possibile la rimozione di un'organizzazione dalla lista `MyStalkers` non consentendone più il tracciamento. Queste funzioni possono essere eseguite direttamente nell'applicazione. 
+`MyStalkersListFragment` utilizza le classi del modello `Storage` e `Server` per scaricare la lista delle organizzazioni preferite e avvertire il server quando ne viene aggiunta o rimossa una.
 
 La classe `MyStalkerListFragment` offre i seguenti metodi:
 
@@ -311,26 +310,44 @@ Essa offre i seguenti metodi:
 
 ___
 ## 2.6.11 Access History
+<<<<<<< HEAD
 ![!AccessHistoryFragment](../Immagini/App/Classi/AccessHistoryFragment.jpg "Diagramma della classe Access History")
+=======
+![!AccessHistoryFragment](../Immagini/App/Classi/AccessHistoryFragment.PNG "Diagramma della classe Access History")
+>>>>>>> 6e6ebcddf26c89e90948d45ebc7599a0b926a6a4
 <figcaption align="center"> <em> Diagramma della classe Access History </em> </figcaption>
 
 La classe `AccessHistoryFragment` rappresenta la pagina dedicata allo storico degli accessi presso a tutte le organizzazioni scelte dall'utente per essere tracciato. Nel momento in cui un utente entra nell'organizzazione e conseguentemente esce da essa verrà stampato un elemento clickabile ed informativo che mostra le informazione legate ai quei movimenti. Se l'utente è anche entrato nei luoghi dell'organizzazione tale informazione verrà registrata e mostrata nel "PlaceAccessFragment".
 
 La classe `AccessHistoryFragment` offre i seguenti metodi:
 
--   `onCreateViewHolder()`: Restituisce il layout dell'elenco delle organizzazioni;
+-  `onAttach(context: Context)`: Assicura che l'attività abbia effettivamente implementato il nostro listener e che esso non sia nulla;
 
--   `onBindViewHolder(holder: ViewHolder, position: int)`: Imposta il nome dell'organizzazione, la data, l'accesso e l'uscita in formato riga;
+-   `onCreate(savedInstanceState: Bundle)`: Si occupa della creazione del Fragment in quanto componente;
 
--   `getItemCount()`: Ritorna la dimensione della lista degli accessi nell'organizzazione;
+-  `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
 
--   `onCreateView(inflater: LayoutInflater, container: ViewGroup, savedInstanceState: Bundle)`: Si occupa della creazione della parte grafica visualizzata dall'utente;
+-  `printAccess()`: Metodo che comunica con il presenter;
 
--   `onPrepareOptionsMenu(menu:Menu)`: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca;
+-  `onSuccessGetOrganizationAccessInLocal(organizationAccessList: List<OrganizationAccess>)`: Se c'è stato un corretto accesso ed uscita nell'organizzazione allora vengono salvate tali informazioni nella lista;
 
--   `onClick(v: View)`:  L'utente dopo il click verrà proiettato in una pagina dedicata allo storico degli accessi presso ai luoghi dell'organizzazione;
+-  `onSuccessDeleteOrganizationAccess()`: Eliminazione lista degli accessi;
 
--   `onLongClick(v: View)`: L'utente dopo il click viene aperto pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso l'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
+-  `onPrepareOptionsMenu(menu: Menu)`: Rende visibile al menù action tab dell'applicazione l'opzione 'aggiungi ai preferiti' e nasconde il comando di ricerca;
+
+-  `onOptionsItemSelected(item: MenuItem)`: Funzionalità filtro di ricerca;
+
+-  `onQueryTextChange(newText: String)`: Funzionalità di ricerca in base alle ricerche testuali digitate dall'utente;
+
+-  `organizationClick(position: int)`:  L'utente dopo il click verrà proiettato in una pagina dedicata allo storico degli accessi presso ai luoghi dell'organizzazione;
+
+-  `organizationLongClick(position: int)`: L'utente dopo il click viene aperto pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso l'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
+
+-  `onBackPressed()`: Si occupa di far ritornare l'utente alla precedente Activity/Fragment;
+
+-  `dateDecreasingOrder(list: List<OrganizationAccess>)`: Ordina per data decrescente gli elementi della lista degli accessi;
+
+-  `dateCreasingOrder(list: List<OrganizationAccess>)`: Ordina per data crescente gli elementi della lista degli accessi.
 
 ___
 ## 2.6.12 Place Access
