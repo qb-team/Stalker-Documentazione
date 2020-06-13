@@ -3,7 +3,7 @@
 \renewcommand{\arraystretch}{1.5}
 \centering
 \begin{longtable}{ c C{13cm} C{1cm}}
-\caption{Elenco dei test di unità}\\
+\caption{Elenco dei test di uStà}\\
 \rowcolor{darkblue}
 \textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Stato}}\\
 \endfirsthead
@@ -11,67 +11,67 @@
 \textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Stato}}\\
 \endhead
 
-TUA1 & Si verifichi che l'utente non \glo{autenticato} possa inserire l'indirizzo e-mail. & NI \\
-TUA2 & Si verifichi che l'utente non \glo{autenticato} possa inserire la password. & NI \\
-TUA3 & Si verifichi che l'utente non \glo{autenticato} possa ricevere un messaggio di errore se l'\glo{autenticazione} viene negata per inserimento di credenziali errate. & NI \\
-TUA4 & Si verifichi che l'utente non \glo{autenticato} possa effettuare il reset della password qualora se la fosse dimenticata. & NI \\
-TUA5 & Si verifichi che l’utente non \glo{autenticato} possa inserire l'indirizzo e-mail. & NI \\
-TUA6 & Si verifichi che l’utente non \glo{autenticato} possa ricevere un messaggio di errore se tentasse di registrarsi con un'e-mail già usata nel sistema.  & NI \\
-TUA7 & Si verifichi che l’utente non \glo{autenticato} possa inserire una password. & NI \\
-TUA8 & Si verifichi che l’utente non \glo{autenticato} possa inserire nuovamente la password come conferma. & NI \\
-TUA9 & Si verifichi che l’utente non \glo{autenticato} possa ricevere un messaggio di errore qualora abbia inserito una password non ritenuta sicura. Il processo di \glo{autenticazione} deve fallire. & NI \\
-TUA10 & Si verifichi che l’utente non \glo{autenticato} possa ricevere un messaggio di errore qualora abbia inserito una conferma password diversa dalla password. Il processo di \glo{autenticazione} deve fallire. & NI \\
-TUA11 & Si verifichi che l’utente non \glo{autenticato} possa accettare le condizioni generali d'uso. & NI \\
-TUA12 & Si verifichi che la registrazione si interrompa e che l'applicazione si chiuda nel caso che l'utente non autenticato non abbia accettato le condizioni generali d'uso. & NI \\
-TUA13 & Si verifichi che l'utente anonimo possa effettuare il \glo{logout} dall'applicazione. & NI \\
-TUA14 & Si verifichi che l'utente anonimo possa scaricare la lista di tutte le organizzazioni. & NI \\
-TUA15 & Si verifichi che l'utente anonimo riceva un messaggio di errore qualora lo scaricamento della lista di tutte le organizzazioni non vada a buon fine. & NI \\
-TUA16 & Si verifichi che l'utente anonimo ossa aggiornare la lista delle organizzazioni tramite \glo{refresh manuale}. & NI \\
-TUA17 & Si verifichi che l'utente anonimo possa aggiornare la lista delle organizzazioni tramite \glo{temporizzazione}. & NI \\
-TUA18 & Si verifichi che l'utente anonimo possa visionare la lista delle organizzazioni ordinate alfabeticamente. & NI \\
-TUA19 & Si verifichi che l'utente anonimo possa visionare la lista delle organizzazioni ordinate secondo la politica \glo{FIFO}. & NI \\
-TUA20 & Si verifichi che l'utente anonimo possa visionare la lista delle organizzazioni che permettono il tracciamento anonimo. & NI \\
-TUA21 & Si verifichi che l'utente anonimo possa visionare la lista delle organizzazioni che permettono il \glo{tracciamento autenticato}. & NI \\
-TUA22 & Si verifichi che l'utente anonimo possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alle nazioni indicate dall'utente. & NI \\
-TUA23 & Si verifichi che l'utente anonimo possa ricercare organizzazioni presenti nella lista delle organizzazioni che hanno nel nome una sottostringa scelta dall'utente. & NI \\
-TUA24 & Si verifichi che l'utente anonimo possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alla città indicata dall'utente. & NI \\
-TUA25 & Si verifichi che l'utente anonimo possa inserire un'organizzazione, presente nella lista di tutte le organizzazioni, nella propria lista delle organizzazioni preferite. & NI \\
-TUA26 & Si verifichi che l'utente anonimo possa rimuovere un'organizzazione dalla propria lista delle organizzazioni preferite. & NI \\
-TUA27 & Si verifichi che l'utente anonimo venga informato nel caso in cui non sia memorizzata nessuna lista delle organizzazioni del proprio dispositivo. & NI \\
-TUA28 & Si verifichi che l'utente riconosciuto possa inserire la modalità di \glo{tracciamento anonimo}. & NI \\
-TUA29 & Si verifichi che l'utente riconosciuto possa inserire la modalità di \glo{tracciamento autenticato}. & NI \\
-TUA30 & Si verifichi che nel passaggio dalla modalità di \glo{tracciamento autenticato} a quella anonima venga inviata al sistema la richiesta di uscita dell'utente riconosciuto dal luogo e la successiva richiesta di ingresso di utente anonimo. & NI \\
-TUA31 & Si verifichi che nel passaggio dalla modalità di \glo{tracciamento anonimo} a quella autenticata venga inviata al sistema la richiesta di uscita dell'utente anonimo dal luogo e la successiva richiesta di ingresso di utente riconosciuto. & NI \\
-TUA32 & Si verifichi che l'utente anonimo possa vedere il proprio storico accessi presso un'\glo{organizzazione}. & NI \\
-TUA33 & Si verifichi che ogni accesso deve mostrare la data in cui è stato compiuto. & NI \\
-TUA34 & Si verifichi che ogni accesso deve mostrare il luogo corrispondente.  & NI \\
-TUA35 & Si verifichi che ogni accesso deve mostrare il tempo totale trascorso all'interno nel luogo. & NI \\
-TUA36 & Si verifichi che la \glo{lista degli accessi} deve risultare ordinata \glo{per data in ordine decrescente}. & NI \\
-TUA37 & Si verifichi che la \glo{lista degli accessi} deve risultare ordinata \glo{per data in ordine crescente}. & NI \\
-TUA38 & Si verifichi che nella lista vengono mostrati solo gli accessi che rispettano i parametri di ricerca sul giorno cercato. & NI \\
-TUA39 & Si verifichi che l’utente anonimo riceva un messaggio informativo in assenza di accessi effettuati presso un'\glo{organizzazione}. & NI \\
-TUA40 & Si verifichi che l’utente anonimo possa visionare il nome dello specifico luogo in cui si trova. & NI \\
-TUA41 & Si verifichi che l’utente anonimo possa visionare il tempo trascorso da quando ha fatto l'ultimo ingresso in uno specifico luogo. & NI \\
-TUA42 & Si verifichi che l'utente anonimo possa vedere il proprio storico accessi presso il luogo di un'\glo{organizzazione}. & NI \\
-TUA43 & Si verifichi che ogni accesso deve mostrare la data in cui è stato compiuto. & NI \\
-TUA44 & Si verifichi che ogni accesso deve mostrare il luogo corrispondente. & NI \\
-TUA45 & Si verifichi che ogni accesso deve mostrare il tempo totale trascorso all'interno nel luogo. & NI \\
-TUA46 & Si verifichi che la \glo{lista degli accessi} deve risultare ordinata \glo{per data in ordine decrescente}. & NI \\
-TUA47 & Si verifichi che la \glo{lista degli accessi} deve risultare ordinata \glo{per data in ordine crescente}. & NI \\
-TUA48 & Si verifichi che nella lista vengono mostrati solo gli accessi che rispettano i parametri di ricerca sul giorno cercato. & NI \\
-TUA49 & Si verifichi che l'utente anonimo, in assenza di accessi effettuati presso il luogo di un'\glo{organizzazione} selezionato, visualizzi un messaggio informativo. & NI \\
-TUA50 & Si verifichi che l'utente anonimo possa visualizzare il tempo trascorso all'interno del luogo dall'ultimo ingresso effettuato. & NI \\
-TUA51 & Si verifichi che l’utente anonimo riceva la notifica della corretta registrazione se il tracciamento del suo \glo{movimento} in/da un \glo{luogo} ha avuto successo. & NI \\
-TUA52 & Si verifichi che l’utente anonimo riceva un messaggio di errore qualora il tracciamento del \glo{movimento} non sia andato a buon fine. & NI \\
-TUA53 & Si verifichi che durante la registrazione del \glo{tracciamento} del \glo{movimento} dell'utente anonimo/riconosciuto, venga memorizzato il \glo{timestamp} in cui è avvenuto il \glo{movimento}. & NI \\
-TUA54 & Si verifichi che se l'utente riconosciuto è in modalità di \glo{tracciamento autenticato}, venga verificata la correttezza delle credenziali \glo{LDAP}. & NI \\
-TUA55 & Si verifichi che se l'utente riconosciuto è in modalità di \glo{tracciamento autenticato}, possa effettuare un ingresso in un luogo dell'\glo{organizzazione}. & NI \\
-TUA56 & Si verifichi che se l'utente riconosciuto è in modalità di \glo{tracciamento anonima}, possa effettuare un ingresso in un luogo dell'\glo{organizzazione}. & NI \\
-TUA57 & Si verifichi che se l'utente riconosciuto è in modalità di \glo{tracciamento anonima}, possa effettuare un'uscita da un luogo dell'\glo{organizzazione}. & NI \\
-TUA58 & Si verifichi che l’utente anonimo possa autenticarsi con credenziali aziendali LDAP in un'organizzazione che richiede il tracciamento riconosciuto. & NI \\
-TUA59 & Si verifichi che l’utente anonimo riceva un messaggio di errore qualora le credenziali \glo{LDAP} non fossero riconosciute dal server. & NI \\
-TUA60 & Si verifichi che l’utente anonimo possa inserire il proprio nome utente durante l'autenticazione con le credenziali \glo{LDAP} aziendali. & NI \\
-TUA61 & Si verifichi che l’utente anonimo possa inserire la propria password utente durante l'autenticazione con le credenziali \glo{LDAP} aziendali. & NI \\
+TUA1 & Si verifichi che l'utente non \glo{autenticato} possa inserire l'indirizzo e-mail. & S \\
+TUA2 & Si verifichi che l'utente non \glo{autenticato} possa inserire la password. & S \\
+TUA3 & Si verifichi che l'utente non \glo{autenticato} possa ricevere un messaggio di errore se l'\glo{autenticazione} viene negata per inserimento di credenziali errate. & S \\
+TUA4 & Si verifichi che l'utente non \glo{autenticato} possa effettuare il reset della password qualora se la fosse dimenticata. & S \\
+TUA5 & Si verifichi che l’utente non \glo{autenticato} possa inserire l'indirizzo e-mail. & S \\
+TUA6 & Si verifichi che l’utente non \glo{autenticato} possa ricevere un messaggio di errore se tentasse di registrarsi con un'e-mail già usata nel sistema.  & S \\
+TUA7 & Si verifichi che l’utente non \glo{autenticato} possa inserire una password. & S \\
+TUA8 & Si verifichi che l’utente non \glo{autenticato} possa inserire nuovamente la password come conferma. & S \\
+TUA9 & Si verifichi che l’utente non \glo{autenticato} possa ricevere un messaggio di errore qualora abbia inserito una password non ritenuta sicura. Il processo di \glo{autenticazione} deve fallire. & S \\
+TUA10 & Si verifichi che l’utente non \glo{autenticato} possa ricevere un messaggio di errore qualora abbia inserito una conferma password diversa dalla password. Il processo di \glo{autenticazione} deve fallire. & S \\
+TUA11 & Si verifichi che l’utente non \glo{autenticato} possa accettare le condizioni generali d'uso. & S \\
+TUA12 & Si verifichi che la registrazione si interrompa e che l'applicazione si chiuda nel caso che l'utente non autenticato non abbia accettato le condizioni generali d'uso. & S \\
+TUA13 & Si verifichi che l'utente anonimo possa effettuare il \glo{logout} dall'applicazione. & S \\
+TUA14 & Si verifichi che l'utente anonimo possa scaricare la lista di tutte le organizzazioni. & S \\
+TUA15 & Si verifichi che l'utente anonimo riceva un messaggio di errore qualora lo scaricamento della lista di tutte le organizzazioni non vada a buon fine. & S \\
+TUA16 & Si verifichi che l'utente anonimo ossa aggiornare la lista delle organizzazioni tramite \glo{refresh manuale}. & S \\
+TUA17 & Si verifichi che l'utente anonimo possa aggiornare la lista delle organizzazioni tramite \glo{temporizzazione}. & S \\
+TUA18 & Si verifichi che l'utente anonimo possa visionare la lista delle organizzazioni ordinate alfabeticamente. & S \\
+TUA19 & Si verifichi che l'utente anonimo possa visionare la lista delle organizzazioni ordinate secondo la politica \glo{FIFO}. & S \\
+TUA20 & Si verifichi che l'utente anonimo possa visionare la lista delle organizzazioni che permettono il tracciamento anonimo. & S \\
+TUA21 & Si verifichi che l'utente anonimo possa visionare la lista delle organizzazioni che permettono il \glo{tracciamento autenticato}. & S \\
+TUA22 & Si verifichi che l'utente anonimo possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alle nazioni indicate dall'utente. & S \\
+TUA23 & Si verifichi che l'utente anonimo possa ricercare organizzazioni presenti nella lista delle organizzazioni che hanno nel nome una sottostringa scelta dall'utente. & S \\
+TUA24 & Si verifichi che l'utente anonimo possa ricercare organizzazioni presenti nella lista delle organizzazioni appartenenti alla città indicata dall'utente. & S \\
+TUA25 & Si verifichi che l'utente anonimo possa inserire un'organizzazione, presente nella lista di tutte le organizzazioni, nella propria lista delle organizzazioni preferite. & S \\
+TUA26 & Si verifichi che l'utente anonimo possa rimuovere un'organizzazione dalla propria lista delle organizzazioni preferite. & S \\
+TUA27 & Si verifichi che l'utente anonimo venga informato nel caso in cui non sia memorizzata nessuna lista delle organizzazioni del proprio dispositivo. & S \\
+TUA28 & Si verifichi che l'utente riconosciuto possa inserire la modalità di \glo{tracciamento anonimo}. & S \\
+TUA29 & Si verifichi che l'utente riconosciuto possa inserire la modalità di \glo{tracciamento autenticato}. & S \\
+TUA30 & Si verifichi che nel passaggio dalla modalità di \glo{tracciamento autenticato} a quella anonima venga inviata al sistema la richiesta di uscita dell'utente riconosciuto dal luogo e la successiva richiesta di ingresso di utente anonimo. & S \\
+TUA31 & Si verifichi che nel passaggio dalla modalità di \glo{tracciamento anonimo} a quella autenticata venga inviata al sistema la richiesta di uscita dell'utente anonimo dal luogo e la successiva richiesta di ingresso di utente riconosciuto. & S \\
+TUA32 & Si verifichi che l'utente anonimo possa vedere il proprio storico accessi presso un'\glo{organizzazione}. & S \\
+TUA33 & Si verifichi che ogni accesso deve mostrare la data in cui è stato compiuto. & S \\
+TUA34 & Si verifichi che ogni accesso deve mostrare il luogo corrispondente.  & S \\
+TUA35 & Si verifichi che ogni accesso deve mostrare il tempo totale trascorso all'interno nel luogo. & S \\
+TUA36 & Si verifichi che la \glo{lista degli accessi} deve risultare ordinata \glo{per data in ordine decrescente}. & S \\
+TUA37 & Si verifichi che la \glo{lista degli accessi} deve risultare ordinata \glo{per data in ordine crescente}. & S \\
+TUA38 & Si verifichi che nella lista vengono mostrati solo gli accessi che rispettano i parametri di ricerca sul giorno cercato. & S \\
+TUA39 & Si verifichi che l’utente anonimo riceva un messaggio informativo in assenza di accessi effettuati presso un'\glo{organizzazione}. & S \\
+TUA40 & Si verifichi che l’utente anonimo possa visionare il nome dello specifico luogo in cui si trova. & S \\
+TUA41 & Si verifichi che l’utente anonimo possa visionare il tempo trascorso da quando ha fatto l'ultimo ingresso in uno specifico luogo. & S \\
+TUA42 & Si verifichi che l'utente anonimo possa vedere il proprio storico accessi presso il luogo di un'\glo{organizzazione}. & S \\
+TUA43 & Si verifichi che ogni accesso deve mostrare la data in cui è stato compiuto. & S \\
+TUA44 & Si verifichi che ogni accesso deve mostrare il luogo corrispondente. & S \\
+TUA45 & Si verifichi che ogni accesso deve mostrare il tempo totale trascorso all'interno nel luogo. & S \\
+TUA46 & Si verifichi che la \glo{lista degli accessi} deve risultare ordinata \glo{per data in ordine decrescente}. & S \\
+TUA47 & Si verifichi che la \glo{lista degli accessi} deve risultare ordinata \glo{per data in ordine crescente}. & S \\
+TUA48 & Si verifichi che nella lista vengono mostrati solo gli accessi che rispettano i parametri di ricerca sul giorno cercato. & S \\
+TUA49 & Si verifichi che l'utente anonimo, in assenza di accessi effettuati presso il luogo di un'\glo{organizzazione} selezionato, visualizzi un messaggio informativo. & S \\
+TUA50 & Si verifichi che l'utente anonimo possa visualizzare il tempo trascorso all'interno del luogo dall'ultimo ingresso effettuato. & S \\
+TUA51 & Si verifichi che l’utente anonimo riceva la notifica della corretta registrazione se il tracciamento del suo \glo{movimento} in/da un \glo{luogo} ha avuto successo. & S \\
+TUA52 & Si verifichi che l’utente anonimo riceva un messaggio di errore qualora il tracciamento del \glo{movimento} non sia andato a buon fine. & S \\
+TUA53 & Si verifichi che durante la registrazione del \glo{tracciamento} del \glo{movimento} dell'utente anonimo/riconosciuto, venga memorizzato il \glo{timestamp} in cui è avvenuto il \glo{movimento}. & S \\
+TUA54 & Si verifichi che se l'utente riconosciuto è in modalità di \glo{tracciamento autenticato}, venga verificata la correttezza delle credenziali \glo{LDAP}. & S \\
+TUA55 & Si verifichi che se l'utente riconosciuto è in modalità di \glo{tracciamento autenticato}, possa effettuare un ingresso in un luogo dell'\glo{organizzazione}. & S \\
+TUA56 & Si verifichi che se l'utente riconosciuto è in modalità di \glo{tracciamento anonima}, possa effettuare un ingresso in un luogo dell'\glo{organizzazione}. & S \\
+TUA57 & Si verifichi che se l'utente riconosciuto è in modalità di \glo{tracciamento anonima}, possa effettuare un'uscita da un luogo dell'\glo{organizzazione}. & S \\
+TUA58 & Si verifichi che l’utente anonimo possa autenticarsi con credenziali aziendali LDAP in un'organizzazione che richiede il tracciamento riconosciuto. & S \\
+TUA59 & Si verifichi che l’utente anonimo riceva un messaggio di errore qualora le credenziali \glo{LDAP} non fossero riconosciute dal server. & S \\
+TUA60 & Si verifichi che l’utente anonimo possa inserire il proprio nome utente durante l'autenticazione con le credenziali \glo{LDAP} aziendali. & S \\
+TUA61 & Si verifichi che l’utente anonimo possa inserire la propria password utente durante l'autenticazione con le credenziali \glo{LDAP} aziendali. & S \\
 TUW1 & Si verifichi che l’utente non \glo{autenticato} possa inserire l'e-mail correttamente. & S \\
 TUW2 & Si verifichi che l’utente non \glo{autenticato} possa inserire correttamente la password. & S \\
 TUW3 & Si verifichi che l’utente non \glo{autenticato} riceva un messaggio d'errore se l'\glo{autenticazione} viene negata per inserimento di credenziali errate. & S \\
@@ -84,45 +84,45 @@ TUW9 & Si verifichi che l'amministratore visualizzatore possa visualizzare la de
 TUW10 & Si verifichi che l'amministratore visualizzatore possa visualizzare l’indirizzo dell'organizzazione selezionata. & S \\
 TUW11 & Si verifichi che l'amministratore visualizzatore possa visualizzare l’indirizzo IP dell'organizzazione selezionata. & S \\
 TUW12 & Si verifichi che l'amministratore visualizzatore possa visualizzare le coordinate geografiche dell'organizzazione selezionata. & S \\
-TUW13 & Si verifichi che l'amministratore gestore possa modificare il nome dell'organizzazione selezionata. & NI \\
-TUW14 & Si verifichi che l'amministratore gestore possa modificare l’immagine dell'organizzazione selezionata. & NI \\
-TUW15 & Si verifichi che l'amministratore gestore possa modificare la descrizione dell'organizzazione selezionata. & NI \\
-TUW16 & Si verifichi che l'amministratore gestore possa modificare l’indirizzo dell'organizzazione selezionata. & NI \\
-TUW17 & Si verifichi che l'amministratore gestore possa modificare l’indirizzo IP dell'organizzazione selezionata. & NI \\
-TUW18 & Si verifichi che l'amministratore gestore possa modificare le coordinate geografiche dell'organizzazione selezionata. & NI \\
-TUW19 & Si verifichi che l'amministratore gestore riceva un messaggio di errore qualora il nome dell'organizzazione inserito non rispetti i vincoli imposti. & NI \\
-TUW20 & Si verifichi che l'amministratore gestore possa riceva un messaggio di errore qualora il nome dell'organizzazione inserito sia già presente nel sistema e associato ad un'altra organizzazione. & NI \\
-TUW21 & Si verifichi che l'amministratore gestore possa riceva un messaggio di errore qualora l'immagine dell'organizzazione inserita non rispetti i vincoli imposti. & NI \\
-TUW22 & Si verifichi che l'amministratore gestore possa riceva un messaggio di errore qualora la descrizione dell'organizzazione inserita non rispetti i vincoli imposti. & NI \\
-TUW23 & Si verifichi che l'amministratore gestore possa riceva un messaggio di errore qualora l'indirizzo dell'organizzazione inserito non rispetti i vincoli imposti. & NI \\
-TUW24 & Si verifichi che l'amministratore gestore possa riceva un messaggio di errore qualora l'indirizzo IP dell'organizzazione inserito non rappresenti un server \glo{LDAP}. & NI \\
-TUW25 & Si verifichi che l'amministratore gestore possa inviare la richiesta di eliminazione per un'organizzazione. & NI \\
-TUW26 & Si verifichi che l'amministratore gestore possa inserire una motivazione per la richiesta di eliminazione di un'organizzazione. & NI \\
-TUW27 & Si verifichi che l'amministratore gestore possa annullare le modifiche che sta apportando ad una organizzazione. & NI \\
-TUW28 & Si verifichi che l’amministratore visualizzatore possa selezionare un luogo di un’organizzazione. & NI \\
-TUW29 & Si verifichi che l'amministratore visualizzatore possa visualizzare il nome del luogo di un’organizzazione selezionata. & NI \\
-TUW30 & Si verifichi che l'amministratore visualizzatore possa visualizzare le coordinate geografiche del luogo di un’organizzazione selezionata. & NI \\
-TUW31 & Si verifichi che l'amministratore gestore possa modificare il nome del luogo di un’organizzazione selezionata. & NI \\
-TUW32 & Si verifichi che l'amministratore gestore possa selezionare l'area geografica in cui effettuare il \glo{tracciamento} mediante l'inserimento di coordinate geografiche. & NI \\
-TUW33 & Si verifichi che l'amministratore gestore possa selezionare l'area geografica in cui effettuare il \glo{tracciamento} mediante l'inserimento di marcatori su una mappa interattiva. & NI \\
-TUW34 & Si verifichi che l'amministratore gestore possa eliminare un luogo di un’organizzazione. & NI \\
-TUW35 & Si verifichi che l'amministratore gestore possa annullare le modifiche che sta apportando a un luogo di un’organizzazione.  & NI \\
+TUW13 & Si verifichi che l'amministratore gestore possa modificare il nome dell'organizzazione selezionata. & S \\
+TUW14 & Si verifichi che l'amministratore gestore possa modificare l’immagine dell'organizzazione selezionata. & S \\
+TUW15 & Si verifichi che l'amministratore gestore possa modificare la descrizione dell'organizzazione selezionata. & S \\
+TUW16 & Si verifichi che l'amministratore gestore possa modificare l’indirizzo dell'organizzazione selezionata. & S \\
+TUW17 & Si verifichi che l'amministratore gestore possa modificare l’indirizzo IP dell'organizzazione selezionata. & S \\
+TUW18 & Si verifichi che l'amministratore gestore possa modificare le coordinate geografiche dell'organizzazione selezionata. & S \\
+TUW19 & Si verifichi che l'amministratore gestore riceva un messaggio di errore qualora il nome dell'organizzazione inserito non rispetti i vincoli imposti. & S \\
+TUW20 & Si verifichi che l'amministratore gestore possa riceva un messaggio di errore qualora il nome dell'organizzazione inserito sia già presente nel sistema e associato ad un'altra organizzazione. & S \\
+TUW21 & Si verifichi che l'amministratore gestore possa riceva un messaggio di errore qualora l'immagine dell'organizzazione inserita non rispetti i vincoli imposti. & S \\
+TUW22 & Si verifichi che l'amministratore gestore possa riceva un messaggio di errore qualora la descrizione dell'organizzazione inserita non rispetti i vincoli imposti. & S \\
+TUW23 & Si verifichi che l'amministratore gestore possa riceva un messaggio di errore qualora l'indirizzo dell'organizzazione inserito non rispetti i vincoli imposti. & S \\
+TUW24 & Si verifichi che l'amministratore gestore possa riceva un messaggio di errore qualora l'indirizzo IP dell'organizzazione inserito non rappresenti un server \glo{LDAP}. & S \\
+TUW25 & Si verifichi che l'amministratore gestore possa inviare la richiesta di eliminazione per un'organizzazione. & S \\
+TUW26 & Si verifichi che l'amministratore gestore possa inserire una motivazione per la richiesta di eliminazione di un'organizzazione. & S \\
+TUW27 & Si verifichi che l'amministratore gestore possa annullare le modifiche che sta apportando ad una organizzazione. & S \\
+TUW28 & Si verifichi che l’amministratore visualizzatore possa selezionare un luogo di un’organizzazione. & S \\
+TUW29 & Si verifichi che l'amministratore visualizzatore possa visualizzare il nome del luogo di un’organizzazione selezionata. & S \\
+TUW30 & Si verifichi che l'amministratore visualizzatore possa visualizzare le coordinate geografiche del luogo di un’organizzazione selezionata. & S \\
+TUW31 & Si verifichi che l'amministratore gestore possa modificare il nome del luogo di un’organizzazione selezionata. & S \\
+TUW32 & Si verifichi che l'amministratore gestore possa selezionare l'area geografica in cui effettuare il \glo{tracciamento} mediante l'inserimento di coordinate geografiche. & S \\
+TUW33 & Si verifichi che l'amministratore gestore possa selezionare l'area geografica in cui effettuare il \glo{tracciamento} mediante l'inserimento di marcatori su una mappa interattiva. & S \\
+TUW34 & Si verifichi che l'amministratore gestore possa eliminare un luogo di un’organizzazione. & S \\
+TUW35 & Si verifichi che l'amministratore gestore possa annullare le modifiche che sta apportando a un luogo di un’organizzazione.  & S \\
 TUW36 & Si verifichi che l’amministratore visualizzatore possa monitorare il numero degli utenti anonimi all’interno di una organizzazione. & S \\
 TUW37 & Si verifichi che l’amministratore visualizzatore possa monitorare il numero degli utenti anonimi all’interno di un luogo specifico. & S \\
-TUW38 & Si verifichi che l’amministratore visualizzatore possa monitorare gli accessi effettuati da uno specifico utente riconosciuto visualizzandone il nome. & NI \\
-TUW39 & Si verifichi che l’amministratore visualizzatore possa monitorare gli accessi effettuati da uno specifico utente riconosciuto visualizzandone il cognome. & NI \\
-TUW40 & Si verifichi che l’amministratore visualizzatore possa monitorare gli accessi effettuati da uno specifico utente riconosciuto visualizzandone l’orario di accesso. & NI \\
-TUW41 & Si verifichi che l’amministratore visualizzatore possa filtrare la \glo{lista degli accessi} di uno specifico utente riconosciuto per data decrescente. & NI \\
-TUW42 & Si verifichi che l’amministratore visualizzatore possa filtrare la \glo{lista degli accessi} di uno specifico utente riconosciuto per data crescente. & NI \\
-TUW43 & Si verifichi che l’amministratore visualizzatore possa filtrare la \glo{lista degli accessi} di uno specifico utente riconosciuto per una data precisa. & NI \\
-TUW44 & Si verifichi che l’amministratore visualizzatore possa monitorare gli accessi effettuati presso un luogo da uno specifico utente riconosciuto visualizzandone il nome. & NI \\
-TUW45 & Si verifichi che l’amministratore visualizzatore possa monitorare gli accessi effettuati presso un luogo da uno specifico utente riconosciuto visualizzandone il cognome. & NI \\
-TUW46 & Si verifichi che l’amministratore visualizzatore possa monitorare gli accessi effettuati presso un luogo da uno specifico utente riconosciuto visualizzandone l’orario di accesso. & NI \\
-TUW47 & Si verifichi che si possa ottenere un report tabellare degli accesi ai luoghi dell'organizzazione. & NI \\
-TUW48 & Si verifichi che si possa generare una tabella contenente il numero degli utenti. & NI \\
-TUW49 & Si verifichi che si possa generare una tabella contenente il totale delle ore passate dagli utenti nei luoghi dell’organizzazione. & NI \\
-TUW50 & Si verifichi che si possa generare una tabella delle entrate e uscite degli utenti nei luoghi dell'organizzazione. & NI \\
-TUW51 & Si verifichi che si possa generare una tabella delle ore spese dagli utenti nei luoghi dell'organizzazione. & NI \\
+TUW38 & Si verifichi che l’amministratore visualizzatore possa monitorare gli accessi effettuati da uno specifico utente riconosciuto visualizzandone il nome. & S \\
+TUW39 & Si verifichi che l’amministratore visualizzatore possa monitorare gli accessi effettuati da uno specifico utente riconosciuto visualizzandone il cognome. & S \\
+TUW40 & Si verifichi che l’amministratore visualizzatore possa monitorare gli accessi effettuati da uno specifico utente riconosciuto visualizzandone l’orario di accesso. & S \\
+TUW41 & Si verifichi che l’amministratore visualizzatore possa filtrare la \glo{lista degli accessi} di uno specifico utente riconosciuto per data decrescente. & S \\
+TUW42 & Si verifichi che l’amministratore visualizzatore possa filtrare la \glo{lista degli accessi} di uno specifico utente riconosciuto per data crescente. & S \\
+TUW43 & Si verifichi che l’amministratore visualizzatore possa filtrare la \glo{lista degli accessi} di uno specifico utente riconosciuto per una data precisa. & S \\
+TUW44 & Si verifichi che l’amministratore visualizzatore possa monitorare gli accessi effettuati presso un luogo da uno specifico utente riconosciuto visualizzandone il nome. & S \\
+TUW45 & Si verifichi che l’amministratore visualizzatore possa monitorare gli accessi effettuati presso un luogo da uno specifico utente riconosciuto visualizzandone il cognome. & S \\
+TUW46 & Si verifichi che l’amministratore visualizzatore possa monitorare gli accessi effettuati presso un luogo da uno specifico utente riconosciuto visualizzandone l’orario di accesso. & S \\
+TUW47 & Si verifichi che si possa ottenere un report tabellare degli accesi ai luoghi dell'organizzazione. & S \\
+TUW48 & Si verifichi che si possa generare una tabella contenente il numero degli utenti. & S \\
+TUW49 & Si verifichi che si possa generare una tabella contenente il totale delle ore passate dagli utenti nei luoghi dell’organizzazione. & S \\
+TUW50 & Si verifichi che si possa generare una tabella delle entrate e uscite degli utenti nei luoghi dell'organizzazione. & S \\
+TUW51 & Si verifichi che si possa generare una tabella delle ore spese dagli utenti nei luoghi dell'organizzazione. & S \\
 TUW52 & Si verifichi che l’amministratore proprietario possa visionare gli amministratori che ha precedentemente nominato, di cui si devono visionare la e-mail. & S \\
 TUW53 & Si verifichi che l’amministratore proprietario possa visionare gli amministratori che ha precedentemente nominato, i privilegi. & S \\
 TUW54 & Si verifichi che l’amministratore proprietario possa modificare i privilegi di un altro amministratore, inserendo il suo indirizzo e-mail. & S \\
@@ -131,10 +131,10 @@ TUW56 & Si verifichi che l’amministratore proprietario riceva un messaggio d'e
 TUW57 & Si verifichi che l’amministratore proprietario possa inserire un nuovo amministratore inserendo l’e-mail. & S \\
 TUW58 & Si verifichi che l’amministratore proprietario possa inserire un nuovo amministratore inserendo la password. & S \\
 TUW59 & Si verifichi che l’amministratore proprietario possa selezionare i privilegi per il nuovo amministratore. & S \\
-TUW60 & Si verifichi che l’amministratore proprietario riceva un messaggio d'errore se l'indirizzo e-mail del nuovo amministratore è già presente nel sistema. & NI \\
-TUW61 & Si verifichi che l’amministratore proprietario riceva un messaggio d'errore se la password risulta troppo debole. & NI \\
-TUW62 & Si verifichi che l’amministratore proprietario riceva un messaggio d'errore se la conferma della password non combacia con la password. & NI \\
-TUW63 & Si verifichi che l’amministratore proprietario possa annullare l'operazione di modifica dei privilegi di un amministratore.  & NI \\
+TUW60 & Si verifichi che l’amministratore proprietario riceva un messaggio d'errore se l'indirizzo e-mail del nuovo amministratore è già presente nel sistema. & S \\
+TUW61 & Si verifichi che l’amministratore proprietario riceva un messaggio d'errore se la password risulta troppo debole. & S \\
+TUW62 & Si verifichi che l’amministratore proprietario riceva un messaggio d'errore se la conferma della password non combacia con la password. & S \\
+TUW63 & Si verifichi che l’amministratore proprietario possa annullare l'operazione di modifica dei privilegi di un amministratore.  & S \\
 TUB1 & Si verifichi che venga restituita la lista degli accessi anonimi presso un'organizzazione dati degli exitToken e un organizationId. & S \\
 TUB2 & Si verifichi che venga restituito un errore alla richiesta della lista degli accessi anonimi presso un'organizzazione se ci sono input errati. & S \\
 TUB3 & Si verifichi che venga restituita la lista degli accessi anonimi presso un luogo dati degli exitToken e un placeId. & S \\
