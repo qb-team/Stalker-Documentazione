@@ -1,21 +1,38 @@
 # 2.1 Funzionalità dell'applicazione per utenti
 
-L'applicazione Android viene utilizzata dagli utenti che devono o vogliono fare in modo che i loro movimenti di ingresso e uscita dalle organizzazioni e dai loro luoghi vengano tracciati. Il movimento viene tracciato solo dal punto di vista dell'orario e dell'utenza presso l'organizzazione.
+L'applicazione Android viene utilizzata dagli utenti che devono o vogliono fare in modo che i loro movimenti di ingresso e uscita dalle organizzazioni e dai loro luoghi vengano tracciati. Il movimento viene tracciato quando l'utente entra nell'organizzazione che ha scelto di essere tracciato (avendola inserita nella lista MyStalker), monitorando l'orario di accesso/uscita. Inoltre vengono tracciati i luoghi presenti nell'organizzazione qualora l'utente sia entrato.
 
-All'utente dell'applicazione vengono offerte le funzionalità indicate in questa pagina.
+All'utente dell'applicazione vengono offerte tutte le funzionalità indicate in questa pagina.
 
-## 2.1.1 Registrazione
 
-<iframe width="720" src="https://www.youtube.com/embed/t_jtcHEzhFw" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## 2.1.1 Login
 
-L'utente ha la possibilità di registrarsi inserendo la propria e-mail personale, password e accettando le condizioni d'uso di Stalker.
-
-## 2.1.2 Login e scaricamento della lista delle organizzazioni
-
-<iframe width="720" src="https://www.youtube.com/embed/YPHun6qWReo" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="720" src="https://www.youtube.com/embed/NkVPdpIPZNs" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 L'utente può autenticarsi inserendo il proprio indirizzo e-mail e la propria password.
-Al primo accesso alla applicazione da parte dell'utente, verrà mostrato un pop-up per richiedere la possibilità di scaricare la lista delle organizzazioni dal server di Stalker. Gli utenti avranno la possibilità di accettare o rifiutare la proposta.
+Qualora l'utente si fosse dimenticato la password è possibile eseguire il reset cliccando sul testo: "Password dimenticata?" e apparirà un pop-up dove l'utente dovrà inserire l'email ricevendo così un link per cambiare la password.
+
+![!Popup reset password](../Immagini/app/PopupReset.png)
+<figcaption align="center"> <em> Popup reset password </em> </figcaption>
+
+## 2.1.2 Registrazione
+
+<iframe width="720" src="https://www.youtube.com/embed/5hrvVSfxrr8" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+L'utente ha la possibilità di registrarsi inserendo la propria e-mail personale, la password con la necessità di confermarla e accettando le condizioni d'uso di Stalker. 
+
+Per poter accedere nella pagina dedicata alla registrazione basta cliccare la scritta "Clicca qui" nella schermata di login.
+![!Clicca qui](../Immagini/app/PulsanteRegistrati.png)
+<figcaption align="center"> <em> Clicca qui </em> </figcaption>
+
+## 2.1.3 Scaricamento della lista delle organizzazioni
+
+Al primo accesso alla applicazione da parte dell'utente, verrà mostrato un pop-up per richiedere la possibilità di scaricare la lista delle organizzazioni dal server di Stalker. Gli utenti avranno la possibilità di accettare o rifiutare la proposta. 
+
+![!Scarica lista delle organizzazioni](../Immagini/app/ScaricaListaOrg.png)
+<figcaption align="center"> <em> Scarica lista delle organizzazioni </em> </figcaption>
+
+In seguito c'è anche la possibilità di scaricare la lista effettuando uno "Swipe down" nel Home page.
 
 ## 2.1.3 Menù drawer
 
