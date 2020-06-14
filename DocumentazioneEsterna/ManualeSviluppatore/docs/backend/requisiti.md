@@ -112,7 +112,7 @@ Sia il file che la stringa vanno tenuti da parte, serviranno dopo nella spiegazi
 
 ## 4.2.11 Installazione
 Una volta scaricato il codice sorgente, si ottiene una cartella che contiene i seguenti file:
-![!Contenuto della cartella Stalker-Backend](/Immagini/Backend/Requisiti/contenuto.jpg)
+![!Contenuto della cartella Stalker-Backend](../Immagini/Backend/Requisiti/contenuto.jpg)
 
 <a name="contenuto-cartella"></a>
 

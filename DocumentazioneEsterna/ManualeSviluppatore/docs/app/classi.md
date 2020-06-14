@@ -4,8 +4,10 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'appl
 
 
 ## 2.6.1 Main Activity
+<div align="center">
 ![!MainActivity](../Immagini/App/Classi/MainActivity.jpg "Diagramma della classe MainActivity")
 <figcaption align="center"> <em> Diagramma della classe Main Activity </em> </figcaption>
+</div>
 
 La classe `MainActivity` è l'Activity che viene utilizza quando l'utente non è autenticato. Essa contiene il fragment `AuthenticationFragment`.
 
@@ -18,9 +20,11 @@ La classe `MainActivity` offre i seguenti metodi:
 -   `goToHomePage()`:  Si occupa di spostare l'utente nell'`HomePageActivity`.
 
 
-## 2.6.2 Login 
+## 2.6.2 Login
+<div align="center">
 ![!LoginFragment](../Immagini/App/Classi/LoginFragment.jpg "Diagramma della classe Login")
 <figcaption align="center"> <em> Diagramma della classe Login </em> </figcaption>
+</div>
 
 La classe `LoginFragment` rappresenta la pagina dedicata alle autenticazioni degli utenti che desiderano, in seguito, utilizzare l'applicazione Android Stalker.
 L'utente per autenticarsi deve:
@@ -56,8 +60,10 @@ La classe `LoginFragment` utilizza le librerie di Firebase per consentire all'ut
 
 ___
 ## 2.6.4 SignUp
+<div align="center">
 ![!SignUpFragment](../Immagini/App/Classi/SignUpFragment.jpg "Diagramma della classe SignUp")
 <figcaption align="center"> <em> Diagramma della classe SignUp </em> </figcaption>
+</div>
 
 La classe `SignUpFragment`, così come `SignUpPresenter` e `SignUpModel` ad essa collegati, contengono tutti i metodi che permettono all'utente di registrarsi.
 L'utente per registrarsi deve:
@@ -90,8 +96,10 @@ La classe SignUpFragment offre i seguenti metodi:
 
 
 ## 2.6.5 Home Page Activity
+<div align="center">
 ![!HomePageActivity](../Immagini/App/Classi/HomePageActivity.png "Diagramma della classe Home Page Activity")
 <figcaption align="center"> <em> Diagramma della classe Home Page Activity</em> </figcaption>
+</div>
 
 La classe `HomePageActivity` è l'Activity principale da cui vengono istanziati i fragment riguardanti l'action tab `ActionTabFragment`, la lista delle organizzazioni `HomeFragment` e la lista dei preferiti/MyStalker `MyStalkersListFragment`.
 
@@ -138,8 +146,10 @@ La classe `HomePageActivity` offre i seguenti metodi:
 
 ___
 ## 2.6.6 Action Tab
+<div align="center">
 ![!ActionTabFragment](../Immagini/App/Classi/ActionTabFragment.jpg "Diagramma della classe Action Tab")
 <figcaption align="center"> <em> Diagramma della classe Action Tab </em> </figcaption>
+</div>
 
 La classe `ActionTabFragment` gestisce la view page principale dell'applicazione la quale contiene le due view principali ovvero: `HomeFragment` e `MyStalkerFragment`.
 Si occupa inoltre di gestire il menu bar principale che permette all'utente di navigare tra le pagine dell'applicazione.
@@ -165,9 +175,11 @@ La classe ActionTabFragment offre i seguenti metodi:
 - `disableScroll(enable: boolean)` : Metodo che impedisce all'utente di passare da un tab all'altro.
 
 ___
-## 2.6.7 Home 
+## 2.6.7 Home
+<div align="center">
 ![!HomeFragment](../Immagini/App/Classi/HomeFragment.png "Diagramma della classe Home")
 <figcaption align="center"> <em> Diagramma della classe Home</em> </figcaption>
+</div>
 
 Se l'utente risulta essere già autenticato e avvia l'applicazione, oppure ha appena effettuato l'autenticazione, allora gli viene mostrato automaticamente la classe view del `HomeFragment`. In questa classe compariranno tutte le organizzazioni presenti nel server. L'utente ha la possibilità di aggiornare la lista oppure di scaricarla se dovessero incombere dei problemi.
 
@@ -199,7 +211,7 @@ La classe `HomeFragment` offre i seguenti metodi:
 
 -   `resetAdapter()`: Sostituisce l'attuale lista delle organizzazioni con una lista predefinita precedentemente utilizzata;
 
--   `onOptionsItemSelected (item MenuItem)`: Si occupa di cambiare la tipologia di filtraggio per la ricerca scegliendo, in maniera mutualmente esclusiva, tra ricerca per nome, città, nazione, organizzazione aninima o autenticata;
+-   `onOptionsItemSelected (item MenuItem)`: Si occupa di cambiare la tipologia di filtraggio per la ricerca scegliendo, in maniera mutualmente esclusiva, tra ricerca per nome, città, nazione, organizzazione a tracciamento anonimo o autenticato;
 
 -   `onQueryTextSubmit(query string)`: metodo che viene chiamato quando l'utente invia una query;
 
@@ -213,9 +225,11 @@ La classe `HomeFragment` offre i seguenti metodi:
 
 
 ___
-## 2.6.8 My Stalkers List 
+## 2.6.8 My Stalkers List
+<div align="center">
 ![!MyStalkersListFragment](../Immagini/App/Classi/MyStalkerListFragment.jpg "Diagramma della classe My Stalker List")
 <figcaption align="center"> <em> Diagramma della classe My Stalkers List </em> </figcaption>
+</div>
 
 In questa classe compariranno tutte le organizzazioni abilitate nel tracciamento dell'utente in precedenza aggiunte sia localmente che sul server. È possibile la rimozione di un'organizzazione dalla lista `MyStalkers` non consentendone più il tracciamento. Queste funzioni possono essere eseguite direttamente nell'applicazione. 
 `MyStalkersListFragment` utilizza le classi del modello `Storage` e `Server` per scaricare la lista delle organizzazioni preferite e avvertire il server quando ne viene aggiunta o rimossa una.
@@ -234,7 +248,7 @@ La classe `MyStalkerListFragment` offre i seguenti metodi:
 
 - `onOptionsItemSelected (item: MenuItem)` : Indica l'azione da svolgere ad ogni elemento del menù della barra di ricerca quando viene selezionato;
  
--  `countryDialog(item: MenuItem)` : Si occupa di visualizzare a schermo una lista di tutte le nazioni, l'utente selenzionandone una effettuerà una ricerca per nome solo per la nazione scelta;
+-  `countryDialog(item: MenuItem)` : Si occupa di visualizzare a schermo una lista di tutte le nazioni, l'utente selezionandone una effettuerà una ricerca per nome solo per la nazione scelta;
 
 - `printCountrySelected()` : Metodo invocato da countryDialog che modifica la lista delle organizzazioni per mostrare solo quelle appartenenti alla nazione scelta;
         
@@ -257,8 +271,10 @@ La classe `MyStalkerListFragment` offre i seguenti metodi:
 - `onBackPressed()`: Si occupa di fa ritornare l'utente alla precedente Activity/Fragment.
 ___
 ## 2.6.9 Standard Organization
+<div align="center">
 ![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma della classe Standard Organization")
 <figcaption align="center"> <em> Diagramma della classe Standard Organization</em> </figcaption>
+</div>
 
 La classe `StandardOrganizationFragment` rappresenta la pagina dedicata alle organizzazioni pubbliche, cioè quelle che non richiedono credenziali di autenticazione LDAP. La vista contiene le informazioni riferite all'organizzazione.
 Qualora l'organizzazione dovesse essere aggiunta nella lista `MyStalkers` allora comparirà al suo interno una sezione che mostra se l'utente è dentro o fuori l'organizzazione.
@@ -275,13 +291,15 @@ La classe StandardOrganizationFragment offre i seguenti metodi:
 
 -   `onBackPressed()`: Si occupa di fa ritornare l'utente alla precedente Activity/Fragment.
 
--   `onClick(View v)`: Attende un click dell'utente al pulsante indicato da un orologio per poter visualizzare l'ultimo accesso effettuato dall'utente nell'organizzazione standart selezionata.
+-   `onClick(View v)`: Attende un click dell'utente al pulsante indicato da un orologio per poter visualizzare l'ultimo accesso effettuato dall'utente nell'organizzazione standard selezionata.
 
 
 ___
 ## 2.6.10 LDAP Organization
+<div align="center">
 ![!LDAPorganizationFragment](../Immagini/App/Classi/LDAPOrganizationFragment.jpg "Diagramma della classe LDAP Organization")
 <figcaption align="center"> <em> Diagramma della classe LDAP Organization </em> </figcaption>
+</div>
 
 La classe `LDAPorganizationFragment` rappresenta la pagina dedicata alle organizzazioni che richiedono credenziali LDAP. La vista contiene le informazioni riferite all'organizzazione e un pulsante che fa aprire un pop-up dove è possibile inserire i dati di autenticazione.
 Un utente, per poter essere tracciato dall'organizzazione privata, ha bisogno prima di autenticarsi ed in seguito a ciò se l'esito fosse positivo allora l'organizzazione viene automaticamente inserita nella lista delle organizzazioni `MyStalker` (lista preferite).
@@ -310,10 +328,12 @@ Essa offre i seguenti metodi:
 
 ___
 ## 2.6.11 Access History
+<div align="center">
 ![!AccessHistoryFragment](../Immagini/App/Classi/AccessHistoryFragment.jpg "Diagramma della classe Access History")
 <figcaption align="center"> <em> Diagramma della classe Access History </em> </figcaption>
+</div>
 
-La classe `AccessHistoryFragment` rappresenta la pagina dedicata allo storico degli accessi presso a tutte le organizzazioni scelte dall'utente per essere tracciato. Nel momento in cui un utente entra nell'organizzazione e conseguentemente esce da essa verrà stampato un elemento clickabile ed informativo che mostra le informazione legate ai quei movimenti. Se l'utente è anche entrato nei luoghi dell'organizzazione tale informazione verrà registrata e mostrata nel "PlaceAccessFragment".
+La classe `AccessHistoryFragment` rappresenta la pagina dedicata allo storico degli accessi presso a tutte le organizzazioni scelte dall'utente per essere tracciato. Nel momento in cui un utente entra nell'organizzazione e conseguentemente esce da essa verrà stampato un elemento cliccabile ed informativo che mostra le informazione legate ai quei movimenti. Se l'utente è anche entrato nei luoghi dell'organizzazione tale informazione verrà registrata e mostrata nel "PlaceAccessFragment".
 
 La classe `AccessHistoryFragment` offre i seguenti metodi:
 
@@ -347,8 +367,10 @@ La classe `AccessHistoryFragment` offre i seguenti metodi:
 
 ___
 ## 2.6.12 Place Access
+<div align="center">
 ![!PlaceAccessFragment](../Immagini/App/Classi/PlaceAccessFragment.jpg "Diagramma della classe Place Access")
 <figcaption align="center"> <em> Diagramma della classe Place Access</em> </figcaption>
+</div>
 
 La classe `PlaceAccessFragment` rappresenta la pagina dedicata alla memorizzazione degli accessi ai luoghi effettuati dall'utente di una determinata organizzazione.
 In questa pagina ci saranno le informazioni sul nome del luogo, data, ora di accesso e ora di uscita in cui viene effettuato l'accesso.
@@ -368,6 +390,3 @@ La classe PlaceAccessFragment offre i seguenti metodi:
 -   `onSuccessGetPlaceAccessInLocal(placeAccessList: List<PlaceAccess>)`: Aggiunge una riga alla pagina dello storico degli accessi di un luogo contenente le informazioni sul nome di quel luogo e la sua data, ora di accesso e ora di uscita in cui viene effettuato l'accesso;
 
 -   `onSuccessDeletePlaceAccess()`: Rimuove alla pagina tutti le righe degli accessi sui luoghi.
-
-
-
