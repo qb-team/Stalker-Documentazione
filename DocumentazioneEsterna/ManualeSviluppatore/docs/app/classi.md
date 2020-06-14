@@ -3,7 +3,7 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi all'appl
 
 
 
-## 2.6.1 Main Activity
+## 2.6.1 MainActivity
 <div align="center">
 ![!MainActivity](../Immagini/App/Classi/MainActivity.jpg "Diagramma della classe MainActivity")
 <figcaption align="center"> <em> Diagramma della classe Main Activity </em> </figcaption>
@@ -28,9 +28,9 @@ La classe `MainActivity` offre i seguenti metodi:
 
 La classe `LoginFragment` rappresenta la pagina dedicata alle autenticazioni degli utenti che desiderano, in seguito, utilizzare l'applicazione Android Stalker.
 L'utente per autenticarsi deve:
--   inserire l'email;
--   inserire la password;
--   cliccare il pulsante "Log in".
+- Inserire l'email;
+- Inserire la password;
+- Cliccare il pulsante "Log in".
 
 In caso di fallimento l'utente visualizza un messaggio di errore. Una volta eseguita l'autenticazione comparirà la pagina dedicata alla lista delle organizzazioni (HomeFragment) e l'utente rimarrà autenticato a meno che non desidera fare il logout.
 
@@ -58,7 +58,6 @@ La classe `LoginFragment` utilizza le librerie di Firebase per consentire all'ut
 
 -   `onSendEmailSuccess() `: Metodo che avvisa l'utente tramite Toast che arriverà una mail per poter resettare la password.
 
-___
 ## 2.6.4 SignUp
 <div align="center">
 ![!SignUpFragment](../Immagini/App/Classi/SignUpFragment.jpg "Diagramma della classe SignUp")
@@ -67,11 +66,11 @@ ___
 
 La classe `SignUpFragment`, così come `SignUpPresenter` e `SignUpModel` ad essa collegati, contengono tutti i metodi che permettono all'utente di registrarsi.
 L'utente per registrarsi deve:
--   inserire l'email;
--   inserire la password;
--   confermare la password;
--   accettare le condizioni d'uso;
--   infine cliccare il pulsante "Registrati".
+- Inserire l'email;
+- Inserire la password;
+- Confermare la password;
+- Accettare le condizioni d'uso;
+- Infine cliccare il pulsante "Registrati".
 Una volta cliccato il pulsante vengono invocati i metodi della libreria Firebase che ti registrano nel sistema ed eseguono automaticamente il Login.
 
 La classe SignUpFragment offre i seguenti metodi:
@@ -94,8 +93,7 @@ La classe SignUpFragment offre i seguenti metodi:
 
 -   `onBackPressed()`: Si occupa di far ritornare l'utente alla precedente Activity/Fragment.
 
-
-## 2.6.5 Home Page Activity
+## 2.6.5 HomePageActivity
 <div align="center">
 ![!HomePageActivity](../Immagini/App/Classi/HomePageActivity.png "Diagramma della classe Home Page Activity")
 <figcaption align="center"> <em> Diagramma della classe Home Page Activity</em> </figcaption>
@@ -143,9 +141,7 @@ La classe `HomePageActivity` offre i seguenti metodi:
  
 - `getTabLayout()`: Metodo che restituisce il TabLayout;
 
-
-___
-## 2.6.6 Action Tab
+## 2.6.6 ActionTab
 <div align="center">
 ![!ActionTabFragment](../Immagini/App/Classi/ActionTabFragment.jpg "Diagramma della classe Action Tab")
 <figcaption align="center"> <em> Diagramma della classe Action Tab </em> </figcaption>
@@ -174,7 +170,6 @@ La classe ActionTabFragment offre i seguenti metodi:
 
 - `disableScroll(enable: boolean)` : Metodo che impedisce all'utente di passare da un tab all'altro.
 
-___
 ## 2.6.7 Home
 <div align="center">
 ![!HomeFragment](../Immagini/App/Classi/HomeFragment.png "Diagramma della classe Home")
@@ -223,9 +218,7 @@ La classe `HomeFragment` offre i seguenti metodi:
 
 -   `onBackPressed()`: Si occupa di far ritornare l'utente alla precedente Activity/Fragment.
 
-
-___
-## 2.6.8 My Stalkers List
+## 2.6.8 MyStalkersList
 <div align="center">
 ![!MyStalkersListFragment](../Immagini/App/Classi/MyStalkerListFragment.jpg "Diagramma della classe My Stalker List")
 <figcaption align="center"> <em> Diagramma della classe My Stalkers List </em> </figcaption>
@@ -269,8 +262,8 @@ La classe `MyStalkerListFragment` offre i seguenti metodi:
 - `organizationIsPresentInList(orgName: String)` : Controlla se esiste un'organizzazione data una stringa;
 
 - `onBackPressed()`: Si occupa di fa ritornare l'utente alla precedente Activity/Fragment.
-___
-## 2.6.9 Standard Organization
+
+## 2.6.9 StandardOrganization
 <div align="center">
 ![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma della classe Standard Organization")
 <figcaption align="center"> <em> Diagramma della classe Standard Organization</em> </figcaption>
@@ -293,9 +286,7 @@ La classe StandardOrganizationFragment offre i seguenti metodi:
 
 -   `onClick(View v)`: Attende un click dell'utente al pulsante indicato da un orologio per poter visualizzare l'ultimo accesso effettuato dall'utente nell'organizzazione standard selezionata.
 
-
-___
-## 2.6.10 LDAP Organization
+## 2.6.10 LDAPOrganization
 <div align="center">
 ![!LDAPorganizationFragment](../Immagini/App/Classi/LDAPOrganizationFragment.jpg "Diagramma della classe LDAP Organization")
 <figcaption align="center"> <em> Diagramma della classe LDAP Organization </em> </figcaption>
@@ -326,8 +317,7 @@ Essa offre i seguenti metodi:
 
 -   `onFailureLdap()`: L'autenticazione è fallita e viene comunicato l'esito all'utente tramite Toast.
 
-___
-## 2.6.11 Access History
+## 2.6.11 AccessHistory
 <div align="center">
 ![!AccessHistoryFragment](../Immagini/App/Classi/AccessHistoryFragment.jpg "Diagramma della classe Access History")
 <figcaption align="center"> <em> Diagramma della classe Access History </em> </figcaption>
@@ -365,8 +355,7 @@ La classe `AccessHistoryFragment` offre i seguenti metodi:
 
 -  `dateCreasingOrder(list: List<OrganizationAccess>)`: Ordina per data crescente gli elementi della lista degli accessi.
 
-___
-## 2.6.12 Place Access
+## 2.6.12 PlaceAccess
 <div align="center">
 ![!PlaceAccessFragment](../Immagini/App/Classi/PlaceAccessFragment.jpg "Diagramma della classe Place Access")
 <figcaption align="center"> <em> Diagramma della classe Place Access</em> </figcaption>
