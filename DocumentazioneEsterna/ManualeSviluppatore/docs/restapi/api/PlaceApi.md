@@ -99,9 +99,6 @@ The administrator or the user is not authenticated. Nothing gets returned.
 **403**  
 Administrators who are not bound to the organization cannot access this end-point. Nothing gets returned.
 
-**404**  
-The organization could not be found. Nothing gets returned.
-
 ### Authorization
 
 [bearerAuth](../overview.md#bearerAuth)
