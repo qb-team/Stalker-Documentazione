@@ -122,6 +122,35 @@ Si aprirà una nuova pagina dove chiederà di inserire un nickname. Successivame
 Copiare dunque l'SDK all'interno del file `environment.ts` come mostrato nella seguente immagine:
 
 ![!Environment di Firebase su TypeScript](/Immagini/WebApp/Firebase3.png)
+### 3.2.4.6 Cloudinary
+Per permettere il salvataggio dell'immagine del logo di ogni organizzazione viene utilizzato Cloudinary, un cloud storage che offre il servizio di archiviazione di immagini nel proprio cloud e ritornare un link per accedere all'immagine, questo link successivamente sarà salvato nel database di Stalker.
+
+Per poterlo configurare innanzitutto bisogna creare un account su Cloudinary [link](https://cloudinary.com/users/register/free).
+
+Dopo di che ci si troverà sulla dashboard di Cloudinary, come viene mostrato nella immagine qui sotto.
+
+![!Dashboard cloudinary](/Immagini/WebApp/CloudinaryDashqb.png)
+
+Salvatevi il valore del cloud name, che si trovava dove c'è la linea rossa nell'immagine sopra, che servirà alla web app per accedere a cloudinary.
+
+Successivamente cliccate sulla rotellina cerchiata in rosso come mostra l'immagine qui sotto.
+
+![!Dashboard cloudinary2](/Immagini/WebApp/CloudinaryDashqb2.png)
+
+Dopo di che andate cliccate sulla scritta **Upload** come mostrato nell'immagine sotto e scorrete verso il basso fino a quando trovate la sottosezione **Upload presets**.
+
+![!Dashboard cloudinary3](/Immagini/WebApp/CloudinaryDashqb3.png)
+
+Una volta arrivati nella sottosezione **Upload presets** prendete il nome di un upload presents, come mostrato nelle immagine qui sotto, che servirà alla web app per accedere a cloudinary.
+
+!!! attention
+    Dovete prendere un upload presets che abbiamo come valore mode **Unsigned** e non Signed.
+
+![!Dashboard cloudinary3](/Immagini/WebApp/CloudinaryDashqb4.png)
+
+Infine aprite la cartella che contiene i file della web-app, aprite il file config.ts e inserite i valori del **Cloud name** e del **Upload presets** precedentemente salvati.
+
+![!Dashboard cloudinary3](/Immagini/WebApp/CloudinaryDashqb5.png)
 
 ## 3.2.5 Reazione e configurazione dell'ambiente di sviluppo
 

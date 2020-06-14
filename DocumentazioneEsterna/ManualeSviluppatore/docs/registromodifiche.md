@@ -1,7 +1,8 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
-0.32.0 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Riscritte §4.5.7 e §4.5.8 (ora §4.5.7.3 e §4.5.7.4), inserite nella nuova §4.5.7. Verificato.
+0.33.0 | 2020-06-14 | Federico Perin | Progettista | Tommaso Azzalin | Aggiunto e verificato §3.2.4.6.
+0.32.0 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Riscritte C4.5.7 e §4.5.8 (ora §4.5.7.3 e §4.5.7.4), inserite nella nuova §4.5.7. Verificato.
 0.31.0 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunta e verificata §4.2.13.
 0.30.0 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunta e verificata §4.2.12.4.
 0.29.1 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiornate e verificate §4.2.11.1 e §4.2.12.
