@@ -79,17 +79,7 @@ Se l'amministratore si dovesse trovare nella pagina di un'organizzazione e voles
 
 <iframe width="720" src="https://www.youtube.com/embed/H730w4P49oQ" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## 3.1.7 Presenze utenti nell'organizzazione
-
-![!Presenze utenti nell'organizzazione](../Immagini/web-app/Tracciamento.png)
-<figcaption align="center"> <em> Schermata del tracciamento</em> </figcaption> 
-
-
-L'amministratore ha la possibilità di monitorare le presenze degli utenti, in tempo reale, all'interno dell'organizzazione. Per farlo si dovrà cliccare nel menù laterale a sinistra sulla voce *Tracciamento* e dopo di che cliccare sulla voce *presenze attuali nell'organizzazione*. Verrà perciò aperta una finestra con un contatore di presenze. I passi sono mostrati nel seguente video.
-
-<iframe width="720" src="https://www.youtube.com/embed/VuoW2Hc162I" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## 3.1.8 Perimetro di tracciamento dell'organizzazione
+## 3.1.7 Perimetro di tracciamento dell'organizzazione
 
 ![!Perimetro di tracciamento](../Immagini/web-app/mappa.png)
 <figcaption align="center"> <em> Schermata del perimetro di tracciamento </em> </figcaption> 
@@ -100,7 +90,7 @@ Per farlo si dovrà cliccare nel menù laterale a sinistra sulla voce *Organizza
 
 <iframe width="720" src="https://www.youtube.com/embed/Q_nwWf6GkxI" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## 3.1.9 Perimetro di tracciamento del luogo di un'organizzazione
+## 3.1.8 Perimetro di tracciamento del luogo di un'organizzazione
 
 ![!Perimetro di tracciamento](../Immagini/web-app/mappa.png)
 <figcaption align="center"> <em> Schermata del perimetro di tracciamento </em> </figcaption> 
@@ -116,6 +106,17 @@ E' possibile, come mostrato nell'immagine qui sopra selezionare un qualsiasi luo
 
 <iframe width="720" src="https://www.youtube.com/embed/Q_nwWf6GkxI" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## 
+
+
+
+## 3.1. Presenze utenti nell'organizzazione
+
+![!Presenze utenti nell'organizzazione](../Immagini/web-app/Tracciamento.png)
+<figcaption align="center"> <em> Schermata del tracciamento</em> </figcaption> 
+
+
+L'amministratore ha la possibilità di monitorare le presenze degli utenti, in tempo reale, all'interno dell'organizzazione. Per farlo si dovrà cliccare nel menù laterale a sinistra sulla voce *Tracciamento* e dopo di che cliccare sulla voce *presenze attuali nell'organizzazione*. Verrà perciò aperta una finestra con un contatore di presenze. I passi sono mostrati nel seguente video.
+
+<iframe width="720" src="https://www.youtube.com/embed/VuoW2Hc162I" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
