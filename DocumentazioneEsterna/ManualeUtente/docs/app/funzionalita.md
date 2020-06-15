@@ -22,8 +22,10 @@ Qualora l'utente si fosse dimenticato la password è possibile eseguire il reset
 L'utente ha la possibilità di registrarsi inserendo la propria e-mail personale, la password con la necessità di confermarla e accettando le condizioni d'uso di Stalker. 
 
 Per poter accedere nella pagina dedicata alla registrazione basta cliccare la scritta "Clicca qui" nella schermata di login.
-![!Registrazione](../Immagini/app/PulsanteRegistrati.png)
-<figcaption align="center"> <em> Registrazione </em> </figcaption>
+
+![!Pulsante per la registrazione](../Immagini/app/PulsanteRegistrati.png)
+<figcaption align="center"> <em> Pulsante per la registrazione </em> </figcaption>
+
 
 ## 2.1.3 Scaricamento della lista delle organizzazioni
 
@@ -77,8 +79,8 @@ In questa sezione vi sono tutte le organizzazioni scaricate dal server.
 
 In questa sezione vi sono tutte le organizzazioni da cui l'utente ha scelto di essere tracciato.
 
-![!MyStalkersList(organizzazioni preferite)](../Immagini/app/AuthenticateOrganization.png)
-<figcaption align="center"> <em> MyStalkersList(organizzazioni preferite) </em> </figcaption>
+![!Organizzazione con autenticazione aziendale](../Immagini/app/AuthenticateOrganization.png)
+<figcaption align="center"> <em> Organizzazione con autenticazione aziendale </em> </figcaption>
 
 Se un'organizzazione richiede l'autenticazione aziendale per poter tracciare l'utente, vicino al nome sarà presente un simbolo di un lucchetto per indicare tale caratteristica.
 
@@ -198,8 +200,8 @@ In questa sezione vi sono tutti gli accessi effettutati dall'utente nelle organi
 
 Tramite un tap prolungato su un'elemento della lista, apparirà un pop-up che permetterà di ottenere ulteriori informazioni sull'accesso dell'utente: si potrà sapere il suo tempo di permanenza all'interno dell'organizzazione selezionata e il tipo di accesso (anonimo o autenticato).
 
-![!Maggiore informazioni degli storico accessi di un'organizzazione](../Immagini/app/StoricoAccessiMaggioreInformazioni.png)
-<figcaption align="center"> <em> Maggiore informazioni degli storico accessi di un'organizzazione </em> </figcaption>
+![!Maggiori informazioni degli storico accessi di un'organizzazione](../Immagini/app/StoricoAccessiMaggioreInformazioni.png)
+<figcaption align="center"> <em> Maggiori informazioni degli storico accessi di un'organizzazione </em> </figcaption>
 
 ## 2.1.19 Storico accessi ai luoghi
 
