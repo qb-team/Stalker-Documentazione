@@ -22,12 +22,12 @@ Qualora l'utente si fosse dimenticato la password è possibile eseguire il reset
 L'utente ha la possibilità di registrarsi inserendo la propria e-mail personale, la password con la necessità di confermarla e accettando le condizioni d'uso di Stalker. 
 
 Per poter accedere nella pagina dedicata alla registrazione basta cliccare la scritta "Clicca qui" nella schermata di login.
-![!Clicca qui](../Immagini/app/PulsanteRegistrati.png)
-<figcaption align="center"> <em> Clicca qui </em> </figcaption>
+![!Registrazione](../Immagini/app/PulsanteRegistrati.png)
+<figcaption align="center"> <em> Registrazione </em> </figcaption>
 
 ## 2.1.3 Scaricamento della lista delle organizzazioni
 
-Al primo accesso alla applicazione da parte dell'utente, verrà mostrato un pop-up per richiedere la possibilità di scaricare la lista delle organizzazioni dal server di Stalker. Gli utenti avranno la possibilità di accettare o rifiutare la proposta. 
+Al primo accesso alla applicazione da parte dell'utente, verrà mostrato un pop-up per richiedere la possibilità di scaricare la lista delle organizzazioni dal server di Stalker. Gli utenti avranno la possibilità di accettare o rifiutare la proposta; nel caso in cui l'utente accettasse, verranno visualizzate tutte le organizzazioni disponibili come mostrato nel paragrafo '2.1.6'.
 
 ![!Scarica lista delle organizzazioni](../Immagini/app/ScaricaListaOrg.png)
 <figcaption align="center"> <em> Scarica lista delle organizzazioni </em> </figcaption>
@@ -43,9 +43,16 @@ L'utente può accedere ad una serie di funzionalità utilizzando l'*Hamburger bu
 
 Una volta cliccato su questo bottone apparirà il menù drawer, da cui è possibile accedere alle seguenti funzionalità:
 
-- Attivare o disattivare il tracciamento tramite uno pulsante switch;
 - Eseguire il logout;
+- Attivare o disattivare il tracciamento tramite uno pulsante switch;
+- Scegliere se essere tracciati in modalità anonima (impostata come default) o in modalità autenticata tramite uno pulsante switch;
 - Ordinare alfabeticamente la lista delle organizzazioni.
+
+Inoltre è presente una sezione denominata "info tracciamento" per visualizzare le seguenti informazioni:
+
+- Un messaggio che indica all'utente se si trova fuori o all'interno di un'organizzazione. In quest'ultimo caso verrà indicato il nome dell'organizzazione in cui si è presenti;
+- Un messaggio che indica all'utente se si trova fuori o all'interno di un luogo. In quest'ultimo caso verrà indicato il nome del luogo in cui si è presenti;
+- Il tempo di permanenza dell'utente all'interno di un'organizzazione. Se l'utente si trova al di fuori di un'organizzazione, il tempo sarà indicato con "00:00:00".
 
 ![!Menù drawer](../Immagini/app/DrawerMenu.png)
 <figcaption align="center"> <em> Menù drawer </em> </figcaption>
@@ -61,7 +68,7 @@ L'utente può eseguire il logout aprendo il menù drawer e poi cliccando su "Log
 ![!Lista delle organizzazioni](../Immagini/app/ListaOrg.png)
 <figcaption align="center"> <em> Lista organizzazioni </em> </figcaption>
 
-In questa sezione vi sono tutte le organizzazioni scaricate dal server.
+In questa sezione vi sono tutte le organizzazioni scaricate dal server. 
 
 ## 2.1.7 MyStalkersList(organizzazioni preferite)
 
@@ -70,36 +77,61 @@ In questa sezione vi sono tutte le organizzazioni scaricate dal server.
 
 In questa sezione vi sono tutte le organizzazioni da cui l'utente ha scelto di essere tracciato.
 
+![!MyStalkersList(organizzazioni preferite)](../Immagini/app/AuthenticateOrganization.png)
+<figcaption align="center"> <em> MyStalkersList(organizzazioni preferite) </em> </figcaption>
+
+Se un'organizzazione richiede l'autenticazione aziendale per poter tracciare l'utente, vicino al nome sarà presente un simbolo di un lucchetto per indicare tale caratteristica.
+
 ## 2.1.8 Ordinamento alfabetico della lista delle organizzazioni
 
 <iframe width="720" src="https://www.youtube.com/embed/aZ3fPGN_Oj8" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'utente può eseguire l'ordinamento alfabetico della lista delle organizzazioni aprendo il menù drawer e poi cliccando su "Ordinamento Alfabetico".
+L'utente può eseguire l'ordinamento alfabetico della lista delle organizzazioni aprendo il menù drawer e cliccando successivamente su `Ordinamento Alfabetico`.
+
+![!Ordinamento alfabetico](../Immagini/app/OrdinamentoAlfabetico.png)
+<figcaption align="center"> <em> Ordinamento alfabetico </em> </figcaption>
 
 ## 2.1.9 Ricerca
 
-<iframe width="720" src="https://www.youtube.com/embed/bB4VtZd_pLY&t=3s" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="720" src="https://www.youtube.com/embed/bB4VtZd_pLY" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-In alto è situata la barra principale dell'applicazione e vi è una sezione di ricerca. Con essa è possibile eseguire  ricerche testuali per filtrare e visualizzare la lista delle organizzazioni.
+In alto a destra è situata la barra principale dell'applicazione e vi è una sezione di ricerca. Con essa è possibile eseguire ricerche testuali per filtrare e visualizzare la lista delle organizzazioni. Ci sono diverse modalità:
+
+- Ricerca per nome (impostata come default);
+- Ricerca per città;
+- Ricerca per nazione;
+- Ricerca per organizzazioni anonime o autenticate.
+
+![!Ricerca](../Immagini/app/Ricerca.png)
+<figcaption align="center"> <em> Ricerca </em> </figcaption>
 
 ## 2.1.10 Visualizzazione pagina organizzazione
 
-![!Pagina organizzazione](../Immagini/app/PaginaOrg.png)
+![! Pagina dedicata all'organizzazione](../Immagini/app/PaginaOrg.png)
 <figcaption align="center"> <em> Pagina dedicata all'organizzazione </em> </figcaption>
 
-L'utente può entrare nella pagina dedicata di un'organizzazione cliccando l'elemento della lista ad essa appartenente. Al suo interno è possibile visualizzare il nome dell'organizzazione, l'immagine di anteprima, una descrizione e un pulsante `Autenticati` qualora l'organizzazione richiedesse un'autenticazione aziendale tramite LDAP.
+L'utente può entrare nella pagina dedicata di un'organizzazione cliccando l'elemento della lista ad essa appartenente. Al suo interno è possibile visualizzare il nome dell'organizzazione, l'immagine di anteprima, una descrizione e un pulsante `Autenticazione` qualora l'organizzazione richiedesse un'autenticazione aziendale tramite LDAP.
 
 ## 2.1.11 Aggiunta organizzazione in MyStalkerList
 
 <iframe width="720" src="https://www.youtube.com/embed/o8ma7mRCMG4" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Tramite un tap prolungato sull'elemento della lista delle organizzazione, apparirà un pop-up che permetterà di aggiungere l'organizzazione selezionata a MyStalkerList. Qualora l'organizzazione richiedesse un'autenticazione presso l'organizzazione (tramite LDAP) allora con il pop-up sarà possibile visualizzarne solamente il contenuto.
+Tramite un tap prolungato sull'elemento della lista delle organizzazione, apparirà un pop-up che darà la possibilità all'utente di premere su uno dei due pulsanti:
+
+- Il primo, chiamato `Maggiori informazioni`, farà accedere alla pagina di visualizzazione dell'organizzazione selezionata;
+- Il secondo, chiamato `Aggiungi a MyStalker`, permetterà di aggiungere l'organizzazione selezionata alla lista dei preferiti MyStalkerList. Qualora l'organizzazione richiedesse un'autenticazione presso l'organizzazione (tramite LDAP) allora con il pop-up sarà possibile visualizzarne solamente il contenuto.
+
+![! Aggiunta di un'organizzazione in MyStalkerList ](../Immagini/app/MaggioriInformazioni-AggiungiAMyStalker.png)
+<figcaption align="center"> <em> Aggiunta di un'organizzazione in MyStalkerList </em> </figcaption>
 
 ## 2.1.12 Autenticazione presso l'organizzazione LDAP e aggiunta di un'organizzazione che richiede tracciamento autenticato in MyStalkerList
 
 <iframe width="720" src="https://www.youtube.com/embed/8592HpcfZx0" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'utente per poter aggiungere a MyStalkerList un'organizzazione che richiede tracciamento autenticato, dovrà prima accedere alla rispettiva pagina dedicata autenticandosi tramite le proprie credenziali LDAP. Qualora l'autenticazione avvenisse con successo, l'organizzazione verrà aggiunta a MyStalkerList.
+L'utente, per poter aggiungere a MyStalkerList un'organizzazione che richiede tracciamento autenticato, dovrà prima accedere alla rispettiva pagina dedicata autenticandosi tramite le proprie credenziali LDAP. Qualora l'autenticazione avvenisse con successo, l'organizzazione verrà aggiunta a MyStalkerList.
+
+![!Autenticazione di un'organizzazione aziendale](../Immagini/app/Pop-upLDAP.png)
+<figcaption align="center"> <em> Autenticazione di un'organizzazione aziendale </em> </figcaption>
 
 ## 2.1.13 Eliminazione organizzazione da MyStalkerList
 
@@ -107,11 +139,18 @@ L'utente per poter aggiungere a MyStalkerList un'organizzazione che richiede tra
 
 Tramite un tap prolungato sull'elemento di MyStalkerList, apparirà un pop-up che permetterà rimuovere l'organizzazione dalla lista.
 
+![! Eliminazione di un'organizzazione da MyStalker](../Immagini/app/EliminazioneDaMyStlaker.png)
+<figcaption align="center"> <em> Eliminazione di un'organizzazione da MyStalker</em> </figcaption>
+
 ## 2.1.14 Attivazione tracciamento e cambio modalità tracciamento
 
 <iframe width="720" src="https://www.youtube.com/embed/aXBl3tfzzhE" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-La funzionalità del tracciamento sarà possibile attivarla attraverso lo switch collocato nel menù del drawer . Una volta attività tale funzionalità, l'utente passa in modalità di tracciamento anonimo (per cui il tracciamento presso le organizzazioni di MyStalkerList è solo di tipo anonimo per entrambi i tipi delle organizzazioni).
+La funzionalità del tracciamento sarà possibile attivarla attraverso lo switch collocato nel menù del drawer. Di default è settata con modalità anonima però, tramite uno switch del pulsante, l'utente passa in modalità di tracciamento autenticata. In questo gli amministratori di MyStalker hanno la possibilità di sapere l'identità dell'utente.
+
+
+![!Modalità di tracciamento anonima o autenticata](../Immagini/app/modalitaAnonimaAutenticata.png)
+<figcaption align="center"> <em> Modalità di tracciamento anonima o autenticata </em> </figcaption>
 
 La prima volta che si utilizza questa funzionalità sul dispositivo viene visualizzato un pop-up in cui l'utente dovrà accettare la richiesta del sistema per poter accedere alle funzionalità di geolocalizzazione del dispositivo.
 
@@ -128,6 +167,11 @@ La funzionalità di tracciamento consente all'utente di tracciare gli ingressi e
 
 <iframe width="720" src="https://www.youtube.com/embed/5BCB0wv_woo" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Verrà mostrato un esempio della funzionalità di tracciamento che traccia l'ingresso e l'uscita di un'organizzazione e di un suo luogo.
+
+![!Tracciamento in un'organizzazione](../Immagini/app/TracciamentoConMappa.png)
+<figcaption align="center"> <em> Tracciamento in un'organizzazione </em> </figcaption>
+
 ## 2.1.17 Tracciamento in background
 
 <iframe width="720" src="https://www.youtube.com/embed/VvPiyFBfOm8" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -135,6 +179,33 @@ La funzionalità di tracciamento consente all'utente di tracciare gli ingressi e
 Se il tracciamento è attivo e si esce dall'applicazione, quest'ultima continuerà a funzionare passando alla modalità di tracciamento in background. È possibile notare sulla barra delle notifiche di Android un'area dedicata all'applicazione Stalker tramite la quale sarà possibile riaprire l'applicazione.
 Scegliendo di interrompere il tracciamento l'applicazione verrà chiusa definitivamente.
 
-## 2.1.18 Storico accessi
+![!Tracciamento in background](../Immagini/app/Background.png)
+<figcaption align="center"> <em> Tracciamento in background </em> </figcaption>
+
+## 2.1.18 Storico accessi 
 
 <iframe width="720" src="https://www.youtube.com/embed/JdZw94_z4Q8" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+In questa sezione vi sono tutti gli accessi effettutati dall'utente nelle organizzazioni. Ogni volta che l'utente farà un accesso e un'uscita da un'organizzazione, verrà aggiunta una riga contenente le seguenti informazioni:
+
+- Nome del'organizzazione;
+- Data in cui si è effettuato l'accesso;
+- Orario in cui si è effettuata l'entrata nell'organizzazione;
+- Orario in cui si è effettuata l'uscita nell'organizzazione.
+
+![!Storico accessi di un'organizzazione](../Immagini/app/StoricoAccessi.png)
+<figcaption align="center"> <em> Storico accessi di un'organizzazione </em> </figcaption>
+
+Tramite un tap prolungato su un'elemento della lista, apparirà un pop-up che permetterà di ottenere ulteriori informazioni sull'accesso dell'utente: si potrà sapere il suo tempo di permanenza all'interno dell'organizzazione selezionata e il tipo di accesso (anonimo o autenticato).
+
+![!Maggiore informazioni degli storico accessi di un'organizzazione](../Immagini/app/StoricoAccessiMaggioreInformazioni.png)
+<figcaption align="center"> <em> Maggiore informazioni degli storico accessi di un'organizzazione </em> </figcaption>
+
+## 2.1.19 Storico accessi ai luoghi
+
+<iframe width="720" src="https://www.youtube.com/embed/JdZw94_z4Q8" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Cliccando su un'elemento nella lista dello storico degli accessi, verranno visualizzati gli accessi effettutati dall'utente in tutti i luoghi presenti nell'organizzazione selezionata, con le stesse informazioni elencate nello storico accessi delle organizzazioni.
+
+![!Storico accessi di un luogo](../Immagini/app/StoricoAccessiLuoghi.png)
+<figcaption align="center"> <em> Storico accessi di un luogo </em> </figcaption>
