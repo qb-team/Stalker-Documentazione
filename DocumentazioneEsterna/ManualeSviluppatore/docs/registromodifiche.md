@@ -1,6 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+0.35.0 | 2020-06-15 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunto e verificato §4.3.4 estendibilità Backend. 
 0.34.0 | 2020-06-14 | Tommaso Azzalin | Progettista | Tommaso Azzalin | Aggiunto e verificato vocabolo "Locust" al Glossario.
 0.33.0 | 2020-06-14 | Federico Perin | Progettista | Tommaso Azzalin | Aggiunto e verificato §3.2.4.6.
 0.32.0 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Riscritte §4.5.7 e §4.5.8 (ora §4.5.7.3 e §4.5.7.4), inserite nella nuova §4.5.7. Verificato.
