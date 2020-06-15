@@ -33,9 +33,6 @@ The user is not authenticated. Nothing gets returned.
 **403**  
 Administrators cannot have accesses. Nothing gets returned.
 
-**404**  
-The organization could not be found. Nothing gets returned.
-
 ### Authorization
 
 [bearerAuth](../overview.md#bearerAuth)
@@ -69,9 +66,6 @@ The user is not authenticated. Nothing gets returned.
 
 **403**  
 Administrators cannot have accesses. Nothing gets returned.
-
-**404**  
-The place could not be found. Nothing gets returned.
 
 
 ### Authorization
@@ -108,9 +102,6 @@ The administrator or the user is not authenticated. Nothing gets returned.
 **403**  
 Users can only retrieve their accesses. Nothing gets returned.
 
-**404**  
-The organization could not be found. Nothing gets returned.
-
 ### Authorization
 
 [bearerAuth](../overview.md#bearerAuth)
@@ -144,9 +135,6 @@ The administrator or the user is not authenticated. Nothing gets returned.
 
 **403**  
 Users can only retrieve their accesses. Nothing gets returned.
-
-**404**  
-The place could not be found. Nothing gets returned.
 
 ### Authorization
 

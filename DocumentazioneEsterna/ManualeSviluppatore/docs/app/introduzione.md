@@ -22,7 +22,7 @@ Di default la ricerca è impostata per eseguire delle ricerche sui nomi delle or
 - **Visualizzazione pagina organizzazione**: L'utente può entrare nella pagina dedicata di un'organizzazione in due diversi modi: 
     - cliccando l'elemento della lista ad essa appartenente; 
     - tenendo premuto su un elemento della lista apparirà un pop-up che permetterà di cliccare sul pulsante 'Maggiori informazioni' e accedere così alla visualizzazione dell'organizzazione selezionata. 
-
+    
     Al suo interno è possibile visualizzare il nome dell'organizzazione, una descrizione, l'immagine di anteprima e un pulsante che se premuto mostrerà l'ultimo accesso effettuato dall'utente all'interno dell'organizzazione. 
     Un'organizzazione che richiede un'autenticazione aziendale avrà in aggiunta il pulsante 'autenticazione' che, se cliccato, visualizzerà un pop-up per poter inserire le credenziali LDAP;
  
@@ -35,13 +35,13 @@ Più distante si trova l'utente dall'organizzazione più vicina meno frequenti s
 
 - **Storico Accessi**: Nell'applicazione, oltre ad esserci una sezione principale dedicata alla lista di tutte le organizzazioni e una per le organizzazioni presenti nella lista MyStalker (lista preferiti), è presente una terza sezione (indicata nel tab con un'icona a forma di orologio) che mostra un elenco di tutti gli accessi presso le organizzazioni da parte dell'utente.
 Se l'utente entra in un'organizzazione e poi esce, verrà aggiunto un elemento nella lista (riga) nella quale vengono mostrate le seguenti informazioni:
-    - nome dell'organizzazione;
-    - data di accesso;
-    - ora di accesso;
-    - ora di uscita.
+    - Nome dell'organizzazione;
+    - Data di accesso;
+    - Ora di accesso;
+    - Ora di uscita.
 
-    E' presente anche un pulsante, contrassegnato dal simbolo di un cestino, che permette di eliminare tutte le informazioni sullo storico degli accessi (quindi verranno eliminate tutte le righe presenti in questa sezione).
+    È presente anche un pulsante, contrassegnato dal simbolo di un cestino, che permette di eliminare tutte le informazioni sullo storico degli accessi (quindi verranno eliminate tutte le righe presenti in questa sezione).
     Gli elementi della lista dello storico accessi possono essere cliccati una volta oppure tenuti premuti a lungo:
-        
-    - nella prima funzionalità l'utente verrà conseguentemente proiettato in una pagina dedicata che mostra lo storico degli accessi presso ai luoghi dell'organizzazione. Anche in questo caso ci sarà il pulsante a forma di cestino che permette l'eliminazione del contenuto;
-    - nella seconda funzione apparirà un pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso l'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.
+            
+    - Nella prima funzionalità l'utente verrà conseguentemente proiettato in una pagina dedicata che mostra lo storico degli accessi presso ai luoghi dell'organizzazione. Anche in questo caso ci sarà il pulsante a forma di cestino che permette l'eliminazione del contenuto;
+    - Nella seconda funzione apparirà un pop-up che mostra informazioni aggiuntive come il tempo di permanenza presso l'organizzazione e la modalità di tracciamento utilizzata in quel determinato accesso.

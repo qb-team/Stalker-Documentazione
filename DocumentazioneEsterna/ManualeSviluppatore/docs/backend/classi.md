@@ -8,6 +8,7 @@ Vengono presentati qui di seguito i diagrammi UML delle classi relativi al backe
 
 ### 4.6.1.1 AccessService
 ![!AccessService](../Immagini/Backend/Classi/AccessService.png)
+<figcaption align=center> <em> Diagramma delle classi - AccessService </em> </figcaption>
 
 L'`AccessService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sugli accessi di un utente presso un luogo o un'organizzazione.
 
@@ -20,6 +21,7 @@ Sono disponibili i seguenti metodi:
 
 ### 4.6.1.2 AdministratorService
 ![!AdministratorService](../Immagini/Backend/Classi/AdministratorService.png)
+<figcaption align=center> <em> Diagramma delle classi - AdministratorService </em> </figcaption>
 
 L'`AdministratorService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sugli amministratori di un'organizzazione e per la gestione dei loro permessi.
 
@@ -34,6 +36,7 @@ Sono disponibili i seguenti metodi:
 
 ### 4.6.1.3 AuthenticationServerService
 ![!AuthenticationServerService](../Immagini/Backend/Classi/AuthenticationServerService.png)
+<figcaption align=center> <em> Diagramma delle classi - AuthenticationServerService </em> </figcaption>
 
 L'`AuthenticationServerService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle utenze presenti nel server che autentica gli utenti dell'organizzazione. L'indirizzo del server a cui inoltrare le richieste è indicato nell'organizzazione, attraverso il campo **authenticationServerURL**.
 
@@ -41,6 +44,7 @@ L'`AuthenticationServerService` si occupa di soddisfare le richieste provenienti
 
 ### 4.6.1.4 AuthenticationService
 ![!AuthenticationService](../Immagini/Backend/Classi/AuthenticationService.png)
+<figcaption align=center> <em> Diagramma delle classi - AuthenticationService </em> </figcaption>
 
 L'`AuthenticationService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sullo stato di autenticazione e i permessi (in questo caso intesi come "essere un utente dell'app" oppure "essere un amministratore della web-app") di un utente.    
 
@@ -57,6 +61,7 @@ Nella sua implementazione attraverso il provider di autenticazione [Firebase](re
 
 ### 4.6.1.5 FavoriteService
 ![!FavoriteService](../Immagini/Backend/Classi/FavoriteService.png)
+<figcaption align=center> <em> Diagramma delle classi - FavoriteService </em> </figcaption>
 
 Il `FavoriteService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle organizzazioni preferite di un utente dell'app e la gestione della loro lista dei preferiti.  
 
@@ -67,6 +72,7 @@ Il `FavoriteService` si occupa di soddisfare le richieste provenienti dai contro
 
 ### 4.6.1.6 MovementService
 ![!MovementService](../Immagini/Backend/Classi/MovementService.png)
+<figcaption align=center> <em> Diagramma delle classi - MovementService </em> </figcaption>
 
 Il `MovementService` si occupa di soddisfare le richieste provenienti dai controller per tracciare i movimenti (ingressi o uscite) di un utente presso un luogo o un'organizzazione. In questo diagramma si può notare come `OrganizationMovementPublisher` e `PlaceMovementPublisher` implementino l'interfaccia `MovementPublisher`, a loro volta estese rispettivamente da `OrganizationMovementRedisPublisher` e `PlaceMovementRedisPublisher`. L'implementazione delle due tipologie di tracciamento è stata separata per permettere una maggiore flessibilità ed estendibilità delle loro implementazioni, oltre a poter cambiare del tutto lo strumento utilizzato per memorizzare i tracciamenti (Redis) e sostituirlo, senza richiedere che le classi che hanno dipendenze verso i due publisher debbano essere modificate.
 
@@ -78,31 +84,34 @@ Si dispone dei seguenti metodi:
 
 ### 4.6.1.7 OrganizationService
 ![!OrganizationService](../Immagini/Backend/Classi/OrganizationService.png)
+<figcaption align=center> <em> Diagramma delle classi - OrganizationService </em> </figcaption>
 
 L'`OrganizationService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle organizzazioni e altre funzionalità disponibili agli amministratori, come ad esempio la richiesta di eliminazione dell'organizzazione amministrata.
 
-- `getOrganization`: il metodo ritorna un oggetto **Organization** se esiste nel DB, questo oggetto viene identificato tramite **organizationId** passato al metodo, e rappresenta un'organizzazione presente nel sistema con tutte le informazioni ad essa associate; utilizza il metodo `findById` della classe **OrganizationRepository** per eseguire l'operazione su DB;  
-- `getOrganizationList`: il metodo non richiede parametri e ritorna una lista di **Organization** che rappresenta tutte le organizzazioni presenti nel sistema; utilizza il metodo `findAll` della classe **OrganizationRepository** per ricevere tutte le organizzazioni dal DB;  
-- `requestDeletionOfOrganization`: il metodo serve a salvare la richiesta di eliminazione di una organizzazione nel DB per essere presa in carico da un'amministratore Stalker; ha come parametro un oggetto **OrganizationDeletionRequest** che contiene tutte le informazioni necessarie; chiama il metodo `save` della classe **OrganizationDeletionRequestRepository**;  
-- `updateOrganization`: il metodo aggiorna i dati di un'organizzazione esistente sostituendoli con i nuovi dati passati al metodo tramite l'oggetto **Organization**; il metodo controlla che l'organizzazione da aggiornare sia presente nel sistema grazie al metodo `findByName` e che l'area di tracciamento si possa aggiornare rispettando i vincoli di grandezza grazie al metodo `canTrackingAreaBeUpdated`;  
-- `updateOrganizationTrackingArea`: il metodo aggiorna solamente l'area di tracciamento di un'organizzazione identificata tramite un **organizationId**, la nuova area di tracciamento specificata nel parametro **trackingArea** deve rispettare i vincoli di grandezza e il metodo li verifica chiamando `canTrackingAreaBeUpdated`; se organizzazione a cui si vuole aggiornare l'area non viene trovata nel sistema l'operazione viene scartata.
+Si dispone dei seguenti metodi:
+
+- `getOrganization`: il metodo ritorna un oggetto **Organization** se esiste nel database. Questo oggetto viene identificato tramite **organizationId** e passato al metodo. Rappresenta un'organizzazione presente nel sistema con tutte le informazioni ad essa associate. Viene utilizzato il metodo `findById` di **OrganizationRepository** (che lo eredita) per eseguire l'operazione sul database;  
+- `getOrganizationList`: il metodo non richiede parametri e ritorna una lista di **Organization** che rappresenta tutte le organizzazioni presenti nel sistema. Viene utilizzato il metodo `findAll` della classe **OrganizationRepository** (che lo eredita) per ricevere tutte le organizzazioni dal database;  
+- `requestDeletionOfOrganization`: il metodo serve a salvare la richiesta di eliminazione di un'organizzazione nel database per essere presa in carico da un'amministratore Stalker. Ha come parametro un oggetto **OrganizationDeletionRequest** che contiene tutte le informazioni necessarie e chiama il metodo `save` della classe **OrganizationDeletionRequestRepository**  (che lo eredita);  
+- `updateOrganization`: il metodo aggiorna i dati di un'organizzazione esistente sostituendoli con i nuovi dati passati al metodo tramite l'oggetto **Organization**. Il metodo controlla che l'organizzazione da aggiornare sia presente nel sistema grazie al metodo `findByName` e che l'area di tracciamento si possa aggiornare rispettando i vincoli di grandezza grazie al metodo `canTrackingAreaBeUpdated`;  
+- `updateOrganizationTrackingArea`: il metodo aggiorna solamente l'area di tracciamento di un'organizzazione identificata tramite un **organizationId**. La nuova area di tracciamento specificata nel parametro **trackingArea** deve rispettare i vincoli di dimensione imposti per l'organizzazione e il metodo li verifica chiamando `canTrackingAreaBeUpdated`. Se l'organizzazione a cui si vuole aggiornare l'area non viene trovata nel sistema l'operazione restituisce esito negativo.
 
 ### 4.6.1.8 PlaceService
 ![!PlaceService](../Immagini/Backend/Classi/PlaceService.png)
-
+<figcaption align=center> <em> Diagramma delle classi - PlaceService </em> </figcaption>
 
 Il `PlaceService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sui luoghi di un'organizzazione e per gestirli.
 
-- `createNewPlace`: crea un nuovo luogo all'interno di una organizzazione, tutte le informazioni sono contenute nell'oggetto **Place** passato come parametro;  
+Si dispone dei seguenti metodi:
 
-- `deletePlace`: elimina un luogo da una organizzazione grazie al parametro **Place** passato al metodo, in caso il luogo specificato non esistesse all'interno dell'organizzazione specificata nell'oggetto **Place** l'operazione non va' a buon fine; utilizza il metodo `delete` della classe **placeRepository**;  
-
-- `updatePlace`: il metodo aggiorna un luogo con le informazioni passate al metodo dal parametro **Place**; l'organizzazione del luogo da aggiornare deve esistere e viene recuperata dal DB con il metodo `findById` della classe **OrganizationRepository**; poi il metodo controlla che il nuovo luogo sia all'interno dell'organizzazione con il metodo `isPlaceInsideOrganization` e solo allora salva le modifiche nel DB;  
-
-- `getPlace`: il metodo ritorna un'stanza dell'oggetto **Place** che rappresenta un luogo specificato dal paramentro **placeId** passato al metodo; utilizza il metodo `findById` della classe **PlaceRepository** per ottenere il luogo dal DB.  
+- `createNewPlace`: crea un nuovo luogo all'interno di una organizzazione. Tutte le informazioni sono contenute nell'oggetto **Place** passato come parametro;  
+- `deletePlace`: elimina un luogo da una organizzazione grazie al parametro **Place** passato al metodo, nel caso in cui il luogo specificato non esistesse all'interno dell'organizzazione specificata nell'oggetto **Place** l'operazione non va' a buon fine; utilizza il metodo `delete` della classe **placeRepository**;  
+- `updatePlace`: il metodo aggiorna un luogo con le informazioni passate al metodo dal parametro **Place**. L'organizzazione del luogo da aggiornare deve esistere e viene recuperata dal database con il metodo `findById` di **OrganizationRepository**. Successivamente, il metodo controlla che il nuovo luogo sia all'interno dell'organizzazione con il metodo `isPlaceInsideOrganization` e solo allora, e in caso di risposta positiva, salva le modifiche nel database;  
+- `getPlace`: il metodo ritorna un'istanza dell'oggetto **Place** che rappresenta un luogo specificato dal parametro **placeId** passato al metodo; utilizza il metodo `findById` della classe **PlaceRepository** per ottenere il luogo dal DB.  
 
 ### 4.6.1.9 PresenceService
 ![!PresenceService](../Immagini/Backend/Classi/PresenceService.png)
+<figcaption align=center> <em> Diagramma delle classi - PresenceService </em> </figcaption>
 
 Il `PresenceService` si occupa di soddisfare le richieste provenienti dai controller per ottenere informazioni sulle presenze correnti presso un luogo o un'organizzazione.
 
@@ -113,6 +122,7 @@ Sono implementati i seguenti metodi:
 
 ### 4.6.1.10 ReportService
 ![!ReportService](../Immagini/Backend/Classi/ReportService.png)
+<figcaption align=center> <em> Diagramma delle classi - ReportService </em> </figcaption>
 
 Il `ReportService` si occupa di soddisfare le richieste provenienti dai controller per ottenere record di report tabellari sugli accessi passati presso i luoghi di un'organizzazione da parte di utenti autenticati.  
 
@@ -125,6 +135,7 @@ I metodi sono i seguenti:
 
 ### 4.6.2.1 AccessApiController
 ![!AccessApiController](../Immagini/Backend/Classi/AccessAPI.png)
+<figcaption align=center> <em> Diagramma delle classi - AccessApiController </em> </figcaption>
 
 L'`AccessApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sugli accessi di un utente presso un luogo o un'organizzazione, servendosi dell'`AccessService`. 
 
@@ -137,6 +148,7 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 
 ### 4.6.2.2 AdministratorApiController
 ![!AdministratorApiController](../Immagini/Backend/Classi/AdministratorApi.png)
+<figcaption align=center> <em> Diagramma delle classi - AdministratorApiController </em> </figcaption>
 
 L'`AdministratorApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sugli amministratori di un'organizzazione e per la gestione dei loro permessi, servendosi dell'`AdministratorService`. 
 
@@ -151,6 +163,7 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 
 ### 4.6.2.3 AuthenticationServerApiController
 ![!AuthenticationServerApiController](../Immagini/Backend/Classi/AuthenticationServerApiController.png)
+<figcaption align=center> <em> Diagramma delle classi - AuthenticationServerApiController </em> </figcaption>
 
 L'`AuthenticationServerApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle utenze presenti nel server che autentica gli utenti dell'organizzazione, servendosi dell'`AuthenticationServerService`.
 
@@ -160,6 +173,7 @@ Il seguente metodo permette di rispondere all'end-point offerto dal backend:
 
 ### 4.6.2.4 FavoriteApiController
 ![!FavoriteApiController](../Immagini/Backend/Classi/FavoriteAPI.png)
+<figcaption align=center> <em> Diagramma delle classi - FavoriteApiController </em> </figcaption>
 
 Il `FavoriteApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle organizzazioni preferite di un utente dell'applicazione e la gestione della loro lista dei preferiti, servendosi del `FavoriteService`.
 
@@ -171,6 +185,7 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 
 ### 4.6.2.5 MovementApiController
 ![!MovementApiController](../Immagini/Backend/Classi/MovementAPI.png)
+<figcaption align=center> <em> Diagramma delle classi - MovementApiController </em> </figcaption>
 
 Il `MovementApiController` si occupa di soddisfare le richieste ricevute dai client per tracciare i movimenti (ingressi o uscite) di un utente presso un luogo o un'organizzazione, servendosi del `MovementService`.
 
@@ -181,6 +196,7 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 
 ### 4.6.2.6 OrganizationApiController
 ![!OrganizationApiController](../Immagini/Backend/Classi/OrganizationAPI.png)
+<figcaption align=center> <em> Diagramma delle classi - OrganizationApiController </em> </figcaption>
 
 L'`OrganizationApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle organizzazioni e altre funzionalità disponibili agli amministratori, come ad esempio la richiesta di eliminazione dell'organizzazione amministrata, servendosi dell'`OrganizationService`.
 
@@ -194,6 +210,7 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 
 ### 4.6.2.7 PlaceApiController
 ![!PlaceApiController](../Immagini/Backend/Classi/PlaceAPI.png)
+<figcaption align=center> <em> Diagramma delle classi - PlaceApiController </em> </figcaption>
 
 Il `PlaceApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sui luoghi di un'organizzazione e per gestirli, servendosi del `PlaceService`.
 
@@ -206,6 +223,7 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 
 ### 4.6.2.8 PresenceApiController
 ![!PresenceApiController](../Immagini/Backend/Classi/PresenceAPI.png)
+<figcaption align=center> <em> Diagramma delle classi - PresenceApiController </em> </figcaption>
 
 Il `PresenceApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere informazioni sulle presenze correnti presso un luogo o un'organizzazione, servendosi del `PresenceService`.
 
@@ -216,6 +234,7 @@ I seguenti metodi permettono di rispondere agli end-point offerti dal backend:
 
 ### 4.6.2.9 ReportApiController
 ![!ReportApiController](../Immagini/Backend/Classi/ReportAPI.png)
+<figcaption align=center> <em> Diagramma delle classi - ReportApiController </em> </figcaption>
 
 Il `ReportApiController` si occupa di soddisfare le richieste ricevute dai client per ottenere report tabellari sugli accessi passati presso i luoghi di un'organizzazione da parte di utenti autenticati, servendosi del `ReportService`.
 
@@ -227,15 +246,18 @@ Il seguente metodo permette di rispondere all'end-point offerto dal backend:
 
 ### 4.6.3.1 AuthenticationFacade
 ![!AuthenticationFacade](../Immagini/Backend/Classi/AuthenticationFacade.png)
+<figcaption align=center> <em> Diagramma delle classi - AuthenticationFacade </em> </figcaption>
 
-L'`Authentication Facade` è una classe che implementa il design pattern Facade. Si occupa di raggruppare tutte le funzionalità comuni ai vari controller fornendole da un unico punto di accesso. Queste funzionalità sono quelle offerte dall'`AuthenticationService`, per verificare lo stato di autenticazione di un utente o amministratore, e quelle del PermissionService, per verificare se un utente è amministratore o meno e se ha i permessi presso una determinata organizzazione.
+L'`AuthenticationFacade` è una classe che implementa il design pattern Facade. Si occupa di raggruppare tutte le funzionalità comuni ai vari controller fornendole da un unico punto di accesso. Queste funzionalità sono quelle offerte dall'`AuthenticationService`, per verificare lo stato di autenticazione di un utente o amministratore, e quelle del PermissionService, per verificare se un utente è amministratore o meno e se ha i permessi presso una determinata organizzazione.
 
 ### 4.6.3.2 GpsAreaFacade
 ![!GpsAreaFacade](../Immagini/Backend/Classi/GpsAreaFacade.png)
+<figcaption align=center> <em> Diagramma delle classi - GpsAreaFacade </em> </figcaption>
 
-Le funzionalità che controllano la dimensione di un'area geografica espressa dall'area di tracciamento (trackingArea) di un'organizzazione o di un luogo vengono realizzate dalle classi che permettono a `GpsArea Facade` di funzionare. Nuovamente, come dice il nome, viene utilizzato il design pattern Facade per avere un unico punto di accesso alle tre funzionalità di calcolo dell'area data una lista di coordinate geografiche, verifica di appartenenza di un punto all'interno di un certo perimetro e costruzione di oggetti di tipo `Coordinate`, che corrisponde all'interfaccia che permette di elaborare i dati ricevuti dalle trackingArea. Inoltre, le tre interfacce `AreaCalculator`, `CoordinateFactory` e `PointInsidePolygon` sono implementate attualmente in un modo abbastanza semplice, ma potrebbero essere aggiornate o sostituite da altre implementazioni più precise, indicandone l'uso nella configurazione del software.
+Le funzionalità che controllano la dimensione di un'area geografica espressa dall'area di tracciamento (trackingArea) di un'organizzazione o di un luogo vengono realizzate dalle classi che permettono a `GpsAreaFacade` di funzionare. Nuovamente, come dice il nome, viene utilizzato il design pattern Facade per avere un unico punto di accesso alle tre funzionalità di calcolo dell'area data una lista di coordinate geografiche, verifica di appartenenza di un punto all'interno di un certo perimetro e costruzione di oggetti di tipo `Coordinate`, che corrisponde all'interfaccia che permette di elaborare i dati ricevuti dalle trackingArea. Inoltre, le tre interfacce `AreaCalculator`, `CoordinateFactory` e `PointInsidePolygon` sono implementate attualmente in un modo abbastanza semplice, ma potrebbero essere aggiornate o sostituite da altre implementazioni più precise, indicandone l'uso nella configurazione del software.
 
 ### 4.6.3.3 MovementSubscriber
 ![!MovementSubscriber](../Immagini/Backend/Classi/MovementSubscriber.png)
+<figcaption align=center> <em> Diagramma delle classi - MovementSubscriber </em> </figcaption>
 
 Avendo deciso di implementare il pattern Publisher-Subscriber, se il MovementService dispone del publisher, deve esserci anche un subscriber. In questo caso, il subscriber si occupa di ottenere i messaggi dal Message Broker, di analizzarli per convertirli da semplici movimenti (di ingresso o di uscita) in istanze (parziali) di accessi che vengono memorizzate tramite i supporti di persistenza per poterli ottenere successivamente tramite le API fornite per gli Access.
