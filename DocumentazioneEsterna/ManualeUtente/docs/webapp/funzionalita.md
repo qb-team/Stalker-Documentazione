@@ -27,10 +27,12 @@ L'amministratore, una volta effettuata l'autenticazione, può eseguire il logout
 ![!Reset password 1](../Immagini/web-app/Reset1.png)
 <figcaption align="center"> <em> Schermata di reset password </em> </figcaption>
 
+L'amministratore può effettuare il reset della password qualora non se la ricordasse. Per eseguire tale operazione deve cliccare su *Password dimenticata* presente nella pagina di login.
+
 ![!Reset password 2](../Immagini/web-app/Reset2.png)
 <figcaption align="center"> <em> Schermata di reset password </em> </figcaption>
 
-L'amministratore può effettuare il reset della password qualora non se la ricordasse. Per eseguire tale operazione deve cliccare su *Password dimenticata* presente nella pagina di login. Successivamente deve inserire l'email dell'account di cui vuole effettuare il reset della password. Gli verrà dunque inviata una e-mail con un link che porterà a una pagina dove sarà possibile inserire la nuova password, di almeno 8 caratteri. Per annullare la procedura basta cliccare sul pulsante *Back*. I passaggi appena descritti sono mostrati nel seguente video:
+ Successivamente deve inserire l'email dell'account di cui vuole effettuare il reset della password. Gli verrà dunque inviata una e-mail con un link che porterà a una pagina dove sarà possibile inserire la nuova password, di almeno 8 caratteri. Per annullare la procedura basta cliccare sul pulsante *Back*. I passaggi appena descritti sono mostrati nel seguente video:
 
 <iframe width="720" src="https://www.youtube.com/embed/8le7OiF9kmM" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -87,7 +89,7 @@ L'amministratore ha la possibilità di monitorare le presenze degli utenti, in t
 
 <iframe width="720" src="https://www.youtube.com/embed/VuoW2Hc162I" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## 3.1.8 Perimetro di tracciamento
+## 3.1.8 Perimetro di tracciamento dell'organizzazione
 
 ![!Perimetro di tracciamento](../Immagini/web-app/mappa.png)
 <figcaption align="center"> <em> Schermata del perimetro di tracciamento </em> </figcaption> 
@@ -97,4 +99,23 @@ L'amministratore ha la possibilità di visionare il perimetro dell'organizzazion
 Per farlo si dovrà cliccare nel menù laterale a sinistra sulla voce *Organizzazione* e quindi cliccare sulla voce *Perimetro di tracciamento dell'organizzazione*. Verrà perciò aperta una finestra con una mappa geografica dove verrà mostrata la posizione dell'organizzazione e il suo perimetro di tracciamento. Il seguente video ne mostra la procedure:
 
 <iframe width="720" src="https://www.youtube.com/embed/Q_nwWf6GkxI" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 3.1.9 Perimetro di tracciamento del luogo di un'organizzazione
+
+![!Perimetro di tracciamento](../Immagini/web-app/mappa.png)
+<figcaption align="center"> <em> Schermata del perimetro di tracciamento </em> </figcaption> 
+
+L'amministratore ha la possibilità di visionare il perimetro del luogo di un'organizzazione tramite una mappa. 
+
+Perciò si dovrà cliccare nel menù laterale a sinistra sulla voce *Organizzazione* e quindi cliccare sulla voce *Perimetro di tracciamento dell'organizzazione*. Dopo di che cliccare sul bottone *Passa alla visualizzazione per luogo* come indicato nell'immagine qui sopra. Verrà perciò aperta una finestra con una mappa geografica, dove verrà mostrata la posizione del primo luogo  dell'organizzazione e il suo perimetro di tracciamento. 
+
+![!Perimetro di tracciamento](../Immagini/web-app/mappa2.png)
+<figcaption align="center"> <em> Schermata del perimetro di tracciamento </em> </figcaption> 
+
+E' possibile, come mostrato nell'immagine qui sopra selezionare un qualsiasi luogo dell'organizzazione selezionando il suo nome nel menù a tendina. Inoltre e possibile ritornare alla visualizzazione del perimetro di tracciamento dell'organizzazione cliccando sul bottone *Torna alla visualizzazione del perimetro dell'organizzazione* . Il seguente video ne mostra la procedure:
+
+<iframe width="720" src="https://www.youtube.com/embed/Q_nwWf6GkxI" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 
+
 
