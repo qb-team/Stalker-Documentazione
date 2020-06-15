@@ -1,0 +1,70 @@
+\newpage
+\subsection{Validazione e Collaudo}
+\subsubsection{Bilancio}
+
+{
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{2}
+\begin{longtable}[h]{ C{2.5cm} C{2.5cm} C{2.5cm} C{2.5cm} C{1.5cm} C{2.5cm}}
+\caption{Tabella del costo complessivo per ruolo}\\
+\rowcolor{darkblue}
+
+\textcolor{white}{\textbf{Ruolo}} & 
+\textcolor{white}{\textbf{Ore preventivate}} & 
+\textcolor{white}{\textbf{Variazione oraria}} & 
+\textcolor{white}{\textbf{Costo preventivato (in \euro{})}} & 
+\textcolor{white}{\textbf{Costo effettivo (in \euro{})}} & 
+\textcolor{white}{\textbf{Variazione di costo (in \euro{})}}\\	
+	
+Responsabile    &  11 &  -4 &  330 &  210 & -120 \\
+Amministratore  &  15 &  -1 &  300 &  280 &  -20 \\
+Analista        &  11 &  -7 &  275 &  100 & -175 \\
+Progettista     &  21 &  -2 &  462 &  418 &  -44 \\
+Programmatore   &  37 & +15 &  555 &  780 & +225 \\
+Verificatore    &  70 &  +9 & 1050 & 1185 & +135 \\
+\textbf{Totale} & 165 & +10 & 2972 & 2973 &   +1 \\	
+
+\end{longtable}
+}
+
+\subsubsection{Bilancio degli incrementi}
+La seguente tabella rappresenta la distribuzione delle ore effettivamente investite durante il periodo in cui vengono svolti gli incrementi e il corrispondente costo in euro.
+Quanto segnato fra parentesi e dopo il segno di addizione, in ogni cella, corrisponde alla variazione rispetto alla pianificazione.
+
+{
+\rowcolors{2}{grigetto}{white}
+\renewcommand{\arraystretch}{1.65}
+\centering
+\begin{longtable}{ C{2.1cm} C{2.7cm} C{3cm} C{3cm} C{3.3cm} }
+\caption{Tabella del costo risultante di ogni incremento}\\
+\rowcolor{darkblue}
+\textcolor{white}{\textbf{Incremento}} & 
+\textcolor{white}{\textbf{Ore progettista}} &
+\textcolor{white}{\textbf{Ore programmatore}}&
+\textcolor{white}{\textbf{Ore verificatore}}&
+\textcolor{white}{\textbf{Costo totale incremento (in \euro{})}}\\
+\endhead
+
+6 & 7 (-2) & 11 (+6) & 9 (+3) & 454 (+91) \\
+7 & 4      &  6 (+3) & 5 (+2) & 253 (+75) \\
+8 & 5      & 10 (+3) & 8 (+2) & 380 (+75) \\
+9 & 5      & 10 (+3) & 8 (+2) & 380 (+75) \\
+
+\end{longtable}
+}
+
+\subsubsection{Conclusioni}
+Come riportato dalla tabella, il bilancio risulta essere particolarmente diverso da quello preventivato per i tutti i ruoli, ad eccezione di amministratore e progettista che hanno avuto variazioni rispettivamente di una e due ore. \\
+In particolar modo:
+\begin{itemize}
+	\item \textbf{Responsabile}: Il ruolo di \Responsabile{} ha richiesto meno ore di quante previste, in quanto le decisioni più importanti erano già state prese fino alla precedente milestone di Product Baseline, inoltre il loro ruolo di gestione della pianificazione è servito di meno, in quanto la pianificazione è stata abbondantemente rispettata;
+	\item \textbf{Analista}: Il ruolo ha richiesto parecchie ore in meno, poiché sono state poche le correzioni che si sono dovute affrontare al documento di \AdR{}, diversamente da quanto ipotizzato nel pianificazione iniziale;
+	\item \textbf{Programmatore}: A differenza della pianificazione svolta, la parte di programmazione si è attutata in tempi nuovamente nettamente maggiori. Ciò è dovuto per la necessità di implementare al meglio i requisiti e per la correzione di bug segnalati dai verificatori;
+	\item \textbf{Verificatore}: Visto il trascorso del gruppo, si è deciso di dare più peso al ruolo del verificatore, ancor di più di quanto già abbondantemente preventivato.
+\end{itemize}
+\subsubsection{Ragionamento sugli scostamenti}
+È possibile notare come i ruoli di progettista e amministratore siano stati sufficientemente pianificati correttamente e che invece era necessario dare più peso al ruolo di programmatore e verificatore. Questa considerazione poteva essere fatta fin dal principio, considerando la fase in cui ci si trova.\newline
+Nonostante gli scostamenti, si è comunque avuto un quasi pareggio del costo effettivo con quello preventivato. La differenza è solo di \euro{} 1.
+
+\subsubsection{Preventivo a finire}
+Il preventivo finale del progetto corrisponde quindi a \euro{} 15072, visto l'avanzo di \euro{} 1 alla fine della precedente fase e il superamento del preventivo di \euro{} 1 alla fine di questa. La spesa per il committente sarà quindi coerente con quanto indicato nella prima lettera di presentazione. 
