@@ -1,5 +1,7 @@
 # 4.3 Estendibilità
 
+In questa pagina del Manuale Manutentore sono indicate tutte le possibili modifiche effettuabili secondo alcuni criteri che crediamo necessari evidenziare (per esempio la sostituzione di Firebase con un altro provider di autenticazione) oppure punti non sviluppati dal prodotto software rilasciato e che si ritengono utili da implementare per rendere ancora più robusto il sistema.
+
 <a name="sostituire-firebase"></a>
 ## 4.3.1 Sostituire Firebase
 Il backend attualmente fornisce Firebase come sistema di autenticazione, ma è possibile sostituirlo con un qualsiasi altro sistema di autenticazione che abbia le seguenti caratteristiche:
@@ -50,10 +52,18 @@ I passi per la sostituzione sono i seguenti:
 - Modifica della classe `AuthenticationServerConfig` appartenente al package `it.qbteam.config`, ritornando con il metodo `authenticationServerConnector()` la nuova implementazione di `AuthenticationServerConnector`, attualmente implementato da `LDAPServerConnectorAdapter`, che può quindi essere rimosso;
 - Modifica, se necessaria, della classe `AuthenticationServerServiceImpl` appartenente al package `it.qbteam.serviceimpl` poiché implementa l'interfaccia `AuthenticationServerService` del package `it.qbteam.service`;
 - Implementazione di `AuthenticationServerConnector` in una classe che sfrutta librerie o metodologie per connettersi e permettere l'autenticazione attraverso il nuovo sistema di autenticazione.
-<a name="movement di keep-alive"></a>
-## 4.3.4 Inserire un keep alive 
-Il Backend attualmente permette due tipi di movimenti: entrata (1) e uscita(-1), nell'eventualità che un utente compia un movimento di entrata e per qualsiasi motivo non effettui l'uscita dal luogo o dall'organizzazione dove è entrato il Backend mantiene la sua presenza sul contatore delle presenze su Redis finché l'utente non effettua l'uscita o un'altra entrata.  
-Per garantire che non si verifichi questa eventualità si può implementare un keep-alive sfruttando un nuovo movementType=0 che l'utente invia dopo un movemntType=1 e che rappresenta la permanenza nello stesso luogo o organizzazione in cui si è entrati in precedenza.
-Quindi quando un utente invia un movimento con movementType=1 viene registrato in una nuova struttura dati contenente il suo exitToken e il timeStamp dell'entrata nel luogo o organizzazione, dopo x minuti (da decidere in fase di implementazione) l'utente invierà un movimento con movementType=0 e stesso exitToken e questo segnalerà al Backend che l'utente si trova ancora all'interno dello stesso luogo o organizzazione in cui è entrato, il Backend ricevuta questa richiesta aggiorna la struttura dati accedendo al record con l'exitToken dell'utente e mettendo il timeStamp della nuova richiesta.
-Quando l'utente esce dal luogo o dall'organizzazione nella quale è entrato e  manda il movimento con movementType=-1 il Backend cancella il record con il corrispondente exitToken nella struttura dedicata al keep-alive.
-Sarà presente un microservizio che avrà il compito di controllare, ogni y minuti ( da decidere in fase di implementazione), la struttura dati contente gli exitToken e i timeStamp verificando che  i timeStamp salvati non siano più vecchi di x (tempo dopo il quale l'utente invia il keep-alive) + z ( tempo di scarto da decidere in fase di implementazione per tolleranza di possibili ritardi lato utente e rete nell'invio e ricezione del keep-alive); se il microservizio trova un timeStamp più vecchio di x + z genera un movimento di uscita con l'exitToken corrispondente e il timeStamp associato e cancella il record dalla struttura dati del keep-alive; questo significa che viene generato un exitToken con l'ultimo timeStamp noto, che sicuramente è veritiero.
+
+<a name="terminazione-accessi-obsoleti"></a>
+## 4.3.4 Terminazione di accessi obsoleti
+Il backend attualmente permette due tipologie di movimenti:
+
+- Entrata, segnalata nel tracciamento con `movementType == -1`;
+- Uscita, segnalata nel tracciamento con `movementType == -1`.
+
+Nell'eventualità in cui un utente compia un movimento di entrata e che per un qualsiasi motivo non effettui l'uscita dal luogo o dall'organizzazione dove ha avuto accesso, attualmente il backend non fa alcuna assunzione sulla sua uscita. Ciò significa che un accesso potrebbe non venire mai terminato, rendendo i contatori delle presenze _inquinati_.
+Per garantire che non si verifichi questa eventualità una possibile miglioria è avere un meccanismo per cui, sfruttando una nuova tipologia di tracciamento, diciamo con `movementType == 0`, l'utente invia, periodicamente e dopo il primo ingresso, una notifica al sistema informandolo di essere effettivamente ancora all'interno dell'organizzazione o luogo.
+A questo punto l'implementazione potrebbe essere la seguente:
+- Quando un utente invia un tracciamento di ingresso viene registrato in una nuova struttura dati un record contenente il suo **exitToken** e il timestamp di avvenimento dell'ingresso;
+- Periodicamente, diciamo dopo _x_ minuti (da decidere in fase di implementazione), l'utente invia un movimento con `movementType == 0` agli stessi endpoint del tracciamento, con l'**exitToken** che il backend ha fornito nell'atto dell'ingresso e che è necessario per tracciare l'uscita. Questo movimento segnala al backend che l'utente si trova ancora all'interno dello stesso luogo o organizzazione in cui è entrato, il backend ricevuta questa richiesta aggiorna, accedendo alla struttura dati sopra citata, il record con l'**exitToken** dell'utente e mettendo il nuovo timestamp;
+- Quando l'utente effettua un tracciamento di un'uscita e inoltra il movimento con `movementType == -1` il backend, oltre a quello che già fa, ha il compito di rimuovere dalla struttura dati già citata il record con il corrispondente **exitToken**.
+- Infine, deve esserci un servizio in background del backend (per esempio un microservizio) che ha il compito di controllare periodicamente, diciamo ogni _y_ minuti (da decidere in fase di implementazione), la struttura dati contente gli **exitToken** e i timestamp, verificando che i timestamp memorizzati non siano più vecchi di _x_ + _z_ minuti (tempo dopo il quale l'utente invia il movimento con `movementType == 0` più un tempo di scarto da decidere in fase di implementazione per avere un certo tipo di tolleranza a possibili ritardi lato utente e rete nell'invio e ricezione del tracciamento). Se il servizio trova un timestamp più vecchio di _x_ + _z_ minuti, effettua un tracciamento di un movimento di uscita con l'**exitToken** corrispondente e il timestamp associato trovato. In caso l'utente successivamente inoltri il movimento di uscita mancante, esso non verrà considerato in quanto l'accesso con quell'**exitToken** è già stato concluso.
