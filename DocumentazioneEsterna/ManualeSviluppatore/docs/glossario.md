@@ -79,7 +79,7 @@ Processo che permette l'individuazione geografica del luogo in cui si trova un d
 È un sistema di posizionamento e navigazione satellitare. Attraverso una rete dedicata di satelliti artificiali in orbita, fornisce a un terminale mobile o ricevitore GPS informazioni sulle sue coordinate geografiche e sul suo orario in ogni posto sulla Terra dove vi sia un contatto privo di ostacoli con almeno quattro satelliti del sistema.
 
 ### Gradle 
-È un sistema open source di compilazione che viene utilizzato per la automate building, i testing, le distribuizioni, ecc. Ogni progetto Android ha 
+È un sistema open source di compilazione che viene utilizzato per la automate building, i testing, le distribuzioni, ecc. Ogni progetto Android ha 
 bisogno di un Gradle per generare un apk dai file .java e .xml .
 
 ## I
@@ -117,6 +117,9 @@ Si intende un insieme di tutte le organizzazioni che utilizzano il servizio Stal
 
 ### Lista delle organizzazioni preferite
 Contiene una lista delle organizzazioni che l'utente ha deciso di inserire tra le sue preferite.
+
+### Locust
+Strumento basato su Python che permette, tramite un'interfaccia utente e degli script scritti in Python di effettuare test di carico con importanti numeri di utenti su un servizio web che espone delle API, nel caso di Stalker, il backend.
 
 ### Login
 Procedura di accesso effettuata dall'utente o dall'amministratore per accedere alla applicazione nel caso dell'utente, al Server nel caso dell'amministratore.
