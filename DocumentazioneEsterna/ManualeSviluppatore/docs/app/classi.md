@@ -90,7 +90,7 @@ La classe SignUpFragment offre i seguenti metodi:
 
 
 ## 2.6.5 Home Page Activity
-![!HomePageActivity](../Immagini/App/Classi/HomePageActivity.png "Diagramma della classe Home Page Activity")
+![!HomePageActivity](../Immagini/App/Classi/HomePageActivity.jpg "Diagramma della classe Home Page Activity")
 <figcaption align="center"> <em> Diagramma della classe Home Page Activity</em> </figcaption>
 
 La classe `HomePageActivity` è l'Activity principale da cui vengono istanziati i fragment riguardanti l'action tab `ActionTabFragment`, la lista delle organizzazioni `HomeFragment` e la lista dei preferiti/MyStalker `MyStalkersListFragment`.
@@ -166,7 +166,7 @@ La classe ActionTabFragment offre i seguenti metodi:
 
 ___
 ## 2.6.7 Home 
-![!HomeFragment](../Immagini/App/Classi/HomeFragment.png "Diagramma della classe Home")
+![!HomeFragment](../Immagini/App/Classi/HomeFragment.jpg "Diagramma della classe Home")
 <figcaption align="center"> <em> Diagramma della classe Home</em> </figcaption>
 
 Se l'utente risulta essere già autenticato e avvia l'applicazione, oppure ha appena effettuato l'autenticazione, allora gli viene mostrato automaticamente la classe view del `HomeFragment`. In questa classe compariranno tutte le organizzazioni presenti nel server. L'utente ha la possibilità di aggiornare la lista oppure di scaricarla se dovessero incombere dei problemi.
@@ -257,7 +257,7 @@ La classe `MyStalkerListFragment` offre i seguenti metodi:
 - `onBackPressed()`: Si occupa di fa ritornare l'utente alla precedente Activity/Fragment.
 ___
 ## 2.6.9 Standard Organization
-![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.png "Diagramma della classe Standard Organization")
+![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.jpg "Diagramma della classe Standard Organization")
 <figcaption align="center"> <em> Diagramma della classe Standard Organization</em> </figcaption>
 
 La classe `StandardOrganizationFragment` rappresenta la pagina dedicata alle organizzazioni pubbliche, cioè quelle che non richiedono credenziali di autenticazione LDAP. La vista contiene le informazioni riferite all'organizzazione.
