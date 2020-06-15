@@ -119,4 +119,125 @@ L'amministratore ha la possibilità di monitorare le presenze degli utenti, in t
 
 <iframe width="720" src="https://www.youtube.com/embed/VuoW2Hc162I" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## 3.16. Ricerca accessi degli utenti autenticati
 
+![!Accesso alla sezione di visualizzazione degli accessi autenticati](../Immagini/web-app/enterAccessesAuth.PNG)
+<figcaption align="center"> <em> Accedere agli accessi autenticati</em> </figcaption> 
+
+
+![!Login al server aziendale](../Immagini/web-app/loginLDAP.PNG)
+<figcaption align="center"> <em> Login al server aziendale</em> </figcaption> 
+
+L'amministratore, qualora non lo avesse già fatto, dovrà autenticarsi al server aziendale per accedere alla visualizzazione degli accessi da parte degli utenti autenticati. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**. 
+
+![!Selezione degli utenti da visualizzare](../Immagini/web-app/authAccessesOrgSELECT.PNG)
+<figcaption align="center"> <em> Selezione degli utenti da visualizzare</em> </figcaption> 
+
+L'amministratore potrà ora selezionare gli utenti da visualizzare cliccando sui rispettivi pulsanti **Visualizza accessi**. Una volta selezionati gli utenti desiderati potrà cliccare sul pulsante **Visualizza accessi degli utenti selezionati** per visualizzarne i rispettivi accessi.
+
+![!Passaggio alla visualizzazione degli accessi nei luoghi](../Immagini/web-app/authAccessesPlaceSELECT.PNG)
+<figcaption align="center"> <em> Passaggio alla visualizzazione degli accessi nei luoghi</em> </figcaption> 
+
+Per passare alla visualizzazione degli accessi presso i luoghi sarà necessario premere il pulsante **Passa alla visualizzazione degli accessi ad un luogo** e poi selezionare il luogo desiderato dal menù a tendina a destra.
+
+![!Ordinamento accessi](../Immagini/web-app/ViewOrgAccessesLDAPsort.PNG)
+<figcaption align="center"> <em> Ordinamento per data degli accessi visualizzati</em> </figcaption> 
+
+L'amministratore ha la possibilità di ordinare gli accessi visualizzati o per data di ingresso o per data di uscita, sia in ordine decrescente che decrescente, semplicemente cliccando sui pulsanti posi nella tabella degli accessi. Il pulsante rosso indicherà l'ordinamento attualmente attivo.
+
+![!Filtraggio accessi per un singolo giorno](../Immagini/web-app/ViewOrgAccessesLDAPfilter.PNG)
+<figcaption align="center"> <em> Visualizzazione degli accessi effettuati in uno specifico giorno</em> </figcaption> 
+
+L'amministratore ha inoltre la possibilità di filtrare gli accessi visualizzati secondo un giorno preciso attraverso il calendario posto a destra della tabella. Per filtrare gli accessi sarà sufficiente spuntare la casella affianco alla scritta *Filtra gli accessi di un giorno specifico* e selezionare quindi il giorno desiderato.
+
+![!Ritorno agli utenti](../Immagini/web-app/BackToUsersLDAP.PNG)
+<figcaption align="center"> <em> Ritorno agli utenti</em> </figcaption> 
+
+Per tornare alla selezione degli utenti di cui visualizzare gli accessi sarà sufficiente cliccare il pulsante **Torna agli utenti** situato in alto sopra il calendario.
+
+
+## 3.17. Visualizzazione dei report tabellari
+
+![!Accesso alla sezione di visualizzazione dei report tabellari](../Immagini/web-app/enterAccessesReports.PNG)
+<figcaption align="center"> <em> Accedere agli accessi autenticati</em> </figcaption> 
+
+
+![!Login al server aziendale](../Immagini/web-app/loginLDAP.PNG)
+<figcaption align="center"> <em> Login al server aziendale</em> </figcaption> 
+
+L'amministratore, qualora non lo avesse già fatto, dovrà autenticarsi al server aziendale per accedere alla visualizzazione dei report tabellari. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**.
+
+![!LPassaggio alla visualizzazione dei report per luogo](../Immagini/web-app/toggleReportView.PNG)
+<figcaption align="center"> <em> Passaggio alla visualizzazione dei report per luogo</em> </figcaption> 
+
+Per passare alla visualizzazione dei report per singolo luogo sarà sufficiente cliccare sul pulsante **Passa alla visualizzazione del report per luogo**. Per tornare ai report generali sarà sufficiente ripremere lo stesso pulstante. 
+
+
+## 3.18. Creazione di un nuovo amministratore
+
+![!Accesso alla sezione di creazione di un nuovo amministratore](../Immagini/web-app/accessCreateAdmin.PNG)
+<figcaption align="center"> <em> Accesso alla sezione di creazione di un nuovo amministratore</em> </figcaption> 
+
+![!Login al server aziendale](../Immagini/web-app/loginLDAP.PNG)
+<figcaption align="center"> <em> Login al server aziendale</em> </figcaption> 
+
+Qualora l'organizzazione fosse a tracciamento autenticato e l'amministratore non avesse ancora fatto il login, allora sarà necessario effettuarlo per poter accedere alla creazione di un amministratore. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**.
+
+![!Creazione di un nuovo amministratore](../Immagini/web-app/createAdmin.PNG)
+<figcaption align="center"> <em> Creazione di un nuovo amministratore</em> </figcaption>
+
+Per creare un nuovo amministratore sarà necessario compilare tutti i campi presenti nel riquadro rosso. Il campo nel riquadro blu è opzionale ed è presente solo nelle organizzazioni a tracciamento autenticato.
+Una volta compilati i campi sarà sufficiente cliccare sul pulsante indicato dalla freccia rossa in figura per creare l'amministratore.
+
+!!!attention
+    L'email inserita non deve essere già registrata presso il sistema.
+
+
+## 3.19. Associazione di un amministratore
+
+![!Accesso alla sezione di associazione di un amministratore](../Immagini/web-app/accessBindAdmin.png)
+<figcaption align="center"> <em> Accesso alla sezione di associazione di un amministratore</em> </figcaption> 
+
+![!Login al server aziendale](../Immagini/web-app/loginLDAP.PNG)
+<figcaption align="center"> <em> Login al server aziendale</em> </figcaption> 
+
+Qualora l'organizzazione fosse a tracciamento autenticato e l'amministratore non avesse ancora fatto il login, allora sarà necessario effettuarlo per poter accedere alla sezione di associazione di un amministratore. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**.
+
+![!Associazione di un amministratore](../Immagini/web-app/createAdmin.PNG)
+<figcaption align="center"> <em> Associazione di un amministratore</em> </figcaption>
+
+Per associare un amministratore sarà necessario compilare tutti i campi presenti nel riquadro rosso. Il campo nel riquadro blu è opzionale ed è presente solo nelle organizzazioni a tracciamento autenticato.
+Una volta compilati i campi sarà sufficiente cliccare sul pulsante indicato dalla freccia rossa in figura per associare l'amministratore.
+
+!!!attention
+    L'email inserita deve essere già registrata presso il sistema e l'amministratore identificato da quell'email non deve essere già associato all'organizzazione in questione.
+
+
+## 3.19. Gestione degli amministratori
+
+![!Accesso alla sezione di gestioni degli amministratori](../Immagini/web-app/accessManageAdmin.png)
+<figcaption align="center"> <em> Accesso alla sezione di gestione degli amministratori</em> </figcaption> 
+
+![!Login al server aziendale](../Immagini/web-app/loginLDAP.PNG)
+<figcaption align="center"> <em> Login al server aziendale</em> </figcaption> 
+
+Qualora l'organizzazione fosse a tracciamento autenticato e l'amministratore non avesse ancora fatto il login, allora sarà necessario effettuarlo per poter accedere alla sezione di gestione degli amministratori. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**.
+
+## 3.19.1. Modifica dei privilegi di un amministratore
+
+![!Scelta dei nuovi privilegi di un amministratore](../Immagini/web-app/managementAdminSelectingNewPriviledges.PNG)
+<figcaption align="center"> <em> Scelta dei nuovi privilegi di un amministratore</em> </figcaption>
+
+Cliccare sul menù a tendina delL'amministratore desiderato, cliccare quindi sul nuovo privilegio da assegnare all'amministratore. Dopo aver fatto ciò la situazione sarà quella rappresentata nella figura seguente:
+
+![!Conferma delle modifiche](../Immagini/web-app/newPriviledgesSelected.PNG)
+<figcaption align="center"> <em> Conferma delle modifiche</em> </figcaption>
+
+Ora sarà possibile confermare le modifiche scelte cliccando sul pulsante verde indicato dalla freccia rossa nell'immagine precedente. Qualora le modifiche venissero salvate i nuovi privilegi dell'amministratore in questione saranno quelli identificati nel cerchio rosso.
+
+## 3.19.2. Rimozione di un amministratore
+
+![!Rimozione di un amministratore](../Immagini/web-app/removeAdmin.PNG)
+<figcaption align="center"> <em> Rimozione di un amministratore</em> </figcaption>
+
+Per eliminare un amministratore sarà sufficiente cliccare il pulsante **Rimuovi** posizionato sulla relativa riga. L'immagine precedente indica, con la freccia rossa, il pussante per rimuovere l'admin con email *christian@admin.it*. Una volta cliccato il pulsante **Rimuovi** verrà richiesta una conferma di rimozione. Accettando la conferma si rimuoverà definitivamente l'amministratore dall'organizzazione.
