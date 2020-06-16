@@ -1,7 +1,7 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
-0.37.0 | 2020-06-15 | Christian Mattei, Enrico Salmaso, Francesco Drago | Progettisti | Tommaso Azzalin | Aggiornamento, stesura e verifica dalla sezione §2.6.1 alla sezione §2.6.12
+0.37.0 | 2020-06-15 | Christian Mattei, Enrico Salmaso, Francesco Drago | Progettisti | Tommaso Azzalin | Aggiornamento, stesura e verifica dalla sezione §2.6.1 alla sezione §2.6.12.
 0.36.0 | 2020-06-15 | Davide Lazzaro, Tommaso Azzalin | Progettista | Federico Perin | Aggiunto e verificato §4.3.4 estendibilità backend.
 0.35.0 | 2020-06-14 | Christian Mattei, Enrico Salmaso, Francesco Drago | Progettisti | Tommaso Azzalin | Aggiornamento, stesura e verifica §2.1.1.
 0.34.0 | 2020-06-14 | Tommaso Azzalin | Progettista | Tommaso Azzalin | Aggiunto e verificato vocabolo "Locust" al Glossario.
@@ -11,8 +11,8 @@ Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 0.30.0 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunta e verificata §4.2.12.4.
 0.29.1 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiornate e verificate §4.2.11.1 e §4.2.12.
 0.29.0 | 2020-06-13 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunte e verificate sezioni §4.3.2 e §4.3.3.
-0.28.0 | 2020-06-10 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunta e verificata descrizione dei Service §4.6.1.7 e §4.6.1.8.
-0.27.0 | 2020-06-10 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunta e verificata descrizione dei metodi da §4.6.2.7
+0.28.0 | 2020-06-10 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunta e verificata descrizione dei Service §4.6.1.7. e §4.6.1.8.
+0.27.0 | 2020-06-10 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunta e verificata descrizione dei metodi da §4.6.2.7.
 0.26.0 | 2020-06-09 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunta e verificata descrizione dei metodi in §4.6.2.
 0.25.0 | 2020-06-08 | Davide Lazzaro | Progettista | Tommaso Azzalin | Aggiunta e verificata descrizione dei metodi in §4.6.1.
 0.24.0 | 2020-06-08 | Tommaso Azzalin | Progettista | Davide Lazzaro | Aggiunta e verificata sezione §5.3.
@@ -49,7 +49,7 @@ Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 0.5.0 | 2020-05-04 | Emanuele Cisotto | Progettista | Tommaso Azzalin | Stesura e verifica §3.1 e §3.4.
 0.4.1 | 2020-05-04 | Enrico Salmaso | Progettista | Tommaso Azzalin | Modificato e verifica §2.2.
 0.4.0 | 2020-05-04 | Christian Mattei | Progettista | Tommaso Azzalin | Stesura e verifica §2.1 e §2.2.
-0.3.0 | 2020-05-03 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunta §4.2 .
+0.3.0 | 2020-05-03 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunta §4.2.
 0.2.1 | 2020-05-03 | Davide Lazzaro  | Programmatore | Emanuele Cisotto | Modificate e verificate §4.6 e §4.7.
 0.2.0 | 2020-05-03 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunta e verificata §4.5.
 0.1.0 | 2020-05-03 | Tommaso Azzalin | Progettista | Federico Perin | Aggiunta estensione per visualizzazione di immagini a full-screen.
