@@ -1,168 +1,269 @@
 \subsection{Tracciamento Requisiti - Test di unità}
 {
-\rowcolors{2}{grigetto}{white}
-\renewcommand{\arraystretch}{1.5}
-\centering
-\begin{longtable}{C{2cm} C{8cm}}
-\caption{Tabella di tracciamento requisito-test di unità}\\
-\rowcolor{darkblue}
-\textcolor{white}{\textbf{Codice Test}} & \textcolor{white}{\textbf{Metodo}}\\	
-\endfirsthead
-\rowcolor{darkblue}
-\textcolor{white}{\textbf{Codice Test}} & \textcolor{white}{\textbf{Metodo}}\\	
-\endhead
-
-TUW1 & LoginComponent::createForm() \\
-TUW2 & LoginComponent::createForm() \\
-TUW3 & AuthenticationService::SignWithEmailPassword() \\
-TUW4 & AuthenticationService::ResetPassword() \\
-TUW5 & AuthenticationService::SignOut() \\
-TUW6 & MenuBarComponent::SetOrganization() \\
-TUW7 & OrganizationInformationContentComponent::getName() \\
-TUW8 & OrganizationInformationContentComponent::getImg() \\
-TUW9 & OrganizationInformationContentComponent::getDesc() \\
-TUW10 & OrganizationInformationContentComponent::getIndirizzo() \\
-TUW11 & OrganizationInformationContentComponent::getIndIP() \\
-TUW12 & ViewOrganizationTrackingAreaContentComponent::receiveMap() \\
-TUW36 & OrganizationPresenceNumberComponent::subscribeToCounter() \\
-TUW37 & PlacePresenceNumberComponent::subscribeToCounter() \\
-TUW52 & AdministratorManagementComponent::getMail()\\
-TUW53 & AdministratorManagementComponent::getPermission()\\
-TUW54 & AdministratorManagementComponent::modifyPermissionsOf()\\
-TUW55 & AdministratorManagementComponent::unbindAdminFromTheOrganization()\\
-TUW56 & AdministratorManagementComponent::checkEmail()\\
-TUW57 & AdministratorManagementComponent::SetupForm()\\
-TUW58 & AdministratorManagementComponent::SetupForm()\\
-TUW59 & AdministratorManagementComponent::SetPermission()\\
-TUB1 & AccessApiController::getAnonymousAccessListInOrganization()\\
-TUB2 & AccessApiController::getAnonymousAccessListInOrganization()\\
-TUB3 & AccessApiController::getAnonymousAccessListInPlace()\\
-TUB4 & AccessApiController::getAnonymousAccessListInPlace()\\
-TUB5 & AccessApiController::getAuthenticatedAccessListInOrganization()\\
-TUB6 & AccessApiController::getAuthenticatedAccessListInOrganization()\\
-TUB7 & AccessApiController::getAuthenticatedAccessListInPlace()\\
-TUB8 & AccessApiController::getAuthenticatedAccessListInPlace()\\
-TUB9 & AdministratorApiController::bindAdministratorToOrganization()\\
-TUB10 & AdministratorApiController::bindAdministratorToOrganization()\\
-TUB11 & AdministratorApiController::createNewAdministratorInOrganization()\\
-TUB12 & AdministratorApiController::createNewAdministratorInOrganization()\\
-TUB13 & AdministratorApiController::getAdministratorListOfOrganization()\\
-TUB14 & AdministratorApiController::getAdministratorListOfOrganization()\\
-TUB15 & AdministratorApiController::getPermissionList()\\
-TUB16 & AdministratorApiController::getPermissionList()\\
-TUB17 & AdministratorApiController::unbindAdministratorFromOrganization()\\
-TUB18 & AdministratorApiController::unbindAdministratorFromOrganization()\\
-TUB19 & AdministratorApiController::updateAdministratorPermission()\\
-TUB20 & AdministratorApiController::updateAdministratorPermission()\\
-TUB21 & FavoriteApiController::addFavoriteOrganization()\\
-TUB22 & FavoriteApiController::addFavoriteOrganization()\\
-TUB23 & FavoriteApiController::getFavoriteOrganizationList()\\
-TUB24 & FavoriteApiController::getFavoriteOrganizationList()\\
-TUB25 & FavoriteApiController::removeFavoriteOrganization()\\
-TUB26 & FavoriteApiController::removeFavoriteOrganization()\\
-TUB27 & MovementApiController::trackMovementInOrganization()\\
-TUB28 & MovementApiController::trackMovementInOrganization()\\
-TUB29 & MovementApiController::trackMovementInPlace()\\
-TUB30 & MovementApiController::trackMovementInPlace()\\
-TUB31 & OrganizationApiController::getOrganization()\\
-TUB32 & OrganizationApiController::getOrganization()\\
-TUB33 & OrganizationApiController::getOrganizationList()\\
-TUB34 & OrganizationApiController::getOrganizationList()\\
-TUB35 & OrganizationApiController::requestDeletionOfOrganization()\\
-TUB36 & OrganizationApiController::requestDeletionOfOrganization()\\
-TUB37 & OrganizationApiController::updateOrganization()\\
-TUB38 & OrganizationApiController::updateOrganization()\\
-TUB39 & OrganizationApiController::updateOrganizationTrackingArea()\\
-TUB40 & OrganizationApiController::updateOrganizationTrackingArea()\\
-TUB41 & PlaceApiController::createNewPlace()\\
-TUB42 & PlaceApiController::createNewPlace()\\
-TUB43 & PlaceApiController::deletePlace()\\
-TUB44 & PlaceApiController::deletePlace()\\
-TUB45 & PlaceApiController::updatePlace()\\
-TUB46 & PlaceApiController::updatePlace()\\
-TUB47 & PlaceApiController::getPlaceListOfOrganization()\\
-TUB48 & PlaceApiController::getPlaceListOfOrganization()\\
-TUB49 & PresenceApiController::getOrganizationPresenceCounter()\\
-TUB50 & PresenceApiController::getOrganizationPresenceCounter()\\
-TUB51 & PresenceApiController::getPlacePresenceCounter()\\
-TUB52 & PresenceApiController::getPlacePresenceCounter()\\
-TUB53 & ReportApiController::getTimePerUserReport()\\
-TUB54 & ReportApiController::getTimePerUserReport()\\
-TUB55 & AdministratorServiceImpl::bindAdministratorToOrganization()\\
-TUB56 & AdministratorServiceImpl::bindAdministratorToOrganization()\\
-TUB57 & AdministratorServiceImpl::bindAdministratorToOrganization()\\
-TUB58 & AdministratorServiceImpl::createNewAdministratorInOrganization()\\
-TUB59 & AdministratorServiceImpl::createNewAdministratorInOrganization()\\
-TUB60 & AdministratorServiceImpl::getAdministratorListOfOrganization()\\
-TUB61 & AdministratorServiceImpl::getPermissionList()\\
-TUB62 & AdministratorServiceImpl::updateAdministratorPermission()\\
-TUB63 & AdministratorServiceImpl::updateAdministratorPermission()\\
-TUB64 & AdministratorServiceImpl::unbindAdministratorFromOrganization()\\
-TUB65 & AccessServiceImpl::getAnonymousAccessListInOrganization()\\
-TUB66 & AccessServiceImpl::getAnonymousAccessListInOrganization()\\
-TUB67 & AccessServiceImpl::getAnonymousAccessListInPlace()\\
-TUB68 & AccessServiceImpl::getAnonymousAccessListInPlace()\\
-TUB69 & AccessServiceImpl::getAuthenticatedAccessListInOrganization()\\
-TUB70 & AccessServiceImpl::getAuthenticatedAccessListInOrganization()\\
-TUB71 & AccessServiceImpl::getAuthenticatedAccessListInPlace()\\
-TUB72 & AccessServiceImpl::getAuthenticatedAccessListInPlace()\\
-TUB73 & AuthenticationServiceImpl::isWebAppAdministrator()\\
-TUB74 & AuthenticationServiceImpl::isWebAppAdministrator()\\
-TUB75 & AuthenticationServiceImpl::isWebAppAdministrator()\\
-TUB76 & AuthenticationServiceImpl::isAppUser()\\
-TUB77 & AuthenticationServiceImpl::isAppUser()\\
-TUB78 & AuthenticationServiceImpl::isAppUser()\\
-TUB79 & AuthenticationServiceImpl::createUser()\\
-TUB80 & AuthenticationServiceImpl::createUser()\\
-TUB81 & AuthenticationServiceImpl::createUser()\\
-TUB82 & AuthenticationServiceImpl::createUser()\\
-TUB83 & AuthenticationServiceImpl::createUser()\\
-TUB84 & AuthenticationServiceImpl::createUser()\\
-TUB85 & AuthenticationServiceImpl::createUser()\\
-TUB86 & AuthenticationServiceImpl::getUserIdByEmail()\\
-TUB87 & AuthenticationServiceImpl::getUserIdByEmail()\\
-TUB88 & AuthenticationServiceImpl::getUserIdByEmail()\\
-TUB89 & AuthenticationServiceImpl::getUserIdByEmail()\\
-TUB90 & AuthenticationServiceImpl::getUserIdByEmail()\\
-TUB91 & AuthenticationServiceImpl::getUserIdByEmail()\\
-TUB92 & AuthenticationServiceImpl::getUserId()\\
-TUB93 & AuthenticationServiceImpl::getUserId()\\
-TUB94 & AuthenticationServiceImpl::getFirebaseUser()\\
-TUB95 & AuthenticationServiceImpl::getFirebaseUser()\\
-TUB96 & FavoriteServiceImpl::addFavoriteOrganization()\\
-TUB97 & FavoriteServiceImpl::addFavoriteOrganization()\\
-TUB98 & FavoriteServiceImpl::getFavoriteOrganizationList()\\
-TUB99 & FavoriteServiceImpl::removeFavoriteOrganization()\\
-TUB100 & FavoriteServiceImpl::getFavorite()\\
-TUB101 & FavoriteServiceImpl::getFavorite()\\
-TUB102 & PresenceServiceImpl::getOrganizationPresenceCounter()\\
-TUB103 & PresenceServiceImpl::getPlacePresenceCounter()\\
-TUB104 & MovementServiceImpl::trackMovementInOrganization()\\
-TUB105 & MovementServiceImpl::trackMovementInOrganization()\\
-TUB106 & MovementServiceImpl::trackMovementInOrganization()\\
-TUB107 & MovementServiceImpl::trackMovementInOrganization()\\
-TUB108 & MovementServiceImpl::trackMovementInOrganization()\\
-TUB109 & MovementServiceImpl::trackMovementInPlace()\\
-TUB110 & MovementServiceImpl::trackMovementInPlace()\\
-TUB111 & MovementServiceImpl::trackMovementInPlace()\\
-TUB112 & MovementServiceImpl::trackMovementInPlace()\\
-TUB113 & MovementServiceImpl::trackMovementInPlace()\\
-TUB114 & ReportServiceImpl::getTimePerUserReport()\\
-TUB115 & ReportServiceImpl::getTimePerUserReport()\\
-TUB116 & OrganizationServiceImpl::getOrganization()\\
-TUB117 & OrganizationServiceImpl::getOrganization()\\
-TUB118 & OrganizationServiceImpl::getOrganizationList()\\
-TUB119 & OrganizationServiceImpl::getOrganizationList()\\
-TUB120 & OrganizationServiceImpl::updateOrganization()\\
-TUB121 & OrganizationServiceImpl::updateOrganization()\\
-TUB122 & OrganizationServiceImpl::updateOrganizationTrackingArea()\\
-TUB123 & OrganizationServiceImpl::updateOrganizationTrackingArea()\\
-TUB124 & PlaceServiceImpl::createNewPlace()\\
-TUB125 & PlaceServiceImpl::deletePlace()\\
-TUB126 & PlaceServiceImpl::updatePlace()\\
-TUB127 & PlaceServiceImpl::updatePlace()\\
-TUB128 & PlaceServiceImpl::getPlace()\\
-TUB129 & PlaceServiceImpl::getPlace()\\
-
-\end{longtable}
+	\rowcolors{2}{grigetto}{white}
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{longtable}{C{2cm} C{12cm}}
+		\caption{Tabella di tracciamento requisito-test di unità}\\
+		\rowcolor{darkblue}
+		\textcolor{white}{\textbf{Codice Test}} & \textcolor{white}{\textbf{Metodo}}\\	
+		\endfirsthead
+		\rowcolor{darkblue}
+		\textcolor{white}{\textbf{Codice Test}} & \textcolor{white}{\textbf{Metodo}}\\	
+		\endhead
+		TUA1 & LogInFragment::checkLoginDetails()\\
+		TUA2 & LogInFragment::checkLoginDetails()\\
+		TUA3 & LoginModel::performFirebaseLogin(email:String, password:String)\\
+		TUA4 & LoginModel::performResetPassword(email:String)\\
+		TUA5 & LoginModel::performResetPassword(email:String)\\
+		TUA6 & SignUpModel::performFirebaseRegistration(email:String, password:String)\\
+		TUA7 & SignUpFragment::checkSignUpDetails()\\
+		TUA8 & SignUpFragment::checkSignUpDetails()\\
+		TUA9 & SignUpFragment::checkSignUpDetails()\\
+		TUA10 & SignUpFragment::checkSignUpDetails()\\
+		TUA11 & SignUpFragment::checkSignUpDetails()\\
+		TUA12 & SignUpFragment::checkSignUpDetails()\\
+		TUA13 & HomePageActivity::FirebaseAuth.getInstance().signOut()\\
+		TUA14 & HomeFragment::downloadList()\\
+		TUA15 & HomeFragment::onFailureDownloadList(message:String)\\
+		TUA16 & HomeFragment::downloadListWithSwipe()\\
+		TUA17 & HomeFragment::downloadListWithSwipe()\\
+		TUA18 & HomeFragment::alphabeticalOrder()\\
+		TUA19 & HomeFragment::downloadListWithSwipe()\\
+		TUA20 & HomeFragment::onOptionsItemSelected (item:MenuItem)\\
+		TUA21 & HomeFragment::onOptionsItemSelected (item:MenuItem)\\
+		TUA22 & HomeFragment::onOptionsItemSelected (item:MenuItem)\\
+		TUA23 & HomeFragment::onQueryTextChange(newText:String)\\
+		TUA24 & HomeFragment::onQueryTextChange(newText:String)\\
+		TUA25 & FragmentListenerFeatures::addOrganization(Organization organization)\\
+		TUA26 & MyStalkerListFragment::removeOrganization(position:int)\\
+		TUA27 & MyStalkerListFragment::onFailureLoadMyStalkerList()\\
+		TUA28 & HomePageActivity::setSwitchMode()\\
+		TUA29 & HomePageActivity::setSwitchMode()\\
+		TUA30 & TrackingStalker::performPlaceMovementServer(exitToken:String, type:int, Long:placeID, authID:String, userToken:String, placeAccess:PlaceAccess)\\
+		TUA31 & TrackingStalker::performPlaceMovementServer(exitToken:String, type:int, Long:placeID, authID:String, userToken:String, placeAccess:PlaceAccess)\\
+		TUA32 & ActionTabFragment::onActivityCreated(Bundle savedInstanceState)\\
+		TUA33 & OrganizationAccess::getEntranceTimeStamp()\\
+		TUA34 & PlaceAccess::getPlaceName()\\
+		TUA35 & OrganizationAccess::getTimeStay()\\
+		TUA36 & AccessHistoryFragment::DateDecreasingOrder(list:List<OrganizationAccess>)\\
+		TUA37 & AccessHistoryFragment::DateCreasingOrder(list:List<OrganizationAccess>)\\
+		TUA38 & AccessHistoryFragment::searchForDay(list:List<OrganizationAccess>)\\
+		TUA39 & AccessHistoryFragment::onFailureGetOrganizationAccessInLocal()\\
+		TUA40 & HomePageActivity::getNamePlace()\\
+		TUA41 & PlaceAccess::getTimeStay()\\
+		TUA42 & PlaceAccessFragment::onSuccessGetPlaceAccessInLocal(placeAccessList:List<PlaceAccess>)\\
+		TUA43 & PlaceAccess::getDate()\\
+		TUA44 & PlaceAccessFragment::onSuccessGetPlaceAccessInLocal(placeAccessList:List<PlaceAccess>)\\
+		TUA45 & PlaceAccess::getTimeStay()\\
+		TUA46 & AccessHistoryFragment::DateDecreasingOrder(list:List<OrganizationAccess>)\\
+		TUA47 & AccessHistoryFragment::DateCreasingOrder(list:List<OrganizationAccess>)\\
+		TUA48 & AccessHistoryFragment::searchForDay(list:List<OrganizationAccess>)\\
+		TUA49 & AccessHistoryFragment::onFailureGetOrganizationAccessInLocal()\\
+		TUA50 & PlaceAccess::getTimeStay()\\
+		TUA51 & TrackingStalker::isInsidePlace(location:Location)\\
+		TUA52 & Server::performOrganizationMovementServer(authID:String, orgID:Long, userToken:String, type:int, exitToken:String, orgAccess:OrganizationAccess)\\
+		TUA53 & TrackingStalker::isInsideOrganization(location:Location)\\
+		TUA54 & Server::performOrganizationMovementServer(authID:String, orgID:Long, userToken:String, type:int, exitToken:String, orgAccess:OrganizationAccess)\\
+		TUA55 & TrackingStalker::isInsidePlace(location:Location)\\
+		TUA56 & TrackingStalker::isInsidePlace(location:Location)\\
+		TUA57 & TrackingStalker::isInsidePlace(location:Location)\\
+		TUA58 & StalkerLDAP::performBind()\\
+		TUA59 & StalkerLDAP::performSearch()\\
+		TUA60 & StalkerLDAP::getBindDN()\\
+		TUA61 & StalkerLDAP::getBindPassword()\\
+		TUB1 & AccessApiController::getAnonymousAccessListInOrganization()\\
+		TUB2 & AccessApiController::getAnonymousAccessListInOrganization()\\
+		TUB3 & AccessApiController::getAnonymousAccessListInPlace()\\
+		TUB4 & AccessApiController::getAnonymousAccessListInPlace()\\
+		TUB5 & AccessApiController::getAuthenticatedAccessListInOrganization()\\
+		TUB6 & AccessApiController::getAuthenticatedAccessListInOrganization()\\
+		TUB7 & AccessApiController::getAuthenticatedAccessListInPlace()\\
+		TUB8 & AccessApiController::getAuthenticatedAccessListInPlace()\\
+		TUB9 & AdministratorApiController::bindAdministratorToOrganization()\\
+		TUB10 & AdministratorApiController::bindAdministratorToOrganization()\\
+		TUB11 & AdministratorApiController::createNewAdministratorInOrganization()\\
+		TUB12 & AdministratorApiController::createNewAdministratorInOrganization()\\
+		TUB13 & AdministratorApiController::getAdministratorListOfOrganization()\\
+		TUB14 & AdministratorApiController::getAdministratorListOfOrganization()\\
+		TUB15 & AdministratorApiController::getPermissionList()\\
+		TUB16 & AdministratorApiController::getPermissionList()\\
+		TUB17 & AdministratorApiController::unbindAdministratorFromOrganization()\\
+		TUB18 & AdministratorApiController::unbindAdministratorFromOrganization()\\
+		TUB19 & AdministratorApiController::updateAdministratorPermission()\\
+		TUB20 & AdministratorApiController::updateAdministratorPermission()\\
+		TUB21 & FavoriteApiController::addFavoriteOrganization()\\
+		TUB22 & FavoriteApiController::addFavoriteOrganization()\\
+		TUB23 & FavoriteApiController::getFavoriteOrganizationList()\\
+		TUB24 & FavoriteApiController::getFavoriteOrganizationList()\\
+		TUB25 & FavoriteApiController::removeFavoriteOrganization()\\
+		TUB26 & FavoriteApiController::removeFavoriteOrganization()\\
+		TUB27 & MovementApiController::trackMovementInOrganization()\\
+		TUB28 & MovementApiController::trackMovementInOrganization()\\
+		TUB29 & MovementApiController::trackMovementInPlace()\\
+		TUB30 & MovementApiController::trackMovementInPlace()\\
+		TUB31 & OrganizationApiController::getOrganization()\\
+		TUB32 & OrganizationApiController::getOrganization()\\
+		TUB33 & OrganizationApiController::getOrganizationList()\\
+		TUB34 & OrganizationApiController::getOrganizationList()\\
+		TUB35 & OrganizationApiController::requestDeletionOfOrganization()\\
+		TUB36 & OrganizationApiController::requestDeletionOfOrganization()\\
+		TUB37 & OrganizationApiController::updateOrganization()\\
+		TUB38 & OrganizationApiController::updateOrganization()\\
+		TUB39 & OrganizationApiController::updateOrganizationTrackingArea()\\
+		TUB40 & OrganizationApiController::updateOrganizationTrackingArea()\\
+		TUB41 & PlaceApiController::createNewPlace()\\
+		TUB42 & PlaceApiController::createNewPlace()\\
+		TUB43 & PlaceApiController::deletePlace()\\
+		TUB44 & PlaceApiController::deletePlace()\\
+		TUB45 & PlaceApiController::updatePlace()\\
+		TUB46 & PlaceApiController::updatePlace()\\
+		TUB47 & PlaceApiController::getPlaceListOfOrganization()\\
+		TUB48 & PlaceApiController::getPlaceListOfOrganization()\\
+		TUB49 & PresenceApiController::getOrganizationPresenceCounter()\\
+		TUB50 & PresenceApiController::getOrganizationPresenceCounter()\\
+		TUB51 & PresenceApiController::getPlacePresenceCounter()\\
+		TUB52 & PresenceApiController::getPlacePresenceCounter()\\
+		TUB53 & ReportApiController::getTimePerUserReport()\\
+		TUB54 & ReportApiController::getTimePerUserReport()\\
+		TUB55 & AdministratorServiceImpl::bindAdministratorToOrganization()\\
+		TUB56 & AdministratorServiceImpl::bindAdministratorToOrganization()\\
+		TUB57 & AdministratorServiceImpl::bindAdministratorToOrganization()\\
+		TUB58 & AdministratorServiceImpl::createNewAdministratorInOrganization()\\
+		TUB59 & AdministratorServiceImpl::createNewAdministratorInOrganization()\\
+		TUB60 & AdministratorServiceImpl::getAdministratorListOfOrganization()\\
+		TUB61 & AdministratorServiceImpl::getPermissionList()\\
+		TUB62 & AdministratorServiceImpl::updateAdministratorPermission()\\
+		TUB63 & AdministratorServiceImpl::updateAdministratorPermission()\\
+		TUB64 & AdministratorServiceImpl::unbindAdministratorFromOrganization()\\
+		TUB65 & AccessServiceImpl::getAnonymousAccessListInOrganization()\\
+		TUB66 & AccessServiceImpl::getAnonymousAccessListInOrganization()\\
+		TUB67 & AccessServiceImpl::getAnonymousAccessListInPlace()\\
+		TUB68 & AccessServiceImpl::getAnonymousAccessListInPlace()\\
+		TUB69 & AccessServiceImpl::getAuthenticatedAccessListInOrganization()\\
+		TUB70 & AccessServiceImpl::getAuthenticatedAccessListInOrganization()\\
+		TUB71 & AccessServiceImpl::getAuthenticatedAccessListInPlace()\\
+		TUB72 & AccessServiceImpl::getAuthenticatedAccessListInPlace()\\
+		TUB73 & AuthenticationServiceImpl::isWebAppAdministrator()\\
+		TUB74 & AuthenticationServiceImpl::isWebAppAdministrator()\\
+		TUB75 & AuthenticationServiceImpl::isWebAppAdministrator()\\
+		TUB76 & AuthenticationServiceImpl::isAppUser()\\
+		TUB77 & AuthenticationServiceImpl::isAppUser()\\
+		TUB78 & AuthenticationServiceImpl::isAppUser()\\
+		TUB79 & AuthenticationServiceImpl::createUser()\\
+		TUB80 & AuthenticationServiceImpl::createUser()\\
+		TUB81 & AuthenticationServiceImpl::createUser()\\
+		TUB82 & AuthenticationServiceImpl::createUser()\\
+		TUB83 & AuthenticationServiceImpl::createUser()\\
+		TUB84 & AuthenticationServiceImpl::createUser()\\
+		TUB85 & AuthenticationServiceImpl::createUser()\\
+		TUB86 & AuthenticationServiceImpl::getUserIdByEmail()\\
+		TUB87 & AuthenticationServiceImpl::getUserIdByEmail()\\
+		TUB88 & AuthenticationServiceImpl::getUserIdByEmail()\\
+		TUB89 & AuthenticationServiceImpl::getUserIdByEmail()\\
+		TUB90 & AuthenticationServiceImpl::getUserIdByEmail()\\
+		TUB91 & AuthenticationServiceImpl::getUserIdByEmail()\\
+		TUB92 & AuthenticationServiceImpl::getUserId()\\
+		TUB93 & AuthenticationServiceImpl::getUserId()\\
+		TUB94 & AuthenticationServiceImpl::getFirebaseUser()\\
+		TUB95 & AuthenticationServiceImpl::getFirebaseUser()\\
+		TUB96 & FavoriteServiceImpl::addFavoriteOrganization()\\
+		TUB97 & FavoriteServiceImpl::addFavoriteOrganization()\\
+		TUB98 & FavoriteServiceImpl::getFavoriteOrganizationList()\\
+		TUB99 & FavoriteServiceImpl::removeFavoriteOrganization()\\
+		TUB100 & FavoriteServiceImpl::getFavorite()\\
+		TUB101 & FavoriteServiceImpl::getFavorite()\\
+		TUB102 & PresenceServiceImpl::getOrganizationPresenceCounter()\\
+		TUB103 & PresenceServiceImpl::getPlacePresenceCounter()\\
+		TUB104 & MovementServiceImpl::trackMovementInOrganization()\\
+		TUB105 & MovementServiceImpl::trackMovementInOrganization()\\
+		TUB106 & MovementServiceImpl::trackMovementInOrganization()\\
+		TUB107 & MovementServiceImpl::trackMovementInOrganization()\\
+		TUB108 & MovementServiceImpl::trackMovementInOrganization()\\
+		TUB109 & MovementServiceImpl::trackMovementInPlace()\\
+		TUB110 & MovementServiceImpl::trackMovementInPlace()\\
+		TUB111 & MovementServiceImpl::trackMovementInPlace()\\
+		TUB112 & MovementServiceImpl::trackMovementInPlace()\\
+		TUB113 & MovementServiceImpl::trackMovementInPlace()\\
+		TUB114 & ReportServiceImpl::getTimePerUserReport()\\
+		TUB115 & ReportServiceImpl::getTimePerUserReport()\\
+		TUB116 & OrganizationServiceImpl::getOrganization()\\
+		TUB117 & OrganizationServiceImpl::getOrganization()\\
+		TUB118 & OrganizationServiceImpl::getOrganizationList()\\
+		TUB119 & OrganizationServiceImpl::getOrganizationList()\\
+		TUB120 & OrganizationServiceImpl::updateOrganization()\\
+		TUB121 & OrganizationServiceImpl::updateOrganization()\\
+		TUB122 & OrganizationServiceImpl::updateOrganizationTrackingArea()\\
+		TUB123 & OrganizationServiceImpl::updateOrganizationTrackingArea()\\
+		TUB124 & PlaceServiceImpl::createNewPlace()\\
+		TUB125 & PlaceServiceImpl::deletePlace()\\
+		TUB126 & PlaceServiceImpl::updatePlace()\\
+		TUB127 & PlaceServiceImpl::updatePlace()\\
+		TUB128 & PlaceServiceImpl::getPlace()\\
+		TUB129 & PlaceServiceImpl::getPlace()\\
+		TUW1 & LoginComponent::createForm() \\
+		TUW2 & LoginComponent::createForm() \\
+		TUW3 & AuthenticationService::SignWithEmailPassword() \\
+		TUW4 & AuthenticationService::ResetPassword() \\
+		TUW5 & AuthenticationService::SignOut() \\
+		TUW6 & MenuBarComponent::SetOrganization() \\
+		TUW7 & OrganizationInformationContentComponent::getName() \\
+		TUW8 & OrganizationInformationContentComponent::getImg() \\
+		TUW9 & OrganizationInformationContentComponent::getDesc() \\
+		TUW10 & OrganizationInformationContentComponent::getInd() \\
+		TUW11 & OrganizationInformationContentComponent::getLDAP() \\
+		TUW12 & ViewOrganizationTrackingAreaContentComponent::receiveMap() \\
+		TUW13 & OrganizationManagementContentComponent::setName() \\
+		TUW14 & OrganizationManagementContentComponent::setImg() \\
+		TUW15 & OrganizationManagementContentComponent::setDescr() \\
+		TUW16 & OrganizationManagementContentComponent::setInd() \\
+		TUW17 & OrganizationManagementContentComponent::setLDAP() \\
+		TUW18 & ModifyOrganizationTrackingAreaContentComponent::OnModify() \\
+		TUW19 & OrganizationManagementContentComponent::OnModify() \\
+		TUW20 & OrganizationManagementContentComponent::OnModify() \\
+		TUW21 & OrganizationManagementContentComponent::OnModify() \\
+		TUW22 & OrganizationManagementContentComponent::OnModify() \\
+		TUW23 & OrganizationManagementContentComponent::OnModify() \\
+		TUW24 & OrganizationManagementContentComponent::OnModify() \\
+		TUW25 & OrganizationManagementContentComponent::OnRemove() \\
+		TUW26 & OrganizationManagementContentComponent::OnRemove() \\
+		TUW27 & OrganizationManagementContentComponent::Reset() \\
+		TUW28 & AdministratorOrganizationDataService::setCurrentOrganizationPlaces()\\
+		TUW29 & PlaceManagementContentComponent::getName() \\
+		TUW30 & ViewOrganizationTrackingAreaContentComponent::receiveMap() \\
+		TUW31 & PlaceManagementContentComponent::setName() \\
+		TUW32 & ModifyPlaceTrackingAreaContentComponent::OnModify() \\
+		TUW33 & ModifyPlaceTrackingAreaContentComponent::OnModify() \\
+		TUW34 & PlaceManagementContentComponent::OnRemove() \\
+		TUW35 & PlaceManagementContentComponent::Reset() \\
+		TUW36 & OrganizationPresenceNumberComponent::subscribeToCounter() \\
+		TUW37 & PlacePresenceNumberComponent::subscribeToCounter() \\
+		TUW38 & AuthenticatedUserAccessesComponent::getName() \\
+		TUW39 & AuthenticatedUserAccessesComponent::getSurname() \\
+		TUW40 & AuthenticatedUserAccessesComponent::getEntranceTimestamp() \\
+		TUW41 & AuthenticatedUserAccessesComponent::sortEnterOrgAccesses(mode: number) \\
+		TUW42 & AuthenticatedUserAccessesComponent::sortEnterOrgAccesses(mode: number) \\
+		TUW43 & AuthenticatedUserAccessesComponent::sortByDay() \\
+		TUW44 & AuthenticatedUserAccessesComponent::getName() \\
+		TUW45 & AuthenticatedUserAccessesComponent::getSurname() \\
+		TUW46 & AuthenticatedUserAccessesComponent::getEntranceTimestamp() \\
+		TUW47 & TimeReportComponent::timeSpentBy(placeArrIndex: number, ordID: string) \\
+		TUW48 & TimeReportComponent::getNumberUser() \\
+		TUW49 & TimeReportComponent::timeSpentBy(placeArrIndex: number, ordID: string) \\
+		TUW50 & AuthenticatedUserAccessesComponent::ViewAccess() \\
+		TUW51 & TimeReportComponent::timeSpentBy(placeArrIndex: number, ordID: string) \\
+		TUW52 & AdministratorManagementComponent::getMail() \\
+		TUW53 & AdministratorManagementComponent::getPermission() \\
+		TUW54 & AdministratorManagementComponent::modifyPermissionsOf() \\
+		TUW55 & AdministratorManagementComponent::unbindAdminFromTheOrganization() \\
+		TUW56 & AdministratorManagementComponent::checkEmail() \\
+		TUW57 & AdministratorManagementComponent::SetupForm() \\
+		TUW58 & AdministratorManagementComponent::SetupForm() \\
+		TUW59 & AdministratorManagementComponent::SetPermission() \\
+		TUW60 & CreateAdministratorComponent::registerAdministrator() \\
+		TUW61 & CreateAdministratorComponent::registerAdministrator() \\
+		TUW62 & CreateAdministratorComponent::checkPsw() \\
+		TUW63 & CreateAdministratorComponent::Reset() \\
+		
+	\end{longtable}
 }

@@ -11,110 +11,108 @@
 \textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Stato}}\\
 \endhead
 
-TIA1 & Si verifichi che l’integrazione tra l’applicazione Android e servizi di \glo{Firebase} permetta l’autenticazione ad un utente. & NI \\
-TIA2 & Si verifichi che l’integrazione tra l’applicazione Android e servizi di \glo{Firebase} permetta la registrazione di un utente. & NI \\
-TIA3 & Si verifichi che l’integrazione tra l’applicazione Android e servizi di \glo{Firebase} permetta di effettuare il logout dell'utente. & NI \\
-TIA4 & Si verifichi che l’integrazione tra l’applicazione Android e il server LDAP permetta l’autenticazione. & NI \\
-TIA5 & Si verifichi che l’integrazione tra l’applicazione Android e i servizi di localizzazione permettano il corretto tracciamento. & NI \\
-TIA6 & Si verifichi che l’integrazione tra i servizi REST-API e \glo{backend} permetta la comunicazione fra loro. & NI \\
-TIA7 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di scaricare la lista delle organizzazioni dal \glo{backend}. & NI \\
-TIA8 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di scaricare la lista delle organizzazioni preferite dal \glo{backend}. & NI \\
-TIA9 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di aggiungere una organizzazione tra le organizzazioni preferite nel \glo{backend}. & NI \\
-TIA10 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di rimuovere una organizzazione tra le organizzazioni preferite nel \glo{backend}. & NI \\
-TIA11 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di aggiungere una organizzazione con credenziali LDAP tra le organizzazioni preferite nel \glo{backend}. & NI \\
-TIA12 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di rimuovere una organizzazione con credenziali LDAP tra le organizzazioni preferite nel \glo{backend}. & NI \\
-TIA13 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia entrato in un'organizzazione preferita ed in risposta ricevere l'exit token. & NI \\
-TIA14 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia uscito da un'organizzazione preferita e di riconsegnare l'exit token. & NI \\
-TIA15 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia entrato in un luogo di un'organizzazione preferita ed in risposta ricevere l'exit token. & NI \\
-TIA16 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia uscito da un luogo di un'organizzazione preferita e di riconsegnare l'exit token. & NI \\
-TIA17 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia entrato in un'organizzazione preferita inviando il codice di autenticazione LDAP ed in risposta ricevere l'exit token. & NI \\
-TIA18 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia uscito da un'organizzazione preferita inviando il codice di autenticazione LDAP e di riconsegnare l'exit token. & NI \\
-TIA19 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia entrato in un luogo di un'organizzazione preferita inviando il codice di autenticazione LDAP ed in risposta ricevere l'exit token. & NI \\
-TIA20 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia uscito da un luogo di un'organizzazione preferita inviando il codice di autenticazione LDAP e di riconsegnare l'exit token. & NI \\
-TIB1 & Verificare che una richiesta (qualsiasi) al backend senza token di accesso ottenuto da Firebase restituisca codice di stato HTTP 401. & NI \\
-TIB2 & Verificare che una richiesta (qualsiasi) al backend con token di accesso non valido o scaduto ottenuto da Firebase restituisca codice di stato HTTP 401. & NI \\
-TIB3 & Verificare che una richiesta (qualsiasi) al backend con token di accesso valido di un utente dell'app (non ha permessi di amministrazione $\leftrightarrow$ è un utente dell'app) ad API per gli amministratori restituisca codice di stato HTTP 403. & NI \\
-TIB4 & Verificare che una richiesta (qualsiasi) al backend con token di accesso valido di un amministratore della web-app (ha permessi di amministrazione $\rightarrow$ è un amministratore della web-app) ad API per gli utenti restituisca codice di stato HTTP 403. & NI \\
-TIB5 & Verificare che una richiesta (qualsiasi) che richieda come parametro l'identificativo di un'organizzazione che però non esiste restituisca codice di stato HTTP 404. & NI \\
-TIB6 & Verificare che una richiesta (qualsiasi) che richieda come parametro l'identificativo di un luogo che però non esiste restituisca codice di stato HTTP 404. & NI \\
-TIB7 & Verificare che una richiesta di associazione di un'amministratore (già esistente) presso un'organizzazione il cui identificativo o identificativo dell'amministratore non esistano restituisca codice di stato HTTP 404. & NI \\
-TIB8 & Verificare che una richiesta di associazione di un'amministratore (inesistente) presso un'organizzazione il cui identificativo non esiste restituisca codice di stato HTTP 404. & NI \\
-TIB9 & Verificare che una richiesta di dissociazione di un'amministratore che non ha un permesso presso l'organizzazione restituisca codice di stato HTTP 404. & NI \\
-TIB10 & Verificare che una richiesta di modifica permessi di un'amministratore (già esistente) presso un'organizzazione il cui identificativo o identificativo dell'amministratore non esistano restituisca codice di stato HTTP 404. & NI \\
-TIB11 & Verificare che una richiesta di aggiunta ai preferiti di un'organizzazione il cui identificativo non esiste restituisca codice di stato HTTP 404. & NI \\
-TIB12 & Verificare che una richiesta di rimozione dai preferiti di un preferito dalla lista dei preferiti inesistente restituisca codice di stato HTTP 404. & NI \\
-TIB13 & Verificare che una richiesta di tracciamento di un movimento presso un'organizzazione il cui identificativo non esiste restituisca codice di stato HTTP 404. & NI \\
-TIB14 & Verificare che una richiesta di tracciamento di un movimento presso un luogo il cui identificativo non esiste restituisca codice di stato HTTP 404. & NI \\
-TIB15 & Verificare che una richiesta di aggiornamento di un'organizzazione il cui identificativo non esiste restituisca codice di stato HTTP 404. & NI \\
-TIB16 & Verificare che una richiesta di creazione di un luogo il cui identificativo dell'organizzazione non esiste restituisca codice di stato HTTP 404. & NI \\
-TIB17 & Verificare che una richiesta di aggiornamento di un luogo il cui identificativo non esiste restituisca codice di stato HTTP 404. & NI \\
-TIB18 & Verificare che una richiesta di creazione o di aggiornamento dei permessi di un amministratore non sia concessa se i permessi da inserire sono maggiori di quelli dell'amministratore che li sta impostando restituendo codice di stato HTTP 400. & NI \\
-TIB19 & Verificare che una richiesta di creazione di un profilo per un amministratore della web-app con una mail già associata ad un altro profilo non sia concessa restituendo codice di stato HTTP 400. & NI \\
-TIB20 & Verificare che una richiesta di aggiornamento di un permesso per un amministratore comprendente altro oltre al livello di permesso restituisca codice di stato HTTP 400. & NI \\
-TIB21 & Verificare che una richiesta di creazione di un preferito per un utente dell'app che è già esistente restituisca codice di stato HTTP 400. & NI \\
-TIB22 & Verificare che una richiesta della lista di preferiti con un identificativo dell'utente diverso da quello del proprietario del token restituisca codice di stato HTTP 400. & NI \\
-TIB23 & Verificare che una richiesta di tracciamento di un movimento di uscita da un'organizzazione o luogo senza exitToken restituisca codice di stato HTTP 400. & NI \\
-TIB24 & Verificare che una richiesta di aggiornamento di un'organizzazione, dell'area di tracciamento di un'organizzazione o di un luogo restituisca codice di stato HTTP 400. & NI \\
-TIB25 & Verificare che una richiesta di accessi anonimi presso un'organizzazione dati degli exitToken vengano restituiti con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB26 & Verificare che una richiesta di accessi anonimi presso un luogo dati degli exitToken vengano restituiti con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB27 & Verificare che una richiesta di accessi autenticati presso un'organizzazione dati degli identificativi LDAP vengano restituiti con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB28 & Verificare che una richiesta di accessi autenticati presso un'organizzazione dati degli identificativi LDAP vengano restituiti con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB29 & Verificare che una richiesta della lista di amministratori presso un'organizzazione la restituisca assieme ad un codice di stato HTTP 200. & NI \\
-TIB30 & Verificare che una richiesta della lista di permessi presso un'organizzazione la restituisca assieme ad un codice di stato HTTP 200. & NI \\
-TIB31 & Verificare che una richiesta della lista dei preferiti di un utente dato l'identificativo dell'utente venga restituita con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB32 & Verificare che una richiesta di un'organizzazione dato il suo identificativo venga restituita con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB33 & Verificare che una richiesta della lista delle organizzazioni (non vuota) venga restituita con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB34 & Verificare che una richiesta di aggiornamento dell'organizzazione aggiorni l'organizzazione e la restituisca aggiornata con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB35 & Verificare che una richiesta di aggiornamento dell'area di tracciamento dell'organizzazione la aggiorni e la restituisca aggiornata con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB36 & Verificare che una richiesta della lista dei luoghi (non vuota) venga restituita con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB37 & Verificare che una richiesta di aggiornamento del luogo aggiorni l'organizzazione e lo restituisca aggiornato con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB38 & Verificare che una richiesta del contatore di presenze presso un'organizzazione venga restituito con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB39 & Verificare che una richiesta del contatore di presenze presso un luogo venga restituito con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB40 & Verificare che una richiesta del report di ore spese dagli utenti presso un luogo venga restituito assieme ad un codice di stato HTTP 200. & NI \\
-TIB41 & Verificare che una richiesta di aggiunta di un permesso di un amministratore presso un'organizzazione vada a buon fine restituendo il record di Permission assieme ad un codice di stato HTTP 201. & NI \\
-TIB42 & Verificare che una richiesta di creazione e aggiunta di un permesso di un amministratore presso un'organizzazione vada a buon fine restituendo il record di Permission assieme ad un codice di stato HTTP 201. & NI \\
-TIB43 & Verificare che una richiesta di aggiornamento di un permesso di un amministratore presso un'organizzazione vada a buon fine restituendo il record di Permission assieme ad un codice di stato HTTP 201. & NI \\
-TIB44 & Verificare che una richiesta di aggiunta di un preferito alla lista di organizzazioni aggiunga il preferito e lo ritorni assieme ad un codice di stato HTTP 201. & NI \\
-TIB45 & Verificare che una richiesta di tracciamento di un movimento di ingresso in un'organizzazione vada a buon fine restituendo l'istanza del movimento con l'exitToken assieme ad un codice di stato HTTP 201. & NI \\
-TIB46 & Verificare che una richiesta di tracciamento di un movimento di ingresso in un luogo vada a buon fine restituendo l'istanza del movimento con l'exitToken assieme ad un codice di stato HTTP 201. & NI \\
-TIB47 & Verificare che una richiesta di inserimento di un luogo di un'organizzazione memorizzi il luogo e lo ritorni assieme ad un codice di stato HTTP 201. & NI \\
-TIB48 & Verificare che una richiesta di tracciamento di un movimento di uscita in un'organizzazione vada a buon fine restituendo un codice di stato HTTP 202. & NI \\
-TIB49 & Verificare che una richiesta di tracciamento di un movimento di uscita in un luogo vada a buon fine restituendo un codice di stato HTTP 202. & NI \\
-TIB50 & Verificare che una richiesta di accessi anonimi presso un'organizzazione dati degli exitToken, vuota, venga restituito un codice di stato HTTP 204. & NI \\
-TIB51 & Verificare che una richiesta di accessi anonimi presso un luogo dati degli exitToken, vuota, venga restituito un codice di stato HTTP 204. & NI \\
-TIB52 & Verificare che una richiesta di accessi autenticati presso un'organizzazione dati degli identificativi LDAP, vuota, venga restituito un codice di stato HTTP 204. & NI \\
-TIB53 & Verificare che una richiesta di accessi autenticati presso un'organizzazione dati degli identificativi LDAP, vuota, venga restituito un codice di stato HTTP 204. & NI \\
-TIB54 & Verificare che una richiesta della lista di permessi presso un'organizzazione, vuota, venga restituito un codice di stato HTTP 204. & NI \\
-TIB55 & Verificare che una richiesta della lista dei preferiti di un utente, vuota, dato l'identificativo dell'utente venga restituita con successo assieme ad un codice di stato HTTP 204. & NI \\
-TIB56 & Verificare che una richiesta della lista delle organizzazioni, vuota, venga restituita con successo assieme ad un codice di stato HTTP 204. & NI \\
-TIB57 & Verificare che una richiesta della lista dei luoghi, vuota, venga restituita con successo assieme ad un codice di stato HTTP 204. & NI \\
-TIB58 & Verificare che una richiesta di aggiornamento del luogo aggiorni l'organizzazione e lo restituisca aggiornato con successo assieme ad un codice di stato HTTP 200. & NI \\
-TIB59 & Verificare che una richiesta del report di ore spese dagli utenti presso un luogo, vuoto, venga restituito assieme ad un codice di stato HTTP 204. & NI \\
-TIB60 & Verificare che una richiesta di eliminazione di un'organizzazione restituisca codice di stato HTTP 204. & NI \\
-TIB61 & Verificare che una richiesta di dissociazione di un amministratore di un'organizzazione restituisca codice di stato HTTP 204. \\
-TIB62 & Verificare che una richiesta di rimozione di un preferito lo rimuova e restituisca un codice di stato HTTP 204. & NI \\
-TIB63 & Verificare che una richiesta di rimozione di un luogo lo rimuova e restituisca un codice di stato HTTP 204. & NI \\
-TIW1 & Si verifichi l’integrazione tra l’applicazione web e servizi di \glo{Firebase} permetta l’autenticazione a un amministratore. & NI \\
-TIW2 & Si verifichi l’integrazione tra l’applicazione web e servizi di \glo{Firebase} permetta il reset della password a un amministratore. & NI \\
-TIW3 & Si verifichi l’integrazione tra applicazione web sviluppata in Angular 2+ e \glo{Firebase}.& NI \\
-TIW4 & Si verifichi l’integrazione tra l’applicazione web e il server LDAP permetta l’autenticazione.& NI \\
-TIW5 & Si verifichi l’integrazione tra REST-API e \glo{backend} permetta la comunicazione fra loro.& NI \\
-TIW6 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di recuperare la lista dei permessi che ha l’amministratore autenticato.& NI \\
-TIW7 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di recuperare la lista delle organizzazioni che ha l’amministratore autenticato.& NI \\
-TIW8 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di recuperare la lista dei luoghi di un’organizzazione che ha l’amministratore autenticato.& NI \\
-TIW9 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di monitorare gli accessi all’interno di un’organizzazione.& NI \\
-TIW10 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di monitorare gli accessi all’interno di un luogo di un’organizzazione.& NI \\
-TIW11 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di visualizzare i dati relativi a un’organizzazione ricevuti dal \glo{backend}.& NI \\
-TIW12 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di visualizzare i dati relativi a un luogo di un’organizzazione ricevuti dal \glo{backend}.& NI \\
-TIW13 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di modificare i dati relativi a un’organizzazione e inviare le modifiche al \glo{backend}.& NI \\
-TIW14 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di modificare i dati relativi a un luogo di un’organizzazione e inviare le modifiche al \glo{backend}.& NI \\
-TIW15 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di creare una nuova organizzazione.& NI \\
-TIW16 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di creare un nuovo luogo di un’organizzazione.& NI \\
-TIW17 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di creare un nuovo amministratore dell’organizzazione.& NI \\
-TIW18 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di inviare al \glo{backend} una richiesta di eliminazione di un’organizzazione.& NI \\
-TIW19 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di eliminare un luogo dell’organizzazione.& NI \\
-TIW20 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di modificare i permessi di un amministratore dell’organizzazione e salvare le modifiche nel \glo{backend}.& NI \\
-TIW21 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di eliminare un amministratore dell’organizzazione.& NI \\
+TIA1 & Si verifichi che l’integrazione tra l’applicazione Android e servizi di \glo{Firebase} permetta l’autenticazione ad un utente. & S \\
+TIA2 & Si verifichi che l’integrazione tra l’applicazione Android e servizi di \glo{Firebase} permetta la registrazione di un utente. & S \\
+TIA3 & Si verifichi che l’integrazione tra l’applicazione Android e servizi di \glo{Firebase} permetta di effettuare il logout dell'utente. & S \\
+TIA4 & Si verifichi che l’integrazione tra l’applicazione Android e il server LDAP permetta l’autenticazione. & S \\
+TIA5 & Si verifichi che l’integrazione tra l’applicazione Android e i servizi di localizzazione permettano il corretto tracciamento. & S \\
+TIA6 & Si verifichi che l’integrazione tra i servizi REST-API e \glo{backend} permetta la comunicazione fra loro. & S \\
+TIA7 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di scaricare la lista delle organizzazioni dal \glo{backend}. & S \\
+TIA8 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di scaricare la lista delle organizzazioni preferite dal \glo{backend}. & S \\
+TIA9 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di aggiungere una organizzazione tra le organizzazioni preferite nel \glo{backend}. & S \\
+TIA10 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di rimuovere una organizzazione tra le organizzazioni preferite nel \glo{backend}. & S \\
+TIA11 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di aggiungere una organizzazione con credenziali LDAP tra le organizzazioni preferite nel \glo{backend}. & S \\
+TIA12 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di rimuovere una organizzazione con credenziali LDAP tra le organizzazioni preferite nel \glo{backend}. & S \\
+TIA13 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia entrato in un'organizzazione preferita ed in risposta ricevere l'exit token. & S \\
+TIA14 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia uscito da un'organizzazione preferita e di riconsegnare l'exit token. & S \\
+TIA15 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia entrato in un luogo di un'organizzazione preferita ed in risposta ricevere l'exit token. & S \\
+TIA16 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia uscito da un luogo di un'organizzazione preferita e di riconsegnare l'exit token. & S \\
+TIA17 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia entrato in un'organizzazione preferita inviando il codice di autenticazione LDAP ed in risposta ricevere l'exit token. & S \\
+TIA18 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia uscito da un'organizzazione preferita inviando il codice di autenticazione LDAP e di riconsegnare l'exit token. & S \\
+TIA19 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia entrato in un luogo di un'organizzazione preferita inviando il codice di autenticazione LDAP ed in risposta ricevere l'exit token. & S \\
+TIA20 & Si verifichi che l’integrazione tra l’applicazione Android e REST-API permetta di avvisare il \glo{backend} qualora l'utente sia uscito da un luogo di un'organizzazione preferita inviando il codice di autenticazione LDAP e di riconsegnare l'exit token. & S \\
+TIB1 & Verificare che una richiesta (qualsiasi) al backend senza token di accesso ottenuto da Firebase restituisca codice di stato HTTP 401. & S \\
+TIB2 & Verificare che una richiesta (qualsiasi) al backend con token di accesso non valido o scaduto ottenuto da Firebase restituisca codice di stato HTTP 401. & S \\
+TIB3 & Verificare che una richiesta (qualsiasi) al backend con token di accesso valido di un utente dell'app (non ha permessi di amministrazione $\leftrightarrow$ è un utente dell'app) ad API per gli amministratori restituisca codice di stato HTTP 403. & S \\
+TIB4 & Verificare che una richiesta (qualsiasi) al backend con token di accesso valido di un amministratore della web-app (ha permessi di amministrazione $\rightarrow$ è un amministratore della web-app) ad API per gli utenti restituisca codice di stato HTTP 403. & S \\
+TIB5 & Verificare che una richiesta (qualsiasi) che richieda come parametro l'identificativo di un'organizzazione che però non esiste restituisca codice di stato HTTP 404. & S \\
+TIB6 & Verificare che una richiesta (qualsiasi) che richieda come parametro l'identificativo di un luogo che però non esiste restituisca codice di stato HTTP 404. & S \\
+TIB7 & Verificare che una richiesta di associazione di un'amministratore (già esistente) presso un'organizzazione il cui identificativo o identificativo dell'amministratore non esistano restituisca codice di stato HTTP 404. & S \\
+TIB8 & Verificare che una richiesta di associazione di un'amministratore (inesistente) presso un'organizzazione il cui identificativo non esiste restituisca codice di stato HTTP 404. & S \\
+TIB9 & Verificare che una richiesta di dissociazione di un'amministratore che non ha un permesso presso l'organizzazione restituisca codice di stato HTTP 404. & S \\
+TIB10 & Verificare che una richiesta di modifica permessi di un'amministratore (già esistente) presso un'organizzazione il cui identificativo o identificativo dell'amministratore non esistano restituisca codice di stato HTTP 404. & S \\
+TIB11 & Verificare che una richiesta di aggiunta ai preferiti di un'organizzazione il cui identificativo non esiste restituisca codice di stato HTTP 404. & S \\
+TIB12 & Verificare che una richiesta di rimozione dai preferiti di un preferito dalla lista dei preferiti inesistente restituisca codice di stato HTTP 404. & S \\
+TIB13 & Verificare che una richiesta di tracciamento di un movimento presso un'organizzazione il cui identificativo non esiste restituisca codice di stato HTTP 404. & S \\
+TIB14 & Verificare che una richiesta di tracciamento di un movimento presso un luogo il cui identificativo non esiste restituisca codice di stato HTTP 404. & S \\
+TIB15 & Verificare che una richiesta di aggiornamento di un'organizzazione il cui identificativo non esiste restituisca codice di stato HTTP 404. & S \\
+TIB16 & Verificare che una richiesta di creazione di un luogo il cui identificativo dell'organizzazione non esiste restituisca codice di stato HTTP 404. & S \\
+TIB17 & Verificare che una richiesta di aggiornamento di un luogo il cui identificativo non esiste restituisca codice di stato HTTP 404. & S \\
+TIB18 & Verificare che una richiesta di creazione o di aggiornamento dei permessi di un amministratore non sia concessa se i permessi da inserire sono maggiori di quelli dell'amministratore che li sta impostando restituendo codice di stato HTTP 400. & S \\
+TIB19 & Verificare che una richiesta di creazione di un profilo per un amministratore della web-app con una mail già associata ad un altro profilo non sia concessa restituendo codice di stato HTTP 400. & S \\
+TIB20 & Verificare che una richiesta di aggiornamento di un permesso per un amministratore comprendente altro oltre al livello di permesso restituisca codice di stato HTTP 400. & S \\
+TIB21 & Verificare che una richiesta di creazione di un preferito per un utente dell'app che è già esistente restituisca codice di stato HTTP 400. & S \\
+TIB22 & Verificare che una richiesta della lista di preferiti con un identificativo dell'utente diverso da quello del proprietario del token restituisca codice di stato HTTP 400. & S \\
+TIB23 & Verificare che una richiesta di tracciamento di un movimento di uscita da un'organizzazione o luogo senza exitToken restituisca codice di stato HTTP 400. & S \\
+TIB24 & Verificare che una richiesta di aggiornamento di un'organizzazione, dell'area di tracciamento di un'organizzazione o di un luogo restituisca codice di stato HTTP 400. & S \\
+TIB25 & Verificare che una richiesta di accessi anonimi presso un'organizzazione dati degli exitToken vengano restituiti con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB26 & Verificare che una richiesta di accessi anonimi presso un luogo dati degli exitToken vengano restituiti con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB27 & Verificare che una richiesta di accessi autenticati presso un'organizzazione dati degli identificativi LDAP vengano restituiti con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB28 & Verificare che una richiesta di accessi autenticati presso un'organizzazione dati degli identificativi LDAP vengano restituiti con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB29 & Verificare che una richiesta della lista di amministratori presso un'organizzazione la restituisca assieme ad un codice di stato HTTP 200. & S \\
+TIB30 & Verificare che una richiesta della lista di permessi presso un'organizzazione la restituisca assieme ad un codice di stato HTTP 200. & S \\
+TIB31 & Verificare che una richiesta della lista dei preferiti di un utente dato l'identificativo dell'utente venga restituita con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB32 & Verificare che una richiesta di un'organizzazione dato il suo identificativo venga restituita con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB33 & Verificare che una richiesta della lista delle organizzazioni (non vuota) venga restituita con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB34 & Verificare che una richiesta di aggiornamento dell'organizzazione aggiorni l'organizzazione e la restituisca aggiornata con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB35 & Verificare che una richiesta di aggiornamento dell'area di tracciamento dell'organizzazione la aggiorni e la restituisca aggiornata con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB36 & Verificare che una richiesta della lista dei luoghi (non vuota) venga restituita con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB37 & Verificare che una richiesta di aggiornamento del luogo aggiorni l'organizzazione e lo restituisca aggiornato con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB38 & Verificare che una richiesta del contatore di presenze presso un'organizzazione venga restituito con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB39 & Verificare che una richiesta del contatore di presenze presso un luogo venga restituito con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB40 & Verificare che una richiesta del report di ore spese dagli utenti presso un luogo venga restituito assieme ad un codice di stato HTTP 200. & S \\
+TIB41 & Verificare che una richiesta di aggiunta di un permesso di un amministratore presso un'organizzazione vada a buon fine restituendo il record di Permission assieme ad un codice di stato HTTP 201. & S \\
+TIB42 & Verificare che una richiesta di creazione e aggiunta di un permesso di un amministratore presso un'organizzazione vada a buon fine restituendo il record di Permission assieme ad un codice di stato HTTP 201. & S \\
+TIB43 & Verificare che una richiesta di aggiornamento di un permesso di un amministratore presso un'organizzazione vada a buon fine restituendo il record di Permission assieme ad un codice di stato HTTP 201. & S \\
+TIB44 & Verificare che una richiesta di aggiunta di un preferito alla lista di organizzazioni aggiunga il preferito e lo ritorni assieme ad un codice di stato HTTP 201. & S \\
+TIB45 & Verificare che una richiesta di tracciamento di un movimento di ingresso in un'organizzazione vada a buon fine restituendo l'istanza del movimento con l'exitToken assieme ad un codice di stato HTTP 201. & S \\
+TIB46 & Verificare che una richiesta di tracciamento di un movimento di ingresso in un luogo vada a buon fine restituendo l'istanza del movimento con l'exitToken assieme ad un codice di stato HTTP 201. & S \\
+TIB47 & Verificare che una richiesta di inserimento di un luogo di un'organizzazione memorizzi il luogo e lo ritorni assieme ad un codice di stato HTTP 201. & S \\
+TIB48 & Verificare che una richiesta di tracciamento di un movimento di uscita in un'organizzazione vada a buon fine restituendo un codice di stato HTTP 202. & S \\
+TIB49 & Verificare che una richiesta di tracciamento di un movimento di uscita in un luogo vada a buon fine restituendo un codice di stato HTTP 202. & S \\
+TIB50 & Verificare che una richiesta di accessi anonimi presso un'organizzazione dati degli exitToken, vuota, venga restituito un codice di stato HTTP 204. & S \\
+TIB51 & Verificare che una richiesta di accessi anonimi presso un luogo dati degli exitToken, vuota, venga restituito un codice di stato HTTP 204. & S \\
+TIB52 & Verificare che una richiesta di accessi autenticati presso un'organizzazione dati degli identificativi LDAP, vuota, venga restituito un codice di stato HTTP 204. & S \\
+TIB53 & Verificare che una richiesta della lista di permessi presso un'organizzazione, vuota, venga restituito un codice di stato HTTP 204. & S \\
+TIB54 & Verificare che una richiesta della lista dei preferiti di un utente, vuota, dato l'identificativo dell'utente venga restituita con successo assieme ad un codice di stato HTTP 204. & S \\
+TIB55 & Verificare che una richiesta della lista delle organizzazioni, vuota, venga restituita con successo assieme ad un codice di stato HTTP 204. & S \\
+TIB56 & Verificare che una richiesta della lista dei luoghi, vuota, venga restituita con successo assieme ad un codice di stato HTTP 204. & S \\
+TIB57 & Verificare che una richiesta di aggiornamento del luogo aggiorni l'organizzazione e lo restituisca aggiornato con successo assieme ad un codice di stato HTTP 200. & S \\
+TIB58 & Verificare che una richiesta del report di ore spese dagli utenti presso un luogo, vuoto, venga restituito assieme ad un codice di stato HTTP 204. & S \\
+TIB59 & Verificare che una richiesta di eliminazione di un'organizzazione restituisca codice di stato HTTP 204. & S \\
+TIB60 & Verificare che una richiesta di dissociazione di un amministratore di un'organizzazione restituisca codice di stato HTTP 204. \\
+TIB61 & Verificare che una richiesta di rimozione di un preferito lo rimuova e restituisca un codice di stato HTTP 204. & S \\
+TIB62 & Verificare che una richiesta di rimozione di un luogo lo rimuova e restituisca un codice di stato HTTP 204. & S \\
+TIW1 & Si verifichi l’integrazione tra l’applicazione web e servizi di \glo{Firebase} permetta l’autenticazione a un amministratore. & S \\
+TIW2 & Si verifichi l’integrazione tra l’applicazione web e servizi di \glo{Firebase} permetta il reset della password a un amministratore. & S \\
+TIW3 & Si verifichi l’integrazione tra applicazione web sviluppata in Angular 2+ e \glo{Firebase}.& S \\
+TIW4 & Si verifichi l’integrazione tra l’applicazione web e il server LDAP permetta l’autenticazione.& S \\
+TIW5 & Si verifichi l’integrazione tra REST-API e \glo{backend} permetta la comunicazione fra loro.& S \\
+TIW6 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di recuperare la lista dei permessi che ha l’amministratore autenticato.& S \\
+TIW7 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di recuperare la lista delle organizzazioni che ha l’amministratore autenticato.& S \\
+TIW8 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di recuperare la lista dei luoghi di un’organizzazione che ha l’amministratore autenticato.& S \\
+TIW9 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di monitorare gli accessi all’interno di un’organizzazione.& S \\
+TIW10 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di monitorare gli accessi all’interno di un luogo di un’organizzazione.& S \\
+TIW11 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di visualizzare i dati relativi a un’organizzazione ricevuti dal \glo{backend}.& S \\
+TIW12 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di visualizzare i dati relativi a un luogo di un’organizzazione ricevuti dal \glo{backend}.& S \\
+TIW13 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di modificare i dati relativi a un’organizzazione e inviare le modifiche al \glo{backend}.& S \\
+TIW14 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di modificare i dati relativi a un luogo di un’organizzazione e inviare le modifiche al \glo{backend}.& S \\
+TIW15 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di creare un nuovo luogo di un’organizzazione.& S \\
+TIW16 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di creare un nuovo amministratore dell’organizzazione.& S \\
+TIW17 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di inviare al \glo{backend} una richiesta di eliminazione di un’organizzazione.& S \\
+TIW18 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di eliminare un luogo dell’organizzazione.& S \\
+TIW19 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di modificare i permessi di un amministratore dell’organizzazione e salvare le modifiche nel \glo{backend}.& S \\
+TIW20 & Si verifichi l’integrazione tra l’applicazione web e REST-API permetta di eliminare un amministratore dell’organizzazione.& S \\
 
 
 

@@ -1,0 +1,120 @@
+\subsection{Tracciamento Requisiti - Test di Integrazione}
+{
+	\rowcolors{2}{grigetto}{white}
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{longtable}{C{2cm} C{12cm}}
+	\caption{Tabella di tracciamento requisito-test di integrazione}\\
+	\rowcolor{darkblue}
+	\textcolor{white}{\textbf{Codice Test}} & \textcolor{white}{\textbf{Metodo}}\\	
+	\endfirsthead
+	\rowcolor{darkblue}
+	\textcolor{white}{\textbf{Codice Test}} & \textcolor{white}{\textbf{Metodo}}\\	
+	\endhead
+	
+	TIA1 & LogInModel::performFirebaseLogin(email:String, password:String) \\
+	TIA2 & SignUpModel::performFirebaseRegistration(email:String, password:String)\\
+	TIA3 & HomePageActivity::FirebaseAuth.getInstance().signOut();\\
+	TIA4 & StalkerLDAP::performBind()\\
+	TIA5 & HomePageActivity::starTracking()\\
+	TIA6 & Classe ApiClient\\
+	TIA7 & Server::performDownloadOrganizationListServer(path:String, userToken:String)\\
+	TIA8 & Server::performLoadListServer(UID:String, userToken:String) \\
+	TIA9 & Server::performAddOrganizationServer(organization:Organization, UID:String, userToken:String)\\
+	TIA10 & Server::performRemoveOrganizationServer(organization:Organization, UID:String, userToken:String)\\
+	TIA11 & Server::performAddOrganizationServer(organization:Organization, UID:String, userToken:String)\\
+	TIA12 & Server::performRemoveOrganizationServer(organization:Organization, UID:String, userToken:String)\\
+	TIA13 & Server::performOrganizationMovementServer(authID:String, orgID:Long, userToken:String, type:int, exitToken:String, orgAccess:OrganizationAccess)\\
+	TIA14 & Server::performOrganizationMovementServer(authID:String, orgID:Long, userToken:String, type:int, exitToken:String, orgAccess:OrganizationAccess)\\
+	TIA15 & Server::performPlaceMovementServer(exitToken:String, type:int, placeId:Long, authID:String, userToken:String, placeAccess:PlaceAccess)\\
+	TIA16 & Server::performPlaceMovementServer(exitToken:String, type:int, placeId:Long, authID:String, userToken:String, placeAccess:PlaceAccess)\\
+	TIA17 & Server::performOrganizationMovementServer(authID:String, orgID:Long, userToken:String, type:int, exitToken:String, orgAccess:OrganizationAccess)\\
+	TIA18 & Server::performOrganizationMovementServer(authID:String, orgID:Long, userToken:String, type:int, exitToken:String, orgAccess:OrganizationAccess)\\
+	TIA19 & Server::performPlaceMovementServer(exitToken:String, type:int, placeId:Long, authID:String, userToken:String, placeAccess:PlaceAccess)\\
+	TIA20 & Server::performPlaceMovementServer(exitToken:String, type:int, placeId:Long, authID:String, userToken:String, placeAccess:PlaceAccess) \\
+	TIB1 & GET /administrator/organization/\{organizationId\} \\
+	TIB2 & POST /favorite/removefavorite \\
+	TIB3 & GET /administrator/organization/\{organizationId\} \\
+	TIB4 & POST /favorite/removefavorite \\
+	TIB5 & GET /organization/\{organizationId\} \\
+	TIB6 & GET /place/organization/\{organizationId\} \\
+	TIB7 & POST /administrator/createadministrator \\
+	TIB8 & POST /administrator/bindadministrator \\
+	TIB9 & POST /administrator/unbindadministrator \\
+	TIB10 & GET /administrator/permission/\{administratorId\} \\
+	TIB11 & POST /favorite/addfavorite \\
+	TIB12 & POST /favorite/removefavorite \\
+	TIB13 & POST /movement/track/organization \\
+	TIB14 & POST /movement/track/place \\
+	TIB15 & PUT /organization \\
+	TIB16 & POST /place \\
+	TIB17 & PUT /place \\
+	TIB18 & PATCH /administrator/updatepermission \\
+	TIB19 & POST /administrator/createadministrator \\
+	TIB20 & PATCH /administrator/updatepermission \\
+	TIB21 & POST /favorite/addfavorite \\
+	TIB22 & GET /favorite/\{userId\} \\
+	TIB23 & POST /movement/track/organization \\
+	TIB24 & PATCH /organization/\{organizationId\}/trackingArea \\
+	TIB25 & GET /presence/organization/\{organizationId\}/counter \\
+	TIB26 & GET /presence/place/\{placeId\}/counter \\
+	TIB27 & GET /access/organization/\{organizationId\}/authenticated/\{orgAuthServerIds\} \\
+	TIB28 & GET /access/place/\{placeId\}/authenticated/\{orgAuthServerIds\} \\
+	TIB29 & GET /administrator/organization/\{organizationId\} \\
+	TIB30 & GET /administrator/permission/\{administratorId\} \\
+	TIB31 & GET /favorite/\{userId\} \\
+	TIB32 & GET /organization/\{organizationId\} \\
+	TIB33 & GET /organization/\{organizationId\} \\
+	TIB34 & PUT /organization \\
+	TIB35 & PATCH /organization/\{organizationId\}/trackingArea \\
+	TIB36 & GET /place/organization/\{organizationId\} \\
+	TIB37 & PUT /place \\
+	TIB38 & GET /presence/organization/\{organizationId\}/counter \\
+	TIB39 & GET /presence/place/\{placeId\}/counter \\
+	TIB40 & GET /report/place/\{placeId\} \\
+	TIB41 & POST /administrator/bindadministrator \\
+	TIB42 & POST /administrator/bindadministrator \\
+	TIB43 & PATCH /administrator/updatepermission \\
+	TIB44 & POST /favorite/addfavorite \\
+	TIB45 & POST /movement/track/organization \\
+	TIB46 & POST /movement/track/place \\
+	TIB47 & POST /place \\
+	TIB48 & POST /movement/track/organization \\
+	TIB49 & POST /movement/track/place \\
+	TIB50 & POST /movement/track/organization \\
+	TIB51 & POST /movement/track/place \\
+	TIB52 & GET /access/organization/\{organizationId\}/authenticated/\{orgAuthServerIds\} \\
+	TIB53 & GET /access/place/\{placeId\}/authenticated/\{orgAuthServerIds\} \\
+	TIB54 & GET /favorite/\{userId\} \\
+	TIB55 & GET /organization \\
+	TIB56 & GET /place/organization/\{organizationId\} \\
+	TIB57 & PUT /place \\
+	TIB58 & GET /report/place/\{placeId\} \\
+	TIB59 & POST /organization/requestdeletion \\
+	TIB60 & POST /administrator/unbindadministrator \\
+	TIB61 & POST /favorite/removefavorite \\
+	TIB62 & DELETE /place/\{placeId\} \\
+	TIW1 & Authentication::signInWithEmailAndPassword(email:string,psw:string) \\
+	TIW2 & Authentication::sendPasswordResetEmail(email:string) \\
+	TIW3 & Authentication::authState()\\
+	TIW4 & AuthenticationServerService::getUserInfoFromAuthServer(organizationAuthenticationServerRequest: OrganizationAuthenticationServerRequest) \\
+	TIW5 & GeneralService::constructor(protected httpClient: HttpClient, basePath: string, configuration: Configuration) \\
+	TIW6 & AdministratorService::getPermissionList(administratorId: string)\\
+	TIW7 & AdministratorService:: getListOrganization(administratorId: string)\\
+	TIW8 & PlaceService::getPlaceListOfOrganization(organizationId: number)\\
+	TIW9 & PresenceService::getOrganizationPresenceCounter(organizationId: number)\\
+	TIW10 & PresenceService::getPlacePresenceCounter(organizationId: number)\\
+	TIW11 & OrganizationService::getOrganization(organizationId: number)\\
+	TIW12 & PlaceService::getPlaceListOfOrganization(organizationId: number)\\
+	TIW13 & OrganizationService::updateOrganization(organization: Organization)\\
+	TIW14 & PlaceService::updatePlace(place: Place)\\
+	TIW15 & PlaceService::createNewPlace(place: Place)\\
+	TIW16 & AdministratorService::createNewAdministratorInOrganization(administratorBindingRequest: AdministratorBindingRequest)\\
+	TIW17 & OrganizationService::requestDeletionOfOrganization(organizationDeletionRequest: OrganizationDeletionRequest)\\
+	TIW18 & PlaceService::deletePlace(placeId: number)\\
+	TIW19 & AdministratorService::updateAdministratorPermission(permission: Permission)\\
+	TIW20 & AdministratorService::unbindAdministratorFromOrganization(permission: Permission)\\
+
+
+\end{longtable}
+}

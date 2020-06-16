@@ -603,7 +603,7 @@ Si hanno quindi alcune metriche applicate al \glo{PoC} che ottengono buoni risul
 Purtroppo al fine di avere un \glo{PoC} funzionante nel tempo prestabilito non si è potuto implementare dei test perciò le metriche \textbf{MPC7} e \textbf{MPD7} risultano essere non applicabili ora.\\
 Buoni risultati si sono ottenuti nelle metriche \textbf{MPC8}, \textbf{MPC9}, \textbf{MPC10}, \textbf{MPC11} e \textbf{MPD12}, le quali mostrano che il gruppo \Gruppo{} è in linea con quanto aveva preventivato nel documento \PdP{}.
 
-\subsection{Revisione di qualifica}
+\subsection{Revisione di Qualifica}
 \subsubsection{Analisi statica dei documenti}
 In questa fase i membri del gruppo \Gruppo{} hanno analizzato i documenti mediante la tecnica dell'\glo{inspection}, abbandonando la tecnica di \glo{walkthrough} dato che il gruppo ha acquisito abbastanza esperienza, riducendo così i costi di verifica. In questo periodo sono stati corretti gli errori riscontrati e aggiornati i vari documenti portandoli a una nuova versione di rilascio.
 \subsubsection{Test}
@@ -794,7 +794,7 @@ Di seguito verranno mostrati gli esiti delle metriche che si sono riuscite a cal
   \begin{figure}[h!]
     \centering
       \includegraphics[scale=1]{Immagini/ACWP.PNG}
-    \caption{MPC11 - Complessità ciclomatica del software web-app}
+    \caption{MPC11 -  Actual cost of work performed}
   \end{figure}
 
 
@@ -805,7 +805,7 @@ Di seguito verranno mostrati gli esiti delle metriche che si sono riuscite a cal
   \begin{figure}[h!]
     \centering
       \includegraphics[scale=1]{Immagini/BCWS.PNG}
-    \caption{MPC12 - Complessità ciclomatica del software web-app}
+    \caption{MPC12 - Budgeted cost of work scheduled}
   \end{figure}
 
 
@@ -813,7 +813,7 @@ Di seguito verranno mostrati gli esiti delle metriche che si sono riuscite a cal
   \begin{figure}[h!]
     \centering
       \includegraphics[scale=1]{Immagini/BCWP.PNG}
-    \caption{MPC13 - Complessità ciclomatica del software web-app}
+    \caption{MPC13 - Budgeted cost of work performed}
   \end{figure}
 
 
@@ -823,7 +823,7 @@ Di seguito verranno mostrati gli esiti delle metriche che si sono riuscite a cal
   \begin{figure}[h!]
     \centering
       \includegraphics[scale=1]{Immagini/ScheduleVariance.PNG}
-    \caption{MPC14 - Complessità ciclomatica del software web-app}
+    \caption{MPC14 - Schedule variance}
   \end{figure}
 
 
@@ -833,7 +833,7 @@ Di seguito verranno mostrati gli esiti delle metriche che si sono riuscite a cal
   \begin{figure}[h!]
     \centering
       \includegraphics[scale=1]{Immagini/BudgetVariance.PNG}
-    \caption{MPC15 - Complessità ciclomatica del software web-app}
+    \caption{MPC15 - Budget variance}
   \end{figure}
 
 
@@ -933,5 +933,356 @@ Di seguito verranno mostrati gli esiti delle metriche che si sono riuscite a cal
   \begin{figure}[h!]
     \centering
       \includegraphics[scale=1]{Immagini/ProfInter APP.PNG}
+    \caption{MPD5 - Profondità strutturale dell’interfaccia app}
+  \end{figure}
+
+\subsection{Revisione di Accettazione}
+\subsubsection{Analisi statica dei documenti}
+In questa fase i membri del gruppo \Gruppo{} hanno analizzato i documenti mediante la tecnica dell'\glo{inspection}, ormai già adottata da tempo. In questo periodo sono stati corretti gli errori riscontrati e aggiornati i vari documenti portandoli a una nuova versione di rilascio.
+\subsubsection{Test}
+Sono stati riportati nella sezione §3 tutti i test di ogni tipo, indicando il loro stato. Tutti i test sono stati implementati e producono un esito positivo, fatta eccezione per i test d'accettazione che sono solo implementati ma che verranno eseguiti durante il collaudo.
+\subsubsection{Esiti verifiche automatizzate}
+Di seguito verranno mostrati gli esiti delle metriche che si sono riuscite a calcolare.
+
+\paragraph{MPC1 - Percentuale requisiti obbligatori soddisfatti}
+\begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/PercReqObbWAA.PNG}
+    \caption{MPC1 - Percentuale requisiti obbligatori soddisfatti web-app}
+  \end{figure}
+
+\begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/PercReqObbBEA.PNG}
+    \caption{MPC2 - Percentuale requisiti obbligatori soddisfatti backend}
+  \end{figure}
+
+\begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/PercReqObbAPPA.PNG}
+    \caption{MPC1 - Percentuale requisiti obbligatori soddisfatti app}
+  \end{figure}
+
+
+
+  \paragraph{MPC2 - Incapsulamento CBO}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CBO WAA.PNG}
+    \caption{MPC2 - Incapsulamento CBO web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CBO BEA.PNG}
+    \caption{MPC2 - Incapsulamento CBO backend}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CBO APPA.PNG}
+    \caption{MPC2 - Incapsulamento CBO app}
+  \end{figure}
+
+
+  \clearpage
+  \paragraph{MPC3 - Livello profondità gerarchia}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/LivProGer WAA.PNG}
+    \caption{MPC3 - Livello profondità gerarchia web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/LivProGer BEA.PNG}
+    \caption{MPC3 - Livello profondità gerarchia backend}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/LivProGer APPA.PNG}
+    \caption{MPC3 - Livello profondità gerarchia app}
+  \end{figure}
+
+  
+  \clearpage
+  \paragraph{MPC4 - Numero di parametri per metodo}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/MediaNumPar WAA.PNG}
+    \caption{MPC4 - Numero di parametri per metodo web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/MediaNumPar BEA.PNG}
+    \caption{MPC4 - Numero di parametri per metodo backend}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/MediaNumPar APPA.PNG}
+    \caption{MPC4 - Numero di parametri per metodo app}
+  \end{figure}
+
+
+  \clearpage
+  \paragraph{MPC5 - Linee di commento per linee di codice}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/lineeCommLineeCod WAA.PNG}
+    \caption{MPC5 - Linee di commento per linee di codice web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/lineeCommLineeCod BEA.PNG}
+    \caption{MPC5 - Linee di commento per linee di codice backend}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/lineeCommLineeCod APPA.PNG}
+    \caption{MPC5 - Linee di commento per linee di codice app}
+  \end{figure}
+
+
+
+  \clearpage
+  \paragraph{MPC6 - Indice di Gulpease}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/IndGulpA.PNG}
+    \caption{MPC6 - Indice di Gulpease}
+  \end{figure}
+
+
+
+  \clearpage
+  \paragraph{MPC7 - Lunghezza dei video tutorial}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/lunghVideoTut WAA.PNG}
+    \caption{MPC7 - Lunghezza dei video tutorial web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/lunghVideoTut APPA.PNG}
+    \caption{MPC7 - Lunghezza dei video tutorial app}
+  \end{figure}
+
+
+
+  \clearpage
+  \paragraph{MPC8 - Code coverage}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CodeCov WAA.PNG}
+    \caption{MPC8 - Code coverage web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CodeCov BEA.PNG}
+    \caption{MPD5 - Code coverage backend}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CodeCov APPA.PNG}
+    \caption{MPD5 - Code coverage app}
+  \end{figure}
+
+
+  \clearpage
+  \paragraph{MPC9 - Branch coverage}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/BranchCov WAA.PNG}
+    \caption{MPC9 - Branch coverage web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/BranchCov BEA.PNG}
+    \caption{MPC9 - Branch coverage backend}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/BranchCov APPA.PNG}
+    \caption{MPC9 - Branch coverage app}
+  \end{figure}
+
+
+
+  \clearpage
+  \paragraph{MPC10 - Statement coverage}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/StatCov WAA.PNG}
+    \caption{MPC10 - Statement coverage web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/StatCov BEA.PNG}
+    \caption{MPC10 - Statement coverage backend}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/StatCov APPA.PNG}
+    \caption{MPC10 - Statement coverage app}
+  \end{figure}
+
+
+
+  \clearpage
+  \paragraph{MPC11 - Actual cost of work performed}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/ACWPA.PNG}
+    \caption{MPC11 -  Actual cost of work performed}
+  \end{figure}
+
+
+
+  
+  \clearpage
+  \paragraph{MPC12 - Budgeted cost of work scheduled}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/BCWSA.PNG}
+    \caption{MPC12 - Budgeted cost of work scheduled}
+  \end{figure}
+
+
+  \paragraph{MPC13 - Budgeted cost of work performed}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/BCWPA.PNG}
+    \caption{MPC13 - Budgeted cost of work performed}
+  \end{figure}
+
+
+
+  \clearpage
+  \paragraph{MPC14 - Schedule variance}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/ScheduleVarianceA.PNG}
+    \caption{MPC14 - Schedule variance}
+  \end{figure}
+
+
+
+
+  \paragraph{MPC15 - Budget variance}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/BudgetVarianceA.PNG}
+    \caption{MPC15 - Budget variance}
+  \end{figure}
+
+
+
+  \clearpage
+  \paragraph{MPD1 - Complessità ciclomatica del software}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CicloCompl WAA.PNG}
+    \caption{MPD1 - Complessità ciclomatica del software web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CicloCompl BEA.PNG}
+    \caption{MPD1 - Complessità ciclomatica del software backend}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CicloCompl APPA.PNG}
+    \caption{MPD1 - Complessità ciclomatica del software app}
+  \end{figure}
+
+  \clearpage
+  \paragraph{MPD2 - Presenza di code smell}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CodeSmell WAA.PNG}
+    \caption{MPD2 - Presenza di code smell web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CodeSmell BEA.PNG}
+    \caption{MPD2 - Presenza di code smell backend}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CodeSmell APPA.PNG}
+    \caption{MPD2 - Presenza di code smell app}
+  \end{figure}
+
+
+
+  \clearpage
+  \paragraph{MPD3 - Presenza di vulnerabilità}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/Vuln WAA.PNG}
+    \caption{MPD3 - Presenza di vulnerabilità web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/Vuln BEA.PNG}
+    \caption{MPD3 - Presenza di vulnerabilità backend}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/Vuln APPA.PNG}
+    \caption{MPD3 - Presenza di vulnerabilità app}
+  \end{figure}
+
+
+
+  \clearpage
+  \paragraph{MPD4 - Presenza di bug}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/Bug WAA.PNG}
+    \caption{MPD4 - Presenza di bug web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CodeSmell BEA.PNG}
+    \caption{MPD4 - Presenza di bug backend}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/CodeSmell APPA.PNG}
+    \caption{MPD4 - Presenza di bug app}
+  \end{figure}
+
+  \clearpage
+  \paragraph{MPD5 - Profondità strutturale dell’interfaccia}
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/ProfInter WAA.PNG}
+    \caption{MPD5 - Profondità strutturale dell’interfaccia web-app}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[scale=1]{Immagini/ProfInter APPA.PNG}
     \caption{MPD5 - Profondità strutturale dell’interfaccia app}
   \end{figure}
