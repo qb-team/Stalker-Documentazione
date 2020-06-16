@@ -277,7 +277,6 @@ I passi descritti precedentemente sono mostrati nel seguente video:
 ![!Accesso alla sezione di visualizzazione degli accessi autenticati](../Immagini/web-app/enterAccessesAuth.PNG)
 <figcaption align="center"> <em> Accedere agli accessi autenticati</em> </figcaption>
 
-
 ![!Login al server aziendale](../Immagini/web-app/loginLDAP.PNG)
 <figcaption align="center"> <em> Login al server aziendale</em> </figcaption>
 
@@ -308,6 +307,8 @@ L'amministratore ha inoltre la possibilità di filtrare gli accessi visualizzati
 
 Per tornare alla selezione degli utenti di cui visualizzare gli accessi sarà sufficiente cliccare il pulsante **Torna agli utenti** situato in alto sopra il calendario.
 
+<iframe width="720" src="https://www.youtube.com/embed/9vbHJi7e2dM" frameborder="0" style="height: 540px" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## 3.1.19 Visualizzazione dei report tabellari
 
@@ -324,6 +325,8 @@ L'amministratore, qualora non lo avesse già fatto, dovrà autenticarsi al serve
 <figcaption align="center"> <em> Passaggio alla visualizzazione dei report per luogo</em> </figcaption>
 
 Per passare alla visualizzazione dei report per singolo luogo sarà sufficiente cliccare sul pulsante **Passa alla visualizzazione del report per luogo**. Per tornare ai report generali sarà sufficiente ripremere lo stesso pulsante.
+
+<iframe width="720" src="https://www.youtube.com/embed/3KWT6Zfm_iM" frameborder="0" style="height: 540px" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## 3.1.20 Creazione di un nuovo amministratore
@@ -345,6 +348,8 @@ Una volta compilati i campi sarà sufficiente cliccare sul pulsante indicato dal
 !!!attention
     L'email inserita non deve essere già registrata presso il sistema.
 
+<iframe width="720" src="https://www.youtube.com/embed/HChr6NJ6FSk" frameborder="0" style="height: 540px" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## 3.1.21 Associazione di un amministratore
 
@@ -364,6 +369,8 @@ Una volta compilati i campi sarà sufficiente cliccare sul pulsante indicato dal
 
 !!!attention
     L'email inserita deve essere già registrata presso il sistema e l'amministratore identificato da quell'email non deve essere già associato all'organizzazione in questione.
+
+<iframe width="720" src="https://www.youtube.com/embed/SrGGJQyUaSY" frameborder="0" style="height: 540px" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## 3.1.22 Gestione degli amministratori
@@ -388,9 +395,14 @@ Cliccare sul menu a tendina delL'amministratore desiderato, cliccare quindi sul 
 
 Ora sarà possibile confermare le modifiche scelte cliccando sul pulsante verde indicato dalla freccia rossa nell'immagine precedente. Qualora le modifiche venissero salvate i nuovi privilegi dell'amministratore in questione saranno quelli identificati nel cerchio rosso.
 
+<iframe width="720" src="https://www.youtube.com/embed/c1kptoftB0E" frameborder="0" style="height: 540px" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## 3.1.24 Rimozione di un amministratore
 
 ![!Rimozione di un amministratore](../Immagini/web-app/removeAdmin.PNG)
 <figcaption align="center"> <em> Rimozione di un amministratore</em> </figcaption>
 
 Per eliminare un amministratore sarà sufficiente cliccare il pulsante **Rimuovi** posizionato sulla relativa riga. L'immagine precedente indica, con la freccia rossa, il pussante per rimuovere l'admin con email *christian@admin.it*. Una volta cliccato il pulsante **Rimuovi** verrà richiesta una conferma di rimozione. Accettando la conferma si rimuoverà definitivamente l'amministratore dall'organizzazione.
+
+<iframe width="720" src="https://www.youtube.com/embed/aVoYLtnlJbg" frameborder="0" style="height: 540px" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
