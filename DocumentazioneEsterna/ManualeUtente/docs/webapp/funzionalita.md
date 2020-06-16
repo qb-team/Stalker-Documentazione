@@ -270,7 +270,8 @@ L'amministratore ha la possibilità di monitorare le presenze degli utenti, in t
  I passi descritti precedentemente sono mostrati nel seguente video:
 
 <iframe width="720" height="540" src="https://www.youtube.com/embed/094m8TnzZFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-## 3.16. Ricerca accessi degli utenti autenticati
+
+## 3.1.18 Ricerca accessi degli utenti autenticati
 
 ![!Accesso alla sezione di visualizzazione degli accessi autenticati](../Immagini/web-app/enterAccessesAuth.PNG)
 <figcaption align="center"> <em> Accedere agli accessi autenticati</em> </figcaption>
@@ -307,7 +308,7 @@ L'amministratore ha inoltre la possibilità di filtrare gli accessi visualizzati
 Per tornare alla selezione degli utenti di cui visualizzare gli accessi sarà sufficiente cliccare il pulsante **Torna agli utenti** situato in alto sopra il calendario.
 
 
-## 3.17. Visualizzazione dei report tabellari
+## 3.1.19 Visualizzazione dei report tabellari
 
 ![!Accesso alla sezione di visualizzazione dei report tabellari](../Immagini/web-app/enterAccessesReports.PNG)
 <figcaption align="center"> <em> Accedere agli accessi autenticati</em> </figcaption>
@@ -324,7 +325,7 @@ L'amministratore, qualora non lo avesse già fatto, dovrà autenticarsi al serve
 Per passare alla visualizzazione dei report per singolo luogo sarà sufficiente cliccare sul pulsante **Passa alla visualizzazione del report per luogo**. Per tornare ai report generali sarà sufficiente ripremere lo stesso pulstante.
 
 
-## 3.18. Creazione di un nuovo amministratore
+## 3.1.20 Creazione di un nuovo amministratore
 
 ![!Accesso alla sezione di creazione di un nuovo amministratore](../Immagini/web-app/accessCreateAdmin.PNG)
 <figcaption align="center"> <em> Accesso alla sezione di creazione di un nuovo amministratore</em> </figcaption>
@@ -344,7 +345,7 @@ Una volta compilati i campi sarà sufficiente cliccare sul pulsante indicato dal
     L'email inserita non deve essere già registrata presso il sistema.
 
 
-## 3.19. Associazione di un amministratore
+## 3.1.21 Associazione di un amministratore
 
 ![!Accesso alla sezione di associazione di un amministratore](../Immagini/web-app/accessBindAdmin.png)
 <figcaption align="center"> <em> Accesso alla sezione di associazione di un amministratore</em> </figcaption>
@@ -364,7 +365,7 @@ Una volta compilati i campi sarà sufficiente cliccare sul pulsante indicato dal
     L'email inserita deve essere già registrata presso il sistema e l'amministratore identificato da quell'email non deve essere già associato all'organizzazione in questione.
 
 
-## 3.19. Gestione degli amministratori
+## 3.1.22 Gestione degli amministratori
 
 ![!Accesso alla sezione di gestioni degli amministratori](../Immagini/web-app/accessManageAdmin.png)
 <figcaption align="center"> <em> Accesso alla sezione di gestione degli amministratori</em> </figcaption>
@@ -374,7 +375,7 @@ Una volta compilati i campi sarà sufficiente cliccare sul pulsante indicato dal
 
 Qualora l'organizzazione fosse a tracciamento autenticato e l'amministratore non avesse ancora fatto il login, allora sarà necessario effettuarlo per poter accedere alla sezione di gestione degli amministratori. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**.
 
-## 3.19.1. Modifica dei privilegi di un amministratore
+## 3.1.23 Modifica dei privilegi di un amministratore
 
 ![!Scelta dei nuovi privilegi di un amministratore](../Immagini/web-app/managementAdminSelectingNewPriviledges.PNG)
 <figcaption align="center"> <em> Scelta dei nuovi privilegi di un amministratore</em> </figcaption>
@@ -386,7 +387,7 @@ Cliccare sul menù a tendina delL'amministratore desiderato, cliccare quindi sul
 
 Ora sarà possibile confermare le modifiche scelte cliccando sul pulsante verde indicato dalla freccia rossa nell'immagine precedente. Qualora le modifiche venissero salvate i nuovi privilegi dell'amministratore in questione saranno quelli identificati nel cerchio rosso.
 
-## 3.19.2. Rimozione di un amministratore
+## 3.1.24 Rimozione di un amministratore
 
 ![!Rimozione di un amministratore](../Immagini/web-app/removeAdmin.PNG)
 <figcaption align="center"> <em> Rimozione di un amministratore</em> </figcaption>
