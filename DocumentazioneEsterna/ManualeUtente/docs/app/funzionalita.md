@@ -1,9 +1,8 @@
 # 2.1 Funzionalità dell'applicazione per utenti
 
-L'applicazione Android viene utilizzata dagli utenti che devono, o vogliono, fare in modo che i loro movimenti di ingresso e uscita dalle organizzazioni e dai loro luoghi vengano tracciati. Il movimento viene tracciato quando l'utente entra nell'organizzazione dalla quale ha scelto di essere tracciato avendola inserita nella lista MyStalker, ovvero gli amministratori possono monitore  l'orario di accesso/uscita. Vengono tracciati gli ingressi e le uscite dai luoghi presenti nell'organizzazione qualora siano presenti. Inoltre l'utente può controllare in tempo reale l'organizzazione e il luogo in cui si trova e il tempo di permanenza attuale.
+L'applicazione Android viene utilizzata dagli utenti che devono, o vogliono, fare in modo che i loro movimenti di ingresso e uscita dalle organizzazioni e dai loro luoghi vengano tracciati. Il movimento viene tracciato quando l'utente entra nell'organizzazione dalla quale ha scelto di essere tracciato avendola inserita nella MyStalkerList, ovvero gli amministratori possono monitore  l'orario di accesso/uscita. Vengono tracciati gli ingressi e le uscite dai luoghi presenti nell'organizzazione qualora siano presenti. Inoltre l'utente può controllare in tempo reale l'organizzazione e il luogo in cui si trova e il tempo di permanenza attuale.
 
 All'utente dell'applicazione vengono offerte tutte le funzionalità indicate in questa pagina.
-
 
 ## 2.1.1 Login
 
