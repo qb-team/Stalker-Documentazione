@@ -12,8 +12,8 @@ All'utente dell'applicazione vengono offerte tutte le funzionalità indicate in 
 L'utente può autenticarsi inserendo il proprio indirizzo e-mail e la propria password.
 Qualora l'utente si fosse dimenticato la password è possibile eseguire il reset cliccando sul testo: "Password dimenticata?" e apparirà un pop-up dove l'utente dovrà inserire l'email ricevendo così un link per cambiare la password.
 
-![!Popup reset password](../Immagini/app/PopupReset.png)
-<figcaption align="center"> <em> Popup reset password </em> </figcaption>
+![!Pop-up reset password](../Immagini/app/PopupReset.png)
+<figcaption align="center"> <em> Pop-up reset password </em> </figcaption>
 
 ## 2.1.2 Registrazione
 
@@ -72,10 +72,10 @@ L'utente può eseguire il logout aprendo il menù drawer e poi cliccando su "Log
 
 In questa sezione vi sono tutte le organizzazioni scaricate dal server. 
 
-## 2.1.7 MyStalkersList(organizzazioni preferite)
+## 2.1.7 MyStalkerList(organizzazioni preferite)
 
-![!MyStalkersList](../Immagini/app/MyStalkerList.png)
-<figcaption align="center"> <em> MyStalkersList </em> </figcaption>
+![!MyStalkerList](../Immagini/app/MyStalkerList.png)
+<figcaption align="center"> <em> MyStalkerList </em> </figcaption>
 
 In questa sezione vi sono tutte le organizzazioni da cui l'utente ha scelto di essere tracciato.
 
@@ -188,9 +188,9 @@ Scegliendo di interrompere il tracciamento l'applicazione verrà chiusa definiti
 
 <iframe width="720" src="https://www.youtube.com/embed/JdZw94_z4Q8" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-In questa sezione vi sono tutti gli accessi effettutati dall'utente nelle organizzazioni. Ogni volta che l'utente farà un accesso e un'uscita da un'organizzazione, verrà aggiunta una riga contenente le seguenti informazioni:
+In questa sezione vi sono tutti gli accessi effettuati dall'utente nelle organizzazioni. Ogni volta che l'utente farà un accesso e un'uscita da un'organizzazione, verrà aggiunta una riga contenente le seguenti informazioni:
 
-- Nome del'organizzazione;
+- Nome dell'organizzazione;
 - Data in cui si è effettuato l'accesso;
 - Orario in cui si è effettuata l'entrata nell'organizzazione;
 - Orario in cui si è effettuata l'uscita nell'organizzazione.
@@ -207,7 +207,7 @@ Tramite un tap prolungato su un'elemento della lista, apparirà un pop-up che pe
 
 <iframe width="720" src="https://www.youtube.com/embed/JdZw94_z4Q8" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Cliccando su un'elemento nella lista dello storico degli accessi, verranno visualizzati gli accessi effettutati dall'utente in tutti i luoghi presenti nell'organizzazione selezionata, con le stesse informazioni elencate nello storico accessi delle organizzazioni.
+Cliccando su un elemento nella lista dello storico degli accessi, verranno visualizzati gli accessi effettuati dall'utente in tutti i luoghi presenti nell'organizzazione selezionata, con le stesse informazioni elencate nello storico accessi delle organizzazioni.
 
 ![!Storico accessi di un luogo](../Immagini/app/StoricoAccessiLuoghi.png)
 <figcaption align="center"> <em> Storico accessi di un luogo </em> </figcaption>
