@@ -47,8 +47,9 @@ Una volta cliccato su questo bottone apparirà il menù drawer, da cui è possib
 
 - Eseguire il logout;
 - Attivare o disattivare il tracciamento tramite uno pulsante switch;
-- Scegliere se essere tracciati in modalità anonima (impostata come default) o in modalità autenticata tramite un pulsante switch;
-- Ordinare alfabeticamente la lista delle organizzazioni.
+- Scegliere se essere tracciati in modalità anonima (impostata come default) o in modalità autenticata tramite uno pulsante switch;
+- Ordinare alfabeticamente la lista delle organizzazioni;
+- Guida Stalker, cioè un link che indirizza l'utente nella pagina web dedicata alla guida dell'applicazione.
 
 Inoltre è presente una sezione denominata "info tracciamento" per visualizzare le seguenti informazioni:
 
@@ -118,7 +119,7 @@ L'utente può entrare nella pagina dedicata di un'organizzazione cliccando l'ele
 
 <iframe width="720" src="https://www.youtube.com/embed/o8ma7mRCMG4" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Tramite un tap prolungato sull'elemento della lista delle organizzazione, apparirà un pop-up che darà la possibilità all'utente di premere su uno dei due pulsanti:
+Tramite un click prolungato sull'elemento della lista delle organizzazione, apparirà un pop-up che darà la possibilità all'utente di premere su uno dei due pulsanti:
 
 - Il primo, chiamato `Maggiori informazioni`, farà accedere alla pagina di visualizzazione dell'organizzazione selezionata;
 - Il secondo, chiamato `Aggiungi a MyStalker`, permetterà di aggiungere l'organizzazione selezionata alla lista dei preferiti MyStalkerList. Qualora l'organizzazione richiedesse un'autenticazione  tramite LDAP allora con il pop-up sarà possibile visualizzare solamente il pulsante`Maggiori informazioni`.
@@ -139,7 +140,7 @@ L'utente, per poter aggiungere a MyStalkerList un'organizzazione che richiede tr
 
 <iframe width="720" src="https://www.youtube.com/embed/CP2-rYQa3-M" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Tramite un tap prolungato sull'elemento di MyStalkerList, apparirà un pop-up che permetterà rimuovere l'organizzazione dalla lista.
+Tramite un click prolungato sull'elemento di MyStalkerList, apparirà un pop-up che permetterà rimuovere l'organizzazione dalla lista.
 
 ![! Eliminazione di un'organizzazione da MyStalker](../Immagini/app/EliminazioneDaMyStlaker.png)
 <figcaption align="center"> <em> Eliminazione di un'organizzazione da MyStalker</em> </figcaption>
@@ -198,7 +199,7 @@ In questa sezione vi sono tutti gli accessi effettuati dall'utente nelle organiz
 ![!Storico accessi di un'organizzazione](../Immagini/app/StoricoAccessi.png)
 <figcaption align="center"> <em> Storico accessi di un'organizzazione </em> </figcaption>
 
-Tramite un tap prolungato su un'elemento della lista, apparirà un pop-up che permetterà di ottenere ulteriori informazioni sull'accesso dell'utente: si potrà sapere il suo tempo di permanenza all'interno dell'organizzazione selezionata e il tipo di accesso (anonimo o autenticato).
+Tramite un click prolungato su un'elemento della lista, apparirà un pop-up che permetterà di ottenere ulteriori informazioni sull'accesso dell'utente: si potrà sapere il suo tempo di permanenza all'interno dell'organizzazione selezionata e il tipo di accesso (anonimo o autenticato).
 
 ![!Maggiori informazioni degli storico accessi di un'organizzazione](../Immagini/app/StoricoAccessiMaggioreInformazioni.png)
 <figcaption align="center"> <em> Maggiori informazioni degli storico accessi di un'organizzazione </em> </figcaption>
