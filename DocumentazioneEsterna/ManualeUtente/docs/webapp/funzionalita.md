@@ -189,7 +189,7 @@ Successivamente si aprirà la schermata che viene mostrata nell'immagine qui sop
 
 Il seguente video mostra quanto spiegato precedentemente:
 
-prossimamente.....
+<iframe width="720" src="https://www.youtube.com/embed/U0e2C2NVylM" frameborder="0" style="height: 540px" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 3.1.13 Creazione di un nuovo luogo di un'organizzazione
 
