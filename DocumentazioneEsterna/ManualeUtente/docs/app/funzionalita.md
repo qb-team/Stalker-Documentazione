@@ -1,8 +1,9 @@
 # 2.1 Funzionalità dell'applicazione per utenti
 
-L'applicazione Android viene utilizzata dagli utenti che devono, o vogliono, fare in modo che i loro movimenti di ingresso e uscita dalle organizzazioni e dai loro luoghi vengano tracciati. Il movimento viene tracciato quando l'utente entra nell'organizzazione dalla quale ha scelto di essere tracciato avendola inserita nella MyStalkerList, ovvero gli amministratori possono monitore  l'orario di accesso/uscita. Vengono tracciati gli ingressi e le uscite dai luoghi presenti nell'organizzazione qualora siano presenti. Inoltre l'utente può controllare in tempo reale l'organizzazione e il luogo in cui si trova e il tempo di permanenza attuale.
+L'applicazione Android viene utilizzata dagli utenti che devono, o vogliono, fare in modo che i loro movimenti di ingresso e uscita dalle organizzazioni e dai loro luoghi vengano tracciati. Il movimento viene tracciato quando l'utente entra nell'organizzazione dalla quale ha scelto di essere tracciato avendola inserita nella lista MyStalker. Questo significa che gli amministratori possono monitore l'orario di accesso/uscita di ogni spostamento all'interno della loro azienda effettuato da ogni dipendente che usa l'applicazione. Vengono tracciati gli ingressi e le uscite dai luoghi presenti nell'organizzazione qualora siano presenti. Inoltre l'utente può controllare in tempo reale l'organizzazione e il luogo in cui si trova e il tempo di permanenza attuale.
 
 All'utente dell'applicazione vengono offerte tutte le funzionalità indicate in questa pagina.
+
 
 ## 2.1.1 Login
 
@@ -28,7 +29,7 @@ Per poter accedere nella pagina dedicata alla registrazione basta cliccare la sc
 
 ## 2.1.3 Scaricamento della lista delle organizzazioni
 
-Al primo accesso alla applicazione da parte dell'utente, verrà mostrato un pop-up per offrire la possibilità di scaricare la lista delle organizzazioni dal server di Stalker. Gli utenti avranno la possibilità di accettare o rifiutare la proposta; nel caso in cui l'utente accettasse, verranno visualizzate tutte le organizzazioni disponibili come mostrato nel paragrafo '2.1.6'.
+Al primo accesso alla applicazione da parte dell'utente, verrà mostrato un pop-up per offrire la possibilità di scaricare la lista delle organizzazioni dal server di Stalker. Gli utenti avranno la possibilità di accettare o rifiutare la proposta; nel caso in cui l'utente accettasse, verrebbero visualizzate tutte le organizzazioni disponibili, come mostrato nel paragrafo '2.1.6'.
 <div align="center">
 ![!Scarica lista delle organizzazioni](../Immagini/app/ScaricaListaOrg.png)
 <figcaption align="center"> <em> Scarica lista delle organizzazioni </em> </figcaption>
@@ -176,7 +177,7 @@ La prima volta che si utilizza questa funzionalità sul dispositivo viene visual
 
 <iframe width="720" src="https://www.youtube.com/embed/eORyA8tPDWE" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-La funzionalità di tracciamento consente all'utente di registrare gli ingressi e le uscite presso le organizzazioni e presso i loro luoghi. Il tracciamento, come già detto, avviene solamente per le organizzazioni presenti in MyStalkerList. Qualora l'organizzazione richiedesse l'autenticazione con credenziali LDAP allora è possibile cambiare, tramite uno switch presente nella pagina dell'organizzazione, la tipologia di tracciamento da anonimo (default) ad autenticato (e viceversa). La modalità di tracciamento autenticato permette alle organizzazioni di visualizzare a posteriori gli accessi (insieme di un ingresso e un'uscita da un'organizzazione o luogo) dei loro dipendenti, identificati grazie alle credenziali LDAP.
+La funzionalità di tracciamento consente all'utente di registrare gli ingressi e le uscite presso le organizzazioni e presso i loro luoghi. Il tracciamento, come già detto, avviene solamente per le organizzazioni presenti in MyStalkerList. Qualora l'organizzazione richiedesse l'autenticazione con credenziali LDAP allora è possibile cambiare, tramite uno switch presente nel menù del drawer, la tipologia di tracciamento da anonimo (default) ad autenticato (e viceversa). La modalità di tracciamento autenticato permette alle organizzazioni di visualizzare a posteriori gli accessi (insieme di un ingresso e un'uscita da un'organizzazione o luogo) dei loro dipendenti, identificati grazie alle credenziali LDAP.
 
 ## 2.1.16 Tracciamento luogo dell'organizzazione
 
