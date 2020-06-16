@@ -48,7 +48,8 @@ Una volta cliccato su questo bottone apparirà il menù drawer, da cui è possib
 - Eseguire il logout;
 - Attivare o disattivare il tracciamento tramite uno pulsante switch;
 - Scegliere se essere tracciati in modalità anonima (impostata come default) o in modalità autenticata tramite uno pulsante switch;
-- Ordinare alfabeticamente la lista delle organizzazioni.
+- Ordinare alfabeticamente la lista delle organizzazioni;
+- Guida Stalker, cioè un link che indirizza l'utente nella pagina web dedicata alla guida dell'applicazione.
 
 Inoltre è presente una sezione denominata "info tracciamento" per visualizzare le seguenti informazioni:
 
