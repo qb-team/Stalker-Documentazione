@@ -1,6 +1,6 @@
 # 2.1 Funzionalità dell'applicazione per utenti
 
-L'applicazione Android viene utilizzata dagli utenti che devono o vogliono fare in modo che i loro movimenti di ingresso e uscita dalle organizzazioni e dai loro luoghi vengano tracciati. Il movimento viene tracciato quando l'utente entra nell'organizzazione che ha scelto di essere tracciato (avendola inserita nella lista MyStalker), monitorando l'orario di accesso/uscita. Inoltre vengono tracciati i luoghi presenti nell'organizzazione qualora l'utente sia entrato.
+L'applicazione Android viene utilizzata dagli utenti che devono, o vogliono, fare in modo che i loro movimenti di ingresso e uscita dalle organizzazioni e dai loro luoghi vengano tracciati. Il movimento viene tracciato quando l'utente entra nell'organizzazione dalla quale ha scelto di essere tracciato avendola inserita nella lista MyStalker, ovvero gli amministratori possono monitore  l'orario di accesso/uscita. Vengono tracciati gli ingressi e le uscite dai luoghi presenti nell'organizzazione qualora siano presenti. Inoltre l'utente può controllare in tempo reale l'organizzazione e il luogo in cui si trova e il tempo di permanenza attuale.
 
 All'utente dell'applicazione vengono offerte tutte le funzionalità indicate in questa pagina.
 
@@ -10,7 +10,7 @@ All'utente dell'applicazione vengono offerte tutte le funzionalità indicate in 
 <iframe width="720" src="https://www.youtube.com/embed/NkVPdpIPZNs" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 L'utente può autenticarsi inserendo il proprio indirizzo e-mail e la propria password.
-Qualora l'utente si fosse dimenticato la password è possibile eseguire il reset cliccando sul testo: "Password dimenticata?" e apparirà un pop-up dove l'utente dovrà inserire l'email ricevendo così un link per cambiare la password.
+Qualora l'utente si fosse dimenticato la password è possibile eseguire il reset cliccando sul testo: **"Password dimenticata?"** e apparirà un pop-up dove l'utente dovrà inserire l'email ricevendo così un link per cambiare la password.
 
 ![!Pop-up reset password](../Immagini/app/PopupReset.png)
 <figcaption align="center"> <em> Pop-up reset password </em> </figcaption>
@@ -19,9 +19,9 @@ Qualora l'utente si fosse dimenticato la password è possibile eseguire il reset
 
 <iframe width="720" src="https://www.youtube.com/embed/5hrvVSfxrr8" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'utente ha la possibilità di registrarsi inserendo la propria e-mail personale, la password con la necessità di confermarla e accettando le condizioni d'uso di Stalker. 
+L'utente ha la possibilità di registrarsi inserendo la propria e-mail personale, la password (con la necessità di confermarla per sicurezza) e accettando le condizioni d'uso di Stalker. 
 
-Per poter accedere nella pagina dedicata alla registrazione basta cliccare la scritta "Clicca qui" nella schermata di login.
+Per poter accedere nella pagina dedicata alla registrazione basta cliccare la scritta **"Clicca qui"** nella schermata di login.
 
 ![!Pulsante per la registrazione](../Immagini/app/PulsanteRegistrati.png)
 <figcaption align="center"> <em> Pulsante per la registrazione </em> </figcaption>
@@ -29,12 +29,12 @@ Per poter accedere nella pagina dedicata alla registrazione basta cliccare la sc
 
 ## 2.1.3 Scaricamento della lista delle organizzazioni
 
-Al primo accesso alla applicazione da parte dell'utente, verrà mostrato un pop-up per richiedere la possibilità di scaricare la lista delle organizzazioni dal server di Stalker. Gli utenti avranno la possibilità di accettare o rifiutare la proposta; nel caso in cui l'utente accettasse, verranno visualizzate tutte le organizzazioni disponibili come mostrato nel paragrafo '2.1.6'.
+Al primo accesso alla applicazione da parte dell'utente, verrà mostrato un pop-up per offrire la possibilità di scaricare la lista delle organizzazioni dal server di Stalker. Gli utenti avranno la possibilità di accettare o rifiutare la proposta; nel caso in cui l'utente accettasse, verranno visualizzate tutte le organizzazioni disponibili come mostrato nel paragrafo '2.1.6'.
 
 ![!Scarica lista delle organizzazioni](../Immagini/app/ScaricaListaOrg.png)
 <figcaption align="center"> <em> Scarica lista delle organizzazioni </em> </figcaption>
 
-In seguito c'è anche la possibilità di scaricare la lista effettuando uno *Swipe down* nel Home page.
+In seguito c'è anche la possibilità di scaricare la lista effettuando uno *Swipe down* nella Home page.
 
 ## 2.1.4 Menù drawer
 
@@ -47,7 +47,7 @@ Una volta cliccato su questo bottone apparirà il menù drawer, da cui è possib
 
 - Eseguire il logout;
 - Attivare o disattivare il tracciamento tramite uno pulsante switch;
-- Scegliere se essere tracciati in modalità anonima (impostata come default) o in modalità autenticata tramite uno pulsante switch;
+- Scegliere se essere tracciati in modalità anonima (impostata come default) o in modalità autenticata tramite un pulsante switch;
 - Ordinare alfabeticamente la lista delle organizzazioni.
 
 Inoltre è presente una sezione denominata "info tracciamento" per visualizzare le seguenti informazioni:
@@ -63,7 +63,7 @@ Inoltre è presente una sezione denominata "info tracciamento" per visualizzare 
 
 <iframe width="720" src="https://www.youtube.com/embed/sD7La3a569s" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'utente può eseguire il logout aprendo il menù drawer e poi cliccando su "Logout".
+L'utente può eseguire il logout aprendo il menù drawer e poi cliccando su **Logout**.
 
 ## 2.1.6 Lista delle organizzazioni
 
@@ -82,13 +82,13 @@ In questa sezione vi sono tutte le organizzazioni da cui l'utente ha scelto di e
 ![!Organizzazione con autenticazione aziendale](../Immagini/app/AuthenticateOrganization.png)
 <figcaption align="center"> <em> Organizzazione con autenticazione aziendale </em> </figcaption>
 
-Se un'organizzazione richiede l'autenticazione aziendale per poter tracciare l'utente, vicino al nome sarà presente un simbolo di un lucchetto per indicare tale caratteristica.
+Se un'organizzazione richiede l'autenticazione aziendale per poter tracciare l'utente, vicino al nome sarà presente un simbolo di un lucchetto per indicare tale necessità.
 
 ## 2.1.8 Ordinamento alfabetico della lista delle organizzazioni
 
 <iframe width="720" src="https://www.youtube.com/embed/aZ3fPGN_Oj8" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'utente può eseguire l'ordinamento alfabetico della lista delle organizzazioni aprendo il menù drawer e cliccando successivamente su `Ordinamento Alfabetico`.
+L'utente può eseguire l'ordinamento alfabetico della lista delle organizzazioni aprendo il menù drawer e cliccando successivamente su **Ordinamento Alfabetico**.
 
 ![!Ordinamento alfabetico](../Immagini/app/OrdinamentoAlfabetico.png)
 <figcaption align="center"> <em> Ordinamento alfabetico </em> </figcaption>
@@ -112,7 +112,7 @@ In alto a destra è situata la barra principale dell'applicazione e vi è una se
 ![! Pagina dedicata all'organizzazione](../Immagini/app/PaginaOrg.png)
 <figcaption align="center"> <em> Pagina dedicata all'organizzazione </em> </figcaption>
 
-L'utente può entrare nella pagina dedicata di un'organizzazione cliccando l'elemento della lista ad essa appartenente. Al suo interno è possibile visualizzare il nome dell'organizzazione, l'immagine di anteprima, una descrizione e un pulsante `Autenticazione` qualora l'organizzazione richiedesse un'autenticazione aziendale tramite LDAP.
+L'utente può entrare nella pagina dedicata di un'organizzazione cliccando l'elemento della lista con il nome di quella organizzazione. Al suo interno è possibile visualizzare il nome dell'organizzazione, l'immagine di anteprima, una descrizione e un pulsante `Autenticazione` qualora l'organizzazione richiedesse un'autenticazione aziendale tramite LDAP.
 
 ## 2.1.11 Aggiunta organizzazione in MyStalkerList
 
@@ -121,16 +121,16 @@ L'utente può entrare nella pagina dedicata di un'organizzazione cliccando l'ele
 Tramite un tap prolungato sull'elemento della lista delle organizzazione, apparirà un pop-up che darà la possibilità all'utente di premere su uno dei due pulsanti:
 
 - Il primo, chiamato `Maggiori informazioni`, farà accedere alla pagina di visualizzazione dell'organizzazione selezionata;
-- Il secondo, chiamato `Aggiungi a MyStalker`, permetterà di aggiungere l'organizzazione selezionata alla lista dei preferiti MyStalkerList. Qualora l'organizzazione richiedesse un'autenticazione presso l'organizzazione (tramite LDAP) allora con il pop-up sarà possibile visualizzarne solamente il contenuto.
+- Il secondo, chiamato `Aggiungi a MyStalker`, permetterà di aggiungere l'organizzazione selezionata alla lista dei preferiti MyStalkerList. Qualora l'organizzazione richiedesse un'autenticazione  tramite LDAP allora con il pop-up sarà possibile visualizzare solamente il pulsante`Maggiori informazioni`.
 
 ![! Aggiunta di un'organizzazione in MyStalkerList ](../Immagini/app/MaggioriInformazioni-AggiungiAMyStalker.png)
 <figcaption align="center"> <em> Aggiunta di un'organizzazione in MyStalkerList </em> </figcaption>
 
-## 2.1.12 Autenticazione presso l'organizzazione LDAP e aggiunta di un'organizzazione che richiede tracciamento autenticato in MyStalkerList
+## 2.1.12 Autenticazione e aggiunta di un'organizzazione che richiede tracciamento autenticato in MyStalkerList
 
 <iframe width="720" src="https://www.youtube.com/embed/8592HpcfZx0" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-L'utente, per poter aggiungere a MyStalkerList un'organizzazione che richiede tracciamento autenticato, dovrà prima accedere alla rispettiva pagina dedicata autenticandosi tramite le proprie credenziali LDAP. Qualora l'autenticazione avvenisse con successo, l'organizzazione verrà aggiunta a MyStalkerList.
+L'utente, per poter aggiungere a MyStalkerList un'organizzazione che richiede tracciamento autenticato, dovrà accedere alla pagina con le informazioni dell'organizzazione nella quale sarà presente un pulsante `Autenticazione`, premuto il pulsante basterà inserire le proprie credenziali LDAP. Qualora l'autenticazione avvenisse con successo, l'organizzazione verrà aggiunta a MyStalkerList.
 
 ![!Autenticazione di un'organizzazione aziendale](../Immagini/app/Pop-upLDAP.png)
 <figcaption align="center"> <em> Autenticazione di un'organizzazione aziendale </em> </figcaption>
@@ -148,13 +148,13 @@ Tramite un tap prolungato sull'elemento di MyStalkerList, apparirà un pop-up ch
 
 <iframe width="720" src="https://www.youtube.com/embed/aXBl3tfzzhE" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-La funzionalità del tracciamento sarà possibile attivarla attraverso lo switch collocato nel menù del drawer. Di default è settata con modalità anonima però, tramite uno switch del pulsante, l'utente passa in modalità di tracciamento autenticata. In questo gli amministratori di MyStalker hanno la possibilità di sapere l'identità dell'utente.
+La funzionalità del tracciamento sarà possibile attivarla attraverso lo switch collocato nel menù del drawer. Di default è settata con modalità anonima, però, tramite uno switch del pulsante, l'utente può passare in modalità di tracciamento autenticata. In questo modo gli amministratori di MyStalker hanno la possibilità di sapere l'identità (tramite le credenziali LDAP) dell'utente che effettua i movimenti all'interno della loro organizzazione.
 
 
 ![!Modalità di tracciamento anonima o autenticata](../Immagini/app/modalitaAnonimaAutenticata.png)
 <figcaption align="center"> <em> Modalità di tracciamento anonima o autenticata </em> </figcaption>
 
-La prima volta che si utilizza questa funzionalità sul dispositivo viene visualizzato un pop-up in cui l'utente dovrà accettare la richiesta del sistema per poter accedere alle funzionalità di geolocalizzazione del dispositivo.
+La prima volta che si utilizza questa funzionalità sul dispositivo viene visualizzato un pop-up in cui l'utente dovrà accettare la richiesta del sistema per poter accedere alle funzionalità di geolocalizzazione.
 
 ![!Permessi tracciamento](../Immagini/app/PermessiTracciamento.png)
 <figcaption align="center"> <em> Pop-up di accettazione permessi per il tracciamento </em> </figcaption>
@@ -163,7 +163,7 @@ La prima volta che si utilizza questa funzionalità sul dispositivo viene visual
 
 <iframe width="720" src="https://www.youtube.com/embed/eORyA8tPDWE" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-La funzionalità di tracciamento consente all'utente di tracciare gli ingressi e le uscite presso le organizzazioni e presso i loro luoghi. Il tracciamento, come già detto, avviene solamente per le organizzazioni presenti in MyStalkerList. Qualora l'organizzazione richiedesse l'autenticazione con credenziali dell'organizzazione (LDAP) allora è possibile cambiare, tramite uno switch presente nella pagina dell'organizzazione, la tipologia di tracciamento da anonimo (default) ad autenticato (e viceversa). La modalità di tracciamento autenticato permette alle organizzazioni di visualizzare a posteriori gli accessi (insieme di un ingresso e un'uscita da un'organizzazione o luogo) degli utenti che le hanno aggiunte a MyStalkerList.
+La funzionalità di tracciamento consente all'utente di registrare gli ingressi e le uscite presso le organizzazioni e presso i loro luoghi. Il tracciamento, come già detto, avviene solamente per le organizzazioni presenti in MyStalkerList. Qualora l'organizzazione richiedesse l'autenticazione con credenziali LDAP allora è possibile cambiare, tramite uno switch presente nella pagina dell'organizzazione, la tipologia di tracciamento da anonimo (default) ad autenticato (e viceversa). La modalità di tracciamento autenticato permette alle organizzazioni di visualizzare a posteriori gli accessi (insieme di un ingresso e un'uscita da un'organizzazione o luogo) dei loro dipendenti, identificati grazie alle credenziali LDAP.
 
 ## 2.1.16 Tracciamento luogo dell'organizzazione
 
