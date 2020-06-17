@@ -57,7 +57,8 @@ Inoltre è presente una sezione denominata "info tracciamento" per visualizzare 
 
 - Un messaggio che indica all'utente se si trova fuori o all'interno di un'organizzazione. In quest'ultimo caso verrà indicato il nome dell'organizzazione in cui si è presenti;
 - Un messaggio che indica all'utente se si trova fuori o all'interno di un luogo. In quest'ultimo caso verrà indicato il nome del luogo in cui si è presenti;
-- Il tempo di permanenza dell'utente all'interno di un'organizzazione. Se l'utente si trova al di fuori di un'organizzazione, il tempo sarà indicato con "00:00:00".
+- Il tempo di permanenza dell'utente all'interno di un'organizzazione. Se l'utente si trova al di fuori di un'organizzazione, il tempo sarà indicato con "00:00:00";
+- Il tempo di permanenza dell'utente all'interno di un luogo. Se l'utente si trova al di fuori di un luogo, il tempo sarà indicato con "00:00:00".
 <div align="center">
 ![!Menu drawer](../Immagini/app/DrawerMenu.png)
 <figcaption align="center"> <em> Menù drawer </em> </figcaption>
@@ -105,7 +106,7 @@ L'utente può eseguire l'ordinamento alfabetico della lista delle organizzazioni
 
 <iframe width="720" src="https://www.youtube.com/embed/bB4VtZd_pLY" frameborder="0" style="height: 540px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-In alto a destra è situata la barra principale dell'applicazione e vi è una sezione di ricerca. Con essa è possibile eseguire ricerche testuali per filtrare e visualizzare la lista delle organizzazioni. Ci sono diverse modalità:
+Nella lista delle organizzazioni e nella lista MyStalker, in alto a destra vi è situata una sezione per la funzionalità di ricerca. Con essa è possibile eseguire ricerche testuali per filtrare e visualizzare una lista personalizzata delle organizzazioni. Ci sono diverse modalità:
 
 - Ricerca per nome (impostata come default);
 - Ricerca per città;
@@ -114,6 +115,16 @@ In alto a destra è situata la barra principale dell'applicazione e vi è una se
 <div align="center">
 ![!Ricerca](../Immagini/app/Ricerca.png)
 <figcaption align="center"> <em> Ricerca </em> </figcaption>
+</div>
+
+Anche nella sezione dedicata allo storico accessi vi è situato un comando che permetterà di accedere ad una distinta funzionalità di ricerca. Essa consentirà di:
+
+- ottenere la lista degli accessi riordinata per data in ordine crescente;
+- ottenere la lista degli accessi riordinata per data in ordine decrescente;
+- ottenere gli accessi presso un'organizzazione in un giorno specifico.
+<div align="center">
+![!Ricerca storico accessi](../Immagini/app/ricercaStoricoAccessi.png)
+<figcaption align="center"> <em> Ricerca storico accessi</em> </figcaption>
 </div>
 
 ## 2.1.10 Visualizzazione pagina organizzazione
