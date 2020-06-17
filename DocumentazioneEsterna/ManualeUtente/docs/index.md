@@ -15,7 +15,7 @@ Il prodotto **Stalker** è formato dalle parti:
 
 -   [App utenti](/app/funzionalita/);
 -   [Web-app amministratori](/webapp/funzionalita/);
--   [Backend](/backend/funzionalita/).
+-   Backend.
 
 ## 1.3 Scopo del prodotto 
 
