@@ -277,10 +277,10 @@ I passi descritti precedentemente sono mostrati nel seguente video:
 ![!Accesso alla sezione di visualizzazione degli accessi autenticati](../Immagini/web-app/enterAccessesAuth.PNG)
 <figcaption align="center"> <em> Accedere agli accessi autenticati</em> </figcaption>
 
-![!Login al server aziendale](../Immagini/web-app/loginLDAP.PNG)
-<figcaption align="center"> <em> Login al server aziendale</em> </figcaption>
+![!Login al server dell'organizzazione](../Immagini/web-app/loginLDAP.PNG)
+<figcaption align="center"> <em> Login al server dell'organizzazione</em> </figcaption>
 
-L'amministratore, qualora non lo avesse già fatto, dovrà autenticarsi al server aziendale per accedere alla visualizzazione degli accessi da parte degli utenti autenticati. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**.
+L'amministratore, qualora non lo avesse già fatto, dovrà autenticarsi al server dell'organizzazione per accedere alla visualizzazione degli accessi da parte degli utenti autenticati. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**.
 
 ![!Selezione degli utenti da visualizzare](../Immagini/web-app/authAccessesOrgSELECT.PNG)
 <figcaption align="center"> <em> Selezione degli utenti da visualizzare</em> </figcaption>
@@ -316,10 +316,10 @@ Per tornare alla selezione degli utenti di cui visualizzare gli accessi sarà su
 <figcaption align="center"> <em> Accedere agli accessi autenticati</em> </figcaption>
 
 
-![!Login al server aziendale](../Immagini/web-app/loginLDAP.PNG)
-<figcaption align="center"> <em> Login al server aziendale</em> </figcaption>
+![!Login al server dell'organizzazione](../Immagini/web-app/loginLDAP.PNG)
+<figcaption align="center"> <em> Login al server dell'organizzazione</em> </figcaption>
 
-L'amministratore, qualora non lo avesse già fatto, dovrà autenticarsi al server aziendale per accedere alla visualizzazione dei report tabellari. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**.
+L'amministratore, qualora non lo avesse già fatto, dovrà autenticarsi al server dell'organizzazione per accedere alla visualizzazione dei report tabellari. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**.
 
 ![!LPassaggio alla visualizzazione dei report per luogo](../Immagini/web-app/toggleReportView.PNG)
 <figcaption align="center"> <em> Passaggio alla visualizzazione dei report per luogo</em> </figcaption>
@@ -334,8 +334,8 @@ Per passare alla visualizzazione dei report per singolo luogo sarà sufficiente 
 ![!Accesso alla sezione di creazione di un nuovo amministratore](../Immagini/web-app/accessCreateAdmin.PNG)
 <figcaption align="center"> <em> Accesso alla sezione di creazione di un nuovo amministratore</em> </figcaption>
 
-![!Login al server aziendale](../Immagini/web-app/loginLDAP.PNG)
-<figcaption align="center"> <em> Login al server aziendale</em> </figcaption>
+![!Login al server dell'organizzazione](../Immagini/web-app/loginLDAP.PNG)
+<figcaption align="center"> <em> Login al server dell'organizzazione</em> </figcaption>
 
 Qualora l'organizzazione fosse a tracciamento autenticato e l'amministratore non avesse ancora fatto il login, allora sarà necessario effettuarlo per poter accedere alla creazione di un amministratore. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**.
 
@@ -356,8 +356,8 @@ Una volta compilati i campi sarà sufficiente cliccare sul pulsante indicato dal
 ![!Accesso alla sezione di associazione di un amministratore](../Immagini/web-app/accessBindAdmin.png)
 <figcaption align="center"> <em> Accesso alla sezione di associazione di un amministratore</em> </figcaption>
 
-![!Login al server aziendale](../Immagini/web-app/loginLDAP.PNG)
-<figcaption align="center"> <em> Login al server aziendale</em> </figcaption>
+![!Login al server dell'organizzazione](../Immagini/web-app/loginLDAP.PNG)
+<figcaption align="center"> <em> Login al server dell'organizzazione</em> </figcaption>
 
 Qualora l'organizzazione fosse a tracciamento autenticato e l'amministratore non avesse ancora fatto il login, allora sarà necessario effettuarlo per poter accedere alla sezione di associazione di un amministratore. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**.
 
@@ -378,8 +378,8 @@ Una volta compilati i campi sarà sufficiente cliccare sul pulsante indicato dal
 ![!Accesso alla sezione di gestioni degli amministratori](../Immagini/web-app/accessManageAdmin.png)
 <figcaption align="center"> <em> Accesso alla sezione di gestione degli amministratori</em> </figcaption>
 
-![!Login al server aziendale](../Immagini/web-app/loginLDAP.PNG)
-<figcaption align="center"> <em> Login al server aziendale</em> </figcaption>
+![!Login al server dell'organizzazione](../Immagini/web-app/loginLDAP.PNG)
+<figcaption align="center"> <em> Login al server dell'organizzazione</em> </figcaption>
 
 Qualora l'organizzazione fosse a tracciamento autenticato e l'amministratore non avesse ancora fatto il login, allora sarà necessario effettuarlo per poter accedere alla sezione di gestione degli amministratori. Sarà sufficiente inserire le credenziali nel form visualizzato e quindi cliccare sul pulsante **Login**.
 

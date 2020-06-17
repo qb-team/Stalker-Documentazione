@@ -86,11 +86,11 @@ In questa sezione vi sono tutte le organizzazioni scaricate dal server.
 
 In questa sezione vi sono tutte le organizzazioni da cui l'utente ha scelto di essere tracciato.
 <div align="center">
-![!Organizzazione con autenticazione aziendale](../Immagini/app/AuthenticateOrganization.png)
-<figcaption align="center"> <em> Organizzazione con autenticazione aziendale </em> </figcaption>
+![!Organizzazione con autenticazione LDAP](../Immagini/app/AuthenticateOrganization.png)
+<figcaption align="center"> <em> Organizzazione con autenticazione LDAP </em> </figcaption>
 </div>
 
-Se un'organizzazione richiede l'autenticazione aziendale per poter tracciare l'utente, vicino al nome sarà presente un simbolo di un lucchetto per indicare tale necessità.
+Se un'organizzazione richiede l'autenticazione tramite LDAP per poter tracciare l'utente, vicino al nome sarà presente un simbolo di un lucchetto per indicare tale necessità.
 
 ## 2.1.8 Ordinamento alfabetico della lista delle organizzazioni
 
@@ -133,7 +133,7 @@ Anche nella sezione dedicata allo storico accessi vi è situato un comando che p
 <figcaption align="center"> <em> Pagina dedicata all'organizzazione </em> </figcaption>
 </div>
 
-L'utente può entrare nella pagina dedicata di un'organizzazione cliccando l'elemento della lista con il nome di quella organizzazione. Al suo interno è possibile visualizzare il nome dell'organizzazione, l'immagine di anteprima, una descrizione e un pulsante `Autenticazione` qualora l'organizzazione richiedesse un'autenticazione aziendale tramite LDAP.
+L'utente può entrare nella pagina dedicata di un'organizzazione cliccando l'elemento della lista con il nome di quella organizzazione. Al suo interno è possibile visualizzare il nome dell'organizzazione, l'immagine di anteprima, una descrizione e un pulsante `Autenticazione` qualora l'organizzazione richiedesse un'autenticazione tramite LDAP.
 
 ## 2.1.11 Aggiunta organizzazione in MyStalkerList
 
