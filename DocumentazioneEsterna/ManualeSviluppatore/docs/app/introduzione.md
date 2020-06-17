@@ -20,11 +20,11 @@ Nella sezione "Impostazioni tracciamento" del menù è possibile avviare il trac
 Di default la ricerca è impostata per eseguire delle ricerche sui nomi delle organizzazioni, ma si può anche cambiare tale funzione servendosi del menù di filtraggio in alto a destra nello schermo. I filtri di ricerca funzionano tramite mutua esclusione ed è possibile scegliere questi campi: nome, città, nazione (selezionabile tramite pop-up scrollabile), organizzazioni anonime (stampa il risultato dopo la selezione) e organizzazioni autenticate (stampa il risultato dopo la selezione);
 
 - **Visualizzazione pagina organizzazione**: L'utente può entrare nella pagina dedicata di un'organizzazione in due diversi modi: 
-    - cliccando l'elemento della lista ad essa appartenente; 
-    - tenendo premuto su un elemento della lista apparirà un pop-up che permetterà di cliccare sul pulsante 'Maggiori informazioni' e accedere così alla visualizzazione dell'organizzazione selezionata. 
+    - Cliccando l'elemento della lista ad essa appartenente; 
+    - Tenendo premuto su un elemento della lista apparirà un pop-up che permetterà di cliccare sul pulsante 'Maggiori informazioni' e accedere così alla visualizzazione dell'organizzazione selezionata. 
     
     Al suo interno è possibile visualizzare il nome dell'organizzazione, una descrizione, l'immagine di anteprima e un pulsante che se premuto mostrerà l'ultimo accesso effettuato dall'utente all'interno dell'organizzazione. 
-    Un'organizzazione che richiede un'autenticazione aziendale avrà in aggiunta il pulsante 'autenticazione' che, se cliccato, visualizzerà un pop-up per poter inserire le credenziali LDAP;
+    Un'organizzazione che richiede un'autenticazione aziendale avrà in aggiunta il pulsante Autenticazione' che, se cliccato, visualizzerà un pop-up per poter inserire le credenziali LDAP;
  
 - **Aggiunta organizzazione nella lista MyStalker (lista preferiti)**: L'utente, tenendo premuto su un elemento della lista delle organizzazioni fa apparire un pop-up che permette di aggiungere l'organizzazione selezionata nella lista MyStalker, o più semplicemente visualizzarne il contenuto. Se l'organizzazione richiede un'autenticazione aziendale (tramite LDAP) allora con il pop-up è possibile solamente visualizzarne il contenuto. Una volta avuto accesso alla pagina dedicata dell'organizzazione bisogna autenticarsi tramite credenziali LDAP. Se l'autenticazione avviene con successo, tale organizzazione compare nella lista MyStalker;
 

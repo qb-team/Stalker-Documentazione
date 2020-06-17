@@ -170,7 +170,6 @@ La classe ActionTabFragment offre i seguenti metodi:
 
 - `disableScroll(enable: boolean)` : Metodo che impedisce all'utente di passare da un tab all'altro.
 
-___
 ## 2.6.7 Home 
 ![!HomeFragment](../Immagini/App/Classi/HomeFragment.jpg "Diagramma della classe Home")
 <figcaption align="center"> <em> Diagramma della classe Home</em> </figcaption>
@@ -262,7 +261,7 @@ La classe `MyStalkerListFragment` offre i seguenti metodi:
 - `organizationIsPresentInList(orgName: String)` : Controlla se esiste un'organizzazione data una stringa;
 
 - `onBackPressed()`: Si occupa di fa ritornare l'utente alla precedente Activity/Fragment.
-___
+
 ## 2.6.9 Standard Organization
 ![!StandardOrganizationFragment](../Immagini/App/Classi/StandardOrganizationFragment.jpg "Diagramma della classe Standard Organization")
 <figcaption align="center"> <em> Diagramma della classe Standard Organization</em> </figcaption>

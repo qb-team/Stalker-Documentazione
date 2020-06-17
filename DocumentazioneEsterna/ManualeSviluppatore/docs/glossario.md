@@ -50,7 +50,7 @@ In ingegneria del software è una pratica che si applica in contesti in cui lo s
 È un progetto open source che automatizza il deployment di applicazioni all'interno di contenitori software, fornendo un'astrazione aggiuntiva grazie alla virtualizzazione a livello di sistema operativo di Linux.
 
 ### Drawer
-E' un sidebar che fornisce l'accesso a destinazioni e funzionalità dell'app, come il cambio di account. Il menu drawer si sovrappone al resto del contenuto, senza spostarlo. 
+È un sidebar che fornisce l'accesso a destinazioni e funzionalità dell'app, come il cambio di account. Il menu drawer si sovrappone al resto del contenuto, senza spostarlo. 
 
 ## E
 
@@ -104,7 +104,7 @@ Per ingresso presso un luogo di un'organizzazione si intende l'attività di spos
 
 ## L
 ### Librerie
-E' una raccolta di componenti che offrono servizi ad un livello di astrazione piuttosto basso, ovvero assemblare componenti semplici e predefiniti per ottenere strutture complesse specializzate.
+È una raccolta di componenti che offrono servizi ad un livello di astrazione piuttosto basso, ovvero assemblare componenti semplici e predefiniti per ottenere strutture complesse specializzate.
 
 ### Lightweight Directory Access Protocol (LDAP)
 È un protocollo standard per l'interrogazione e la modifica dei servizi di directory. Le informazioni vengono raggruppate e possono essere espresse come record di dati ed organizzate in maniera gerarchica.
