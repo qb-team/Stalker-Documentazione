@@ -7,7 +7,7 @@
 </p>
 
 ## 1.1 Scopo documento
-Lo scopo di questo documento è quello spiegare attraverso una raccolta di video, supportati da una corrispondente parte testuale, l'utilizzo corretto del sistema *Stalker*. 
+Lo scopo di questo documento è quello di spiegare attraverso una raccolta di video, supportati da una corrispondente parte testuale, l'utilizzo corretto del sistema *Stalker*. 
 
 ## 1.2 Composizione prodotto
 
