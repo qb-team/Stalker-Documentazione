@@ -12,6 +12,7 @@ L'aspettativa del processo di garanzia della qualità è che quest'ultimo aiuti 
 Il processo di garanzia della qualità è un processo fornisce un'adeguata garanzia che i prodotti e i processi software nel ciclo di vita del progetto siano conformi ai requisiti specificati e aderiscano ai piani stabiliti. La garanzia della qualità può essere interna o esterna a seconda che la prova della qualità del prodotto o del processo sia dimostrata all'interno del gruppo o all'utente finale.
 \subsubsection{Attività}
 \paragraph{Implementazione del processo}
+Seguono la descrizione di come vengono istanziati i processi degli standard ISO/IEC 12207 e ISO/IEC 9126.
 \input{Sezioni/Sottosezioni/IsoIec12207}
 \input{Sezioni/Sottosezioni/IsoIec9126}
 
@@ -30,7 +31,7 @@ Il processo di garanzia della qualità è un processo fornisce un'adeguata garan
 \end{itemize}
 
 \paragraph{Metriche di qualità}
-\paragraph*{Codici metriche}\mbox{}
+\subparagraph*{Codici metriche}\mbox{}
 Ogni metrica di \glo{processo} ha un codice univoco ed è strutturato in questo formato:
 \begin{center}
     M[Destinazione][Numero progressivo]
@@ -45,7 +46,7 @@ con:
     \item \textbf{[Numero progressivo]}: Il numero della metrica in relazione alla sua destinazione, progressivo perché diverso per ogni metrica e in serie. Il conteggio parte da 1.
 \end{itemize}
 
-\paragraph*{Struttura descrittiva metriche}
+\subparagraph*{Struttura descrittiva metriche}
 La seguente è una struttura ad elenco che descrive una metrica di processo o di prodotto. \\
 I punti dell'elenco racchiusi fra parentesi quadre indicano che tale punto è opzionale e va inserito solo se necessario.\\
 Inoltre, \textbf{Processo di riferimento} deve essere presente solo nelle metriche della qualità di processo, mentre \textbf{Attributo di riferimento} solo per la qualità di prodotto.
@@ -64,21 +65,21 @@ elencata in una lista, mentre il nome della metrica rappresenta il titolo di que
     \end{itemize}
 \end{itemize}
 
-\paragraph*{Metriche di processo}
+\subparagraph*{Metriche di processo}
 Per monitorare l'aderenza ai processi dallo standard ISO/IEC 12207 istanziati, vengono utilizzate delle metriche. Il Responsabile, grazie ai valori ricavati dalle metriche, è facilitato nel valutare il \glo{processo} e di effettuare, se necessario, modifiche alla pianificazione.
 
-\paragraph*{Metriche di prodotto}
+\subparagraph*{Metriche di prodotto}
 Il modello di qualità del software descritto dallo standard ISO/IEC 9126 definisce le caratteristiche e gli attributi del prodotto software, ciascuna misurabile da metriche interne (che richiedono la disponibilità del codice sorgente - white box) o esterne (che richiedono il prodotto software in esecuzione - black box).
 Una volta specificati i requisiti di qualità del prodotto software, si identificano le caratteristiche e attributi di qualità che più contribuiscono a verificare l'aderenza allo standard e ai requisiti.
 Il gruppo \Gruppo{} si è impegnato a scegliere le metriche interne che maggiormente influenzano (in positivo) le caratteristiche esterne del prodotto finale, in modo che esse possano predire quanto più possibile la qualità del risultato finale. 
 
-\paragraph*{Metriche interne}
+\subparagraph*{Metriche interne}
 Le metriche della qualità "interne" del software sono utilizzate durante la fase di sviluppo e permettono di valutare il comportamento del software dal punto di vista degli sviluppatori e di predire quello che sarà il punto di vista esterno degli utenti.
       
-\paragraph*{Metriche esterne}
+\subparagraph*{Metriche esterne}
 Le metriche relative alla qualità "esterna" indirizzano le caratteristiche esteriori del software, cioè quelle rilevabili direttamente dagli utenti e dagli operatori.
 
-\paragraph*{Tabella riassuntiva metriche}
+\subparagraph*{Tabella riassuntiva metriche}
 Per riassumere tutte le metriche e le loro caratteristiche descritte all'interno del \PdQ{}, alla fine della sezione in cui vengono illustrate vi sono delle tabelle riassuntive che hanno questa struttura:
 {\rowcolors{2}{grigetto}{white}
 \renewcommand{\arraystretch}{1.5}

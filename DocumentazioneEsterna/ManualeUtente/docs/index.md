@@ -7,7 +7,7 @@
 </p>
 
 ## 1.1 Scopo documento
-Lo scopo di questo documento è quello spiegare attraverso una raccolta di video, supportati da una corrispondente parte testuale, l'utilizzo corretto del sistema *Stalker*. 
+Lo scopo di questo documento è quello di spiegare attraverso una raccolta di video, supportati da una corrispondente parte testuale, l'utilizzo corretto del sistema *Stalker*. 
 
 ## 1.2 Composizione prodotto
 
@@ -15,7 +15,7 @@ Il prodotto **Stalker** è formato dalle parti:
 
 -   [App utenti](/app/funzionalita/);
 -   [Web-app amministratori](/webapp/funzionalita/);
--   [Backend](/backend/funzionalita/).
+-   Backend.
 
 ## 1.3 Scopo del prodotto 
 
@@ -103,3 +103,9 @@ Il prodotto garantirà le seguenti funzionalità:
 		Un utente riconosciuto potrà decidere di passare
         all’anonimato, cioè di diventare un utente anonimo, selezionando
         l’apposita funzionalità.
+
+## 1.4 Playlist su YouTube per le video-guide
+Nelle sezioni in cui vengono mostrate le funzionalità di app e web-app sono presenti svariati video che mostrano come portare a termine le funzionalità offerte da Stalker. Questi video sono raggruppati in queste due playlist su YouTube:
+
+- [Playlist per la app utenti](https://www.youtube.com/playlist?list=PLL4o2JVNiDjgeianrg_9iK44eRazFau-0);
+- [Playlist per la web-app amministratori](https://www.youtube.com/playlist?list=PLL4o2JVNiDjjan0cUY4P-m3q7S7lz-Inz).

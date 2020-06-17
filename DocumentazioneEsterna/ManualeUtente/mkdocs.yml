@@ -1,4 +1,4 @@
-site_name: Manuale utente | Stalker
+site_name: Manuale utente 1.0.0 | Stalker
 repo_url: https://github.com/qb-team/Stalker-ManualeUtente
 
 theme:
@@ -11,19 +11,14 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/extensions/admonition/
   - admonition
   # https://squidfunk.github.io/mkdocs-material/extensions/codehilite/
-  - codehilite 
+  - codehilite
 
 nav:
   - Il gruppo qbteam: "qbteam.md"
   - Registro modifiche: "registromodifiche.md"
   - 1 Introduzione: "index.md"
   - 2 App utenti:
-     # - Installazione: "app/installazione.md"
       - 2.1 Funzionalità: "app/funzionalita.md"
   - 3 Web-app amministratori:
-    #  - Installazione: "webapp/installazione.md"
       - 3.1 Funzionalità: "webapp/funzionalita.md"
-  #- REST API:
-   #   - Utilizzo: "restapi/utilizzo.md"
   - A Glossario: "glossario.md"
-  
