@@ -1,7 +1,8 @@
 # Registro delle modifiche
 Versione | Data | Nominativo | Ruolo | Verificatore | Descrizione
 ------------- | ------------- | ------------- | ------------- | ------------- | -------------
-0.37.0 | 2020-06-15 | Christian Mattei, Enrico Salmaso, Francesco Drago | Progettisti | Tommaso Azzalin | Aggiornamento, stesura e verifica dalla sezione §2.6.1 alla sezione §2.6.12.
+[1.0.0](https://github.com/qb-team/Stalker-ManualeManutentore/releases/tag/1.0.0) | 2020-06-16 | Emanuele Cisotto | Responsabile | Davide Lazzaro | Approvazione e verifica per il rilascio.
+1.0.0 | 2020-06-15 | Christian Mattei, Enrico Salmaso, Francesco Drago | Progettisti | Tommaso Azzalin | Aggiornamento, stesura e verifica conclusiva dalla sezione §2.6.1 alla sezione §2.6.12.
 0.36.0 | 2020-06-15 | Davide Lazzaro, Tommaso Azzalin | Progettista | Federico Perin | Aggiunto e verificato §4.3.4 estendibilità backend.
 0.35.0 | 2020-06-14 | Christian Mattei, Enrico Salmaso, Francesco Drago | Progettisti | Tommaso Azzalin | Aggiornamento, stesura e verifica §2.1.1.
 0.34.0 | 2020-06-14 | Tommaso Azzalin | Progettista | Tommaso Azzalin | Aggiunto e verificato vocabolo "Locust" al Glossario.
