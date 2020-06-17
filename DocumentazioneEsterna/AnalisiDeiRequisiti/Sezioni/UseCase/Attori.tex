@@ -9,7 +9,7 @@
 \paragraph{Utente non autenticato}
 Utente non ancora autenticato all'applicazione o all'interfaccia per amministratori che può avere o non avere le credenziali per autenticarsi.
 
-\subsubsection{Attori Utenti}
+\subsubsection{Utenti}
 \begin{figure}[h]
   \centering
     \includegraphics[scale=0.8]{Sezioni/UseCase/Immagini/Utenti.png}
@@ -17,12 +17,12 @@ Utente non ancora autenticato all'applicazione o all'interfaccia per amministrat
 \end{figure}
 
 \paragraph{Utente anonimo}
-Utente autenticato che può venire tracciato all'interno di una \glo{organizzazione} senza fornire dettagli sulla propria identità.
+L'attore Utente autenticato che può venire tracciato all'interno di una \glo{organizzazione} senza fornire dettagli sulla propria identità.
 \paragraph{Utente riconosciuto}
-Utente autenticato che è attualmente tracciato all'interno di una precisa \glo{organizzazione} fornendo dettagli sulla propria identità.
+L'attore Utente autenticato che è attualmente tracciato all'interno di una precisa \glo{organizzazione} fornendo dettagli sulla propria identità.
 L'utente si è precedentemente autenticato presso l'\glo{organizzazione} tramite LDAP.
 
-\subsubsection{Attori Amministratori}
+\subsubsection{Amministratori}
 \begin{figure}[h]
   \centering
     \includegraphics[scale=0.8]{Sezioni/UseCase/Immagini/Amministratori.png}
@@ -30,7 +30,7 @@ L'utente si è precedentemente autenticato presso l'\glo{organizzazione} tramite
 \end{figure}
 
 \paragraph{Amministratore proprietario}
-Amministratore autenticatosi con il ruolo di proprietario dell'\glo{organizzazione}.
+L'attore è un Amministratore autenticatosi con il ruolo di proprietario dell'\glo{organizzazione}.
 Si trova al gradino più alto della gerarchia degli amministratori e dispone delle seguenti funzioni:
 \begin{itemize}
 \item Gestire l'\glo{organizzazione}, ovvero modificarne i dati (come nome, descrizione, ecc.) e le superfici geografiche per il \glo{tracciamento} degli utenti;
@@ -40,14 +40,14 @@ Si trova al gradino più alto della gerarchia degli amministratori e dispone del
 \end{itemize}
 Il proprietario dell'\glo{organizzazione} può nominare altri amministratori.
 \paragraph{Amministratore gestore}
-Amministratore autenticatosi con il ruolo di gestore. 
+L'attore è un Amministratore autenticatosi con il ruolo di gestore. 
 Si trova al secondo gradino della gerarchia degli amministratori e dispone delle seguenti funzioni:
 \begin{itemize}
 \item Gestire l'\glo{organizzazione};
 \item Monitorare gli accessi.
 \end{itemize}
 \paragraph{Amministratore visualizzatore}
-Amministratore autenticatosi con il ruolo di visualizzatore.
+L'attore è un Amministratore autenticatosi con il ruolo di visualizzatore.
 Si trova all'ultimo gradino della gerarchia degli amministratori e può compiere solo la seguente funzione:
 \begin{itemize}
 \item Monitorare gli accessi.
